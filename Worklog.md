@@ -10,6 +10,65 @@
 
 ---
 
+### W-006 · 헌법에 자동 commit·push 규칙 추가 + logs/ Git 제외(로컬 전용)
+**요청**
+- 두 헌법(CLAUDE.md/AGENTS.md)에 모든 작업 이후 바로 commit·push 하도록 규칙 추가하고 즉시 commit·push까지 진행
+- `logs/` 폴더는 Git에 반영하지 말고 로컬에서만 관리
+
+**수행 작업**
+- CLAUDE.md·AGENTS.md 10절(Git 원칙) 개정: 원격 저장소 명시, 매 작업 종료 시 자동 commit·push, `logs/`는 Git 제외·로컬 전용(단 submission.zip에는 포함), commit 전 `git status`로 혼입 확인
+- 두 헌법 7절(보안)에 로그 로컬 관리·제출물 포함 원칙 보강
+- `.gitignore`에 `logs/` 추가, 기존 "logs/는 제외 금지" 주석 삭제
+- 이미 추적 중이던 `logs/`를 `git rm --cached -r logs/`로 추적 해제(로컬 파일 유지)
+- Decisionlog에 D-003 기록
+
+**변경 파일**
+- 수정: `CLAUDE.md`, `AGENTS.md`(동기화 유지), `.gitignore`, `Decisionlog.md`, `Worklog.md`
+- Git 추적 해제(로컬 유지): `logs/**`
+
+**검증**
+- CLAUDE.md·AGENTS.md SHA-256 해시 동일 확인
+- `git ls-files logs/` 결과가 비어 있음(추적 해제 완료), 로컬 `logs/` 파일은 그대로 존재함 확인
+- commit·push 결과는 아래 커밋에서 확인
+
+**판단 근거**
+- 사용자가 두 정책을 명시적으로 요청. 로그는 제출물(zip)에만 포함하면 규정을 충족하므로 공개 저장소 노출을 피하는 편이 안전
+
+**결과**
+- 완료: 헌법·gitignore 개정, logs 추적 해제, 기록, commit·push
+- 남은 작업: 최종 제출 시 로컬 `logs/`를 submission.zip에 포함하는 절차(추후 제출 단계에서 수행)
+
+---
+
+### W-005 · codex/gemini 기업 리서치 보고서 환각·오류 검토 (4단계 서브에이전트 워크플로우)
+**요청**
+- `docs/company-research-report_codex.md`와 `docs/company-research-report_gemini.md` 두 리서치 보고서를 환각·부정확한 정보·비합리적 판단 여부로 엄격히 검토
+- (1)조사 내용 리서치, (2)리서치-보고서 비교, (3)종합 판단, (4)검토자 4단계를 각각 서브에이전트로 수행
+- 카카오페이증권 제외, 평가 항목별 절대 점수 부여, 총점 비교만 하고 단일 기업 추천 금지, 공개자료만으로 판단
+
+**수행 작업**
+- Workflow 도구로 4단계 파이프라인 실행: 5개 기업(채널톡, 메디테라피, 무신사, 삼일PwC, 마이리얼트립) 각각에 대해 리서치(출처 URL 직접 WebFetch 검증) → 비교(codex/gemini 주장별 정확·과장·환각·비약 판정) → 전체 종합(평가 항목 정의 + 절대 점수 + 총점표) → 검토(요구사항 준수 감사 및 최종본 확정)
+- 검토자 단계에서 종합 초안의 위반 사항 2건(미검증 사실 단정, 출처 오귀속) 발견·수정
+- 최종 결과를 `docs/company-research-review-report.md`로 저장
+
+**변경 파일**
+- 생성: `docs/company-research-review-report.md`
+
+**검증**
+- 각 사실 주장에 대해 서브에이전트가 실제 URL을 WebFetch로 열어 원문과 대조. 12개 서브에이전트 호출 모두 정상 완료(에러 0건).
+- 검토자 단계가 종합 단계의 위반 사항을 실제로 잡아냈음을 확인(2건 수정).
+
+**판단 근거**
+- 두 보고서 모두 AI가 작성한 리서치이므로 환각 가능성이 있어, 팩트체크 없이 그대로 기업 선정 근거로 쓰면 과제 실격 조건(출처 없는/틀린 근거)에 노출될 위험이 컸음
+- 리서치와 판단을 분리된 서브에이전트로 나누고 마지막에 검토자를 둬서, 종합 단계 자체가 새로운 미검증 주장을 만들어내는 것도 걸러내도록 설계
+
+**결과**
+- 완료: codex 보고서가 gemini 보고서보다 전반적으로 신뢰도가 뚜렷이 높음을 확인(gemini는 5개 기업 전체에서 반복되는 환각 패턴 다수 발견). 절대 점수 총점(30점 만점): 채널톡 14, 메디테라피 19, 무신사 25, 삼일PwC 16, 마이리얼트립 16
+- 특기사항: 채널톡 관련 "채널코퍼레이션 완전자본잠식" 단서가 검토 과정에서 발견됐으나 정식 검증 절차를 거치지 않아 최종 보고서 본문에서는 제외되고 별도 "확인 필요" 항목으로 남김(`docs/company-research-review-report.md` 5절)
+- 남은 작업: 사용자가 `docs/company-research-review-report.md`를 검토해 최종 기업 1곳 확정 → `Decisionlog.md`에 다음 Decision ID로 기록
+
+---
+
 ### W-004 · GitHub 원격 저장소 연결 및 푸시
 **요청**
 - `https://github.com/gorhkdwj/AX-2nd-Qualifier.git` 저장소에 현재 작업 폴더를 Git으로 연결하고 푸시
