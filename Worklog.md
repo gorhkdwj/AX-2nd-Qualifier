@@ -10,6 +10,33 @@
 
 ---
 
+### W-010 · 플러그인·스킬 제작 원칙 헌법 반영
+**요청**
+- `docs/technical_references/` 검토 결과 중 1번(플러그인 패키징 불변 규칙)과 2번(Skill 작성 원칙)을 헌법에 적용
+- 3번은 토큰 소모 우려 검토, 4번은 추가 설명, 5·6번은 당장 보류
+
+**수행 작업**
+- `CLAUDE.md`와 `AGENTS.md`를 모두 읽고 동일 상태 확인
+- `5.1 Codex 플러그인·스킬 제작 원칙` 절을 두 헌법 파일에 동일하게 추가
+- 플러그인 manifest 구조, `.codex-plugin/` 배치, manifest 경로 규칙, plugin name 규칙, skill `name`/`description`, skill 단일 책임, 발동 조건 검증 원칙을 명문화
+- Decisionlog D-006 기록
+
+**변경 파일**
+- 수정: `CLAUDE.md`, `AGENTS.md`, `Decisionlog.md`, `Worklog.md`
+
+**검증**
+- `CLAUDE.md`와 `AGENTS.md`의 SHA-256 해시 동일 확인
+- 기술 참조 원문(`Build_plugins.md`, `Agent_Skills.md`)의 필수·권장 규칙만 짧게 반영했는지 대조
+
+**판단 근거**
+- 제출 플러그인의 구조 오류와 skill 오발동은 구현 후반에 발견되면 수정 비용이 크므로, 헌법에 최소 불변 규칙으로 고정하는 것이 안전하다.
+
+**결과**
+- 완료: 1번·2번 헌법 반영
+- 보류: hook 신뢰 규칙, `AGENTS.override.md`, API·MCP 운영 규칙은 실제 사용 시점에 추가 검토
+
+---
+
 ### W-009 · 안전성 기준 플러그인 방향 축소 및 검증 데이터 정책 명문화
 **요청**
 - 안전하지 않은 작업(제3자 UGC 대량 크롤링)이 핵심 전제인 방향은 제외

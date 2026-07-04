@@ -65,6 +65,19 @@
 - 기업 선정 단계에서는 `docs/company-selection.md`가 같은 역할(선정 기준·판정 방식 고정)을 한다.
 - 같은 지표가 파일마다 다르게 정의되지 않게 한다. 기준이 바뀌면 코드보다 계약 문서를 먼저 갱신하고 이유를 기록한다.
 
+## 5.1 Codex 플러그인·스킬 제작 원칙
+
+- `src/.codex-plugin/plugin.json`은 제출 플러그인의 필수 진입점이다.
+- `.codex-plugin/` 안에는 `plugin.json`만 두고, `skills/`, `hooks/`, `assets/`, `.mcp.json`, `.app.json`은 플러그인 루트에 둔다.
+- 플러그인 manifest의 컴포넌트 경로는 `./`로 시작하고, 플러그인 루트 밖을 가리키지 않게 한다.
+- 플러그인 `name`은 안정적인 kebab-case 식별자로 정한다.
+- skill은 한 가지 작업에 집중한다. 하나의 skill에 서로 다른 업무 흐름을 과도하게 합치지 않는다.
+- `SKILL.md`에는 `name`과 `description`을 반드시 포함한다.
+- skill `description`은 Codex의 암묵적 호출 판단에 쓰이므로, 발동 조건과 비발동 조건을 짧고 명확하게 쓴다.
+- skill 본문은 명령형 절차, 입력, 출력, 완료 조건을 분명히 적는다.
+- 스크립트는 결정적 동작, 반복 실행, 외부 도구 호출이 필요할 때만 추가하고, instruction-only로 충분하면 문서 지침만 둔다.
+- skill 작성 후에는 대표 프롬프트로 의도한 상황에서만 발동하는지 확인하고, 오발동 가능성이 있으면 `description`을 좁힌다.
+
 ## 6. 테스트와 검증 원칙
 
 - 영향 범위에 맞춰 검증한다: 단위·통합·입력·오류 상황·경계값 검증, 문서-코드 정합성, README-기능 일치, 제출물/배포물 구조 확인(특히 `src/.codex-plugin/plugin.json` 존재, `submission.zip` 구조 일치).

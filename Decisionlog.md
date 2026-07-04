@@ -143,4 +143,31 @@
 
 ---
 
+### D-006 · 플러그인·스킬 제작 불변 규칙 헌법화
+**상황**
+- `docs/technical_references/`의 공식 문서 검토 결과, 제출 플러그인 구조와 skill 작성 방식에서 반복 실수를 막기 위해 헌법에 고정할 만한 규칙이 확인됐다.
+- 사용자가 플러그인 패키징 규칙과 Skill 작성 원칙만 우선 적용하고, hook·override·API/MCP 운영 규칙은 사용 시점에 재검토하겠다고 지시했다.
+
+**검토한 선택지**
+- 기술 참고 문서 전체를 헌법에 상세 반영
+- 플러그인 패키징·skill 작성의 필수 규칙만 짧게 반영
+- 현재 헌법 유지
+
+**결정**
+- `CLAUDE.md`와 `AGENTS.md`에 `5.1 Codex 플러그인·스킬 제작 원칙`을 추가한다.
+- 반영 범위는 `plugin.json` 위치, 플러그인 루트 구조, manifest 경로 규칙, 안정적 plugin name, skill 단일 책임, `SKILL.md` 필수 metadata, skill description 작성·검증 원칙으로 한정한다.
+
+**근거**
+- 이번 과제의 최종 제출물은 Codex 플러그인이므로 구조 오류와 skill 오발동을 초기에 방지해야 한다.
+- 기술 참고 문서를 모두 헌법에 옮기면 지침이 장황해지고 실제 작업 토큰을 불필요하게 소비할 수 있으므로, 반복 확인이 필요한 불변 규칙만 반영하는 편이 적절하다.
+
+**영향**
+- 이후 구현 단계에서 `src/.codex-plugin/plugin.json`과 `src/skills/*/SKILL.md`를 만들 때 해당 규칙을 기본 검증 기준으로 삼는다.
+- hook 신뢰 검토, `AGENTS.override.md`, API·MCP 권한 규칙은 실제로 해당 기능을 도입할 때 별도 결정으로 기록한다.
+
+**재검토 조건**
+- 플러그인에 hook, MCP server, app connector, marketplace metadata를 실제로 포함하게 되면 관련 운영 규칙을 추가한다.
+
+---
+
 (기업 최종 1곳 선정이 확정되면 다음 사용 가능한 Decision ID로 `2차 도전 기업 선정`을 기록한다)
