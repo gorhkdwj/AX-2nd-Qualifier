@@ -10,6 +10,38 @@
 
 ---
 
+### W-007 · Gemini 보고서 폐기 + Codex·독립조사 종합 최종 보고서 생성
+**요청**
+- 신뢰성이 극도로 낮은 Gemini 보고서를 폐기
+- 서브에이전트 독립 조사 내용을 문서화하여 Codex 조사와 종합·비교한 최종 보고서 생성
+- 카카오페이증권 제외, 평가 항목별 절대 점수·총점 비교, 단일 기업 추천 금지, 공개자료만으로 판단
+
+**수행 작업**
+- W-005 워크플로우 journal에서 서브에이전트의 독립 조사(`independent_findings`)·출처 검증(`citation_checks`) 전체 추출
+- Gemini 보고서를 `docs/archive/company-research-report_gemini_DISCARDED.md`로 이동(하드 삭제 대신 감사 추적용 보존), 폐기 사유를 `docs/archive/README.md`에 기록
+- `docs/company-research-final-report.md` 생성: 근거 등급([검증됨]/[교차확인]/[확인 필요]) 도입, 기업별 종합(Codex 검증 사실 + 독립 조사 신규 사실 + 주의점 + 출처), 평가 6항목 절대 점수 재산정(이전 검토 보고서 대비 변화 명시), 총점 비교표, 사용자 선정용 중립 참고·확인 필요 항목 정리
+- `docs/company-selection.md` 체크리스트 갱신 및 3개 결과 문서 연결
+
+**변경 파일**
+- 생성: `docs/company-research-final-report.md`, `docs/archive/README.md`
+- 이동(폐기): `docs/company-research-report_gemini.md` → `docs/archive/company-research-report_gemini_DISCARDED.md`
+- 수정: `docs/company-selection.md`, `Worklog.md`
+
+**검증**
+- 독립 조사에서 두 보고서가 놓친 신규 검증 사실 확인: 채널톡 완전자본잠식(2025말 자본총계 약 -9.4억), 마이리얼트립 2025.7 민다 상대 1.5억 배상 판결, 무신사 셀러 수수료 갈등·표기오류 반복 등. 각 사실에 근거 등급 표기.
+- 최종 총점(30점): 무신사 26, 메디테라피 19, 마이리얼트립 19, 채널톡 18, 삼일PwC 15
+- 단일 기업 추천 문구 없음, 카카오페이증권 미포함 재확인
+
+**판단 근거**
+- Gemini는 5개 기업 전반에서 환각이 반복 확인돼 근거로 부적합. 다만 검토·최종 보고서가 Gemini의 구체적 오류를 인용하므로 원본을 삭제하지 않고 아카이브해 추적성 유지
+- 종합 보고서는 검증된 사실만 점수 근거로 삼고, 독립 조사로 확인된 신규 사실을 반영해 이전 검토 대비 점수 변화를 투명하게 기록
+
+**결과**
+- 완료: Gemini 폐기, 최종 종합 보고서 생성
+- 남은 작업: 사용자가 최종 보고서 검토 후 기업 1곳 확정 → Decisionlog 기록 및 후속 문서 갱신. 확정 전 `[확인 필요]` 항목(채널톡 DART 등) 재확인 권장
+
+---
+
 ### W-006 · 헌법에 자동 commit·push 규칙 추가 + logs/ Git 제외(로컬 전용)
 **요청**
 - 두 헌법(CLAUDE.md/AGENTS.md)에 모든 작업 이후 바로 commit·push 하도록 규칙 추가하고 즉시 commit·push까지 진행

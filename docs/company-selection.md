@@ -30,14 +30,20 @@
 - 동점 시 "차별성"과 "임팩트" 우선순위로 결정.
 
 ## 조사 진행 체크리스트
-- [ ] 채널톡 — 공개 자료 리서치 및 문제 후보 도출
-- [ ] 메디테라피 — 공개 자료 리서치 및 문제 후보 도출
-- [ ] 무신사 — 공개 자료 리서치 및 문제 후보 도출
-- [ ] 삼일PwC — 공개 자료 리서치 및 문제 후보 도출
-- [ ] 마이리얼트립 — 공개 자료 리서치 및 문제 후보 도출
-- [ ] 비교표 작성 및 채점
+- [x] 채널톡 — 공개 자료 리서치 및 문제 후보 도출
+- [x] 메디테라피 — 공개 자료 리서치 및 문제 후보 도출
+- [x] 무신사 — 공개 자료 리서치 및 문제 후보 도출
+- [x] 삼일PwC — 공개 자료 리서치 및 문제 후보 도출
+- [x] 마이리얼트립 — 공개 자료 리서치 및 문제 후보 도출
+- [x] 비교표 작성 및 채점 → `docs/company-research-final-report.md`
 - [ ] 최종 기업 확정 → `Decisionlog.md`에 다음 Decision ID로 `2차 도전 기업 선정` 기록
 - [ ] 확정 기업명으로 `docs/project-plan.md`, `docs/requirements-contract.md`, `CLAUDE.md` 0절 갱신
+
+> 조사·검증·종합 결과는 아래 3개 문서로 정리됨:
+> - `docs/company-research-report_codex.md` — Codex 1차 조사(검증 통과, 근거의 1차 축)
+> - `docs/company-research-review-report.md` — 두 보고서 팩트체크·환각 검토
+> - `docs/company-research-final-report.md` — **최종 종합 보고서(Codex + 독립 조사, Gemini 폐기). 여기의 총점·근거로 선정 판단.**
+> - (폐기) `docs/archive/company-research-report_gemini_DISCARDED.md` — Gemini 1차 조사, 신뢰성 미달로 근거에서 제외
 
 ## 리서치 도구
 - 1차 리서치는 Gemini Deep Research를 활용한다. 사용한 프롬프트는 `docs/deep-research-prompt.md`에 고정해 기록한다.
