@@ -10,6 +10,45 @@
 
 ---
 
+### W-021 · S4 manifest 및 검증·중복감지 스크립트 구현
+**요청**
+- S4 구현 방식은 추천대로 `jsonschema` 의존을 사용하고, 없을 때 명확한 안내와 함께 실패하도록 진행
+
+**수행 작업**
+- 단계 간 정합성 검토 게이트에 따라 기준 계약, 구현 계획, 검증 계획, schema/taxonomy, `SKILL.md` 확인
+- `src/.codex-plugin/plugin.json` 작성: plugin name, version, description, `"skills": "./skills/"` manifest 구성
+- `src/skills/product-agentizer/scripts/validate.py` 작성: JSON Schema draft 2020-12 검증, taxonomy 기반 custom check, 소재 혼용률 상태와 `quality` 필드 연결 검증
+- `src/skills/product-agentizer/scripts/dedup.py` 작성: 구조화 상품 JSON 간 deterministic similarity 기반 중복 후보 산출
+- `tests/fixtures/dedup/sample_products.json` 작성: 중복 후보 2건과 비중복 상의 1건 샘플
+- `docs/validation-plan.md`에 `jsonschema` 의존 검증 정책 반영
+- `Decisionlog.md` D-012 기록
+- 루트 `README.md` 현재 상태와 로컬 검증 스크립트 실행 예시 갱신
+
+**변경 파일**
+- 생성: `src/.codex-plugin/plugin.json`
+- 생성: `src/skills/product-agentizer/scripts/validate.py`, `src/skills/product-agentizer/scripts/dedup.py`
+- 생성: `tests/fixtures/dedup/sample_products.json`
+- 수정: `README.md`, `docs/validation-plan.md`, `Decisionlog.md`, `Worklog.md`
+
+**검증**
+- 통과: `python -m py_compile`로 `validate.py`, `dedup.py` 문법 확인
+- 통과: `validate.py` 정상 fixture 2건(`valid_outer`, `valid_top`) 성공
+- 통과: `validate.py` 오류 fixture 3건(`invalid_missing_quality`, `invalid_out_of_scope_category`, `invalid_material_ratio_status`) 기대대로 실패
+- 통과: `validate.py`가 dedup 샘플 상품 3건을 schema-valid로 판정
+- 통과: `dedup.py`가 `outer_a`/`outer_b`를 score 1.0의 `duplicate` 후보로 산출
+- 통과: `plugin.json` JSON 형식 확인
+- 완료: S4 산출물이 S5 더미 fixture/정량 검증 단계와 충돌하지 않는지 확인
+
+**판단 근거**
+- `schema.json`이 JSON Schema draft 2020-12와 조건부 검증을 사용하므로 `jsonschema`를 쓰는 편이 직접 구현보다 안전하다.
+- `dedup.py`는 이후 S5의 중복쌍/비중복쌍 검증으로 이어질 수 있게 구조화 JSON만 입력으로 받는 결정적 스크립트로 작성했다.
+
+**결과**
+- 완료: S4 manifest, 검증 스크립트, 중복 후보 스크립트, 샘플 fixture 초안 작성 및 실행 검증 완료
+- 다음 단계: S5 더미 데이터셋과 정량 검증 스크립트로 precision/recall 및 중복 탐지 기준을 고정
+
+---
+
 ### W-020 · SKILL.md description 한영 혼합 및 본문 한국어화
 **요청**
 - `src/skills/product-agentizer/SKILL.md`가 영어일 필요가 있는지 확인 후, frontmatter `description`은 한영 혼합으로 수정하고 본문은 한국어 중심으로 수정

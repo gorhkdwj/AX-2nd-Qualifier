@@ -1,0 +1,6 @@
+{
+  "name": "musinsa-product-agentizer",
+  "version": "0.1.0",
+  "description": "Convert pasted Korean fashion product detail text into schema-valid, agent-query-ready structured JSON for the Musinsa outer/top MVP.",
+  "skills": "./skills/"
+}

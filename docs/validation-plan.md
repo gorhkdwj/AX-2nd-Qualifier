@@ -13,7 +13,7 @@
 
 ## 검증 방법과 도구
 - 공개 자료 검증: 실제 URL 접속 및 내용 대조. 제출 인용문은 원본 영상 기준으로 재확인한다.
-- 스키마 검증: `schema.json`에 대해 정상 JSON과 오류 JSON을 각각 통과/실패시키는 테스트를 둔다.
+- 스키마 검증: `validate.py`가 `jsonschema`로 `schema.json`을 검증한다. 정상 JSON과 오류 JSON을 각각 통과/실패시키는 테스트를 둔다. `jsonschema`가 설치되어 있지 않으면 설치 안내와 함께 실패하도록 한다.
 - 속성 추출 검증: 더미 상품설명과 정답 JSON을 비교해 속성별 precision/recall을 산출한다.
 - taxonomy 매핑 검증: 자유표기(예: 리넨/린넨/마)와 표준용어 매핑 결과가 기대값과 일치하는지 확인한다.
 - 소재 혼용률 검증: 입력에 숫자 혼용률이 명시된 경우만 `ratio_status: explicit`과 숫자 `ratio`를 허용한다. 미기재·모호 표현은 `ratio: null`과 `missing`/`ambiguous` 상태여야 하며, 부위가 다르면 `part`가 분리되어야 한다.
