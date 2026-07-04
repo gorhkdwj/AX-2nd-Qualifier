@@ -10,6 +10,27 @@
 
 ---
 
+### T-003 · S7 오류 fixture 기대 실패 검증 명령의 종료 코드 처리 오류
+**발생 상황**
+- S7 제출 README 작성 후, invalid schema fixture 3건이 기대대로 실패하는지 PowerShell 명령으로 확인했다.
+
+**증상**
+- `validate.py`가 invalid fixture를 정상적으로 차단해 exit code `1`을 반환했지만, 기대 실패를 통과로 해석하려던 PowerShell 검증 명령 자체가 exit code `1`로 종료됐다.
+
+**확인된 원인**
+- `python ... | Out-Null; if ($LASTEXITCODE -ne 1) { exit 1 }` 형태의 명령은 기대한 exit code를 확인하더라도 마지막 native command의 `$LASTEXITCODE`가 남아 PowerShell 프로세스 종료 코드에 영향을 줄 수 있었다.
+- 오류 fixture 자체의 문제는 아니며, 검증 래퍼 명령의 종료 코드 처리 문제였다.
+
+**조치**
+- 명령을 `if ($LASTEXITCODE -eq 1) { exit 0 } else { exit 1 }` 형태로 바꾸어 기대 실패를 명시적으로 성공 처리했다.
+- invalid fixture 3건 모두 수정한 명령으로 재검증했고, 기대대로 통과했다.
+
+**재발 방지**
+- 기대 실패를 확인하는 PowerShell 검증 명령은 마지막에 `exit 0` 또는 `exit 1`을 명시해 래퍼 명령의 의미를 분명히 한다.
+- 의도된 실패 fixture 자체는 Troubleshooting 대상이 아니지만, 기대 실패를 감싸는 검증 명령이 잘못되어 작업을 우회하게 만들면 T-ID로 기록한다.
+
+---
+
 ### T-002 · S6 최종 검증 중 schema fixture 경로 오인
 **발생 상황**
 - S6 문서화와 커밋 전 검증을 수행하면서 schema fixture 개별 검증 명령을 실행했다.

@@ -10,6 +10,46 @@
 
 ---
 
+### W-027 · S7 제출 README 및 질문 5문항 답변 작성
+**요청**
+- 다음 작업 진행
+
+**수행 작업**
+- `docs/implementation-plan.md`, `docs/requirements-contract.md`, `docs/validation-plan.md`, 루트 `README.md`, S5/S6 검증 보고서, 과제 원문을 확인해 S7 범위 검토
+- 루트 `README.md`를 내부 작업 현황 문서에서 제출용 설명 문서로 교체
+- README에 문제 배경, 제출 개요, 플러그인 구성, 기능, 사용 범위와 금지 범위, Codex 사용 방법, 검증 명령, 검증 결과 요약, 질문 5문항 답변, 한계를 정리
+- 제출 폼에 옮기기 쉬운 별도 답변 초안 `docs/submission-questions.md` 작성
+- `docs/README.md`에 새 답변 초안 문서 등록
+
+**변경 파일**
+- 수정: `README.md`
+- 수정: `docs/README.md`
+- 생성: `docs/submission-questions.md`
+- 수정: `Troubleshootinglog.md`
+- 수정: `Worklog.md`
+
+**검증**
+- 통과: README와 질문 답변이 구현 범위, 입력 정책, 검증 결과와 충돌하지 않는지 확인
+- 통과: `schema.json`, `taxonomy.json`, `.agents/plugins/marketplace.json` JSON 파싱
+- 통과: `validate.py`, `dedup.py`, `tests/evaluate_product_agentizer.py` py_compile
+- 통과: 정상 schema fixture 2건 validate
+- 통과: invalid schema fixture 3건이 기대대로 실패함을 명시적 종료 코드로 확인
+- 통과: `dedup.py` sample 실행
+- 통과: `python tests\evaluate_product_agentizer.py`
+- 통과: `git diff --check`
+- 통과: 제출 핵심 구조 존재 확인(`src/.codex-plugin/plugin.json`, `SKILL.md`, references, scripts, `README.md`, `logs/`)
+- 통과: 비밀정보 패턴 검색 0건
+- 기록: 기대 실패 검증 명령의 종료 코드 처리 문제를 `Troubleshootinglog.md` T-003으로 기록
+
+**판단 근거**
+- S7 완료 조건은 README와 질문 5문항 답변이 실제 구현 기능만 설명하고, 로그·플러그인·검증 결과와 모순되지 않는 것이다.
+- 질문 답변은 루트 README에도 포함하되, 제출 폼 복사용으로 내부 docs 초안을 따로 두면 최종 제출 단계에서 누락 위험이 줄어든다.
+
+**결과**
+- 완료: S7 제출 README 및 질문 5문항 답변 초안 작성 완료
+
+---
+
 ### W-026 · AGENTS/CLAUDE Troubleshooting 기록 기준 반영
 **요청**
 - `AGENTS.md`와 `CLAUDE.md`에도 T-002 보정 방향성을 반영해 앞으로 계속 적용되게 할지 확인
