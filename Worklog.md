@@ -1,4 +1,4 @@
-# Worklog · AX해커톤 예선 2차 제출(기업 미정)
+# Worklog · AX해커톤 예선 2차 제출(무신사 문제 2)
 
 주요 사용자 요청이 끝날 때마다 아래 형식으로 누적 기록한다. (규칙: CLAUDE.md / AGENTS.md 11절). 최신 항목을 위에 추가한다.
 
@@ -7,6 +7,37 @@
 ### W-00N · 작업 제목
 **요청** / **수행 작업** / **변경 파일** / **검증** / **판단 근거** / **결과**
 ```
+
+---
+
+### W-013 · 무신사 문제 2 공식 확정 및 계획 문서 동기화
+**요청**
+- 무신사 2번 문제(`상품 데이터 에이전트화 변환기`)를 공식 확정하고 관련 문서 갱신 진행
+
+**수행 작업**
+- `Decisionlog.md`에 D-007 `2차 도전 기업·문제 확정` 기록
+- `CLAUDE.md`·`AGENTS.md` 0절과 현재 최소 작업 단위를 무신사 문제 2 기준으로 갱신
+- `README.md`, `docs/project-plan.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`, `docs/requirements-contract.md`를 기업 미정 상태에서 무신사 문제 2 확정 상태로 갱신
+- `docs/company-selection.md` 최종 확정 상태와 체크리스트 반영
+- `docs/musinsa-agentizer-plan.md`의 입력 범위를 “붙여넣기 텍스트 + URL은 출처 메타데이터”로 명확화
+- `docs/plugin-directions.md`에 현재 최종 선택 상태 표시
+
+**변경 파일**
+- 수정: `CLAUDE.md`, `AGENTS.md`, `README.md`, `Decisionlog.md`, `Worklog.md`
+- 수정: `docs/company-selection.md`, `docs/project-plan.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`, `docs/requirements-contract.md`, `docs/musinsa-agentizer-plan.md`, `docs/plugin-directions.md`
+
+**검증**
+- `CLAUDE.md`와 `AGENTS.md` 해시 동일 확인
+- “기업 미정/기업 선정 전/기업 확정 후 채움” 잔존 표현 검색 수행(남은 항목은 과거 Worklog 기록 또는 검증 설명 문구)
+- 민감정보 패턴 검색 수행: 실제 키·토큰 형식 일치 없음(검증 계획의 일반 용어만 검색됨)
+
+**판단 근거**
+- 사용자가 무신사 문제 2를 공식 확정했으므로, 구현 전 기준 계약과 계획 문서가 같은 대상·범위·입력 정책을 가리키도록 동기화해야 한다.
+- 자동 크롤링 위험을 피하기 위해 URL은 출처 메타데이터로만 쓰고 실제 실행 입력은 BYO 텍스트로 제한했다.
+
+**결과**
+- 완료: 무신사 문제 2 공식 확정 문서 반영
+- 남은 작업: taxonomy/schema, SKILL.md, validate/dedup 스크립트 구현 및 더미 픽스처 검증
 
 ---
 
