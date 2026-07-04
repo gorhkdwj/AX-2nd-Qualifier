@@ -229,6 +229,35 @@
 
 ---
 
+### D-013 · S6 로컬 marketplace와 Codex CLI 검증 방식
+**상황**
+- S6에서 로컬 Codex CLI 실제 실행과 플러그인 설치 후보 노출을 검증해야 했다.
+- 전역 Codex 설정에는 현재 작업과 무관한 stale marketplace가 있어 `codex plugin list`가 실패했다.
+
+**검토한 선택지**
+- 전역 Codex 설정에서 stale marketplace를 제거
+- repo-scoped marketplace를 추가하고 전역 설정 수정 없이 임시 `CODEX_HOME`에서 설치 검증
+- 플러그인 설치 검증을 생략하고 단독 스크립트 검증만 유지
+
+**결정**
+- `.agents/plugins/marketplace.json`을 추가해 `src/` 플러그인을 repo-scoped marketplace 후보로 노출한다.
+- 사용자의 전역 Codex 설정은 임의 수정하지 않는다.
+- 임시 `CODEX_HOME`에서 marketplace 등록·plugin add를 확인하고, 전역 인증 환경에서는 `codex exec`로 변환·질의 시연을 수행한다.
+
+**근거**
+- repo-scoped marketplace는 공식 문서의 로컬 플러그인 테스트 방식이며, 프로젝트에 함께 남길 수 있다.
+- stale marketplace는 현재 프로젝트 산출물이 아니므로, S6를 위해 사용자 전역 설정을 임의로 삭제하거나 수정하는 것은 영향 범위가 크다.
+- `codex exec`는 전역 인증 환경에서 정상 작동하므로 실제 변환 시연은 별도로 가능하다.
+
+**영향**
+- S6 보고서에는 설치 검증과 실행 검증을 분리해 기록한다.
+- 완전한 전역 plugin browser/install 재현은 stale marketplace 정리 후 다시 확인해야 한다.
+
+**재검토 조건**
+- 사용자가 전역 Codex 설정 정리를 승인하면 `openbell-guard-local` marketplace를 제거하거나 유효한 경로로 수정한 뒤 전역 `codex plugin add`를 다시 검증한다.
+
+---
+
 ### D-012 · validate.py JSON Schema 검증 의존성
 **상황**
 - S4에서 `validate.py`를 구현해야 하며, `schema.json`은 JSON Schema draft 2020-12 형식이다.

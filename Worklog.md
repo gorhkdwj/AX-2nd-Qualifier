@@ -10,6 +10,49 @@
 
 ---
 
+### W-024 · S6 Codex CLI 실제 실행 및 로컬 marketplace 검증
+**요청**
+- 다음 작업 진행: S6 Codex CLI 실제 설치·실행 시연 확인
+
+**수행 작업**
+- 단계 간 정합성 검토 게이트에 따라 기준 계약, 구현 계획, 검증 계획, README, S5 보고서 확인
+- Codex CLI `0.142.5` 설치 및 `codex doctor` 전역 환경 정상 확인
+- `.agents/plugins/marketplace.json` 추가: repo-scoped marketplace `ax-2nd-local`에서 `src/` 플러그인 노출
+- 임시 `CODEX_HOME=out\codex-s6-home`에서 `codex plugin marketplace add .`, `codex plugin list --available`, `codex plugin add musinsa-product-agentizer@ax-2nd-local` 성공 확인
+- 전역 환경에서 `codex exec` smoke test 성공 확인
+- `outer_down_vest` 더미 입력을 Codex CLI로 구조화 JSON 변환하고 `validate.py`로 schema-valid 확인
+- 구조화 JSON을 기반으로 겨울 여행용 레이어드 아우터 질의 설명 시연
+- `docs/s6-codex-cli-report.md` 작성
+- 전역 marketplace, `--output-schema`, PowerShell 한글 stdin 문제를 `Troubleshootinglog.md` T-001로 기록
+- 로컬 marketplace 검증 방식을 `Decisionlog.md` D-013으로 기록
+- README, docs README, validation plan 현재 상태 갱신
+
+**변경 파일**
+- 생성: `.agents/plugins/marketplace.json`
+- 생성: `docs/s6-codex-cli-report.md`
+- 수정: `README.md`, `docs/README.md`, `docs/validation-plan.md`
+- 수정: `Decisionlog.md`, `Troubleshootinglog.md`, `Worklog.md`
+
+**검증**
+- 통과: `.agents/plugins/marketplace.json` JSON 파싱
+- 통과: 임시 `CODEX_HOME`에서 marketplace 등록, plugin available 조회, plugin add 성공
+- 통과: `codex exec` smoke test 출력 `CODEX_EXEC_OK`
+- 통과: Codex CLI 생성물 `out/s6-codex-output-outer-down-vest.json`이 `validate.py` 검증 통과(`valid: true`, `checked: 1`)
+- 통과: 생성물에 S5 보완 대상이던 `goose_down`, `khaki`, `travel`, `여유 있는 암홀` 포함 확인
+- 통과: 구조화 JSON 기반 질의 설명 생성 확인
+- 완료: S6 산출물이 S7 제출 README/질문 답변 작성의 근거로 이어지는지 확인
+
+**판단 근거**
+- 전역 설정을 임의 수정하지 않으면서도 공식 repo marketplace 방식으로 플러그인 설치 가능성을 확인하는 편이 안전하다.
+- `schema.json`은 Codex `--output-schema` subset보다 넓으므로, 생성 후 `validate.py`로 검증하는 방식이 현재 구현 계약과 맞다.
+
+**결과**
+- 완료: S6 Codex CLI 실행 시연 및 로컬 marketplace 검증 완료
+- 남은 제약: 전역 `codex plugin list/add`는 기존 stale marketplace 정리 전까지 완전 자동화 불가
+- 다음 단계: S7 최종 제출 README와 질문 5문항 답변 작성
+
+---
+
 ### W-023 · S5 평가 미달 원인 분석 및 SKILL/taxonomy 보완
 **요청**
 - S5 precision/recall이 100%가 아닌 부분의 원인을 분석하고, 앞서 제안한 보완 방향대로 진행
