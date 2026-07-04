@@ -36,7 +36,7 @@ docs/references/                             # 근거·taxonomy 출처 스냅샷
 ## 재사용 (기존 자산)
 - `tools/save_log.py` — 로그 자동 저장 훅. 그대로 사용, 편집 금지(실격 사유).
 - 빈 폴더 `src/`, `tests/`, `docs/references/` 이미 존재(.gitkeep).
-- 안전·검증 정책은 `docs/validation-plan.md`(검증 데이터 정책)·`docs/plugin-directions.md` 0절에 확정됨 — 재사용.
+- 안전·검증 정책은 `docs/validation-plan.md`(검증 데이터 정책)에 확정됨. 선정 전 후보 방향과 안전성 검토 이력은 `docs/archive/plugin-directions_PRE_SELECTION.md`에 보관함.
 - Codex 플러그인 규격은 `docs/technical_references/`(Plugins/Build_plugins/Agent_Skills)에서 확인됨: `.codex-plugin/`엔 plugin.json만, skills는 루트, manifest 경로는 `./` 시작, SKILL.md는 name·description frontmatter 필수, description은 발동/비발동 조건을 front-load.
 
 ## 구현 단계 (가장 작은 성공 단위부터)

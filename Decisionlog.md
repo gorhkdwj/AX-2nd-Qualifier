@@ -200,3 +200,31 @@
 - 원본 영상 대조 결과 핵심 인용이 부정확하거나, MVP가 마감 내 검증 가능한 수준으로 좁혀지지 않으면 무신사 문제 1로 회귀를 검토한다.
 
 ---
+
+### D-008 · docs 정보 구조 정리와 선정 전 후보 문서 비활성화
+**상황**
+- 무신사 문제 2가 공식 확정된 뒤에도 `docs/` 루트에 활성 구현 기준 문서와 선정 전 후보 비교 문서가 함께 남아 있어, 다음 작업자가 어떤 문서를 우선 봐야 하는지 혼동할 수 있었다.
+- 사용자가 `docs/` 전용 README 생성과 불필요 문서의 `docs/archive/` 이동 검토를 요청했다.
+
+**검토한 선택지**
+- 모든 문서를 `docs/` 루트에 유지
+- 활성 구현 문서만 루트에 두고, 선정 전 후보 방향 문서는 archive로 이동
+- 기업 조사 근거까지 모두 archive로 이동
+
+**결정**
+- `docs/README.md`를 생성해 활성 문서, 근거·참조 폴더, archive의 역할을 구분한다.
+- `docs/plugin-directions.md`는 선정 전 후보 방향 비교 문서이므로 `docs/archive/plugin-directions_PRE_SELECTION.md`로 이동해 비활성 자료로 보관한다.
+- 기업 조사·팩트체크 문서는 선정 근거 추적에 필요하므로 `docs/company-research_references/`에 유지한다.
+
+**근거**
+- 현재 구현 기준은 `docs/requirements-contract.md`, `docs/musinsa-agentizer-plan.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`로 충분히 고정되어 있다.
+- `plugin-directions`는 후보 3사·복수 문제 비교와 안전성 검토 이력을 담고 있어 삭제하지는 않되, 활성 구현 기준으로 남겨두면 범위 혼동을 만들 수 있다.
+
+**영향**
+- 구현 작업자는 `docs/README.md`의 순서에 따라 현재 기준 문서만 우선 확인한다.
+- 후보 방향 검토 이력은 archive에서 추적 가능하되, 현재 구현 기준으로는 사용하지 않는다.
+
+**재검토 조건**
+- 무신사 문제 2를 포기하고 다른 후보나 무신사 문제 1로 회귀하면 archive의 후보 방향 문서를 다시 활성화할지 검토한다.
+
+---

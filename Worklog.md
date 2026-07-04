@@ -10,6 +10,37 @@
 
 ---
 
+### W-014 · docs 전용 README 생성 및 선정 전 후보 문서 아카이브
+**요청**
+- `docs/`만의 README를 생성해 문서 구조를 파악하기 쉽게 정리
+- 작업 진행에 더 이상 불필요한 문서가 있다면 `docs/archive/`로 옮겨 폐기 검토
+
+**수행 작업**
+- `docs/README.md` 생성: 현재 작업 기준, 활성 문서, 근거·참조 폴더, 구현 단계에서 볼 순서, 아카이브 정책 정리
+- `docs/plugin-directions.md`를 `docs/archive/plugin-directions_PRE_SELECTION.md`로 이동해 선정 전 후보 비교·안전성 검토 이력으로 비활성화
+- `docs/archive/README.md`를 폐기·비활성 자료 보관소 기준으로 확장하고, 이동한 파일의 비활성화 사유 기록
+- 활성 문서(`docs/musinsa-agentizer-plan.md`, `docs/validation-plan.md`)의 `plugin-directions` 참조를 archive 경로 또는 현재 기준 문서로 갱신
+- Decisionlog D-008 기록
+
+**변경 파일**
+- 생성: `docs/README.md`
+- 이동: `docs/plugin-directions.md` → `docs/archive/plugin-directions_PRE_SELECTION.md`
+- 수정: `docs/archive/README.md`, `docs/musinsa-agentizer-plan.md`, `docs/validation-plan.md`, `Decisionlog.md`, `Worklog.md`
+
+**검증**
+- 활성 문서에서 `docs/plugin-directions.md` 직접 참조가 남지 않는지 검색 확인(남은 옛 경로는 과거 Worklog/Decisionlog 기록뿐)
+- `docs/` 파일 목록 확인
+- 민감정보 패턴 검색 결과 실제 키·토큰 형식 일치 없음
+
+**판단 근거**
+- 무신사 문제 2 확정 이후 실제 구현 기준은 requirements-contract·musinsa-agentizer-plan·implementation-plan·validation-plan에 모였으므로, 후보 비교 문서를 루트에 계속 두면 범위 혼동이 생길 수 있다.
+
+**결과**
+- 완료: docs 구조 안내 생성 및 선정 전 후보 문서 비활성화
+- 남은 작업: 없음. 다음은 `taxonomy.json`·`schema.json` 작성
+
+---
+
 ### W-013 · 무신사 문제 2 공식 확정 및 계획 문서 동기화
 **요청**
 - 무신사 2번 문제(`상품 데이터 에이전트화 변환기`)를 공식 확정하고 관련 문서 갱신 진행
