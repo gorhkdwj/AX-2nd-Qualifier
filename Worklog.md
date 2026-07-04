@@ -10,6 +10,38 @@
 
 ---
 
+### W-004 · GitHub 원격 저장소 연결 및 푸시
+**요청**
+- `https://github.com/gorhkdwj/AX-2nd-Qualifier.git` 저장소에 현재 작업 폴더를 Git으로 연결하고 푸시
+
+**수행 작업**
+- `AGENTS.md`와 `CLAUDE.md` 동기화 상태 확인 중 두 파일 차이를 발견해 더 최근 `CLAUDE.md` 기준으로 `AGENTS.md` 동기화
+- 민감정보 패턴 검색 수행
+- 원격 저장소 상태 확인(`git ls-remote` 결과 비어 있음)
+- `main` 브랜치로 Git 저장소 초기화
+- `origin` 원격을 `https://github.com/gorhkdwj/AX-2nd-Qualifier.git`로 연결
+- 전체 추적 대상 파일을 첫 커밋으로 생성하고 `origin/main`에 푸시
+
+**변경 파일**
+- 수정: `AGENTS.md`(`CLAUDE.md`와 동기화)
+- 수정: `Worklog.md`
+- 수정: `Decisionlog.md`
+
+**검증**
+- 민감정보 패턴 검색 결과 일치 항목 없음
+- `CLAUDE.md`와 `AGENTS.md`의 SHA-256 해시 동일 확인
+- 첫 커밋 `dbed5f0` 푸시 성공
+- `main` 브랜치가 `origin/main`을 추적하도록 설정됨
+
+**판단 근거**
+- 사용자가 명시적으로 GitHub 저장소 연결과 푸시를 요청했고, 프로젝트 지침상 주요 단계는 커밋·푸시 및 기록을 남겨야 함
+
+**결과**
+- 완료: Git 초기화, 원격 연결, 첫 푸시 완료
+- 남은 작업: 없음
+
+---
+
 ### W-003 · Codex용 AGENTS.md 구축 및 지침 동기화
 **요청**
 - `CLAUDE.md`를 확인하고 Codex가 그대로 활용할 수 있도록 `AGENTS.md`를 구축
