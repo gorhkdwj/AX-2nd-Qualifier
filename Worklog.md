@@ -10,6 +10,36 @@
 
 ---
 
+### W-020 · SKILL.md description 한영 혼합 및 본문 한국어화
+**요청**
+- `src/skills/product-agentizer/SKILL.md`가 영어일 필요가 있는지 확인 후, frontmatter `description`은 한영 혼합으로 수정하고 본문은 한국어 중심으로 수정
+
+**수행 작업**
+- 현재 `SKILL.md`, 기준 계약 문서, 구현 계획을 확인해 지시 의미가 바뀌지 않도록 정합성 검토
+- `name`은 그대로 유지하고, `description`은 한국어 트리거 표현과 영어 technical trigger/boundary를 함께 담는 한영 혼합 문장으로 수정
+- 본문 섹션과 작업 절차, 입력·출력·완료 체크리스트를 한국어 중심으로 재작성
+- 공식/시스템 트리거에 중요한 일부 문구(`Never fetch a URL automatically`, `Never estimate fabric ratios`, `Never judge legal compliance`, `schema-valid`)는 그대로 보존
+
+**변경 파일**
+- 수정: `src/skills/product-agentizer/SKILL.md`
+- 수정: `Worklog.md`
+
+**검증**
+- frontmatter 유지 확인: `name`과 한영 혼합 `description` 파싱 통과
+- 필수 trigger/boundary 문구 유지 확인: `schema-valid`, `agent-query-ready`, `taxonomy mapping`, `do not use`, `automatic URL fetching/crawling`, `private/internal data`
+- 본문 필수 지침 유지 확인: `references/taxonomy.json`, `references/schema.json`, `ratio_status`, `material_ratio`, `scripts/validate.py`, `scripts/dedup.py`
+- 단계 간 정합성 검토: S3 지시 의미는 유지하면서 한국어 가독성만 개선했으므로 S4 이후 작업과 충돌 없음
+- `git diff --check` 통과, 실제 키·토큰 형식 민감정보 없음 확인
+
+**판단 근거**
+- `SKILL.md` 본문은 한글로 작성해도 작동상 문제가 없고, 이 프로젝트의 사용 언어와 입력 데이터가 한국어이므로 본문은 한국어가 더 읽기 쉽다.
+- `description`은 Codex의 implicit invocation 판단에 쓰이므로, 한국어 사용 맥락을 반영하되 `schema-valid`, `taxonomy mapping`, `do not use` 같은 영어 trigger/boundary 표현을 함께 보존한다.
+
+**결과**
+- 완료: `SKILL.md` description 한영 혼합 및 본문 한국어화 완료
+
+---
+
 ### W-019 · S3 product-agentizer SKILL.md 작성
 **요청**
 - 다음 작업 진행: `docs/implementation-plan.md` 기준 S3 `src/skills/product-agentizer/SKILL.md` 작성
