@@ -10,6 +10,34 @@
 
 ---
 
+### W-026 · AGENTS/CLAUDE Troubleshooting 기록 기준 반영
+**요청**
+- `AGENTS.md`와 `CLAUDE.md`에도 T-002 보정 방향성을 반영해 앞으로 계속 적용되게 할지 확인
+
+**수행 작업**
+- 두 지침 파일이 동일한 상태인지 확인
+- `Troubleshootinglog.md` 절에 기록 대상, 기록 제외, 작은 실수 기록 기준을 동일하게 추가
+- 의미 변경 사항을 `Decisionlog.md` D-014로 기록
+
+**변경 파일**
+- 수정: `AGENTS.md`
+- 수정: `CLAUDE.md`
+- 수정: `Decisionlog.md`
+- 수정: `Worklog.md`
+
+**검증**
+- 통과: `AGENTS.md`와 `CLAUDE.md` SHA256 해시 동일
+- 통과: `git diff --check`
+
+**판단 근거**
+- Troubleshooting 기록 기준은 이후 모든 작업 단계의 운영 방식에 영향을 주므로 에이전트 지침 파일에 명시해야 한다.
+- 의도된 실패 테스트와 실제 작업 실패를 구분해야 문제 해결 기록의 품질을 유지할 수 있다.
+
+**결과**
+- 완료: 지침 반영 및 동기화 검증 완료
+
+---
+
 ### W-025 · Troubleshootinglog 기록 기준 점검 및 T-002 보정
 **요청**
 - `Troubleshootinglog.md`가 T-001 이후 업데이트되지 않은 이유 확인
