@@ -53,6 +53,15 @@ python tests\evaluate_product_agentizer.py --pretty
 - `top_linen_blouse`: `rayon` 소재, `spring` 계절, `formal` 태그, `가슴둘레 여유` 사이즈 정보가 누락됐다.
 - `top_washable_tee`: `layering` 태그가 누락됐다.
 
+## 원인 분석과 보완 조치
+- 복합 소재 분해: 한 문장 안에 `충전재 덕다운 80%, 구스다운 20%`처럼 같은 부위의 여러 소재가 나열될 때 뒤쪽 소재가 누락될 수 있다. `SKILL.md`에 같은 부위 구간의 모든 소재를 별도 `materials[]` 항목으로 분리하라는 지침을 추가했다.
+- 색상 정규화: `카키`처럼 taxonomy에 구체 id가 있는 색상이 넓은 색상군 `green`으로 뭉뚱그려질 수 있다. `SKILL.md`에 구체 alias 우선 매핑 규칙을 추가했다.
+- 복합 계절 표현: `봄여름`, `가을겨울` 같은 표현은 한 계절만 기록될 수 있다. `SKILL.md`에 복수 계절 기록 규칙을 추가하고, `taxonomy.json` alias에도 복합 표현을 보강했다.
+- TPO 단서 누락: `이너 레이어드`, `여행용`, `포멀한` 같은 표현이 태그로 연결되지 않을 수 있다. `SKILL.md`의 TPO 체크리스트와 `taxonomy.json` alias를 보강했다.
+- 사이즈/착용감 정보 누락: `암홀 여유`, `가슴둘레 여유` 같은 치수 보조 설명이 빠질 수 있다. `SKILL.md`에 치수·착용감 표현을 `size_info`에 보존하라는 점검 규칙을 추가했다.
+
+이 보완은 S6 실제 Codex CLI 실행에서 생성되는 새 출력의 누락을 줄이기 위한 지침 강화다. S5의 `predicted_products.json`은 평가 harness가 차이를 잡는지 확인하기 위한 baseline fixture로 유지한다.
+
 ## 중복 감지 결과
 - `outer_linen_blazer_a`와 `outer_linen_blazer_b`는 score `1.0`, decision `duplicate`로 탐지됐다.
 - 나머지 9개 라벨 쌍은 모두 `distinct`로 판정되어 정답과 일치했다.

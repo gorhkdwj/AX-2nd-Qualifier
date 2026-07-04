@@ -139,8 +139,8 @@
       {"id": "nylon", "ko_name": "나일론", "aliases": ["나일론", "nylon"], "group": "synthetic_fiber"},
       {"id": "wool", "ko_name": "울", "aliases": ["울", "모", "양모", "wool"], "group": "natural_fiber"},
       {"id": "cashmere", "ko_name": "캐시미어", "aliases": ["캐시미어", "cashmere"], "group": "natural_fiber"},
-      {"id": "linen", "ko_name": "리넨", "aliases": ["리넨", "린넨", "마", "linen"], "group": "natural_fiber"},
-      {"id": "rayon", "ko_name": "레이온", "aliases": ["레이온", "비스코스", "viscose", "rayon"], "group": "regenerated_fiber"},
+      {"id": "linen", "ko_name": "리넨", "aliases": ["리넨", "린넨", "마", "린넨 터치", "리넨 터치", "linen"], "group": "natural_fiber"},
+      {"id": "rayon", "ko_name": "레이온", "aliases": ["레이온", "레이온 블렌드", "비스코스", "viscose", "rayon"], "group": "regenerated_fiber"},
       {"id": "polyurethane", "ko_name": "폴리우레탄", "aliases": ["폴리우레탄", "스판", "스판덱스", "엘라스틴", "polyurethane", "spandex", "elastane"], "group": "synthetic_fiber"},
       {"id": "acrylic", "ko_name": "아크릴", "aliases": ["아크릴", "acrylic"], "group": "synthetic_fiber"},
       {"id": "leather", "ko_name": "가죽", "aliases": ["가죽", "천연가죽", "leather"], "group": "animal_material"},
@@ -177,20 +177,20 @@
       {"id": "multi", "ko_name": "멀티", "aliases": ["멀티", "혼합", "패턴", "multi"]}
     ],
     "seasons": [
-      {"id": "spring", "ko_name": "봄", "aliases": ["봄", "간절기", "봄가을"]},
-      {"id": "summer", "ko_name": "여름", "aliases": ["여름", "썸머", "한여름"]},
-      {"id": "fall", "ko_name": "가을", "aliases": ["가을", "간절기", "봄가을"]},
-      {"id": "winter", "ko_name": "겨울", "aliases": ["겨울", "윈터", "한겨울"]}
+      {"id": "spring", "ko_name": "봄", "aliases": ["봄", "간절기", "봄가을", "봄여름"]},
+      {"id": "summer", "ko_name": "여름", "aliases": ["여름", "썸머", "한여름", "봄여름"]},
+      {"id": "fall", "ko_name": "가을", "aliases": ["가을", "간절기", "봄가을", "가을겨울"]},
+      {"id": "winter", "ko_name": "겨울", "aliases": ["겨울", "윈터", "한겨울", "가을겨울"]}
     ],
     "tpo_tags": [
       {"id": "daily", "ko_name": "데일리", "aliases": ["데일리", "일상", "기본"]},
       {"id": "casual", "ko_name": "캐주얼", "aliases": ["캐주얼", "편한", "주말"]},
       {"id": "commute", "ko_name": "출근룩", "aliases": ["출근", "오피스", "직장"]},
-      {"id": "formal", "ko_name": "포멀", "aliases": ["포멀", "격식", "세미포멀"]},
+      {"id": "formal", "ko_name": "포멀", "aliases": ["포멀", "포멀한", "격식", "세미포멀"]},
       {"id": "guest_look", "ko_name": "하객룩", "aliases": ["하객", "결혼식", "행사"]},
-      {"id": "travel", "ko_name": "여행", "aliases": ["여행", "휴가"]},
+      {"id": "travel", "ko_name": "여행", "aliases": ["여행", "여행용", "휴가"]},
       {"id": "outdoor", "ko_name": "아웃도어", "aliases": ["아웃도어", "캠핑", "등산"]},
-      {"id": "layering", "ko_name": "레이어드", "aliases": ["레이어드", "이너", "겹쳐입기"]},
+      {"id": "layering", "ko_name": "레이어드", "aliases": ["레이어드", "이너", "이너 레이어드", "겹쳐입기"]},
       {"id": "date", "ko_name": "데이트", "aliases": ["데이트", "약속"]},
       {"id": "street", "ko_name": "스트리트", "aliases": ["스트리트", "힙한", "그래픽"]}
     ],

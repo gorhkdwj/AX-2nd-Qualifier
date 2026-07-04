@@ -75,6 +75,7 @@ JSON 구조는 schema가 기준입니다. 정규화 id와 alias 매핑은 taxono
    - 예를 들어 `자켓`, `블레이저`는 taxonomy 기준 `jacket`으로 매핑합니다.
    - JSON 값에는 표시명보다 taxonomy id를 우선 사용합니다.
    - taxonomy 또는 schema enum에 없는 값은 새로 만들지 않습니다.
+   - 더 구체적인 alias가 있으면 넓은 색상/맥락보다 구체 id를 우선합니다. 예를 들어 `카키`, `올리브`는 `green`이 아니라 `khaki`로 매핑합니다.
 
 5. 소재와 혼용률은 엄격하게 처리합니다.
    - 각 소재에는 반드시 `part`, `name`, `ratio`, `ratio_status`, `evidence`를 포함합니다.
@@ -83,25 +84,34 @@ JSON 구조는 schema가 기준입니다. 정규화 id와 alias 매핑은 taxono
    - 소재명은 있지만 숫자 혼용률이 없으면 `ratio: null`, `ratio_status: "missing"`으로 두고 `quality.missing_fields`에 `material_ratio`를 추가합니다.
    - "혼방", "터치", "느낌", "라이크"처럼 소재감만 암시하는 표현이면 `ratio: null`, `ratio_status: "ambiguous"`로 두고 `quality.ambiguous_fields`에 `material_ratio`를 추가합니다.
    - 부위가 다르면 `shell`, `lining`, `fill`, `rib`, `pocket`, `trim`, `unknown` 중 하나로 나누어 기록합니다.
+   - 한 문장에 여러 소재나 혼용률이 함께 나오면 모두 별도 `materials[]` 항목으로 분리합니다. 예: `충전재 덕다운 80%, 구스다운 20%`는 `fill:duck_down:80`과 `fill:goose_down:20`으로 나눕니다.
+   - `겉감`, `안감`, `충전재`, `립`, `포켓`, `배색` 같은 부위 단어가 먼저 나오면, 다음 부위 단어가 나오기 전까지 같은 구간의 모든 소재에 그 `part`를 적용합니다.
+   - `린넨 터치`, `레이온 블렌드`처럼 정확한 숫자 혼용률이 없는 소재 표현은 소재 후보를 누락하지 말고 각각 `ratio: null`, `ratio_status: "ambiguous"`로 기록합니다.
    - Never estimate fabric ratios. Never judge legal compliance.
 
-6. `agent_descriptor`를 작성합니다.
+6. 복합 표현 누락을 점검합니다.
+   - 계절: `봄여름`은 `spring`, `summer`를 모두 기록하고, `가을겨울`은 `fall`, `winter`를 모두 기록합니다.
+   - TPO: `이너`, `레이어드`, `겹쳐입기`는 `layering`; `여행`, `여행용`, `휴가`는 `travel`; `포멀`, `격식`, `세미포멀`은 `formal`로 매핑합니다.
+   - 사이즈/착용 정보: `총장`, `어깨`, `가슴둘레`, `소매`, `암홀`, `밑단`, `기장`, `여유`처럼 치수나 착용감을 설명하는 구절은 `size_info`에 보존합니다.
+   - 한 상품 안에서 소재, 계절, TPO, 사이즈 단서가 쉼표로 나열되면 첫 항목만 기록하지 말고 목록 전체를 다시 훑습니다.
+
+7. `agent_descriptor`를 작성합니다.
    - `search_summary`: 에이전트 검색에 유용한 짧은 한국어 요약 1문장
    - `query_tags`: 이 상품이 대응할 수 있는 자연어 한국어 질의 표현
    - `explainable_reasons`: 추출 근거와 taxonomy 매핑에 기반한 짧은 한국어 설명
 
-7. `quality`를 작성합니다.
+8. `quality`를 작성합니다.
    - 입력에 없는 중요 속성은 `missing_fields`에 넣습니다.
    - 불확실한 속성은 `ambiguous_fields`에 넣습니다.
    - 근거가 얼마나 명확한지에 따라 `confidence`를 `high`, `medium`, `low` 중 하나로 설정합니다.
    - 지원 범위 밖 상품이면 `out_of_scope: true`를 사용합니다.
 
-8. 최종 출력 전에 검증합니다.
+9. 최종 출력 전에 검증합니다.
    - 최종 객체는 `references/schema.json`과 일치해야 합니다.
    - `scripts/validate.py`가 존재하면 최종 JSON에 대해 실행하고, 통과한 뒤 완료를 보고합니다.
    - 아직 검증 스크립트가 없다면 schema 핵심 요구사항을 수동으로 확인하고, 스크립트 검증은 pending이라고 명시합니다.
 
-9. 배치 입력이나 중복 감지 요청이 있으면 다음 순서를 따릅니다.
+10. 배치 입력이나 중복 감지 요청이 있으면 다음 순서를 따릅니다.
    - 먼저 상품별로 schema-valid 구조화 JSON을 하나씩 만듭니다.
    - `scripts/dedup.py`가 존재하고 사용자가 중복 감지를 요청했다면 구조화 상품 JSON 목록에 대해 실행합니다.
    - 구조화 JSON 없이 원문 텍스트만으로 중복 감지를 수행하지 않습니다.
@@ -120,6 +130,7 @@ schema 밖의 필드를 추가하지 않습니다. "legal", "illegal", "valid la
 - category가 `outer` 또는 `top`이거나, `quality.out_of_scope`가 true입니다.
 - 모든 정규화 id가 `taxonomy.json`과 `schema.json`에 존재합니다.
 - 소재의 `part`, `ratio`, `ratio_status`가 엄격한 혼용률 규칙을 지킵니다.
+- 복합 소재, 복합 계절, TPO 단서, 사이즈/착용감 구절을 한 번 더 훑어 누락이 없습니다.
 - 명확하지 않은 추출 속성에는 입력 텍스트 근거가 있습니다.
 - 누락 또는 모호한 정보가 `quality`에 반영되어 있습니다.
 - URL을 자동으로 열지 않았고, 비공개·내부 데이터를 사용하지 않았습니다.

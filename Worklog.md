@@ -10,6 +10,42 @@
 
 ---
 
+### W-023 · S5 평가 미달 원인 분석 및 SKILL/taxonomy 보완
+**요청**
+- S5 precision/recall이 100%가 아닌 부분의 원인을 분석하고, 앞서 제안한 보완 방향대로 진행
+
+**수행 작업**
+- S5 평가 결과를 재집계해 100% 미달 필드와 케이스별 false positive/false negative 확인
+- `SKILL.md`에 복합 소재 분해, 구체 색상 alias 우선, 복합 계절 표현, TPO 단서, size_info 누락 방지 체크리스트 추가
+- `taxonomy.json`에 `린넨 터치`, `레이온 블렌드`, `봄여름`, `가을겨울`, `포멀한`, `여행용`, `이너 레이어드` alias 보강
+- `docs/s5-evaluation-report.md`에 원인 분석과 보완 조치 기록
+- S5 baseline 예측 fixture는 평가 harness의 차이 감지용으로 유지
+
+**변경 파일**
+- 수정: `src/skills/product-agentizer/SKILL.md`
+- 수정: `src/skills/product-agentizer/references/taxonomy.json`
+- 수정: `docs/s5-evaluation-report.md`
+- 수정: `Worklog.md`
+
+**검증**
+- 통과: `taxonomy.json` JSON 파싱 확인
+- 통과: 새 alias(`린넨 터치`, `레이온 블렌드`, `봄여름`, `가을겨울`, `포멀한`, `여행용`, `이너 레이어드`) 존재 확인
+- 통과: `validate.py`로 S5 정답 JSON 5건 schema-valid 확인
+- 통과: `validate.py`로 S5 예측 JSON 5건 schema-valid 확인
+- 통과: `python tests\evaluate_product_agentizer.py`
+- 확인: S5 baseline 지표는 의도대로 유지됨(micro precision 98.55%, micro recall 88.31%, dedup accuracy 100.00%)
+- 완료: 보완은 baseline fixture 조작이 아니라 S6 실제 Codex 실행의 누락을 줄이기 위한 `SKILL.md`/taxonomy 지침 강화로 정합성 확인
+
+**판단 근거**
+- 미달 항목은 대부분 recall 손실이므로, 예측 fixture를 단순히 정답으로 고치기보다 실제 Codex 변환 지침과 alias를 강화하는 것이 S6 실 실행에 더 직접적으로 도움이 된다.
+- `khaki`, `봄여름`, `여행용`, `이너 레이어드`처럼 taxonomy에 이미 개념은 있지만 alias가 부족한 표현은 정적 vocabulary에 보강하는 편이 재현 가능하다.
+
+**결과**
+- 완료: S5 평가 미달 원인 분석과 SKILL/taxonomy 보완 완료
+- 다음 단계: S6 Codex CLI 실제 실행에서 보강 지침이 새 출력의 recall 개선으로 이어지는지 확인
+
+---
+
 ### W-022 · S5 더미 픽스처 정량 검증 구현
 **요청**
 - 다음 단계 진행: S5 더미 데이터셋과 정량 검증 스크립트 작성
