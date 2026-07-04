@@ -10,6 +10,39 @@
 
 ---
 
+### W-019 · S3 product-agentizer SKILL.md 작성
+**요청**
+- 다음 작업 진행: `docs/implementation-plan.md` 기준 S3 `src/skills/product-agentizer/SKILL.md` 작성
+
+**수행 작업**
+- 단계 간 정합성 검토 게이트에 따라 `docs/requirements-contract.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`, Codex Skill/Plugin 공식 참고 문서, S2 schema/taxonomy를 확인
+- `src/skills/product-agentizer/SKILL.md` 작성: frontmatter `name`, `description` 추가
+- 발동 범위: 사용자가 붙여넣은 패션 상품 상세 텍스트를 무신사 문제 2 MVP용 구조화 JSON으로 변환
+- 비발동 범위: 표기 규정 적법/위법 판정, 자동 URL fetch/크롤링, 내부·비공개 데이터, 추천 랭킹, 범위 밖 카테고리
+- 변환 절차: 입력 확인, category 판정, taxonomy 매핑, 소재 혼용률 엄격 처리, agent descriptor 생성, quality 필드 작성, schema 검증, 배치 중복 감지 준비
+- 루트 `README.md` 현재 상태를 `SKILL.md` 초안 작성 완료로 갱신
+
+**변경 파일**
+- 생성: `src/skills/product-agentizer/SKILL.md`
+- 수정: `README.md`, `Worklog.md`
+
+**검증**
+- frontmatter 파싱 통과: `name: product-agentizer`, `description` 존재 확인
+- description 발동/비발동 조건 확인: pasted product detail text 변환, legal label-compliance audit·automatic URL fetching/crawling·private/internal data 비발동 명시
+- schema/taxonomy 참조 정합성 확인: `references/taxonomy.json`, `references/schema.json`, `ratio_status`, `material_ratio`, `scripts/validate.py`, `scripts/dedup.py` 연결 확인
+- 단계 간 정합성 검토: S2 schema/taxonomy를 입력으로 사용하고, S4 scripts가 생기면 검증·중복감지로 이어지는 구조와 충돌 없음
+- `git diff --check` 통과, 실제 키·토큰 형식 민감정보 없음 확인
+
+**판단 근거**
+- S3는 Codex가 어떤 상황에서 이 skill을 써야 하는지와 어떤 절차로 schema-valid JSON을 만들어야 하는지 고정하는 단계다.
+- S4의 `validate.py`, `dedup.py`가 아직 없으므로 스킬에는 스크립트 존재 시 실행하고, 없을 때는 schema-critical 수동 검토와 pending 보고를 하도록 연결했다.
+
+**결과**
+- 완료: S3 `SKILL.md` 작성 완료
+- 남은 작업: S4 `plugin.json`, `validate.py`, `dedup.py` 구현
+
+---
+
 ### W-018 · 소재 혼용률 엄격 처리 보완
 **요청**
 - 소재 혼용률은 법적 오해 소지가 있으므로 엄격하게 지정하고 넘어가야 하는지 검토 후 보완 진행

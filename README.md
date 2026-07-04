@@ -7,7 +7,7 @@
 - 목적: 상품 상세페이지의 비정형 텍스트를 에이전트가 질의 가능한 구조화 상품 데이터로 변환하는 Codex 플러그인 제작
 - 주요 사용자: 해커톤 심사위원/주최측
 - 최종 산출물: `submission.zip` (`src/` 플러그인 코드 + 루트 `README.md` + 루트 `logs/`) + 질문 5문항 답변
-- 현재 상태: 주제 확정, 구현 계약·계획 문서 갱신, taxonomy/schema 초안 작성 완료. 아직 실행 가능한 플러그인 코드는 구현 전이다.
+- 현재 상태: 주제 확정, 구현 계약·계획 문서 갱신, taxonomy/schema 및 `SKILL.md` 초안 작성 완료. manifest와 검증 스크립트는 구현 전이다.
 
 ## 실행 방법
 아직 실행 가능한 플러그인 코드가 없다. `src/.codex-plugin/plugin.json`, `src/skills/product-agentizer/SKILL.md`, 검증 스크립트가 구현되면 실제 설치·실행 방법으로 갱신한다.
