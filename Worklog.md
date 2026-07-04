@@ -10,6 +10,32 @@
 
 ---
 
+### W-025 · Troubleshootinglog 기록 기준 점검 및 T-002 보정
+**요청**
+- `Troubleshootinglog.md`가 T-001 이후 업데이트되지 않은 이유 확인
+
+**수행 작업**
+- `Troubleshootinglog.md`와 `AGENTS.md`/`CLAUDE.md`의 문제 기록 기준 확인
+- S6 이후 실제로 기록 대상이 될 만한 실패가 있었는지 검토
+- S6 최종 검증 중 fixture 경로 오인으로 발생한 `No such file or directory` 오류를 T-002로 추가
+
+**변경 파일**
+- 수정: `Troubleshootinglog.md`
+- 수정: `Worklog.md`
+
+**검증**
+- 확인: T-001은 전역 marketplace, `--output-schema`, PowerShell 한글 stdin 문제를 이미 포함
+- 확인: T-002는 fixture 경로 오인과 재발 방지 기준을 별도 기록
+
+**판단 근거**
+- 의도된 실패 fixture는 테스트가 오류를 정상 차단했는지 확인하는 검증 결과이므로 Troubleshooting 항목으로 보지 않는다.
+- 반면 존재하지 않는 fixture 경로로 실행한 일은 작더라도 실제 검증 명령 실패이므로 기록 대상에 포함한다.
+
+**결과**
+- 완료: T-001 이후 누락되었던 실제 경로 오인 문제를 T-002로 보정
+
+---
+
 ### W-024 · S6 Codex CLI 실제 실행 및 로컬 marketplace 검증
 **요청**
 - 다음 작업 진행: S6 Codex CLI 실제 설치·실행 시연 확인
