@@ -228,3 +228,30 @@
 - 무신사 문제 2를 포기하고 다른 후보나 무신사 문제 1로 회귀하면 archive의 후보 방향 문서를 다시 활성화할지 검토한다.
 
 ---
+
+### D-009 · 구현 계획 문서 단일화
+**상황**
+- `AGENTS.md`와 `CLAUDE.md`에는 `docs/musinsa-agentizer-plan.md`를 직접 참조하는 지침이 없었다.
+- `docs/musinsa-agentizer-plan.md`와 `docs/implementation-plan.md`는 모두 무신사 문제 2의 구현 단계와 플러그인 구조를 설명해 활성 기준 역할이 중복됐다.
+
+**검토한 선택지**
+- 두 계획 문서를 모두 활성 문서로 유지
+- `musinsa-agentizer-plan.md`를 기준 문서로 삼고 `implementation-plan.md`를 축소
+- `implementation-plan.md`를 단일 활성 구현 계획으로 확장하고 `musinsa-agentizer-plan.md`를 archive로 이동
+
+**결정**
+- `docs/implementation-plan.md`를 단일 활성 구현 계획 문서로 사용한다.
+- `docs/musinsa-agentizer-plan.md`의 고유 내용은 `docs/implementation-plan.md`에 병합하고, 원본은 `docs/archive/musinsa-agentizer-plan_MERGED.md`로 보관한다.
+
+**근거**
+- `implementation-plan.md`는 이미 단계별 실행 순서와 완료 조건을 담는 문서였으므로, 상세 배경과 제출 구조까지 흡수하면 구현자가 한 문서에서 다음 행동을 결정할 수 있다.
+- 활성 계획 문서가 둘이면 마감 직전 작업자가 어느 문서를 우선해야 하는지 혼동할 수 있다.
+
+**영향**
+- 이후 구현 기준 문서 목록은 `docs/requirements-contract.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`로 단순화한다.
+- `docs/archive/musinsa-agentizer-plan_MERGED.md`는 감사 추적용으로만 확인하며 활성 구현 기준으로 사용하지 않는다.
+
+**재검토 조건**
+- 무신사 문제 2의 구현 범위가 크게 바뀌어 별도 상세 설계 문서가 다시 필요해지면 새 문서를 만들되, `docs/README.md`에 우선순위와 관계를 명시한다.
+
+---

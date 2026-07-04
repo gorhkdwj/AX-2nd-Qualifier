@@ -68,4 +68,4 @@
 ---
 
 ## 후보별 조사 결과
-후보별 상세 조사·검증 결과는 `docs/company-research_references/`의 최종 보고서와 검토 보고서에 보존한다. 최종 구현 대상은 무신사 문제 2로 확정했으므로, 이후 구현 기준은 `docs/requirements-contract.md`와 `docs/musinsa-agentizer-plan.md`를 따른다.
+후보별 상세 조사·검증 결과는 `docs/company-research_references/`의 최종 보고서와 검토 보고서에 보존한다. 최종 구현 대상은 무신사 문제 2로 확정했으므로, 이후 구현 기준은 `docs/requirements-contract.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`를 따른다.

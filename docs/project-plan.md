@@ -29,7 +29,7 @@
 ## 일정·마일스톤
 - 마감: 2026-07-06 밤
 - 주요 단계: 기준 계약 고정 → taxonomy/schema 작성 → SKILL.md 작성 → validate/dedup 스크립트 구현 → 더미 픽스처 검증 → Codex CLI 설치·실행 시연 → README·질문 5문항 작성 → 패키징·제출
-  (세부는 `docs/implementation-plan.md`와 `docs/musinsa-agentizer-plan.md` 참조)
+  (세부는 `docs/implementation-plan.md` 참조)
 
 ## 리스크와 대응
 - 공개 근거 부족 → 인터뷰 공개영상과 기업 조사 근거를 URL·확인일과 함께 남기고, 제출 인용문은 원본 영상과 대조한다.

@@ -4,7 +4,7 @@
 
 ## 현재 작업 기준
 - 확정 기업·문제: **무신사 / 문제 2 · 상품 데이터 에이전트화 변환기**
-- 활성 구현 기준: `requirements-contract.md`, `musinsa-agentizer-plan.md`, `implementation-plan.md`, `validation-plan.md`
+- 활성 구현 기준: `requirements-contract.md`, `implementation-plan.md`, `validation-plan.md`
 - 입력 정책: 사용자가 붙여넣은 BYO 상품 상세 텍스트만 실행 입력으로 사용합니다. URL은 출처 메타데이터이며 자동 크롤링 입력이 아닙니다.
 
 ## 활성 문서
@@ -13,8 +13,7 @@
 | `과제.md` | 해커톤 과제 원문 | 제출 구조·실격 조건·질문 5문항 확인 |
 | `project-plan.md` | 프로젝트 전체 기획 | 목표, 범위, 산출물, 리스크 확인 |
 | `requirements-contract.md` | 구현 기준 계약 | 입력·출력 JSON, 지표, 오류·완료 기준 확인 |
-| `implementation-plan.md` | 단계별 구현 계획 | 다음 작업 순서와 완료 조건 확인 |
-| `musinsa-agentizer-plan.md` | 무신사 문제 2 상세 구현 계획 | 플러그인 구조와 S1~S8 세부 흐름 확인 |
+| `implementation-plan.md` | 무신사 문제 2 단일 구현 계획 | 플러그인 구조, 다음 작업 순서, 완료 조건 확인 |
 | `validation-plan.md` | 검증 계획 | 더미 픽스처, 안전성, 제출 구조 검증 기준 확인 |
 | `company-selection.md` | 기업 선정 기준·최종 확정 기록 | 왜 무신사 문제 2를 골랐는지 추적 |
 
@@ -27,10 +26,9 @@
 
 ## 구현 단계에서 주로 볼 순서
 1. `requirements-contract.md`로 입력·출력·오류 기준 확인
-2. `musinsa-agentizer-plan.md`로 플러그인 구조 확인
-3. `implementation-plan.md`로 현재 단계 확인
-4. `validation-plan.md`로 테스트와 안전성 기준 확인
-5. 필요한 경우 `technical_references/Build_plugins.md`와 `technical_references/Agent_Skills.md`로 Codex 규격 확인
+2. `implementation-plan.md`로 플러그인 구조와 현재 단계 확인
+3. `validation-plan.md`로 테스트와 안전성 기준 확인
+4. 필요한 경우 `technical_references/Build_plugins.md`와 `technical_references/Agent_Skills.md`로 Codex 규격 확인
 
 ## 아카이브 정책
 - 현재 구현에 직접 필요하지 않은 선정 전 후보 비교·폐기 자료는 `archive/`로 옮깁니다.

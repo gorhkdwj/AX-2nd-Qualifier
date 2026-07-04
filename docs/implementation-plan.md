@@ -1,6 +1,53 @@
 # 구현 계획 · 무신사 상품 데이터 에이전트화 변환기
 
-> 처음부터 전체를 달리지 않는다. 가장 작은 성공 단위부터. 각 단계는 완료 조건과 검증 방법을 명시한다.
+> 무신사 문제 2의 단일 활성 구현 계획이다. 병합 전 상세 계획 보관본은 `docs/archive/musinsa-agentizer-plan_MERGED.md`에 두고, 세부 계약은 `docs/requirements-contract.md`, 검증 기준은 `docs/validation-plan.md`를 따른다.
+
+## Context
+AX 해커톤 2차 제출 대상 기업·문제는 **무신사 / 문제 2 · 상품 데이터 에이전트화 변환기**로 확정한다. 무신사 테크리드 인터뷰 공개영상(https://www.youtube.com/watch?v=OLAWeIuiD5Y)의 핵심 비전인 "AI 에이전트가 패션 질문 때 첫 번째로 쓰는 도구가 무신사이길", "동일 상품을 두 번 등록해야 하는 파편화"에 대응한다.
+
+문제는 무신사 상품 상세정보가 소비자에게는 읽히지만, AI 에이전트가 정확·일관·설명 가능하게 질의하기에는 비정형 텍스트 중심이라는 점이다. 해결책은 상품 상세페이지 텍스트를 **정규화된 구조화 속성 + 표준 taxonomy 매핑 + 중복 감지 + 에이전트 질의 descriptor**로 변환하는 Codex 플러그인이다.
+
+## 확정 스코프
+- 근거: 무신사 인터뷰 공개영상 URL을 1차 출처로 사용하고, 무신사 멀티플랫폼·글로벌 확장·에이전트 커머스 관련 공개 사실로 보강한다.
+- MVP 카테고리: **아우터·상의 2개 카테고리**. taxonomy는 데이터 주도로 설계해 이후 카테고리 확장을 쉽게 한다.
+- 입력 방식: 상품 URL은 출처 메타데이터로만 기록하고, 실제 실행 입력은 사용자가 직접 붙여넣은 상품 상세 텍스트로 제한한다. 자동 fetch·크롤링은 포함하지 않는다.
+- 구성: **SKILL + 결정적 스크립트**. instruction SKILL, 정적 taxonomy/schema 데이터, Python 검증·중복감지 스크립트를 조합한다.
+- 검증: 더미 픽스처로 정량 검증하고, 로컬 Codex CLI에서 실제 설치·실행·시연한다.
+
+## 제출물 구조
+플러그인 루트는 `src/`이다. 제출 zip은 `src/` + 루트 `README.md` + 루트 `logs/`로 구성한다.
+
+```text
+src/
+├── .codex-plugin/plugin.json
+└── skills/product-agentizer/
+    ├── SKILL.md
+    ├── references/
+    │   ├── taxonomy.json
+    │   └── schema.json
+    └── scripts/
+        ├── validate.py
+        └── dedup.py
+README.md
+logs/
+tests/fixtures/
+docs/references/
+```
+
+- `src/.codex-plugin/plugin.json`: 필수 manifest. `.codex-plugin/` 폴더에는 manifest만 둔다.
+- `src/skills/product-agentizer/SKILL.md`: `name`, `description` frontmatter와 변환 절차 지시문.
+- `references/taxonomy.json`: 아우터·상의 카테고리, 소재, 핏, 계절, TPO 등 표준 용어.
+- `references/schema.json`: 출력 JSON 스키마.
+- `scripts/validate.py`: 출력 JSON 스키마, 필수 속성, taxonomy 용어 유효성 검증.
+- `scripts/dedup.py`: 속성 유사도 기반 중복 후보 감지.
+- `logs/`: `tools/save_log.py` 훅이 자동 저장한 원본 로그. 수동 편집하지 않는다.
+- `tests/fixtures/`: 제출물은 아니며, 더미 상품설명·정답 라벨·중복쌍 검증용으로 사용한다.
+
+## 재사용 자산
+- `tools/save_log.py`: 대화 로그 자동 저장 훅. 기존 구현을 그대로 사용하고 편집하지 않는다.
+- `src/`, `tests/`, `docs/references/`: 이미 마련된 작업 폴더를 사용한다.
+- `docs/archive/plugin-directions_PRE_SELECTION.md`: 선정 전 후보 방향과 안전성 검토 이력 보관본.
+- `docs/technical_references/`: Codex 플러그인·Skill 규격 확인용 공식 문서 사본. 구현 중 필요한 문서만 확인한다.
 
 ## 단계 개요
 | 단계 | 목표 | 완료 조건 | 검증 방법 | 의존/연결 |
@@ -17,48 +64,62 @@
 ## 단계 상세
 
 ### S1 · 주제·계약 고정
-- 왜 필요한가: 기존 문서에는 이전 미정 상태와 “무신사 문제 2 확정” 상태가 섞여 있어, 구현 전 기준 계약을 하나로 고정해야 한다.
-- 이전 단계와 연결: 후보 조사·검토 결과를 바탕으로 사용자가 무신사 문제 2를 공식 확정했다.
-- 다음 단계로 전달: 입력/출력/지표/오류 기준이 고정된 `docs/requirements-contract.md`.
-- 완료 조건: `Decisionlog.md`에 D-007 기록, `docs/company-selection.md` 확정 체크, `docs/project-plan.md`·`docs/implementation-plan.md`·`docs/validation-plan.md`·`docs/requirements-contract.md` 갱신.
-- 검증 방법: `rg`로 이전 미정·미작성 표현 잔존 여부 확인, 문서 간 핵심 명칭 일치 확인.
-- 실패 시 중단점: 확정 근거가 부족하면 구현으로 넘어가지 않고 사용자에게 재검토 요청.
+- 왜 필요한가: 구현 전 기준 계약을 하나로 고정해 입력, 출력, 지표, 오류 기준의 흔들림을 막는다.
+- 완료 내용: `docs/requirements-contract.md`에 붙여넣기 상품 상세 텍스트 입력, 정규화 JSON 출력, 속성별 precision/recall·중복감지 정확도, 상태·오류 판정, 누락·모호 속성 처리 규칙을 고정한다.
+- 완료 내용: `docs/project-plan.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`, `docs/company-selection.md`, `Decisionlog.md`를 무신사 문제 2 기준으로 정리한다.
+- 남은 세부 작업: `docs/references/`에 인터뷰 URL, 원본 영상 대조 인용, 공개 사실 출처·확인일을 구현 과정에서 보강한다.
+- 검증 방법: `rg`로 이전 미정·미작성 표현 잔존 여부를 확인하고, 문서 간 핵심 명칭과 입력 정책이 일치하는지 확인한다.
 
 ### S2 · 지식 데이터 작성
 - 왜 필요한가: 에이전트화 변환의 일관성은 taxonomy와 schema에 달려 있다.
 - 산출물: `src/skills/product-agentizer/references/taxonomy.json`, `src/skills/product-agentizer/references/schema.json`.
-- 완료 조건: 아우터·상의 2개 카테고리에 대해 핵심 속성 vocabulary와 JSON schema가 존재한다.
-- 검증 방법: 정상 샘플 JSON은 통과, 필수 필드 누락·범위 밖 카테고리·잘못된 타입은 실패.
+- 내용: 아우터·상의 2개 카테고리의 카테고리/서브카테고리, 핏·실루엣, 소재, 컬러, 계절, TPO·스타일 태그, 관리, 사이즈 vocabulary를 정의한다.
+- 완료 조건: 정상 샘플 JSON은 통과하고, 필수 필드 누락·범위 밖 카테고리·잘못된 타입은 실패한다.
 
 ### S3 · SKILL.md 작성
 - 왜 필요한가: Codex가 언제 이 skill을 써야 하는지, 어떤 절차로 변환해야 하는지 명확히 해야 한다.
 - 산출물: `src/skills/product-agentizer/SKILL.md`.
-- 완료 조건: `name`, `description` frontmatter 포함. description에 “패션 상품 상세정보→에이전트 질의용 구조화 데이터 변환”과 “표기 규정 검수에는 비발동”을 명시.
-- 검증 방법: 대표 프롬프트로 발동/비발동 조건을 검토.
+- 완료 조건: `name`, `description` frontmatter 포함. description에 “패션 상품 상세정보→에이전트 질의용 구조화 데이터 변환”과 “표기 규정 검수에는 비발동”을 명시한다.
+- 지시 흐름: 텍스트에서 속성 추출 → taxonomy 매핑 → schema 준수 JSON 생성 → 부족·모호 속성 표기 → 에이전트 질의 descriptor 생성 → `validate.py` 검증 → 배치 입력이면 `dedup.py` 중복 감지.
 
 ### S4 · 스크립트·manifest 구현
 - 왜 필요한가: 스키마 검증과 중복 감지는 결정적으로 재현되어야 한다.
 - 산출물: `src/.codex-plugin/plugin.json`, `src/skills/product-agentizer/scripts/validate.py`, `src/skills/product-agentizer/scripts/dedup.py`.
-- 완료 조건: 스크립트가 파일 입력과 표준입력 중 최소 하나로 단독 실행 가능하고, `plugin.json`이 `skills: "./skills/"`를 가리킨다.
-- 검증 방법: 더미 JSON을 넣어 validate/dedup 실행 결과 확인.
+- `validate.py`: 출력 JSON을 schema와 대조하고, 필수 속성·taxonomy 용어 유효성을 검사한다. 표준입력 또는 파일 인자로 단독 실행 가능해야 한다.
+- `dedup.py`: 상품 JSON 리스트를 입력받아 속성 유사도로 중복 후보를 판별한다.
+- `plugin.json`: name `musinsa-product-agentizer`, version `0.1.0`, description, `"skills": "./skills/"`.
 
 ### S5 · 더미 픽스처 검증
 - 왜 필요한가: 실제 공개 상품페이지는 정답 라벨이 없으므로, 정확도 검증은 정답을 아는 합성 데이터가 필요하다.
-- 산출물: `tests/fixtures/`의 입력 텍스트, 정답 JSON, 중복쌍/비중복쌍.
+- 산출물: `tests/fixtures/`의 아우터·상의 더미 상품설명, 정답 JSON, 중복쌍/비중복쌍.
 - 완료 조건: 속성별 precision/recall과 중복 감지 정확도를 산출해 기록한다.
-- 검증 방법: 평가 스크립트 또는 수동 비교로 expected/actual 차이를 확인.
+- 검증 방법: 평가 스크립트 또는 수동 비교로 expected/actual 차이를 확인한다.
 
 ### S6 · Codex CLI 실제 실행·시연
 - 왜 필요한가: 과제는 Codex 플러그인이므로 문서와 단독 스크립트뿐 아니라 실제 Codex 환경에서 동작해야 한다.
 - 완료 조건: 로컬 marketplace 등록 또는 로컬 플러그인 설치 후 새 Codex 스레드에서 더미 상품설명 → 구조화 JSON → 자연어 질의 설명 흐름을 재현한다.
+- 공개 sanity: 공개 무신사 상품페이지 3~5건은 출처 URL을 기록하고, 사람이 붙여넣은 텍스트로만 확인한다. 플러그인이 URL을 자동 수집하지 않는다.
 - 검증 방법: 실행 명령, 입력, 출력 요약을 README 또는 검증 기록에 남긴다.
 
 ### S7 · 제출 문서 작성
 - 왜 필요한가: 심사는 로그·플러그인·질문 답변의 정합성을 함께 본다.
 - 완료 조건: 루트 README와 질문 5문항 답변이 실제 구현 기능만 설명한다.
-- 검증 방법: README-기능, 질문 답변-로그, 요구사항-코드 정합성 점검.
+- 검증 방법: README-기능, 질문 답변-로그, 요구사항-코드 정합성을 점검한다.
 
 ### S8 · 패키징·제출 준비
 - 왜 필요한가: 제출 구조 오류와 로그 누락은 치명적이다.
 - 완료 조건: `submission.zip`에 `src/`, `README.md`, `logs/` 포함. `src/.codex-plugin/plugin.json`과 `src/skills/product-agentizer/SKILL.md` 존재.
 - 검증 방법: 압축 파일 구조 대조, 비밀정보 패턴 검색, 크롤러/대량 수집 코드 없음 확인.
+
+## 종합 검증
+1. **구조**: `src/.codex-plugin/plugin.json` 존재, manifest 경로 `./skills/` 유효, 제출 zip 레이아웃 일치.
+2. **스크립트 단위**: `python validate.py`, `python dedup.py`를 `tests/fixtures/`에 실행하고 속성 precision/recall·중복 정확도를 산출한다.
+3. **Codex 실 실행**: marketplace 등록 또는 로컬 설치 후 새 스레드에서 변환→에이전트 질의 데모를 재현한다.
+4. **공개 sanity**: 공개 상품페이지 소수의 출처 URL과 사람이 붙여넣은 텍스트로 실입력 가능성을 확인한다.
+5. **정합성**: requirements-contract ↔ SKILL/스크립트 동작 ↔ README ↔ 질문 5문항 사이에 모순이 없어야 한다.
+6. **안전·규정**: 크롤러·비밀정보 없음, 로그 원본 무편집, 근거는 공개 URL·확인일과 함께 기록한다.
+
+## 열린 리스크
+- 인터뷰 전사본은 자동 전사이므로, 제출 인용문은 원본 영상과 대조해 정확히 인용한다.
+- taxonomy는 MVP 범위인 아우터·상의로 한정한다. 범위 밖 상품은 “지원 범위 밖”으로 처리한다.
+- SKILL이 스크립트를 호출하는 정확한 경로 문법은 S6 실 실행으로 확정한다. 호출이 불안정하면 instruction-only로 폴백하고 스크립트는 개발자 검증용으로 둔다.

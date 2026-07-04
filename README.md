@@ -17,7 +17,6 @@
 - `logs/` AI 대화 로그 (claude-code, codex) — `submission.zip`에 원본 그대로 포함
 - `docs/` 기획·리서치·근거·검증 등 내부 문서 (제출물 아님)
   - `docs/과제.md` 해커톤 과제 원문
-  - `docs/musinsa-agentizer-plan.md` 무신사 문제 2 구현 계획
   - `docs/requirements-contract.md` 무신사 에이전트화 변환기 기준 계약
   - `docs/project-plan.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`
   - `docs/company-selection.md` 기업 선정 기준·확정 기록

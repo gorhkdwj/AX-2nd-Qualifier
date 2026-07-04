@@ -10,6 +10,36 @@
 
 ---
 
+### W-015 · 구현 계획 문서 병합 및 중복 계획 아카이브
+**요청**
+- `AGENTS.md`와 `CLAUDE.md`가 `docs/musinsa-agentizer-plan.md`를 참조하는지 확인
+- 직접 참조가 없다면 `docs/implementation-plan.md`와 문서 성격이 겹치므로 병합 가능성 검토
+
+**수행 작업**
+- `AGENTS.md`와 `CLAUDE.md`에는 `docs/musinsa-agentizer-plan.md` 직접 참조가 없음을 확인
+- `docs/musinsa-agentizer-plan.md`의 Context, 확정 스코프, 제출물 구조, 재사용 자산, Verification, 열린 리스크를 `docs/implementation-plan.md`로 병합
+- 기존 `docs/musinsa-agentizer-plan.md`를 `docs/archive/musinsa-agentizer-plan_MERGED.md`로 이동해 병합 보관본으로 전환
+- `README.md`, `docs/README.md`, `docs/project-plan.md`, `docs/company-selection.md`, `docs/archive/README.md`, `docs/archive/plugin-directions_PRE_SELECTION.md`의 구현 기준 참조를 단일 계획 문서 기준으로 갱신
+- Decisionlog D-009 기록
+
+**변경 파일**
+- 이동: `docs/musinsa-agentizer-plan.md` → `docs/archive/musinsa-agentizer-plan_MERGED.md`
+- 수정: `docs/implementation-plan.md`, `README.md`, `docs/README.md`, `docs/project-plan.md`, `docs/company-selection.md`, `docs/archive/README.md`, `docs/archive/plugin-directions_PRE_SELECTION.md`, `Decisionlog.md`, `Worklog.md`
+
+**검증**
+- `AGENTS.md`와 `CLAUDE.md`에 `docs/musinsa-agentizer-plan.md` 직접 참조 없음 확인
+- 활성 문서의 구현 기준 참조가 `docs/implementation-plan.md` 중심으로 정리되는지 검색 확인
+- `git diff --check`, 민감정보 패턴 검색 통과
+
+**판단 근거**
+- 두 계획 문서 모두 S1~S8 구현 단계와 플러그인 구조를 설명해 활성 기준으로 함께 두면 다음 작업자가 우선순위를 혼동할 수 있다.
+- `implementation-plan.md`는 기존 단계별 계획 문서였으므로 고유 내용을 흡수해 단일 활성 계획으로 만드는 편이 문서 정보 구조에 맞다.
+
+**결과**
+- 완료: 구현 계획 단일화 및 중복 계획 보관 완료
+
+---
+
 ### W-014 · docs 전용 README 생성 및 선정 전 후보 문서 아카이브
 **요청**
 - `docs/`만의 README를 생성해 문서 구조를 파악하기 쉽게 정리

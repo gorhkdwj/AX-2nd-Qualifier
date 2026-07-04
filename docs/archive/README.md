@@ -16,4 +16,10 @@
 - **비활성화일**: 2026-07-04
 - **비활성화 사유**: 무신사 문제 2 `상품 데이터 에이전트화 변환기`가 공식 확정되어, 후보 3사·여러 문제 방향 비교 문서는 더 이상 활성 구현 기준이 아님.
 - **보존 이유**: 후보 방향 축소, 법적 안전성 기준, 무신사 문제 1/2 비교, 최종 선택 전 판단 흐름을 추적하기 위함.
-- **후속**: 현재 구현 기준은 `docs/requirements-contract.md`, `docs/musinsa-agentizer-plan.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`를 사용함.
+- **후속**: 현재 구현 기준은 `docs/requirements-contract.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`를 사용함.
+
+## musinsa-agentizer-plan_MERGED.md
+- **비활성화일**: 2026-07-04
+- **비활성화 사유**: `docs/implementation-plan.md`와 단계·구조가 크게 겹쳐 활성 구현 기준이 중복됨.
+- **보존 이유**: 무신사 문제 2 확정 직후 작성된 상세 계획의 원형과 병합 전 판단 흐름을 추적하기 위함.
+- **후속**: 고유 내용은 `docs/implementation-plan.md`에 병합했으므로, 구현 작업자는 `docs/implementation-plan.md`를 단일 계획 문서로 사용함.
