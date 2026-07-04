@@ -10,6 +10,32 @@
 
 ---
 
+### W-012 · 문서 이동에 따른 참조 경로 정리
+**요청**
+- 사용자가 `company-selection.md`를 `docs/`로 되돌린 뒤, 다른 파일들의 경로가 괜찮은지 확인 요청
+
+**수행 작업**
+- 현재 파일 위치 재확인: `company-selection.md`는 `docs/`로 복귀(이를 참조하던 CLAUDE·AGENTS·README·project-plan·implementation-plan·requirements-contract는 자동으로 정상화됨)
+- `docs/company-research_references/`로 이동된 3개 보고서(final-report·codex·review)를 옛 경로로 가리키던 현행 문서만 새 경로로 수정: `docs/archive/README.md`, `docs/company-selection.md`, `Decisionlog.md`(D-004)
+- Worklog 과거 기록(W-005·W-007 등)의 옛 경로는 "그 시점 실제 경로"이므로 역사 기록으로 보존(수정하지 않음)
+
+**변경 파일**
+- 수정: `docs/archive/README.md`, `docs/company-selection.md`, `Decisionlog.md`, `Worklog.md`
+- 이동 반영: `docs/company-research_references/company-selection.md` 삭제 + `docs/company-selection.md` 복귀(사용자 조치 스테이징)
+
+**검증**
+- grep으로 현행 문서(Worklog·logs 제외)에 남은 깨진 참조 0건 확인
+- 수정된 새 경로 3개가 실제 파일과 매칭됨을 파일 존재로 확인, `docs/company-selection.md` 존재 확인
+
+**판단 근거**
+- 활성 문서의 참조는 실제 위치를 가리켜야 문서 정합성(헌법 8절) 유지. 역사 기록(Worklog)은 당시 사실이므로 보존이 정확
+
+**결과**
+- 완료: 현행 문서의 참조 경로 정합성 회복
+- 남은 작업: 없음(경로 관련). 다음은 MVP 방향 확정
+
+---
+
 ### W-011 · 무신사 인터뷰 기반 플러그인 방향 추가(에이전트화 변환기)
 **요청**
 - 무신사 테크리드 인터뷰(`docs/company-research_references/무신사 인터뷰.txt`)를 기준으로 플러그인 방향을 하나 더 제안하고, `docs/plugin-directions.md`에 정식 추가

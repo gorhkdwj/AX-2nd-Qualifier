@@ -92,7 +92,7 @@
 
 ### D-004 · 후보 5→3 축소 (채널톡·삼일PwC 제외)
 **상황**
-- 최종 종합 보고서(`docs/company-research-final-report.md`)와 절대 점수 비교를 바탕으로, 사용자가 채널톡과 삼일PwC를 후보에서 제외하기로 결정했다.
+- 최종 종합 보고서(`docs/company-research_references/company-research-final-report.md`)와 절대 점수 비교를 바탕으로, 사용자가 채널톡과 삼일PwC를 후보에서 제외하기로 결정했다.
 
 **검토한 선택지**
 - 5개 후보 유지 / 일부 제외
