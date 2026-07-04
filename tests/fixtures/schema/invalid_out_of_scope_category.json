@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "source_url": null,
+    "source_title": "데님 팬츠",
+    "input_mode": "pasted_text"
+  },
+  "product": {
+    "title": "데님 팬츠",
+    "category": "bottom",
+    "subcategory": null,
+    "materials": [
+      {
+        "name": "cotton",
+        "ratio": 100,
+        "evidence": "면 100%"
+      }
+    ],
+    "fit": ["straight"],
+    "colors": ["denim_blue"],
+    "seasons": ["spring", "fall"],
+    "tpo_tags": ["daily", "casual"],
+    "care": ["machine_wash"],
+    "size_info": ["30, 32, 34"]
+  },
+  "agent_descriptor": {
+    "search_summary": "지원 범위 밖 카테고리라 실패해야 하는 샘플",
+    "query_tags": ["데님 팬츠"],
+    "explainable_reasons": ["MVP 범위는 outer/top뿐이다."]
+  },
+  "quality": {
+    "missing_fields": [],
+    "ambiguous_fields": [],
+    "out_of_scope": true,
+    "confidence": "low"
+  }
+}

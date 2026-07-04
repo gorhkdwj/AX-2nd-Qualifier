@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "source_url": "https://www.musinsa.com/products/example-outer",
+    "source_title": "오버핏 리넨 블레이저",
+    "input_mode": "pasted_text"
+  },
+  "product": {
+    "title": "오버핏 리넨 블레이저",
+    "category": "outer",
+    "subcategory": "jacket",
+    "materials": [
+      {
+        "name": "linen",
+        "ratio": 60,
+        "evidence": "린넨 60%, 면 40%"
+      },
+      {
+        "name": "cotton",
+        "ratio": 40,
+        "evidence": "린넨 60%, 면 40%"
+      }
+    ],
+    "fit": ["oversized"],
+    "colors": ["beige"],
+    "seasons": ["spring", "summer"],
+    "tpo_tags": ["guest_look", "commute", "layering"],
+    "care": ["dry_clean"],
+    "size_info": ["M 기준 총장 72cm", "여유 있는 어깨 라인"]
+  },
+  "agent_descriptor": {
+    "search_summary": "봄여름 하객룩과 출근룩에 어울리는 베이지 오버핏 리넨 블레이저",
+    "query_tags": ["여름 하객룩", "베이지 재킷", "출근룩 아우터"],
+    "explainable_reasons": [
+      "리넨 혼방과 베이지 컬러가 봄여름 착용 맥락과 연결된다.",
+      "재킷/블레이저 하위 카테고리는 하객룩과 출근룩 질의에 대응하기 쉽다."
+    ]
+  },
+  "quality": {
+    "missing_fields": [],
+    "ambiguous_fields": [],
+    "out_of_scope": false,
+    "confidence": "high"
+  }
+}

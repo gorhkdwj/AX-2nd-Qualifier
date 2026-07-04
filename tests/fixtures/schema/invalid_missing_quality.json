@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "source_url": null,
+    "source_title": "품질 필드 누락 샘플",
+    "input_mode": "pasted_text"
+  },
+  "product": {
+    "title": "품질 필드 누락 샘플",
+    "category": "top",
+    "subcategory": "tshirt",
+    "materials": [],
+    "fit": [],
+    "colors": [],
+    "seasons": [],
+    "tpo_tags": [],
+    "care": [],
+    "size_info": []
+  },
+  "agent_descriptor": {
+    "search_summary": "quality 필드가 없어 실패해야 하는 샘플",
+    "query_tags": ["invalid"],
+    "explainable_reasons": ["schema required 검증용"]
+  }
+}

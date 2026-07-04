@@ -10,6 +10,39 @@
 
 ---
 
+### W-017 · S2 taxonomy/schema 작성
+**요청**
+- 다음 작업 진행: `docs/implementation-plan.md` 기준 S2 `taxonomy.json`, `schema.json` 작성
+
+**수행 작업**
+- 단계 간 정합성 검토 게이트에 따라 `docs/requirements-contract.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`, `docs/project-plan.md`, `docs/README.md`, 루트 `README.md` 확인
+- `src/skills/product-agentizer/references/taxonomy.json` 작성: 아우터·상의 MVP 범위, 하위 카테고리, 소재, 핏, 컬러, 계절, TPO, 관리 vocabulary 정의
+- `src/skills/product-agentizer/references/schema.json` 작성: 단일 상품 변환 출력 JSON schema 정의
+- `tests/fixtures/schema/`에 valid/invalid 샘플 4개 작성
+- 루트 `README.md` 현재 상태를 taxonomy/schema 초안 작성 완료로 갱신
+
+**변경 파일**
+- 생성: `src/skills/product-agentizer/references/taxonomy.json`, `src/skills/product-agentizer/references/schema.json`
+- 생성: `tests/fixtures/schema/valid_outer.json`, `tests/fixtures/schema/valid_top.json`, `tests/fixtures/schema/invalid_missing_quality.json`, `tests/fixtures/schema/invalid_out_of_scope_category.json`
+- 수정: `README.md`, `Worklog.md`
+
+**검증**
+- JSON 파싱 통과: `taxonomy.json`, `schema.json`, valid/invalid 샘플 4개
+- JSON Schema 판별 통과: `valid_outer.json`, `valid_top.json` 통과 / `invalid_missing_quality.json`, `invalid_out_of_scope_category.json` 실패 확인
+- taxonomy-schema enum 정합성 통과: attribute_keys, materials, fit, colors, seasons, tpo_tags, care, subcategories, subcategory default TPO 검증
+- 단계 간 정합성 검토: S2 산출물이 S3 `SKILL.md`, S4 `validate.py`, S5 더미 픽스처 검증의 입력으로 이어지는 구조와 충돌 없음
+- `git diff --check`, 민감정보 패턴 검색 통과
+
+**판단 근거**
+- S3 `SKILL.md`와 S4 `validate.py`가 흔들리지 않으려면 먼저 표준 vocabulary와 출력 schema를 고정해야 한다.
+- S5 검증에서 더미 픽스처를 비교하려면 정상·오류 샘플이 schema 기준으로 판별 가능해야 한다.
+
+**결과**
+- 완료: S2 taxonomy/schema 초안과 스키마 판별 샘플 작성 완료
+- 남은 작업: S3 `src/skills/product-agentizer/SKILL.md` 작성
+
+---
+
 ### W-016 · 단계 간 정합성 검토 지침 추가
 **요청**
 - `AGENTS.md`와 `CLAUDE.md`에 모든 단계에서 이전·이후·전체 단계와 충돌하지 않도록 검토하고, 기획 문서의 의도와 방향성이 어긋나지 않도록 검증하는 절차를 필수 지침으로 추가

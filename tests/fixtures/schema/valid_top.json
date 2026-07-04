@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "source_url": null,
+    "source_title": "워셔블 코튼 티셔츠",
+    "input_mode": "pasted_text"
+  },
+  "product": {
+    "title": "워셔블 코튼 티셔츠",
+    "category": "top",
+    "subcategory": "tshirt",
+    "materials": [
+      {
+        "name": "cotton",
+        "ratio": null,
+        "evidence": "코튼 소재의 부드러운 터치"
+      }
+    ],
+    "fit": ["regular"],
+    "colors": ["white"],
+    "seasons": ["summer"],
+    "tpo_tags": ["daily", "casual", "layering"],
+    "care": ["machine_wash"],
+    "size_info": ["S, M, L, XL"]
+  },
+  "agent_descriptor": {
+    "search_summary": "여름 데일리룩과 이너로 활용하기 좋은 화이트 코튼 티셔츠",
+    "query_tags": ["여름 티셔츠", "화이트 이너", "데일리 상의"],
+    "explainable_reasons": [
+      "티셔츠와 화이트 컬러는 데일리·레이어드 질의에 대응한다.",
+      "소재 혼용률은 입력에 없어 ratio를 null로 둔다."
+    ]
+  },
+  "quality": {
+    "missing_fields": ["material_ratio"],
+    "ambiguous_fields": [],
+    "out_of_scope": false,
+    "confidence": "medium"
+  }
+}

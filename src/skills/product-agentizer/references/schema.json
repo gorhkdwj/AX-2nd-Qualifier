@@ -1,0 +1,282 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ax-hackathon.local/musinsa-product-agentizer/schema.json",
+  "title": "Musinsa Product Agentizer Structured Product",
+  "description": "Structured product JSON for the Musinsa product data agentizer MVP. Enums must stay aligned with taxonomy.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "source", "product", "agent_descriptor", "quality"],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["input_mode"],
+      "properties": {
+        "source_url": {
+          "type": ["string", "null"],
+          "format": "uri",
+          "maxLength": 2048
+        },
+        "source_title": {
+          "type": ["string", "null"],
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "input_mode": {
+          "const": "pasted_text"
+        }
+      }
+    },
+    "product": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "category",
+        "subcategory",
+        "materials",
+        "fit",
+        "colors",
+        "seasons",
+        "tpo_tags",
+        "care",
+        "size_info"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "category": {
+          "type": "string",
+          "enum": ["outer", "top"]
+        },
+        "subcategory": {
+          "type": ["string", "null"],
+          "enum": [
+            "jacket",
+            "jumper",
+            "coat",
+            "cardigan",
+            "vest",
+            "hoodie_zipup",
+            "tshirt",
+            "shirt_blouse",
+            "knit",
+            "sweatshirt",
+            "sleeveless",
+            "polo",
+            null
+          ]
+        },
+        "materials": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/material"
+          },
+          "uniqueItems": true
+        },
+        "fit": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["regular", "slim", "relaxed", "oversized", "cropped", "longline", "straight", "boxy"]
+          },
+          "uniqueItems": true
+        },
+        "colors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "black",
+              "white",
+              "ivory",
+              "gray",
+              "beige",
+              "brown",
+              "navy",
+              "blue",
+              "denim_blue",
+              "green",
+              "khaki",
+              "red",
+              "pink",
+              "yellow",
+              "multi"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "seasons": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["spring", "summer", "fall", "winter"]
+          },
+          "uniqueItems": true
+        },
+        "tpo_tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "daily",
+              "casual",
+              "commute",
+              "formal",
+              "guest_look",
+              "travel",
+              "outdoor",
+              "layering",
+              "date",
+              "street"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "care": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "machine_wash",
+              "hand_wash",
+              "dry_clean",
+              "do_not_bleach",
+              "low_temp_iron",
+              "shade_dry",
+              "tumble_dry_low",
+              "no_tumble_dry"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "size_info": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        }
+      }
+    },
+    "agent_descriptor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["search_summary", "query_tags", "explainable_reasons"],
+      "properties": {
+        "search_summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "query_tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "uniqueItems": true
+        },
+        "explainable_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          }
+        }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["missing_fields", "ambiguous_fields", "out_of_scope", "confidence"],
+      "properties": {
+        "missing_fields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/attribute_key"
+          },
+          "uniqueItems": true
+        },
+        "ambiguous_fields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/attribute_key"
+          },
+          "uniqueItems": true
+        },
+        "out_of_scope": {
+          "type": "boolean"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        }
+      }
+    }
+  },
+  "$defs": {
+    "attribute_key": {
+      "type": "string",
+      "enum": [
+        "title",
+        "category",
+        "subcategory",
+        "materials",
+        "material_ratio",
+        "fit",
+        "colors",
+        "seasons",
+        "tpo_tags",
+        "care",
+        "size_info",
+        "source"
+      ]
+    },
+    "material": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "ratio", "evidence"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": [
+            "cotton",
+            "polyester",
+            "nylon",
+            "wool",
+            "cashmere",
+            "linen",
+            "rayon",
+            "polyurethane",
+            "acrylic",
+            "leather",
+            "faux_leather",
+            "duck_down",
+            "goose_down",
+            "recycled_fiber"
+          ]
+        },
+        "ratio": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        }
+      }
+    }
+  }
+}
