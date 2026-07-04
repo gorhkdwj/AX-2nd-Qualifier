@@ -1,0 +1,262 @@
+{
+  "products": [
+    {
+      "product_id": "outer_linen_blazer_a",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-fixtures/outer-linen-blazer-a",
+          "source_title": "오버핏 리넨 블레이저",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "오버핏 리넨 블레이저",
+          "category": "outer",
+          "subcategory": "jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "linen",
+              "ratio": 60,
+              "ratio_status": "explicit",
+              "evidence": "린넨 60%, 면 40%"
+            },
+            {
+              "part": "shell",
+              "name": "cotton",
+              "ratio": 40,
+              "ratio_status": "explicit",
+              "evidence": "린넨 60%, 면 40%"
+            }
+          ],
+          "fit": ["oversized"],
+          "colors": ["beige"],
+          "seasons": ["spring", "summer"],
+          "tpo_tags": ["guest_look", "commute", "layering"],
+          "care": ["dry_clean"],
+          "size_info": ["M 기준 총장 72cm", "어깨 여유 있는 오버핏"]
+        },
+        "agent_descriptor": {
+          "search_summary": "봄여름 하객룩과 출근룩에 어울리는 베이지 오버핏 리넨 블레이저",
+          "query_tags": ["여름 하객룩", "베이지 재킷", "출근룩 아우터"],
+          "explainable_reasons": [
+            "리넨 혼방과 베이지 컬러가 봄여름 착용 맥락과 연결된다.",
+            "재킷 하위 카테고리는 하객룩과 출근룩 질의에 대응하기 쉽다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "outer_linen_blazer_b",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-fixtures/outer-linen-blazer-b",
+          "source_title": "베이지 리넨 오버핏 자켓",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "베이지 리넨 오버핏 자켓",
+          "category": "outer",
+          "subcategory": "jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "linen",
+              "ratio": 60,
+              "ratio_status": "explicit",
+              "evidence": "리넨 60%, 코튼 40%"
+            },
+            {
+              "part": "shell",
+              "name": "cotton",
+              "ratio": 40,
+              "ratio_status": "explicit",
+              "evidence": "리넨 60%, 코튼 40%"
+            }
+          ],
+          "fit": ["oversized"],
+          "colors": ["beige"],
+          "seasons": ["spring", "summer"],
+          "tpo_tags": ["guest_look", "commute", "layering"],
+          "care": ["dry_clean"],
+          "size_info": ["M 기준 총장 72cm", "어깨 여유 있는 오버핏"]
+        },
+        "agent_descriptor": {
+          "search_summary": "봄여름 출근룩과 하객룩에 어울리는 베이지 리넨 오버핏 재킷",
+          "query_tags": ["여름 하객룩", "베이지 자켓", "출근룩 아우터"],
+          "explainable_reasons": [
+            "동일한 소재와 핏, 색상, 카테고리로 같은 상품 후보일 수 있다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "top_washable_tee",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": null,
+          "source_title": "워셔블 코튼 티셔츠",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "워셔블 코튼 티셔츠",
+          "category": "top",
+          "subcategory": "tshirt",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cotton",
+              "ratio": null,
+              "ratio_status": "missing",
+              "evidence": "코튼 소재의 부드러운 터치"
+            }
+          ],
+          "fit": ["regular"],
+          "colors": ["white"],
+          "seasons": ["summer"],
+          "tpo_tags": ["daily", "casual", "layering"],
+          "care": ["machine_wash"],
+          "size_info": ["S", "M", "L", "XL"]
+        },
+        "agent_descriptor": {
+          "search_summary": "여름 데일리룩과 이너로 활용하기 좋은 화이트 코튼 티셔츠",
+          "query_tags": ["여름 티셔츠", "화이트 이너", "데일리 상의"],
+          "explainable_reasons": [
+            "티셔츠와 화이트 컬러는 데일리·레이어드 질의에 대응한다.",
+            "소재 혼용률은 입력에 없어 ratio를 null로 둔다."
+          ]
+        },
+        "quality": {
+          "missing_fields": ["material_ratio"],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "outer_down_vest",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-fixtures/outer-down-vest",
+          "source_title": "카키 릴랙스 다운 베스트",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "카키 릴랙스 다운 베스트",
+          "category": "outer",
+          "subcategory": "vest",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 나일론 100%"
+            },
+            {
+              "part": "fill",
+              "name": "duck_down",
+              "ratio": 80,
+              "ratio_status": "explicit",
+              "evidence": "충전재 덕다운 80%, 구스다운 20%"
+            },
+            {
+              "part": "fill",
+              "name": "goose_down",
+              "ratio": 20,
+              "ratio_status": "explicit",
+              "evidence": "충전재 덕다운 80%, 구스다운 20%"
+            }
+          ],
+          "fit": ["relaxed"],
+          "colors": ["khaki"],
+          "seasons": ["fall", "winter"],
+          "tpo_tags": ["layering", "outdoor", "travel"],
+          "care": ["dry_clean"],
+          "size_info": ["L 기준 총장 68cm", "암홀 여유"]
+        },
+        "agent_descriptor": {
+          "search_summary": "가을겨울 레이어드와 아웃도어에 어울리는 카키 릴랙스 다운 베스트",
+          "query_tags": ["다운 베스트", "겨울 레이어드", "카키 아웃도어"],
+          "explainable_reasons": [
+            "충전재와 베스트 카테고리가 겨울 레이어드 질의와 연결된다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "top_linen_blouse",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-fixtures/top-linen-blouse",
+          "source_title": "아이보리 린넨 터치 셔츠",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "아이보리 린넨 터치 셔츠",
+          "category": "top",
+          "subcategory": "shirt_blouse",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨 터치"
+            },
+            {
+              "part": "unknown",
+              "name": "rayon",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "레이온 블렌드"
+            }
+          ],
+          "fit": ["relaxed"],
+          "colors": ["ivory"],
+          "seasons": ["spring", "summer"],
+          "tpo_tags": ["commute", "formal"],
+          "care": ["hand_wash"],
+          "size_info": ["FREE 사이즈", "가슴둘레 여유"]
+        },
+        "agent_descriptor": {
+          "search_summary": "봄여름 출근룩에 어울리는 아이보리 린넨 터치 셔츠",
+          "query_tags": ["아이보리 셔츠", "여름 출근룩", "린넨 터치 상의"],
+          "explainable_reasons": [
+            "셔츠/블라우스 카테고리와 아이보리 컬러가 출근룩 질의와 연결된다.",
+            "혼용률 숫자는 입력에 없으므로 ambiguous로 남긴다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": ["material_ratio"],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    }
+  ]
+}

@@ -10,6 +10,45 @@
 
 ---
 
+### W-022 · S5 더미 픽스처 정량 검증 구현
+**요청**
+- 다음 단계 진행: S5 더미 데이터셋과 정량 검증 스크립트 작성
+
+**수행 작업**
+- 단계 간 정합성 검토 게이트에 따라 기준 계약, 구현 계획, 검증 계획, README, Worklog, Decisionlog 확인
+- `tests/fixtures/evaluation/source_inputs.json` 작성: 아우터·상의 합성 상품 원문 5건
+- `tests/fixtures/evaluation/expected_products.json` 작성: 정답 구조화 JSON 5건
+- `tests/fixtures/evaluation/predicted_products.json` 작성: 평가 harness 검증용 예측 JSON 5건
+- `tests/fixtures/evaluation/duplicate_labels.json` 작성: 중복 1쌍, 비중복 9쌍 라벨
+- `tests/evaluate_product_agentizer.py` 작성: schema 검증, 속성별 precision/recall, dedup 정확도 산출
+- `docs/s5-evaluation-report.md` 작성: S5 실행 명령, 결과, 차이 사례, 해석 기록
+- `docs/validation-plan.md`, `docs/README.md`, 루트 `README.md` 현재 상태와 검증 명령 갱신
+
+**변경 파일**
+- 생성: `tests/evaluate_product_agentizer.py`
+- 생성: `tests/fixtures/evaluation/source_inputs.json`, `expected_products.json`, `predicted_products.json`, `duplicate_labels.json`
+- 생성: `docs/s5-evaluation-report.md`
+- 수정: `README.md`, `docs/README.md`, `docs/validation-plan.md`, `Worklog.md`
+
+**검증**
+- 통과: `python -m py_compile tests\evaluate_product_agentizer.py`
+- 통과: `validate.py`로 S5 정답 JSON 5건 schema-valid 확인
+- 통과: `validate.py`로 S5 예측 JSON 5건 schema-valid 확인
+- 통과: `python tests\evaluate_product_agentizer.py --pretty`
+- 결과: 속성 micro precision 98.55%, micro recall 88.31%
+- 결과: 중복 감지 정확도 100.00%(10/10), `outer_linen_blazer_a`/`outer_linen_blazer_b` duplicate 후보 score 1.0
+- 완료: S5 산출물이 S4 `validate.py`/`dedup.py`를 사용하고 S6 Codex CLI 실제 실행 결과 평가 입력으로 이어지는지 확인
+
+**판단 근거**
+- 실제 공개 상품페이지에는 정답 라벨이 없으므로, S5는 합성 원문과 정답 JSON을 사용해 평가 방식 자체를 검증해야 한다.
+- 예측 JSON에 일부 누락·오분류를 의도적으로 포함하면 평가 스크립트가 false positive와 false negative를 분리해 잡는지 확인할 수 있다.
+
+**결과**
+- 완료: S5 더미 픽스처 기반 정량 검증 구현 및 결과 기록 완료
+- 다음 단계: S6 Codex CLI 실제 설치·실행 시연
+
+---
+
 ### W-021 · S4 manifest 및 검증·중복감지 스크립트 구현
 **요청**
 - S4 구현 방식은 추천대로 `jsonschema` 의존을 사용하고, 없을 때 명확한 안내와 함께 실패하도록 진행

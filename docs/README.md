@@ -15,6 +15,7 @@
 | `requirements-contract.md` | 구현 기준 계약 | 입력·출력 JSON, 지표, 오류·완료 기준 확인 |
 | `implementation-plan.md` | 무신사 문제 2 단일 구현 계획 | 플러그인 구조, 다음 작업 순서, 완료 조건 확인 |
 | `validation-plan.md` | 검증 계획 | 더미 픽스처, 안전성, 제출 구조 검증 기준 확인 |
+| `s5-evaluation-report.md` | S5 더미 픽스처 정량 검증 결과 | 속성 precision/recall과 중복 감지 정확도 확인 |
 | `company-selection.md` | 기업 선정 기준·최종 확정 기록 | 왜 무신사 문제 2를 골랐는지 추적 |
 
 ## 근거·참조 폴더

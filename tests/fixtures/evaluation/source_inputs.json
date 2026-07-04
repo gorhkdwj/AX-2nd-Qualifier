@@ -1,0 +1,44 @@
+{
+  "cases": [
+    {
+      "product_id": "outer_linen_blazer_a",
+      "source_title": "오버핏 리넨 블레이저",
+      "source_url": "https://example.com/musinsa-fixtures/outer-linen-blazer-a",
+      "category_hint": "outer",
+      "locale": "ko-KR",
+      "product_text": "상품명: 오버핏 리넨 블레이저. 컬러: 베이지. 린넨 60%, 면 40% 겉감으로 제작했습니다. 여유 있는 오버핏과 M 기준 총장 72cm, 어깨 여유가 특징입니다. 봄여름 하객룩, 출근룩, 레이어드 아우터로 추천합니다. 드라이클리닝 권장."
+    },
+    {
+      "product_id": "outer_linen_blazer_b",
+      "source_title": "베이지 리넨 오버핏 자켓",
+      "source_url": "https://example.com/musinsa-fixtures/outer-linen-blazer-b",
+      "category_hint": "outer",
+      "locale": "ko-KR",
+      "product_text": "상품명: 베이지 리넨 오버핏 자켓. 리넨 60%, 코튼 40% 혼용의 겉감입니다. 베이지 컬러, 오버핏 실루엣, M 기준 총장 72cm와 여유 있는 어깨 라인. 봄여름 출근룩과 하객룩, 레이어드 스타일에 어울리며 드라이클리닝을 권장합니다."
+    },
+    {
+      "product_id": "top_washable_tee",
+      "source_title": "워셔블 코튼 티셔츠",
+      "source_url": null,
+      "category_hint": "top",
+      "locale": "ko-KR",
+      "product_text": "상품명: 워셔블 코튼 티셔츠. 화이트 컬러의 기본 레귤러핏 티셔츠입니다. 코튼 소재의 부드러운 터치가 특징이며 소재 혼용률 숫자는 표기되어 있지 않습니다. 여름 데일리, 캐주얼, 이너 레이어드로 활용하기 좋습니다. 세탁기 사용 가능. 사이즈 S, M, L, XL."
+    },
+    {
+      "product_id": "outer_down_vest",
+      "source_title": "카키 릴랙스 다운 베스트",
+      "source_url": "https://example.com/musinsa-fixtures/outer-down-vest",
+      "category_hint": "outer",
+      "locale": "ko-KR",
+      "product_text": "상품명: 카키 릴랙스 다운 베스트. 겉감 나일론 100%, 충전재 덕다운 80%, 구스다운 20%를 사용했습니다. 카키 컬러, 릴랙스 핏, L 기준 총장 68cm와 여유 있는 암홀이 특징입니다. 가을겨울 레이어드, 아웃도어, 여행용으로 추천합니다. 드라이클리닝 권장."
+    },
+    {
+      "product_id": "top_linen_blouse",
+      "source_title": "아이보리 린넨 터치 셔츠",
+      "source_url": "https://example.com/musinsa-fixtures/top-linen-blouse",
+      "category_hint": "top",
+      "locale": "ko-KR",
+      "product_text": "상품명: 아이보리 린넨 터치 셔츠. 린넨 터치의 레이온 블렌드 소재로 가볍게 착용됩니다. 정확한 소재 혼용률 숫자는 표기되어 있지 않습니다. 아이보리 컬러, 릴랙스 핏, FREE 사이즈와 여유 있는 가슴둘레. 봄여름 출근룩과 포멀한 셔츠 스타일에 적합합니다. 단독 손세탁 권장."
+    }
+  ]
+}
