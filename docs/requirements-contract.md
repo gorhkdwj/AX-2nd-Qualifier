@@ -61,8 +61,10 @@
     "subcategory": "선택",
     "materials": [
       {
+        "part": "shell | lining | fill | rib | pocket | trim | unknown",
         "name": "표준 소재명",
         "ratio": 0,
+        "ratio_status": "explicit | missing | ambiguous",
         "evidence": "입력 텍스트 근거"
       }
     ],
@@ -135,12 +137,18 @@
 - 허용 confidence: `high`, `medium`, `low`
 - 허용 중복 판정: `duplicate`, `possible_duplicate`, `distinct`
 - 비허용: 출처 없는 숫자 단정, 공개 자료로 확인할 수 없는 사실, 내부 데이터 전제, 자동 크롤링 결과
+- 소재 혼용률 허용 원칙:
+  - 입력 텍스트에 숫자 혼용률이 명시된 경우에만 `ratio_status: "explicit"`과 숫자 `ratio`를 기록한다.
+  - 숫자 혼용률이 없으면 `ratio: null`, `ratio_status: "missing"`으로 기록하고 `quality.missing_fields`에 `material_ratio`를 넣는다.
+  - "혼방", "터치", "느낌", "라이크"처럼 소재감만 암시하는 표현은 `ratio: null`, `ratio_status: "ambiguous"`로 기록하고 `quality.ambiguous_fields`에 `material_ratio`를 넣는다.
+  - 겉감, 안감, 충전재, 배색, 립 등 부위가 다르면 `part`를 분리해 기록한다. 부위를 확인할 수 없으면 `part: "unknown"`으로 둔다.
+  - 이 플러그인은 상품정보 표기 규정 적합/부적합을 판정하지 않는다. 입력 텍스트에 근거가 있는 소재 정보를 구조화하고, 부족·모호한 혼용률을 표시하는 데 한정한다.
 
 ## 누락 데이터 처리
 - 입력에 없는 속성은 만들지 않고 `quality.missing_fields`에 기록한다.
 - 모호한 표현은 단정하지 않고 `quality.ambiguous_fields`에 기록한다.
 - 범위 밖 상품은 변환을 억지로 수행하지 않고 `out_of_scope: true`로 표시한다.
-- 소재 혼용률이 명시되지 않으면 `ratio`를 추정하지 않는다.
+- 소재 혼용률이 명시되지 않으면 `ratio`를 추정하지 않는다. `ratio_status`로 `missing` 또는 `ambiguous`를 표시하고, 필요한 경우 `quality.missing_fields` 또는 `quality.ambiguous_fields`에 `material_ratio`를 기록한다.
 
 ## 시간대·단위·반올림 기준
 - 확인일과 기록일은 KST 기준 `YYYY-MM-DD`로 쓴다.

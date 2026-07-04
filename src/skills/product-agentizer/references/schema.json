@@ -233,6 +233,7 @@
         "subcategory",
         "materials",
         "material_ratio",
+        "material_part",
         "fit",
         "colors",
         "seasons",
@@ -245,8 +246,50 @@
     "material": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["name", "ratio", "evidence"],
+      "required": ["part", "name", "ratio", "ratio_status", "evidence"],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "ratio_status": {
+                "const": "explicit"
+              }
+            },
+            "required": ["ratio_status"]
+          },
+          "then": {
+            "properties": {
+              "ratio": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "ratio_status": {
+                "enum": ["missing", "ambiguous"]
+              }
+            },
+            "required": ["ratio_status"]
+          },
+          "then": {
+            "properties": {
+              "ratio": {
+                "const": null
+              }
+            }
+          }
+        }
+      ],
       "properties": {
+        "part": {
+          "type": "string",
+          "enum": ["shell", "lining", "fill", "rib", "pocket", "trim", "unknown"]
+        },
         "name": {
           "type": "string",
           "enum": [
@@ -270,6 +313,10 @@
           "type": ["number", "null"],
           "minimum": 0,
           "maximum": 100
+        },
+        "ratio_status": {
+          "type": "string",
+          "enum": ["explicit", "missing", "ambiguous"]
         },
         "evidence": {
           "type": "string",

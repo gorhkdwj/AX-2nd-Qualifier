@@ -13,6 +13,7 @@
     "category",
     "subcategory",
     "materials",
+    "material_part",
     "material_ratio",
     "fit",
     "colors",
@@ -23,7 +24,8 @@
     "source"
   ],
   "normalization_rules": {
-    "materials": "소재명은 aliases를 기준으로 id에 매핑한다. 혼용률이 없으면 ratio를 null로 둔다.",
+    "materials": "소재명은 aliases를 기준으로 id에 매핑한다. 혼용률 숫자는 입력에 명시된 경우에만 기록하고, 겉감/안감/충전재 등 부위별로 분리한다.",
+    "material_ratio": "ratio_status가 explicit이면 ratio는 0~100 숫자여야 한다. ratio_status가 missing 또는 ambiguous이면 ratio는 null이어야 한다. 혼방, 터치, 느낌처럼 비율 없는 표현은 추정하지 않는다.",
     "colors": "상세 색상명은 가장 가까운 표준 색상 id로 매핑하되, 불확실하면 ambiguous_fields에 colors를 기록한다.",
     "seasons": "명시 계절, 소재 두께, 소매 길이, 착용 맥락을 함께 보되 과도한 추론은 피한다.",
     "tpo_tags": "질의 매칭용 태그이며, 입력 텍스트 근거가 약하면 agent_descriptor.explainable_reasons에 한계를 적는다."
@@ -117,6 +119,20 @@
     }
   },
   "vocabularies": {
+    "material_parts": [
+      {"id": "shell", "ko_name": "겉감", "aliases": ["겉감", "표면", "외피", "몸판"]},
+      {"id": "lining", "ko_name": "안감", "aliases": ["안감", "라이닝"]},
+      {"id": "fill", "ko_name": "충전재", "aliases": ["충전재", "충전물", "다운", "솜"]},
+      {"id": "rib", "ko_name": "립", "aliases": ["립", "시보리", "리브"]},
+      {"id": "pocket", "ko_name": "포켓", "aliases": ["포켓", "주머니"]},
+      {"id": "trim", "ko_name": "배색/부자재", "aliases": ["배색", "트림", "부자재", "카라", "후드", "소매"]},
+      {"id": "unknown", "ko_name": "부위 미상", "aliases": ["소재", "혼용률", "전체"]}
+    ],
+    "ratio_statuses": [
+      {"id": "explicit", "ko_name": "명시됨", "description": "입력 텍스트에 숫자 혼용률이 직접 표시됨"},
+      {"id": "missing", "ko_name": "누락", "description": "소재명은 있으나 숫자 혼용률이 없음"},
+      {"id": "ambiguous", "ko_name": "모호", "description": "혼방, 터치, 느낌 등으로 소재감만 암시되어 비율을 알 수 없음"}
+    ],
     "materials": [
       {"id": "cotton", "ko_name": "면", "aliases": ["면", "코튼", "cotton"], "group": "natural_fiber"},
       {"id": "polyester", "ko_name": "폴리에스터", "aliases": ["폴리에스터", "polyester", "폴리"], "group": "synthetic_fiber"},

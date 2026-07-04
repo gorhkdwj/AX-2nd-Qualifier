@@ -11,8 +11,10 @@
     "subcategory": "tshirt",
     "materials": [
       {
+        "part": "unknown",
         "name": "cotton",
         "ratio": null,
+        "ratio_status": "missing",
         "evidence": "코튼 소재의 부드러운 터치"
       }
     ],

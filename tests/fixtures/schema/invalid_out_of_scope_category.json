@@ -11,8 +11,10 @@
     "subcategory": null,
     "materials": [
       {
+        "part": "unknown",
         "name": "cotton",
         "ratio": 100,
+        "ratio_status": "explicit",
         "evidence": "면 100%"
       }
     ],

@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "source_url": null,
+    "source_title": "잘못된 혼용률 상태 샘플",
+    "input_mode": "pasted_text"
+  },
+  "product": {
+    "title": "잘못된 혼용률 상태 샘플",
+    "category": "top",
+    "subcategory": "tshirt",
+    "materials": [
+      {
+        "part": "unknown",
+        "name": "cotton",
+        "ratio": 60,
+        "ratio_status": "ambiguous",
+        "evidence": "코튼 혼방"
+      }
+    ],
+    "fit": ["regular"],
+    "colors": ["white"],
+    "seasons": ["summer"],
+    "tpo_tags": ["daily"],
+    "care": [],
+    "size_info": []
+  },
+  "agent_descriptor": {
+    "search_summary": "숫자 ratio와 ambiguous 상태가 함께 있어 실패해야 하는 샘플",
+    "query_tags": ["invalid"],
+    "explainable_reasons": ["혼용률 숫자는 명시된 경우에만 explicit이어야 한다."]
+  },
+  "quality": {
+    "missing_fields": [],
+    "ambiguous_fields": ["material_ratio"],
+    "out_of_scope": false,
+    "confidence": "low"
+  }
+}

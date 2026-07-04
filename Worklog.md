@@ -10,6 +10,42 @@
 
 ---
 
+### W-018 · 소재 혼용률 엄격 처리 보완
+**요청**
+- 소재 혼용률은 법적 오해 소지가 있으므로 엄격하게 지정하고 넘어가야 하는지 검토 후 보완 진행
+
+**수행 작업**
+- 단계 간 정합성 검토 게이트에 따라 기준 계약, 구현 계획, 검증 계획, schema/taxonomy를 확인
+- `docs/requirements-contract.md`에 소재 혼용률 원칙 추가: 명시 숫자만 기록, 미기재·모호 표현은 추정 금지, 부위별 분리, 법적 적합 판정 금지
+- `docs/validation-plan.md`에 소재 혼용률 전용 검증 항목과 검증 데이터 정책 추가
+- `schema.json`의 `materials` 항목에 `part`, `ratio_status`를 추가하고, `ratio_status`와 `ratio`의 조건부 정합성 규칙 추가
+- `taxonomy.json`에 `material_part`, `material_ratio` 정규화 원칙과 `material_parts`, `ratio_statuses` vocabulary 추가
+- valid/invalid schema 샘플을 새 소재 구조에 맞게 갱신하고, 잘못된 혼용률 상태 샘플 추가
+
+**변경 파일**
+- 수정: `docs/requirements-contract.md`, `docs/validation-plan.md`
+- 수정: `src/skills/product-agentizer/references/schema.json`, `src/skills/product-agentizer/references/taxonomy.json`
+- 수정: `tests/fixtures/schema/valid_outer.json`, `tests/fixtures/schema/valid_top.json`, `tests/fixtures/schema/invalid_out_of_scope_category.json`
+- 생성: `tests/fixtures/schema/invalid_material_ratio_status.json`
+- 수정: `Decisionlog.md`, `Worklog.md`
+
+**검증**
+- JSON 파싱 통과: schema/taxonomy와 schema fixture 5개
+- JSON Schema 판별 통과: 정상 샘플 2개 통과 / `quality` 누락, 범위 밖 카테고리, 혼용률 상태 불일치 샘플 실패 확인
+- taxonomy-schema enum 정합성 통과: attribute_keys, materials, material_parts, ratio_statuses, fit, colors, seasons, tpo_tags, care, subcategories
+- 소재 ratio 조건부 검증 통과: `ratio_status: explicit`은 숫자 ratio, `missing`/`ambiguous`는 `ratio: null` 구조로 제한
+- 단계 간 정합성 검토: 계약 문서, 검증 계획, schema/taxonomy, fixture가 같은 소재 혼용률 정책을 가리키는지 확인
+- `git diff --check` 통과, 실제 키·토큰 형식 민감정보 없음 확인
+
+**판단 근거**
+- 의류 상품의 소재 혼용률은 표시·고지와 연결될 수 있으므로, 에이전트화 변환기라도 추정 숫자를 만들거나 부위별 소재를 섞어 보여주면 법적 오해를 만들 수 있다.
+- 이번 플러그인은 무신사 문제 1인 표기 규정 검수기가 아니므로 적법/위법 판정은 하지 않고, 입력 근거 기반 구조화와 부족·모호 표시까지만 수행해야 한다.
+
+**결과**
+- 완료: 소재 혼용률 엄격 처리 보완 완료
+
+---
+
 ### W-017 · S2 taxonomy/schema 작성
 **요청**
 - 다음 작업 진행: `docs/implementation-plan.md` 기준 S2 `taxonomy.json`, `schema.json` 작성

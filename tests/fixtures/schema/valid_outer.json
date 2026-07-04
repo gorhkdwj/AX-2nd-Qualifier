@@ -11,13 +11,17 @@
     "subcategory": "jacket",
     "materials": [
       {
+        "part": "shell",
         "name": "linen",
         "ratio": 60,
+        "ratio_status": "explicit",
         "evidence": "린넨 60%, 면 40%"
       },
       {
+        "part": "shell",
         "name": "cotton",
         "ratio": 40,
+        "ratio_status": "explicit",
         "evidence": "린넨 60%, 면 40%"
       }
     ],
