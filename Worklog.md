@@ -10,6 +10,42 @@
 
 ---
 
+### W-037 · 실제 페이지형 합성 더미데이터 설계 계획 작성
+**요청**
+- 실제 상품 페이지의 정보 밀도 차이를 고려해, 로컬 전용 비공개 검증이 아닌 재현 가능한 합성 상세페이지형 더미데이터 설계 계획을 진행
+
+**수행 작업**
+- 소수 공개 상품 페이지 확인 결과를 바탕으로 상품별 정보 밀도가 균일하지 않다는 전제를 정리
+- 실제 페이지 원문 저장, 자동 fetch, 크롤링, 로컬 전용 검증을 제외하는 검증 원칙 확정
+- `sparse`, `medium`, `full`, `noisy_ambiguous` 밀도별 합성 상세페이지형 더미데이터 계획 작성
+- S7.7 단계와 산출물, 목표 지표, 작업 단계, 예상 소요, 리스크를 문서화
+- `implementation-plan.md`, `validation-plan.md`, `docs/README.md`에 새 계획 문서와 S7.7 단계를 연결
+- Decisionlog에 검증 방향 결정을 기록
+
+**변경 파일**
+- 생성: `docs/full-page-dummy-validation-plan.md`
+- 수정: `docs/implementation-plan.md`
+- 수정: `docs/validation-plan.md`
+- 수정: `docs/README.md`
+- 수정: `Decisionlog.md`
+- 수정: `Worklog.md`
+
+**검증**
+- 문서 경로와 S7.7 단계 참조 확인
+- `docs/full-page-dummy-validation-plan.md`가 실제 원문 저장·자동 fetch·로컬 전용 검증 제외 원칙을 포함하는지 확인
+- `git diff --check`로 공백 오류 없음 확인
+- 비밀정보 패턴 검색 결과 없음 확인
+
+**판단 근거**
+- 실제 상품 페이지 전체를 저장하거나 로컬 전용 검증을 남기는 방식은 제출자가 재현할 수 없고 윤리적 투명성이 낮다.
+- 실제 운영 환경에는 정보가 적은 상품과 상세한 상품이 섞일 수 있으므로, 합성 데이터도 정보 밀도별로 나눠야 한다.
+
+**결과**
+- 완료: S7.7 실제 페이지형 합성 더미 검증 설계 계획 작성
+- 남은 작업: 생성기 구현, fixture 생성, Codex subset actual 보존, S7.7 보고서 작성
+
+---
+
 ### W-036 · S7.5 생성기 재현성 보완
 **요청**
 - 3단계 taxonomy 전환 과정 중 남은 fixture 생성기 재현성 문제를 바로 보완

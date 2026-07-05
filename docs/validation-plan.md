@@ -39,9 +39,11 @@
 - 스키마 검증: 정상 샘플은 통과, 필수 필드 누락·타입 오류·지원 범위 밖 카테고리·혼용률 상태 불일치는 실패해야 한다.
 - S7.5 확장 검증: 합성 expected 100건 schema-valid 100%, Codex subset 20건 actual schema-valid 100%, Codex subset micro precision 95% 이상, micro recall 85% 이상, dedup accuracy 95% 이상, cross-category high-confidence false duplicate 0건을 목표로 한다.
 - S7.5 현재 결과: 합성 expected 100/100 schema-valid, 합성 self-check precision/recall 100.00%, 합성 dedup 100.00%(20/20), Codex subset schema-valid 20/20, micro precision 95.52%, micro recall 95.85%, 실제 공개 snippet actual schema-valid 10/10, 자동 fetch 0건, 법적 적합/부적합 판정 0건이다. 합성 self-check는 `detail_type` coverage와 평가 도구 정합성 확인용이며 blind extraction 성능으로 해석하지 않는다. Codex subset은 historical actual 보존을 우선해 `detail_type` expected/actual이 모두 `null`이고 해당 필드는 `not_applicable`이다. actual은 schema `0.2.0` 호환을 위해 `schema_version`과 `detail_type: null`만 추가한 마이그레이션본이다. 상세 원본은 `docs/reports/s7-expanded-validation-results.json`에 보존한다.
+- S7.7 실제 페이지형 합성 더미 검증: 실제 상품 페이지 원문을 저장하지 않고, `sparse`, `medium`, `full`, `noisy_ambiguous` 정보 밀도별 합성 상세페이지 입력을 만든다. 목표는 expected/reference actual schema-valid 100%, Codex subset actual schema-valid 100%, `detail_type` precision/recall 95% 이상, dedup accuracy 95% 이상, cross-category high-confidence false duplicate 0건이다. Sparse 입력에서는 모든 세부 필드 recall을 높이는 것이 아니라 hallucinated ratio/care 0건과 missing/ambiguous 판단 정확도를 중점 확인한다.
 
 ## 미검증 범위
 - Codex CLI에서 더미 fixture 1건을 구조화 JSON으로 변환하고 질의 설명에 활용하는 흐름은 S6에서 검증했다. 단, 전역 plugin list/add 명령은 기존 사용자 설정의 stale marketplace 때문에 완전 자동화하지 못했고, 임시 `CODEX_HOME`에서 로컬 플러그인 설치를 별도 확인했다.
 - 실제 공개 무신사 상품페이지 10건의 사람이 붙여넣은 짧은 snippet 기반 sanity check는 S7.5에서 수행했다. 다만 이는 전체 상세페이지 성능 벤치마크가 아니라 안전한 현실성 점검이므로, 실제 공개 샘플의 precision/recall은 acceptance threshold로 쓰지 않는다.
+- 실제 페이지형 운영 입력에 더 가까운 검증은 S7.7의 합성 상세페이지형 더미데이터로 수행한다. 이 검증은 실제 페이지 전체 복제나 로컬 전용 비공개 검증을 사용하지 않고, 모든 입력·expected·actual·평가 결과를 커밋 가능한 합성 데이터로 보존하는 방식이다.
 - 실제 무신사 내부 카탈로그 전체 커버리지와 운영 적용 효과는 비공개 데이터가 필요하므로 검증 대상이 아니다.
 - 심사위원의 실제 채점 기준(AI+심사자 평가)은 외부 프로세스이므로 이 문서로 사전 검증 불가.
