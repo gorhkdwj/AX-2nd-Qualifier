@@ -28,7 +28,7 @@ Input cases:
       "product_text": "상품명: 빈폴 레이디스 리넨 체크 더블 재킷. 제품분류 재킷. 색상 베이지. 사이즈 S, M, L. 소재 겉감 면 50%, 마 50%, 안감 폴리에스터 100%."
     },
     {
-      "product_id": "real_outer_limelike_cardigan_2101205",
+      "product_id": "real_outer_limelike_coverpiece_2101205",
       "source_title": "라임라이크 브이넥 크로스 가디건_3color",
       "source_url": "https://www.musinsa.com/products/2101205",
       "category_hint": "outer",
@@ -58,14 +58,14 @@ Input cases:
       "product_text": "상품명: 247시리즈 캐시미어 블렌디드 블루종 자켓 BLACK. 제품분류 자켓. 컬러 블랙. 캐시미어 블렌디드 소재로 소개되며 정확한 숫자 혼용률은 snippet에 없습니다."
     },
     {
-      "product_id": "real_outer_lenina_cardigan_4332165",
-      "source_title": "르니나 SALENA wool v neck cardigan_RED",
+      "product_id": "real_outer_lenina_woolcover_4332165",
+      "source_title": "르니나 SALENA 울 브이넥 가디건_RED",
       "source_url": "https://www.musinsa.com/products/4332165",
       "category_hint": "outer",
       "locale": "ko-KR",
       "checked_at": "2026-07-05",
       "source_method": "manual_short_public_snippet",
-      "product_text": "상품명: 르니나 SALENA wool v neck cardigan_RED. 제품분류 아우터 카디건. 컬러 레드. wool v neck cardigan 이름에서 울 소재 단서가 있으나 숫자 혼용률은 snippet에 없습니다."
+      "product_text": "상품명: 르니나 SALENA 울 브이넥 가디건_RED. 제품분류 아우터 카디건. 컬러 레드. 울 브이넥 가디건 이름에서 울 소재 단서가 있으나 숫자 혼용률은 snippet에 없습니다."
     },
     {
       "product_id": "real_top_armedes_tee_4783312",

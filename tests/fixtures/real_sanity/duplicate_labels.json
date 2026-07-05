@@ -6,7 +6,7 @@
       "expected_decision": "distinct"
     },
     {
-      "left_id": "real_outer_limelike_cardigan_2101205",
+      "left_id": "real_outer_limelike_coverpiece_2101205",
       "right_id": "real_top_ms_basic_tee_3661999",
       "expected_decision": "distinct"
     },
@@ -21,7 +21,7 @@
       "expected_decision": "distinct"
     },
     {
-      "left_id": "real_outer_lenina_cardigan_4332165",
+      "left_id": "real_outer_lenina_woolcover_4332165",
       "right_id": "real_top_ms_basic_short_tee_1196892",
       "expected_decision": "distinct"
     }

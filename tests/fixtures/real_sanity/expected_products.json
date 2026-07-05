@@ -78,7 +78,7 @@
       }
     },
     {
-      "product_id": "real_outer_limelike_cardigan_2101205",
+      "product_id": "real_outer_limelike_coverpiece_2101205",
       "structured_product": {
         "schema_version": "0.2.0",
         "source": {
@@ -287,16 +287,16 @@
       }
     },
     {
-      "product_id": "real_outer_lenina_cardigan_4332165",
+      "product_id": "real_outer_lenina_woolcover_4332165",
       "structured_product": {
         "schema_version": "0.2.0",
         "source": {
           "source_url": "https://www.musinsa.com/products/4332165",
-          "source_title": "르니나 SALENA wool v neck cardigan_RED",
+          "source_title": "르니나 SALENA 울 브이넥 가디건_RED",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "르니나 SALENA wool v neck cardigan_RED",
+          "title": "르니나 SALENA 울 브이넥 가디건_RED",
           "category": "outer",
           "subcategory": "cardigan",
           "detail_type": "cardigan",
@@ -306,7 +306,7 @@
               "name": "wool",
               "ratio": null,
               "ratio_status": "missing",
-              "evidence": "wool v neck cardigan"
+              "evidence": "울 브이넥 가디건"
             }
           ],
           "fit": [

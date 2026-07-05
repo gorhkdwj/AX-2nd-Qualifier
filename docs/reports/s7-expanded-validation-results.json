@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-05T18:32:00.393324+00:00",
+  "generated_at_utc": "2026-07-05T18:44:53.190038+00:00",
   "generated_for_kst_date": "2026-07-06",
   "environment": {
     "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
@@ -25,11 +25,11 @@
     "tests/fixtures/codex_subset/duplicate_labels.json": "4676ae01b1d1ea59846721c4cc3051cf4fe25da16872f1b87c16f5229d6bce77",
     "tests/fixtures/codex_subset/prompt.md": "4c46d637b4abf4656d8375781546be137f659852aa4480a67f23fec11a2094de",
     "tests/fixtures/codex_subset/prompt_template.md": "aa6f468dcad4bb6f5215bb7154db0f33132ab86be754c7ffc94c173774015eaf",
-    "tests/fixtures/real_sanity/source_inputs.json": "38070d3cb9bfcb7fbe1a5a038df148f08badd131ba1095feb84c494db42eade5",
-    "tests/fixtures/real_sanity/expected_products.json": "7b281a032bc11f760af4e83f2d287dd5dc1edda6eb3dac07ec9b8b8a19a72ece",
-    "tests/fixtures/real_sanity/actual_products.json": "6bbadea0960c289bf1f768213d081500bdaca7eb673bb9a88ae3bc5a6390bb78",
-    "tests/fixtures/real_sanity/duplicate_labels.json": "bb9a821cadc2b38ee4e12d414ad597d1c5da9eb482931fcd5064804eb243731b",
-    "tests/fixtures/real_sanity/prompt.md": "c9e1131855131871614de846e41f9a2d206c1b567becf7c3cee31985402acbdf",
+    "tests/fixtures/real_sanity/source_inputs.json": "0db49b1d5973356f577173a7a2651681a959b95b2e15d0fd0f18a7a7bd083502",
+    "tests/fixtures/real_sanity/expected_products.json": "05d07101427b901b27a1d1005e0c58310f979c6b3005bb26d4196325ee41c891",
+    "tests/fixtures/real_sanity/actual_products.json": "6b2c8914d7dee171dfbb32986941ae217bbc8438eccc9140ec61fa0f993972f2",
+    "tests/fixtures/real_sanity/duplicate_labels.json": "29667f994f2a0f8a0e70aa3f0be98126c9fa96e29a0f913d44c58e0152de0944",
+    "tests/fixtures/real_sanity/prompt.md": "bc5f8536cc3c860fdf98a9e29202785234d08fa8fd3fd9f10a52d167ec79a61e",
     "tests/fixtures/real_sanity/prompt_template.md": "74870f318d4c22c21a258b9b6cd357fff269c6c281fbd5531d145e4f8e3caa2c"
   },
   "commands": [
@@ -2600,7 +2600,7 @@
               ]
             },
             {
-              "product_id": "real_outer_lenina_cardigan_4332165",
+              "product_id": "real_outer_lenina_woolcover_4332165",
               "metrics": {
                 "precision": 0.8,
                 "recall": 0.8571,
@@ -2635,7 +2635,7 @@
               ]
             },
             {
-              "product_id": "real_outer_limelike_cardigan_2101205",
+              "product_id": "real_outer_limelike_coverpiece_2101205",
               "metrics": {
                 "precision": 0.5,
                 "recall": 0.5625,
@@ -2969,7 +2969,7 @@
               "correct": true
             },
             {
-              "left_id": "real_outer_limelike_cardigan_2101205",
+              "left_id": "real_outer_limelike_coverpiece_2101205",
               "right_id": "real_top_ms_basic_tee_3661999",
               "expected_decision": "distinct",
               "actual_decision": "distinct",
@@ -2996,7 +2996,7 @@
               "correct": true
             },
             {
-              "left_id": "real_outer_lenina_cardigan_4332165",
+              "left_id": "real_outer_lenina_woolcover_4332165",
               "right_id": "real_top_ms_basic_short_tee_1196892",
               "expected_decision": "distinct",
               "actual_decision": "distinct",
@@ -3007,7 +3007,7 @@
           ]
         }
       },
-      "stdout_len": 9644,
+      "stdout_len": 9650,
       "stderr": ""
     }
   ],

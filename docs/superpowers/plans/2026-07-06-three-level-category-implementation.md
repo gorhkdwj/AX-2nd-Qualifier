@@ -1058,10 +1058,10 @@ For every real sanity product tuple, add `detail_type` immediately after `subcat
 
 ```text
 real_outer_beanpole_linen_jacket_4308999 -> suit_blazer_jacket
-real_outer_limelike_cardigan_2101205 -> cardigan
+real_outer_limelike_coverpiece_2101205 -> cardigan
 real_outer_8seconds_jacket_4922894 -> suit_blazer_jacket
 real_outer_247_cashmere_blouson_3617977 -> blouson_ma1
-real_outer_lenina_cardigan_4332165 -> cardigan
+real_outer_lenina_woolcover_4332165 -> cardigan
 real_top_armedes_tee_4783312 -> short_sleeve_tshirt
 real_top_ms_linen_like_shirt_black_3054408 -> shirt_blouse
 real_top_ms_basic_tee_3661999 -> short_sleeve_tshirt
