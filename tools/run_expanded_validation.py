@@ -8,13 +8,14 @@ import json
 import platform
 import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
 RESULT_PATH = ROOT / "docs" / "reports" / "s7-expanded-validation-results.json"
+KST = timezone(timedelta(hours=9))
 
 
 COMMANDS: list[dict[str, Any]] = [
@@ -202,9 +203,10 @@ def main() -> int:
         errors="replace",
         capture_output=True,
     )
+    generated_at_utc = datetime.now(timezone.utc)
     result = {
-        "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "generated_for_kst_date": "2026-07-05",
+        "generated_at_utc": generated_at_utc.isoformat(),
+        "generated_for_kst_date": generated_at_utc.astimezone(KST).date().isoformat(),
         "environment": {
             "python_version": sys.version,
             "platform": platform.platform(),

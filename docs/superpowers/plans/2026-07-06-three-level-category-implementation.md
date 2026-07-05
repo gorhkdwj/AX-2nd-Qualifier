@@ -1151,7 +1151,7 @@ Apply these known mappings:
 ```text
 outer_linen_blazer_a -> suit_blazer_jacket
 outer_linen_blazer_b -> suit_blazer_jacket
-outer_down_vest -> lightweight_padding_vest
+outer_down_layerpiece -> lightweight_padding_vest
 top_linen_blouse -> shirt_blouse
 top_washable_tee -> short_sleeve_tshirt
 ```

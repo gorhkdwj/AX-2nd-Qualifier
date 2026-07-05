@@ -49,7 +49,7 @@ python tests\evaluate_product_agentizer.py --pretty
 | quality.ambiguous_fields | 100.00% | 100.00% | 1 | 0 | 0 |
 
 ## 확인된 차이
-- `outer_down_vest`: `goose_down` 충전재, `travel` 태그, `암홀 여유` 사이즈 정보가 누락됐고, 색상이 `khaki` 대신 `green`으로 예측됐다.
+- `outer_down_layerpiece`: `goose_down` 충전재, `travel` 태그, `암홀 여유` 사이즈 정보가 누락됐고, 색상이 `khaki` 대신 `green`으로 예측됐다.
 - `top_linen_blouse`: `rayon` 소재, `spring` 계절, `formal` 태그, `가슴둘레 여유` 사이즈 정보가 누락됐다.
 - `top_washable_tee`: `layering` 태그가 누락됐다.
 

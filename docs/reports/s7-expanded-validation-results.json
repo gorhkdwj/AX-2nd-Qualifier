@@ -1,33 +1,33 @@
 {
-  "generated_at_utc": "2026-07-05T09:04:19.717276+00:00",
-  "generated_for_kst_date": "2026-07-05",
+  "generated_at_utc": "2026-07-05T18:24:10.903017+00:00",
+  "generated_for_kst_date": "2026-07-06",
   "environment": {
     "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
     "platform": "Windows-11-10.0.26200-SP0",
     "codex_version": "codex-cli 0.142.5"
   },
   "hashes_sha256": {
-    "src/skills/product-agentizer/SKILL.md": "bcfaf101f26db1fd4d82af9e0161c4be23e96832f406c5ff0240d99af668ad77",
-    "src/skills/product-agentizer/references/schema.json": "51a868d789cf7953986d4329c6e939cbe56d30639d464cbbb38912d071783c6e",
-    "src/skills/product-agentizer/references/taxonomy.json": "81ad482cc3ee0cadf185faf42b88e6acfde02271fe054dffc8648ab66b2617df",
-    "src/skills/product-agentizer/scripts/validate.py": "9a8f46d2966850b16a789efe0740f1b43aea749d055ef68d64c123492f0129f5",
-    "src/skills/product-agentizer/scripts/dedup.py": "ed5e4a207abed2d9c74c121d1a68373b98f5830ae680f3a3d5563e82b116529a",
-    "tests/evaluate_product_agentizer.py": "bedb9d136b62d6913617fcfee14c8d2706a0e9f5df44017ab96e75d3c4f07bac",
-    "tools/generate_expanded_validation_fixtures.py": "c19ad81af01b6aeb2461c866af13224ae91fc3edd9d0f524e587859f675275b9",
-    "tools/run_expanded_validation.py": "04e2dbf198c67ba76e6ec740c726a5cac7a6a71a7d9899bd14180d7b3933e957",
-    "tests/fixtures/expanded_dummy/source_inputs.json": "7f50def9d558d30b6e58d724654581028e827d57d19eb311a102f223945b4501",
-    "tests/fixtures/expanded_dummy/expected_products.json": "b0d6665fe71f5cfa2b6f2ab93cd4055009c3bd1d992df9007aea89a538f0b8af",
-    "tests/fixtures/expanded_dummy/reference_actual_products.json": "b0d6665fe71f5cfa2b6f2ab93cd4055009c3bd1d992df9007aea89a538f0b8af",
+    "src/skills/product-agentizer/SKILL.md": "d93359cc7e72c98a62fb7c02e208ee54e2925070089b5e1dedeaa452ed214776",
+    "src/skills/product-agentizer/references/schema.json": "685ee3307d64603079d8adce707768e17e96a1aeb48010da2d5bd26f254f4a0a",
+    "src/skills/product-agentizer/references/taxonomy.json": "5d60707c2c79b66ce19c71c3179d18b296e11d6fcaab34d612b25dbc0367e91b",
+    "src/skills/product-agentizer/scripts/validate.py": "ceef43b48102906b849ee271232f86f68f821dde70277299e60e8095b64b4318",
+    "src/skills/product-agentizer/scripts/dedup.py": "dd69c8ea40bd081b7fd53ec514415d147457c940321b929c3f4fdd748ab937c4",
+    "tests/evaluate_product_agentizer.py": "a86cb4941be692c0f0914dcfc7939af35fe377b06e9722582982c8471d658dd7",
+    "tools/generate_expanded_validation_fixtures.py": "7975d3616ddb2c952c18f41dc995d182855d8e87a93ccc2c0a75aa89eba40f75",
+    "tools/run_expanded_validation.py": "445105ab8af0c1535aab424494cbb938f1149cffe00144d59b77f381e3f5c377",
+    "tests/fixtures/expanded_dummy/source_inputs.json": "f8d65b71d22892742611692a5793c991754b045bd9aa60a217b05d58b2ec51d3",
+    "tests/fixtures/expanded_dummy/expected_products.json": "6b038746ed726da8043b610c55e269b85a6fd6f3a191d3223ad5354b7e5bb956",
+    "tests/fixtures/expanded_dummy/reference_actual_products.json": "6b038746ed726da8043b610c55e269b85a6fd6f3a191d3223ad5354b7e5bb956",
     "tests/fixtures/expanded_dummy/duplicate_labels.json": "d48bf8775187090a19c97b7ec0ed21869798540fe7159f7c03ad227e959e05d4",
-    "tests/fixtures/codex_subset/source_inputs.json": "6a957296e536d59c881989d12cd13e0236a3f4cd7cad89826db3c9ce02496977",
-    "tests/fixtures/codex_subset/expected_products.json": "dd1da94f8b7b58b8260ca4b63f8162c24842456ac0624a7703bb5efb17e52d2d",
-    "tests/fixtures/codex_subset/actual_products.json": "7ea7e30dfe3eaee02bd1293ee7d0879e1c6b73a5c76bfb0510c25bdbcc1ba89d",
+    "tests/fixtures/codex_subset/source_inputs.json": "ba09acaf7b635ec5174d54049576eebf5ac2b0c3c0433a225dd2db4d8048c615",
+    "tests/fixtures/codex_subset/expected_products.json": "7e523d3fbe2e8e7f1b869670cb678559f157073adf8049753df01328a6f7b518",
+    "tests/fixtures/codex_subset/actual_products.json": "b4c3df2250a486bf00aded4dc738ee0ffa193ce45f144158ba1b4f68c1ebdcac",
     "tests/fixtures/codex_subset/duplicate_labels.json": "4676ae01b1d1ea59846721c4cc3051cf4fe25da16872f1b87c16f5229d6bce77",
-    "tests/fixtures/codex_subset/prompt.md": "b80ebc7a722b14d5639902754bf7298b4e5c1605de6fa738f7c9cbe97d74518e",
-    "tests/fixtures/codex_subset/prompt_template.md": "1df7068cea11f4665b2cd0c00f716772d4b83f0748e94316d790ea566e599ed8",
+    "tests/fixtures/codex_subset/prompt.md": "4c46d637b4abf4656d8375781546be137f659852aa4480a67f23fec11a2094de",
+    "tests/fixtures/codex_subset/prompt_template.md": "aa6f468dcad4bb6f5215bb7154db0f33132ab86be754c7ffc94c173774015eaf",
     "tests/fixtures/real_sanity/source_inputs.json": "38070d3cb9bfcb7fbe1a5a038df148f08badd131ba1095feb84c494db42eade5",
-    "tests/fixtures/real_sanity/expected_products.json": "9deb6e351e1ba7ff5470944bdec464fd54762c7633ba6395c808b5478d9d1298",
-    "tests/fixtures/real_sanity/actual_products.json": "74b9314ed66a6eea3c74bb29daec7327ad81a5e73f771cd46bf9960eba32fa1f",
+    "tests/fixtures/real_sanity/expected_products.json": "7b281a032bc11f760af4e83f2d287dd5dc1edda6eb3dac07ec9b8b8a19a72ece",
+    "tests/fixtures/real_sanity/actual_products.json": "6bbadea0960c289bf1f768213d081500bdaca7eb673bb9a88ae3bc5a6390bb78",
     "tests/fixtures/real_sanity/duplicate_labels.json": "bb9a821cadc2b38ee4e12d414ad597d1c5da9eb482931fcd5064804eb243731b",
     "tests/fixtures/real_sanity/prompt.md": "c9e1131855131871614de846e41f9a2d206c1b567becf7c3cee31985402acbdf",
     "tests/fixtures/real_sanity/prompt_template.md": "74870f318d4c22c21a258b9b6cd357fff269c6c281fbd5531d145e4f8e3caa2c"
@@ -81,6 +81,7 @@
             "title",
             "category",
             "subcategory",
+            "detail_type",
             "materials",
             "fit",
             "colors",
@@ -114,7 +115,7 @@
           "micro": {
             "precision": 1.0,
             "recall": 1.0,
-            "true_positive": 1425,
+            "true_positive": 1525,
             "false_positive": 0,
             "false_negative": 0
           },
@@ -134,6 +135,13 @@
               "false_negative": 0
             },
             "subcategory": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 100,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "detail_type": {
               "precision": 1.0,
               "recall": 1.0,
               "true_positive": 100,
@@ -210,7 +218,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -221,7 +229,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -232,7 +240,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -243,7 +251,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -254,7 +262,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -265,7 +273,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -276,7 +284,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -287,7 +295,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -298,7 +306,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -309,7 +317,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -320,7 +328,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -331,7 +339,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -342,7 +350,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -353,7 +361,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -364,7 +372,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -375,7 +383,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -386,7 +394,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -397,7 +405,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -408,7 +416,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -419,7 +427,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -430,7 +438,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -441,7 +449,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -452,7 +460,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -463,7 +471,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -474,7 +482,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -485,7 +493,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -496,7 +504,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -507,7 +515,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -518,7 +526,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -529,7 +537,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -540,7 +548,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -551,7 +559,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -562,7 +570,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -573,7 +581,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -584,7 +592,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -595,7 +603,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -606,7 +614,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -617,7 +625,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -628,7 +636,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -639,7 +647,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -650,7 +658,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -661,7 +669,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -672,7 +680,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -683,7 +691,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -694,7 +702,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -705,7 +713,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -716,7 +724,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -727,7 +735,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -738,7 +746,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -749,7 +757,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -760,7 +768,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -771,7 +779,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -782,7 +790,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -793,7 +801,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -804,7 +812,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -815,7 +823,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -826,7 +834,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -837,7 +845,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -848,7 +856,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 12,
+                "true_positive": 13,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -859,7 +867,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -870,7 +878,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -881,7 +889,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -892,7 +900,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -903,7 +911,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -914,7 +922,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -925,7 +933,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -936,7 +944,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -947,7 +955,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -958,7 +966,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 12,
+                "true_positive": 13,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -969,7 +977,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -980,7 +988,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -991,7 +999,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1002,7 +1010,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1013,7 +1021,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1024,7 +1032,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1035,7 +1043,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1046,7 +1054,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1057,7 +1065,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1068,7 +1076,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 12,
+                "true_positive": 13,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1079,7 +1087,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1090,7 +1098,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1101,7 +1109,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1112,7 +1120,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1123,7 +1131,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1134,7 +1142,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1145,7 +1153,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1156,7 +1164,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1167,7 +1175,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1178,7 +1186,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 12,
+                "true_positive": 13,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1189,7 +1197,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1200,7 +1208,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1211,7 +1219,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1222,7 +1230,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1233,7 +1241,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1244,7 +1252,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1255,7 +1263,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
+                "true_positive": 16,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1266,7 +1274,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1277,7 +1285,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1288,7 +1296,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 12,
+                "true_positive": 13,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1299,7 +1307,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
+                "true_positive": 14,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1314,17 +1322,18 @@
           "correct": 20,
           "total": 20,
           "min_score": 0.45,
-          "candidate_count": 333,
+          "candidate_count": 316,
           "pairs": [
             {
               "left_id": "outer_dummy_000",
               "right_id": "outer_dummy_001",
               "expected_decision": "duplicate",
               "actual_decision": "duplicate",
-              "score": 1.0,
+              "score": 0.99,
               "matched_fields": [
                 "category",
                 "subcategory",
+                "detail_type",
                 "materials",
                 "colors",
                 "fit",
@@ -1340,10 +1349,11 @@
               "right_id": "outer_dummy_011",
               "expected_decision": "duplicate",
               "actual_decision": "duplicate",
-              "score": 1.0,
+              "score": 0.988,
               "matched_fields": [
                 "category",
                 "subcategory",
+                "detail_type",
                 "materials",
                 "colors",
                 "fit",
@@ -1359,10 +1369,11 @@
               "right_id": "outer_dummy_021",
               "expected_decision": "duplicate",
               "actual_decision": "duplicate",
-              "score": 1.0,
+              "score": 0.99,
               "matched_fields": [
                 "category",
                 "subcategory",
+                "detail_type",
                 "materials",
                 "colors",
                 "fit",
@@ -1378,10 +1389,11 @@
               "right_id": "outer_dummy_031",
               "expected_decision": "duplicate",
               "actual_decision": "duplicate",
-              "score": 1.0,
+              "score": 0.9914,
               "matched_fields": [
                 "category",
                 "subcategory",
+                "detail_type",
                 "materials",
                 "colors",
                 "fit",
@@ -1397,10 +1409,11 @@
               "right_id": "outer_dummy_041",
               "expected_decision": "duplicate",
               "actual_decision": "duplicate",
-              "score": 1.0,
+              "score": 0.99,
               "matched_fields": [
                 "category",
                 "subcategory",
+                "detail_type",
                 "materials",
                 "colors",
                 "fit",
@@ -1416,10 +1429,11 @@
               "right_id": "top_dummy_051",
               "expected_decision": "duplicate",
               "actual_decision": "duplicate",
-              "score": 1.0,
+              "score": 0.99,
               "matched_fields": [
                 "category",
                 "subcategory",
+                "detail_type",
                 "materials",
                 "colors",
                 "fit",
@@ -1435,10 +1449,11 @@
               "right_id": "top_dummy_061",
               "expected_decision": "duplicate",
               "actual_decision": "duplicate",
-              "score": 1.0,
+              "score": 0.99,
               "matched_fields": [
                 "category",
                 "subcategory",
+                "detail_type",
                 "materials",
                 "colors",
                 "fit",
@@ -1454,10 +1469,11 @@
               "right_id": "top_dummy_071",
               "expected_decision": "duplicate",
               "actual_decision": "duplicate",
-              "score": 1.0,
+              "score": 0.99,
               "matched_fields": [
                 "category",
                 "subcategory",
+                "detail_type",
                 "materials",
                 "colors",
                 "fit",
@@ -1473,10 +1489,11 @@
               "right_id": "top_dummy_081",
               "expected_decision": "duplicate",
               "actual_decision": "duplicate",
-              "score": 1.0,
+              "score": 0.99,
               "matched_fields": [
                 "category",
                 "subcategory",
+                "detail_type",
                 "materials",
                 "colors",
                 "fit",
@@ -1492,10 +1509,11 @@
               "right_id": "top_dummy_091",
               "expected_decision": "duplicate",
               "actual_decision": "duplicate",
-              "score": 1.0,
+              "score": 0.99,
               "matched_fields": [
                 "category",
                 "subcategory",
+                "detail_type",
                 "materials",
                 "colors",
                 "fit",
@@ -1556,7 +1574,7 @@
               "right_id": "top_dummy_070",
               "expected_decision": "distinct",
               "actual_decision": "distinct",
-              "score": 0.54,
+              "score": 0.48,
               "matched_fields": [
                 "category",
                 "materials",
@@ -1604,7 +1622,7 @@
           ]
         }
       },
-      "stdout_len": 23051,
+      "stdout_len": 23343,
       "stderr": ""
     },
     {
@@ -1655,6 +1673,7 @@
             "title",
             "category",
             "subcategory",
+            "detail_type",
             "materials",
             "fit",
             "colors",
@@ -1711,6 +1730,13 @@
               "precision": 1.0,
               "recall": 1.0,
               "true_positive": 20,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "detail_type": {
+              "precision": "not_applicable",
+              "recall": "not_applicable",
+              "true_positive": 0,
               "false_positive": 0,
               "false_negative": 0
             },
@@ -2185,14 +2211,14 @@
           "correct": 4,
           "total": 4,
           "min_score": 0.45,
-          "candidate_count": 32,
+          "candidate_count": 30,
           "pairs": [
             {
               "left_id": "outer_dummy_000",
               "right_id": "outer_dummy_001",
               "expected_decision": "duplicate",
               "actual_decision": "duplicate",
-              "score": 1.0,
+              "score": 0.908,
               "matched_fields": [
                 "category",
                 "subcategory",
@@ -2211,7 +2237,7 @@
               "right_id": "top_dummy_051",
               "expected_decision": "duplicate",
               "actual_decision": "duplicate",
-              "score": 1.0,
+              "score": 0.908,
               "matched_fields": [
                 "category",
                 "subcategory",
@@ -2246,7 +2272,7 @@
           ]
         }
       },
-      "stdout_len": 8507,
+      "stdout_len": 8664,
       "stderr": ""
     },
     {
@@ -2297,6 +2323,7 @@
             "title",
             "category",
             "subcategory",
+            "detail_type",
             "materials",
             "fit",
             "colors",
@@ -2328,9 +2355,9 @@
         ],
         "attribute_metrics": {
           "micro": {
-            "precision": 0.62,
-            "recall": 0.744,
-            "true_positive": 93,
+            "precision": 0.6438,
+            "recall": 0.763,
+            "true_positive": 103,
             "false_positive": 57,
             "false_negative": 32
           },
@@ -2350,6 +2377,13 @@
               "false_negative": 0
             },
             "subcategory": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 10,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "detail_type": {
               "precision": 1.0,
               "recall": 1.0,
               "true_positive": 10,
@@ -2424,9 +2458,9 @@
             {
               "product_id": "real_outer_247_cashmere_blouson_3617977",
               "metrics": {
-                "precision": 0.6,
-                "recall": 0.6923,
-                "true_positive": 9,
+                "precision": 0.625,
+                "recall": 0.7143,
+                "true_positive": 10,
                 "false_positive": 6,
                 "false_negative": 4
               },
@@ -2478,9 +2512,9 @@
             {
               "product_id": "real_outer_8seconds_jacket_4922894",
               "metrics": {
-                "precision": 0.7143,
-                "recall": 0.7143,
-                "true_positive": 10,
+                "precision": 0.7333,
+                "recall": 0.7333,
+                "true_positive": 11,
                 "false_positive": 4,
                 "false_negative": 4
               },
@@ -2529,9 +2563,9 @@
             {
               "product_id": "real_outer_beanpole_linen_jacket_4308999",
               "metrics": {
-                "precision": 0.7222,
-                "recall": 0.8125,
-                "true_positive": 13,
+                "precision": 0.7368,
+                "recall": 0.8235,
+                "true_positive": 14,
                 "false_positive": 5,
                 "false_negative": 3
               },
@@ -2568,9 +2602,9 @@
             {
               "product_id": "real_outer_lenina_cardigan_4332165",
               "metrics": {
-                "precision": 0.7857,
-                "recall": 0.8462,
-                "true_positive": 11,
+                "precision": 0.8,
+                "recall": 0.8571,
+                "true_positive": 12,
                 "false_positive": 3,
                 "false_negative": 2
               },
@@ -2603,9 +2637,9 @@
             {
               "product_id": "real_outer_limelike_cardigan_2101205",
               "metrics": {
-                "precision": 0.4706,
-                "recall": 0.5333,
-                "true_positive": 8,
+                "precision": 0.5,
+                "recall": 0.5625,
+                "true_positive": 9,
                 "false_positive": 9,
                 "false_negative": 7
               },
@@ -2663,9 +2697,9 @@
             {
               "product_id": "real_top_armedes_tee_4783312",
               "metrics": {
-                "precision": 0.4444,
-                "recall": 0.6667,
-                "true_positive": 8,
+                "precision": 0.4737,
+                "recall": 0.6923,
+                "true_positive": 9,
                 "false_positive": 10,
                 "false_negative": 4
               },
@@ -2721,9 +2755,9 @@
             {
               "product_id": "real_top_ms_basic_short_tee_1196892",
               "metrics": {
-                "precision": 0.5385,
-                "recall": 0.7,
-                "true_positive": 7,
+                "precision": 0.5714,
+                "recall": 0.7273,
+                "true_positive": 8,
                 "false_positive": 6,
                 "false_negative": 3
               },
@@ -2778,9 +2812,9 @@
             {
               "product_id": "real_top_ms_basic_tee_3661999",
               "metrics": {
-                "precision": 0.5385,
-                "recall": 0.7,
-                "true_positive": 7,
+                "precision": 0.5714,
+                "recall": 0.7273,
+                "true_positive": 8,
                 "false_positive": 6,
                 "false_negative": 3
               },
@@ -2835,9 +2869,9 @@
             {
               "product_id": "real_top_ms_linen_like_shirt_black_3054408",
               "metrics": {
-                "precision": 0.7143,
-                "recall": 0.9091,
-                "true_positive": 10,
+                "precision": 0.7333,
+                "recall": 0.9167,
+                "true_positive": 11,
                 "false_positive": 4,
                 "false_negative": 1
               },
@@ -2876,9 +2910,9 @@
             {
               "product_id": "real_top_ms_linen_like_shirt_navy_3054409",
               "metrics": {
-                "precision": 0.7143,
-                "recall": 0.9091,
-                "true_positive": 10,
+                "precision": 0.7333,
+                "recall": 0.9167,
+                "true_positive": 11,
                 "false_positive": 4,
                 "false_negative": 1
               },
@@ -2923,7 +2957,7 @@
           "correct": 5,
           "total": 5,
           "min_score": 0.45,
-          "candidate_count": 7,
+          "candidate_count": 6,
           "pairs": [
             {
               "left_id": "real_outer_beanpole_linen_jacket_4308999",
@@ -2973,12 +3007,12 @@
           ]
         }
       },
-      "stdout_len": 9510,
+      "stdout_len": 9644,
       "stderr": ""
     }
   ],
   "dedup_cross_category_check": {
-    "candidate_count": 333,
+    "candidate_count": 316,
     "high_confidence_cross_category_count": 0,
     "examples": []
   },

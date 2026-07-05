@@ -138,7 +138,7 @@ python src\skills\product-agentizer\scripts\validate.py <codex-output.json> --pr
 - 더미 fixture 5건 기준 속성 micro precision: 98.55%
 - 더미 fixture 5건 기준 속성 micro recall: 88.31%
 - 더미 중복/비중복 쌍 기준 dedup accuracy: 100.00% (10/10)
-- Codex CLI 실제 실행에서 `outer_down_vest` 입력을 구조화 JSON으로 변환했고 `validate.py` 검증을 통과
+- Codex CLI 실제 실행에서 `outer_down_layerpiece` 입력을 구조화 JSON으로 변환했고 `validate.py` 검증을 통과
 - S6 Codex 출력은 직전 보완 대상이던 `goose_down`, `khaki`, `travel`, `여유 있는 암홀` 정보를 유지
 - S7.5 확장 합성 expected 100건은 schema-valid 100%(100/100), self-check precision/recall 100.00%
 - S7.5 Codex subset 20건 actual은 schema-valid 100%(20/20), micro precision 95.52%, micro recall 95.85%
