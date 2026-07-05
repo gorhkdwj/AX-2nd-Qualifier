@@ -10,6 +10,27 @@
 
 ---
 
+### D-017 · 3단계 상품 분류 구조 도입
+**날짜**: 2026-07-06 KST
+
+**결정**
+- 상품 분류 구조를 기존 `category/subcategory`에서 `category/subcategory/detail_type`으로 확장한다.
+- 이번 구현 범위는 계속 `outer`와 `top`으로 유지한다.
+- `detail_type`은 필수 필드로 두되 값은 `string | null`을 허용한다.
+- `schema_version`과 `taxonomy_version`은 `0.2.0`으로 올린다.
+- 공식 무신사 상의 9개, 아우터 22개 세부 카테고리를 `detail_type` 기준으로 반영한다.
+
+**근거**
+- 실제 무신사 몰 카테고리에는 `트러커 재킷`, `레더/라이더스 재킷`, `숏패딩/헤비 아우터`, `후드 티셔츠`처럼 현재 `subcategory`보다 세부적인 유형이 존재한다.
+- 이 값을 모두 `subcategory`로 승격하면 형태·소재·계절·스타일 의미가 한 필드에 섞인다.
+- `detail_type`을 별도 계층으로 두면 실제 몰 세부 유형을 보존하면서도 소재 질의는 `materials`, 계절 질의는 `seasons`를 우선하도록 역할을 분리할 수 있다.
+
+**영향**
+- `schema.json`, `taxonomy.json`, `SKILL.md`, `validate.py`, `dedup.py`, `tests/evaluate_product_agentizer.py`, fixture 전체, README와 docs를 함께 갱신한다.
+- 기존 S7.5 검증 결과는 `0.1.0` 기준이므로 `0.2.0` 구조로 재실행하고 보고서를 갱신한다.
+
+---
+
 ### D-016 · docs 보고서 폴더 분리
 **상황**
 - S5/S6/S7.5 검증 보고서와 결과 JSON이 `docs/` 루트의 계획·계약 문서와 섞여 있어, 어떤 문서가 실행 기준이고 어떤 문서가 결과 보고서인지 한눈에 구분하기 어려웠다.
