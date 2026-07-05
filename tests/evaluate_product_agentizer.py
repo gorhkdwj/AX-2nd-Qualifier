@@ -25,6 +25,7 @@ EVALUATED_FIELDS = [
     "title",
     "category",
     "subcategory",
+    "detail_type",
     "materials",
     "fit",
     "colors",
@@ -102,7 +103,7 @@ def quality_tokens(product: dict[str, Any], field: str) -> set[str]:
 
 def field_tokens(product: dict[str, Any], field: str) -> set[str]:
     structured = product.get("product", {})
-    if field in {"title", "category", "subcategory"}:
+    if field in {"title", "category", "subcategory", "detail_type"}:
         value = structured.get(field)
         return {str(value).strip()} if value is not None and str(value).strip() else set()
     if field == "materials":
