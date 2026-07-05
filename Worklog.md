@@ -28,6 +28,7 @@
 - 수정: `docs/validation-plan.md`
 - 수정: `docs/README.md`
 - 수정: `Decisionlog.md`
+- 수정: `Troubleshootinglog.md`
 - 수정: `Worklog.md`
 
 **검증**
@@ -35,6 +36,7 @@
 - `docs/full-page-dummy-validation-plan.md`가 실제 원문 저장·자동 fetch·로컬 전용 검증 제외 원칙을 포함하는지 확인
 - `git diff --check`로 공백 오류 없음 확인
 - 비밀정보 패턴 검색 결과 없음 확인
+- 실제 페이지형 합성 더미 검증 참조가 `S7.7`로 통일됐고, 이전 단계 번호 형태의 참조가 남아 있지 않음을 확인
 
 **판단 근거**
 - 실제 상품 페이지 전체를 저장하거나 로컬 전용 검증을 남기는 방식은 제출자가 재현할 수 없고 윤리적 투명성이 낮다.
@@ -42,6 +44,7 @@
 
 **결과**
 - 완료: S7.7 실제 페이지형 합성 더미 검증 설계 계획 작성
+- 기록: Decisionlog D-019, Troubleshootinglog T-007
 - 남은 작업: 생성기 구현, fixture 생성, Codex subset actual 보존, S7.7 보고서 작성
 
 ---
