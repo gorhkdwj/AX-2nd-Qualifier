@@ -14,7 +14,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RESULT_PATH = ROOT / "docs" / "s7-expanded-validation-results.json"
+RESULT_PATH = ROOT / "docs" / "reports" / "s7-expanded-validation-results.json"
 
 
 COMMANDS: list[dict[str, Any]] = [

@@ -15,10 +15,6 @@
 | `requirements-contract.md` | 구현 기준 계약 | 입력·출력 JSON, 지표, 오류·완료 기준 확인 |
 | `implementation-plan.md` | 무신사 문제 2 단일 구현 계획 | 플러그인 구조, 다음 작업 순서, 완료 조건 확인 |
 | `validation-plan.md` | 검증 계획 | 더미 픽스처, 안전성, 제출 구조 검증 기준 확인 |
-| `s5-evaluation-report.md` | S5 더미 픽스처 정량 검증 결과 | 속성 precision/recall과 중복 감지 정확도 확인 |
-| `s6-codex-cli-report.md` | S6 Codex CLI 실행 검증 결과 | 로컬 marketplace, Codex exec 변환·질의 시연 확인 |
-| `s7-expanded-validation-report.md` | S7.5 확장 검증 및 재현성 보존 보고서 | 패키징 전 합성 100건, Codex subset 20건, 실제 공개 snippet 10건 결과 확인 |
-| `s7-expanded-validation-results.json` | S7.5 검증 결과 원본 JSON | 실행 명령, 환경, hash, 정량 결과를 기계적으로 재확인 |
 | `submission-questions.md` | 제출 질문 5문항 답변 초안 | 제출 폼 답변을 복사·검토할 때 확인 |
 | `company-selection.md` | 기업 선정 기준·최종 확정 기록 | 왜 무신사 문제 2를 골랐는지 추적 |
 
@@ -26,6 +22,7 @@
 | 폴더 | 역할 | 주의 |
 |---|---|---|
 | `company-research_references/` | 기업 조사·팩트체크·최종 선정 근거 | 구현 기준은 아니지만 선정 사유와 공개 근거 추적에 필요 |
+| `reports/` | 단계별 검증·실행 결과 보고서 | S5/S6/S7.5 결과와 재현성 스냅샷 확인 |
 | `technical_references/` | Codex 플러그인·Skill·Hooks·AGENTS 공식 문서 사본 | 구현 중 규격 확인용. 필요한 문서만 열어본다 |
 | `archive/` | 폐기·비활성 자료 보관 | 현재 구현 기준으로 쓰지 않는다. 감사 추적용으로만 확인 |
 

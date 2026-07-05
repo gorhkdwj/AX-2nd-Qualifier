@@ -108,7 +108,7 @@ docs/references/
 
 ### S7.5 · 확장 검증·재현성 보존
 - 왜 필요한가: 최종 패키징 전에는 단순 성공 여부가 아니라, 같은 입력·명령·결과를 다시 추적할 수 있어야 한다.
-- 산출물: `tests/fixtures/expanded_dummy/`, `tests/fixtures/codex_subset/`, `tests/fixtures/real_sanity/`, `docs/s7-expanded-validation-report.md`, `docs/s7-expanded-validation-results.json`.
+- 산출물: `tests/fixtures/expanded_dummy/`, `tests/fixtures/codex_subset/`, `tests/fixtures/real_sanity/`, `docs/reports/s7-expanded-validation-report.md`, `docs/reports/s7-expanded-validation-results.json`.
 - 완료 조건: 합성 expected 100건 schema-valid 100%, Codex subset 20건 actual schema-valid 100%, Codex subset micro precision 95% 이상·recall 85% 이상, dedup accuracy 95% 이상, cross-category high-confidence false duplicate 0건.
 - 공개 sanity: 공개 무신사 상품페이지 10건은 URL·확인일·짧은 factual snippet만 저장한다. 전체 상세페이지 복사본이나 자동 fetch 결과는 저장하지 않는다.
 - 검증 방법: `python tools\generate_expanded_validation_fixtures.py`, `python tools\run_expanded_validation.py`를 실행하고, 실패 사례와 보완 내역을 Worklog/Troubleshootinglog에 기록한다.

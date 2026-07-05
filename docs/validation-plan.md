@@ -37,7 +37,7 @@
 - 중복 감지: 더미 중복쌍/비중복쌍에서 정확도와 오탐·미탐 사례를 기록한다. S5 더미 fixture 기준 현재 결과는 duplicate accuracy 100.00%(10/10)다.
 - 스키마 검증: 정상 샘플은 통과, 필수 필드 누락·타입 오류·지원 범위 밖 카테고리·혼용률 상태 불일치는 실패해야 한다.
 - S7.5 확장 검증: 합성 expected 100건 schema-valid 100%, Codex subset 20건 actual schema-valid 100%, Codex subset micro precision 95% 이상, micro recall 85% 이상, dedup accuracy 95% 이상, cross-category high-confidence false duplicate 0건을 목표로 한다.
-- S7.5 현재 결과: 합성 expected 100/100 schema-valid, 합성 self-check precision/recall 100.00%, 합성 dedup 100.00%(20/20), Codex subset schema-valid 20/20, micro precision 95.52%, micro recall 95.85%, 실제 공개 snippet actual schema-valid 10/10, 자동 fetch 0건, 법적 적합/부적합 판정 0건이다. 상세 원본은 `docs/s7-expanded-validation-results.json`에 보존한다.
+- S7.5 현재 결과: 합성 expected 100/100 schema-valid, 합성 self-check precision/recall 100.00%, 합성 dedup 100.00%(20/20), Codex subset schema-valid 20/20, micro precision 95.52%, micro recall 95.85%, 실제 공개 snippet actual schema-valid 10/10, 자동 fetch 0건, 법적 적합/부적합 판정 0건이다. 상세 원본은 `docs/reports/s7-expanded-validation-results.json`에 보존한다.
 
 ## 미검증 범위
 - Codex CLI에서 더미 fixture 1건을 구조화 JSON으로 변환하고 질의 설명에 활용하는 흐름은 S6에서 검증했다. 단, 전역 plugin list/add 명령은 기존 사용자 설정의 stale marketplace 때문에 완전 자동화하지 못했고, 임시 `CODEX_HOME`에서 로컬 플러그인 설치를 별도 확인했다.

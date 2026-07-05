@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-05T07:03:44.030925+00:00",
+  "generated_at_utc": "2026-07-05T09:04:19.717276+00:00",
   "generated_for_kst_date": "2026-07-05",
   "environment": {
     "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
@@ -14,7 +14,7 @@
     "src/skills/product-agentizer/scripts/dedup.py": "ed5e4a207abed2d9c74c121d1a68373b98f5830ae680f3a3d5563e82b116529a",
     "tests/evaluate_product_agentizer.py": "bedb9d136b62d6913617fcfee14c8d2706a0e9f5df44017ab96e75d3c4f07bac",
     "tools/generate_expanded_validation_fixtures.py": "c19ad81af01b6aeb2461c866af13224ae91fc3edd9d0f524e587859f675275b9",
-    "tools/run_expanded_validation.py": "135e101480ea0fce0959d817bad0f782071ce4afb4052b5ca65eb502694e841c",
+    "tools/run_expanded_validation.py": "04e2dbf198c67ba76e6ec740c726a5cac7a6a71a7d9899bd14180d7b3933e957",
     "tests/fixtures/expanded_dummy/source_inputs.json": "7f50def9d558d30b6e58d724654581028e827d57d19eb311a102f223945b4501",
     "tests/fixtures/expanded_dummy/expected_products.json": "b0d6665fe71f5cfa2b6f2ab93cd4055009c3bd1d992df9007aea89a538f0b8af",
     "tests/fixtures/expanded_dummy/reference_actual_products.json": "b0d6665fe71f5cfa2b6f2ab93cd4055009c3bd1d992df9007aea89a538f0b8af",

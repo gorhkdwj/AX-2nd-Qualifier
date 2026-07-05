@@ -10,6 +10,26 @@
 
 ---
 
+### T-005 · docs/reports 경로 일괄 치환 중 중복 경로 발생
+**발생 상황**
+- S5/S6/S7.5 보고서를 `docs/reports/`로 이동한 뒤, README와 작업 문서의 경로 문자열을 일괄 갱신했다.
+
+**증상**
+- `docs/s7-expanded-validation-report.md`를 `docs/reports/s7-expanded-validation-report.md`로 바꾼 뒤, 다시 `s7-expanded-validation-report.md` 단독 문자열을 치환하면서 일부 경로가 `docs/reports/reports/...` 형태로 중복됐다.
+
+**확인된 원인**
+- 긴 경로 치환과 파일명 단독 치환을 같은 반복문에서 순차 적용해, 이미 갱신된 경로의 파일명 부분이 한 번 더 치환됐다.
+
+**조치**
+- 전체 문서에서 `docs/reports/reports/`를 `docs/reports/`로 되돌렸다.
+- 활성 문서와 스크립트 기준으로 중복 경로와 이전 루트 보고서 경로가 남아 있지 않음을 확인했다. 단, Worklog/Troubleshootinglog에는 이동 전 경로와 오류 사례 설명을 감사 추적용으로 남겼다.
+
+**재발 방지**
+- 경로 일괄 치환은 긴 경로와 파일명 단독 치환을 섞지 않는다.
+- 기계적 치환 직후 `rg "reports/reports|이전경로"`처럼 오류 패턴을 먼저 확인한다.
+
+---
+
 ### T-004 · S7.5 확장 검증 fixture 생성·평가 래퍼 오류
 **발생 상황**
 - S7.5 확장 검증을 구현하면서 합성 100건, Codex subset 20건, 실제 공개 snippet 10건 fixture와 재현성 평가 결과를 생성했다.
@@ -18,7 +38,7 @@
 - fixture 생성기에서 duplicate case를 만들 때 `KeyError: 'product'`가 발생했다.
 - 실제 공개 샘플 expected JSON 생성 후 schema 검증에서 일부 필드 구조가 맞지 않았다.
 - `tests/evaluate_product_agentizer.py`를 custom 상대 경로로 실행하면 `relative_to(ROOT)` 처리에서 `ValueError`가 발생했다.
-- Windows 콘솔 출력 경로에서 평가 결과 JSON의 한글 차이 토큰이 깨져 `docs/s7-expanded-validation-results.json`에 읽기 어려운 값이 들어갔다.
+- Windows 콘솔 출력 경로에서 평가 결과 JSON의 한글 차이 토큰이 깨져 `docs/reports/s7-expanded-validation-results.json`에 읽기 어려운 값이 들어갔다.
 - real sanity 평가에 Codex subset duplicate label을 잘못 사용하면 dedup 평가가 잘못된 기준으로 실행될 수 있었다.
 
 **확인된 원인**
@@ -83,7 +103,7 @@
 
 **재발 방지**
 - 개별 fixture 검증 명령을 작성하기 전에 `rg --files tests\fixtures`로 실제 경로를 먼저 확인한다.
-- README의 기본 검증 명령에는 Git에 포함되지 않는 `out/` 산출물 검증을 넣지 않고, S6 재현 절차는 `docs/s6-codex-cli-report.md`에 분리한다.
+- README의 기본 검증 명령에는 Git에 포함되지 않는 `out/` 산출물 검증을 넣지 않고, S6 재현 절차는 `docs/reports/s6-codex-cli-report.md`에 분리한다.
 
 ---
 
@@ -109,6 +129,6 @@
 - 질의 시연은 인코딩 안정성을 위해 질의 의도는 ASCII로 전달하고 한국어 답변을 요구했다.
 
 **재발 방지**
-- 최종 제출 전 Codex CLI 시연 명령은 `docs/s6-codex-cli-report.md`의 우회 절차를 따른다.
+- 최종 제출 전 Codex CLI 시연 명령은 `docs/reports/s6-codex-cli-report.md`의 우회 절차를 따른다.
 - 전역 plugin browser/install까지 완전히 재현하려면 사용자가 stale marketplace를 제거하거나 유효한 manifest 경로로 수정해야 한다.
 - `schema.json`은 `validate.py`의 입력으로 유지하고, Codex `--output-schema`에는 그대로 사용하지 않는다.

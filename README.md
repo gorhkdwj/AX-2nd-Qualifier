@@ -105,7 +105,7 @@ URL은 출처 메타데이터로만 기록하고 자동으로 열지 마세요.
 세탁: ...
 ```
 
-전역 Codex 설정에 기존 marketplace 문제가 있으면, 로컬 검증은 임시 `CODEX_HOME`에서 수행할 수 있습니다. 실제 S6 검증 절차와 결과는 `docs/s6-codex-cli-report.md`에 기록했습니다.
+전역 Codex 설정에 기존 marketplace 문제가 있으면, 로컬 검증은 임시 `CODEX_HOME`에서 수행할 수 있습니다. 실제 S6 검증 절차와 결과는 `docs/reports/s6-codex-cli-report.md`에 기록했습니다.
 
 ## 검증 명령
 
@@ -145,7 +145,7 @@ python src\skills\product-agentizer\scripts\validate.py <codex-output.json> --pr
 - S7.5 dedup 검증은 합성 20/20, Codex subset 4/4, 실제 공개 snippet 5/5 모두 통과했고 cross-category high-confidence false duplicate는 0건
 - S7.5 실제 공개 상품 snippet 10건은 actual schema-valid 100%(10/10), 자동 fetch 0건, 법적 적합/부적합 판정 0건으로 확인
 
-이 수치는 무신사 전체 상품 카탈로그 성능이 아니라, 합성 fixture, 보존된 Codex actual output, 짧은 공개 snippet sanity check로 확인한 MVP 검증 결과입니다. 상세 재현 절차와 원본 결과는 `docs/s7-expanded-validation-report.md`와 `docs/s7-expanded-validation-results.json`에 보관했습니다.
+이 수치는 무신사 전체 상품 카탈로그 성능이 아니라, 합성 fixture, 보존된 Codex actual output, 짧은 공개 snippet sanity check로 확인한 MVP 검증 결과입니다. 상세 재현 절차와 원본 결과는 `docs/reports/s7-expanded-validation-report.md`와 `docs/reports/s7-expanded-validation-results.json`에 보관했습니다.
 
 ## 질문 5문항 답변
 

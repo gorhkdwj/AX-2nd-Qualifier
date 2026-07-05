@@ -10,6 +10,43 @@
 
 ---
 
+### W-029 · docs 보고서 폴더 분리
+**요청**
+- `docs/` 안에서 plan과 report가 섞여 보기 어려우므로, report 하위 폴더를 만들어 문서를 나누는 방안 검토 및 적용
+
+**수행 작업**
+- `docs/reports/` 폴더 신설
+- S5/S6/S7.5 검증 보고서와 S7.5 결과 JSON을 `docs/reports/`로 이동
+- `docs/reports/README.md` 작성: 보고서 폴더의 역할, 포함 문서, 보관 원칙 정리
+- 루트 `README.md`, `docs/README.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`, `tools/run_expanded_validation.py`의 보고서 경로 갱신
+- `python tools\run_expanded_validation.py`를 새 결과 경로 기준으로 재실행
+- 문서 구조 변경 결정을 `Decisionlog.md` D-016으로 기록
+- 경로 일괄 치환 중 발생한 `docs/reports/reports/...` 중복 경로 문제를 `Troubleshootinglog.md` T-005로 기록
+
+**변경 파일**
+- 이동: `docs/s5-evaluation-report.md` → `docs/reports/s5-evaluation-report.md`
+- 이동: `docs/s6-codex-cli-report.md` → `docs/reports/s6-codex-cli-report.md`
+- 이동: `docs/s7-expanded-validation-report.md` → `docs/reports/s7-expanded-validation-report.md`
+- 이동: `docs/s7-expanded-validation-results.json` → `docs/reports/s7-expanded-validation-results.json`
+- 생성: `docs/reports/README.md`
+- 수정: `README.md`, `docs/README.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`, `tools/run_expanded_validation.py`
+- 수정: `Decisionlog.md`, `Troubleshootinglog.md`, `Worklog.md`
+
+**검증**
+- 통과: `python tools\run_expanded_validation.py` 결과 `all_commands_passed: true`
+- 통과: 활성 문서와 스크립트 기준으로 이전 보고서 경로와 중복 경로 잔존 여부 `rg` 확인
+- 통과: `git diff --check`
+- 통과: 비밀정보 패턴 검색 0건
+
+**판단 근거**
+- `docs/` 루트는 현재 작업 기준 문서 중심으로 유지하고, 완료된 검증·실행 결과는 `docs/reports/`로 분리하는 편이 읽는 사람이 목적별로 찾기 쉽다.
+- `tests/fixtures/`는 검증 실행 재료를 보관하는 위치로 두고, 사람이 읽는 보고서는 `docs/reports/`에 두는 것이 역할 구분에 맞다.
+
+**결과**
+- 완료: 보고서 폴더 분리 및 경로 갱신 완료
+
+---
+
 ### W-028 · S7.5 확장 검증 및 재현성 보존 구현
 **요청**
 - S8 패키징 전에 합성 더미 100건, Codex 실행 subset 20건, 실제 공개 샘플 10건으로 확장 검증을 수행하고, 입력·expected·actual·평가 결과·명령·환경·hash를 보존하는 계획을 구현
@@ -19,14 +56,14 @@
 - `tools/run_expanded_validation.py` 작성: schema 검증, attribute precision/recall, dedup accuracy, cross-category false duplicate, 실행 환경, 주요 파일 SHA-256을 결과 JSON으로 보존
 - Codex CLI로 subset 20건과 real sanity 10건을 실제 변환해 actual JSON으로 저장
 - `tests/evaluate_product_agentizer.py`가 custom fixture 경로와 Windows UTF-8 출력에 안정적으로 동작하도록 보완
-- `docs/s7-expanded-validation-report.md`와 `docs/s7-expanded-validation-results.json` 생성
+- `docs/reports/s7-expanded-validation-report.md`와 `docs/reports/s7-expanded-validation-results.json` 생성
 - 루트 `README.md`, `docs/README.md`, `docs/validation-plan.md`, `docs/submission-questions.md`의 검증 결과와 재현성 설명 갱신
 - 확장 검증 구현 중 실제 발생한 fixture·평가 래퍼 문제를 `Troubleshootinglog.md` T-004로 기록
 
 **변경 파일**
 - 생성: `tools/generate_expanded_validation_fixtures.py`, `tools/run_expanded_validation.py`
 - 생성: `tests/fixtures/expanded_dummy/*`, `tests/fixtures/codex_subset/*`, `tests/fixtures/real_sanity/*`
-- 생성: `docs/s7-expanded-validation-report.md`, `docs/s7-expanded-validation-results.json`
+- 생성: `docs/reports/s7-expanded-validation-report.md`, `docs/reports/s7-expanded-validation-results.json`
 - 수정: `tests/evaluate_product_agentizer.py`
 - 수정: `README.md`, `docs/README.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`, `docs/submission-questions.md`
 - 수정: `Decisionlog.md`, `Troubleshootinglog.md`, `Worklog.md`
@@ -162,14 +199,14 @@
 - 전역 환경에서 `codex exec` smoke test 성공 확인
 - `outer_down_vest` 더미 입력을 Codex CLI로 구조화 JSON 변환하고 `validate.py`로 schema-valid 확인
 - 구조화 JSON을 기반으로 겨울 여행용 레이어드 아우터 질의 설명 시연
-- `docs/s6-codex-cli-report.md` 작성
+- `docs/reports/s6-codex-cli-report.md` 작성
 - 전역 marketplace, `--output-schema`, PowerShell 한글 stdin 문제를 `Troubleshootinglog.md` T-001로 기록
 - 로컬 marketplace 검증 방식을 `Decisionlog.md` D-013으로 기록
 - README, docs README, validation plan 현재 상태 갱신
 
 **변경 파일**
 - 생성: `.agents/plugins/marketplace.json`
-- 생성: `docs/s6-codex-cli-report.md`
+- 생성: `docs/reports/s6-codex-cli-report.md`
 - 수정: `README.md`, `docs/README.md`, `docs/validation-plan.md`
 - 수정: `Decisionlog.md`, `Troubleshootinglog.md`, `Worklog.md`
 
@@ -201,13 +238,13 @@
 - S5 평가 결과를 재집계해 100% 미달 필드와 케이스별 false positive/false negative 확인
 - `SKILL.md`에 복합 소재 분해, 구체 색상 alias 우선, 복합 계절 표현, TPO 단서, size_info 누락 방지 체크리스트 추가
 - `taxonomy.json`에 `린넨 터치`, `레이온 블렌드`, `봄여름`, `가을겨울`, `포멀한`, `여행용`, `이너 레이어드` alias 보강
-- `docs/s5-evaluation-report.md`에 원인 분석과 보완 조치 기록
+- `docs/reports/s5-evaluation-report.md`에 원인 분석과 보완 조치 기록
 - S5 baseline 예측 fixture는 평가 harness의 차이 감지용으로 유지
 
 **변경 파일**
 - 수정: `src/skills/product-agentizer/SKILL.md`
 - 수정: `src/skills/product-agentizer/references/taxonomy.json`
-- 수정: `docs/s5-evaluation-report.md`
+- 수정: `docs/reports/s5-evaluation-report.md`
 - 수정: `Worklog.md`
 
 **검증**
@@ -240,13 +277,13 @@
 - `tests/fixtures/evaluation/predicted_products.json` 작성: 평가 harness 검증용 예측 JSON 5건
 - `tests/fixtures/evaluation/duplicate_labels.json` 작성: 중복 1쌍, 비중복 9쌍 라벨
 - `tests/evaluate_product_agentizer.py` 작성: schema 검증, 속성별 precision/recall, dedup 정확도 산출
-- `docs/s5-evaluation-report.md` 작성: S5 실행 명령, 결과, 차이 사례, 해석 기록
+- `docs/reports/s5-evaluation-report.md` 작성: S5 실행 명령, 결과, 차이 사례, 해석 기록
 - `docs/validation-plan.md`, `docs/README.md`, 루트 `README.md` 현재 상태와 검증 명령 갱신
 
 **변경 파일**
 - 생성: `tests/evaluate_product_agentizer.py`
 - 생성: `tests/fixtures/evaluation/source_inputs.json`, `expected_products.json`, `predicted_products.json`, `duplicate_labels.json`
-- 생성: `docs/s5-evaluation-report.md`
+- 생성: `docs/reports/s5-evaluation-report.md`
 - 수정: `README.md`, `docs/README.md`, `docs/validation-plan.md`, `Worklog.md`
 
 **검증**

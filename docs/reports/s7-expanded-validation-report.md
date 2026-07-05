@@ -2,7 +2,7 @@
 
 ## 요약
 - 실행일: 2026-07-05 KST
-- 결과 스냅샷: `docs/s7-expanded-validation-results.json`
+- 결과 스냅샷: `docs/reports/s7-expanded-validation-results.json`
 - 목적: S8 패키징 전에 합성 더미, 실제 Codex 출력, 짧은 공개 상품 snippet 기반 sanity check를 같은 입력·명령·결과로 다시 추적할 수 있게 보존
 - 결론: 패키징 전 필수 acceptance gate를 통과했다. 실제 공개 샘플 10건은 전체 성능 벤치마크가 아니라 자동 fetch 없이 짧은 공개 snippet으로 수행한 현실성 점검이다.
 
@@ -12,7 +12,7 @@
 | `tests/fixtures/expanded_dummy/` | 합성 입력 100건, expected JSON, reference actual JSON, duplicate labels |
 | `tests/fixtures/codex_subset/` | Codex 실행 subset 20건, prompt, prompt template, expected JSON, actual JSON, duplicate labels |
 | `tests/fixtures/real_sanity/` | 공개 상품 snippet 10건, URL, 확인일, expected JSON, actual JSON, duplicate labels |
-| `docs/s7-expanded-validation-results.json` | 실행 환경, 명령, 평가 결과, dedup 교차 카테고리 점검, 주요 파일 SHA-256 |
+| `docs/reports/s7-expanded-validation-results.json` | 실행 환경, 명령, 평가 결과, dedup 교차 카테고리 점검, 주요 파일 SHA-256 |
 | `tools/generate_expanded_validation_fixtures.py` | 확장 fixture 재생성 스크립트 |
 | `tools/run_expanded_validation.py` | 재현성 검증 실행 및 결과 스냅샷 생성 스크립트 |
 
@@ -20,7 +20,7 @@
 - Python: `3.12.4 | packaged by Anaconda, Inc.`
 - Platform: `Windows-11-10.0.26200-SP0`
 - Codex CLI: `codex-cli 0.142.5`
-- 결과 생성 시각: `2026-07-05T07:03:44.030925+00:00`
+- 결과 생성 시각: `2026-07-05T09:04:19.717276+00:00`
 
 ## 재실행 명령
 확장 fixture는 아래 명령으로 재생성한다.
