@@ -10,6 +10,34 @@
 
 ---
 
+### T-009 · S7.7 Codex subset 대표성·blind 실행성 문제
+**발생 상황**
+- S7.7 실제 Codex CLI 검증을 20건 smoke부터 진행하려고 기존 `full_page_codex_subset` 구성을 확인했다.
+
+**증상**
+- 기존 50건 subset이 전체 fixture의 앞쪽 50건을 그대로 사용해 아우터 중심으로 치우쳐 있었다.
+- 첫 Codex smoke 실행은 repo 루트 read-only에서 수행되어, 모델이 원하면 `tests/fixtures/.../expected_products.json`을 읽을 수 있는 상태였다.
+- 첫 격리 workspace 실행 후 micro precision 0.8629, micro recall 0.9149가 나왔고, 주요 차이는 `size_info`, `tpo_tags`, `materials.part`, `quality.missing_fields`에서 발생했다.
+
+**확인된 원인**
+- subset 생성 로직이 대표성 기준 없이 `sources[:subset_size]`를 사용했다.
+- repo 루트 실행은 expected fixture 접근 가능성을 차단하지 못해 blind extraction 검증 요건과 충돌했다.
+- 일부 expected 라벨이 입력 텍스트 근거보다 강했다. 예를 들어 텍스트에는 `출근룩과 포멀`만 있는데 expected에 `layering`을 넣거나, `사이즈 옵션: M, L, XL`을 하나의 문자열로만 라벨링했다.
+- 소재 부위가 명시되지 않은 표현을 `shell`로 라벨링한 케이스가 있어 Codex의 `unknown` 판단과 충돌했다.
+
+**조치**
+- `full_page_codex_subset` 50건과 `full_page_codex_smoke20` 20건을 category, density, detail_type, duplicate pair를 고려해 대표 선별하도록 생성기를 수정했다.
+- `tools/run_full_page_codex_smoke20_cli.py`가 `out/full_page_codex_smoke20_workspace`에 skill과 reference만 복사한 격리 workspace에서 Codex CLI를 실행하도록 변경했다.
+- expected 라벨을 입력 근거 기준으로 보정했다. 사이즈 옵션은 개별 값으로 비교하고, 텍스트에 없는 TPO는 제거하며, 부위 미상 소재는 `part: unknown`과 `material_part` missing으로 기록했다.
+- 보완 후 `python tools\run_full_page_dummy_validation.py`를 재실행해 smoke20 schema-valid 20/20, micro precision/recall 100.00%, dedup accuracy 100.00%를 확인했다.
+
+**재발 방지**
+- 실제 Codex 성능 검증은 expected/actual fixture가 없는 격리 workspace에서 수행한다.
+- subset 생성 시 단순 앞부분 slicing을 금지하고 category, density, detail_type, duplicate pair coverage를 확인한다.
+- 낮은 지표가 나오면 먼저 fixture 라벨이 입력 텍스트 근거와 일치하는지 확인하고, 수치를 맞추기 위한 완화가 아니라 기준 계약 위반 여부를 분류한다.
+
+---
+
 ### T-008 · PowerShell 환경에서 Bash heredoc 명령 사용
 **발생 상황**
 - S7.7 결과 JSON의 acceptance summary를 빠르게 출력하려고 Python one-liner를 실행했다.

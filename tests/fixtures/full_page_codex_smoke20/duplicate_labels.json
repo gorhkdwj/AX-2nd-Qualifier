@@ -6,18 +6,8 @@
       "expected_decision": "duplicate"
     },
     {
-      "left_id": "full_outer_044",
-      "right_id": "full_outer_045",
-      "expected_decision": "duplicate"
-    },
-    {
       "left_id": "full_top_164",
       "right_id": "full_top_165",
-      "expected_decision": "duplicate"
-    },
-    {
-      "left_id": "full_top_194",
-      "right_id": "full_top_195",
       "expected_decision": "duplicate"
     },
     {

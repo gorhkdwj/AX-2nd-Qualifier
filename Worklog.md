@@ -10,6 +10,56 @@
 
 ---
 
+### W-039 · S7.7 Codex smoke20 실제 실행과 라벨 기준 보정
+**요청**
+- 추천한 다음 태스크대로 S7.7 실제 Codex CLI 검증을 20건 smoke부터 진행
+
+**수행 작업**
+- 기존 `full_page_codex_subset`이 앞쪽 50건 중심으로 아우터에 치우친 문제 확인
+- 50건 subset과 20건 smoke subset을 category, density, detail_type, duplicate pair 기준 대표 선별로 재구성
+- `tools/run_full_page_codex_smoke20_cli.py` 추가
+- Codex CLI를 repo 루트가 아니라 `out/full_page_codex_smoke20_workspace` 격리 workspace에서 실행하도록 구성
+- 격리 workspace에는 `SKILL.md`, `schema.json`, `taxonomy.json`만 복사하고 expected/actual fixture는 넣지 않음
+- 20건 실제 Codex CLI actual을 `tests/fixtures/full_page_codex_smoke20/actual_products.json`에 저장
+- 첫 격리 실행 결과의 낮은 지표 원인을 분석하고, 입력 근거보다 강했던 fixture 라벨을 보정
+- S7.7 검증 스크립트와 보고서에 smoke20 실제 실행 지표를 추가
+
+**변경 파일**
+- 수정: `tools/generate_full_page_dummy_fixtures.py`
+- 수정: `tools/run_full_page_dummy_validation.py`
+- 생성: `tools/run_full_page_codex_smoke20_cli.py`
+- 생성/수정: `tests/fixtures/full_page_codex_smoke20/`
+- 수정: `tests/fixtures/full_page_codex_subset/`
+- 수정: `tests/fixtures/full_page_dummy/case_metadata.json`
+- 수정: `docs/reports/s7-7-full-page-dummy-validation-report.md`
+- 수정: `docs/reports/s7-7-full-page-dummy-validation-results.json`
+- 수정: `docs/validation-plan.md`
+- 수정: `docs/full-page-dummy-validation-plan.md`
+- 수정: `Decisionlog.md`
+- 수정: `Troubleshootinglog.md`
+- 수정: `Worklog.md`
+
+**검증**
+- `codex --version`: `codex-cli 0.142.5`
+- `python -m py_compile tools\generate_full_page_dummy_fixtures.py tools\run_full_page_dummy_validation.py tools\run_full_page_codex_smoke20_cli.py` 통과
+- `python tools\generate_full_page_dummy_fixtures.py` 통과
+- `python tools\run_full_page_codex_smoke20_cli.py` 통과
+- `python src\skills\product-agentizer\scripts\validate.py tests\fixtures\full_page_codex_smoke20\actual_products.json --pretty` 결과: valid true, checked 20, errors 0
+- `python tools\run_full_page_dummy_validation.py` 결과: all_commands_passed true
+- smoke20 최종 결과: schema-valid 20/20, micro precision 100.00%, micro recall 100.00%, detail_type precision/recall 100.00%, dedup accuracy 100.00%
+- 자동 fetch 0건, 실제 상품 원문 저장 0건, 법적 적합/부적합 판정 0건
+
+**판단 근거**
+- 실제 Codex 성능 검증은 expected fixture에 접근할 수 없는 환경에서 수행해야 blind extraction 검증으로 해석할 수 있다.
+- 첫 격리 실행의 낮은 수치는 모델 실패보다 fixture 라벨 기준 불일치가 주된 원인이었으므로, expected를 완화하지 않고 입력 텍스트 근거에 맞게 정정했다.
+
+**결과**
+- 완료: 20건 smoke 실제 Codex CLI 검증 완료
+- 기록: Decisionlog D-021, Troubleshootinglog T-009
+- 남은 작업: 50건 representative `full_page_codex_subset` 실제 Codex CLI 실행 여부 결정 및 수행
+
+---
+
 ### W-038 · S7.7 실제 페이지형 합성 더미 fixture 생성·기준 검증
 **요청**
 - 새로운 더미데이터 설계 계획에 따라 다음 작업 진행

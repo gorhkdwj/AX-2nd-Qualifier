@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_ROOT = ROOT / "tests" / "fixtures"
 FULL_DIR = FIXTURE_ROOT / "full_page_dummy"
 SUBSET_DIR = FIXTURE_ROOT / "full_page_codex_subset"
+SMOKE_DIR = FIXTURE_ROOT / "full_page_codex_smoke20"
 SYNTHETIC_URL_PREFIX = "https://example.com/musinsa-full-page-dummy/"
 
 BRANDS = ["DUMMY STANDARD", "AX TEST LABEL", "SYNTHETIC WORKS", "REPRO SAMPLE"]
@@ -36,6 +37,22 @@ DENSITY_SEQUENCE = [
 def write_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def write_reference_actual(path: Path, metadata_path: Path, data: Any) -> None:
+    metadata = {}
+    if metadata_path.exists():
+        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+    if metadata.get("actual_mode") == "codex_cli_actual":
+        return
+    write_json(path, data)
+    write_json(
+        metadata_path,
+        {
+            "actual_mode": "deterministic_reference_actual_pending_cli_run",
+            "note": "Generator writes reference actual until a real Codex CLI actual is saved.",
+        },
+    )
 
 
 def unique(values: list[str]) -> list[str]:
@@ -120,6 +137,12 @@ def material_rows_for(
 
     if density == "medium":
         rows, text, missing, ambiguous = base.material_pattern(index + (0 if category == "outer" else 5))
+        rows = copy.deepcopy(rows)
+        for row in rows:
+            if row["name"] in {"recycled_fiber", "faux_leather"} and row["part"] == "shell":
+                row["part"] = "unknown"
+        if any(row["part"] == "unknown" for row in rows):
+            missing = unique([*missing, "material_part"])
         return rows, f"소재: {text}.", missing, ambiguous
 
     if detail_type in {"short_padding_heavy_outer", "long_padding_heavy_outer", "lightweight_padding_vest"}:
@@ -182,13 +205,14 @@ def material_rows_for(
 def season_tpo_for(index: int, category: str, density: str) -> tuple[list[str], str, list[str], str]:
     if density == "sparse":
         return [], "", [], ""
-    seasons, season_text, tpo_tags, tpo_text = base.season_tpo(index, category)
-    if density == "full":
-        if category == "outer":
-            tpo_tags = unique([*tpo_tags, "commute", "layering"])
-        else:
-            tpo_tags = unique([*tpo_tags, "daily", "casual"])
-    return seasons, season_text, tpo_tags, tpo_text
+    variants = [
+        (["spring", "summer"], "봄여름", ["daily", "casual"], "데일리와 캐주얼"),
+        (["fall", "winter"], "가을겨울", ["layering", "travel"], "레이어드와 여행용"),
+        (["spring", "fall"], "간절기", ["commute", "formal"], "출근룩과 포멀"),
+        (["summer"], "여름", ["daily", "street"], "데일리와 스트리트"),
+        (["winter"], "겨울", ["outdoor", "travel"], "아웃도어와 여행"),
+    ]
+    return variants[index % len(variants)]
 
 
 def care_for(index: int, density: str) -> tuple[list[str], str, list[str]]:
@@ -208,7 +232,7 @@ def size_for(index: int, category: str, density: str) -> tuple[list[str], str, l
         return [], "", ["size_info"]
     if density == "medium":
         sizes = "S, M, L" if category == "top" else "M, L, XL"
-        return [sizes], f"사이즈 옵션: {sizes}", []
+        return sizes.split(", "), f"사이즈 옵션: {sizes}", []
 
     first = 64 + (index % 10)
     second = first + 2
@@ -397,6 +421,8 @@ def make_case(index: int, count: int) -> tuple[dict[str, Any], dict[str, Any], d
     care, care_text, care_missing = care_for(index, density)
     size_info, size_text, size_missing = size_for(index, category, density)
     missing_fields = unique([*material_missing, *care_missing, *size_missing])
+    if any(item["part"] == "unknown" for item in materials):
+        missing_fields = unique([*missing_fields, "material_part"])
     ambiguous_fields = unique(material_ambiguous)
 
     text = build_product_text(
@@ -434,6 +460,7 @@ def make_case(index: int, count: int) -> tuple[dict[str, Any], dict[str, Any], d
     )
     metadata = {
         "product_id": product_id,
+        "sequence_index": index,
         "category": category,
         "subcategory": subcategory,
         "detail_type": detail_type,
@@ -469,8 +496,118 @@ def make_duplicate(base_source: dict[str, Any], base_product: dict[str, Any], ba
     structured["agent_descriptor"]["search_summary"] = structured["agent_descriptor"]["search_summary"].replace(old_title, new_title)
 
     metadata["product_id"] = product_id
+    metadata["sequence_index"] = new_index
     metadata["duplicate_of"] = base_source["product_id"]
     return source, product, metadata
+
+
+def filtered_payloads(
+    selected_ids: list[str],
+    sources: list[dict[str, Any]],
+    products: list[dict[str, Any]],
+    labels: dict[str, Any],
+) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+    selected = set(selected_ids)
+    source_by_id = {item["product_id"]: item for item in sources}
+    product_by_id = {item["product_id"]: item for item in products}
+    return (
+        {"cases": [source_by_id[product_id] for product_id in selected_ids]},
+        {"products": [product_by_id[product_id] for product_id in selected_ids]},
+        {
+            "pairs": [
+                item
+                for item in labels["pairs"]
+                if item["left_id"] in selected and item["right_id"] in selected
+            ]
+        },
+    )
+
+
+def select_representative_ids(
+    metadata_items: list[dict[str, Any]],
+    duplicate_pairs: list[tuple[str, str]],
+    target_size: int,
+) -> list[str]:
+    if target_size % 2 != 0:
+        raise ValueError("target_size must be even")
+
+    target_by_category = {"outer": target_size // 2, "top": target_size // 2}
+    selected: list[str] = []
+    selected_set: set[str] = set()
+    count_by_category = {"outer": 0, "top": 0}
+    metadata_by_id = {item["product_id"]: item for item in metadata_items}
+
+    def add(product_id: str) -> bool:
+        if product_id in selected_set:
+            return False
+        item = metadata_by_id[product_id]
+        category = item["category"]
+        if count_by_category[category] >= target_by_category[category]:
+            return False
+        selected.append(product_id)
+        selected_set.add(product_id)
+        count_by_category[category] += 1
+        return True
+
+    pairs_by_category: dict[str, list[tuple[str, str]]] = {"outer": [], "top": []}
+    for left_id, right_id in duplicate_pairs:
+        pairs_by_category[metadata_by_id[left_id]["category"]].append((left_id, right_id))
+
+    forced_pairs_per_category = 1 if target_size <= 20 else 2
+    for pairs in pairs_by_category.values():
+        for left_id, right_id in pairs[:forced_pairs_per_category]:
+            add(left_id)
+            add(right_id)
+
+    for category in ("outer", "top"):
+        for density in ("sparse", "medium", "full", "noisy_ambiguous"):
+            if count_by_category[category] >= target_by_category[category]:
+                break
+            candidates = [
+                item
+                for item in metadata_items
+                if item["category"] == category
+                and item["information_density"] == density
+                and item["product_id"] not in selected_set
+            ]
+            if candidates:
+                add(candidates[0]["product_id"])
+
+    sequence_by_category = {
+        "outer": [detail_type for _, detail_type in base.OUTER_DETAIL_TYPE_SEQUENCE],
+        "top": [detail_type for _, detail_type in base.TOP_DETAIL_TYPE_SEQUENCE],
+    }
+    for category, detail_sequence in sequence_by_category.items():
+        for detail_type in detail_sequence:
+            if count_by_category[category] >= target_by_category[category]:
+                break
+            candidates = [
+                item
+                for item in metadata_items
+                if item["category"] == category
+                and item["detail_type"] == detail_type
+                and item["product_id"] not in selected_set
+            ]
+            if candidates:
+                add(candidates[0]["product_id"])
+
+    density_order = ["sparse", "medium", "full", "noisy_ambiguous"]
+    while len(selected) < target_size:
+        progressed = False
+        for density in density_order:
+            for item in metadata_items:
+                if item["information_density"] != density:
+                    continue
+                if add(item["product_id"]):
+                    progressed = True
+                    break
+        if not progressed:
+            break
+
+    ordered = sorted(selected, key=lambda product_id: metadata_by_id[product_id]["sequence_index"])
+    if len(ordered) != target_size:
+        raise ValueError(f"selected {len(ordered)} cases, expected {target_size}")
+    return ordered
 
 
 def build_dataset(
@@ -534,16 +671,8 @@ def build_dataset(
         ]
     }
 
-    subset_ids = {item["product_id"] for item in sources[:subset_size]}
-    subset_sources = {"cases": [item for item in sources if item["product_id"] in subset_ids]}
-    subset_expected = {"products": [item for item in products if item["product_id"] in subset_ids]}
-    subset_labels = {
-        "pairs": [
-            item
-            for item in labels["pairs"]
-            if item["left_id"] in subset_ids and item["right_id"] in subset_ids
-        ]
-    }
+    subset_ids = select_representative_ids(metadata_items, duplicate_pairs, subset_size)
+    subset_sources, subset_expected, subset_labels = filtered_payloads(subset_ids, sources, products, labels)
 
     return (
         {"cases": sources},
@@ -601,7 +730,7 @@ def main() -> int:
 
     write_json(SUBSET_DIR / "source_inputs.json", subset_sources)
     write_json(SUBSET_DIR / "expected_products.json", subset_expected)
-    write_json(SUBSET_DIR / "actual_products.json", subset_expected)
+    write_reference_actual(SUBSET_DIR / "actual_products.json", SUBSET_DIR / "actual_metadata.json", subset_expected)
     write_json(SUBSET_DIR / "duplicate_labels.json", subset_labels)
     write_prompt(SUBSET_DIR / "prompt.md", "Full-page synthetic Codex subset conversion prompt", subset_sources)
     write_prompt(
@@ -609,7 +738,36 @@ def main() -> int:
         "Full-page synthetic Codex subset conversion prompt template",
         {"cases": ["<replace with source_inputs.json cases>"]},
     )
-    print(json.dumps({"full_page_dummy": args.count, "full_page_codex_subset": args.subset_size}, ensure_ascii=False))
+
+    smoke_duplicate_pairs = [
+        (item["left_id"], item["right_id"])
+        for item in labels["pairs"]
+        if item["expected_decision"] == "duplicate"
+    ]
+    smoke_ids = select_representative_ids(metadata["cases"], smoke_duplicate_pairs, 20)
+    smoke_sources, smoke_expected, smoke_labels = filtered_payloads(
+        smoke_ids, sources["cases"], expected["products"], labels
+    )
+    write_json(SMOKE_DIR / "source_inputs.json", smoke_sources)
+    write_json(SMOKE_DIR / "expected_products.json", smoke_expected)
+    write_reference_actual(SMOKE_DIR / "actual_products.json", SMOKE_DIR / "actual_metadata.json", smoke_expected)
+    write_json(SMOKE_DIR / "duplicate_labels.json", smoke_labels)
+    write_prompt(SMOKE_DIR / "prompt.md", "Full-page synthetic Codex smoke20 conversion prompt", smoke_sources)
+    write_prompt(
+        SMOKE_DIR / "prompt_template.md",
+        "Full-page synthetic Codex smoke20 conversion prompt template",
+        {"cases": ["<replace with source_inputs.json cases>"]},
+    )
+    print(
+        json.dumps(
+            {
+                "full_page_dummy": args.count,
+                "full_page_codex_subset": args.subset_size,
+                "full_page_codex_smoke20": 20,
+            },
+            ensure_ascii=False,
+        )
+    )
     return 0
 
 

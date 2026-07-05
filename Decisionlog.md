@@ -10,6 +10,38 @@
 
 ---
 
+### D-021 · S7.7 실제 Codex smoke20 격리 실행과 라벨 기준 보정
+**상황**
+- 20건 실제 Codex CLI smoke 검증을 시작하면서 기존 50건 subset이 앞쪽 50건 중심이라 아우터에 치우쳐 있음을 확인했다.
+- 또한 repo 루트 read-only 실행은 expected fixture가 같은 작업 루트에 있어 blind extraction 검증으로 보기 어렵다는 문제가 있었다.
+- 첫 격리 실행 결과는 schema-valid였지만 micro precision 0.8629, micro recall 0.9149로 나왔고, 차이는 주로 입력 근거보다 공격적으로 작성된 expected 라벨에서 발생했다.
+
+**검토한 선택지**
+- 기존 50건 subset을 그대로 유지하고 20건만 실행한다.
+- 20건 smoke와 50건 subset을 대표 선별 방식으로 재구성한다.
+- repo 루트에서 실행하되 결과만 기록한다.
+- expected/actual fixture가 없는 격리 workspace에 skill과 reference만 복사해 실행한다.
+
+**결정**
+- `full_page_codex_subset` 50건과 `full_page_codex_smoke20` 20건을 category, density, detail_type, duplicate pair를 고려한 대표 선별 방식으로 재구성한다.
+- 실제 Codex CLI smoke20은 `out/full_page_codex_smoke20_workspace`에 skill과 reference만 복사한 격리 workspace에서 실행한다.
+- 입력 텍스트에 없는 TPO를 expected에 넣지 않고, 사이즈 옵션은 개별 사이즈 토큰으로 비교하며, 소재 부위가 명시되지 않은 경우 `part: unknown`과 `quality.missing_fields: material_part`로 라벨링한다.
+
+**근거**
+- expected를 볼 수 있는 실행 환경에서는 실제 추출 성능을 평가했다고 보기 어렵다.
+- 검증 라벨은 수치를 맞추기 위해 완화하면 안 되지만, 입력 텍스트 근거보다 강한 라벨을 부여하면 오히려 실제 성능을 부당하게 낮게 평가한다.
+- 20건 smoke는 50건 전체 실행 전 비용과 리스크를 줄이는 선행 검증이다.
+
+**영향**
+- smoke20 실제 Codex CLI 결과는 schema-valid 20/20, micro precision/recall 100.00%, detail_type precision/recall 100.00%, dedup accuracy 100.00%로 기록됐다.
+- 50건 full subset은 representative reference actual 상태로 남아 있으며, 실제 CLI 실행은 다음 단계로 남는다.
+- S7.7 보고서에는 보완 전후 수치와 원인을 함께 남긴다.
+
+**재검토 조건**
+- 50건 전체 Codex CLI 실행에서 같은 유형의 라벨 기준 충돌이나 실제 추출 실패가 다시 나타나는 경우.
+
+---
+
 ### D-020 · S7.7 Codex subset actual 실행 분리
 **상황**
 - S7.7 실제 페이지형 합성 더미 검증을 구현하면서 `full_page_dummy` 300건과 `full_page_codex_subset` 50건을 생성할 수 있게 됐다.

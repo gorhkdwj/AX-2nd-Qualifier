@@ -17,6 +17,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 FULL_DIR = ROOT / "tests" / "fixtures" / "full_page_dummy"
 SUBSET_DIR = ROOT / "tests" / "fixtures" / "full_page_codex_subset"
+SMOKE_DIR = ROOT / "tests" / "fixtures" / "full_page_codex_smoke20"
 RESULT_PATH = ROOT / "docs" / "reports" / "s7-7-full-page-dummy-validation-results.json"
 REPORT_PATH = ROOT / "docs" / "reports" / "s7-7-full-page-dummy-validation-report.md"
 KST = timezone(timedelta(hours=9))
@@ -82,6 +83,31 @@ COMMANDS: list[dict[str, Any]] = [
         ],
         "expect_exit_codes": [0],
     },
+    {
+        "id": "full_page_codex_smoke20_actual_schema",
+        "argv": [
+            sys.executable,
+            "src/skills/product-agentizer/scripts/validate.py",
+            "tests/fixtures/full_page_codex_smoke20/actual_products.json",
+        ],
+        "expect_exit_codes": [0],
+    },
+    {
+        "id": "full_page_codex_smoke20_eval",
+        "argv": [
+            sys.executable,
+            "tests/evaluate_product_agentizer.py",
+            "--inputs",
+            "tests/fixtures/full_page_codex_smoke20/source_inputs.json",
+            "--expected",
+            "tests/fixtures/full_page_codex_smoke20/expected_products.json",
+            "--actual",
+            "tests/fixtures/full_page_codex_smoke20/actual_products.json",
+            "--dedup-labels",
+            "tests/fixtures/full_page_codex_smoke20/duplicate_labels.json",
+        ],
+        "expect_exit_codes": [0],
+    },
 ]
 
 HASH_TARGETS = [
@@ -101,9 +127,17 @@ HASH_TARGETS = [
     "tests/fixtures/full_page_codex_subset/source_inputs.json",
     "tests/fixtures/full_page_codex_subset/expected_products.json",
     "tests/fixtures/full_page_codex_subset/actual_products.json",
+    "tests/fixtures/full_page_codex_subset/actual_metadata.json",
     "tests/fixtures/full_page_codex_subset/duplicate_labels.json",
     "tests/fixtures/full_page_codex_subset/prompt.md",
     "tests/fixtures/full_page_codex_subset/prompt_template.md",
+    "tests/fixtures/full_page_codex_smoke20/source_inputs.json",
+    "tests/fixtures/full_page_codex_smoke20/expected_products.json",
+    "tests/fixtures/full_page_codex_smoke20/actual_products.json",
+    "tests/fixtures/full_page_codex_smoke20/actual_metadata.json",
+    "tests/fixtures/full_page_codex_smoke20/duplicate_labels.json",
+    "tests/fixtures/full_page_codex_smoke20/prompt.md",
+    "tests/fixtures/full_page_codex_smoke20/prompt_template.md",
 ]
 
 
@@ -182,7 +216,8 @@ def density_summary() -> dict[str, Any]:
 def synthetic_source_check() -> dict[str, Any]:
     sources = load_json(FULL_DIR / "source_inputs.json").get("cases", [])
     subset_sources = load_json(SUBSET_DIR / "source_inputs.json").get("cases", [])
-    all_sources = [*sources, *subset_sources]
+    smoke_sources = load_json(SMOKE_DIR / "source_inputs.json").get("cases", []) if SMOKE_DIR.exists() else []
+    all_sources = [*sources, *subset_sources, *smoke_sources]
     non_synthetic_urls = [
         item.get("source_url")
         for item in all_sources
@@ -261,6 +296,11 @@ def command_by_id(commands: list[dict[str, Any]], command_id: str) -> dict[str, 
 def acceptance_summary(commands: list[dict[str, Any]], density: dict[str, Any], source_check: dict[str, Any], cross_category: dict[str, Any]) -> dict[str, Any]:
     selfcheck = command_by_id(commands, "full_page_selfcheck_eval")
     subset = command_by_id(commands, "full_page_codex_subset_eval")
+    smoke20 = command_by_id(commands, "full_page_codex_smoke20_eval")
+    smoke_metadata = {}
+    smoke_metadata_path = SMOKE_DIR / "actual_metadata.json"
+    if smoke_metadata_path.exists():
+        smoke_metadata = load_json(smoke_metadata_path)
     return {
         "full_page_expected_schema_valid": command_by_id(commands, "full_page_expected_schema")["passed"],
         "full_page_reference_actual_schema_valid": command_by_id(commands, "full_page_reference_actual_schema")["passed"],
@@ -273,6 +313,13 @@ def acceptance_summary(commands: list[dict[str, Any]], density: dict[str, Any], 
         "full_page_codex_subset_micro_precision": micro_value(subset, "precision"),
         "full_page_codex_subset_micro_recall": micro_value(subset, "recall"),
         "full_page_codex_subset_actual_mode": "deterministic_reference_actual_pending_cli_run",
+        "full_page_codex_smoke20_actual_schema_valid": command_by_id(commands, "full_page_codex_smoke20_actual_schema")["passed"],
+        "full_page_codex_smoke20_micro_precision": micro_value(smoke20, "precision"),
+        "full_page_codex_smoke20_micro_recall": micro_value(smoke20, "recall"),
+        "full_page_codex_smoke20_detail_type_precision": metric_value(smoke20, "detail_type", "precision"),
+        "full_page_codex_smoke20_detail_type_recall": metric_value(smoke20, "detail_type", "recall"),
+        "full_page_codex_smoke20_dedup_accuracy": dedup_accuracy(smoke20),
+        "full_page_codex_smoke20_actual_mode": smoke_metadata.get("actual_mode", "unknown"),
         "min_detail_type_coverage": density["min_detail_type_coverage"],
         "auto_fetch_count": source_check["auto_fetch_count"],
         "real_page_copy_count": source_check["real_page_copy_count"],
@@ -296,10 +343,13 @@ def write_report(result: dict[str, Any]) -> None:
         f"- 기준 KST 날짜: `{result['generated_for_kst_date']}`",
         f"- 전체 명령 통과: `{summary['all_commands_passed']}`",
         f"- Codex subset actual 모드: `{summary['full_page_codex_subset_actual_mode']}`",
+        f"- Codex smoke20 actual 모드: `{summary['full_page_codex_smoke20_actual_mode']}`",
         "",
         "## 데이터셋",
         "",
         f"- `full_page_dummy`: {density['total_cases']}건",
+        "- `full_page_codex_subset`: 50건, representative reference actual 보존 세트",
+        "- `full_page_codex_smoke20`: 20건, 실제 Codex CLI smoke 실행 세트",
         f"- 정보 밀도 분포: `{density['density_counts']}`",
         f"- 카테고리 분포: `{density['category_counts']}`",
         f"- detail_type 최소 커버리지: `{density['min_detail_type_coverage']}`",
@@ -318,6 +368,12 @@ def write_report(result: dict[str, Any]) -> None:
         f"| Codex subset actual schema-valid | {summary['full_page_codex_subset_actual_schema_valid']} |",
         f"| Codex subset micro precision | {summary['full_page_codex_subset_micro_precision']} |",
         f"| Codex subset micro recall | {summary['full_page_codex_subset_micro_recall']} |",
+        f"| Codex smoke20 actual schema-valid | {summary['full_page_codex_smoke20_actual_schema_valid']} |",
+        f"| Codex smoke20 micro precision | {summary['full_page_codex_smoke20_micro_precision']} |",
+        f"| Codex smoke20 micro recall | {summary['full_page_codex_smoke20_micro_recall']} |",
+        f"| Codex smoke20 detail_type precision | {summary['full_page_codex_smoke20_detail_type_precision']} |",
+        f"| Codex smoke20 detail_type recall | {summary['full_page_codex_smoke20_detail_type_recall']} |",
+        f"| Codex smoke20 dedup accuracy | {summary['full_page_codex_smoke20_dedup_accuracy']} |",
         f"| 자동 fetch | {summary['auto_fetch_count']} |",
         f"| 실제 상품 원문 저장 | {summary['real_page_copy_count']} |",
         f"| 법적 적합/부적합 판정 | {summary['legal_compliance_judgment_count']} |",
@@ -327,7 +383,15 @@ def write_report(result: dict[str, Any]) -> None:
         "",
         "- `full_page_dummy`의 `reference_actual_products.json`은 expected와 동일한 결정적 기준 출력이다. 따라서 이 self-check는 생성된 fixture, schema, evaluator, dedup label의 정합성을 확인하는 검증이며 blind extraction 성능으로 해석하지 않는다.",
         "- `full_page_codex_subset/actual_products.json`도 이번 단계에서는 실제 Codex CLI 실행 결과가 아니라 deterministic reference actual이다. 실제 Codex subset 실행은 다음 단계에서 같은 prompt를 사용해 덮어쓰고 본 보고서를 갱신해야 한다.",
+        "- `full_page_codex_smoke20/actual_products.json`은 20건 실제 Codex CLI smoke 실행 결과를 저장하는 경로다. actual mode가 `codex_cli_actual`이면 실제 실행 결과이고, `deterministic_reference_actual_pending_cli_run`이면 아직 기준 actual 상태다.",
         "- Sparse 입력은 세부 필드를 모두 맞히는 것이 목표가 아니라, 입력에 없는 소재 혼용률·관리법·사이즈 정보를 추정하지 않는지를 확인하기 위한 케이스다.",
+        "",
+        "## Smoke20 보완 전후",
+        "",
+        "- 첫 격리 workspace smoke20 실행은 schema-valid 20/20이었지만 micro precision 0.8629, micro recall 0.9149였다.",
+        "- 원인은 주로 fixture 라벨 기준 문제였다. `사이즈 옵션: M, L, XL`을 expected가 하나의 문자열로 보존했지만 Codex는 개별 사이즈로 분리했고, 입력 텍스트에 없는 `layering`, `daily`, `casual` TPO가 expected에 들어간 케이스가 있었다. 또한 소재 부위가 명시되지 않은 표현을 expected가 `shell`로 둔 케이스가 있었다.",
+        "- 보완은 expected 완화가 아니라 입력 근거 기준 정합성 수정으로 처리했다. 사이즈 옵션은 개별 값으로 비교하고, TPO는 텍스트에 있는 상황 단서만 라벨링하며, 부위 미상 소재는 `part: unknown`과 `quality.missing_fields: material_part`로 기록한다.",
+        f"- 보완 후 smoke20 micro precision은 {summary['full_page_codex_smoke20_micro_precision']}, micro recall은 {summary['full_page_codex_smoke20_micro_recall']}이다.",
         "",
         "## 실행 명령",
         "",
@@ -341,12 +405,13 @@ def write_report(result: dict[str, Any]) -> None:
             "",
             "```powershell",
             "python tools\\generate_full_page_dummy_fixtures.py",
+            "python tools\\run_full_page_codex_smoke20_cli.py",
             "python tools\\run_full_page_dummy_validation.py",
             "```",
             "",
             "## 미완료 항목",
             "",
-            "- 실제 Codex CLI로 `tests/fixtures/full_page_codex_subset/prompt.md`를 실행해 `actual_products.json`을 갱신하는 단계가 남아 있다.",
+            "- 20건 smoke 결과가 안정적이면 실제 Codex CLI로 `tests/fixtures/full_page_codex_subset/prompt.md` 50건 실행을 진행한다.",
         ]
     )
     REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")

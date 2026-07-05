@@ -387,4 +387,5 @@ S7.7은 다음 조건을 만족해야 완료로 본다.
 
 - `tools/generate_full_page_dummy_fixtures.py`로 `full_page_dummy` 300건과 `full_page_codex_subset` 50건을 생성한다.
 - `tools/run_full_page_dummy_validation.py`로 schema, evaluator, dedup, density coverage, synthetic source policy를 검증하고 `docs/reports/s7-7-full-page-dummy-validation-report.md`와 결과 JSON을 저장한다.
-- 현재 `full_page_codex_subset/actual_products.json`은 실제 Codex CLI 출력이 아니라 deterministic reference actual이다. 즉 생성된 fixture와 평가 절차의 재현성 검증은 완료됐지만, 실제 Codex CLI 기반 blind extraction 검증은 후속 단계로 남아 있다.
+- `full_page_codex_smoke20` 20건은 expected/actual fixture가 없는 격리 workspace에서 실제 Codex CLI로 실행해 actual JSON을 보존한다.
+- 현재 `full_page_codex_subset/actual_products.json` 50건은 실제 Codex CLI 출력이 아니라 deterministic reference actual이다. 즉 생성된 fixture와 평가 절차, 20건 smoke 실제 실행 검증은 완료됐지만, 50건 전체 subset의 실제 Codex CLI 기반 blind extraction 검증은 후속 단계로 남아 있다.

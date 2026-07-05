@@ -1,0 +1,4 @@
+{
+  "actual_mode": "deterministic_reference_actual_pending_cli_run",
+  "note": "Generator writes reference actual until a real Codex CLI actual is saved."
+}
