@@ -105,6 +105,8 @@
 }
 ```
 
+중복 감지 점수의 가중치와 `duplicate`/`possible_duplicate` 임계값은 실제 운영 데이터로 학습된 최종 수치가 아니라, 더미 fixture에서 동작을 확인하기 위한 설명 가능한 휴리스틱 baseline이다. 실제 운영 적용 시에는 사람이 라벨링한 상품쌍을 기준으로 precision, recall, false positive, false negative를 비교하며 가중치와 임계값을 재튜닝해야 한다.
+
 ## 주요 지표 정의
 - 속성 precision: 추출된 속성 중 정답 라벨과 일치한 속성의 비율.
 - 속성 recall: 정답 라벨 중 플러그인이 올바르게 추출한 속성의 비율.

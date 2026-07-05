@@ -787,6 +787,8 @@ python src\skills\product-agentizer\scripts\dedup.py tests\fixtures\dedup\sample
 
 두 상품 사이의 점수는 여러 속성의 가중합입니다.
 
+현재 가중치와 임계값은 실제 무신사 운영 데이터로 학습되거나 검증된 최종 운영 수치가 아닙니다. 이 값들은 구조화 상품 속성의 유사도를 설명 가능하게 합산하기 위한 **휴리스틱 baseline**입니다. 즉 상품 중복 판단에서 소재, 카테고리, 세부 형태, 색상, 제목 등이 상대적으로 중요하다는 도메인 직관을 수치로 둔 초기값입니다.
+
 | 속성 | 최대 가중치 |
 |---|---:|
 | category 일치 | 0.18 |
@@ -827,6 +829,26 @@ Jaccard similarity = 교집합 크기 / 합집합 크기
 | 0.55 미만 | `distinct` |
 
 기본 출력 필터 `min_score`는 0.45입니다. 즉 점수가 0.45보다 낮은 쌍은 결과 목록에 나오지 않을 수 있습니다. 평가할 때는 목록에 없으면 `distinct`로 취급합니다.
+
+실제 운영에 적용하려면 이 임계값도 고정값으로 취급하면 안 됩니다. 운영 데이터에서 사람이 라벨링한 상품쌍을 만든 뒤, 현재 점수로 `precision`, `recall`, false positive, false negative를 측정하면서 가중치와 임계값을 조정해야 합니다.
+
+예를 들어 오탐을 줄여야 하는 운영이라면 `duplicate` 임계값을 높이고, 사람이 검토할 후보를 넓게 뽑는 운영이라면 `possible_duplicate` 임계값을 낮출 수 있습니다. 자동 병합에 가까운 용도라면 precision을 매우 높게 요구해야 하고, 검토 큐를 만드는 용도라면 recall을 더 중시할 수 있습니다.
+
+운영 튜닝 흐름은 아래와 같습니다.
+
+```text
+상품쌍 데이터 수집
+  ↓
+사람이 duplicate / distinct 라벨링
+  ↓
+dedup feature와 점수 계산
+  ↓
+precision / recall / false positive / false negative 분석
+  ↓
+가중치와 threshold 조정
+  ↓
+재평가 후 운영 기준 확정
+```
 
 ### 12.3 출력 예시
 

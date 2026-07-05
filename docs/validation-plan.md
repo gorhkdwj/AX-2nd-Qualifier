@@ -18,6 +18,7 @@
 - taxonomy 매핑 검증: 자유표기(예: 리넨/린넨/마)와 표준용어 매핑 결과가 기대값과 일치하는지 확인한다.
 - 소재 혼용률 검증: 입력에 숫자 혼용률이 명시된 경우만 `ratio_status: explicit`과 숫자 `ratio`를 허용한다. 미기재·모호 표현은 `ratio: null`과 `missing`/`ambiguous` 상태여야 하며, 부위가 다르면 `part`가 분리되어야 한다.
 - 중복 감지 검증: 같은 상품의 다른 표현 쌍과 비중복 쌍을 나누어 `dedup.py` 결과를 비교한다.
+- 중복 감지 가중치 검증: 현재 가중치와 임계값은 휴리스틱 baseline이므로, 실제 운영 적용 시에는 라벨링된 상품쌍으로 precision, recall, false positive, false negative를 비교해 가중치와 threshold를 조정한다. 이번 MVP 검증은 운영 최적화가 아니라 설명 가능한 baseline의 재현성과 오탐·미탐 사례 확인에 둔다.
 - 제출 구조 검증: 폴더 구조 수동 점검(`ls`, `rg --files`) + 체크리스트 대조
 - 로그 무결성: `tools/save_log.py` 훅 동작 결과와 `logs/` 파일 존재 여부 확인, 수동 수정 금지
 - 비밀정보 검증: commit·패키징 전 API key/token/password 패턴 검색

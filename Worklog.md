@@ -10,6 +10,37 @@
 
 ---
 
+### W-033 · dedup 가중치와 임계값의 휴리스틱 baseline 성격 문서화
+**요청**
+- `dedup.py`의 가중치와 임계값이 실제 운영 데이터로 검증된 수치가 아니라, 운영 데이터의 precision/recall 비교를 통해 조정해야 하는 값임을 문서에 명시
+
+**수행 작업**
+- `docs/product-agentizer-complete-guide.md`의 dedup 상세 설명에 현재 가중치·임계값이 휴리스틱 baseline임을 추가
+- `docs/superpowers/specs/2026-07-06-three-level-category-design.md`의 3단계 구조 dedup 설계에 운영 튜닝 원칙 추가
+- `docs/requirements-contract.md`의 중복 감지 출력 계약 아래에 운영 데이터 기반 재튜닝 필요성을 명시
+- `docs/validation-plan.md`의 검증 방법에 dedup 가중치 검증과 운영 튜닝 범위 설명 추가
+
+**변경 파일**
+- 수정: `docs/product-agentizer-complete-guide.md`
+- 수정: `docs/superpowers/specs/2026-07-06-three-level-category-design.md`
+- 수정: `docs/requirements-contract.md`
+- 수정: `docs/validation-plan.md`
+- 수정: `Worklog.md`
+
+**검증**
+- 통과: `git diff --check`
+- 통과: placeholder/미완성 표식 검색
+- 통과: 비밀정보 고위험 패턴 검색 0건
+
+**판단 근거**
+- 현재 dedup 점수는 실제 무신사 운영 데이터로 학습된 모델이나 산업 표준 수치가 아니라 설명 가능한 초기값이다.
+- 운영 적용 시에는 라벨링된 상품쌍을 기준으로 precision, recall, false positive, false negative를 비교하며 가중치와 임계값을 조정해야 한다.
+
+**결과**
+- 완료: dedup 가중치와 임계값의 한계 및 운영 튜닝 필요성 문서화
+
+---
+
 ### W-032 · 3단계 상품 분류 구조 설계 문서 작성
 **요청**
 - 현재 2단계 `category/subcategory` 구조를 실제 무신사 상의·아우터 카테고리를 더 정확히 반영하는 3단계 `category/subcategory/detail_type` 구조로 수정하기 위한 계획 수립

@@ -515,6 +515,8 @@ detail_type must belong to the selected category/subcategory
 
 권장 변경:
 
+아래 가중치는 실제 운영 데이터로 학습된 최종 수치가 아니라, 3단계 구조 도입 후에도 설명 가능한 중복 후보 baseline을 유지하기 위한 휴리스틱 초기값이다. 실제 운영 적용 시에는 라벨링된 상품쌍을 기준으로 precision, recall, false positive, false negative를 비교하면서 가중치와 임계값을 재조정해야 한다.
+
 | 속성 | 기존 | 변경 |
 |---|---:|---:|
 | category | 0.18 | 0.16 |
@@ -533,6 +535,13 @@ detail_type must belong to the selected category/subcategory
 ### 10.2 설계 이유
 
 `detail_type`은 유용하지만 너무 큰 가중치를 주면 위험하다. 같은 상품도 한쪽은 `trucker_jacket`, 다른 쪽은 넓게 `jacket` 또는 `null`로 나올 수 있다. 따라서 중복 감지는 여전히 `materials`, `colors`, `fit`, `title`을 함께 본다.
+
+실무 튜닝 원칙은 다음과 같다.
+
+- 자동 병합처럼 오탐 비용이 큰 용도는 `duplicate` 임계값을 높여 precision을 우선한다.
+- 사람이 검토할 후보 큐를 넓게 만드는 용도는 `possible_duplicate` 임계값을 낮춰 recall을 우선할 수 있다.
+- 상품군마다 중복 판단 근거가 다를 수 있으므로, 향후 `bottom`, `bag`, `shoes` 확장 시 카테고리별 가중치와 임계값을 별도로 튜닝할 수 있다.
+- 현재 MVP의 dedup 점수는 운영 최적화 모델이 아니라, 구조화 속성이 중복 후보 탐지에 어떻게 쓰일 수 있는지를 보여주는 설명 가능한 baseline이다.
 
 ### 10.3 matched_fields
 
