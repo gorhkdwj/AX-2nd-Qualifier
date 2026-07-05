@@ -241,18 +241,23 @@ def evaluate_dedup(actual: dict[str, Any], labels: dict[str, Any], min_score: fl
 
 
 def validate_fixture(path: Path) -> dict[str, Any]:
+    resolved_path = path if path.is_absolute() else (ROOT / path)
     process = subprocess.run(
-        [sys.executable, str(VALIDATE_SCRIPT), str(path)],
+        [sys.executable, str(VALIDATE_SCRIPT), str(resolved_path)],
         cwd=ROOT,
         text=True,
         capture_output=True,
     )
     try:
+        display_path = str(resolved_path.relative_to(ROOT))
+    except ValueError:
+        display_path = str(resolved_path)
+    try:
         report = json.loads(process.stdout)
     except json.JSONDecodeError:
         report = {"valid": False, "checked": 0, "errors": [{"message": process.stdout.strip()}]}
     return {
-        "path": str(path.relative_to(ROOT)),
+        "path": display_path,
         "exit_code": process.returncode,
         "valid": process.returncode == 0 and bool(report.get("valid")),
         "checked": report.get("checked", 0),
@@ -273,6 +278,9 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> int:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+
     args = parse_args()
     inputs = load_json(args.inputs)
     expected = load_json(args.expected)

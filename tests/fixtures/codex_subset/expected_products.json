@@ -1,0 +1,1379 @@
+{
+  "products": [
+    {
+      "product_id": "outer_dummy_000",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/outer_dummy_000",
+          "source_title": "블랙 슬림핏 재킷 000",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "블랙 슬림핏 재킷 000",
+          "category": "outer",
+          "subcategory": "jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "linen",
+              "ratio": 60,
+              "ratio_status": "explicit",
+              "evidence": "겉감 리넨 60%, 면 40%"
+            },
+            {
+              "part": "shell",
+              "name": "cotton",
+              "ratio": 40,
+              "ratio_status": "explicit",
+              "evidence": "겉감 리넨 60%, 면 40%"
+            }
+          ],
+          "fit": [
+            "slim"
+          ],
+          "colors": [
+            "black"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual",
+            "layering"
+          ],
+          "care": [
+            "machine_wash"
+          ],
+          "size_info": [
+            "L 기준 총장 62cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블랙 슬림핏 재킷",
+          "query_tags": [
+            "블랙 재킷",
+            "슬림핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 black, slim, jacket로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "outer_dummy_001",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/outer_dummy_001",
+          "source_title": "블랙 슬림핏 재킷 000 리오더",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "블랙 슬림핏 재킷 000 리오더",
+          "category": "outer",
+          "subcategory": "jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "linen",
+              "ratio": 60,
+              "ratio_status": "explicit",
+              "evidence": "겉감 리넨 60%, 면 40%"
+            },
+            {
+              "part": "shell",
+              "name": "cotton",
+              "ratio": 40,
+              "ratio_status": "explicit",
+              "evidence": "겉감 리넨 60%, 면 40%"
+            }
+          ],
+          "fit": [
+            "slim"
+          ],
+          "colors": [
+            "black"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual",
+            "layering"
+          ],
+          "care": [
+            "machine_wash"
+          ],
+          "size_info": [
+            "L 기준 총장 62cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블랙 슬림핏 재킷",
+          "query_tags": [
+            "블랙 재킷",
+            "슬림핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 black, slim, jacket로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "outer_dummy_004",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/outer_dummy_004",
+          "source_title": "핑크 롱라인 베스트 004",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "핑크 롱라인 베스트 004",
+          "category": "outer",
+          "subcategory": "vest",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "wool",
+              "ratio": 70,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            },
+            {
+              "part": "shell",
+              "name": "cashmere",
+              "ratio": 30,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            }
+          ],
+          "fit": [
+            "longline"
+          ],
+          "colors": [
+            "pink"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "care": [
+            "hand_wash"
+          ],
+          "size_info": [
+            "L 기준 총장 66cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "핑크 롱라인 베스트",
+          "query_tags": [
+            "핑크 베스트",
+            "롱라인 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 pink, longline, vest로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "outer_dummy_006",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/outer_dummy_006",
+          "source_title": "베이지 박시핏 재킷 006",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "베이지 박시핏 재킷 006",
+          "category": "outer",
+          "subcategory": "jacket",
+          "materials": [
+            {
+              "part": "fill",
+              "name": "duck_down",
+              "ratio": 80,
+              "ratio_status": "explicit",
+              "evidence": "충전재 덕다운 80%, 구스다운 20%"
+            },
+            {
+              "part": "fill",
+              "name": "goose_down",
+              "ratio": 20,
+              "ratio_status": "explicit",
+              "evidence": "충전재 덕다운 80%, 구스다운 20%"
+            }
+          ],
+          "fit": [
+            "boxy"
+          ],
+          "colors": [
+            "beige"
+          ],
+          "seasons": [
+            "fall",
+            "winter"
+          ],
+          "tpo_tags": [
+            "layering",
+            "travel"
+          ],
+          "care": [
+            "shade_dry"
+          ],
+          "size_info": [
+            "L 기준 총장 68cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "베이지 박시핏 재킷",
+          "query_tags": [
+            "베이지 재킷",
+            "박시핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 beige, boxy, jacket로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "outer_dummy_008",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/outer_dummy_008",
+          "source_title": "카키 슬림핏 코트 008",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "카키 슬림핏 코트 008",
+          "category": "outer",
+          "subcategory": "coat",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "recycled_fiber",
+              "ratio": null,
+              "ratio_status": "missing",
+              "evidence": "리사이클 섬유"
+            },
+            {
+              "part": "trim",
+              "name": "polyester",
+              "ratio": null,
+              "ratio_status": "missing",
+              "evidence": "배색 폴리에스터"
+            }
+          ],
+          "fit": [
+            "slim"
+          ],
+          "colors": [
+            "khaki"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "street",
+            "layering"
+          ],
+          "care": [
+            "dry_clean"
+          ],
+          "size_info": [
+            "L 기준 총장 70cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "카키 슬림핏 코트",
+          "query_tags": [
+            "카키 코트",
+            "슬림핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 khaki, slim, coat로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "material_ratio"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "outer_dummy_011",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/outer_dummy_011",
+          "source_title": "아이보리 오버핏 베스트 010 리오더",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "아이보리 오버핏 베스트 010 리오더",
+          "category": "outer",
+          "subcategory": "vest",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "linen",
+              "ratio": 60,
+              "ratio_status": "explicit",
+              "evidence": "겉감 리넨 60%, 면 40%"
+            },
+            {
+              "part": "shell",
+              "name": "cotton",
+              "ratio": 40,
+              "ratio_status": "explicit",
+              "evidence": "겉감 리넨 60%, 면 40%"
+            }
+          ],
+          "fit": [
+            "oversized"
+          ],
+          "colors": [
+            "ivory"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual",
+            "layering"
+          ],
+          "care": [
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "L 기준 총장 72cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "아이보리 오버핏 베스트",
+          "query_tags": [
+            "아이보리 베스트",
+            "오버핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 ivory, oversized, vest로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "outer_dummy_020",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/outer_dummy_020",
+          "source_title": "베이지 롱라인 코트 020",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "베이지 롱라인 코트 020",
+          "category": "outer",
+          "subcategory": "coat",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "linen",
+              "ratio": 60,
+              "ratio_status": "explicit",
+              "evidence": "겉감 리넨 60%, 면 40%"
+            },
+            {
+              "part": "shell",
+              "name": "cotton",
+              "ratio": 40,
+              "ratio_status": "explicit",
+              "evidence": "겉감 리넨 60%, 면 40%"
+            }
+          ],
+          "fit": [
+            "longline"
+          ],
+          "colors": [
+            "beige"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual",
+            "layering"
+          ],
+          "care": [
+            "shade_dry"
+          ],
+          "size_info": [
+            "L 기준 총장 64cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "베이지 롱라인 코트",
+          "query_tags": [
+            "베이지 코트",
+            "롱라인 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 beige, longline, coat로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "outer_dummy_031",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/outer_dummy_031",
+          "source_title": "네이비 박시핏 재킷 030 리오더",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "네이비 박시핏 재킷 030 리오더",
+          "category": "outer",
+          "subcategory": "jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "linen",
+              "ratio": 60,
+              "ratio_status": "explicit",
+              "evidence": "겉감 리넨 60%, 면 40%"
+            },
+            {
+              "part": "shell",
+              "name": "cotton",
+              "ratio": 40,
+              "ratio_status": "explicit",
+              "evidence": "겉감 리넨 60%, 면 40%"
+            }
+          ],
+          "fit": [
+            "boxy"
+          ],
+          "colors": [
+            "navy"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual",
+            "layering"
+          ],
+          "care": [
+            "low_temp_iron"
+          ],
+          "size_info": [
+            "L 기준 총장 74cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "네이비 박시핏 재킷",
+          "query_tags": [
+            "네이비 재킷",
+            "박시핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 navy, boxy, jacket로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "outer_dummy_040",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/outer_dummy_040",
+          "source_title": "데님 블루 슬림핏 베스트 040",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "데님 블루 슬림핏 베스트 040",
+          "category": "outer",
+          "subcategory": "vest",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "linen",
+              "ratio": 60,
+              "ratio_status": "explicit",
+              "evidence": "겉감 리넨 60%, 면 40%"
+            },
+            {
+              "part": "shell",
+              "name": "cotton",
+              "ratio": 40,
+              "ratio_status": "explicit",
+              "evidence": "겉감 리넨 60%, 면 40%"
+            }
+          ],
+          "fit": [
+            "slim"
+          ],
+          "colors": [
+            "denim_blue"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual",
+            "layering"
+          ],
+          "care": [
+            "do_not_bleach"
+          ],
+          "size_info": [
+            "L 기준 총장 66cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "데님 블루 슬림핏 베스트",
+          "query_tags": [
+            "데님 블루 베스트",
+            "슬림핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 denim_blue, slim, vest로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "outer_dummy_049",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/outer_dummy_049",
+          "source_title": "블루 스트레이트 핏 점퍼 049",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "블루 스트레이트 핏 점퍼 049",
+          "category": "outer",
+          "subcategory": "jumper",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "faux_leather",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "페이크 레더 느낌"
+            }
+          ],
+          "fit": [
+            "straight"
+          ],
+          "colors": [
+            "blue"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "care": [
+            "machine_wash"
+          ],
+          "size_info": [
+            "L 기준 총장 75cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블루 스트레이트 핏 점퍼",
+          "query_tags": [
+            "블루 점퍼",
+            "스트레이트 핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 blue, straight, jumper로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "top_dummy_050",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/top_dummy_050",
+          "source_title": "레드 크롭 핏 니트 050",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "레드 크롭 핏 니트 050",
+          "category": "top",
+          "subcategory": "knit",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨 터치"
+            },
+            {
+              "part": "unknown",
+              "name": "rayon",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "레이온 블렌드"
+            }
+          ],
+          "fit": [
+            "cropped"
+          ],
+          "colors": [
+            "red"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual"
+          ],
+          "care": [
+            "do_not_bleach"
+          ],
+          "size_info": [
+            "M 기준 총장 76cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "레드 크롭 핏 니트",
+          "query_tags": [
+            "레드 니트",
+            "크롭 핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 red, cropped, knit로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "top_dummy_051",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/top_dummy_051",
+          "source_title": "레드 크롭 핏 니트 050 리오더",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "레드 크롭 핏 니트 050 리오더",
+          "category": "top",
+          "subcategory": "knit",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨 터치"
+            },
+            {
+              "part": "unknown",
+              "name": "rayon",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "레이온 블렌드"
+            }
+          ],
+          "fit": [
+            "cropped"
+          ],
+          "colors": [
+            "red"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual"
+          ],
+          "care": [
+            "do_not_bleach"
+          ],
+          "size_info": [
+            "M 기준 총장 76cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "레드 크롭 핏 니트",
+          "query_tags": [
+            "레드 니트",
+            "크롭 핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 red, cropped, knit로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "top_dummy_054",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/top_dummy_054",
+          "source_title": "그린 레귤러핏 티셔츠 054",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "그린 레귤러핏 티셔츠 054",
+          "category": "top",
+          "subcategory": "tshirt",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "cotton",
+              "ratio": 95,
+              "ratio_status": "explicit",
+              "evidence": "겉감 면 95%, 폴리우레탄 5%"
+            },
+            {
+              "part": "shell",
+              "name": "polyurethane",
+              "ratio": 5,
+              "ratio_status": "explicit",
+              "evidence": "겉감 면 95%, 폴리우레탄 5%"
+            }
+          ],
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "green"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel"
+          ],
+          "care": [
+            "low_temp_iron"
+          ],
+          "size_info": [
+            "M 기준 총장 62cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "그린 레귤러핏 티셔츠",
+          "query_tags": [
+            "그린 티셔츠",
+            "레귤러핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 green, regular, tshirt로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "top_dummy_056",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/top_dummy_056",
+          "source_title": "화이트 릴랙스 핏 니트 056",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "화이트 릴랙스 핏 니트 056",
+          "category": "top",
+          "subcategory": "knit",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "faux_leather",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "페이크 레더 느낌"
+            }
+          ],
+          "fit": [
+            "relaxed"
+          ],
+          "colors": [
+            "white"
+          ],
+          "seasons": [
+            "fall",
+            "winter"
+          ],
+          "tpo_tags": [
+            "layering",
+            "travel"
+          ],
+          "care": [
+            "hand_wash"
+          ],
+          "size_info": [
+            "M 기준 총장 64cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "화이트 릴랙스 핏 니트",
+          "query_tags": [
+            "화이트 니트",
+            "릴랙스 핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, relaxed, knit로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "top_dummy_058",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/top_dummy_058",
+          "source_title": "블루 크롭 핏 슬리브리스 058",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "블루 크롭 핏 슬리브리스 058",
+          "category": "top",
+          "subcategory": "sleeveless",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "cropped"
+          ],
+          "colors": [
+            "blue"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "street"
+          ],
+          "care": [
+            "shade_dry"
+          ],
+          "size_info": [
+            "M 기준 총장 66cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블루 크롭 핏 슬리브리스",
+          "query_tags": [
+            "블루 슬리브리스",
+            "크롭 핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 blue, cropped, sleeveless로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "top_dummy_061",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/top_dummy_061",
+          "source_title": "옐로우 스트레이트 핏 티셔츠 060 리오더",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "옐로우 스트레이트 핏 티셔츠 060 리오더",
+          "category": "top",
+          "subcategory": "tshirt",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨 터치"
+            },
+            {
+              "part": "unknown",
+              "name": "rayon",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "레이온 블렌드"
+            }
+          ],
+          "fit": [
+            "straight"
+          ],
+          "colors": [
+            "yellow"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual"
+          ],
+          "care": [
+            "dry_clean"
+          ],
+          "size_info": [
+            "M 기준 총장 68cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "옐로우 스트레이트 핏 티셔츠",
+          "query_tags": [
+            "옐로우 티셔츠",
+            "스트레이트 핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 yellow, straight, tshirt로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "top_dummy_070",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/top_dummy_070",
+          "source_title": "화이트 레귤러핏 슬리브리스 070",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "화이트 레귤러핏 슬리브리스 070",
+          "category": "top",
+          "subcategory": "sleeveless",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨 터치"
+            },
+            {
+              "part": "unknown",
+              "name": "rayon",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "레이온 블렌드"
+            }
+          ],
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "white"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual"
+          ],
+          "care": [
+            "hand_wash"
+          ],
+          "size_info": [
+            "M 기준 총장 78cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "화이트 레귤러핏 슬리브리스",
+          "query_tags": [
+            "화이트 슬리브리스",
+            "레귤러핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, regular, sleeveless로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "top_dummy_081",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/top_dummy_081",
+          "source_title": "그레이 릴랙스 핏 니트 080 리오더",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "그레이 릴랙스 핏 니트 080 리오더",
+          "category": "top",
+          "subcategory": "knit",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨 터치"
+            },
+            {
+              "part": "unknown",
+              "name": "rayon",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "레이온 블렌드"
+            }
+          ],
+          "fit": [
+            "relaxed"
+          ],
+          "colors": [
+            "gray"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual"
+          ],
+          "care": [
+            "machine_wash"
+          ],
+          "size_info": [
+            "M 기준 총장 70cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "그레이 릴랙스 핏 니트",
+          "query_tags": [
+            "그레이 니트",
+            "릴랙스 핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 gray, relaxed, knit로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "top_dummy_090",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/top_dummy_090",
+          "source_title": "브라운 크롭 핏 티셔츠 090",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "브라운 크롭 핏 티셔츠 090",
+          "category": "top",
+          "subcategory": "tshirt",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨 터치"
+            },
+            {
+              "part": "unknown",
+              "name": "rayon",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "레이온 블렌드"
+            }
+          ],
+          "fit": [
+            "cropped"
+          ],
+          "colors": [
+            "brown"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual"
+          ],
+          "care": [
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M 기준 총장 62cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "브라운 크롭 핏 티셔츠",
+          "query_tags": [
+            "브라운 티셔츠",
+            "크롭 핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 brown, cropped, tshirt로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "top_dummy_099",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-expanded/top_dummy_099",
+          "source_title": "베이지 슬림핏 스웨트셔츠 099",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "베이지 슬림핏 스웨트셔츠 099",
+          "category": "top",
+          "subcategory": "sweatshirt",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cotton",
+              "ratio": null,
+              "ratio_status": "missing",
+              "evidence": "코튼 소재"
+            }
+          ],
+          "fit": [
+            "slim"
+          ],
+          "colors": [
+            "beige"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel"
+          ],
+          "care": [
+            "do_not_bleach"
+          ],
+          "size_info": [
+            "M 기준 총장 71cm",
+            "어깨와 가슴둘레 여유"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "베이지 슬림핏 스웨트셔츠",
+          "query_tags": [
+            "베이지 스웨트셔츠",
+            "슬림핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 beige, slim, sweatshirt로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "material_ratio"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    }
+  ]
+}

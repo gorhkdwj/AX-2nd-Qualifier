@@ -1,0 +1,709 @@
+{
+  "products": [
+    {
+      "product_id": "real_outer_beanpole_linen_jacket_4308999",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/4308999",
+          "source_title": "빈폴 레이디스 리넨 체크 더블 재킷",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "빈폴 레이디스 리넨 체크 더블 재킷",
+          "category": "outer",
+          "subcategory": "jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "cotton",
+              "ratio": 50,
+              "ratio_status": "explicit",
+              "evidence": "소재 겉감 면 50%"
+            },
+            {
+              "part": "shell",
+              "name": "linen",
+              "ratio": 50,
+              "ratio_status": "explicit",
+              "evidence": "소재 겉감 마 50%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [],
+          "colors": [
+            "beige"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "commute",
+            "formal",
+            "guest_look",
+            "layering"
+          ],
+          "care": [],
+          "size_info": [
+            "S",
+            "M",
+            "L"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "베이지 리넨 체크 더블 재킷으로 겉감 면과 마, 안감 폴리에스터 비율이 명시된 상품입니다.",
+          "query_tags": [
+            "베이지 재킷",
+            "리넨 체크",
+            "면 50",
+            "마 50",
+            "안감 폴리에스터",
+            "S M L"
+          ],
+          "explainable_reasons": [
+            "제품분류 재킷과 category_hint outer를 근거로 category outer, subcategory jacket으로 매핑했습니다.",
+            "색상 베이지는 colors beige로 매핑했습니다.",
+            "겉감 면 50%, 마 50%, 안감 폴리에스터 100% 문구를 각각 shell cotton, shell linen, lining polyester로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "fit",
+            "care"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "real_outer_limelike_cardigan_2101205",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/2101205",
+          "source_title": "라임라이크 브이넥 크로스 가디건_3color",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "라임라이크 브이넥 크로스 가디건_3color",
+          "category": "outer",
+          "subcategory": "cardigan",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "wool",
+              "ratio": 50,
+              "ratio_status": "explicit",
+              "evidence": "혼용률 울 50%"
+            },
+            {
+              "part": "unknown",
+              "name": "polyester",
+              "ratio": 10,
+              "ratio_status": "explicit",
+              "evidence": "혼용률 폴리에스테르 10%"
+            },
+            {
+              "part": "unknown",
+              "name": "nylon",
+              "ratio": 30,
+              "ratio_status": "explicit",
+              "evidence": "혼용률 나일론 30%"
+            }
+          ],
+          "fit": [],
+          "colors": [
+            "navy",
+            "gray",
+            "beige"
+          ],
+          "seasons": [
+            "fall",
+            "winter"
+          ],
+          "tpo_tags": [
+            "daily",
+            "layering",
+            "commute"
+          ],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "네이비, 그레이, 오트 색상의 브이넥 크로스 가디건으로 울, 폴리에스터, 나일론 혼용률이 제시된 상품입니다.",
+          "query_tags": [
+            "브이넥 가디건",
+            "울 50",
+            "폴리에스터 10",
+            "나일론 30",
+            "네이비",
+            "그레이",
+            "오트"
+          ],
+          "explainable_reasons": [
+            "제품분류 아우터 카디건과 category_hint outer를 근거로 category outer, subcategory cardigan으로 매핑했습니다.",
+            "네이비와 그레이는 각각 navy, gray로 매핑했고 오트는 가장 가까운 표준 색상인 beige로 매핑했습니다.",
+            "울 50%, 폴리에스테르 10%, 나일론 30% 문구를 각각 explicit ratio 소재로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "fit",
+            "care",
+            "size_info"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "real_outer_8seconds_jacket_4922894",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/4922894",
+          "source_title": "에잇세컨즈 쓰리버튼 세미 오버핏 자켓 블랙",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "에잇세컨즈 쓰리버튼 세미 오버핏 자켓 블랙",
+          "category": "outer",
+          "subcategory": "jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 폴리에스터 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "oversized"
+          ],
+          "colors": [
+            "black"
+          ],
+          "seasons": [],
+          "tpo_tags": [
+            "commute",
+            "formal",
+            "guest_look",
+            "layering"
+          ],
+          "care": [
+            "dry_clean"
+          ],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "블랙 세미 오버핏 쓰리버튼 자켓으로 겉감과 안감이 폴리에스터 100%이며 드라이클리닝 관리가 명시된 상품입니다.",
+          "query_tags": [
+            "블랙 자켓",
+            "세미 오버핏",
+            "쓰리버튼",
+            "폴리에스터 100",
+            "드라이클리닝"
+          ],
+          "explainable_reasons": [
+            "제품분류 재킷과 category_hint outer를 근거로 category outer, subcategory jacket으로 매핑했습니다.",
+            "세미 오버핏은 fit oversized로 매핑했습니다.",
+            "겉감 폴리에스터 100%, 안감 폴리에스터 100% 및 반드시 드라이크리닝 문구를 소재와 care로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "seasons",
+            "size_info"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "real_outer_247_cashmere_blouson_3617977",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/3617977",
+          "source_title": "247시리즈 캐시미어 블렌디드 블루종 자켓 BLACK",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "247시리즈 캐시미어 블렌디드 블루종 자켓 BLACK",
+          "category": "outer",
+          "subcategory": "jacket",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cashmere",
+              "ratio": null,
+              "ratio_status": "missing",
+              "evidence": "캐시미어 블렌디드 소재로 소개되며 정확한 숫자 혼용률은 snippet에 없습니다."
+            }
+          ],
+          "fit": [],
+          "colors": [
+            "black"
+          ],
+          "seasons": [
+            "fall",
+            "winter"
+          ],
+          "tpo_tags": [
+            "daily",
+            "commute",
+            "layering"
+          ],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "블랙 캐시미어 블렌디드 블루종 자켓으로 캐시미어 소재 단서는 있으나 숫자 혼용률은 제공되지 않은 상품입니다.",
+          "query_tags": [
+            "블랙 자켓",
+            "블루종 자켓",
+            "캐시미어 블렌디드",
+            "혼용률 미제공"
+          ],
+          "explainable_reasons": [
+            "제품분류 자켓과 category_hint outer를 근거로 category outer, subcategory jacket으로 매핑했습니다.",
+            "BLACK은 colors black으로 매핑했습니다.",
+            "캐시미어 블렌디드 문구를 근거로 cashmere 소재를 기록하되 숫자 혼용률이 없어 ratio_status missing으로 처리했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "material_ratio",
+            "fit",
+            "care",
+            "size_info"
+          ],
+          "ambiguous_fields": [
+            "materials"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "real_outer_lenina_cardigan_4332165",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/4332165",
+          "source_title": "르니나 SALENA wool v neck cardigan_RED",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "르니나 SALENA wool v neck cardigan_RED",
+          "category": "outer",
+          "subcategory": "cardigan",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "wool",
+              "ratio": null,
+              "ratio_status": "missing",
+              "evidence": "wool v neck cardigan 이름에서 울 소재 단서가 있으나 숫자 혼용률은 snippet에 없습니다."
+            }
+          ],
+          "fit": [],
+          "colors": [
+            "red"
+          ],
+          "seasons": [
+            "fall",
+            "winter"
+          ],
+          "tpo_tags": [
+            "daily",
+            "layering",
+            "commute"
+          ],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "레드 울 브이넥 가디건으로 울 소재 단서는 있으나 숫자 혼용률은 제공되지 않은 상품입니다.",
+          "query_tags": [
+            "레드 가디건",
+            "울 가디건",
+            "브이넥",
+            "혼용률 미제공"
+          ],
+          "explainable_reasons": [
+            "제품분류 아우터 카디건과 category_hint outer를 근거로 category outer, subcategory cardigan으로 매핑했습니다.",
+            "RED는 colors red로 매핑했습니다.",
+            "상품명 내 wool 단서를 근거로 wool 소재를 기록하되 숫자 혼용률이 없어 ratio_status missing으로 처리했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "material_ratio",
+            "fit",
+            "care",
+            "size_info"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "real_top_armedes_tee_4783312",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/4783312",
+          "source_title": "아르메데스 면 20수 아트그래픽 티셔츠",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "아르메데스 면 20수 아트그래픽 티셔츠",
+          "category": "top",
+          "subcategory": "tshirt",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cotton",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "소재 면 100%"
+            }
+          ],
+          "fit": [],
+          "colors": [
+            "black",
+            "white"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual",
+            "street"
+          ],
+          "care": [],
+          "size_info": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블랙과 화이트 색상의 면 100% 아트그래픽 티셔츠로 S부터 2XL까지 사이즈가 제시된 상품입니다.",
+          "query_tags": [
+            "아트그래픽 티셔츠",
+            "면 100",
+            "블랙",
+            "화이트",
+            "S M L XL 2XL"
+          ],
+          "explainable_reasons": [
+            "제품분류 티셔츠와 category_hint top을 근거로 category top, subcategory tshirt로 매핑했습니다.",
+            "컬러 블랙과 화이트는 각각 black, white로 매핑했습니다.",
+            "소재 면 100% 문구를 cotton explicit ratio로 기록하고 제시된 사이즈 목록을 size_info에 보존했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "fit",
+            "care"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "real_top_ms_linen_like_shirt_black_3054408",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/3054408",
+          "source_title": "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 블랙",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 블랙",
+          "category": "top",
+          "subcategory": "shirt_blouse",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨과 유사한 질감의 여름 셔츠"
+            }
+          ],
+          "fit": [
+            "relaxed"
+          ],
+          "colors": [
+            "black"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "commute",
+            "casual"
+          ],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "블랙 릴렉스드 핏 반소매 셔츠로 린넨과 유사한 질감이라는 소재감 단서가 제공된 여름 상품입니다.",
+          "query_tags": [
+            "블랙 반소매 셔츠",
+            "릴렉스 핏",
+            "린넨 라이크",
+            "여름 셔츠"
+          ],
+          "explainable_reasons": [
+            "제품분류 상의 셔츠/블라우스와 category_hint top을 근거로 category top, subcategory shirt_blouse로 매핑했습니다.",
+            "여유 있는 릴렉스 핏은 fit relaxed로 매핑했고 컬러 블랙은 colors black으로 매핑했습니다.",
+            "린넨과 유사한 질감은 실제 숫자 혼용률이 없는 소재감 표현이므로 linen 소재 단서를 ratio_status ambiguous로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "care",
+            "size_info"
+          ],
+          "ambiguous_fields": [
+            "materials",
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "real_top_ms_basic_tee_3661999",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/3661999",
+          "source_title": "무신사 스탠다드 베이식 크루 넥 티셔츠",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "무신사 스탠다드 베이식 크루 넥 티셔츠",
+          "category": "top",
+          "subcategory": "tshirt",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cotton",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "촘촘한 면 100% 코마사 20수 싱글 저지 원단"
+            }
+          ],
+          "fit": [],
+          "colors": [],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual",
+            "street"
+          ],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "면 100% 코마사 20수 싱글 저지 원단의 베이식 크루 넥 티셔츠입니다.",
+          "query_tags": [
+            "크루 넥 티셔츠",
+            "면 100",
+            "코마사 20수",
+            "싱글 저지",
+            "베이식 티셔츠"
+          ],
+          "explainable_reasons": [
+            "제품분류 티셔츠와 category_hint top을 근거로 category top, subcategory tshirt로 매핑했습니다.",
+            "면 100% 코마사 20수 싱글 저지 원단 문구를 cotton explicit ratio로 기록했습니다.",
+            "색상, 핏, 관리 방법, 사이즈 정보는 snippet에 제공되지 않아 quality.missing_fields에 반영했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "fit",
+            "colors",
+            "care",
+            "size_info"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "real_top_ms_linen_like_shirt_navy_3054409",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/3054409",
+          "source_title": "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 네이비",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 네이비",
+          "category": "top",
+          "subcategory": "shirt_blouse",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨과 유사한 질감의 여름 셔츠"
+            }
+          ],
+          "fit": [
+            "relaxed"
+          ],
+          "colors": [
+            "navy"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "commute",
+            "casual"
+          ],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "네이비 릴렉스드 핏 반소매 셔츠로 린넨과 유사한 질감이라는 소재감 단서가 제공된 여름 상품입니다.",
+          "query_tags": [
+            "네이비 반소매 셔츠",
+            "릴렉스 핏",
+            "린넨 라이크",
+            "여름 셔츠"
+          ],
+          "explainable_reasons": [
+            "제품분류 상의 셔츠/블라우스와 category_hint top을 근거로 category top, subcategory shirt_blouse로 매핑했습니다.",
+            "여유 있는 릴렉스 핏은 fit relaxed로 매핑했고 컬러 네이비는 colors navy로 매핑했습니다.",
+            "린넨과 유사한 질감은 실제 숫자 혼용률이 없는 소재감 표현이므로 linen 소재 단서를 ratio_status ambiguous로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "care",
+            "size_info"
+          ],
+          "ambiguous_fields": [
+            "materials",
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "real_top_ms_basic_short_tee_1196892",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/1196892",
+          "source_title": "무신사 스탠다드 베이식 크루 넥 반팔 티셔츠",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "무신사 스탠다드 베이식 크루 넥 반팔 티셔츠",
+          "category": "top",
+          "subcategory": "tshirt",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cotton",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "면 100% 코마사 20수 싱글 저지 원단"
+            }
+          ],
+          "fit": [],
+          "colors": [],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual",
+            "street"
+          ],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "면 100% 코마사 20수 싱글 저지 원단의 베이식 크루 넥 반팔 티셔츠입니다.",
+          "query_tags": [
+            "반팔 티셔츠",
+            "크루 넥",
+            "면 100",
+            "코마사 20수",
+            "싱글 저지"
+          ],
+          "explainable_reasons": [
+            "제품분류 티셔츠와 category_hint top을 근거로 category top, subcategory tshirt로 매핑했습니다.",
+            "면 100% 코마사 20수 싱글 저지 원단 문구를 cotton explicit ratio로 기록했습니다.",
+            "반팔 티셔츠와 면 싱글 저지 단서를 근거로 spring, summer 시즌 질의 태그에 적합하게 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "fit",
+            "colors",
+            "care",
+            "size_info"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    }
+  ]
+}

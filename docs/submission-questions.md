@@ -22,16 +22,17 @@ Codex가 `product-agentizer` skill을 사용해 붙여넣은 상품 텍스트에
 
 ## 4. AI를 어떻게 활용했나요?
 
-AI는 공개 자료 조사, 후보 기업 비교, 문제 선정, 요구사항 계약 문서 작성, taxonomy/schema 설계, skill 지침 작성, 검증 스크립트 작성, 평가 fixture 설계, Codex CLI 실행 시연, README 작성에 사용했습니다.
+AI는 공개 자료 조사, 후보 기업 비교, 문제 선정, 요구사항 계약 문서 작성, taxonomy/schema 설계, skill 지침 작성, 검증 스크립트 작성, 평가 fixture 설계, Codex CLI 실행 시연, 확장 검증 데이터 구성, README 작성에 사용했습니다.
 
 중요한 결정은 `Decisionlog.md`에 남겼고, 실제 작업 이력은 `Worklog.md`, 문제 해결 이력은 `Troubleshootinglog.md`에 기록했습니다. 로그는 과제 규정에 맞게 원본 그대로 `logs/`에 보관합니다.
 
 ## 5. 어떻게 검증했나요?
 
-검증은 세 층으로 수행했습니다.
+검증은 네 층으로 수행했습니다.
 
 1. `schema.json`과 `validate.py`로 정상 JSON은 통과하고 오류 fixture는 실패하는지 확인했습니다.
 2. 더미 상품 5건의 expected/predicted JSON을 비교해 속성 precision/recall을 산출하고, 중복쌍 10개에서 `dedup.py`의 정확도를 확인했습니다.
 3. 로컬 Codex CLI에서 실제로 상품 텍스트를 구조화 JSON으로 변환하고, 그 출력이 `validate.py`를 통과하는지 확인했습니다.
+4. 패키징 전 S7.5에서 합성 100건, Codex subset 20건, 실제 공개 snippet 10건의 입력·expected·actual·평가 결과·실행 명령·hash를 보존해 재실행 가능하게 만들었습니다.
 
-현재 더미 fixture 기준 속성 micro precision은 98.55%, micro recall은 88.31%이며, 중복 감지 정확도는 100.00%(10/10)입니다. 이 수치는 전체 무신사 카탈로그 성능이 아니라, 제출 MVP의 더미 fixture와 로컬 실행으로 확인한 검증 결과입니다.
+현재 S7.5 Codex subset 20건 기준 actual schema-valid는 100%(20/20), micro precision은 95.52%, micro recall은 95.85%입니다. 합성 100건 self-check는 precision/recall 100.00%, dedup 검증은 합성 20/20·Codex subset 4/4·공개 snippet 5/5를 통과했습니다. 실제 공개 snippet은 자동 fetch 없이 짧은 factual snippet만 사용했으며 법적 적합/부적합 판정은 하지 않았습니다.

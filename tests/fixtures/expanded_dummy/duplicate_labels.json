@@ -1,0 +1,104 @@
+{
+  "pairs": [
+    {
+      "left_id": "outer_dummy_000",
+      "right_id": "outer_dummy_001",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "outer_dummy_010",
+      "right_id": "outer_dummy_011",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "outer_dummy_020",
+      "right_id": "outer_dummy_021",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "outer_dummy_030",
+      "right_id": "outer_dummy_031",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "outer_dummy_040",
+      "right_id": "outer_dummy_041",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "top_dummy_050",
+      "right_id": "top_dummy_051",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "top_dummy_060",
+      "right_id": "top_dummy_061",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "top_dummy_070",
+      "right_id": "top_dummy_071",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "top_dummy_080",
+      "right_id": "top_dummy_081",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "top_dummy_090",
+      "right_id": "top_dummy_091",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "outer_dummy_000",
+      "right_id": "top_dummy_050",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "outer_dummy_002",
+      "right_id": "outer_dummy_006",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "outer_dummy_004",
+      "right_id": "outer_dummy_008",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "outer_dummy_014",
+      "right_id": "top_dummy_064",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "top_dummy_052",
+      "right_id": "top_dummy_058",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "top_dummy_060",
+      "right_id": "top_dummy_070",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "outer_dummy_024",
+      "right_id": "top_dummy_074",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "outer_dummy_034",
+      "right_id": "outer_dummy_048",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "top_dummy_080",
+      "right_id": "top_dummy_092",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "outer_dummy_044",
+      "right_id": "top_dummy_098",
+      "expected_decision": "distinct"
+    }
+  ]
+}

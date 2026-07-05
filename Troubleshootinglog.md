@@ -10,6 +10,40 @@
 
 ---
 
+### T-004 · S7.5 확장 검증 fixture 생성·평가 래퍼 오류
+**발생 상황**
+- S7.5 확장 검증을 구현하면서 합성 100건, Codex subset 20건, 실제 공개 snippet 10건 fixture와 재현성 평가 결과를 생성했다.
+
+**증상**
+- fixture 생성기에서 duplicate case를 만들 때 `KeyError: 'product'`가 발생했다.
+- 실제 공개 샘플 expected JSON 생성 후 schema 검증에서 일부 필드 구조가 맞지 않았다.
+- `tests/evaluate_product_agentizer.py`를 custom 상대 경로로 실행하면 `relative_to(ROOT)` 처리에서 `ValueError`가 발생했다.
+- Windows 콘솔 출력 경로에서 평가 결과 JSON의 한글 차이 토큰이 깨져 `docs/s7-expanded-validation-results.json`에 읽기 어려운 값이 들어갔다.
+- real sanity 평가에 Codex subset duplicate label을 잘못 사용하면 dedup 평가가 잘못된 기준으로 실행될 수 있었다.
+
+**확인된 원인**
+- duplicate 생성 시 wrapper 구조를 고려하지 않고 존재하지 않는 `product` 경로를 참조했다.
+- 실제 공개 샘플 spec tuple에서 `size_info`, `missing_fields`, `ambiguous_fields` 위치가 분리되어 있지 않았다.
+- 평가 스크립트가 전달받은 상대 경로를 repo root 기준으로 먼저 해석하지 않은 채 `relative_to(ROOT)`를 호출했다.
+- Python stdout 인코딩이 Windows 콘솔 기본값을 따라가면서, 상위 검증 스크립트가 UTF-8로 캡처할 때 한글이 손상됐다.
+- fixture 그룹마다 중복 라벨 범위가 다르므로 전용 `duplicate_labels.json`이 필요했다.
+
+**조치**
+- duplicate title 참조를 `structured_product.product.title` 경로로 수정했다.
+- 실제 공개 샘플 spec 구조를 `size_info`, `missing_fields`, `ambiguous_fields`로 명확히 분리했다.
+- 평가 스크립트가 상대 경로를 repo root 기준으로 resolve하고, 표시 경로 계산 실패 시 절대 경로로 fallback하도록 수정했다.
+- 평가 스크립트의 stdout을 UTF-8로 고정해 결과 JSON의 한글 차이 토큰을 보존했다.
+- `codex_subset`과 `real_sanity` 폴더에 각각 전용 `duplicate_labels.json`을 생성했다.
+- `python tools\run_expanded_validation.py`를 재실행해 전체 명령 통과와 한글 결과 보존을 확인했다.
+
+**재발 방지**
+- wrapper가 있는 JSON fixture는 실제 저장 구조를 기준으로 경로를 참조한다.
+- 새 fixture 그룹을 추가할 때는 source, expected, actual, duplicate labels를 같은 폴더에 함께 보존한다.
+- 평가·검증 결과를 파일로 저장하는 Windows 환경에서는 stdout/stderr 인코딩을 명시한다.
+- custom 경로를 받는 CLI 스크립트는 repo root 기준 상대 경로와 절대 경로를 모두 허용하도록 처리한다.
+
+---
+
 ### T-003 · S7 오류 fixture 기대 실패 검증 명령의 종료 코드 처리 오류
 **발생 상황**
 - S7 제출 README 작성 후, invalid schema fixture 3건이 기대대로 실패하는지 PowerShell 명령으로 확인했다.

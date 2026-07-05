@@ -1,0 +1,24 @@
+{
+  "pairs": [
+    {
+      "left_id": "outer_dummy_000",
+      "right_id": "outer_dummy_001",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "top_dummy_050",
+      "right_id": "top_dummy_051",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "outer_dummy_000",
+      "right_id": "top_dummy_050",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "outer_dummy_004",
+      "right_id": "outer_dummy_008",
+      "expected_decision": "distinct"
+    }
+  ]
+}

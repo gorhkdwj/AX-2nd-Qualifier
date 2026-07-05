@@ -17,6 +17,8 @@
 | `validation-plan.md` | 검증 계획 | 더미 픽스처, 안전성, 제출 구조 검증 기준 확인 |
 | `s5-evaluation-report.md` | S5 더미 픽스처 정량 검증 결과 | 속성 precision/recall과 중복 감지 정확도 확인 |
 | `s6-codex-cli-report.md` | S6 Codex CLI 실행 검증 결과 | 로컬 marketplace, Codex exec 변환·질의 시연 확인 |
+| `s7-expanded-validation-report.md` | S7.5 확장 검증 및 재현성 보존 보고서 | 패키징 전 합성 100건, Codex subset 20건, 실제 공개 snippet 10건 결과 확인 |
+| `s7-expanded-validation-results.json` | S7.5 검증 결과 원본 JSON | 실행 명령, 환경, hash, 정량 결과를 기계적으로 재확인 |
 | `submission-questions.md` | 제출 질문 5문항 답변 초안 | 제출 폼 답변을 복사·검토할 때 확인 |
 | `company-selection.md` | 기업 선정 기준·최종 확정 기록 | 왜 무신사 문제 2를 골랐는지 추적 |
 

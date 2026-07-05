@@ -1,0 +1,2991 @@
+{
+  "generated_at_utc": "2026-07-05T07:03:44.030925+00:00",
+  "generated_for_kst_date": "2026-07-05",
+  "environment": {
+    "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "codex_version": "codex-cli 0.142.5"
+  },
+  "hashes_sha256": {
+    "src/skills/product-agentizer/SKILL.md": "bcfaf101f26db1fd4d82af9e0161c4be23e96832f406c5ff0240d99af668ad77",
+    "src/skills/product-agentizer/references/schema.json": "51a868d789cf7953986d4329c6e939cbe56d30639d464cbbb38912d071783c6e",
+    "src/skills/product-agentizer/references/taxonomy.json": "81ad482cc3ee0cadf185faf42b88e6acfde02271fe054dffc8648ab66b2617df",
+    "src/skills/product-agentizer/scripts/validate.py": "9a8f46d2966850b16a789efe0740f1b43aea749d055ef68d64c123492f0129f5",
+    "src/skills/product-agentizer/scripts/dedup.py": "ed5e4a207abed2d9c74c121d1a68373b98f5830ae680f3a3d5563e82b116529a",
+    "tests/evaluate_product_agentizer.py": "bedb9d136b62d6913617fcfee14c8d2706a0e9f5df44017ab96e75d3c4f07bac",
+    "tools/generate_expanded_validation_fixtures.py": "c19ad81af01b6aeb2461c866af13224ae91fc3edd9d0f524e587859f675275b9",
+    "tools/run_expanded_validation.py": "135e101480ea0fce0959d817bad0f782071ce4afb4052b5ca65eb502694e841c",
+    "tests/fixtures/expanded_dummy/source_inputs.json": "7f50def9d558d30b6e58d724654581028e827d57d19eb311a102f223945b4501",
+    "tests/fixtures/expanded_dummy/expected_products.json": "b0d6665fe71f5cfa2b6f2ab93cd4055009c3bd1d992df9007aea89a538f0b8af",
+    "tests/fixtures/expanded_dummy/reference_actual_products.json": "b0d6665fe71f5cfa2b6f2ab93cd4055009c3bd1d992df9007aea89a538f0b8af",
+    "tests/fixtures/expanded_dummy/duplicate_labels.json": "d48bf8775187090a19c97b7ec0ed21869798540fe7159f7c03ad227e959e05d4",
+    "tests/fixtures/codex_subset/source_inputs.json": "6a957296e536d59c881989d12cd13e0236a3f4cd7cad89826db3c9ce02496977",
+    "tests/fixtures/codex_subset/expected_products.json": "dd1da94f8b7b58b8260ca4b63f8162c24842456ac0624a7703bb5efb17e52d2d",
+    "tests/fixtures/codex_subset/actual_products.json": "7ea7e30dfe3eaee02bd1293ee7d0879e1c6b73a5c76bfb0510c25bdbcc1ba89d",
+    "tests/fixtures/codex_subset/duplicate_labels.json": "4676ae01b1d1ea59846721c4cc3051cf4fe25da16872f1b87c16f5229d6bce77",
+    "tests/fixtures/codex_subset/prompt.md": "b80ebc7a722b14d5639902754bf7298b4e5c1605de6fa738f7c9cbe97d74518e",
+    "tests/fixtures/codex_subset/prompt_template.md": "1df7068cea11f4665b2cd0c00f716772d4b83f0748e94316d790ea566e599ed8",
+    "tests/fixtures/real_sanity/source_inputs.json": "38070d3cb9bfcb7fbe1a5a038df148f08badd131ba1095feb84c494db42eade5",
+    "tests/fixtures/real_sanity/expected_products.json": "9deb6e351e1ba7ff5470944bdec464fd54762c7633ba6395c808b5478d9d1298",
+    "tests/fixtures/real_sanity/actual_products.json": "74b9314ed66a6eea3c74bb29daec7327ad81a5e73f771cd46bf9960eba32fa1f",
+    "tests/fixtures/real_sanity/duplicate_labels.json": "bb9a821cadc2b38ee4e12d414ad597d1c5da9eb482931fcd5064804eb243731b",
+    "tests/fixtures/real_sanity/prompt.md": "c9e1131855131871614de846e41f9a2d206c1b567becf7c3cee31985402acbdf",
+    "tests/fixtures/real_sanity/prompt_template.md": "74870f318d4c22c21a258b9b6cd357fff269c6c281fbd5531d145e4f8e3caa2c"
+  },
+  "commands": [
+    {
+      "id": "expanded_expected_schema",
+      "argv": [
+        "C:\\Users\\gorhk\\MiniConda3\\python.exe",
+        "src/skills/product-agentizer/scripts/validate.py",
+        "tests/fixtures/expanded_dummy/expected_products.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "passed": true,
+      "stdout_json": {
+        "valid": true,
+        "checked": 100,
+        "errors": []
+      },
+      "stdout_len": 46,
+      "stderr": ""
+    },
+    {
+      "id": "expanded_selfcheck_eval",
+      "argv": [
+        "C:\\Users\\gorhk\\MiniConda3\\python.exe",
+        "tests/evaluate_product_agentizer.py",
+        "--inputs",
+        "tests/fixtures/expanded_dummy/source_inputs.json",
+        "--expected",
+        "tests/fixtures/expanded_dummy/expected_products.json",
+        "--actual",
+        "tests/fixtures/expanded_dummy/reference_actual_products.json",
+        "--dedup-labels",
+        "tests/fixtures/expanded_dummy/duplicate_labels.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "passed": true,
+      "stdout_json": {
+        "summary": {
+          "input_cases": 100,
+          "expected_products": 100,
+          "actual_products": 100,
+          "evaluated_fields": [
+            "title",
+            "category",
+            "subcategory",
+            "materials",
+            "fit",
+            "colors",
+            "seasons",
+            "tpo_tags",
+            "care",
+            "size_info",
+            "quality.missing_fields",
+            "quality.ambiguous_fields"
+          ]
+        },
+        "validations": [
+          {
+            "path": "tests\\fixtures\\expanded_dummy\\expected_products.json",
+            "exit_code": 0,
+            "valid": true,
+            "checked": 100,
+            "errors": [],
+            "stderr": ""
+          },
+          {
+            "path": "tests\\fixtures\\expanded_dummy\\reference_actual_products.json",
+            "exit_code": 0,
+            "valid": true,
+            "checked": 100,
+            "errors": [],
+            "stderr": ""
+          }
+        ],
+        "attribute_metrics": {
+          "micro": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "true_positive": 1425,
+            "false_positive": 0,
+            "false_negative": 0
+          },
+          "by_field": {
+            "title": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 100,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "category": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 100,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "subcategory": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 100,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "materials": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 175,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "fit": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 100,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "colors": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 100,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "seasons": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 160,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "tpo_tags": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 245,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "care": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 100,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "size_info": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 200,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "quality.missing_fields": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 20,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "quality.ambiguous_fields": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 25,
+              "false_positive": 0,
+              "false_negative": 0
+            }
+          },
+          "cases": [
+            {
+              "product_id": "outer_dummy_000",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_001",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_002",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_003",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_004",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_005",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_006",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_007",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_008",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_009",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_010",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_011",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_012",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_013",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_014",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_015",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_016",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_017",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_018",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_019",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_020",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_021",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_022",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_023",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_024",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_025",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_026",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_027",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_028",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_029",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_030",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_031",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_032",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_033",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_034",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_035",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_036",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_037",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_038",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_039",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_040",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_041",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_042",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_043",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_044",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_045",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_046",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_047",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_048",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_049",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_050",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_051",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_052",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_053",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_054",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_055",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_056",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_057",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_058",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 12,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_059",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_060",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_061",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_062",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_063",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_064",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_065",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_066",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_067",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_068",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 12,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_069",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_070",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_071",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_072",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_073",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_074",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_075",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_076",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_077",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_078",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 12,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_079",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_080",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_081",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_082",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_083",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_084",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_085",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_086",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_087",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_088",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 12,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_089",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_090",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_091",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_092",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_093",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_094",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_095",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_096",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_097",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_098",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 12,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_099",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            }
+          ],
+          "missing_actual_product_ids": [],
+          "extra_actual_product_ids": []
+        },
+        "dedup_metrics": {
+          "accuracy": 1.0,
+          "correct": 20,
+          "total": 20,
+          "min_score": 0.45,
+          "candidate_count": 333,
+          "pairs": [
+            {
+              "left_id": "outer_dummy_000",
+              "right_id": "outer_dummy_001",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 1.0,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "outer_dummy_010",
+              "right_id": "outer_dummy_011",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 1.0,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "outer_dummy_020",
+              "right_id": "outer_dummy_021",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 1.0,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "outer_dummy_030",
+              "right_id": "outer_dummy_031",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 1.0,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "outer_dummy_040",
+              "right_id": "outer_dummy_041",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 1.0,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "top_dummy_050",
+              "right_id": "top_dummy_051",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 1.0,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "top_dummy_060",
+              "right_id": "top_dummy_061",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 1.0,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "top_dummy_070",
+              "right_id": "top_dummy_071",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 1.0,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "top_dummy_080",
+              "right_id": "top_dummy_081",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 1.0,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "top_dummy_090",
+              "right_id": "top_dummy_091",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 1.0,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "outer_dummy_000",
+              "right_id": "top_dummy_050",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "outer_dummy_002",
+              "right_id": "outer_dummy_006",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "outer_dummy_004",
+              "right_id": "outer_dummy_008",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "outer_dummy_014",
+              "right_id": "top_dummy_064",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "top_dummy_052",
+              "right_id": "top_dummy_058",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "top_dummy_060",
+              "right_id": "top_dummy_070",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.54,
+              "matched_fields": [
+                "category",
+                "materials",
+                "seasons",
+                "tpo_tags"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "outer_dummy_024",
+              "right_id": "top_dummy_074",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "outer_dummy_034",
+              "right_id": "outer_dummy_048",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "top_dummy_080",
+              "right_id": "top_dummy_092",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "outer_dummy_044",
+              "right_id": "top_dummy_098",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            }
+          ]
+        }
+      },
+      "stdout_len": 23051,
+      "stderr": ""
+    },
+    {
+      "id": "codex_subset_actual_schema",
+      "argv": [
+        "C:\\Users\\gorhk\\MiniConda3\\python.exe",
+        "src/skills/product-agentizer/scripts/validate.py",
+        "tests/fixtures/codex_subset/actual_products.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "passed": true,
+      "stdout_json": {
+        "valid": true,
+        "checked": 20,
+        "errors": []
+      },
+      "stdout_len": 45,
+      "stderr": ""
+    },
+    {
+      "id": "codex_subset_eval",
+      "argv": [
+        "C:\\Users\\gorhk\\MiniConda3\\python.exe",
+        "tests/evaluate_product_agentizer.py",
+        "--inputs",
+        "tests/fixtures/codex_subset/source_inputs.json",
+        "--expected",
+        "tests/fixtures/codex_subset/expected_products.json",
+        "--actual",
+        "tests/fixtures/codex_subset/actual_products.json",
+        "--dedup-labels",
+        "tests/fixtures/codex_subset/duplicate_labels.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "passed": true,
+      "stdout_json": {
+        "summary": {
+          "input_cases": 20,
+          "expected_products": 20,
+          "actual_products": 20,
+          "evaluated_fields": [
+            "title",
+            "category",
+            "subcategory",
+            "materials",
+            "fit",
+            "colors",
+            "seasons",
+            "tpo_tags",
+            "care",
+            "size_info",
+            "quality.missing_fields",
+            "quality.ambiguous_fields"
+          ]
+        },
+        "validations": [
+          {
+            "path": "tests\\fixtures\\codex_subset\\expected_products.json",
+            "exit_code": 0,
+            "valid": true,
+            "checked": 20,
+            "errors": [],
+            "stderr": ""
+          },
+          {
+            "path": "tests\\fixtures\\codex_subset\\actual_products.json",
+            "exit_code": 0,
+            "valid": true,
+            "checked": 20,
+            "errors": [],
+            "stderr": ""
+          }
+        ],
+        "attribute_metrics": {
+          "micro": {
+            "precision": 0.9552,
+            "recall": 0.9585,
+            "true_positive": 277,
+            "false_positive": 13,
+            "false_negative": 12
+          },
+          "by_field": {
+            "title": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 20,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "category": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 20,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "subcategory": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 20,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "materials": {
+              "precision": 0.9167,
+              "recall": 0.9167,
+              "true_positive": 33,
+              "false_positive": 3,
+              "false_negative": 3
+            },
+            "fit": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 20,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "colors": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 20,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "seasons": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 34,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "tpo_tags": {
+              "precision": 1.0,
+              "recall": 0.8163,
+              "true_positive": 40,
+              "false_positive": 0,
+              "false_negative": 9
+            },
+            "care": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 20,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "size_info": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 40,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "quality.missing_fields": {
+              "precision": 0.1667,
+              "recall": 1.0,
+              "true_positive": 2,
+              "false_positive": 10,
+              "false_negative": 0
+            },
+            "quality.ambiguous_fields": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 8,
+              "false_positive": 0,
+              "false_negative": 0
+            }
+          },
+          "cases": [
+            {
+              "product_id": "outer_dummy_000",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 0.9333,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 1
+              },
+              "differences": [
+                {
+                  "field": "tpo_tags",
+                  "false_positive": [],
+                  "false_negative": [
+                    "layering"
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "outer_dummy_001",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 0.9333,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 1
+              },
+              "differences": [
+                {
+                  "field": "tpo_tags",
+                  "false_positive": [],
+                  "false_negative": [
+                    "layering"
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "outer_dummy_004",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 0.9286,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 1
+              },
+              "differences": [
+                {
+                  "field": "tpo_tags",
+                  "false_positive": [],
+                  "false_negative": [
+                    "layering"
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "outer_dummy_006",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "outer_dummy_008",
+              "metrics": {
+                "precision": 0.8667,
+                "recall": 0.8667,
+                "true_positive": 13,
+                "false_positive": 2,
+                "false_negative": 2
+              },
+              "differences": [
+                {
+                  "field": "materials",
+                  "false_positive": [
+                    "unknown:recycled_fiber:missing:null"
+                  ],
+                  "false_negative": [
+                    "shell:recycled_fiber:missing:null"
+                  ]
+                },
+                {
+                  "field": "tpo_tags",
+                  "false_positive": [],
+                  "false_negative": [
+                    "layering"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "material_part"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "outer_dummy_011",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 0.9333,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 1
+              },
+              "differences": [
+                {
+                  "field": "tpo_tags",
+                  "false_positive": [],
+                  "false_negative": [
+                    "layering"
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "outer_dummy_020",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 0.9333,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 1
+              },
+              "differences": [
+                {
+                  "field": "tpo_tags",
+                  "false_positive": [],
+                  "false_negative": [
+                    "layering"
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "outer_dummy_031",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 0.9333,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 1
+              },
+              "differences": [
+                {
+                  "field": "tpo_tags",
+                  "false_positive": [],
+                  "false_negative": [
+                    "layering"
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "outer_dummy_040",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 0.9333,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 1
+              },
+              "differences": [
+                {
+                  "field": "tpo_tags",
+                  "false_positive": [],
+                  "false_negative": [
+                    "layering"
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "outer_dummy_049",
+              "metrics": {
+                "precision": 0.8571,
+                "recall": 0.8571,
+                "true_positive": 12,
+                "false_positive": 2,
+                "false_negative": 2
+              },
+              "differences": [
+                {
+                  "field": "materials",
+                  "false_positive": [
+                    "unknown:faux_leather:ambiguous:null"
+                  ],
+                  "false_negative": [
+                    "shell:faux_leather:ambiguous:null"
+                  ]
+                },
+                {
+                  "field": "tpo_tags",
+                  "false_positive": [],
+                  "false_negative": [
+                    "layering"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "material_part"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "top_dummy_050",
+              "metrics": {
+                "precision": 0.9375,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 1,
+                "false_negative": 0
+              },
+              "differences": [
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "material_part"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "top_dummy_051",
+              "metrics": {
+                "precision": 0.9375,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 1,
+                "false_negative": 0
+              },
+              "differences": [
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "material_part"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "top_dummy_054",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_056",
+              "metrics": {
+                "precision": 0.8667,
+                "recall": 0.9286,
+                "true_positive": 13,
+                "false_positive": 2,
+                "false_negative": 1
+              },
+              "differences": [
+                {
+                  "field": "materials",
+                  "false_positive": [
+                    "unknown:faux_leather:ambiguous:null"
+                  ],
+                  "false_negative": [
+                    "shell:faux_leather:ambiguous:null"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "material_part"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "top_dummy_058",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 12,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "top_dummy_061",
+              "metrics": {
+                "precision": 0.9375,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 1,
+                "false_negative": 0
+              },
+              "differences": [
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "material_part"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "top_dummy_070",
+              "metrics": {
+                "precision": 0.9375,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 1,
+                "false_negative": 0
+              },
+              "differences": [
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "material_part"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "top_dummy_081",
+              "metrics": {
+                "precision": 0.9375,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 1,
+                "false_negative": 0
+              },
+              "differences": [
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "material_part"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "top_dummy_090",
+              "metrics": {
+                "precision": 0.9375,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 1,
+                "false_negative": 0
+              },
+              "differences": [
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "material_part"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "top_dummy_099",
+              "metrics": {
+                "precision": 0.9286,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 1,
+                "false_negative": 0
+              },
+              "differences": [
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "material_part"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            }
+          ],
+          "missing_actual_product_ids": [],
+          "extra_actual_product_ids": []
+        },
+        "dedup_metrics": {
+          "accuracy": 1.0,
+          "correct": 4,
+          "total": 4,
+          "min_score": 0.45,
+          "candidate_count": 32,
+          "pairs": [
+            {
+              "left_id": "outer_dummy_000",
+              "right_id": "outer_dummy_001",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 1.0,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "top_dummy_050",
+              "right_id": "top_dummy_051",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 1.0,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "outer_dummy_000",
+              "right_id": "top_dummy_050",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "outer_dummy_004",
+              "right_id": "outer_dummy_008",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            }
+          ]
+        }
+      },
+      "stdout_len": 8507,
+      "stderr": ""
+    },
+    {
+      "id": "real_sanity_actual_schema",
+      "argv": [
+        "C:\\Users\\gorhk\\MiniConda3\\python.exe",
+        "src/skills/product-agentizer/scripts/validate.py",
+        "tests/fixtures/real_sanity/actual_products.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "passed": true,
+      "stdout_json": {
+        "valid": true,
+        "checked": 10,
+        "errors": []
+      },
+      "stdout_len": 45,
+      "stderr": ""
+    },
+    {
+      "id": "real_sanity_eval_exploratory",
+      "argv": [
+        "C:\\Users\\gorhk\\MiniConda3\\python.exe",
+        "tests/evaluate_product_agentizer.py",
+        "--inputs",
+        "tests/fixtures/real_sanity/source_inputs.json",
+        "--expected",
+        "tests/fixtures/real_sanity/expected_products.json",
+        "--actual",
+        "tests/fixtures/real_sanity/actual_products.json",
+        "--dedup-labels",
+        "tests/fixtures/real_sanity/duplicate_labels.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "passed": true,
+      "stdout_json": {
+        "summary": {
+          "input_cases": 10,
+          "expected_products": 10,
+          "actual_products": 10,
+          "evaluated_fields": [
+            "title",
+            "category",
+            "subcategory",
+            "materials",
+            "fit",
+            "colors",
+            "seasons",
+            "tpo_tags",
+            "care",
+            "size_info",
+            "quality.missing_fields",
+            "quality.ambiguous_fields"
+          ]
+        },
+        "validations": [
+          {
+            "path": "tests\\fixtures\\real_sanity\\expected_products.json",
+            "exit_code": 0,
+            "valid": true,
+            "checked": 10,
+            "errors": [],
+            "stderr": ""
+          },
+          {
+            "path": "tests\\fixtures\\real_sanity\\actual_products.json",
+            "exit_code": 0,
+            "valid": true,
+            "checked": 10,
+            "errors": [],
+            "stderr": ""
+          }
+        ],
+        "attribute_metrics": {
+          "micro": {
+            "precision": 0.62,
+            "recall": 0.744,
+            "true_positive": 93,
+            "false_positive": 57,
+            "false_negative": 32
+          },
+          "by_field": {
+            "title": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 10,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "category": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 10,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "subcategory": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 10,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "materials": {
+              "precision": 0.7333,
+              "recall": 0.7333,
+              "true_positive": 11,
+              "false_positive": 4,
+              "false_negative": 4
+            },
+            "fit": {
+              "precision": 0.6667,
+              "recall": 0.2,
+              "true_positive": 2,
+              "false_positive": 1,
+              "false_negative": 8
+            },
+            "colors": {
+              "precision": 0.5455,
+              "recall": 0.6,
+              "true_positive": 6,
+              "false_positive": 5,
+              "false_negative": 4
+            },
+            "seasons": {
+              "precision": 0.8125,
+              "recall": 0.8667,
+              "true_positive": 13,
+              "false_positive": 3,
+              "false_negative": 2
+            },
+            "tpo_tags": {
+              "precision": 0.8438,
+              "recall": 1.0,
+              "true_positive": 27,
+              "false_positive": 5,
+              "false_negative": 0
+            },
+            "care": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 1,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "size_info": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "true_positive": 0,
+              "false_positive": 8,
+              "false_negative": 13
+            },
+            "quality.missing_fields": {
+              "precision": 0.0345,
+              "recall": 1.0,
+              "true_positive": 1,
+              "false_positive": 28,
+              "false_negative": 0
+            },
+            "quality.ambiguous_fields": {
+              "precision": 0.4,
+              "recall": 0.6667,
+              "true_positive": 2,
+              "false_positive": 3,
+              "false_negative": 1
+            }
+          },
+          "cases": [
+            {
+              "product_id": "real_outer_247_cashmere_blouson_3617977",
+              "metrics": {
+                "precision": 0.6,
+                "recall": 0.6923,
+                "true_positive": 9,
+                "false_positive": 6,
+                "false_negative": 4
+              },
+              "differences": [
+                {
+                  "field": "materials",
+                  "false_positive": [
+                    "unknown:cashmere:missing:null"
+                  ],
+                  "false_negative": [
+                    "unknown:cashmere:ambiguous:null"
+                  ]
+                },
+                {
+                  "field": "fit",
+                  "false_positive": [],
+                  "false_negative": [
+                    "regular"
+                  ]
+                },
+                {
+                  "field": "size_info",
+                  "false_positive": [],
+                  "false_negative": [
+                    "snippet 기반 제한 정보"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "care",
+                    "fit",
+                    "material_ratio",
+                    "size_info"
+                  ],
+                  "false_negative": []
+                },
+                {
+                  "field": "quality.ambiguous_fields",
+                  "false_positive": [
+                    "materials"
+                  ],
+                  "false_negative": [
+                    "material_ratio"
+                  ]
+                }
+              ]
+            },
+            {
+              "product_id": "real_outer_8seconds_jacket_4922894",
+              "metrics": {
+                "precision": 0.7143,
+                "recall": 0.7143,
+                "true_positive": 10,
+                "false_positive": 4,
+                "false_negative": 4
+              },
+              "differences": [
+                {
+                  "field": "fit",
+                  "false_positive": [
+                    "oversized"
+                  ],
+                  "false_negative": [
+                    "relaxed"
+                  ]
+                },
+                {
+                  "field": "seasons",
+                  "false_positive": [],
+                  "false_negative": [
+                    "fall",
+                    "spring"
+                  ]
+                },
+                {
+                  "field": "tpo_tags",
+                  "false_positive": [
+                    "guest_look"
+                  ],
+                  "false_negative": []
+                },
+                {
+                  "field": "size_info",
+                  "false_positive": [],
+                  "false_negative": [
+                    "snippet 기반 제한 정보"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "seasons",
+                    "size_info"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "real_outer_beanpole_linen_jacket_4308999",
+              "metrics": {
+                "precision": 0.7222,
+                "recall": 0.8125,
+                "true_positive": 13,
+                "false_positive": 5,
+                "false_negative": 3
+              },
+              "differences": [
+                {
+                  "field": "fit",
+                  "false_positive": [],
+                  "false_negative": [
+                    "regular"
+                  ]
+                },
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "L",
+                    "M",
+                    "S"
+                  ],
+                  "false_negative": [
+                    "S, M, L",
+                    "snippet 기반 제한 정보"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "care",
+                    "fit"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "real_outer_lenina_cardigan_4332165",
+              "metrics": {
+                "precision": 0.7857,
+                "recall": 0.8462,
+                "true_positive": 11,
+                "false_positive": 3,
+                "false_negative": 2
+              },
+              "differences": [
+                {
+                  "field": "fit",
+                  "false_positive": [],
+                  "false_negative": [
+                    "regular"
+                  ]
+                },
+                {
+                  "field": "size_info",
+                  "false_positive": [],
+                  "false_negative": [
+                    "snippet 기반 제한 정보"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "care",
+                    "fit",
+                    "size_info"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "real_outer_limelike_cardigan_2101205",
+              "metrics": {
+                "precision": 0.4706,
+                "recall": 0.5333,
+                "true_positive": 8,
+                "false_positive": 9,
+                "false_negative": 7
+              },
+              "differences": [
+                {
+                  "field": "materials",
+                  "false_positive": [
+                    "unknown:nylon:explicit:30",
+                    "unknown:polyester:explicit:10",
+                    "unknown:wool:explicit:50"
+                  ],
+                  "false_negative": [
+                    "shell:nylon:explicit:30",
+                    "shell:polyester:explicit:10",
+                    "shell:wool:explicit:50"
+                  ]
+                },
+                {
+                  "field": "fit",
+                  "false_positive": [],
+                  "false_negative": [
+                    "regular"
+                  ]
+                },
+                {
+                  "field": "colors",
+                  "false_positive": [
+                    "beige",
+                    "gray",
+                    "navy"
+                  ],
+                  "false_negative": [
+                    "multi"
+                  ]
+                },
+                {
+                  "field": "size_info",
+                  "false_positive": [],
+                  "false_negative": [
+                    "snippet 기반 제한 정보",
+                    "컬러 네이비, 그레이, 오트"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "care",
+                    "fit",
+                    "size_info"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "real_top_armedes_tee_4783312",
+              "metrics": {
+                "precision": 0.4444,
+                "recall": 0.6667,
+                "true_positive": 8,
+                "false_positive": 10,
+                "false_negative": 4
+              },
+              "differences": [
+                {
+                  "field": "fit",
+                  "false_positive": [],
+                  "false_negative": [
+                    "regular"
+                  ]
+                },
+                {
+                  "field": "colors",
+                  "false_positive": [
+                    "black",
+                    "white"
+                  ],
+                  "false_negative": [
+                    "multi"
+                  ]
+                },
+                {
+                  "field": "seasons",
+                  "false_positive": [
+                    "spring"
+                  ],
+                  "false_negative": []
+                },
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "2XL",
+                    "L",
+                    "M",
+                    "S",
+                    "XL"
+                  ],
+                  "false_negative": [
+                    "S, M, L, XL, 2XL",
+                    "snippet 기반 제한 정보"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "care",
+                    "fit"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "real_top_ms_basic_short_tee_1196892",
+              "metrics": {
+                "precision": 0.5385,
+                "recall": 0.7,
+                "true_positive": 7,
+                "false_positive": 6,
+                "false_negative": 3
+              },
+              "differences": [
+                {
+                  "field": "fit",
+                  "false_positive": [],
+                  "false_negative": [
+                    "regular"
+                  ]
+                },
+                {
+                  "field": "colors",
+                  "false_positive": [],
+                  "false_negative": [
+                    "white"
+                  ]
+                },
+                {
+                  "field": "seasons",
+                  "false_positive": [
+                    "spring"
+                  ],
+                  "false_negative": []
+                },
+                {
+                  "field": "tpo_tags",
+                  "false_positive": [
+                    "street"
+                  ],
+                  "false_negative": []
+                },
+                {
+                  "field": "size_info",
+                  "false_positive": [],
+                  "false_negative": [
+                    "snippet 기반 제한 정보"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "care",
+                    "colors",
+                    "fit",
+                    "size_info"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "real_top_ms_basic_tee_3661999",
+              "metrics": {
+                "precision": 0.5385,
+                "recall": 0.7,
+                "true_positive": 7,
+                "false_positive": 6,
+                "false_negative": 3
+              },
+              "differences": [
+                {
+                  "field": "fit",
+                  "false_positive": [],
+                  "false_negative": [
+                    "regular"
+                  ]
+                },
+                {
+                  "field": "colors",
+                  "false_positive": [],
+                  "false_negative": [
+                    "white"
+                  ]
+                },
+                {
+                  "field": "seasons",
+                  "false_positive": [
+                    "spring"
+                  ],
+                  "false_negative": []
+                },
+                {
+                  "field": "tpo_tags",
+                  "false_positive": [
+                    "street"
+                  ],
+                  "false_negative": []
+                },
+                {
+                  "field": "size_info",
+                  "false_positive": [],
+                  "false_negative": [
+                    "snippet 기반 제한 정보"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "care",
+                    "colors",
+                    "fit",
+                    "size_info"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "real_top_ms_linen_like_shirt_black_3054408",
+              "metrics": {
+                "precision": 0.7143,
+                "recall": 0.9091,
+                "true_positive": 10,
+                "false_positive": 4,
+                "false_negative": 1
+              },
+              "differences": [
+                {
+                  "field": "tpo_tags",
+                  "false_positive": [
+                    "commute"
+                  ],
+                  "false_negative": []
+                },
+                {
+                  "field": "size_info",
+                  "false_positive": [],
+                  "false_negative": [
+                    "snippet 기반 제한 정보"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "care",
+                    "size_info"
+                  ],
+                  "false_negative": []
+                },
+                {
+                  "field": "quality.ambiguous_fields",
+                  "false_positive": [
+                    "materials"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            },
+            {
+              "product_id": "real_top_ms_linen_like_shirt_navy_3054409",
+              "metrics": {
+                "precision": 0.7143,
+                "recall": 0.9091,
+                "true_positive": 10,
+                "false_positive": 4,
+                "false_negative": 1
+              },
+              "differences": [
+                {
+                  "field": "tpo_tags",
+                  "false_positive": [
+                    "commute"
+                  ],
+                  "false_negative": []
+                },
+                {
+                  "field": "size_info",
+                  "false_positive": [],
+                  "false_negative": [
+                    "snippet 기반 제한 정보"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "care",
+                    "size_info"
+                  ],
+                  "false_negative": []
+                },
+                {
+                  "field": "quality.ambiguous_fields",
+                  "false_positive": [
+                    "materials"
+                  ],
+                  "false_negative": []
+                }
+              ]
+            }
+          ],
+          "missing_actual_product_ids": [],
+          "extra_actual_product_ids": []
+        },
+        "dedup_metrics": {
+          "accuracy": 1.0,
+          "correct": 5,
+          "total": 5,
+          "min_score": 0.45,
+          "candidate_count": 7,
+          "pairs": [
+            {
+              "left_id": "real_outer_beanpole_linen_jacket_4308999",
+              "right_id": "real_top_armedes_tee_4783312",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "real_outer_limelike_cardigan_2101205",
+              "right_id": "real_top_ms_basic_tee_3661999",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "real_outer_8seconds_jacket_4922894",
+              "right_id": "real_top_ms_linen_like_shirt_black_3054408",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "real_outer_247_cashmere_blouson_3617977",
+              "right_id": "real_top_ms_linen_like_shirt_navy_3054409",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "real_outer_lenina_cardigan_4332165",
+              "right_id": "real_top_ms_basic_short_tee_1196892",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            }
+          ]
+        }
+      },
+      "stdout_len": 9510,
+      "stderr": ""
+    }
+  ],
+  "dedup_cross_category_check": {
+    "candidate_count": 333,
+    "high_confidence_cross_category_count": 0,
+    "examples": []
+  },
+  "acceptance_summary": {
+    "expanded_expected_schema_valid": true,
+    "codex_subset_schema_valid": true,
+    "real_sanity_schema_valid": true,
+    "all_commands_passed": true
+  }
+}

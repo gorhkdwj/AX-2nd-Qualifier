@@ -10,6 +10,52 @@
 
 ---
 
+### W-028 · S7.5 확장 검증 및 재현성 보존 구현
+**요청**
+- S8 패키징 전에 합성 더미 100건, Codex 실행 subset 20건, 실제 공개 샘플 10건으로 확장 검증을 수행하고, 입력·expected·actual·평가 결과·명령·환경·hash를 보존하는 계획을 구현
+
+**수행 작업**
+- `tools/generate_expanded_validation_fixtures.py` 작성: 합성 100건, Codex subset 20건, 실제 공개 snippet 10건, 각 expected JSON과 duplicate labels 생성
+- `tools/run_expanded_validation.py` 작성: schema 검증, attribute precision/recall, dedup accuracy, cross-category false duplicate, 실행 환경, 주요 파일 SHA-256을 결과 JSON으로 보존
+- Codex CLI로 subset 20건과 real sanity 10건을 실제 변환해 actual JSON으로 저장
+- `tests/evaluate_product_agentizer.py`가 custom fixture 경로와 Windows UTF-8 출력에 안정적으로 동작하도록 보완
+- `docs/s7-expanded-validation-report.md`와 `docs/s7-expanded-validation-results.json` 생성
+- 루트 `README.md`, `docs/README.md`, `docs/validation-plan.md`, `docs/submission-questions.md`의 검증 결과와 재현성 설명 갱신
+- 확장 검증 구현 중 실제 발생한 fixture·평가 래퍼 문제를 `Troubleshootinglog.md` T-004로 기록
+
+**변경 파일**
+- 생성: `tools/generate_expanded_validation_fixtures.py`, `tools/run_expanded_validation.py`
+- 생성: `tests/fixtures/expanded_dummy/*`, `tests/fixtures/codex_subset/*`, `tests/fixtures/real_sanity/*`
+- 생성: `docs/s7-expanded-validation-report.md`, `docs/s7-expanded-validation-results.json`
+- 수정: `tests/evaluate_product_agentizer.py`
+- 수정: `README.md`, `docs/README.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`, `docs/submission-questions.md`
+- 수정: `Decisionlog.md`, `Troubleshootinglog.md`, `Worklog.md`
+
+**검증**
+- 통과: `python tools\generate_expanded_validation_fixtures.py`
+- 통과: 합성 expected 100건 schema-valid 100%(100/100)
+- 통과: 합성 self-check micro precision 100.00%, micro recall 100.00%, dedup accuracy 100.00%(20/20)
+- 통과: Codex subset 20건 actual schema-valid 100%(20/20), micro precision 95.52%, micro recall 95.85%, dedup accuracy 100.00%(4/4)
+- 통과: 실제 공개 snippet 10건 actual schema-valid 100%(10/10), 자동 fetch 0건, 법적 적합/부적합 판정 0건, dedup accuracy 100.00%(5/5)
+- 통과: cross-category high-confidence false duplicate 0건
+- 통과: `python tools\run_expanded_validation.py` 결과 `all_commands_passed: true`
+- 통과: `python -m py_compile`로 신규/기존 검증 스크립트 문법 확인
+- 통과: `python tests\evaluate_product_agentizer.py`
+- 통과: `git diff --check`
+- 통과: 비밀정보 패턴 검색 0건
+- 확인: 실제 공개 snippet 비교 지표는 micro precision 62.00%, micro recall 74.40%이나, 짧은 공개 snippet sanity 분석 수치이며 acceptance threshold로 사용하지 않음
+
+**판단 근거**
+- 패키징 직전에는 “검증했다”는 서술보다, 보존된 입력과 actual output으로 같은 평가를 다시 실행할 수 있는지가 더 중요하다.
+- 실제 공개 샘플은 저작권·약관 리스크를 줄이기 위해 전체 상세페이지를 저장하지 않고 짧은 factual snippet과 URL 메타데이터만 남기는 것이 안전하다.
+- Codex actual은 재생성 시 모델 상태에 따라 달라질 수 있으므로, 이번 제출 기준 actual JSON을 fixture로 보존하고 재평가 명령을 고정했다.
+
+**결과**
+- 완료: S7.5 확장 검증 및 재현성 보존 구현 완료
+- 다음 단계: S8 최종 패키징 전 README·로그·비밀정보·zip 구조 최종 점검
+
+---
+
 ### W-027 · S7 제출 README 및 질문 5문항 답변 작성
 **요청**
 - 다음 작업 진행

@@ -1,0 +1,644 @@
+{
+  "products": [
+    {
+      "product_id": "real_outer_beanpole_linen_jacket_4308999",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/4308999",
+          "source_title": "빈폴 레이디스 리넨 체크 더블 재킷",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "빈폴 레이디스 리넨 체크 더블 재킷",
+          "category": "outer",
+          "subcategory": "jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "cotton",
+              "ratio": 50,
+              "ratio_status": "explicit",
+              "evidence": "겉감 면 50%, 마 50%"
+            },
+            {
+              "part": "shell",
+              "name": "linen",
+              "ratio": 50,
+              "ratio_status": "explicit",
+              "evidence": "겉감 면 50%, 마 50%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "beige"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "commute",
+            "formal",
+            "guest_look",
+            "layering"
+          ],
+          "care": [],
+          "size_info": [
+            "snippet 기반 제한 정보",
+            "S, M, L"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "베이지 레귤러핏 재킷",
+          "query_tags": [
+            "베이지 재킷",
+            "레귤러핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 beige, regular, jacket로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "real_outer_limelike_cardigan_2101205",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/2101205",
+          "source_title": "라임라이크 브이넥 크로스 가디건_3color",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "라임라이크 브이넥 크로스 가디건_3color",
+          "category": "outer",
+          "subcategory": "cardigan",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "wool",
+              "ratio": 50,
+              "ratio_status": "explicit",
+              "evidence": "울 50%, 폴리에스테르 10%, 나일론 30%"
+            },
+            {
+              "part": "shell",
+              "name": "polyester",
+              "ratio": 10,
+              "ratio_status": "explicit",
+              "evidence": "울 50%, 폴리에스테르 10%, 나일론 30%"
+            },
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 30,
+              "ratio_status": "explicit",
+              "evidence": "울 50%, 폴리에스테르 10%, 나일론 30%"
+            }
+          ],
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "multi"
+          ],
+          "seasons": [
+            "fall",
+            "winter"
+          ],
+          "tpo_tags": [
+            "daily",
+            "layering",
+            "commute"
+          ],
+          "care": [],
+          "size_info": [
+            "snippet 기반 제한 정보",
+            "컬러 네이비, 그레이, 오트"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "멀티 레귤러핏 가디건",
+          "query_tags": [
+            "멀티 가디건",
+            "레귤러핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 multi, regular, cardigan로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "real_outer_8seconds_jacket_4922894",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/4922894",
+          "source_title": "에잇세컨즈 쓰리버튼 세미 오버핏 자켓 블랙",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "에잇세컨즈 쓰리버튼 세미 오버핏 자켓 블랙",
+          "category": "outer",
+          "subcategory": "jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 폴리에스터 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "relaxed"
+          ],
+          "colors": [
+            "black"
+          ],
+          "seasons": [
+            "spring",
+            "fall"
+          ],
+          "tpo_tags": [
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "care": [
+            "dry_clean"
+          ],
+          "size_info": [
+            "snippet 기반 제한 정보"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블랙 릴랙스 핏 재킷",
+          "query_tags": [
+            "블랙 재킷",
+            "릴랙스 핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 black, relaxed, jacket로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "real_outer_247_cashmere_blouson_3617977",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/3617977",
+          "source_title": "247시리즈 캐시미어 블렌디드 블루종 자켓 BLACK",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "247시리즈 캐시미어 블렌디드 블루종 자켓 BLACK",
+          "category": "outer",
+          "subcategory": "jacket",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cashmere",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "캐시미어 블렌디드 소재"
+            }
+          ],
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "black"
+          ],
+          "seasons": [
+            "fall",
+            "winter"
+          ],
+          "tpo_tags": [
+            "daily",
+            "commute",
+            "layering"
+          ],
+          "care": [],
+          "size_info": [
+            "snippet 기반 제한 정보"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블랙 레귤러핏 재킷",
+          "query_tags": [
+            "블랙 재킷",
+            "레귤러핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 black, regular, jacket로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "real_outer_lenina_cardigan_4332165",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/4332165",
+          "source_title": "르니나 SALENA wool v neck cardigan_RED",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "르니나 SALENA wool v neck cardigan_RED",
+          "category": "outer",
+          "subcategory": "cardigan",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "wool",
+              "ratio": null,
+              "ratio_status": "missing",
+              "evidence": "wool v neck cardigan"
+            }
+          ],
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "red"
+          ],
+          "seasons": [
+            "fall",
+            "winter"
+          ],
+          "tpo_tags": [
+            "daily",
+            "layering",
+            "commute"
+          ],
+          "care": [],
+          "size_info": [
+            "snippet 기반 제한 정보"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "레드 레귤러핏 가디건",
+          "query_tags": [
+            "레드 가디건",
+            "레귤러핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 red, regular, cardigan로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "material_ratio"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "real_top_armedes_tee_4783312",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/4783312",
+          "source_title": "아르메데스 면 20수 아트그래픽 티셔츠",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "아르메데스 면 20수 아트그래픽 티셔츠",
+          "category": "top",
+          "subcategory": "tshirt",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cotton",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "소재 면 100%"
+            }
+          ],
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "multi"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual",
+            "street"
+          ],
+          "care": [],
+          "size_info": [
+            "snippet 기반 제한 정보",
+            "S, M, L, XL, 2XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "멀티 레귤러핏 티셔츠",
+          "query_tags": [
+            "멀티 티셔츠",
+            "레귤러핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 multi, regular, tshirt로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "real_top_ms_linen_like_shirt_black_3054408",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/3054408",
+          "source_title": "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 블랙",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 블랙",
+          "category": "top",
+          "subcategory": "shirt_blouse",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨과 유사한 질감"
+            }
+          ],
+          "fit": [
+            "relaxed"
+          ],
+          "colors": [
+            "black"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual"
+          ],
+          "care": [],
+          "size_info": [
+            "snippet 기반 제한 정보"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블랙 릴랙스 핏 셔츠",
+          "query_tags": [
+            "블랙 셔츠",
+            "릴랙스 핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 black, relaxed, shirt_blouse로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "real_top_ms_basic_tee_3661999",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/3661999",
+          "source_title": "무신사 스탠다드 베이식 크루 넥 티셔츠",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "무신사 스탠다드 베이식 크루 넥 티셔츠",
+          "category": "top",
+          "subcategory": "tshirt",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cotton",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "면 100% 코마사 20수 싱글 저지"
+            }
+          ],
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "white"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual"
+          ],
+          "care": [],
+          "size_info": [
+            "snippet 기반 제한 정보"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "화이트 레귤러핏 티셔츠",
+          "query_tags": [
+            "화이트 티셔츠",
+            "레귤러핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, regular, tshirt로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "real_top_ms_linen_like_shirt_navy_3054409",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/3054409",
+          "source_title": "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 네이비",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 네이비",
+          "category": "top",
+          "subcategory": "shirt_blouse",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨과 유사한 질감"
+            }
+          ],
+          "fit": [
+            "relaxed"
+          ],
+          "colors": [
+            "navy"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual"
+          ],
+          "care": [],
+          "size_info": [
+            "snippet 기반 제한 정보"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "네이비 릴랙스 핏 셔츠",
+          "query_tags": [
+            "네이비 셔츠",
+            "릴랙스 핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 navy, relaxed, shirt_blouse로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "real_top_ms_basic_short_tee_1196892",
+      "structured_product": {
+        "schema_version": "0.1.0",
+        "source": {
+          "source_url": "https://www.musinsa.com/products/1196892",
+          "source_title": "무신사 스탠다드 베이식 크루 넥 반팔 티셔츠",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "무신사 스탠다드 베이식 크루 넥 반팔 티셔츠",
+          "category": "top",
+          "subcategory": "tshirt",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cotton",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "면 100% 코마사 20수 싱글 저지"
+            }
+          ],
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "white"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual"
+          ],
+          "care": [],
+          "size_info": [
+            "snippet 기반 제한 정보"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "화이트 레귤러핏 티셔츠",
+          "query_tags": [
+            "화이트 티셔츠",
+            "레귤러핏 상품"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, regular, tshirt로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    }
+  ]
+}

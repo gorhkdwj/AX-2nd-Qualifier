@@ -26,7 +26,7 @@
 플러그인이 상품정보 텍스트를 다룰 때, 검증용 데이터는 아래 원칙을 따른다. 선정 전 후보 방향에서 정리한 안전성 검토 이력은 `docs/archive/plugin-directions_PRE_SELECTION.md`에 보관한다.
 - **도구 정확성 검증 = 합성(더미) 픽스처 우선**: 정답 라벨을 아는 통제된 입력(정상/경계/오류/부정 케이스)을 직접 만들어 precision/recall을 측정한다.
 - **문제 실재성 = 공개 출처 인용**: 인터뷰 공개영상, 전사본, 기업 조사 근거를 URL·확인일과 함께 기록한다.
-- **현실성 점검 = 소수 공개 샘플**: 공개 무신사 상품페이지 3~5건은 출처 메타데이터와 사람이 붙여넣은 텍스트로 sanity check한다. 플러그인이 URL을 자동으로 가져오지 않는다.
+- **현실성 점검 = 소수 공개 샘플**: 공개 무신사 상품페이지 10건은 출처 메타데이터와 사람이 붙여넣은 짧은 factual snippet으로 sanity check한다. 플러그인이 URL을 자동으로 가져오지 않는다.
 - **입력은 BYO 텍스트**: 사용자가 상품 상세 텍스트를 직접 붙여넣는다. URL은 출처 기록용 메타데이터일 뿐 실행 입력을 자동 수집하는 주소가 아니다.
 - **지식원 = 공개 표준·공개 taxonomy·프로젝트 내 정적 데이터**: 내부 카탈로그, 판매 데이터, 비공개 고객 데이터는 사용하지 않는다.
 - **소재 혼용률 = 입력 근거 기반 구조화만 수행**: 숫자 혼용률과 부위는 입력 텍스트에 명시된 경우에만 기록한다. 적법/위법 판정은 하지 않고, 미기재·모호 표현은 `quality`에 남긴다.
@@ -36,9 +36,11 @@
 - 속성 추출: 필수 속성 기준 precision/recall을 산출하고, 실패 사례를 표로 기록한다. S5 더미 fixture 기준 현재 결과는 micro precision 98.55%, micro recall 88.31%다.
 - 중복 감지: 더미 중복쌍/비중복쌍에서 정확도와 오탐·미탐 사례를 기록한다. S5 더미 fixture 기준 현재 결과는 duplicate accuracy 100.00%(10/10)다.
 - 스키마 검증: 정상 샘플은 통과, 필수 필드 누락·타입 오류·지원 범위 밖 카테고리·혼용률 상태 불일치는 실패해야 한다.
+- S7.5 확장 검증: 합성 expected 100건 schema-valid 100%, Codex subset 20건 actual schema-valid 100%, Codex subset micro precision 95% 이상, micro recall 85% 이상, dedup accuracy 95% 이상, cross-category high-confidence false duplicate 0건을 목표로 한다.
+- S7.5 현재 결과: 합성 expected 100/100 schema-valid, 합성 self-check precision/recall 100.00%, 합성 dedup 100.00%(20/20), Codex subset schema-valid 20/20, micro precision 95.52%, micro recall 95.85%, 실제 공개 snippet actual schema-valid 10/10, 자동 fetch 0건, 법적 적합/부적합 판정 0건이다. 상세 원본은 `docs/s7-expanded-validation-results.json`에 보존한다.
 
 ## 미검증 범위
 - Codex CLI에서 더미 fixture 1건을 구조화 JSON으로 변환하고 질의 설명에 활용하는 흐름은 S6에서 검증했다. 단, 전역 plugin list/add 명령은 기존 사용자 설정의 stale marketplace 때문에 완전 자동화하지 못했고, 임시 `CODEX_HOME`에서 로컬 플러그인 설치를 별도 확인했다.
-- 실제 공개 무신사 상품페이지 3~5건의 사람이 붙여넣은 텍스트 기반 sanity check는 아직 미검증이다.
+- 실제 공개 무신사 상품페이지 10건의 사람이 붙여넣은 짧은 snippet 기반 sanity check는 S7.5에서 수행했다. 다만 이는 전체 상세페이지 성능 벤치마크가 아니라 안전한 현실성 점검이므로, 실제 공개 샘플의 precision/recall은 acceptance threshold로 쓰지 않는다.
 - 실제 무신사 내부 카탈로그 전체 커버리지와 운영 적용 효과는 비공개 데이터가 필요하므로 검증 대상이 아니다.
 - 심사위원의 실제 채점 기준(AI+심사자 평가)은 외부 프로세스이므로 이 문서로 사전 검증 불가.

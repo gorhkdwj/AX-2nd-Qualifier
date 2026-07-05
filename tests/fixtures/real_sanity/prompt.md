@@ -1,0 +1,121 @@
+# Real sanity conversion prompt
+
+Use `src/skills/product-agentizer/SKILL.md`, `references/schema.json`, and `references/taxonomy.json`.
+Convert every case below into a raw JSON object with this exact top-level shape:
+
+```json
+{"products":[{"product_id":"...","structured_product":{}}]}
+```
+
+Rules:
+- Return raw JSON only, with no Markdown fences.
+- Do not fetch URLs. URLs are source metadata only.
+- Do not judge legal label compliance.
+- Never estimate fabric ratios. Use `missing` or `ambiguous` when the input does not provide a numeric ratio.
+- Preserve product_id values exactly.
+
+Input cases:
+{
+  "cases": [
+    {
+      "product_id": "real_outer_beanpole_linen_jacket_4308999",
+      "source_title": "빈폴 레이디스 리넨 체크 더블 재킷",
+      "source_url": "https://www.musinsa.com/products/4308999",
+      "category_hint": "outer",
+      "locale": "ko-KR",
+      "checked_at": "2026-07-05",
+      "source_method": "manual_short_public_snippet",
+      "product_text": "상품명: 빈폴 레이디스 리넨 체크 더블 재킷. 제품분류 재킷. 색상 베이지. 사이즈 S, M, L. 소재 겉감 면 50%, 마 50%, 안감 폴리에스터 100%."
+    },
+    {
+      "product_id": "real_outer_limelike_cardigan_2101205",
+      "source_title": "라임라이크 브이넥 크로스 가디건_3color",
+      "source_url": "https://www.musinsa.com/products/2101205",
+      "category_hint": "outer",
+      "locale": "ko-KR",
+      "checked_at": "2026-07-05",
+      "source_method": "manual_short_public_snippet",
+      "product_text": "상품명: 라임라이크 브이넥 크로스 가디건_3color. 제품분류 아우터 카디건. 컬러 네이비, 그레이, 오트. 혼용률 울 50%, 폴리에스테르 10%, 나일론 30%."
+    },
+    {
+      "product_id": "real_outer_8seconds_jacket_4922894",
+      "source_title": "에잇세컨즈 쓰리버튼 세미 오버핏 자켓 블랙",
+      "source_url": "https://www.musinsa.com/products/4922894",
+      "category_hint": "outer",
+      "locale": "ko-KR",
+      "checked_at": "2026-07-05",
+      "source_method": "manual_short_public_snippet",
+      "product_text": "상품명: 에잇세컨즈 쓰리버튼 세미 오버핏 자켓 블랙. 제품분류 재킷. 색상 블랙. 겉감 폴리에스터 100%, 안감 폴리에스터 100%. 반드시 드라이크리닝."
+    },
+    {
+      "product_id": "real_outer_247_cashmere_blouson_3617977",
+      "source_title": "247시리즈 캐시미어 블렌디드 블루종 자켓 BLACK",
+      "source_url": "https://www.musinsa.com/products/3617977",
+      "category_hint": "outer",
+      "locale": "ko-KR",
+      "checked_at": "2026-07-05",
+      "source_method": "manual_short_public_snippet",
+      "product_text": "상품명: 247시리즈 캐시미어 블렌디드 블루종 자켓 BLACK. 제품분류 자켓. 컬러 블랙. 캐시미어 블렌디드 소재로 소개되며 정확한 숫자 혼용률은 snippet에 없습니다."
+    },
+    {
+      "product_id": "real_outer_lenina_cardigan_4332165",
+      "source_title": "르니나 SALENA wool v neck cardigan_RED",
+      "source_url": "https://www.musinsa.com/products/4332165",
+      "category_hint": "outer",
+      "locale": "ko-KR",
+      "checked_at": "2026-07-05",
+      "source_method": "manual_short_public_snippet",
+      "product_text": "상품명: 르니나 SALENA wool v neck cardigan_RED. 제품분류 아우터 카디건. 컬러 레드. wool v neck cardigan 이름에서 울 소재 단서가 있으나 숫자 혼용률은 snippet에 없습니다."
+    },
+    {
+      "product_id": "real_top_armedes_tee_4783312",
+      "source_title": "아르메데스 면 20수 아트그래픽 티셔츠",
+      "source_url": "https://www.musinsa.com/products/4783312",
+      "category_hint": "top",
+      "locale": "ko-KR",
+      "checked_at": "2026-07-05",
+      "source_method": "manual_short_public_snippet",
+      "product_text": "상품명: 아르메데스 면 20수 아트그래픽 티셔츠. 제품분류 티셔츠. 컬러 블랙, 화이트. 사이즈 S, M, L, XL, 2XL. 소재 면 100%."
+    },
+    {
+      "product_id": "real_top_ms_linen_like_shirt_black_3054408",
+      "source_title": "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 블랙",
+      "source_url": "https://www.musinsa.com/products/3054408",
+      "category_hint": "top",
+      "locale": "ko-KR",
+      "checked_at": "2026-07-05",
+      "source_method": "manual_short_public_snippet",
+      "product_text": "상품명: 무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 블랙. 제품분류 상의 셔츠/블라우스. 컬러 블랙. 여유 있는 릴렉스 핏. 린넨과 유사한 질감의 여름 셔츠."
+    },
+    {
+      "product_id": "real_top_ms_basic_tee_3661999",
+      "source_title": "무신사 스탠다드 베이식 크루 넥 티셔츠",
+      "source_url": "https://www.musinsa.com/products/3661999",
+      "category_hint": "top",
+      "locale": "ko-KR",
+      "checked_at": "2026-07-05",
+      "source_method": "manual_short_public_snippet",
+      "product_text": "상품명: 무신사 스탠다드 베이식 크루 넥 티셔츠. 제품분류 티셔츠. 촘촘한 면 100% 코마사 20수 싱글 저지 원단. 편안한 착용감."
+    },
+    {
+      "product_id": "real_top_ms_linen_like_shirt_navy_3054409",
+      "source_title": "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 네이비",
+      "source_url": "https://www.musinsa.com/products/3054409",
+      "category_hint": "top",
+      "locale": "ko-KR",
+      "checked_at": "2026-07-05",
+      "source_method": "manual_short_public_snippet",
+      "product_text": "상품명: 무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 네이비. 제품분류 상의 셔츠/블라우스. 컬러 네이비. 여유 있는 릴렉스 핏. 린넨과 유사한 질감의 여름 셔츠."
+    },
+    {
+      "product_id": "real_top_ms_basic_short_tee_1196892",
+      "source_title": "무신사 스탠다드 베이식 크루 넥 반팔 티셔츠",
+      "source_url": "https://www.musinsa.com/products/1196892",
+      "category_hint": "top",
+      "locale": "ko-KR",
+      "checked_at": "2026-07-05",
+      "source_method": "manual_short_public_snippet",
+      "product_text": "상품명: 무신사 스탠다드 베이식 크루 넥 반팔 티셔츠. 제품분류 티셔츠. 면 100% 코마사 20수 싱글 저지 원단. 편안한 착용감."
+    }
+  ]
+}
