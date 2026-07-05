@@ -3,16 +3,17 @@
     {
       "product_id": "outer_dummy_000",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_000",
-          "source_title": "블랙 슬림핏 재킷 000",
+          "source_title": "블랙 슬림핏 스타디움 재킷 000",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "블랙 슬림핏 재킷 000",
+          "title": "블랙 슬림핏 스타디움 재킷 000",
           "category": "outer",
           "subcategory": "jacket",
+          "detail_type": "stadium_jacket",
           "materials": [
             {
               "part": "shell",
@@ -53,9 +54,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블랙 슬림핏 재킷",
+          "search_summary": "블랙 슬림핏 스타디움 재킷",
           "query_tags": [
-            "블랙 재킷",
+            "블랙 스타디움 재킷",
             "슬림핏 상품"
           ],
           "explainable_reasons": [
@@ -73,16 +74,17 @@
     {
       "product_id": "outer_dummy_001",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_001",
-          "source_title": "블랙 슬림핏 재킷 000 리오더",
+          "source_title": "블랙 슬림핏 스타디움 재킷 000 리오더",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "블랙 슬림핏 재킷 000 리오더",
+          "title": "블랙 슬림핏 스타디움 재킷 000 리오더",
           "category": "outer",
           "subcategory": "jacket",
+          "detail_type": "stadium_jacket",
           "materials": [
             {
               "part": "shell",
@@ -123,9 +125,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블랙 슬림핏 재킷",
+          "search_summary": "블랙 슬림핏 스타디움 재킷",
           "query_tags": [
-            "블랙 재킷",
+            "블랙 스타디움 재킷",
             "슬림핏 상품"
           ],
           "explainable_reasons": [
@@ -143,16 +145,17 @@
     {
       "product_id": "outer_dummy_002",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_002",
-          "source_title": "네이비 오버핏 코트 002",
+          "source_title": "네이비 오버핏 플리스/뽀글이 002",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "네이비 오버핏 코트 002",
+          "title": "네이비 오버핏 플리스/뽀글이 002",
           "category": "outer",
-          "subcategory": "coat",
+          "subcategory": "jacket",
+          "detail_type": "fleece_jacket",
           "materials": [
             {
               "part": "unknown",
@@ -186,13 +189,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "네이비 오버핏 코트",
+          "search_summary": "네이비 오버핏 플리스/뽀글이",
           "query_tags": [
-            "네이비 코트",
+            "네이비 플리스/뽀글이",
             "오버핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 navy, oversized, coat로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 navy, oversized, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -208,16 +211,17 @@
     {
       "product_id": "outer_dummy_003",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_003",
-          "source_title": "그린 레귤러핏 가디건 003",
+          "source_title": "그린 레귤러핏 아노락 재킷 003",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그린 레귤러핏 가디건 003",
+          "title": "그린 레귤러핏 아노락 재킷 003",
           "category": "outer",
-          "subcategory": "cardigan",
+          "subcategory": "jacket",
+          "detail_type": "anorak_jacket",
           "materials": [
             {
               "part": "unknown",
@@ -257,13 +261,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그린 레귤러핏 가디건",
+          "search_summary": "그린 레귤러핏 아노락 재킷",
           "query_tags": [
-            "그린 가디건",
+            "그린 아노락 재킷",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 green, regular, cardigan로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 green, regular, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -279,16 +283,17 @@
     {
       "product_id": "outer_dummy_004",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_004",
-          "source_title": "핑크 롱라인 베스트 004",
+          "source_title": "핑크 롱라인 슈트/블레이저 재킷 004",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "핑크 롱라인 베스트 004",
+          "title": "핑크 롱라인 슈트/블레이저 재킷 004",
           "category": "outer",
-          "subcategory": "vest",
+          "subcategory": "jacket",
+          "detail_type": "suit_blazer_jacket",
           "materials": [
             {
               "part": "shell",
@@ -328,13 +333,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "핑크 롱라인 베스트",
+          "search_summary": "핑크 롱라인 슈트/블레이저 재킷",
           "query_tags": [
-            "핑크 베스트",
+            "핑크 슈트/블레이저 재킷",
             "롱라인 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 pink, longline, vest로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 pink, longline, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -348,16 +353,17 @@
     {
       "product_id": "outer_dummy_005",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_005",
-          "source_title": "화이트 릴랙스 핏 후드 집업 005",
+          "source_title": "화이트 릴랙스 핏 사파리/헌팅 재킷 005",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "화이트 릴랙스 핏 후드 집업 005",
+          "title": "화이트 릴랙스 핏 사파리/헌팅 재킷 005",
           "category": "outer",
-          "subcategory": "hoodie_zipup",
+          "subcategory": "jacket",
+          "detail_type": "safari_hunting_jacket",
           "materials": [
             {
               "part": "shell",
@@ -398,13 +404,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "화이트 릴랙스 핏 후드 집업",
+          "search_summary": "화이트 릴랙스 핏 사파리/헌팅 재킷",
           "query_tags": [
-            "화이트 후드 집업",
+            "화이트 사파리/헌팅 재킷",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, relaxed, hoodie_zipup로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, relaxed, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -418,16 +424,17 @@
     {
       "product_id": "outer_dummy_006",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_006",
-          "source_title": "베이지 박시핏 재킷 006",
+          "source_title": "베이지 박시핏 레더/라이더스 재킷 006",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "베이지 박시핏 재킷 006",
+          "title": "베이지 박시핏 레더/라이더스 재킷 006",
           "category": "outer",
           "subcategory": "jacket",
+          "detail_type": "leather_rider_jacket",
           "materials": [
             {
               "part": "fill",
@@ -467,9 +474,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "베이지 박시핏 재킷",
+          "search_summary": "베이지 박시핏 레더/라이더스 재킷",
           "query_tags": [
-            "베이지 재킷",
+            "베이지 레더/라이더스 재킷",
             "박시핏 상품"
           ],
           "explainable_reasons": [
@@ -487,16 +494,17 @@
     {
       "product_id": "outer_dummy_007",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_007",
-          "source_title": "블루 크롭 핏 점퍼 007",
+          "source_title": "블루 크롭 핏 트레이닝 재킷 007",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "블루 크롭 핏 점퍼 007",
+          "title": "블루 크롭 핏 트레이닝 재킷 007",
           "category": "outer",
-          "subcategory": "jumper",
+          "subcategory": "jacket",
+          "detail_type": "training_jacket",
           "materials": [
             {
               "part": "shell",
@@ -537,13 +545,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블루 크롭 핏 점퍼",
+          "search_summary": "블루 크롭 핏 트레이닝 재킷",
           "query_tags": [
-            "블루 점퍼",
+            "블루 트레이닝 재킷",
             "크롭 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 blue, cropped, jumper로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 blue, cropped, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -557,16 +565,17 @@
     {
       "product_id": "outer_dummy_008",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_008",
-          "source_title": "카키 슬림핏 코트 008",
+          "source_title": "카키 슬림핏 나일론/코치 재킷 008",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "카키 슬림핏 코트 008",
+          "title": "카키 슬림핏 나일론/코치 재킷 008",
           "category": "outer",
-          "subcategory": "coat",
+          "subcategory": "jacket",
+          "detail_type": "nylon_coach_jacket",
           "materials": [
             {
               "part": "shell",
@@ -606,13 +615,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "카키 슬림핏 코트",
+          "search_summary": "카키 슬림핏 나일론/코치 재킷",
           "query_tags": [
-            "카키 코트",
+            "카키 나일론/코치 재킷",
             "슬림핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 khaki, slim, coat로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 khaki, slim, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -628,16 +637,17 @@
     {
       "product_id": "outer_dummy_009",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_009",
-          "source_title": "옐로우 스트레이트 핏 가디건 009",
+          "source_title": "옐로우 스트레이트 핏 블루종/MA-1 009",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "옐로우 스트레이트 핏 가디건 009",
+          "title": "옐로우 스트레이트 핏 블루종/MA-1 009",
           "category": "outer",
-          "subcategory": "cardigan",
+          "subcategory": "jacket",
+          "detail_type": "blouson_ma1",
           "materials": [
             {
               "part": "shell",
@@ -670,13 +680,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "옐로우 스트레이트 핏 가디건",
+          "search_summary": "옐로우 스트레이트 핏 블루종/MA-1",
           "query_tags": [
-            "옐로우 가디건",
+            "옐로우 블루종/MA-1",
             "스트레이트 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 yellow, straight, cardigan로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 yellow, straight, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -692,16 +702,17 @@
     {
       "product_id": "outer_dummy_010",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_010",
-          "source_title": "아이보리 오버핏 베스트 010",
+          "source_title": "아이보리 오버핏 무스탕/퍼 010",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "아이보리 오버핏 베스트 010",
+          "title": "아이보리 오버핏 무스탕/퍼 010",
           "category": "outer",
-          "subcategory": "vest",
+          "subcategory": "jumper",
+          "detail_type": "mustang_fur",
           "materials": [
             {
               "part": "shell",
@@ -742,13 +753,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "아이보리 오버핏 베스트",
+          "search_summary": "아이보리 오버핏 무스탕/퍼",
           "query_tags": [
-            "아이보리 베스트",
+            "아이보리 무스탕/퍼",
             "오버핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 ivory, oversized, vest로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 ivory, oversized, jumper로 정규화했습니다."
           ]
         },
         "quality": {
@@ -762,16 +773,17 @@
     {
       "product_id": "outer_dummy_011",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_011",
-          "source_title": "아이보리 오버핏 베스트 010 리오더",
+          "source_title": "아이보리 오버핏 무스탕/퍼 010 리오더",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "아이보리 오버핏 베스트 010 리오더",
+          "title": "아이보리 오버핏 무스탕/퍼 010 리오더",
           "category": "outer",
-          "subcategory": "vest",
+          "subcategory": "jumper",
+          "detail_type": "mustang_fur",
           "materials": [
             {
               "part": "shell",
@@ -812,13 +824,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "아이보리 오버핏 베스트",
+          "search_summary": "아이보리 오버핏 무스탕/퍼",
           "query_tags": [
-            "아이보리 베스트",
+            "아이보리 무스탕/퍼",
             "오버핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 ivory, oversized, vest로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 ivory, oversized, jumper로 정규화했습니다."
           ]
         },
         "quality": {
@@ -832,16 +844,17 @@
     {
       "product_id": "outer_dummy_012",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_012",
-          "source_title": "데님 블루 롱라인 재킷 012",
+          "source_title": "데님 블루 롱라인 롱패딩/헤비 아우터 012",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "데님 블루 롱라인 재킷 012",
+          "title": "데님 블루 롱라인 롱패딩/헤비 아우터 012",
           "category": "outer",
-          "subcategory": "jacket",
+          "subcategory": "jumper",
+          "detail_type": "long_padding_heavy_outer",
           "materials": [
             {
               "part": "unknown",
@@ -875,13 +888,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "데님 블루 롱라인 재킷",
+          "search_summary": "데님 블루 롱라인 롱패딩/헤비 아우터",
           "query_tags": [
-            "데님 블루 재킷",
+            "데님 블루 롱패딩/헤비 아우터",
             "롱라인 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 denim_blue, longline, jacket로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 denim_blue, longline, jumper로 정규화했습니다."
           ]
         },
         "quality": {
@@ -897,16 +910,17 @@
     {
       "product_id": "outer_dummy_013",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_013",
-          "source_title": "레드 릴랙스 핏 점퍼 013",
+          "source_title": "레드 릴랙스 핏 겨울 기타 코트 013",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "레드 릴랙스 핏 점퍼 013",
+          "title": "레드 릴랙스 핏 겨울 기타 코트 013",
           "category": "outer",
-          "subcategory": "jumper",
+          "subcategory": "coat",
+          "detail_type": "winter_other_coat",
           "materials": [
             {
               "part": "unknown",
@@ -946,13 +960,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "레드 릴랙스 핏 점퍼",
+          "search_summary": "레드 릴랙스 핏 겨울 기타 코트",
           "query_tags": [
-            "레드 점퍼",
+            "레드 겨울 기타 코트",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 red, relaxed, jumper로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 red, relaxed, coat로 정규화했습니다."
           ]
         },
         "quality": {
@@ -968,16 +982,17 @@
     {
       "product_id": "outer_dummy_014",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_014",
-          "source_title": "블랙 박시핏 코트 014",
+          "source_title": "블랙 박시핏 겨울 더블 코트 014",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "블랙 박시핏 코트 014",
+          "title": "블랙 박시핏 겨울 더블 코트 014",
           "category": "outer",
           "subcategory": "coat",
+          "detail_type": "winter_double_coat",
           "materials": [
             {
               "part": "shell",
@@ -1017,9 +1032,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블랙 박시핏 코트",
+          "search_summary": "블랙 박시핏 겨울 더블 코트",
           "query_tags": [
-            "블랙 코트",
+            "블랙 겨울 더블 코트",
             "박시핏 상품"
           ],
           "explainable_reasons": [
@@ -1037,16 +1052,17 @@
     {
       "product_id": "outer_dummy_015",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_015",
-          "source_title": "그레이 크롭 핏 가디건 015",
+          "source_title": "그레이 크롭 핏 겨울 싱글 코트 015",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그레이 크롭 핏 가디건 015",
+          "title": "그레이 크롭 핏 겨울 싱글 코트 015",
           "category": "outer",
-          "subcategory": "cardigan",
+          "subcategory": "coat",
+          "detail_type": "winter_single_coat",
           "materials": [
             {
               "part": "shell",
@@ -1087,13 +1103,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그레이 크롭 핏 가디건",
+          "search_summary": "그레이 크롭 핏 겨울 싱글 코트",
           "query_tags": [
-            "그레이 가디건",
+            "그레이 겨울 싱글 코트",
             "크롭 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 gray, cropped, cardigan로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 gray, cropped, coat로 정규화했습니다."
           ]
         },
         "quality": {
@@ -1107,16 +1123,17 @@
     {
       "product_id": "outer_dummy_016",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_016",
-          "source_title": "네이비 슬림핏 베스트 016",
+          "source_title": "네이비 슬림핏 환절기 코트 016",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "네이비 슬림핏 베스트 016",
+          "title": "네이비 슬림핏 환절기 코트 016",
           "category": "outer",
-          "subcategory": "vest",
+          "subcategory": "coat",
+          "detail_type": "transitional_coat",
           "materials": [
             {
               "part": "fill",
@@ -1156,13 +1173,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "네이비 슬림핏 베스트",
+          "search_summary": "네이비 슬림핏 환절기 코트",
           "query_tags": [
-            "네이비 베스트",
+            "네이비 환절기 코트",
             "슬림핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 navy, slim, vest로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 navy, slim, coat로 정규화했습니다."
           ]
         },
         "quality": {
@@ -1176,16 +1193,17 @@
     {
       "product_id": "outer_dummy_017",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_017",
-          "source_title": "그린 스트레이트 핏 후드 집업 017",
+          "source_title": "그린 스트레이트 핏 카디건 017",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그린 스트레이트 핏 후드 집업 017",
+          "title": "그린 스트레이트 핏 카디건 017",
           "category": "outer",
-          "subcategory": "hoodie_zipup",
+          "subcategory": "cardigan",
+          "detail_type": "cardigan",
           "materials": [
             {
               "part": "shell",
@@ -1226,13 +1244,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그린 스트레이트 핏 후드 집업",
+          "search_summary": "그린 스트레이트 핏 카디건",
           "query_tags": [
-            "그린 후드 집업",
+            "그린 카디건",
             "스트레이트 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 green, straight, hoodie_zipup로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 green, straight, cardigan로 정규화했습니다."
           ]
         },
         "quality": {
@@ -1246,16 +1264,17 @@
     {
       "product_id": "outer_dummy_018",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_018",
-          "source_title": "핑크 오버핏 재킷 018",
+          "source_title": "핑크 오버핏 베스트 018",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "핑크 오버핏 재킷 018",
+          "title": "핑크 오버핏 베스트 018",
           "category": "outer",
-          "subcategory": "jacket",
+          "subcategory": "vest",
+          "detail_type": "vest",
           "materials": [
             {
               "part": "shell",
@@ -1295,13 +1314,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "핑크 오버핏 재킷",
+          "search_summary": "핑크 오버핏 베스트",
           "query_tags": [
-            "핑크 재킷",
+            "핑크 베스트",
             "오버핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 pink, oversized, jacket로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 pink, oversized, vest로 정규화했습니다."
           ]
         },
         "quality": {
@@ -1317,16 +1336,17 @@
     {
       "product_id": "outer_dummy_019",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_019",
-          "source_title": "화이트 레귤러핏 점퍼 019",
+          "source_title": "화이트 레귤러핏 경량 패딩/패딩 베스트 019",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "화이트 레귤러핏 점퍼 019",
+          "title": "화이트 레귤러핏 경량 패딩/패딩 베스트 019",
           "category": "outer",
-          "subcategory": "jumper",
+          "subcategory": "vest",
+          "detail_type": "lightweight_padding_vest",
           "materials": [
             {
               "part": "shell",
@@ -1359,13 +1379,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "화이트 레귤러핏 점퍼",
+          "search_summary": "화이트 레귤러핏 경량 패딩/패딩 베스트",
           "query_tags": [
-            "화이트 점퍼",
+            "화이트 경량 패딩/패딩 베스트",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, regular, jumper로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, regular, vest로 정규화했습니다."
           ]
         },
         "quality": {
@@ -1381,16 +1401,17 @@
     {
       "product_id": "outer_dummy_020",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_020",
-          "source_title": "베이지 롱라인 코트 020",
+          "source_title": "베이지 롱라인 후드 집업 020",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "베이지 롱라인 코트 020",
+          "title": "베이지 롱라인 후드 집업 020",
           "category": "outer",
-          "subcategory": "coat",
+          "subcategory": "hoodie_zipup",
+          "detail_type": "hoodie_zipup",
           "materials": [
             {
               "part": "shell",
@@ -1431,13 +1452,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "베이지 롱라인 코트",
+          "search_summary": "베이지 롱라인 후드 집업",
           "query_tags": [
-            "베이지 코트",
+            "베이지 후드 집업",
             "롱라인 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 beige, longline, coat로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 beige, longline, hoodie_zipup로 정규화했습니다."
           ]
         },
         "quality": {
@@ -1451,16 +1472,17 @@
     {
       "product_id": "outer_dummy_021",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_021",
-          "source_title": "베이지 롱라인 코트 020 리오더",
+          "source_title": "베이지 롱라인 후드 집업 020 리오더",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "베이지 롱라인 코트 020 리오더",
+          "title": "베이지 롱라인 후드 집업 020 리오더",
           "category": "outer",
-          "subcategory": "coat",
+          "subcategory": "hoodie_zipup",
+          "detail_type": "hoodie_zipup",
           "materials": [
             {
               "part": "shell",
@@ -1501,13 +1523,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "베이지 롱라인 코트",
+          "search_summary": "베이지 롱라인 후드 집업",
           "query_tags": [
-            "베이지 코트",
+            "베이지 후드 집업",
             "롱라인 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 beige, longline, coat로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 beige, longline, hoodie_zipup로 정규화했습니다."
           ]
         },
         "quality": {
@@ -1521,16 +1543,17 @@
     {
       "product_id": "outer_dummy_022",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_022",
-          "source_title": "카키 박시핏 베스트 022",
+          "source_title": "카키 박시핏 스타디움 재킷 022",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "카키 박시핏 베스트 022",
+          "title": "카키 박시핏 스타디움 재킷 022",
           "category": "outer",
-          "subcategory": "vest",
+          "subcategory": "jacket",
+          "detail_type": "stadium_jacket",
           "materials": [
             {
               "part": "unknown",
@@ -1564,13 +1587,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "카키 박시핏 베스트",
+          "search_summary": "카키 박시핏 스타디움 재킷",
           "query_tags": [
-            "카키 베스트",
+            "카키 스타디움 재킷",
             "박시핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 khaki, boxy, vest로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 khaki, boxy, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -1586,16 +1609,17 @@
     {
       "product_id": "outer_dummy_023",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_023",
-          "source_title": "옐로우 크롭 핏 후드 집업 023",
+          "source_title": "옐로우 크롭 핏 트러커 재킷 023",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "옐로우 크롭 핏 후드 집업 023",
+          "title": "옐로우 크롭 핏 트러커 재킷 023",
           "category": "outer",
-          "subcategory": "hoodie_zipup",
+          "subcategory": "jacket",
+          "detail_type": "trucker_jacket",
           "materials": [
             {
               "part": "unknown",
@@ -1635,13 +1659,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "옐로우 크롭 핏 후드 집업",
+          "search_summary": "옐로우 크롭 핏 트러커 재킷",
           "query_tags": [
-            "옐로우 후드 집업",
+            "옐로우 트러커 재킷",
             "크롭 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 yellow, cropped, hoodie_zipup로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 yellow, cropped, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -1657,16 +1681,17 @@
     {
       "product_id": "outer_dummy_024",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_024",
-          "source_title": "아이보리 슬림핏 재킷 024",
+          "source_title": "아이보리 슬림핏 플리스/뽀글이 024",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "아이보리 슬림핏 재킷 024",
+          "title": "아이보리 슬림핏 플리스/뽀글이 024",
           "category": "outer",
           "subcategory": "jacket",
+          "detail_type": "fleece_jacket",
           "materials": [
             {
               "part": "shell",
@@ -1706,9 +1731,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "아이보리 슬림핏 재킷",
+          "search_summary": "아이보리 슬림핏 플리스/뽀글이",
           "query_tags": [
-            "아이보리 재킷",
+            "아이보리 플리스/뽀글이",
             "슬림핏 상품"
           ],
           "explainable_reasons": [
@@ -1726,16 +1751,17 @@
     {
       "product_id": "outer_dummy_025",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_025",
-          "source_title": "브라운 스트레이트 핏 점퍼 025",
+          "source_title": "브라운 스트레이트 핏 아노락 재킷 025",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "브라운 스트레이트 핏 점퍼 025",
+          "title": "브라운 스트레이트 핏 아노락 재킷 025",
           "category": "outer",
-          "subcategory": "jumper",
+          "subcategory": "jacket",
+          "detail_type": "anorak_jacket",
           "materials": [
             {
               "part": "shell",
@@ -1776,13 +1802,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "브라운 스트레이트 핏 점퍼",
+          "search_summary": "브라운 스트레이트 핏 아노락 재킷",
           "query_tags": [
-            "브라운 점퍼",
+            "브라운 아노락 재킷",
             "스트레이트 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 brown, straight, jumper로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 brown, straight, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -1796,16 +1822,17 @@
     {
       "product_id": "outer_dummy_026",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_026",
-          "source_title": "데님 블루 오버핏 코트 026",
+          "source_title": "데님 블루 오버핏 슈트/블레이저 재킷 026",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "데님 블루 오버핏 코트 026",
+          "title": "데님 블루 오버핏 슈트/블레이저 재킷 026",
           "category": "outer",
-          "subcategory": "coat",
+          "subcategory": "jacket",
+          "detail_type": "suit_blazer_jacket",
           "materials": [
             {
               "part": "fill",
@@ -1845,13 +1872,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "데님 블루 오버핏 코트",
+          "search_summary": "데님 블루 오버핏 슈트/블레이저 재킷",
           "query_tags": [
-            "데님 블루 코트",
+            "데님 블루 슈트/블레이저 재킷",
             "오버핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 denim_blue, oversized, coat로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 denim_blue, oversized, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -1865,16 +1892,17 @@
     {
       "product_id": "outer_dummy_027",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_027",
-          "source_title": "레드 레귤러핏 가디건 027",
+          "source_title": "레드 레귤러핏 사파리/헌팅 재킷 027",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "레드 레귤러핏 가디건 027",
+          "title": "레드 레귤러핏 사파리/헌팅 재킷 027",
           "category": "outer",
-          "subcategory": "cardigan",
+          "subcategory": "jacket",
+          "detail_type": "safari_hunting_jacket",
           "materials": [
             {
               "part": "shell",
@@ -1915,13 +1943,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "레드 레귤러핏 가디건",
+          "search_summary": "레드 레귤러핏 사파리/헌팅 재킷",
           "query_tags": [
-            "레드 가디건",
+            "레드 사파리/헌팅 재킷",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 red, regular, cardigan로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 red, regular, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -1935,16 +1963,17 @@
     {
       "product_id": "outer_dummy_028",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_028",
-          "source_title": "블랙 롱라인 베스트 028",
+          "source_title": "블랙 롱라인 레더/라이더스 재킷 028",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "블랙 롱라인 베스트 028",
+          "title": "블랙 롱라인 레더/라이더스 재킷 028",
           "category": "outer",
-          "subcategory": "vest",
+          "subcategory": "jacket",
+          "detail_type": "leather_rider_jacket",
           "materials": [
             {
               "part": "shell",
@@ -1984,13 +2013,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블랙 롱라인 베스트",
+          "search_summary": "블랙 롱라인 레더/라이더스 재킷",
           "query_tags": [
-            "블랙 베스트",
+            "블랙 레더/라이더스 재킷",
             "롱라인 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 black, longline, vest로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 black, longline, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -2006,16 +2035,17 @@
     {
       "product_id": "outer_dummy_029",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_029",
-          "source_title": "그레이 릴랙스 핏 후드 집업 029",
+          "source_title": "그레이 릴랙스 핏 트레이닝 재킷 029",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그레이 릴랙스 핏 후드 집업 029",
+          "title": "그레이 릴랙스 핏 트레이닝 재킷 029",
           "category": "outer",
-          "subcategory": "hoodie_zipup",
+          "subcategory": "jacket",
+          "detail_type": "training_jacket",
           "materials": [
             {
               "part": "shell",
@@ -2048,13 +2078,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그레이 릴랙스 핏 후드 집업",
+          "search_summary": "그레이 릴랙스 핏 트레이닝 재킷",
           "query_tags": [
-            "그레이 후드 집업",
+            "그레이 트레이닝 재킷",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 gray, relaxed, hoodie_zipup로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 gray, relaxed, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -2070,16 +2100,17 @@
     {
       "product_id": "outer_dummy_030",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_030",
-          "source_title": "네이비 박시핏 재킷 030",
+          "source_title": "네이비 박시핏 나일론/코치 재킷 030",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "네이비 박시핏 재킷 030",
+          "title": "네이비 박시핏 나일론/코치 재킷 030",
           "category": "outer",
           "subcategory": "jacket",
+          "detail_type": "nylon_coach_jacket",
           "materials": [
             {
               "part": "shell",
@@ -2120,9 +2151,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "네이비 박시핏 재킷",
+          "search_summary": "네이비 박시핏 나일론/코치 재킷",
           "query_tags": [
-            "네이비 재킷",
+            "네이비 나일론/코치 재킷",
             "박시핏 상품"
           ],
           "explainable_reasons": [
@@ -2140,16 +2171,17 @@
     {
       "product_id": "outer_dummy_031",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_031",
-          "source_title": "네이비 박시핏 재킷 030 리오더",
+          "source_title": "네이비 박시핏 나일론/코치 재킷 030 리오더",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "네이비 박시핏 재킷 030 리오더",
+          "title": "네이비 박시핏 나일론/코치 재킷 030 리오더",
           "category": "outer",
           "subcategory": "jacket",
+          "detail_type": "nylon_coach_jacket",
           "materials": [
             {
               "part": "shell",
@@ -2190,9 +2222,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "네이비 박시핏 재킷",
+          "search_summary": "네이비 박시핏 나일론/코치 재킷",
           "query_tags": [
-            "네이비 재킷",
+            "네이비 나일론/코치 재킷",
             "박시핏 상품"
           ],
           "explainable_reasons": [
@@ -2210,16 +2242,17 @@
     {
       "product_id": "outer_dummy_032",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_032",
-          "source_title": "핑크 슬림핏 코트 032",
+          "source_title": "핑크 슬림핏 무스탕/퍼 032",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "핑크 슬림핏 코트 032",
+          "title": "핑크 슬림핏 무스탕/퍼 032",
           "category": "outer",
-          "subcategory": "coat",
+          "subcategory": "jumper",
+          "detail_type": "mustang_fur",
           "materials": [
             {
               "part": "unknown",
@@ -2253,13 +2286,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "핑크 슬림핏 코트",
+          "search_summary": "핑크 슬림핏 무스탕/퍼",
           "query_tags": [
-            "핑크 코트",
+            "핑크 무스탕/퍼",
             "슬림핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 pink, slim, coat로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 pink, slim, jumper로 정규화했습니다."
           ]
         },
         "quality": {
@@ -2275,16 +2308,17 @@
     {
       "product_id": "outer_dummy_033",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_033",
-          "source_title": "화이트 스트레이트 핏 가디건 033",
+          "source_title": "화이트 스트레이트 핏 숏패딩/헤비 아우터 033",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "화이트 스트레이트 핏 가디건 033",
+          "title": "화이트 스트레이트 핏 숏패딩/헤비 아우터 033",
           "category": "outer",
-          "subcategory": "cardigan",
+          "subcategory": "jumper",
+          "detail_type": "short_padding_heavy_outer",
           "materials": [
             {
               "part": "unknown",
@@ -2324,13 +2358,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "화이트 스트레이트 핏 가디건",
+          "search_summary": "화이트 스트레이트 핏 숏패딩/헤비 아우터",
           "query_tags": [
-            "화이트 가디건",
+            "화이트 숏패딩/헤비 아우터",
             "스트레이트 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, straight, cardigan로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, straight, jumper로 정규화했습니다."
           ]
         },
         "quality": {
@@ -2346,16 +2380,17 @@
     {
       "product_id": "outer_dummy_034",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_034",
-          "source_title": "베이지 오버핏 베스트 034",
+          "source_title": "베이지 오버핏 롱패딩/헤비 아우터 034",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "베이지 오버핏 베스트 034",
+          "title": "베이지 오버핏 롱패딩/헤비 아우터 034",
           "category": "outer",
-          "subcategory": "vest",
+          "subcategory": "jumper",
+          "detail_type": "long_padding_heavy_outer",
           "materials": [
             {
               "part": "shell",
@@ -2395,13 +2430,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "베이지 오버핏 베스트",
+          "search_summary": "베이지 오버핏 롱패딩/헤비 아우터",
           "query_tags": [
-            "베이지 베스트",
+            "베이지 롱패딩/헤비 아우터",
             "오버핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 beige, oversized, vest로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 beige, oversized, jumper로 정규화했습니다."
           ]
         },
         "quality": {
@@ -2415,16 +2450,17 @@
     {
       "product_id": "outer_dummy_035",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_035",
-          "source_title": "블루 레귤러핏 후드 집업 035",
+          "source_title": "블루 레귤러핏 겨울 기타 코트 035",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "블루 레귤러핏 후드 집업 035",
+          "title": "블루 레귤러핏 겨울 기타 코트 035",
           "category": "outer",
-          "subcategory": "hoodie_zipup",
+          "subcategory": "coat",
+          "detail_type": "winter_other_coat",
           "materials": [
             {
               "part": "shell",
@@ -2465,13 +2501,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블루 레귤러핏 후드 집업",
+          "search_summary": "블루 레귤러핏 겨울 기타 코트",
           "query_tags": [
-            "블루 후드 집업",
+            "블루 겨울 기타 코트",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 blue, regular, hoodie_zipup로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 blue, regular, coat로 정규화했습니다."
           ]
         },
         "quality": {
@@ -2485,16 +2521,17 @@
     {
       "product_id": "outer_dummy_036",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_036",
-          "source_title": "카키 롱라인 재킷 036",
+          "source_title": "카키 롱라인 겨울 더블 코트 036",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "카키 롱라인 재킷 036",
+          "title": "카키 롱라인 겨울 더블 코트 036",
           "category": "outer",
-          "subcategory": "jacket",
+          "subcategory": "coat",
+          "detail_type": "winter_double_coat",
           "materials": [
             {
               "part": "fill",
@@ -2534,13 +2571,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "카키 롱라인 재킷",
+          "search_summary": "카키 롱라인 겨울 더블 코트",
           "query_tags": [
-            "카키 재킷",
+            "카키 겨울 더블 코트",
             "롱라인 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 khaki, longline, jacket로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 khaki, longline, coat로 정규화했습니다."
           ]
         },
         "quality": {
@@ -2554,16 +2591,17 @@
     {
       "product_id": "outer_dummy_037",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_037",
-          "source_title": "옐로우 릴랙스 핏 점퍼 037",
+          "source_title": "옐로우 릴랙스 핏 겨울 싱글 코트 037",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "옐로우 릴랙스 핏 점퍼 037",
+          "title": "옐로우 릴랙스 핏 겨울 싱글 코트 037",
           "category": "outer",
-          "subcategory": "jumper",
+          "subcategory": "coat",
+          "detail_type": "winter_single_coat",
           "materials": [
             {
               "part": "shell",
@@ -2604,13 +2642,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "옐로우 릴랙스 핏 점퍼",
+          "search_summary": "옐로우 릴랙스 핏 겨울 싱글 코트",
           "query_tags": [
-            "옐로우 점퍼",
+            "옐로우 겨울 싱글 코트",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 yellow, relaxed, jumper로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 yellow, relaxed, coat로 정규화했습니다."
           ]
         },
         "quality": {
@@ -2624,16 +2662,17 @@
     {
       "product_id": "outer_dummy_038",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_038",
-          "source_title": "아이보리 박시핏 코트 038",
+          "source_title": "아이보리 박시핏 환절기 코트 038",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "아이보리 박시핏 코트 038",
+          "title": "아이보리 박시핏 환절기 코트 038",
           "category": "outer",
           "subcategory": "coat",
+          "detail_type": "transitional_coat",
           "materials": [
             {
               "part": "shell",
@@ -2673,9 +2712,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "아이보리 박시핏 코트",
+          "search_summary": "아이보리 박시핏 환절기 코트",
           "query_tags": [
-            "아이보리 코트",
+            "아이보리 환절기 코트",
             "박시핏 상품"
           ],
           "explainable_reasons": [
@@ -2695,16 +2734,17 @@
     {
       "product_id": "outer_dummy_039",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_039",
-          "source_title": "브라운 크롭 핏 가디건 039",
+          "source_title": "브라운 크롭 핏 카디건 039",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "브라운 크롭 핏 가디건 039",
+          "title": "브라운 크롭 핏 카디건 039",
           "category": "outer",
           "subcategory": "cardigan",
+          "detail_type": "cardigan",
           "materials": [
             {
               "part": "shell",
@@ -2737,9 +2777,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "브라운 크롭 핏 가디건",
+          "search_summary": "브라운 크롭 핏 카디건",
           "query_tags": [
-            "브라운 가디건",
+            "브라운 카디건",
             "크롭 핏 상품"
           ],
           "explainable_reasons": [
@@ -2759,7 +2799,7 @@
     {
       "product_id": "outer_dummy_040",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_040",
           "source_title": "데님 블루 슬림핏 베스트 040",
@@ -2769,6 +2809,7 @@
           "title": "데님 블루 슬림핏 베스트 040",
           "category": "outer",
           "subcategory": "vest",
+          "detail_type": "vest",
           "materials": [
             {
               "part": "shell",
@@ -2829,7 +2870,7 @@
     {
       "product_id": "outer_dummy_041",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_041",
           "source_title": "데님 블루 슬림핏 베스트 040 리오더",
@@ -2839,6 +2880,7 @@
           "title": "데님 블루 슬림핏 베스트 040 리오더",
           "category": "outer",
           "subcategory": "vest",
+          "detail_type": "vest",
           "materials": [
             {
               "part": "shell",
@@ -2899,16 +2941,17 @@
     {
       "product_id": "outer_dummy_042",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_042",
-          "source_title": "블랙 오버핏 재킷 042",
+          "source_title": "블랙 오버핏 후드 집업 042",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "블랙 오버핏 재킷 042",
+          "title": "블랙 오버핏 후드 집업 042",
           "category": "outer",
-          "subcategory": "jacket",
+          "subcategory": "hoodie_zipup",
+          "detail_type": "hoodie_zipup",
           "materials": [
             {
               "part": "unknown",
@@ -2942,13 +2985,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블랙 오버핏 재킷",
+          "search_summary": "블랙 오버핏 후드 집업",
           "query_tags": [
-            "블랙 재킷",
+            "블랙 후드 집업",
             "오버핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 black, oversized, jacket로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 black, oversized, hoodie_zipup로 정규화했습니다."
           ]
         },
         "quality": {
@@ -2964,16 +3007,17 @@
     {
       "product_id": "outer_dummy_043",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_043",
-          "source_title": "그레이 레귤러핏 점퍼 043",
+          "source_title": "그레이 레귤러핏 기타 아우터 043",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그레이 레귤러핏 점퍼 043",
+          "title": "그레이 레귤러핏 기타 아우터 043",
           "category": "outer",
-          "subcategory": "jumper",
+          "subcategory": "other_outer",
+          "detail_type": "other_outer",
           "materials": [
             {
               "part": "unknown",
@@ -3013,13 +3057,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그레이 레귤러핏 점퍼",
+          "search_summary": "그레이 레귤러핏 기타 아우터",
           "query_tags": [
-            "그레이 점퍼",
+            "그레이 기타 아우터",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 gray, regular, jumper로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 gray, regular, other_outer로 정규화했습니다."
           ]
         },
         "quality": {
@@ -3035,16 +3079,17 @@
     {
       "product_id": "outer_dummy_044",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_044",
-          "source_title": "네이비 롱라인 코트 044",
+          "source_title": "네이비 롱라인 스타디움 재킷 044",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "네이비 롱라인 코트 044",
+          "title": "네이비 롱라인 스타디움 재킷 044",
           "category": "outer",
-          "subcategory": "coat",
+          "subcategory": "jacket",
+          "detail_type": "stadium_jacket",
           "materials": [
             {
               "part": "shell",
@@ -3084,13 +3129,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "네이비 롱라인 코트",
+          "search_summary": "네이비 롱라인 스타디움 재킷",
           "query_tags": [
-            "네이비 코트",
+            "네이비 스타디움 재킷",
             "롱라인 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 navy, longline, coat로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 navy, longline, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -3104,16 +3149,17 @@
     {
       "product_id": "outer_dummy_045",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_045",
-          "source_title": "그린 릴랙스 핏 가디건 045",
+          "source_title": "그린 릴랙스 핏 트러커 재킷 045",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그린 릴랙스 핏 가디건 045",
+          "title": "그린 릴랙스 핏 트러커 재킷 045",
           "category": "outer",
-          "subcategory": "cardigan",
+          "subcategory": "jacket",
+          "detail_type": "trucker_jacket",
           "materials": [
             {
               "part": "shell",
@@ -3154,13 +3200,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그린 릴랙스 핏 가디건",
+          "search_summary": "그린 릴랙스 핏 트러커 재킷",
           "query_tags": [
-            "그린 가디건",
+            "그린 트러커 재킷",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 green, relaxed, cardigan로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 green, relaxed, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -3174,16 +3220,17 @@
     {
       "product_id": "outer_dummy_046",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_046",
-          "source_title": "핑크 박시핏 베스트 046",
+          "source_title": "핑크 박시핏 플리스/뽀글이 046",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "핑크 박시핏 베스트 046",
+          "title": "핑크 박시핏 플리스/뽀글이 046",
           "category": "outer",
-          "subcategory": "vest",
+          "subcategory": "jacket",
+          "detail_type": "fleece_jacket",
           "materials": [
             {
               "part": "fill",
@@ -3223,13 +3270,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "핑크 박시핏 베스트",
+          "search_summary": "핑크 박시핏 플리스/뽀글이",
           "query_tags": [
-            "핑크 베스트",
+            "핑크 플리스/뽀글이",
             "박시핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 pink, boxy, vest로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 pink, boxy, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -3243,16 +3290,17 @@
     {
       "product_id": "outer_dummy_047",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_047",
-          "source_title": "화이트 크롭 핏 후드 집업 047",
+          "source_title": "화이트 크롭 핏 아노락 재킷 047",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "화이트 크롭 핏 후드 집업 047",
+          "title": "화이트 크롭 핏 아노락 재킷 047",
           "category": "outer",
-          "subcategory": "hoodie_zipup",
+          "subcategory": "jacket",
+          "detail_type": "anorak_jacket",
           "materials": [
             {
               "part": "shell",
@@ -3293,13 +3341,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "화이트 크롭 핏 후드 집업",
+          "search_summary": "화이트 크롭 핏 아노락 재킷",
           "query_tags": [
-            "화이트 후드 집업",
+            "화이트 아노락 재킷",
             "크롭 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, cropped, hoodie_zipup로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, cropped, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -3313,16 +3361,17 @@
     {
       "product_id": "outer_dummy_048",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_048",
-          "source_title": "베이지 슬림핏 재킷 048",
+          "source_title": "베이지 슬림핏 슈트/블레이저 재킷 048",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "베이지 슬림핏 재킷 048",
+          "title": "베이지 슬림핏 슈트/블레이저 재킷 048",
           "category": "outer",
           "subcategory": "jacket",
+          "detail_type": "suit_blazer_jacket",
           "materials": [
             {
               "part": "shell",
@@ -3362,9 +3411,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "베이지 슬림핏 재킷",
+          "search_summary": "베이지 슬림핏 슈트/블레이저 재킷",
           "query_tags": [
-            "베이지 재킷",
+            "베이지 슈트/블레이저 재킷",
             "슬림핏 상품"
           ],
           "explainable_reasons": [
@@ -3384,16 +3433,17 @@
     {
       "product_id": "outer_dummy_049",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_049",
-          "source_title": "블루 스트레이트 핏 점퍼 049",
+          "source_title": "블루 스트레이트 핏 사파리/헌팅 재킷 049",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "블루 스트레이트 핏 점퍼 049",
+          "title": "블루 스트레이트 핏 사파리/헌팅 재킷 049",
           "category": "outer",
-          "subcategory": "jumper",
+          "subcategory": "jacket",
+          "detail_type": "safari_hunting_jacket",
           "materials": [
             {
               "part": "shell",
@@ -3426,13 +3476,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블루 스트레이트 핏 점퍼",
+          "search_summary": "블루 스트레이트 핏 사파리/헌팅 재킷",
           "query_tags": [
-            "블루 점퍼",
+            "블루 사파리/헌팅 재킷",
             "스트레이트 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 blue, straight, jumper로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 blue, straight, jacket로 정규화했습니다."
           ]
         },
         "quality": {
@@ -3448,16 +3498,17 @@
     {
       "product_id": "top_dummy_050",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_050",
-          "source_title": "레드 크롭 핏 니트 050",
+          "source_title": "레드 크롭 핏 반소매 티셔츠 050",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "레드 크롭 핏 니트 050",
+          "title": "레드 크롭 핏 반소매 티셔츠 050",
           "category": "top",
-          "subcategory": "knit",
+          "subcategory": "tshirt",
+          "detail_type": "short_sleeve_tshirt",
           "materials": [
             {
               "part": "unknown",
@@ -3497,13 +3548,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "레드 크롭 핏 니트",
+          "search_summary": "레드 크롭 핏 반소매 티셔츠",
           "query_tags": [
-            "레드 니트",
+            "레드 반소매 티셔츠",
             "크롭 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 red, cropped, knit로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 red, cropped, tshirt로 정규화했습니다."
           ]
         },
         "quality": {
@@ -3519,16 +3570,17 @@
     {
       "product_id": "top_dummy_051",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_051",
-          "source_title": "레드 크롭 핏 니트 050 리오더",
+          "source_title": "레드 크롭 핏 반소매 티셔츠 050 리오더",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "레드 크롭 핏 니트 050 리오더",
+          "title": "레드 크롭 핏 반소매 티셔츠 050 리오더",
           "category": "top",
-          "subcategory": "knit",
+          "subcategory": "tshirt",
+          "detail_type": "short_sleeve_tshirt",
           "materials": [
             {
               "part": "unknown",
@@ -3568,13 +3620,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "레드 크롭 핏 니트",
+          "search_summary": "레드 크롭 핏 반소매 티셔츠",
           "query_tags": [
-            "레드 니트",
+            "레드 반소매 티셔츠",
             "크롭 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 red, cropped, knit로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 red, cropped, tshirt로 정규화했습니다."
           ]
         },
         "quality": {
@@ -3590,16 +3642,17 @@
     {
       "product_id": "top_dummy_052",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_052",
-          "source_title": "그레이 스트레이트 핏 슬리브리스 052",
+          "source_title": "그레이 스트레이트 핏 셔츠/블라우스 052",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그레이 스트레이트 핏 슬리브리스 052",
+          "title": "그레이 스트레이트 핏 셔츠/블라우스 052",
           "category": "top",
-          "subcategory": "sleeveless",
+          "subcategory": "shirt_blouse",
+          "detail_type": "shirt_blouse",
           "materials": [
             {
               "part": "shell",
@@ -3639,13 +3692,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그레이 스트레이트 핏 슬리브리스",
+          "search_summary": "그레이 스트레이트 핏 셔츠/블라우스",
           "query_tags": [
-            "그레이 슬리브리스",
+            "그레이 셔츠/블라우스",
             "스트레이트 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 gray, straight, sleeveless로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 gray, straight, shirt_blouse로 정규화했습니다."
           ]
         },
         "quality": {
@@ -3659,16 +3712,17 @@
     {
       "product_id": "top_dummy_053",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_053",
-          "source_title": "네이비 오버핏 폴로 053",
+          "source_title": "네이비 오버핏 니트/스웨터 053",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "네이비 오버핏 폴로 053",
+          "title": "네이비 오버핏 니트/스웨터 053",
           "category": "top",
-          "subcategory": "polo",
+          "subcategory": "knit",
+          "detail_type": "knit_sweater",
           "materials": [
             {
               "part": "fill",
@@ -3707,13 +3761,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "네이비 오버핏 폴로",
+          "search_summary": "네이비 오버핏 니트/스웨터",
           "query_tags": [
-            "네이비 폴로",
+            "네이비 니트/스웨터",
             "오버핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 navy, oversized, polo로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 navy, oversized, knit로 정규화했습니다."
           ]
         },
         "quality": {
@@ -3727,16 +3781,17 @@
     {
       "product_id": "top_dummy_054",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_054",
-          "source_title": "그린 레귤러핏 티셔츠 054",
+          "source_title": "그린 레귤러핏 맨투맨/스웨트 054",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그린 레귤러핏 티셔츠 054",
+          "title": "그린 레귤러핏 맨투맨/스웨트 054",
           "category": "top",
-          "subcategory": "tshirt",
+          "subcategory": "sweatshirt",
+          "detail_type": "sweatshirt",
           "materials": [
             {
               "part": "shell",
@@ -3775,13 +3830,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그린 레귤러핏 티셔츠",
+          "search_summary": "그린 레귤러핏 맨투맨/스웨트",
           "query_tags": [
-            "그린 티셔츠",
+            "그린 맨투맨/스웨트",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 green, regular, tshirt로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 green, regular, sweatshirt로 정규화했습니다."
           ]
         },
         "quality": {
@@ -3795,16 +3850,17 @@
     {
       "product_id": "top_dummy_055",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_055",
-          "source_title": "핑크 롱라인 셔츠 055",
+          "source_title": "핑크 롱라인 민소매 티셔츠 055",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "핑크 롱라인 셔츠 055",
+          "title": "핑크 롱라인 민소매 티셔츠 055",
           "category": "top",
-          "subcategory": "shirt_blouse",
+          "subcategory": "sleeveless",
+          "detail_type": "sleeveless_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -3844,13 +3900,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "핑크 롱라인 셔츠",
+          "search_summary": "핑크 롱라인 민소매 티셔츠",
           "query_tags": [
-            "핑크 셔츠",
+            "핑크 민소매 티셔츠",
             "롱라인 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 pink, longline, shirt_blouse로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 pink, longline, sleeveless로 정규화했습니다."
           ]
         },
         "quality": {
@@ -3866,16 +3922,17 @@
     {
       "product_id": "top_dummy_056",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_056",
-          "source_title": "화이트 릴랙스 핏 니트 056",
+          "source_title": "화이트 릴랙스 핏 피케/카라 티셔츠 056",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "화이트 릴랙스 핏 니트 056",
+          "title": "화이트 릴랙스 핏 피케/카라 티셔츠 056",
           "category": "top",
-          "subcategory": "knit",
+          "subcategory": "polo",
+          "detail_type": "polo_collar_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -3908,13 +3965,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "화이트 릴랙스 핏 니트",
+          "search_summary": "화이트 릴랙스 핏 피케/카라 티셔츠",
           "query_tags": [
-            "화이트 니트",
+            "화이트 피케/카라 티셔츠",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, relaxed, knit로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, relaxed, polo로 정규화했습니다."
           ]
         },
         "quality": {
@@ -3930,16 +3987,17 @@
     {
       "product_id": "top_dummy_057",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_057",
-          "source_title": "베이지 박시핏 스웨트셔츠 057",
+          "source_title": "베이지 박시핏 후드 티셔츠 057",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "베이지 박시핏 스웨트셔츠 057",
+          "title": "베이지 박시핏 후드 티셔츠 057",
           "category": "top",
-          "subcategory": "sweatshirt",
+          "subcategory": "hoodie",
+          "detail_type": "hoodie_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -3979,13 +4037,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "베이지 박시핏 스웨트셔츠",
+          "search_summary": "베이지 박시핏 후드 티셔츠",
           "query_tags": [
-            "베이지 스웨트셔츠",
+            "베이지 후드 티셔츠",
             "박시핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 beige, boxy, sweatshirt로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 beige, boxy, hoodie로 정규화했습니다."
           ]
         },
         "quality": {
@@ -3999,16 +4057,17 @@
     {
       "product_id": "top_dummy_058",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_058",
-          "source_title": "블루 크롭 핏 슬리브리스 058",
+          "source_title": "블루 크롭 핏 기타 상의 058",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "블루 크롭 핏 슬리브리스 058",
+          "title": "블루 크롭 핏 기타 상의 058",
           "category": "top",
-          "subcategory": "sleeveless",
+          "subcategory": "other_top",
+          "detail_type": "other_top",
           "materials": [
             {
               "part": "shell",
@@ -4040,13 +4099,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블루 크롭 핏 슬리브리스",
+          "search_summary": "블루 크롭 핏 기타 상의",
           "query_tags": [
-            "블루 슬리브리스",
+            "블루 기타 상의",
             "크롭 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 blue, cropped, sleeveless로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 blue, cropped, other_top로 정규화했습니다."
           ]
         },
         "quality": {
@@ -4060,16 +4119,17 @@
     {
       "product_id": "top_dummy_059",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_059",
-          "source_title": "카키 슬림핏 폴로 059",
+          "source_title": "카키 슬림핏 반소매 티셔츠 059",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "카키 슬림핏 폴로 059",
+          "title": "카키 슬림핏 반소매 티셔츠 059",
           "category": "top",
-          "subcategory": "polo",
+          "subcategory": "tshirt",
+          "detail_type": "short_sleeve_tshirt",
           "materials": [
             {
               "part": "unknown",
@@ -4101,13 +4161,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "카키 슬림핏 폴로",
+          "search_summary": "카키 슬림핏 반소매 티셔츠",
           "query_tags": [
-            "카키 폴로",
+            "카키 반소매 티셔츠",
             "슬림핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 khaki, slim, polo로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 khaki, slim, tshirt로 정규화했습니다."
           ]
         },
         "quality": {
@@ -4123,16 +4183,17 @@
     {
       "product_id": "top_dummy_060",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_060",
-          "source_title": "옐로우 스트레이트 핏 티셔츠 060",
+          "source_title": "옐로우 스트레이트 핏 긴소매 티셔츠 060",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "옐로우 스트레이트 핏 티셔츠 060",
+          "title": "옐로우 스트레이트 핏 긴소매 티셔츠 060",
           "category": "top",
           "subcategory": "tshirt",
+          "detail_type": "long_sleeve_tshirt",
           "materials": [
             {
               "part": "unknown",
@@ -4172,9 +4233,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "옐로우 스트레이트 핏 티셔츠",
+          "search_summary": "옐로우 스트레이트 핏 긴소매 티셔츠",
           "query_tags": [
-            "옐로우 티셔츠",
+            "옐로우 긴소매 티셔츠",
             "스트레이트 핏 상품"
           ],
           "explainable_reasons": [
@@ -4194,16 +4255,17 @@
     {
       "product_id": "top_dummy_061",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_061",
-          "source_title": "옐로우 스트레이트 핏 티셔츠 060 리오더",
+          "source_title": "옐로우 스트레이트 핏 긴소매 티셔츠 060 리오더",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "옐로우 스트레이트 핏 티셔츠 060 리오더",
+          "title": "옐로우 스트레이트 핏 긴소매 티셔츠 060 리오더",
           "category": "top",
           "subcategory": "tshirt",
+          "detail_type": "long_sleeve_tshirt",
           "materials": [
             {
               "part": "unknown",
@@ -4243,9 +4305,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "옐로우 스트레이트 핏 티셔츠",
+          "search_summary": "옐로우 스트레이트 핏 긴소매 티셔츠",
           "query_tags": [
-            "옐로우 티셔츠",
+            "옐로우 긴소매 티셔츠",
             "스트레이트 핏 상품"
           ],
           "explainable_reasons": [
@@ -4265,16 +4327,17 @@
     {
       "product_id": "top_dummy_062",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_062",
-          "source_title": "브라운 레귤러핏 니트 062",
+          "source_title": "브라운 레귤러핏 니트/스웨터 062",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "브라운 레귤러핏 니트 062",
+          "title": "브라운 레귤러핏 니트/스웨터 062",
           "category": "top",
           "subcategory": "knit",
+          "detail_type": "knit_sweater",
           "materials": [
             {
               "part": "shell",
@@ -4314,9 +4377,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "브라운 레귤러핏 니트",
+          "search_summary": "브라운 레귤러핏 니트/스웨터",
           "query_tags": [
-            "브라운 니트",
+            "브라운 니트/스웨터",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
@@ -4334,16 +4397,17 @@
     {
       "product_id": "top_dummy_063",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_063",
-          "source_title": "데님 블루 롱라인 스웨트셔츠 063",
+          "source_title": "데님 블루 롱라인 맨투맨/스웨트 063",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "데님 블루 롱라인 스웨트셔츠 063",
+          "title": "데님 블루 롱라인 맨투맨/스웨트 063",
           "category": "top",
           "subcategory": "sweatshirt",
+          "detail_type": "sweatshirt",
           "materials": [
             {
               "part": "fill",
@@ -4382,9 +4446,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "데님 블루 롱라인 스웨트셔츠",
+          "search_summary": "데님 블루 롱라인 맨투맨/스웨트",
           "query_tags": [
-            "데님 블루 스웨트셔츠",
+            "데님 블루 맨투맨/스웨트",
             "롱라인 상품"
           ],
           "explainable_reasons": [
@@ -4402,16 +4466,17 @@
     {
       "product_id": "top_dummy_064",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_064",
-          "source_title": "레드 릴랙스 핏 슬리브리스 064",
+          "source_title": "레드 릴랙스 핏 민소매 티셔츠 064",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "레드 릴랙스 핏 슬리브리스 064",
+          "title": "레드 릴랙스 핏 민소매 티셔츠 064",
           "category": "top",
           "subcategory": "sleeveless",
+          "detail_type": "sleeveless_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -4450,9 +4515,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "레드 릴랙스 핏 슬리브리스",
+          "search_summary": "레드 릴랙스 핏 민소매 티셔츠",
           "query_tags": [
-            "레드 슬리브리스",
+            "레드 민소매 티셔츠",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
@@ -4470,16 +4535,17 @@
     {
       "product_id": "top_dummy_065",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_065",
-          "source_title": "블랙 박시핏 폴로 065",
+          "source_title": "블랙 박시핏 피케/카라 티셔츠 065",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "블랙 박시핏 폴로 065",
+          "title": "블랙 박시핏 피케/카라 티셔츠 065",
           "category": "top",
           "subcategory": "polo",
+          "detail_type": "polo_collar_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -4519,9 +4585,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블랙 박시핏 폴로",
+          "search_summary": "블랙 박시핏 피케/카라 티셔츠",
           "query_tags": [
-            "블랙 폴로",
+            "블랙 피케/카라 티셔츠",
             "박시핏 상품"
           ],
           "explainable_reasons": [
@@ -4541,16 +4607,17 @@
     {
       "product_id": "top_dummy_066",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_066",
-          "source_title": "그레이 크롭 핏 티셔츠 066",
+          "source_title": "그레이 크롭 핏 후드 티셔츠 066",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그레이 크롭 핏 티셔츠 066",
+          "title": "그레이 크롭 핏 후드 티셔츠 066",
           "category": "top",
-          "subcategory": "tshirt",
+          "subcategory": "hoodie",
+          "detail_type": "hoodie_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -4583,13 +4650,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그레이 크롭 핏 티셔츠",
+          "search_summary": "그레이 크롭 핏 후드 티셔츠",
           "query_tags": [
-            "그레이 티셔츠",
+            "그레이 후드 티셔츠",
             "크롭 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 gray, cropped, tshirt로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 gray, cropped, hoodie로 정규화했습니다."
           ]
         },
         "quality": {
@@ -4605,16 +4672,17 @@
     {
       "product_id": "top_dummy_067",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_067",
-          "source_title": "네이비 슬림핏 셔츠 067",
+          "source_title": "네이비 슬림핏 기타 상의 067",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "네이비 슬림핏 셔츠 067",
+          "title": "네이비 슬림핏 기타 상의 067",
           "category": "top",
-          "subcategory": "shirt_blouse",
+          "subcategory": "other_top",
+          "detail_type": "other_top",
           "materials": [
             {
               "part": "shell",
@@ -4654,13 +4722,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "네이비 슬림핏 셔츠",
+          "search_summary": "네이비 슬림핏 기타 상의",
           "query_tags": [
-            "네이비 셔츠",
+            "네이비 기타 상의",
             "슬림핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 navy, slim, shirt_blouse로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 navy, slim, other_top로 정규화했습니다."
           ]
         },
         "quality": {
@@ -4674,16 +4742,17 @@
     {
       "product_id": "top_dummy_068",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_068",
-          "source_title": "그린 스트레이트 핏 니트 068",
+          "source_title": "그린 스트레이트 핏 반소매 티셔츠 068",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그린 스트레이트 핏 니트 068",
+          "title": "그린 스트레이트 핏 반소매 티셔츠 068",
           "category": "top",
-          "subcategory": "knit",
+          "subcategory": "tshirt",
+          "detail_type": "short_sleeve_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -4715,13 +4784,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그린 스트레이트 핏 니트",
+          "search_summary": "그린 스트레이트 핏 반소매 티셔츠",
           "query_tags": [
-            "그린 니트",
+            "그린 반소매 티셔츠",
             "스트레이트 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 green, straight, knit로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 green, straight, tshirt로 정규화했습니다."
           ]
         },
         "quality": {
@@ -4735,16 +4804,17 @@
     {
       "product_id": "top_dummy_069",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_069",
-          "source_title": "핑크 오버핏 스웨트셔츠 069",
+          "source_title": "핑크 오버핏 긴소매 티셔츠 069",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "핑크 오버핏 스웨트셔츠 069",
+          "title": "핑크 오버핏 긴소매 티셔츠 069",
           "category": "top",
-          "subcategory": "sweatshirt",
+          "subcategory": "tshirt",
+          "detail_type": "long_sleeve_tshirt",
           "materials": [
             {
               "part": "unknown",
@@ -4776,13 +4846,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "핑크 오버핏 스웨트셔츠",
+          "search_summary": "핑크 오버핏 긴소매 티셔츠",
           "query_tags": [
-            "핑크 스웨트셔츠",
+            "핑크 긴소매 티셔츠",
             "오버핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 pink, oversized, sweatshirt로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 pink, oversized, tshirt로 정규화했습니다."
           ]
         },
         "quality": {
@@ -4798,16 +4868,17 @@
     {
       "product_id": "top_dummy_070",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_070",
-          "source_title": "화이트 레귤러핏 슬리브리스 070",
+          "source_title": "화이트 레귤러핏 셔츠/블라우스 070",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "화이트 레귤러핏 슬리브리스 070",
+          "title": "화이트 레귤러핏 셔츠/블라우스 070",
           "category": "top",
-          "subcategory": "sleeveless",
+          "subcategory": "shirt_blouse",
+          "detail_type": "shirt_blouse",
           "materials": [
             {
               "part": "unknown",
@@ -4847,13 +4918,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "화이트 레귤러핏 슬리브리스",
+          "search_summary": "화이트 레귤러핏 셔츠/블라우스",
           "query_tags": [
-            "화이트 슬리브리스",
+            "화이트 셔츠/블라우스",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, regular, sleeveless로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, regular, shirt_blouse로 정규화했습니다."
           ]
         },
         "quality": {
@@ -4869,16 +4940,17 @@
     {
       "product_id": "top_dummy_071",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_071",
-          "source_title": "화이트 레귤러핏 슬리브리스 070 리오더",
+          "source_title": "화이트 레귤러핏 셔츠/블라우스 070 리오더",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "화이트 레귤러핏 슬리브리스 070 리오더",
+          "title": "화이트 레귤러핏 셔츠/블라우스 070 리오더",
           "category": "top",
-          "subcategory": "sleeveless",
+          "subcategory": "shirt_blouse",
+          "detail_type": "shirt_blouse",
           "materials": [
             {
               "part": "unknown",
@@ -4918,13 +4990,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "화이트 레귤러핏 슬리브리스",
+          "search_summary": "화이트 레귤러핏 셔츠/블라우스",
           "query_tags": [
-            "화이트 슬리브리스",
+            "화이트 셔츠/블라우스",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, regular, sleeveless로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, regular, shirt_blouse로 정규화했습니다."
           ]
         },
         "quality": {
@@ -4940,16 +5012,17 @@
     {
       "product_id": "top_dummy_072",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_072",
-          "source_title": "블루 릴랙스 핏 티셔츠 072",
+          "source_title": "블루 릴랙스 핏 맨투맨/스웨트 072",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "블루 릴랙스 핏 티셔츠 072",
+          "title": "블루 릴랙스 핏 맨투맨/스웨트 072",
           "category": "top",
-          "subcategory": "tshirt",
+          "subcategory": "sweatshirt",
+          "detail_type": "sweatshirt",
           "materials": [
             {
               "part": "shell",
@@ -4989,13 +5062,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블루 릴랙스 핏 티셔츠",
+          "search_summary": "블루 릴랙스 핏 맨투맨/스웨트",
           "query_tags": [
-            "블루 티셔츠",
+            "블루 맨투맨/스웨트",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 blue, relaxed, tshirt로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 blue, relaxed, sweatshirt로 정규화했습니다."
           ]
         },
         "quality": {
@@ -5009,16 +5082,17 @@
     {
       "product_id": "top_dummy_073",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_073",
-          "source_title": "카키 박시핏 셔츠 073",
+          "source_title": "카키 박시핏 민소매 티셔츠 073",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "카키 박시핏 셔츠 073",
+          "title": "카키 박시핏 민소매 티셔츠 073",
           "category": "top",
-          "subcategory": "shirt_blouse",
+          "subcategory": "sleeveless",
+          "detail_type": "sleeveless_tshirt",
           "materials": [
             {
               "part": "fill",
@@ -5057,13 +5131,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "카키 박시핏 셔츠",
+          "search_summary": "카키 박시핏 민소매 티셔츠",
           "query_tags": [
-            "카키 셔츠",
+            "카키 민소매 티셔츠",
             "박시핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 khaki, boxy, shirt_blouse로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 khaki, boxy, sleeveless로 정규화했습니다."
           ]
         },
         "quality": {
@@ -5077,16 +5151,17 @@
     {
       "product_id": "top_dummy_074",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_074",
-          "source_title": "옐로우 크롭 핏 니트 074",
+          "source_title": "옐로우 크롭 핏 피케/카라 티셔츠 074",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "옐로우 크롭 핏 니트 074",
+          "title": "옐로우 크롭 핏 피케/카라 티셔츠 074",
           "category": "top",
-          "subcategory": "knit",
+          "subcategory": "polo",
+          "detail_type": "polo_collar_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -5125,13 +5200,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "옐로우 크롭 핏 니트",
+          "search_summary": "옐로우 크롭 핏 피케/카라 티셔츠",
           "query_tags": [
-            "옐로우 니트",
+            "옐로우 피케/카라 티셔츠",
             "크롭 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 yellow, cropped, knit로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 yellow, cropped, polo로 정규화했습니다."
           ]
         },
         "quality": {
@@ -5145,16 +5220,17 @@
     {
       "product_id": "top_dummy_075",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_075",
-          "source_title": "아이보리 슬림핏 스웨트셔츠 075",
+          "source_title": "아이보리 슬림핏 후드 티셔츠 075",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "아이보리 슬림핏 스웨트셔츠 075",
+          "title": "아이보리 슬림핏 후드 티셔츠 075",
           "category": "top",
-          "subcategory": "sweatshirt",
+          "subcategory": "hoodie",
+          "detail_type": "hoodie_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -5194,13 +5270,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "아이보리 슬림핏 스웨트셔츠",
+          "search_summary": "아이보리 슬림핏 후드 티셔츠",
           "query_tags": [
-            "아이보리 스웨트셔츠",
+            "아이보리 후드 티셔츠",
             "슬림핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 ivory, slim, sweatshirt로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 ivory, slim, hoodie로 정규화했습니다."
           ]
         },
         "quality": {
@@ -5216,16 +5292,17 @@
     {
       "product_id": "top_dummy_076",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_076",
-          "source_title": "브라운 스트레이트 핏 슬리브리스 076",
+          "source_title": "브라운 스트레이트 핏 기타 상의 076",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "브라운 스트레이트 핏 슬리브리스 076",
+          "title": "브라운 스트레이트 핏 기타 상의 076",
           "category": "top",
-          "subcategory": "sleeveless",
+          "subcategory": "other_top",
+          "detail_type": "other_top",
           "materials": [
             {
               "part": "shell",
@@ -5258,13 +5335,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "브라운 스트레이트 핏 슬리브리스",
+          "search_summary": "브라운 스트레이트 핏 기타 상의",
           "query_tags": [
-            "브라운 슬리브리스",
+            "브라운 기타 상의",
             "스트레이트 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 brown, straight, sleeveless로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 brown, straight, other_top로 정규화했습니다."
           ]
         },
         "quality": {
@@ -5280,16 +5357,17 @@
     {
       "product_id": "top_dummy_077",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_077",
-          "source_title": "데님 블루 오버핏 폴로 077",
+          "source_title": "데님 블루 오버핏 반소매 티셔츠 077",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "데님 블루 오버핏 폴로 077",
+          "title": "데님 블루 오버핏 반소매 티셔츠 077",
           "category": "top",
-          "subcategory": "polo",
+          "subcategory": "tshirt",
+          "detail_type": "short_sleeve_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -5329,13 +5407,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "데님 블루 오버핏 폴로",
+          "search_summary": "데님 블루 오버핏 반소매 티셔츠",
           "query_tags": [
-            "데님 블루 폴로",
+            "데님 블루 반소매 티셔츠",
             "오버핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 denim_blue, oversized, polo로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 denim_blue, oversized, tshirt로 정규화했습니다."
           ]
         },
         "quality": {
@@ -5349,16 +5427,17 @@
     {
       "product_id": "top_dummy_078",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_078",
-          "source_title": "레드 레귤러핏 티셔츠 078",
+          "source_title": "레드 레귤러핏 긴소매 티셔츠 078",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "레드 레귤러핏 티셔츠 078",
+          "title": "레드 레귤러핏 긴소매 티셔츠 078",
           "category": "top",
           "subcategory": "tshirt",
+          "detail_type": "long_sleeve_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -5390,9 +5469,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "레드 레귤러핏 티셔츠",
+          "search_summary": "레드 레귤러핏 긴소매 티셔츠",
           "query_tags": [
-            "레드 티셔츠",
+            "레드 긴소매 티셔츠",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
@@ -5410,16 +5489,17 @@
     {
       "product_id": "top_dummy_079",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_079",
-          "source_title": "블랙 롱라인 셔츠 079",
+          "source_title": "블랙 롱라인 셔츠/블라우스 079",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "블랙 롱라인 셔츠 079",
+          "title": "블랙 롱라인 셔츠/블라우스 079",
           "category": "top",
           "subcategory": "shirt_blouse",
+          "detail_type": "shirt_blouse",
           "materials": [
             {
               "part": "unknown",
@@ -5451,9 +5531,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블랙 롱라인 셔츠",
+          "search_summary": "블랙 롱라인 셔츠/블라우스",
           "query_tags": [
-            "블랙 셔츠",
+            "블랙 셔츠/블라우스",
             "롱라인 상품"
           ],
           "explainable_reasons": [
@@ -5473,16 +5553,17 @@
     {
       "product_id": "top_dummy_080",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_080",
-          "source_title": "그레이 릴랙스 핏 니트 080",
+          "source_title": "그레이 릴랙스 핏 니트/스웨터 080",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그레이 릴랙스 핏 니트 080",
+          "title": "그레이 릴랙스 핏 니트/스웨터 080",
           "category": "top",
           "subcategory": "knit",
+          "detail_type": "knit_sweater",
           "materials": [
             {
               "part": "unknown",
@@ -5522,9 +5603,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그레이 릴랙스 핏 니트",
+          "search_summary": "그레이 릴랙스 핏 니트/스웨터",
           "query_tags": [
-            "그레이 니트",
+            "그레이 니트/스웨터",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
@@ -5544,16 +5625,17 @@
     {
       "product_id": "top_dummy_081",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_081",
-          "source_title": "그레이 릴랙스 핏 니트 080 리오더",
+          "source_title": "그레이 릴랙스 핏 니트/스웨터 080 리오더",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그레이 릴랙스 핏 니트 080 리오더",
+          "title": "그레이 릴랙스 핏 니트/스웨터 080 리오더",
           "category": "top",
           "subcategory": "knit",
+          "detail_type": "knit_sweater",
           "materials": [
             {
               "part": "unknown",
@@ -5593,9 +5675,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그레이 릴랙스 핏 니트",
+          "search_summary": "그레이 릴랙스 핏 니트/스웨터",
           "query_tags": [
-            "그레이 니트",
+            "그레이 니트/스웨터",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
@@ -5615,16 +5697,17 @@
     {
       "product_id": "top_dummy_082",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_082",
-          "source_title": "그린 크롭 핏 슬리브리스 082",
+          "source_title": "그린 크롭 핏 민소매 티셔츠 082",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그린 크롭 핏 슬리브리스 082",
+          "title": "그린 크롭 핏 민소매 티셔츠 082",
           "category": "top",
           "subcategory": "sleeveless",
+          "detail_type": "sleeveless_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -5664,9 +5747,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그린 크롭 핏 슬리브리스",
+          "search_summary": "그린 크롭 핏 민소매 티셔츠",
           "query_tags": [
-            "그린 슬리브리스",
+            "그린 민소매 티셔츠",
             "크롭 핏 상품"
           ],
           "explainable_reasons": [
@@ -5684,16 +5767,17 @@
     {
       "product_id": "top_dummy_083",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_083",
-          "source_title": "핑크 슬림핏 폴로 083",
+          "source_title": "핑크 슬림핏 피케/카라 티셔츠 083",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "핑크 슬림핏 폴로 083",
+          "title": "핑크 슬림핏 피케/카라 티셔츠 083",
           "category": "top",
           "subcategory": "polo",
+          "detail_type": "polo_collar_tshirt",
           "materials": [
             {
               "part": "fill",
@@ -5732,9 +5816,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "핑크 슬림핏 폴로",
+          "search_summary": "핑크 슬림핏 피케/카라 티셔츠",
           "query_tags": [
-            "핑크 폴로",
+            "핑크 피케/카라 티셔츠",
             "슬림핏 상품"
           ],
           "explainable_reasons": [
@@ -5752,16 +5836,17 @@
     {
       "product_id": "top_dummy_084",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_084",
-          "source_title": "화이트 스트레이트 핏 티셔츠 084",
+          "source_title": "화이트 스트레이트 핏 후드 티셔츠 084",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "화이트 스트레이트 핏 티셔츠 084",
+          "title": "화이트 스트레이트 핏 후드 티셔츠 084",
           "category": "top",
-          "subcategory": "tshirt",
+          "subcategory": "hoodie",
+          "detail_type": "hoodie_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -5800,13 +5885,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "화이트 스트레이트 핏 티셔츠",
+          "search_summary": "화이트 스트레이트 핏 후드 티셔츠",
           "query_tags": [
-            "화이트 티셔츠",
+            "화이트 후드 티셔츠",
             "스트레이트 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, straight, tshirt로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 white, straight, hoodie로 정규화했습니다."
           ]
         },
         "quality": {
@@ -5820,16 +5905,17 @@
     {
       "product_id": "top_dummy_085",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_085",
-          "source_title": "베이지 오버핏 셔츠 085",
+          "source_title": "베이지 오버핏 기타 상의 085",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "베이지 오버핏 셔츠 085",
+          "title": "베이지 오버핏 기타 상의 085",
           "category": "top",
-          "subcategory": "shirt_blouse",
+          "subcategory": "other_top",
+          "detail_type": "other_top",
           "materials": [
             {
               "part": "shell",
@@ -5869,13 +5955,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "베이지 오버핏 셔츠",
+          "search_summary": "베이지 오버핏 기타 상의",
           "query_tags": [
-            "베이지 셔츠",
+            "베이지 기타 상의",
             "오버핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 beige, oversized, shirt_blouse로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 beige, oversized, other_top로 정규화했습니다."
           ]
         },
         "quality": {
@@ -5891,16 +5977,17 @@
     {
       "product_id": "top_dummy_086",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_086",
-          "source_title": "블루 레귤러핏 니트 086",
+          "source_title": "블루 레귤러핏 반소매 티셔츠 086",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "블루 레귤러핏 니트 086",
+          "title": "블루 레귤러핏 반소매 티셔츠 086",
           "category": "top",
-          "subcategory": "knit",
+          "subcategory": "tshirt",
+          "detail_type": "short_sleeve_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -5933,13 +6020,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블루 레귤러핏 니트",
+          "search_summary": "블루 레귤러핏 반소매 티셔츠",
           "query_tags": [
-            "블루 니트",
+            "블루 반소매 티셔츠",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 blue, regular, knit로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 blue, regular, tshirt로 정규화했습니다."
           ]
         },
         "quality": {
@@ -5955,16 +6042,17 @@
     {
       "product_id": "top_dummy_087",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_087",
-          "source_title": "카키 롱라인 스웨트셔츠 087",
+          "source_title": "카키 롱라인 긴소매 티셔츠 087",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "카키 롱라인 스웨트셔츠 087",
+          "title": "카키 롱라인 긴소매 티셔츠 087",
           "category": "top",
-          "subcategory": "sweatshirt",
+          "subcategory": "tshirt",
+          "detail_type": "long_sleeve_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -6004,13 +6092,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "카키 롱라인 스웨트셔츠",
+          "search_summary": "카키 롱라인 긴소매 티셔츠",
           "query_tags": [
-            "카키 스웨트셔츠",
+            "카키 긴소매 티셔츠",
             "롱라인 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 khaki, longline, sweatshirt로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 khaki, longline, tshirt로 정규화했습니다."
           ]
         },
         "quality": {
@@ -6024,16 +6112,17 @@
     {
       "product_id": "top_dummy_088",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_088",
-          "source_title": "옐로우 릴랙스 핏 슬리브리스 088",
+          "source_title": "옐로우 릴랙스 핏 셔츠/블라우스 088",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "옐로우 릴랙스 핏 슬리브리스 088",
+          "title": "옐로우 릴랙스 핏 셔츠/블라우스 088",
           "category": "top",
-          "subcategory": "sleeveless",
+          "subcategory": "shirt_blouse",
+          "detail_type": "shirt_blouse",
           "materials": [
             {
               "part": "shell",
@@ -6065,13 +6154,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "옐로우 릴랙스 핏 슬리브리스",
+          "search_summary": "옐로우 릴랙스 핏 셔츠/블라우스",
           "query_tags": [
-            "옐로우 슬리브리스",
+            "옐로우 셔츠/블라우스",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 yellow, relaxed, sleeveless로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 yellow, relaxed, shirt_blouse로 정규화했습니다."
           ]
         },
         "quality": {
@@ -6085,16 +6174,17 @@
     {
       "product_id": "top_dummy_089",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_089",
-          "source_title": "아이보리 박시핏 폴로 089",
+          "source_title": "아이보리 박시핏 니트/스웨터 089",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "아이보리 박시핏 폴로 089",
+          "title": "아이보리 박시핏 니트/스웨터 089",
           "category": "top",
-          "subcategory": "polo",
+          "subcategory": "knit",
+          "detail_type": "knit_sweater",
           "materials": [
             {
               "part": "unknown",
@@ -6126,13 +6216,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "아이보리 박시핏 폴로",
+          "search_summary": "아이보리 박시핏 니트/스웨터",
           "query_tags": [
-            "아이보리 폴로",
+            "아이보리 니트/스웨터",
             "박시핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 ivory, boxy, polo로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 ivory, boxy, knit로 정규화했습니다."
           ]
         },
         "quality": {
@@ -6148,16 +6238,17 @@
     {
       "product_id": "top_dummy_090",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_090",
-          "source_title": "브라운 크롭 핏 티셔츠 090",
+          "source_title": "브라운 크롭 핏 맨투맨/스웨트 090",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "브라운 크롭 핏 티셔츠 090",
+          "title": "브라운 크롭 핏 맨투맨/스웨트 090",
           "category": "top",
-          "subcategory": "tshirt",
+          "subcategory": "sweatshirt",
+          "detail_type": "sweatshirt",
           "materials": [
             {
               "part": "unknown",
@@ -6197,13 +6288,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "브라운 크롭 핏 티셔츠",
+          "search_summary": "브라운 크롭 핏 맨투맨/스웨트",
           "query_tags": [
-            "브라운 티셔츠",
+            "브라운 맨투맨/스웨트",
             "크롭 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 brown, cropped, tshirt로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 brown, cropped, sweatshirt로 정규화했습니다."
           ]
         },
         "quality": {
@@ -6219,16 +6310,17 @@
     {
       "product_id": "top_dummy_091",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_091",
-          "source_title": "브라운 크롭 핏 티셔츠 090 리오더",
+          "source_title": "브라운 크롭 핏 맨투맨/스웨트 090 리오더",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "브라운 크롭 핏 티셔츠 090 리오더",
+          "title": "브라운 크롭 핏 맨투맨/스웨트 090 리오더",
           "category": "top",
-          "subcategory": "tshirt",
+          "subcategory": "sweatshirt",
+          "detail_type": "sweatshirt",
           "materials": [
             {
               "part": "unknown",
@@ -6268,13 +6360,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "브라운 크롭 핏 티셔츠",
+          "search_summary": "브라운 크롭 핏 맨투맨/스웨트",
           "query_tags": [
-            "브라운 티셔츠",
+            "브라운 맨투맨/스웨트",
             "크롭 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 brown, cropped, tshirt로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 brown, cropped, sweatshirt로 정규화했습니다."
           ]
         },
         "quality": {
@@ -6290,16 +6382,17 @@
     {
       "product_id": "top_dummy_092",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_092",
-          "source_title": "레드 스트레이트 핏 니트 092",
+          "source_title": "레드 스트레이트 핏 피케/카라 티셔츠 092",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "레드 스트레이트 핏 니트 092",
+          "title": "레드 스트레이트 핏 피케/카라 티셔츠 092",
           "category": "top",
-          "subcategory": "knit",
+          "subcategory": "polo",
+          "detail_type": "polo_collar_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -6339,13 +6432,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "레드 스트레이트 핏 니트",
+          "search_summary": "레드 스트레이트 핏 피케/카라 티셔츠",
           "query_tags": [
-            "레드 니트",
+            "레드 피케/카라 티셔츠",
             "스트레이트 핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 red, straight, knit로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 red, straight, polo로 정규화했습니다."
           ]
         },
         "quality": {
@@ -6359,16 +6452,17 @@
     {
       "product_id": "top_dummy_093",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_093",
-          "source_title": "블랙 오버핏 스웨트셔츠 093",
+          "source_title": "블랙 오버핏 후드 티셔츠 093",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "블랙 오버핏 스웨트셔츠 093",
+          "title": "블랙 오버핏 후드 티셔츠 093",
           "category": "top",
-          "subcategory": "sweatshirt",
+          "subcategory": "hoodie",
+          "detail_type": "hoodie_tshirt",
           "materials": [
             {
               "part": "fill",
@@ -6407,13 +6501,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블랙 오버핏 스웨트셔츠",
+          "search_summary": "블랙 오버핏 후드 티셔츠",
           "query_tags": [
-            "블랙 스웨트셔츠",
+            "블랙 후드 티셔츠",
             "오버핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 black, oversized, sweatshirt로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 black, oversized, hoodie로 정규화했습니다."
           ]
         },
         "quality": {
@@ -6427,16 +6521,17 @@
     {
       "product_id": "top_dummy_094",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_094",
-          "source_title": "그레이 레귤러핏 슬리브리스 094",
+          "source_title": "그레이 레귤러핏 기타 상의 094",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그레이 레귤러핏 슬리브리스 094",
+          "title": "그레이 레귤러핏 기타 상의 094",
           "category": "top",
-          "subcategory": "sleeveless",
+          "subcategory": "other_top",
+          "detail_type": "other_top",
           "materials": [
             {
               "part": "shell",
@@ -6475,13 +6570,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그레이 레귤러핏 슬리브리스",
+          "search_summary": "그레이 레귤러핏 기타 상의",
           "query_tags": [
-            "그레이 슬리브리스",
+            "그레이 기타 상의",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 gray, regular, sleeveless로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 gray, regular, other_top로 정규화했습니다."
           ]
         },
         "quality": {
@@ -6495,16 +6590,17 @@
     {
       "product_id": "top_dummy_095",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_095",
-          "source_title": "네이비 롱라인 폴로 095",
+          "source_title": "네이비 롱라인 반소매 티셔츠 095",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "네이비 롱라인 폴로 095",
+          "title": "네이비 롱라인 반소매 티셔츠 095",
           "category": "top",
-          "subcategory": "polo",
+          "subcategory": "tshirt",
+          "detail_type": "short_sleeve_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -6544,13 +6640,13 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "네이비 롱라인 폴로",
+          "search_summary": "네이비 롱라인 반소매 티셔츠",
           "query_tags": [
-            "네이비 폴로",
+            "네이비 반소매 티셔츠",
             "롱라인 상품"
           ],
           "explainable_reasons": [
-            "입력 텍스트의 색상, 핏, 카테고리 단서를 navy, longline, polo로 정규화했습니다."
+            "입력 텍스트의 색상, 핏, 카테고리 단서를 navy, longline, tshirt로 정규화했습니다."
           ]
         },
         "quality": {
@@ -6566,16 +6662,17 @@
     {
       "product_id": "top_dummy_096",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_096",
-          "source_title": "그린 릴랙스 핏 티셔츠 096",
+          "source_title": "그린 릴랙스 핏 긴소매 티셔츠 096",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "그린 릴랙스 핏 티셔츠 096",
+          "title": "그린 릴랙스 핏 긴소매 티셔츠 096",
           "category": "top",
           "subcategory": "tshirt",
+          "detail_type": "long_sleeve_tshirt",
           "materials": [
             {
               "part": "shell",
@@ -6608,9 +6705,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그린 릴랙스 핏 티셔츠",
+          "search_summary": "그린 릴랙스 핏 긴소매 티셔츠",
           "query_tags": [
-            "그린 티셔츠",
+            "그린 긴소매 티셔츠",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
@@ -6630,16 +6727,17 @@
     {
       "product_id": "top_dummy_097",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_097",
-          "source_title": "핑크 박시핏 셔츠 097",
+          "source_title": "핑크 박시핏 셔츠/블라우스 097",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "핑크 박시핏 셔츠 097",
+          "title": "핑크 박시핏 셔츠/블라우스 097",
           "category": "top",
           "subcategory": "shirt_blouse",
+          "detail_type": "shirt_blouse",
           "materials": [
             {
               "part": "shell",
@@ -6679,9 +6777,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "핑크 박시핏 셔츠",
+          "search_summary": "핑크 박시핏 셔츠/블라우스",
           "query_tags": [
-            "핑크 셔츠",
+            "핑크 셔츠/블라우스",
             "박시핏 상품"
           ],
           "explainable_reasons": [
@@ -6699,16 +6797,17 @@
     {
       "product_id": "top_dummy_098",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_098",
-          "source_title": "화이트 크롭 핏 니트 098",
+          "source_title": "화이트 크롭 핏 니트/스웨터 098",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "화이트 크롭 핏 니트 098",
+          "title": "화이트 크롭 핏 니트/스웨터 098",
           "category": "top",
           "subcategory": "knit",
+          "detail_type": "knit_sweater",
           "materials": [
             {
               "part": "shell",
@@ -6740,9 +6839,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "화이트 크롭 핏 니트",
+          "search_summary": "화이트 크롭 핏 니트/스웨터",
           "query_tags": [
-            "화이트 니트",
+            "화이트 니트/스웨터",
             "크롭 핏 상품"
           ],
           "explainable_reasons": [
@@ -6760,16 +6859,17 @@
     {
       "product_id": "top_dummy_099",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_099",
-          "source_title": "베이지 슬림핏 스웨트셔츠 099",
+          "source_title": "베이지 슬림핏 맨투맨/스웨트 099",
           "input_mode": "pasted_text"
         },
         "product": {
-          "title": "베이지 슬림핏 스웨트셔츠 099",
+          "title": "베이지 슬림핏 맨투맨/스웨트 099",
           "category": "top",
           "subcategory": "sweatshirt",
+          "detail_type": "sweatshirt",
           "materials": [
             {
               "part": "unknown",
@@ -6801,9 +6901,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "베이지 슬림핏 스웨트셔츠",
+          "search_summary": "베이지 슬림핏 맨투맨/스웨트",
           "query_tags": [
-            "베이지 스웨트셔츠",
+            "베이지 맨투맨/스웨트",
             "슬림핏 상품"
           ],
           "explainable_reasons": [

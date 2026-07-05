@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "source": {
     "source_url": null,
     "source_title": "잘못된 혼용률 상태 샘플",
@@ -9,6 +9,7 @@
     "title": "잘못된 혼용률 상태 샘플",
     "category": "top",
     "subcategory": "tshirt",
+    "detail_type": "short_sleeve_tshirt",
     "materials": [
       {
         "part": "unknown",

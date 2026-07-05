@@ -3,7 +3,7 @@
     {
       "product_id": "outer_a",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://www.musinsa.com/products/example-outer-a",
           "source_title": "오버핏 리넨 블레이저",
@@ -29,17 +29,39 @@
               "evidence": "린넨 60%, 면 40%"
             }
           ],
-          "fit": ["oversized"],
-          "colors": ["beige"],
-          "seasons": ["spring", "summer"],
-          "tpo_tags": ["guest_look", "commute", "layering"],
-          "care": ["dry_clean"],
-          "size_info": ["M 기준 총장 72cm"]
+          "fit": [
+            "oversized"
+          ],
+          "colors": [
+            "beige"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "guest_look",
+            "commute",
+            "layering"
+          ],
+          "care": [
+            "dry_clean"
+          ],
+          "size_info": [
+            "M 기준 총장 72cm"
+          ],
+          "detail_type": "suit_blazer_jacket"
         },
         "agent_descriptor": {
           "search_summary": "봄여름 하객룩과 출근룩에 어울리는 베이지 오버핏 리넨 블레이저",
-          "query_tags": ["여름 하객룩", "베이지 재킷", "출근룩 아우터"],
-          "explainable_reasons": ["리넨 혼방과 재킷 카테고리가 하객룩 질의와 연결된다."]
+          "query_tags": [
+            "여름 하객룩",
+            "베이지 재킷",
+            "출근룩 아우터"
+          ],
+          "explainable_reasons": [
+            "리넨 혼방과 재킷 카테고리가 하객룩 질의와 연결된다."
+          ]
         },
         "quality": {
           "missing_fields": [],
@@ -52,7 +74,7 @@
     {
       "product_id": "outer_b",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://www.musinsa.com/products/example-outer-b",
           "source_title": "베이지 리넨 오버핏 자켓",
@@ -78,17 +100,39 @@
               "evidence": "리넨 60%, 코튼 40%"
             }
           ],
-          "fit": ["oversized"],
-          "colors": ["beige"],
-          "seasons": ["spring", "summer"],
-          "tpo_tags": ["guest_look", "commute", "layering"],
-          "care": ["dry_clean"],
-          "size_info": ["M 기준 총장 72cm"]
+          "fit": [
+            "oversized"
+          ],
+          "colors": [
+            "beige"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "guest_look",
+            "commute",
+            "layering"
+          ],
+          "care": [
+            "dry_clean"
+          ],
+          "size_info": [
+            "M 기준 총장 72cm"
+          ],
+          "detail_type": "suit_blazer_jacket"
         },
         "agent_descriptor": {
           "search_summary": "봄여름 출근룩과 하객룩에 어울리는 베이지 리넨 오버핏 재킷",
-          "query_tags": ["여름 하객룩", "베이지 자켓", "출근룩 아우터"],
-          "explainable_reasons": ["동일한 소재와 핏, 색상, 카테고리로 같은 상품 후보일 수 있다."]
+          "query_tags": [
+            "여름 하객룩",
+            "베이지 자켓",
+            "출근룩 아우터"
+          ],
+          "explainable_reasons": [
+            "동일한 소재와 핏, 색상, 카테고리로 같은 상품 후보일 수 있다."
+          ]
         },
         "quality": {
           "missing_fields": [],
@@ -101,7 +145,7 @@
     {
       "product_id": "top_a",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": null,
           "source_title": "워셔블 코튼 티셔츠",
@@ -120,20 +164,43 @@
               "evidence": "코튼 소재의 부드러운 터치"
             }
           ],
-          "fit": ["regular"],
-          "colors": ["white"],
-          "seasons": ["summer"],
-          "tpo_tags": ["daily", "casual", "layering"],
-          "care": ["machine_wash"],
-          "size_info": ["S, M, L, XL"]
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "white"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual",
+            "layering"
+          ],
+          "care": [
+            "machine_wash"
+          ],
+          "size_info": [
+            "S, M, L, XL"
+          ],
+          "detail_type": "short_sleeve_tshirt"
         },
         "agent_descriptor": {
           "search_summary": "여름 데일리룩과 이너로 활용하기 좋은 화이트 코튼 티셔츠",
-          "query_tags": ["여름 티셔츠", "화이트 이너", "데일리 상의"],
-          "explainable_reasons": ["티셔츠와 화이트 컬러는 데일리·레이어드 질의에 대응한다."]
+          "query_tags": [
+            "여름 티셔츠",
+            "화이트 이너",
+            "데일리 상의"
+          ],
+          "explainable_reasons": [
+            "티셔츠와 화이트 컬러는 데일리·레이어드 질의에 대응한다."
+          ]
         },
         "quality": {
-          "missing_fields": ["material_ratio"],
+          "missing_fields": [
+            "material_ratio"
+          ],
           "ambiguous_fields": [],
           "out_of_scope": false,
           "confidence": "medium"

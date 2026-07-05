@@ -3,7 +3,7 @@
     {
       "product_id": "outer_dummy_000",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_000",
           "source_title": "블랙 슬림핏 재킷 000",
@@ -49,7 +49,8 @@
           "size_info": [
             "L 기준 총장 62cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "블랙 컬러의 봄여름용 슬림핏 리넨 면 재킷입니다.",
@@ -75,7 +76,7 @@
     {
       "product_id": "outer_dummy_001",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_001",
           "source_title": "블랙 슬림핏 재킷 000 리오더",
@@ -121,7 +122,8 @@
           "size_info": [
             "L 기준 총장 62cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "블랙 컬러의 리오더 봄여름용 슬림핏 리넨 면 재킷입니다.",
@@ -147,7 +149,7 @@
     {
       "product_id": "outer_dummy_004",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_004",
           "source_title": "핑크 롱라인 베스트 004",
@@ -192,7 +194,8 @@
           "size_info": [
             "L 기준 총장 66cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "핑크 컬러의 겨울용 롱라인 울 캐시미어 베스트입니다.",
@@ -218,7 +221,7 @@
     {
       "product_id": "outer_dummy_006",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_006",
           "source_title": "베이지 박시핏 재킷 006",
@@ -264,7 +267,8 @@
           "size_info": [
             "L 기준 총장 68cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "베이지 컬러의 가을겨울용 박시핏 다운 충전재 재킷입니다.",
@@ -290,7 +294,7 @@
     {
       "product_id": "outer_dummy_008",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_008",
           "source_title": "카키 슬림핏 코트 008",
@@ -335,7 +339,8 @@
           "size_info": [
             "L 기준 총장 70cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "카키 컬러의 여름용 슬림핏 리사이클 섬유 코트입니다.",
@@ -365,7 +370,7 @@
     {
       "product_id": "outer_dummy_011",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_011",
           "source_title": "아이보리 오버핏 베스트 010 리오더",
@@ -411,7 +416,8 @@
           "size_info": [
             "L 기준 총장 72cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "아이보리 컬러의 리오더 봄여름용 오버핏 리넨 면 베스트입니다.",
@@ -437,7 +443,7 @@
     {
       "product_id": "outer_dummy_020",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_020",
           "source_title": "베이지 롱라인 코트 020",
@@ -483,7 +489,8 @@
           "size_info": [
             "L 기준 총장 64cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "베이지 컬러의 봄여름용 롱라인 리넨 면 코트입니다.",
@@ -509,7 +516,7 @@
     {
       "product_id": "outer_dummy_031",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_031",
           "source_title": "네이비 박시핏 재킷 030 리오더",
@@ -555,7 +562,8 @@
           "size_info": [
             "L 기준 총장 74cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "네이비 컬러의 리오더 봄여름용 박시핏 리넨 면 재킷입니다.",
@@ -581,7 +589,7 @@
     {
       "product_id": "outer_dummy_040",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_040",
           "source_title": "데님 블루 슬림핏 베스트 040",
@@ -627,7 +635,8 @@
           "size_info": [
             "L 기준 총장 66cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "데님 블루 컬러의 봄여름용 슬림핏 리넨 면 베스트입니다.",
@@ -654,7 +663,7 @@
     {
       "product_id": "outer_dummy_049",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/outer_dummy_049",
           "source_title": "블루 스트레이트 핏 점퍼 049",
@@ -692,7 +701,8 @@
           "size_info": [
             "L 기준 총장 75cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "블루 컬러의 겨울용 스트레이트 핏 페이크 레더 느낌 점퍼입니다.",
@@ -722,7 +732,7 @@
     {
       "product_id": "top_dummy_050",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_050",
           "source_title": "레드 크롭 핏 니트 050",
@@ -768,7 +778,8 @@
           "size_info": [
             "M 기준 총장 76cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "레드 컬러의 봄여름용 크롭 핏 린넨 터치 니트입니다.",
@@ -799,7 +810,7 @@
     {
       "product_id": "top_dummy_051",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_051",
           "source_title": "레드 크롭 핏 니트 050 리오더",
@@ -845,7 +856,8 @@
           "size_info": [
             "M 기준 총장 76cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "레드 컬러의 리오더 봄여름용 크롭 핏 린넨 터치 니트입니다.",
@@ -876,7 +888,7 @@
     {
       "product_id": "top_dummy_054",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_054",
           "source_title": "그린 레귤러핏 티셔츠 054",
@@ -921,7 +933,8 @@
           "size_info": [
             "M 기준 총장 62cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "그린 컬러의 겨울용 레귤러핏 면 폴리우레탄 티셔츠입니다.",
@@ -947,7 +960,7 @@
     {
       "product_id": "top_dummy_056",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_056",
           "source_title": "화이트 릴랙스 핏 니트 056",
@@ -986,7 +999,8 @@
           "size_info": [
             "M 기준 총장 64cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "화이트 컬러의 가을겨울용 릴랙스 핏 페이크 레더 느낌 니트입니다.",
@@ -1016,7 +1030,7 @@
     {
       "product_id": "top_dummy_058",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_058",
           "source_title": "블루 크롭 핏 슬리브리스 058",
@@ -1054,7 +1068,8 @@
           "size_info": [
             "M 기준 총장 66cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "블루 컬러의 여름용 크롭 핏 폴리에스터 슬리브리스입니다.",
@@ -1080,7 +1095,7 @@
     {
       "product_id": "top_dummy_061",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_061",
           "source_title": "옐로우 스트레이트 핏 티셔츠 060 리오더",
@@ -1126,7 +1141,8 @@
           "size_info": [
             "M 기준 총장 68cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "옐로우 컬러의 리오더 봄여름용 스트레이트 핏 린넨 터치 티셔츠입니다.",
@@ -1157,7 +1173,7 @@
     {
       "product_id": "top_dummy_070",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_070",
           "source_title": "화이트 레귤러핏 슬리브리스 070",
@@ -1203,7 +1219,8 @@
           "size_info": [
             "M 기준 총장 78cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "화이트 컬러의 봄여름용 레귤러핏 린넨 터치 슬리브리스입니다.",
@@ -1234,7 +1251,7 @@
     {
       "product_id": "top_dummy_081",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_081",
           "source_title": "그레이 릴랙스 핏 니트 080 리오더",
@@ -1280,7 +1297,8 @@
           "size_info": [
             "M 기준 총장 70cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "그레이 컬러의 리오더 봄여름용 릴랙스 핏 린넨 터치 니트입니다.",
@@ -1311,7 +1329,7 @@
     {
       "product_id": "top_dummy_090",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_090",
           "source_title": "브라운 크롭 핏 티셔츠 090",
@@ -1357,7 +1375,8 @@
           "size_info": [
             "M 기준 총장 62cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "브라운 컬러의 봄여름용 크롭 핏 린넨 터치 티셔츠입니다.",
@@ -1388,7 +1407,7 @@
     {
       "product_id": "top_dummy_099",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://example.com/musinsa-expanded/top_dummy_099",
           "source_title": "베이지 슬림핏 스웨트셔츠 099",
@@ -1426,7 +1445,8 @@
           "size_info": [
             "M 기준 총장 71cm",
             "어깨와 가슴둘레 여유"
-          ]
+          ],
+          "detail_type": null
         },
         "agent_descriptor": {
           "search_summary": "베이지 컬러의 겨울용 슬림핏 코튼 스웨트셔츠입니다.",

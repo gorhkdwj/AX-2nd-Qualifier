@@ -2,323 +2,323 @@
   "cases": [
     {
       "product_id": "outer_dummy_000",
-      "source_title": "블랙 슬림핏 재킷 000",
+      "source_title": "블랙 슬림핏 스타디움 재킷 000",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_000",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 블랙 슬림핏 재킷 000. 컬러: 블랙. 겉감 리넨 60%, 면 40%. 슬림핏 실루엣이며 L 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 블랙 슬림핏 스타디움 재킷 000. 제품분류: 재킷 > 스타디움 재킷. 컬러: 블랙. 겉감 리넨 60%, 면 40%. 슬림핏 실루엣이며 L 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "outer_dummy_001",
-      "source_title": "블랙 슬림핏 재킷 000 리오더",
+      "source_title": "블랙 슬림핏 스타디움 재킷 000 리오더",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_001",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 블랙 슬림핏 재킷 000 리오더. 컬러: 블랙. 겉감 리넨 60%, 면 40%. 슬림핏 실루엣이며 L 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 블랙 슬림핏 스타디움 재킷 000 리오더. 제품분류: 재킷 > 스타디움 재킷. 컬러: 블랙. 겉감 리넨 60%, 면 40%. 슬림핏 실루엣이며 L 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "outer_dummy_002",
-      "source_title": "네이비 오버핏 코트 002",
+      "source_title": "네이비 오버핏 플리스/뽀글이 002",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_002",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 네이비 오버핏 코트 002. 컬러: 네이비. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 오버핏 실루엣이며 L 기준 총장 64cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 저온 다림질 가능."
+      "product_text": "상품명: 네이비 오버핏 플리스/뽀글이 002. 제품분류: 재킷 > 플리스/뽀글이. 컬러: 네이비. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 오버핏 실루엣이며 L 기준 총장 64cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 저온 다림질 가능."
     },
     {
       "product_id": "outer_dummy_003",
-      "source_title": "그린 레귤러핏 가디건 003",
+      "source_title": "그린 레귤러핏 아노락 재킷 003",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_003",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 그린 레귤러핏 가디건 003. 컬러: 그린. 린넨 터치의 레이온 블렌드 소재. 레귤러핏 실루엣이며 L 기준 총장 65cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 그린 레귤러핏 아노락 재킷 003. 제품분류: 재킷 > 아노락 재킷. 컬러: 그린. 린넨 터치의 레이온 블렌드 소재. 레귤러핏 실루엣이며 L 기준 총장 65cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "outer_dummy_004",
-      "source_title": "핑크 롱라인 베스트 004",
+      "source_title": "핑크 롱라인 슈트/블레이저 재킷 004",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_004",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 핑크 롱라인 베스트 004. 컬러: 핑크. 겉감 울 70%, 캐시미어 30%. 롱라인 실루엣이며 L 기준 총장 66cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 단독 손세탁 권장."
+      "product_text": "상품명: 핑크 롱라인 슈트/블레이저 재킷 004. 제품분류: 재킷 > 슈트/블레이저 재킷. 컬러: 핑크. 겉감 울 70%, 캐시미어 30%. 롱라인 실루엣이며 L 기준 총장 66cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 단독 손세탁 권장."
     },
     {
       "product_id": "outer_dummy_005",
-      "source_title": "화이트 릴랙스 핏 후드 집업 005",
+      "source_title": "화이트 릴랙스 핏 사파리/헌팅 재킷 005",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_005",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 화이트 릴랙스 핏 후드 집업 005. 컬러: 화이트. 겉감 나일론 100%, 안감 폴리에스터 100%. 릴랙스 핏 실루엣이며 L 기준 총장 67cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 화이트 릴랙스 핏 사파리/헌팅 재킷 005. 제품분류: 재킷 > 사파리/헌팅 재킷. 컬러: 화이트. 겉감 나일론 100%, 안감 폴리에스터 100%. 릴랙스 핏 실루엣이며 L 기준 총장 67cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "outer_dummy_006",
-      "source_title": "베이지 박시핏 재킷 006",
+      "source_title": "베이지 박시핏 레더/라이더스 재킷 006",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_006",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 베이지 박시핏 재킷 006. 컬러: 베이지. 충전재 덕다운 80%, 구스다운 20%. 박시핏 실루엣이며 L 기준 총장 68cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 그늘 건조 권장."
+      "product_text": "상품명: 베이지 박시핏 레더/라이더스 재킷 006. 제품분류: 재킷 > 레더/라이더스 재킷. 컬러: 베이지. 충전재 덕다운 80%, 구스다운 20%. 박시핏 실루엣이며 L 기준 총장 68cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 그늘 건조 권장."
     },
     {
       "product_id": "outer_dummy_007",
-      "source_title": "블루 크롭 핏 점퍼 007",
+      "source_title": "블루 크롭 핏 트레이닝 재킷 007",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_007",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 블루 크롭 핏 점퍼 007. 컬러: 블루. 겉감 면 95%, 폴리우레탄 5%. 크롭 핏 실루엣이며 L 기준 총장 69cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 블루 크롭 핏 트레이닝 재킷 007. 제품분류: 재킷 > 트레이닝 재킷. 컬러: 블루. 겉감 면 95%, 폴리우레탄 5%. 크롭 핏 실루엣이며 L 기준 총장 69cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "outer_dummy_008",
-      "source_title": "카키 슬림핏 코트 008",
+      "source_title": "카키 슬림핏 나일론/코치 재킷 008",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_008",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 카키 슬림핏 코트 008. 컬러: 카키. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 슬림핏 실루엣이며 L 기준 총장 70cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 드라이클리닝 권장."
+      "product_text": "상품명: 카키 슬림핏 나일론/코치 재킷 008. 제품분류: 재킷 > 나일론/코치 재킷. 컬러: 카키. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 슬림핏 실루엣이며 L 기준 총장 70cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 드라이클리닝 권장."
     },
     {
       "product_id": "outer_dummy_009",
-      "source_title": "옐로우 스트레이트 핏 가디건 009",
+      "source_title": "옐로우 스트레이트 핏 블루종/MA-1 009",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_009",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 옐로우 스트레이트 핏 가디건 009. 컬러: 옐로우. 페이크 레더 느낌의 소재. 스트레이트 핏 실루엣이며 L 기준 총장 71cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 저온 다림질 가능."
+      "product_text": "상품명: 옐로우 스트레이트 핏 블루종/MA-1 009. 제품분류: 재킷 > 블루종/MA-1. 컬러: 옐로우. 페이크 레더 느낌의 소재. 스트레이트 핏 실루엣이며 L 기준 총장 71cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 저온 다림질 가능."
     },
     {
       "product_id": "outer_dummy_010",
-      "source_title": "아이보리 오버핏 베스트 010",
+      "source_title": "아이보리 오버핏 무스탕/퍼 010",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_010",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 아이보리 오버핏 베스트 010. 컬러: 아이보리. 겉감 리넨 60%, 면 40%. 오버핏 실루엣이며 L 기준 총장 72cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 아이보리 오버핏 무스탕/퍼 010. 제품분류: 점퍼 > 무스탕/퍼. 컬러: 아이보리. 겉감 리넨 60%, 면 40%. 오버핏 실루엣이며 L 기준 총장 72cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "outer_dummy_011",
-      "source_title": "아이보리 오버핏 베스트 010 리오더",
+      "source_title": "아이보리 오버핏 무스탕/퍼 010 리오더",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_011",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 아이보리 오버핏 베스트 010 리오더. 컬러: 아이보리. 겉감 리넨 60%, 면 40%. 오버핏 실루엣이며 L 기준 총장 72cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 아이보리 오버핏 무스탕/퍼 010 리오더. 제품분류: 점퍼 > 무스탕/퍼. 컬러: 아이보리. 겉감 리넨 60%, 면 40%. 오버핏 실루엣이며 L 기준 총장 72cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "outer_dummy_012",
-      "source_title": "데님 블루 롱라인 재킷 012",
+      "source_title": "데님 블루 롱라인 롱패딩/헤비 아우터 012",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_012",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 데님 블루 롱라인 재킷 012. 컬러: 데님 블루. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 롱라인 실루엣이며 L 기준 총장 74cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 데님 블루 롱라인 롱패딩/헤비 아우터 012. 제품분류: 점퍼 > 롱패딩/헤비 아우터. 컬러: 데님 블루. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 롱라인 실루엣이며 L 기준 총장 74cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "outer_dummy_013",
-      "source_title": "레드 릴랙스 핏 점퍼 013",
+      "source_title": "레드 릴랙스 핏 겨울 기타 코트 013",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_013",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 레드 릴랙스 핏 점퍼 013. 컬러: 레드. 린넨 터치의 레이온 블렌드 소재. 릴랙스 핏 실루엣이며 L 기준 총장 75cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 그늘 건조 권장."
+      "product_text": "상품명: 레드 릴랙스 핏 겨울 기타 코트 013. 제품분류: 코트 > 겨울 기타 코트. 컬러: 레드. 린넨 터치의 레이온 블렌드 소재. 릴랙스 핏 실루엣이며 L 기준 총장 75cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 그늘 건조 권장."
     },
     {
       "product_id": "outer_dummy_014",
-      "source_title": "블랙 박시핏 코트 014",
+      "source_title": "블랙 박시핏 겨울 더블 코트 014",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_014",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 블랙 박시핏 코트 014. 컬러: 블랙. 겉감 울 70%, 캐시미어 30%. 박시핏 실루엣이며 L 기준 총장 76cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 블랙 박시핏 겨울 더블 코트 014. 제품분류: 코트 > 겨울 더블 코트. 컬러: 블랙. 겉감 울 70%, 캐시미어 30%. 박시핏 실루엣이며 L 기준 총장 76cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "outer_dummy_015",
-      "source_title": "그레이 크롭 핏 가디건 015",
+      "source_title": "그레이 크롭 핏 겨울 싱글 코트 015",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_015",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 그레이 크롭 핏 가디건 015. 컬러: 그레이. 겉감 나일론 100%, 안감 폴리에스터 100%. 크롭 핏 실루엣이며 L 기준 총장 77cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 드라이클리닝 권장."
+      "product_text": "상품명: 그레이 크롭 핏 겨울 싱글 코트 015. 제품분류: 코트 > 겨울 싱글 코트. 컬러: 그레이. 겉감 나일론 100%, 안감 폴리에스터 100%. 크롭 핏 실루엣이며 L 기준 총장 77cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 드라이클리닝 권장."
     },
     {
       "product_id": "outer_dummy_016",
-      "source_title": "네이비 슬림핏 베스트 016",
+      "source_title": "네이비 슬림핏 환절기 코트 016",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_016",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 네이비 슬림핏 베스트 016. 컬러: 네이비. 충전재 덕다운 80%, 구스다운 20%. 슬림핏 실루엣이며 L 기준 총장 78cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 저온 다림질 가능."
+      "product_text": "상품명: 네이비 슬림핏 환절기 코트 016. 제품분류: 코트 > 환절기 코트. 컬러: 네이비. 충전재 덕다운 80%, 구스다운 20%. 슬림핏 실루엣이며 L 기준 총장 78cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 저온 다림질 가능."
     },
     {
       "product_id": "outer_dummy_017",
-      "source_title": "그린 스트레이트 핏 후드 집업 017",
+      "source_title": "그린 스트레이트 핏 카디건 017",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_017",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 그린 스트레이트 핏 후드 집업 017. 컬러: 그린. 겉감 면 95%, 폴리우레탄 5%. 스트레이트 핏 실루엣이며 L 기준 총장 79cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 그린 스트레이트 핏 카디건 017. 제품분류: 가디건 > 카디건. 컬러: 그린. 겉감 면 95%, 폴리우레탄 5%. 스트레이트 핏 실루엣이며 L 기준 총장 79cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "outer_dummy_018",
-      "source_title": "핑크 오버핏 재킷 018",
+      "source_title": "핑크 오버핏 베스트 018",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_018",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 핑크 오버핏 재킷 018. 컬러: 핑크. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 오버핏 실루엣이며 L 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 단독 손세탁 권장."
+      "product_text": "상품명: 핑크 오버핏 베스트 018. 제품분류: 베스트 > 베스트. 컬러: 핑크. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 오버핏 실루엣이며 L 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 단독 손세탁 권장."
     },
     {
       "product_id": "outer_dummy_019",
-      "source_title": "화이트 레귤러핏 점퍼 019",
+      "source_title": "화이트 레귤러핏 경량 패딩/패딩 베스트 019",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_019",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 화이트 레귤러핏 점퍼 019. 컬러: 화이트. 페이크 레더 느낌의 소재. 레귤러핏 실루엣이며 L 기준 총장 63cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 화이트 레귤러핏 경량 패딩/패딩 베스트 019. 제품분류: 베스트 > 경량 패딩/패딩 베스트. 컬러: 화이트. 페이크 레더 느낌의 소재. 레귤러핏 실루엣이며 L 기준 총장 63cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "outer_dummy_020",
-      "source_title": "베이지 롱라인 코트 020",
+      "source_title": "베이지 롱라인 후드 집업 020",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_020",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 베이지 롱라인 코트 020. 컬러: 베이지. 겉감 리넨 60%, 면 40%. 롱라인 실루엣이며 L 기준 총장 64cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 그늘 건조 권장."
+      "product_text": "상품명: 베이지 롱라인 후드 집업 020. 제품분류: 후드 집업 > 후드 집업. 컬러: 베이지. 겉감 리넨 60%, 면 40%. 롱라인 실루엣이며 L 기준 총장 64cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 그늘 건조 권장."
     },
     {
       "product_id": "outer_dummy_021",
-      "source_title": "베이지 롱라인 코트 020 리오더",
+      "source_title": "베이지 롱라인 후드 집업 020 리오더",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_021",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 베이지 롱라인 코트 020 리오더. 컬러: 베이지. 겉감 리넨 60%, 면 40%. 롱라인 실루엣이며 L 기준 총장 64cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 그늘 건조 권장."
+      "product_text": "상품명: 베이지 롱라인 후드 집업 020 리오더. 제품분류: 후드 집업 > 후드 집업. 컬러: 베이지. 겉감 리넨 60%, 면 40%. 롱라인 실루엣이며 L 기준 총장 64cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 그늘 건조 권장."
     },
     {
       "product_id": "outer_dummy_022",
-      "source_title": "카키 박시핏 베스트 022",
+      "source_title": "카키 박시핏 스타디움 재킷 022",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_022",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 카키 박시핏 베스트 022. 컬러: 카키. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 박시핏 실루엣이며 L 기준 총장 66cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 드라이클리닝 권장."
+      "product_text": "상품명: 카키 박시핏 스타디움 재킷 022. 제품분류: 재킷 > 스타디움 재킷. 컬러: 카키. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 박시핏 실루엣이며 L 기준 총장 66cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 드라이클리닝 권장."
     },
     {
       "product_id": "outer_dummy_023",
-      "source_title": "옐로우 크롭 핏 후드 집업 023",
+      "source_title": "옐로우 크롭 핏 트러커 재킷 023",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_023",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 옐로우 크롭 핏 후드 집업 023. 컬러: 옐로우. 린넨 터치의 레이온 블렌드 소재. 크롭 핏 실루엣이며 L 기준 총장 67cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 저온 다림질 가능."
+      "product_text": "상품명: 옐로우 크롭 핏 트러커 재킷 023. 제품분류: 재킷 > 트러커 재킷. 컬러: 옐로우. 린넨 터치의 레이온 블렌드 소재. 크롭 핏 실루엣이며 L 기준 총장 67cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 저온 다림질 가능."
     },
     {
       "product_id": "outer_dummy_024",
-      "source_title": "아이보리 슬림핏 재킷 024",
+      "source_title": "아이보리 슬림핏 플리스/뽀글이 024",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_024",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 아이보리 슬림핏 재킷 024. 컬러: 아이보리. 겉감 울 70%, 캐시미어 30%. 슬림핏 실루엣이며 L 기준 총장 68cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 아이보리 슬림핏 플리스/뽀글이 024. 제품분류: 재킷 > 플리스/뽀글이. 컬러: 아이보리. 겉감 울 70%, 캐시미어 30%. 슬림핏 실루엣이며 L 기준 총장 68cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "outer_dummy_025",
-      "source_title": "브라운 스트레이트 핏 점퍼 025",
+      "source_title": "브라운 스트레이트 핏 아노락 재킷 025",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_025",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 브라운 스트레이트 핏 점퍼 025. 컬러: 브라운. 겉감 나일론 100%, 안감 폴리에스터 100%. 스트레이트 핏 실루엣이며 L 기준 총장 69cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 단독 손세탁 권장."
+      "product_text": "상품명: 브라운 스트레이트 핏 아노락 재킷 025. 제품분류: 재킷 > 아노락 재킷. 컬러: 브라운. 겉감 나일론 100%, 안감 폴리에스터 100%. 스트레이트 핏 실루엣이며 L 기준 총장 69cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 단독 손세탁 권장."
     },
     {
       "product_id": "outer_dummy_026",
-      "source_title": "데님 블루 오버핏 코트 026",
+      "source_title": "데님 블루 오버핏 슈트/블레이저 재킷 026",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_026",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 데님 블루 오버핏 코트 026. 컬러: 데님 블루. 충전재 덕다운 80%, 구스다운 20%. 오버핏 실루엣이며 L 기준 총장 70cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 데님 블루 오버핏 슈트/블레이저 재킷 026. 제품분류: 재킷 > 슈트/블레이저 재킷. 컬러: 데님 블루. 충전재 덕다운 80%, 구스다운 20%. 오버핏 실루엣이며 L 기준 총장 70cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "outer_dummy_027",
-      "source_title": "레드 레귤러핏 가디건 027",
+      "source_title": "레드 레귤러핏 사파리/헌팅 재킷 027",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_027",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 레드 레귤러핏 가디건 027. 컬러: 레드. 겉감 면 95%, 폴리우레탄 5%. 레귤러핏 실루엣이며 L 기준 총장 71cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 그늘 건조 권장."
+      "product_text": "상품명: 레드 레귤러핏 사파리/헌팅 재킷 027. 제품분류: 재킷 > 사파리/헌팅 재킷. 컬러: 레드. 겉감 면 95%, 폴리우레탄 5%. 레귤러핏 실루엣이며 L 기준 총장 71cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 그늘 건조 권장."
     },
     {
       "product_id": "outer_dummy_028",
-      "source_title": "블랙 롱라인 베스트 028",
+      "source_title": "블랙 롱라인 레더/라이더스 재킷 028",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_028",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 블랙 롱라인 베스트 028. 컬러: 블랙. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 롱라인 실루엣이며 L 기준 총장 72cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 블랙 롱라인 레더/라이더스 재킷 028. 제품분류: 재킷 > 레더/라이더스 재킷. 컬러: 블랙. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 롱라인 실루엣이며 L 기준 총장 72cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "outer_dummy_029",
-      "source_title": "그레이 릴랙스 핏 후드 집업 029",
+      "source_title": "그레이 릴랙스 핏 트레이닝 재킷 029",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_029",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 그레이 릴랙스 핏 후드 집업 029. 컬러: 그레이. 페이크 레더 느낌의 소재. 릴랙스 핏 실루엣이며 L 기준 총장 73cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 드라이클리닝 권장."
+      "product_text": "상품명: 그레이 릴랙스 핏 트레이닝 재킷 029. 제품분류: 재킷 > 트레이닝 재킷. 컬러: 그레이. 페이크 레더 느낌의 소재. 릴랙스 핏 실루엣이며 L 기준 총장 73cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 드라이클리닝 권장."
     },
     {
       "product_id": "outer_dummy_030",
-      "source_title": "네이비 박시핏 재킷 030",
+      "source_title": "네이비 박시핏 나일론/코치 재킷 030",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_030",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 네이비 박시핏 재킷 030. 컬러: 네이비. 겉감 리넨 60%, 면 40%. 박시핏 실루엣이며 L 기준 총장 74cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 저온 다림질 가능."
+      "product_text": "상품명: 네이비 박시핏 나일론/코치 재킷 030. 제품분류: 재킷 > 나일론/코치 재킷. 컬러: 네이비. 겉감 리넨 60%, 면 40%. 박시핏 실루엣이며 L 기준 총장 74cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 저온 다림질 가능."
     },
     {
       "product_id": "outer_dummy_031",
-      "source_title": "네이비 박시핏 재킷 030 리오더",
+      "source_title": "네이비 박시핏 나일론/코치 재킷 030 리오더",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_031",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 네이비 박시핏 재킷 030 리오더. 컬러: 네이비. 겉감 리넨 60%, 면 40%. 박시핏 실루엣이며 L 기준 총장 74cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 저온 다림질 가능."
+      "product_text": "상품명: 네이비 박시핏 나일론/코치 재킷 030 리오더. 제품분류: 재킷 > 나일론/코치 재킷. 컬러: 네이비. 겉감 리넨 60%, 면 40%. 박시핏 실루엣이며 L 기준 총장 74cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 저온 다림질 가능."
     },
     {
       "product_id": "outer_dummy_032",
-      "source_title": "핑크 슬림핏 코트 032",
+      "source_title": "핑크 슬림핏 무스탕/퍼 032",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_032",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 핑크 슬림핏 코트 032. 컬러: 핑크. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 슬림핏 실루엣이며 L 기준 총장 76cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 단독 손세탁 권장."
+      "product_text": "상품명: 핑크 슬림핏 무스탕/퍼 032. 제품분류: 점퍼 > 무스탕/퍼. 컬러: 핑크. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 슬림핏 실루엣이며 L 기준 총장 76cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 단독 손세탁 권장."
     },
     {
       "product_id": "outer_dummy_033",
-      "source_title": "화이트 스트레이트 핏 가디건 033",
+      "source_title": "화이트 스트레이트 핏 숏패딩/헤비 아우터 033",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_033",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 화이트 스트레이트 핏 가디건 033. 컬러: 화이트. 린넨 터치의 레이온 블렌드 소재. 스트레이트 핏 실루엣이며 L 기준 총장 77cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 화이트 스트레이트 핏 숏패딩/헤비 아우터 033. 제품분류: 점퍼 > 숏패딩/헤비 아우터. 컬러: 화이트. 린넨 터치의 레이온 블렌드 소재. 스트레이트 핏 실루엣이며 L 기준 총장 77cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "outer_dummy_034",
-      "source_title": "베이지 오버핏 베스트 034",
+      "source_title": "베이지 오버핏 롱패딩/헤비 아우터 034",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_034",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 베이지 오버핏 베스트 034. 컬러: 베이지. 겉감 울 70%, 캐시미어 30%. 오버핏 실루엣이며 L 기준 총장 78cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 그늘 건조 권장."
+      "product_text": "상품명: 베이지 오버핏 롱패딩/헤비 아우터 034. 제품분류: 점퍼 > 롱패딩/헤비 아우터. 컬러: 베이지. 겉감 울 70%, 캐시미어 30%. 오버핏 실루엣이며 L 기준 총장 78cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 그늘 건조 권장."
     },
     {
       "product_id": "outer_dummy_035",
-      "source_title": "블루 레귤러핏 후드 집업 035",
+      "source_title": "블루 레귤러핏 겨울 기타 코트 035",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_035",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 블루 레귤러핏 후드 집업 035. 컬러: 블루. 겉감 나일론 100%, 안감 폴리에스터 100%. 레귤러핏 실루엣이며 L 기준 총장 79cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 블루 레귤러핏 겨울 기타 코트 035. 제품분류: 코트 > 겨울 기타 코트. 컬러: 블루. 겉감 나일론 100%, 안감 폴리에스터 100%. 레귤러핏 실루엣이며 L 기준 총장 79cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "outer_dummy_036",
-      "source_title": "카키 롱라인 재킷 036",
+      "source_title": "카키 롱라인 겨울 더블 코트 036",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_036",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 카키 롱라인 재킷 036. 컬러: 카키. 충전재 덕다운 80%, 구스다운 20%. 롱라인 실루엣이며 L 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 드라이클리닝 권장."
+      "product_text": "상품명: 카키 롱라인 겨울 더블 코트 036. 제품분류: 코트 > 겨울 더블 코트. 컬러: 카키. 충전재 덕다운 80%, 구스다운 20%. 롱라인 실루엣이며 L 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 드라이클리닝 권장."
     },
     {
       "product_id": "outer_dummy_037",
-      "source_title": "옐로우 릴랙스 핏 점퍼 037",
+      "source_title": "옐로우 릴랙스 핏 겨울 싱글 코트 037",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_037",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 옐로우 릴랙스 핏 점퍼 037. 컬러: 옐로우. 겉감 면 95%, 폴리우레탄 5%. 릴랙스 핏 실루엣이며 L 기준 총장 63cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 저온 다림질 가능."
+      "product_text": "상품명: 옐로우 릴랙스 핏 겨울 싱글 코트 037. 제품분류: 코트 > 겨울 싱글 코트. 컬러: 옐로우. 겉감 면 95%, 폴리우레탄 5%. 릴랙스 핏 실루엣이며 L 기준 총장 63cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 저온 다림질 가능."
     },
     {
       "product_id": "outer_dummy_038",
-      "source_title": "아이보리 박시핏 코트 038",
+      "source_title": "아이보리 박시핏 환절기 코트 038",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_038",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 아이보리 박시핏 코트 038. 컬러: 아이보리. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 박시핏 실루엣이며 L 기준 총장 64cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 아이보리 박시핏 환절기 코트 038. 제품분류: 코트 > 환절기 코트. 컬러: 아이보리. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 박시핏 실루엣이며 L 기준 총장 64cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "outer_dummy_039",
-      "source_title": "브라운 크롭 핏 가디건 039",
+      "source_title": "브라운 크롭 핏 카디건 039",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_039",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 브라운 크롭 핏 가디건 039. 컬러: 브라운. 페이크 레더 느낌의 소재. 크롭 핏 실루엣이며 L 기준 총장 65cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 단독 손세탁 권장."
+      "product_text": "상품명: 브라운 크롭 핏 카디건 039. 제품분류: 가디건 > 카디건. 컬러: 브라운. 페이크 레더 느낌의 소재. 크롭 핏 실루엣이며 L 기준 총장 65cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 단독 손세탁 권장."
     },
     {
       "product_id": "outer_dummy_040",
@@ -326,7 +326,7 @@
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_040",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 데님 블루 슬림핏 베스트 040. 컬러: 데님 블루. 겉감 리넨 60%, 면 40%. 슬림핏 실루엣이며 L 기준 총장 66cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 데님 블루 슬림핏 베스트 040. 제품분류: 베스트 > 베스트. 컬러: 데님 블루. 겉감 리넨 60%, 면 40%. 슬림핏 실루엣이며 L 기준 총장 66cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "outer_dummy_041",
@@ -334,471 +334,471 @@
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_041",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 데님 블루 슬림핏 베스트 040 리오더. 컬러: 데님 블루. 겉감 리넨 60%, 면 40%. 슬림핏 실루엣이며 L 기준 총장 66cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 데님 블루 슬림핏 베스트 040 리오더. 제품분류: 베스트 > 베스트. 컬러: 데님 블루. 겉감 리넨 60%, 면 40%. 슬림핏 실루엣이며 L 기준 총장 66cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "outer_dummy_042",
-      "source_title": "블랙 오버핏 재킷 042",
+      "source_title": "블랙 오버핏 후드 집업 042",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_042",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 블랙 오버핏 재킷 042. 컬러: 블랙. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 오버핏 실루엣이며 L 기준 총장 68cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 블랙 오버핏 후드 집업 042. 제품분류: 후드 집업 > 후드 집업. 컬러: 블랙. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 오버핏 실루엣이며 L 기준 총장 68cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "outer_dummy_043",
-      "source_title": "그레이 레귤러핏 점퍼 043",
+      "source_title": "그레이 레귤러핏 기타 아우터 043",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_043",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 그레이 레귤러핏 점퍼 043. 컬러: 그레이. 린넨 터치의 레이온 블렌드 소재. 레귤러핏 실루엣이며 L 기준 총장 69cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 드라이클리닝 권장."
+      "product_text": "상품명: 그레이 레귤러핏 기타 아우터 043. 제품분류: 기타 아우터 > 기타 아우터. 컬러: 그레이. 린넨 터치의 레이온 블렌드 소재. 레귤러핏 실루엣이며 L 기준 총장 69cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 드라이클리닝 권장."
     },
     {
       "product_id": "outer_dummy_044",
-      "source_title": "네이비 롱라인 코트 044",
+      "source_title": "네이비 롱라인 스타디움 재킷 044",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_044",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 네이비 롱라인 코트 044. 컬러: 네이비. 겉감 울 70%, 캐시미어 30%. 롱라인 실루엣이며 L 기준 총장 70cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 저온 다림질 가능."
+      "product_text": "상품명: 네이비 롱라인 스타디움 재킷 044. 제품분류: 재킷 > 스타디움 재킷. 컬러: 네이비. 겉감 울 70%, 캐시미어 30%. 롱라인 실루엣이며 L 기준 총장 70cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 저온 다림질 가능."
     },
     {
       "product_id": "outer_dummy_045",
-      "source_title": "그린 릴랙스 핏 가디건 045",
+      "source_title": "그린 릴랙스 핏 트러커 재킷 045",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_045",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 그린 릴랙스 핏 가디건 045. 컬러: 그린. 겉감 나일론 100%, 안감 폴리에스터 100%. 릴랙스 핏 실루엣이며 L 기준 총장 71cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 그린 릴랙스 핏 트러커 재킷 045. 제품분류: 재킷 > 트러커 재킷. 컬러: 그린. 겉감 나일론 100%, 안감 폴리에스터 100%. 릴랙스 핏 실루엣이며 L 기준 총장 71cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "outer_dummy_046",
-      "source_title": "핑크 박시핏 베스트 046",
+      "source_title": "핑크 박시핏 플리스/뽀글이 046",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_046",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 핑크 박시핏 베스트 046. 컬러: 핑크. 충전재 덕다운 80%, 구스다운 20%. 박시핏 실루엣이며 L 기준 총장 72cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 단독 손세탁 권장."
+      "product_text": "상품명: 핑크 박시핏 플리스/뽀글이 046. 제품분류: 재킷 > 플리스/뽀글이. 컬러: 핑크. 충전재 덕다운 80%, 구스다운 20%. 박시핏 실루엣이며 L 기준 총장 72cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 단독 손세탁 권장."
     },
     {
       "product_id": "outer_dummy_047",
-      "source_title": "화이트 크롭 핏 후드 집업 047",
+      "source_title": "화이트 크롭 핏 아노락 재킷 047",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_047",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 화이트 크롭 핏 후드 집업 047. 컬러: 화이트. 겉감 면 95%, 폴리우레탄 5%. 크롭 핏 실루엣이며 L 기준 총장 73cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 화이트 크롭 핏 아노락 재킷 047. 제품분류: 재킷 > 아노락 재킷. 컬러: 화이트. 겉감 면 95%, 폴리우레탄 5%. 크롭 핏 실루엣이며 L 기준 총장 73cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "outer_dummy_048",
-      "source_title": "베이지 슬림핏 재킷 048",
+      "source_title": "베이지 슬림핏 슈트/블레이저 재킷 048",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_048",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 베이지 슬림핏 재킷 048. 컬러: 베이지. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 슬림핏 실루엣이며 L 기준 총장 74cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 그늘 건조 권장."
+      "product_text": "상품명: 베이지 슬림핏 슈트/블레이저 재킷 048. 제품분류: 재킷 > 슈트/블레이저 재킷. 컬러: 베이지. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 슬림핏 실루엣이며 L 기준 총장 74cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 그늘 건조 권장."
     },
     {
       "product_id": "outer_dummy_049",
-      "source_title": "블루 스트레이트 핏 점퍼 049",
+      "source_title": "블루 스트레이트 핏 사파리/헌팅 재킷 049",
       "source_url": "https://example.com/musinsa-expanded/outer_dummy_049",
       "category_hint": "outer",
       "locale": "ko-KR",
-      "product_text": "상품명: 블루 스트레이트 핏 점퍼 049. 컬러: 블루. 페이크 레더 느낌의 소재. 스트레이트 핏 실루엣이며 L 기준 총장 75cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 블루 스트레이트 핏 사파리/헌팅 재킷 049. 제품분류: 재킷 > 사파리/헌팅 재킷. 컬러: 블루. 페이크 레더 느낌의 소재. 스트레이트 핏 실루엣이며 L 기준 총장 75cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "top_dummy_050",
-      "source_title": "레드 크롭 핏 니트 050",
+      "source_title": "레드 크롭 핏 반소매 티셔츠 050",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_050",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 레드 크롭 핏 니트 050. 컬러: 레드. 린넨 터치의 레이온 블렌드 소재. 크롭 핏 실루엣이며 M 기준 총장 76cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 레드 크롭 핏 반소매 티셔츠 050. 제품분류: 티셔츠 > 반소매 티셔츠. 컬러: 레드. 린넨 터치의 레이온 블렌드 소재. 크롭 핏 실루엣이며 M 기준 총장 76cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "top_dummy_051",
-      "source_title": "레드 크롭 핏 니트 050 리오더",
+      "source_title": "레드 크롭 핏 반소매 티셔츠 050 리오더",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_051",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 레드 크롭 핏 니트 050 리오더. 컬러: 레드. 린넨 터치의 레이온 블렌드 소재. 크롭 핏 실루엣이며 M 기준 총장 76cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 레드 크롭 핏 반소매 티셔츠 050 리오더. 제품분류: 티셔츠 > 반소매 티셔츠. 컬러: 레드. 린넨 터치의 레이온 블렌드 소재. 크롭 핏 실루엣이며 M 기준 총장 76cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "top_dummy_052",
-      "source_title": "그레이 스트레이트 핏 슬리브리스 052",
+      "source_title": "그레이 스트레이트 핏 셔츠/블라우스 052",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_052",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 그레이 스트레이트 핏 슬리브리스 052. 컬러: 그레이. 겉감 나일론 100%, 안감 폴리에스터 100%. 스트레이트 핏 실루엣이며 M 기준 총장 78cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 그레이 스트레이트 핏 셔츠/블라우스 052. 제품분류: 셔츠 > 셔츠/블라우스. 컬러: 그레이. 겉감 나일론 100%, 안감 폴리에스터 100%. 스트레이트 핏 실루엣이며 M 기준 총장 78cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "top_dummy_053",
-      "source_title": "네이비 오버핏 폴로 053",
+      "source_title": "네이비 오버핏 니트/스웨터 053",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_053",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 네이비 오버핏 폴로 053. 컬러: 네이비. 충전재 덕다운 80%, 구스다운 20%. 오버핏 실루엣이며 M 기준 총장 79cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 드라이클리닝 권장."
+      "product_text": "상품명: 네이비 오버핏 니트/스웨터 053. 제품분류: 니트 > 니트/스웨터. 컬러: 네이비. 충전재 덕다운 80%, 구스다운 20%. 오버핏 실루엣이며 M 기준 총장 79cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 드라이클리닝 권장."
     },
     {
       "product_id": "top_dummy_054",
-      "source_title": "그린 레귤러핏 티셔츠 054",
+      "source_title": "그린 레귤러핏 맨투맨/스웨트 054",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_054",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 그린 레귤러핏 티셔츠 054. 컬러: 그린. 겉감 면 95%, 폴리우레탄 5%. 레귤러핏 실루엣이며 M 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 저온 다림질 가능."
+      "product_text": "상품명: 그린 레귤러핏 맨투맨/스웨트 054. 제품분류: 스웨트셔츠 > 맨투맨/스웨트. 컬러: 그린. 겉감 면 95%, 폴리우레탄 5%. 레귤러핏 실루엣이며 M 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 저온 다림질 가능."
     },
     {
       "product_id": "top_dummy_055",
-      "source_title": "핑크 롱라인 셔츠 055",
+      "source_title": "핑크 롱라인 민소매 티셔츠 055",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_055",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 핑크 롱라인 셔츠 055. 컬러: 핑크. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 롱라인 실루엣이며 M 기준 총장 63cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 핑크 롱라인 민소매 티셔츠 055. 제품분류: 슬리브리스 > 민소매 티셔츠. 컬러: 핑크. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 롱라인 실루엣이며 M 기준 총장 63cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "top_dummy_056",
-      "source_title": "화이트 릴랙스 핏 니트 056",
+      "source_title": "화이트 릴랙스 핏 피케/카라 티셔츠 056",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_056",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 화이트 릴랙스 핏 니트 056. 컬러: 화이트. 페이크 레더 느낌의 소재. 릴랙스 핏 실루엣이며 M 기준 총장 64cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 단독 손세탁 권장."
+      "product_text": "상품명: 화이트 릴랙스 핏 피케/카라 티셔츠 056. 제품분류: 폴로 > 피케/카라 티셔츠. 컬러: 화이트. 페이크 레더 느낌의 소재. 릴랙스 핏 실루엣이며 M 기준 총장 64cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 단독 손세탁 권장."
     },
     {
       "product_id": "top_dummy_057",
-      "source_title": "베이지 박시핏 스웨트셔츠 057",
+      "source_title": "베이지 박시핏 후드 티셔츠 057",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_057",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 베이지 박시핏 스웨트셔츠 057. 컬러: 베이지. 겉감 리넨 60%, 면 40%. 박시핏 실루엣이며 M 기준 총장 65cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 베이지 박시핏 후드 티셔츠 057. 제품분류: 후드 티셔츠 > 후드 티셔츠. 컬러: 베이지. 겉감 리넨 60%, 면 40%. 박시핏 실루엣이며 M 기준 총장 65cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "top_dummy_058",
-      "source_title": "블루 크롭 핏 슬리브리스 058",
+      "source_title": "블루 크롭 핏 기타 상의 058",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_058",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 블루 크롭 핏 슬리브리스 058. 컬러: 블루. 겉감 폴리에스터 100%. 크롭 핏 실루엣이며 M 기준 총장 66cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 그늘 건조 권장."
+      "product_text": "상품명: 블루 크롭 핏 기타 상의 058. 제품분류: 기타 상의 > 기타 상의. 컬러: 블루. 겉감 폴리에스터 100%. 크롭 핏 실루엣이며 M 기준 총장 66cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 그늘 건조 권장."
     },
     {
       "product_id": "top_dummy_059",
-      "source_title": "카키 슬림핏 폴로 059",
+      "source_title": "카키 슬림핏 반소매 티셔츠 059",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_059",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 카키 슬림핏 폴로 059. 컬러: 카키. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 슬림핏 실루엣이며 M 기준 총장 67cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 카키 슬림핏 반소매 티셔츠 059. 제품분류: 티셔츠 > 반소매 티셔츠. 컬러: 카키. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 슬림핏 실루엣이며 M 기준 총장 67cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "top_dummy_060",
-      "source_title": "옐로우 스트레이트 핏 티셔츠 060",
+      "source_title": "옐로우 스트레이트 핏 긴소매 티셔츠 060",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_060",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 옐로우 스트레이트 핏 티셔츠 060. 컬러: 옐로우. 린넨 터치의 레이온 블렌드 소재. 스트레이트 핏 실루엣이며 M 기준 총장 68cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 드라이클리닝 권장."
+      "product_text": "상품명: 옐로우 스트레이트 핏 긴소매 티셔츠 060. 제품분류: 티셔츠 > 긴소매 티셔츠. 컬러: 옐로우. 린넨 터치의 레이온 블렌드 소재. 스트레이트 핏 실루엣이며 M 기준 총장 68cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 드라이클리닝 권장."
     },
     {
       "product_id": "top_dummy_061",
-      "source_title": "옐로우 스트레이트 핏 티셔츠 060 리오더",
+      "source_title": "옐로우 스트레이트 핏 긴소매 티셔츠 060 리오더",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_061",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 옐로우 스트레이트 핏 티셔츠 060 리오더. 컬러: 옐로우. 린넨 터치의 레이온 블렌드 소재. 스트레이트 핏 실루엣이며 M 기준 총장 68cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 드라이클리닝 권장."
+      "product_text": "상품명: 옐로우 스트레이트 핏 긴소매 티셔츠 060 리오더. 제품분류: 티셔츠 > 긴소매 티셔츠. 컬러: 옐로우. 린넨 터치의 레이온 블렌드 소재. 스트레이트 핏 실루엣이며 M 기준 총장 68cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 드라이클리닝 권장."
     },
     {
       "product_id": "top_dummy_062",
-      "source_title": "브라운 레귤러핏 니트 062",
+      "source_title": "브라운 레귤러핏 니트/스웨터 062",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_062",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 브라운 레귤러핏 니트 062. 컬러: 브라운. 겉감 나일론 100%, 안감 폴리에스터 100%. 레귤러핏 실루엣이며 M 기준 총장 70cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 브라운 레귤러핏 니트/스웨터 062. 제품분류: 니트 > 니트/스웨터. 컬러: 브라운. 겉감 나일론 100%, 안감 폴리에스터 100%. 레귤러핏 실루엣이며 M 기준 총장 70cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "top_dummy_063",
-      "source_title": "데님 블루 롱라인 스웨트셔츠 063",
+      "source_title": "데님 블루 롱라인 맨투맨/스웨트 063",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_063",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 데님 블루 롱라인 스웨트셔츠 063. 컬러: 데님 블루. 충전재 덕다운 80%, 구스다운 20%. 롱라인 실루엣이며 M 기준 총장 71cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 단독 손세탁 권장."
+      "product_text": "상품명: 데님 블루 롱라인 맨투맨/스웨트 063. 제품분류: 스웨트셔츠 > 맨투맨/스웨트. 컬러: 데님 블루. 충전재 덕다운 80%, 구스다운 20%. 롱라인 실루엣이며 M 기준 총장 71cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 단독 손세탁 권장."
     },
     {
       "product_id": "top_dummy_064",
-      "source_title": "레드 릴랙스 핏 슬리브리스 064",
+      "source_title": "레드 릴랙스 핏 민소매 티셔츠 064",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_064",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 레드 릴랙스 핏 슬리브리스 064. 컬러: 레드. 겉감 면 95%, 폴리우레탄 5%. 릴랙스 핏 실루엣이며 M 기준 총장 72cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 레드 릴랙스 핏 민소매 티셔츠 064. 제품분류: 슬리브리스 > 민소매 티셔츠. 컬러: 레드. 겉감 면 95%, 폴리우레탄 5%. 릴랙스 핏 실루엣이며 M 기준 총장 72cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "top_dummy_065",
-      "source_title": "블랙 박시핏 폴로 065",
+      "source_title": "블랙 박시핏 피케/카라 티셔츠 065",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_065",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 블랙 박시핏 폴로 065. 컬러: 블랙. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 박시핏 실루엣이며 M 기준 총장 73cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 그늘 건조 권장."
+      "product_text": "상품명: 블랙 박시핏 피케/카라 티셔츠 065. 제품분류: 폴로 > 피케/카라 티셔츠. 컬러: 블랙. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 박시핏 실루엣이며 M 기준 총장 73cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 그늘 건조 권장."
     },
     {
       "product_id": "top_dummy_066",
-      "source_title": "그레이 크롭 핏 티셔츠 066",
+      "source_title": "그레이 크롭 핏 후드 티셔츠 066",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_066",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 그레이 크롭 핏 티셔츠 066. 컬러: 그레이. 페이크 레더 느낌의 소재. 크롭 핏 실루엣이며 M 기준 총장 74cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 그레이 크롭 핏 후드 티셔츠 066. 제품분류: 후드 티셔츠 > 후드 티셔츠. 컬러: 그레이. 페이크 레더 느낌의 소재. 크롭 핏 실루엣이며 M 기준 총장 74cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "top_dummy_067",
-      "source_title": "네이비 슬림핏 셔츠 067",
+      "source_title": "네이비 슬림핏 기타 상의 067",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_067",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 네이비 슬림핏 셔츠 067. 컬러: 네이비. 겉감 리넨 60%, 면 40%. 슬림핏 실루엣이며 M 기준 총장 75cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 드라이클리닝 권장."
+      "product_text": "상품명: 네이비 슬림핏 기타 상의 067. 제품분류: 기타 상의 > 기타 상의. 컬러: 네이비. 겉감 리넨 60%, 면 40%. 슬림핏 실루엣이며 M 기준 총장 75cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 드라이클리닝 권장."
     },
     {
       "product_id": "top_dummy_068",
-      "source_title": "그린 스트레이트 핏 니트 068",
+      "source_title": "그린 스트레이트 핏 반소매 티셔츠 068",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_068",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 그린 스트레이트 핏 니트 068. 컬러: 그린. 겉감 폴리에스터 100%. 스트레이트 핏 실루엣이며 M 기준 총장 76cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 저온 다림질 가능."
+      "product_text": "상품명: 그린 스트레이트 핏 반소매 티셔츠 068. 제품분류: 티셔츠 > 반소매 티셔츠. 컬러: 그린. 겉감 폴리에스터 100%. 스트레이트 핏 실루엣이며 M 기준 총장 76cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 저온 다림질 가능."
     },
     {
       "product_id": "top_dummy_069",
-      "source_title": "핑크 오버핏 스웨트셔츠 069",
+      "source_title": "핑크 오버핏 긴소매 티셔츠 069",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_069",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 핑크 오버핏 스웨트셔츠 069. 컬러: 핑크. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 오버핏 실루엣이며 M 기준 총장 77cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 핑크 오버핏 긴소매 티셔츠 069. 제품분류: 티셔츠 > 긴소매 티셔츠. 컬러: 핑크. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 오버핏 실루엣이며 M 기준 총장 77cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "top_dummy_070",
-      "source_title": "화이트 레귤러핏 슬리브리스 070",
+      "source_title": "화이트 레귤러핏 셔츠/블라우스 070",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_070",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 화이트 레귤러핏 슬리브리스 070. 컬러: 화이트. 린넨 터치의 레이온 블렌드 소재. 레귤러핏 실루엣이며 M 기준 총장 78cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 단독 손세탁 권장."
+      "product_text": "상품명: 화이트 레귤러핏 셔츠/블라우스 070. 제품분류: 셔츠 > 셔츠/블라우스. 컬러: 화이트. 린넨 터치의 레이온 블렌드 소재. 레귤러핏 실루엣이며 M 기준 총장 78cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 단독 손세탁 권장."
     },
     {
       "product_id": "top_dummy_071",
-      "source_title": "화이트 레귤러핏 슬리브리스 070 리오더",
+      "source_title": "화이트 레귤러핏 셔츠/블라우스 070 리오더",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_071",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 화이트 레귤러핏 슬리브리스 070 리오더. 컬러: 화이트. 린넨 터치의 레이온 블렌드 소재. 레귤러핏 실루엣이며 M 기준 총장 78cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 단독 손세탁 권장."
+      "product_text": "상품명: 화이트 레귤러핏 셔츠/블라우스 070 리오더. 제품분류: 셔츠 > 셔츠/블라우스. 컬러: 화이트. 린넨 터치의 레이온 블렌드 소재. 레귤러핏 실루엣이며 M 기준 총장 78cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 단독 손세탁 권장."
     },
     {
       "product_id": "top_dummy_072",
-      "source_title": "블루 릴랙스 핏 티셔츠 072",
+      "source_title": "블루 릴랙스 핏 맨투맨/스웨트 072",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_072",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 블루 릴랙스 핏 티셔츠 072. 컬러: 블루. 겉감 나일론 100%, 안감 폴리에스터 100%. 릴랙스 핏 실루엣이며 M 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 그늘 건조 권장."
+      "product_text": "상품명: 블루 릴랙스 핏 맨투맨/스웨트 072. 제품분류: 스웨트셔츠 > 맨투맨/스웨트. 컬러: 블루. 겉감 나일론 100%, 안감 폴리에스터 100%. 릴랙스 핏 실루엣이며 M 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 그늘 건조 권장."
     },
     {
       "product_id": "top_dummy_073",
-      "source_title": "카키 박시핏 셔츠 073",
+      "source_title": "카키 박시핏 민소매 티셔츠 073",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_073",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 카키 박시핏 셔츠 073. 컬러: 카키. 충전재 덕다운 80%, 구스다운 20%. 박시핏 실루엣이며 M 기준 총장 63cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 카키 박시핏 민소매 티셔츠 073. 제품분류: 슬리브리스 > 민소매 티셔츠. 컬러: 카키. 충전재 덕다운 80%, 구스다운 20%. 박시핏 실루엣이며 M 기준 총장 63cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "top_dummy_074",
-      "source_title": "옐로우 크롭 핏 니트 074",
+      "source_title": "옐로우 크롭 핏 피케/카라 티셔츠 074",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_074",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 옐로우 크롭 핏 니트 074. 컬러: 옐로우. 겉감 면 95%, 폴리우레탄 5%. 크롭 핏 실루엣이며 M 기준 총장 64cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 드라이클리닝 권장."
+      "product_text": "상품명: 옐로우 크롭 핏 피케/카라 티셔츠 074. 제품분류: 폴로 > 피케/카라 티셔츠. 컬러: 옐로우. 겉감 면 95%, 폴리우레탄 5%. 크롭 핏 실루엣이며 M 기준 총장 64cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 드라이클리닝 권장."
     },
     {
       "product_id": "top_dummy_075",
-      "source_title": "아이보리 슬림핏 스웨트셔츠 075",
+      "source_title": "아이보리 슬림핏 후드 티셔츠 075",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_075",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 아이보리 슬림핏 스웨트셔츠 075. 컬러: 아이보리. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 슬림핏 실루엣이며 M 기준 총장 65cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 저온 다림질 가능."
+      "product_text": "상품명: 아이보리 슬림핏 후드 티셔츠 075. 제품분류: 후드 티셔츠 > 후드 티셔츠. 컬러: 아이보리. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 슬림핏 실루엣이며 M 기준 총장 65cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 저온 다림질 가능."
     },
     {
       "product_id": "top_dummy_076",
-      "source_title": "브라운 스트레이트 핏 슬리브리스 076",
+      "source_title": "브라운 스트레이트 핏 기타 상의 076",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_076",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 브라운 스트레이트 핏 슬리브리스 076. 컬러: 브라운. 페이크 레더 느낌의 소재. 스트레이트 핏 실루엣이며 M 기준 총장 66cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 브라운 스트레이트 핏 기타 상의 076. 제품분류: 기타 상의 > 기타 상의. 컬러: 브라운. 페이크 레더 느낌의 소재. 스트레이트 핏 실루엣이며 M 기준 총장 66cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "top_dummy_077",
-      "source_title": "데님 블루 오버핏 폴로 077",
+      "source_title": "데님 블루 오버핏 반소매 티셔츠 077",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_077",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 데님 블루 오버핏 폴로 077. 컬러: 데님 블루. 겉감 리넨 60%, 면 40%. 오버핏 실루엣이며 M 기준 총장 67cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 단독 손세탁 권장."
+      "product_text": "상품명: 데님 블루 오버핏 반소매 티셔츠 077. 제품분류: 티셔츠 > 반소매 티셔츠. 컬러: 데님 블루. 겉감 리넨 60%, 면 40%. 오버핏 실루엣이며 M 기준 총장 67cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 단독 손세탁 권장."
     },
     {
       "product_id": "top_dummy_078",
-      "source_title": "레드 레귤러핏 티셔츠 078",
+      "source_title": "레드 레귤러핏 긴소매 티셔츠 078",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_078",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 레드 레귤러핏 티셔츠 078. 컬러: 레드. 겉감 폴리에스터 100%. 레귤러핏 실루엣이며 M 기준 총장 68cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 레드 레귤러핏 긴소매 티셔츠 078. 제품분류: 티셔츠 > 긴소매 티셔츠. 컬러: 레드. 겉감 폴리에스터 100%. 레귤러핏 실루엣이며 M 기준 총장 68cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "top_dummy_079",
-      "source_title": "블랙 롱라인 셔츠 079",
+      "source_title": "블랙 롱라인 셔츠/블라우스 079",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_079",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 블랙 롱라인 셔츠 079. 컬러: 블랙. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 롱라인 실루엣이며 M 기준 총장 69cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 그늘 건조 권장."
+      "product_text": "상품명: 블랙 롱라인 셔츠/블라우스 079. 제품분류: 셔츠 > 셔츠/블라우스. 컬러: 블랙. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 롱라인 실루엣이며 M 기준 총장 69cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 그늘 건조 권장."
     },
     {
       "product_id": "top_dummy_080",
-      "source_title": "그레이 릴랙스 핏 니트 080",
+      "source_title": "그레이 릴랙스 핏 니트/스웨터 080",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_080",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 그레이 릴랙스 핏 니트 080. 컬러: 그레이. 린넨 터치의 레이온 블렌드 소재. 릴랙스 핏 실루엣이며 M 기준 총장 70cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 그레이 릴랙스 핏 니트/스웨터 080. 제품분류: 니트 > 니트/스웨터. 컬러: 그레이. 린넨 터치의 레이온 블렌드 소재. 릴랙스 핏 실루엣이며 M 기준 총장 70cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "top_dummy_081",
-      "source_title": "그레이 릴랙스 핏 니트 080 리오더",
+      "source_title": "그레이 릴랙스 핏 니트/스웨터 080 리오더",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_081",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 그레이 릴랙스 핏 니트 080 리오더. 컬러: 그레이. 린넨 터치의 레이온 블렌드 소재. 릴랙스 핏 실루엣이며 M 기준 총장 70cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 그레이 릴랙스 핏 니트/스웨터 080 리오더. 제품분류: 니트 > 니트/스웨터. 컬러: 그레이. 린넨 터치의 레이온 블렌드 소재. 릴랙스 핏 실루엣이며 M 기준 총장 70cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "top_dummy_082",
-      "source_title": "그린 크롭 핏 슬리브리스 082",
+      "source_title": "그린 크롭 핏 민소매 티셔츠 082",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_082",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 그린 크롭 핏 슬리브리스 082. 컬러: 그린. 겉감 나일론 100%, 안감 폴리에스터 100%. 크롭 핏 실루엣이며 M 기준 총장 72cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 저온 다림질 가능."
+      "product_text": "상품명: 그린 크롭 핏 민소매 티셔츠 082. 제품분류: 슬리브리스 > 민소매 티셔츠. 컬러: 그린. 겉감 나일론 100%, 안감 폴리에스터 100%. 크롭 핏 실루엣이며 M 기준 총장 72cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 저온 다림질 가능."
     },
     {
       "product_id": "top_dummy_083",
-      "source_title": "핑크 슬림핏 폴로 083",
+      "source_title": "핑크 슬림핏 피케/카라 티셔츠 083",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_083",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 핑크 슬림핏 폴로 083. 컬러: 핑크. 충전재 덕다운 80%, 구스다운 20%. 슬림핏 실루엣이며 M 기준 총장 73cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 핑크 슬림핏 피케/카라 티셔츠 083. 제품분류: 폴로 > 피케/카라 티셔츠. 컬러: 핑크. 충전재 덕다운 80%, 구스다운 20%. 슬림핏 실루엣이며 M 기준 총장 73cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "top_dummy_084",
-      "source_title": "화이트 스트레이트 핏 티셔츠 084",
+      "source_title": "화이트 스트레이트 핏 후드 티셔츠 084",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_084",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 화이트 스트레이트 핏 티셔츠 084. 컬러: 화이트. 겉감 면 95%, 폴리우레탄 5%. 스트레이트 핏 실루엣이며 M 기준 총장 74cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 단독 손세탁 권장."
+      "product_text": "상품명: 화이트 스트레이트 핏 후드 티셔츠 084. 제품분류: 후드 티셔츠 > 후드 티셔츠. 컬러: 화이트. 겉감 면 95%, 폴리우레탄 5%. 스트레이트 핏 실루엣이며 M 기준 총장 74cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 단독 손세탁 권장."
     },
     {
       "product_id": "top_dummy_085",
-      "source_title": "베이지 오버핏 셔츠 085",
+      "source_title": "베이지 오버핏 기타 상의 085",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_085",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 베이지 오버핏 셔츠 085. 컬러: 베이지. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 오버핏 실루엣이며 M 기준 총장 75cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 베이지 오버핏 기타 상의 085. 제품분류: 기타 상의 > 기타 상의. 컬러: 베이지. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 오버핏 실루엣이며 M 기준 총장 75cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "top_dummy_086",
-      "source_title": "블루 레귤러핏 니트 086",
+      "source_title": "블루 레귤러핏 반소매 티셔츠 086",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_086",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 블루 레귤러핏 니트 086. 컬러: 블루. 페이크 레더 느낌의 소재. 레귤러핏 실루엣이며 M 기준 총장 76cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 그늘 건조 권장."
+      "product_text": "상품명: 블루 레귤러핏 반소매 티셔츠 086. 제품분류: 티셔츠 > 반소매 티셔츠. 컬러: 블루. 페이크 레더 느낌의 소재. 레귤러핏 실루엣이며 M 기준 총장 76cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 그늘 건조 권장."
     },
     {
       "product_id": "top_dummy_087",
-      "source_title": "카키 롱라인 스웨트셔츠 087",
+      "source_title": "카키 롱라인 긴소매 티셔츠 087",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_087",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 카키 롱라인 스웨트셔츠 087. 컬러: 카키. 겉감 리넨 60%, 면 40%. 롱라인 실루엣이며 M 기준 총장 77cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 카키 롱라인 긴소매 티셔츠 087. 제품분류: 티셔츠 > 긴소매 티셔츠. 컬러: 카키. 겉감 리넨 60%, 면 40%. 롱라인 실루엣이며 M 기준 총장 77cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "top_dummy_088",
-      "source_title": "옐로우 릴랙스 핏 슬리브리스 088",
+      "source_title": "옐로우 릴랙스 핏 셔츠/블라우스 088",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_088",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 옐로우 릴랙스 핏 슬리브리스 088. 컬러: 옐로우. 겉감 폴리에스터 100%. 릴랙스 핏 실루엣이며 M 기준 총장 78cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 드라이클리닝 권장."
+      "product_text": "상품명: 옐로우 릴랙스 핏 셔츠/블라우스 088. 제품분류: 셔츠 > 셔츠/블라우스. 컬러: 옐로우. 겉감 폴리에스터 100%. 릴랙스 핏 실루엣이며 M 기준 총장 78cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 드라이클리닝 권장."
     },
     {
       "product_id": "top_dummy_089",
-      "source_title": "아이보리 박시핏 폴로 089",
+      "source_title": "아이보리 박시핏 니트/스웨터 089",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_089",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 아이보리 박시핏 폴로 089. 컬러: 아이보리. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 박시핏 실루엣이며 M 기준 총장 79cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 저온 다림질 가능."
+      "product_text": "상품명: 아이보리 박시핏 니트/스웨터 089. 제품분류: 니트 > 니트/스웨터. 컬러: 아이보리. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 박시핏 실루엣이며 M 기준 총장 79cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 저온 다림질 가능."
     },
     {
       "product_id": "top_dummy_090",
-      "source_title": "브라운 크롭 핏 티셔츠 090",
+      "source_title": "브라운 크롭 핏 맨투맨/스웨트 090",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_090",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 브라운 크롭 핏 티셔츠 090. 컬러: 브라운. 린넨 터치의 레이온 블렌드 소재. 크롭 핏 실루엣이며 M 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 브라운 크롭 핏 맨투맨/스웨트 090. 제품분류: 스웨트셔츠 > 맨투맨/스웨트. 컬러: 브라운. 린넨 터치의 레이온 블렌드 소재. 크롭 핏 실루엣이며 M 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "top_dummy_091",
-      "source_title": "브라운 크롭 핏 티셔츠 090 리오더",
+      "source_title": "브라운 크롭 핏 맨투맨/스웨트 090 리오더",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_091",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 브라운 크롭 핏 티셔츠 090 리오더. 컬러: 브라운. 린넨 터치의 레이온 블렌드 소재. 크롭 핏 실루엣이며 M 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 브라운 크롭 핏 맨투맨/스웨트 090 리오더. 제품분류: 스웨트셔츠 > 맨투맨/스웨트. 컬러: 브라운. 린넨 터치의 레이온 블렌드 소재. 크롭 핏 실루엣이며 M 기준 총장 62cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "top_dummy_092",
-      "source_title": "레드 스트레이트 핏 니트 092",
+      "source_title": "레드 스트레이트 핏 피케/카라 티셔츠 092",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_092",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 레드 스트레이트 핏 니트 092. 컬러: 레드. 겉감 나일론 100%, 안감 폴리에스터 100%. 스트레이트 핏 실루엣이며 M 기준 총장 64cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 레드 스트레이트 핏 피케/카라 티셔츠 092. 제품분류: 폴로 > 피케/카라 티셔츠. 컬러: 레드. 겉감 나일론 100%, 안감 폴리에스터 100%. 스트레이트 핏 실루엣이며 M 기준 총장 64cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 표백 금지."
     },
     {
       "product_id": "top_dummy_093",
-      "source_title": "블랙 오버핏 스웨트셔츠 093",
+      "source_title": "블랙 오버핏 후드 티셔츠 093",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_093",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 블랙 오버핏 스웨트셔츠 093. 컬러: 블랙. 충전재 덕다운 80%, 구스다운 20%. 오버핏 실루엣이며 M 기준 총장 65cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 그늘 건조 권장."
+      "product_text": "상품명: 블랙 오버핏 후드 티셔츠 093. 제품분류: 후드 티셔츠 > 후드 티셔츠. 컬러: 블랙. 충전재 덕다운 80%, 구스다운 20%. 오버핏 실루엣이며 M 기준 총장 65cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 그늘 건조 권장."
     },
     {
       "product_id": "top_dummy_094",
-      "source_title": "그레이 레귤러핏 슬리브리스 094",
+      "source_title": "그레이 레귤러핏 기타 상의 094",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_094",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 그레이 레귤러핏 슬리브리스 094. 컬러: 그레이. 겉감 면 95%, 폴리우레탄 5%. 레귤러핏 실루엣이며 M 기준 총장 66cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 세탁기 사용 가능."
+      "product_text": "상품명: 그레이 레귤러핏 기타 상의 094. 제품분류: 기타 상의 > 기타 상의. 컬러: 그레이. 겉감 면 95%, 폴리우레탄 5%. 레귤러핏 실루엣이며 M 기준 총장 66cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 세탁기 사용 가능."
     },
     {
       "product_id": "top_dummy_095",
-      "source_title": "네이비 롱라인 폴로 095",
+      "source_title": "네이비 롱라인 반소매 티셔츠 095",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_095",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 네이비 롱라인 폴로 095. 컬러: 네이비. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 롱라인 실루엣이며 M 기준 총장 67cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 드라이클리닝 권장."
+      "product_text": "상품명: 네이비 롱라인 반소매 티셔츠 095. 제품분류: 티셔츠 > 반소매 티셔츠. 컬러: 네이비. 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다. 롱라인 실루엣이며 M 기준 총장 67cm, 어깨와 가슴둘레 여유가 특징입니다. 봄여름 데일리와 캐주얼에 활용하기 좋습니다. 드라이클리닝 권장."
     },
     {
       "product_id": "top_dummy_096",
-      "source_title": "그린 릴랙스 핏 티셔츠 096",
+      "source_title": "그린 릴랙스 핏 긴소매 티셔츠 096",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_096",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 그린 릴랙스 핏 티셔츠 096. 컬러: 그린. 페이크 레더 느낌의 소재. 릴랙스 핏 실루엣이며 M 기준 총장 68cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 저온 다림질 가능."
+      "product_text": "상품명: 그린 릴랙스 핏 긴소매 티셔츠 096. 제품분류: 티셔츠 > 긴소매 티셔츠. 컬러: 그린. 페이크 레더 느낌의 소재. 릴랙스 핏 실루엣이며 M 기준 총장 68cm, 어깨와 가슴둘레 여유가 특징입니다. 가을겨울 레이어드와 여행용에 활용하기 좋습니다. 저온 다림질 가능."
     },
     {
       "product_id": "top_dummy_097",
-      "source_title": "핑크 박시핏 셔츠 097",
+      "source_title": "핑크 박시핏 셔츠/블라우스 097",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_097",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 핑크 박시핏 셔츠 097. 컬러: 핑크. 겉감 리넨 60%, 면 40%. 박시핏 실루엣이며 M 기준 총장 69cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 건조기 사용 금지."
+      "product_text": "상품명: 핑크 박시핏 셔츠/블라우스 097. 제품분류: 셔츠 > 셔츠/블라우스. 컬러: 핑크. 겉감 리넨 60%, 면 40%. 박시핏 실루엣이며 M 기준 총장 69cm, 어깨와 가슴둘레 여유가 특징입니다. 간절기 출근룩과 포멀에 활용하기 좋습니다. 건조기 사용 금지."
     },
     {
       "product_id": "top_dummy_098",
-      "source_title": "화이트 크롭 핏 니트 098",
+      "source_title": "화이트 크롭 핏 니트/스웨터 098",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_098",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 화이트 크롭 핏 니트 098. 컬러: 화이트. 겉감 폴리에스터 100%. 크롭 핏 실루엣이며 M 기준 총장 70cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 단독 손세탁 권장."
+      "product_text": "상품명: 화이트 크롭 핏 니트/스웨터 098. 제품분류: 니트 > 니트/스웨터. 컬러: 화이트. 겉감 폴리에스터 100%. 크롭 핏 실루엣이며 M 기준 총장 70cm, 어깨와 가슴둘레 여유가 특징입니다. 여름 데일리와 스트리트에 활용하기 좋습니다. 단독 손세탁 권장."
     },
     {
       "product_id": "top_dummy_099",
-      "source_title": "베이지 슬림핏 스웨트셔츠 099",
+      "source_title": "베이지 슬림핏 맨투맨/스웨트 099",
       "source_url": "https://example.com/musinsa-expanded/top_dummy_099",
       "category_hint": "top",
       "locale": "ko-KR",
-      "product_text": "상품명: 베이지 슬림핏 스웨트셔츠 099. 컬러: 베이지. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 슬림핏 실루엣이며 M 기준 총장 71cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 표백 금지."
+      "product_text": "상품명: 베이지 슬림핏 맨투맨/스웨트 099. 제품분류: 스웨트셔츠 > 맨투맨/스웨트. 컬러: 베이지. 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다. 슬림핏 실루엣이며 M 기준 총장 71cm, 어깨와 가슴둘레 여유가 특징입니다. 겨울 아웃도어와 여행에 활용하기 좋습니다. 표백 금지."
     }
   ]
 }

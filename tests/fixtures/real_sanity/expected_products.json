@@ -3,7 +3,7 @@
     {
       "product_id": "real_outer_beanpole_linen_jacket_4308999",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://www.musinsa.com/products/4308999",
           "source_title": "빈폴 레이디스 리넨 체크 더블 재킷",
@@ -13,6 +13,7 @@
           "title": "빈폴 레이디스 리넨 체크 더블 재킷",
           "category": "outer",
           "subcategory": "jacket",
+          "detail_type": "suit_blazer_jacket",
           "materials": [
             {
               "part": "shell",
@@ -59,9 +60,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "베이지 레귤러핏 재킷",
+          "search_summary": "베이지 레귤러핏 슈트/블레이저 재킷",
           "query_tags": [
-            "베이지 재킷",
+            "베이지 슈트/블레이저 재킷",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
@@ -79,7 +80,7 @@
     {
       "product_id": "real_outer_limelike_cardigan_2101205",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://www.musinsa.com/products/2101205",
           "source_title": "라임라이크 브이넥 크로스 가디건_3color",
@@ -89,6 +90,7 @@
           "title": "라임라이크 브이넥 크로스 가디건_3color",
           "category": "outer",
           "subcategory": "cardigan",
+          "detail_type": "cardigan",
           "materials": [
             {
               "part": "shell",
@@ -134,9 +136,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "멀티 레귤러핏 가디건",
+          "search_summary": "멀티 레귤러핏 카디건",
           "query_tags": [
-            "멀티 가디건",
+            "멀티 카디건",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
@@ -154,7 +156,7 @@
     {
       "product_id": "real_outer_8seconds_jacket_4922894",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://www.musinsa.com/products/4922894",
           "source_title": "에잇세컨즈 쓰리버튼 세미 오버핏 자켓 블랙",
@@ -164,6 +166,7 @@
           "title": "에잇세컨즈 쓰리버튼 세미 오버핏 자켓 블랙",
           "category": "outer",
           "subcategory": "jacket",
+          "detail_type": "suit_blazer_jacket",
           "materials": [
             {
               "part": "shell",
@@ -203,9 +206,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블랙 릴랙스 핏 재킷",
+          "search_summary": "블랙 릴랙스 핏 슈트/블레이저 재킷",
           "query_tags": [
-            "블랙 재킷",
+            "블랙 슈트/블레이저 재킷",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
@@ -223,7 +226,7 @@
     {
       "product_id": "real_outer_247_cashmere_blouson_3617977",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://www.musinsa.com/products/3617977",
           "source_title": "247시리즈 캐시미어 블렌디드 블루종 자켓 BLACK",
@@ -233,6 +236,7 @@
           "title": "247시리즈 캐시미어 블렌디드 블루종 자켓 BLACK",
           "category": "outer",
           "subcategory": "jacket",
+          "detail_type": "blouson_ma1",
           "materials": [
             {
               "part": "unknown",
@@ -263,9 +267,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블랙 레귤러핏 재킷",
+          "search_summary": "블랙 레귤러핏 블루종/MA-1",
           "query_tags": [
-            "블랙 재킷",
+            "블랙 블루종/MA-1",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
@@ -285,7 +289,7 @@
     {
       "product_id": "real_outer_lenina_cardigan_4332165",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://www.musinsa.com/products/4332165",
           "source_title": "르니나 SALENA wool v neck cardigan_RED",
@@ -295,6 +299,7 @@
           "title": "르니나 SALENA wool v neck cardigan_RED",
           "category": "outer",
           "subcategory": "cardigan",
+          "detail_type": "cardigan",
           "materials": [
             {
               "part": "unknown",
@@ -325,9 +330,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "레드 레귤러핏 가디건",
+          "search_summary": "레드 레귤러핏 카디건",
           "query_tags": [
-            "레드 가디건",
+            "레드 카디건",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
@@ -347,7 +352,7 @@
     {
       "product_id": "real_top_armedes_tee_4783312",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://www.musinsa.com/products/4783312",
           "source_title": "아르메데스 면 20수 아트그래픽 티셔츠",
@@ -357,6 +362,7 @@
           "title": "아르메데스 면 20수 아트그래픽 티셔츠",
           "category": "top",
           "subcategory": "tshirt",
+          "detail_type": "short_sleeve_tshirt",
           "materials": [
             {
               "part": "unknown",
@@ -387,9 +393,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "멀티 레귤러핏 티셔츠",
+          "search_summary": "멀티 레귤러핏 반소매 티셔츠",
           "query_tags": [
-            "멀티 티셔츠",
+            "멀티 반소매 티셔츠",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
@@ -407,7 +413,7 @@
     {
       "product_id": "real_top_ms_linen_like_shirt_black_3054408",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://www.musinsa.com/products/3054408",
           "source_title": "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 블랙",
@@ -417,6 +423,7 @@
           "title": "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 블랙",
           "category": "top",
           "subcategory": "shirt_blouse",
+          "detail_type": "shirt_blouse",
           "materials": [
             {
               "part": "unknown",
@@ -445,9 +452,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블랙 릴랙스 핏 셔츠",
+          "search_summary": "블랙 릴랙스 핏 셔츠/블라우스",
           "query_tags": [
-            "블랙 셔츠",
+            "블랙 셔츠/블라우스",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
@@ -467,7 +474,7 @@
     {
       "product_id": "real_top_ms_basic_tee_3661999",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://www.musinsa.com/products/3661999",
           "source_title": "무신사 스탠다드 베이식 크루 넥 티셔츠",
@@ -477,6 +484,7 @@
           "title": "무신사 스탠다드 베이식 크루 넥 티셔츠",
           "category": "top",
           "subcategory": "tshirt",
+          "detail_type": "short_sleeve_tshirt",
           "materials": [
             {
               "part": "unknown",
@@ -505,9 +513,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "화이트 레귤러핏 티셔츠",
+          "search_summary": "화이트 레귤러핏 반소매 티셔츠",
           "query_tags": [
-            "화이트 티셔츠",
+            "화이트 반소매 티셔츠",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [
@@ -525,7 +533,7 @@
     {
       "product_id": "real_top_ms_linen_like_shirt_navy_3054409",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://www.musinsa.com/products/3054409",
           "source_title": "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 네이비",
@@ -535,6 +543,7 @@
           "title": "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 네이비",
           "category": "top",
           "subcategory": "shirt_blouse",
+          "detail_type": "shirt_blouse",
           "materials": [
             {
               "part": "unknown",
@@ -563,9 +572,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "네이비 릴랙스 핏 셔츠",
+          "search_summary": "네이비 릴랙스 핏 셔츠/블라우스",
           "query_tags": [
-            "네이비 셔츠",
+            "네이비 셔츠/블라우스",
             "릴랙스 핏 상품"
           ],
           "explainable_reasons": [
@@ -585,7 +594,7 @@
     {
       "product_id": "real_top_ms_basic_short_tee_1196892",
       "structured_product": {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "source": {
           "source_url": "https://www.musinsa.com/products/1196892",
           "source_title": "무신사 스탠다드 베이식 크루 넥 반팔 티셔츠",
@@ -595,6 +604,7 @@
           "title": "무신사 스탠다드 베이식 크루 넥 반팔 티셔츠",
           "category": "top",
           "subcategory": "tshirt",
+          "detail_type": "short_sleeve_tshirt",
           "materials": [
             {
               "part": "unknown",
@@ -623,9 +633,9 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "화이트 레귤러핏 티셔츠",
+          "search_summary": "화이트 레귤러핏 반소매 티셔츠",
           "query_tags": [
-            "화이트 티셔츠",
+            "화이트 반소매 티셔츠",
             "레귤러핏 상품"
           ],
           "explainable_reasons": [

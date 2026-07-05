@@ -12,7 +12,7 @@
     },
     {
       "left_id": "outer_linen_blazer_a",
-      "right_id": "outer_down_vest",
+      "right_id": "outer_down_layerpiece",
       "expected_decision": "distinct"
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "left_id": "outer_linen_blazer_b",
-      "right_id": "outer_down_vest",
+      "right_id": "outer_down_layerpiece",
       "expected_decision": "distinct"
     },
     {
@@ -37,7 +37,7 @@
     },
     {
       "left_id": "top_washable_tee",
-      "right_id": "outer_down_vest",
+      "right_id": "outer_down_layerpiece",
       "expected_decision": "distinct"
     },
     {
@@ -46,7 +46,7 @@
       "expected_decision": "distinct"
     },
     {
-      "left_id": "outer_down_vest",
+      "left_id": "outer_down_layerpiece",
       "right_id": "top_linen_blouse",
       "expected_decision": "distinct"
     }
