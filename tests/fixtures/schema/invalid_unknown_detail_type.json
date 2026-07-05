@@ -9,7 +9,7 @@
     "title": "오버핏 리넨 블레이저",
     "category": "outer",
     "subcategory": "jacket",
-    "detail_type": "trucker_jacket",
+    "detail_type": "unknown_detail_type",
     "materials": [
       {
         "part": "shell",
