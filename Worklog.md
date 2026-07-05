@@ -10,6 +10,62 @@
 
 ---
 
+### W-038 · S7.7 실제 페이지형 합성 더미 fixture 생성·기준 검증
+**요청**
+- 새로운 더미데이터 설계 계획에 따라 다음 작업 진행
+
+**수행 작업**
+- `tools/generate_full_page_dummy_fixtures.py`를 추가해 실제 페이지형 합성 입력 300건과 subset 50건 생성
+- `sparse`, `medium`, `full`, `noisy_ambiguous` 정보 밀도별 상품 상세 텍스트, expected JSON, reference actual JSON, duplicate labels, case metadata 생성
+- `tools/run_full_page_dummy_validation.py`를 추가해 schema, evaluator, dedup, 정보 밀도 coverage, synthetic source policy를 검증하고 보고서/결과 JSON 저장
+- `full_page_codex_subset` prompt, prompt template, expected, actual 파일 생성
+- noisy/ambiguous 입력에서 `울 터치`, `레이온 블렌드` 단서가 expected에 반영되도록 소재 라벨 보강
+- 검증 계획, reports README, S7.7 계획 문서, Decisionlog를 현재 구현 상태에 맞게 갱신
+- PowerShell heredoc 명령 실수를 Troubleshootinglog에 기록
+
+**변경 파일**
+- 생성: `tools/generate_full_page_dummy_fixtures.py`
+- 생성: `tools/run_full_page_dummy_validation.py`
+- 생성: `tests/fixtures/full_page_dummy/source_inputs.json`
+- 생성: `tests/fixtures/full_page_dummy/expected_products.json`
+- 생성: `tests/fixtures/full_page_dummy/reference_actual_products.json`
+- 생성: `tests/fixtures/full_page_dummy/duplicate_labels.json`
+- 생성: `tests/fixtures/full_page_dummy/case_metadata.json`
+- 생성: `tests/fixtures/full_page_codex_subset/source_inputs.json`
+- 생성: `tests/fixtures/full_page_codex_subset/expected_products.json`
+- 생성: `tests/fixtures/full_page_codex_subset/actual_products.json`
+- 생성: `tests/fixtures/full_page_codex_subset/duplicate_labels.json`
+- 생성: `tests/fixtures/full_page_codex_subset/prompt.md`
+- 생성: `tests/fixtures/full_page_codex_subset/prompt_template.md`
+- 생성: `docs/reports/s7-7-full-page-dummy-validation-report.md`
+- 생성: `docs/reports/s7-7-full-page-dummy-validation-results.json`
+- 수정: `docs/reports/README.md`
+- 수정: `docs/validation-plan.md`
+- 수정: `docs/full-page-dummy-validation-plan.md`
+- 수정: `Decisionlog.md`
+- 수정: `Troubleshootinglog.md`
+- 수정: `Worklog.md`
+
+**검증**
+- `python -m py_compile tools\generate_full_page_dummy_fixtures.py tools\run_full_page_dummy_validation.py` 통과
+- `python tools\generate_full_page_dummy_fixtures.py` 실행 완료: `full_page_dummy` 300건, `full_page_codex_subset` 50건 생성
+- `python tools\run_full_page_dummy_validation.py` 실행 완료: `all_commands_passed=true`
+- S7.7 결과: expected/reference actual schema-valid 100%, self-check micro precision/recall 100.00%, detail_type precision/recall 100.00%, dedup accuracy 100.00%, 자동 fetch 0건, 실제 상품 원문 저장 0건, 법적 적합/부적합 판정 0건, cross-category high-confidence false duplicate 0건
+- 정보 밀도 분포: sparse 60건, medium 120건, full 90건, noisy/ambiguous 30건
+- category 분포: outer 150건, top 150건
+- detail_type 최소 커버리지: outer 6회, top 14회
+
+**판단 근거**
+- 실제 페이지 원문이나 로컬 전용 비공개 데이터를 쓰지 않으면서도, sparse/full/noisy 입력을 모두 재현 가능한 형태로 보존해야 한다.
+- 실제 Codex CLI 50건 실행은 토큰·시간 비용이 크므로, 이번 단계에서는 생성기와 기준 actual self-check를 먼저 안정화하고 실제 CLI actual 생성은 후속 작업으로 분리했다.
+
+**결과**
+- 완료: S7.7 fixture 생성기, fixture 세트, 기준 검증 스크립트, 보고서 생성
+- 기록: Decisionlog D-020, Troubleshootinglog T-008
+- 남은 작업: 실제 Codex CLI로 `full_page_codex_subset/prompt.md` 실행 후 `actual_products.json`과 S7.7 보고서 갱신
+
+---
+
 ### W-037 · 실제 페이지형 합성 더미데이터 설계 계획 작성
 **요청**
 - 실제 상품 페이지의 정보 밀도 차이를 고려해, 로컬 전용 비공개 검증이 아닌 재현 가능한 합성 상세페이지형 더미데이터 설계 계획을 진행

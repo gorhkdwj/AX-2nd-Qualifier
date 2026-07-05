@@ -1,0 +1,19 @@
+{
+  "pairs": [
+    {
+      "left_id": "full_outer_014",
+      "right_id": "full_outer_015",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "full_outer_044",
+      "right_id": "full_outer_045",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "full_outer_004",
+      "right_id": "full_outer_034",
+      "expected_decision": "distinct"
+    }
+  ]
+}

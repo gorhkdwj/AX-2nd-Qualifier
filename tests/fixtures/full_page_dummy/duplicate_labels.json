@@ -1,0 +1,104 @@
+{
+  "pairs": [
+    {
+      "left_id": "full_outer_014",
+      "right_id": "full_outer_015",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "full_outer_044",
+      "right_id": "full_outer_045",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "full_outer_074",
+      "right_id": "full_outer_075",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "full_outer_104",
+      "right_id": "full_outer_105",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "full_outer_134",
+      "right_id": "full_outer_135",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "full_top_164",
+      "right_id": "full_top_165",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "full_top_194",
+      "right_id": "full_top_195",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "full_top_224",
+      "right_id": "full_top_225",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "full_top_254",
+      "right_id": "full_top_255",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "full_top_284",
+      "right_id": "full_top_285",
+      "expected_decision": "duplicate"
+    },
+    {
+      "left_id": "full_outer_000",
+      "right_id": "full_top_150",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "full_outer_006",
+      "right_id": "full_top_159",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "full_outer_026",
+      "right_id": "full_top_177",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "full_outer_056",
+      "right_id": "full_top_204",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "full_outer_086",
+      "right_id": "full_top_231",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "full_outer_116",
+      "right_id": "full_top_258",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "full_outer_146",
+      "right_id": "full_top_285",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "full_outer_004",
+      "right_id": "full_outer_034",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "full_top_154",
+      "right_id": "full_top_184",
+      "expected_decision": "distinct"
+    },
+    {
+      "left_id": "full_top_224",
+      "right_id": "full_top_274",
+      "expected_decision": "distinct"
+    }
+  ]
+}

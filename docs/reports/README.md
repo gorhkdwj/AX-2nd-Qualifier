@@ -9,6 +9,8 @@
 | `s6-codex-cli-report.md` | Codex CLI 로컬 marketplace·실제 변환·질의 시연 결과 | S6 |
 | `s7-expanded-validation-report.md` | 합성 100건, Codex subset 20건, 실제 공개 snippet 10건 확장 검증 해설 | S7.5 |
 | `s7-expanded-validation-results.json` | S7.5 실행 환경, 명령, 정량 결과, 주요 파일 hash 원본 스냅샷 | S7.5 |
+| `s7-7-full-page-dummy-validation-report.md` | 실제 페이지형 합성 더미 300건과 subset 50건 기준 검증 해설 | S7.7 |
+| `s7-7-full-page-dummy-validation-results.json` | S7.7 실행 환경, 명령, 정량 결과, 주요 파일 hash 원본 스냅샷 | S7.7 |
 
 ## 보관 원칙
 - 사람이 읽는 해설은 `*-report.md`에 둡니다.

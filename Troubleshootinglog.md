@@ -10,6 +10,27 @@
 
 ---
 
+### T-008 · PowerShell 환경에서 Bash heredoc 명령 사용
+**발생 상황**
+- S7.7 결과 JSON의 acceptance summary를 빠르게 출력하려고 Python one-liner를 실행했다.
+
+**증상**
+- PowerShell에서 `python - <<'PY'` 형태의 Bash heredoc 문법을 사용해 `Missing file specification after redirection operator` 오류가 발생했다.
+
+**확인된 원인**
+- 현재 셸은 PowerShell이므로 Bash heredoc 리다이렉션 문법을 사용할 수 없다.
+- 이전에도 Windows/PowerShell 환경에서 명령 래퍼 차이로 검증 명령 문제가 발생한 적이 있어 재발 가능성이 있다.
+
+**조치**
+- PowerShell here-string을 Python stdin으로 전달하는 `@' ... '@ | python -` 형식으로 바꿔 같은 결과를 확인했다.
+- S7.7 검증 자체는 이미 `python tools\run_full_page_dummy_validation.py`로 통과한 상태였고, 이 오류는 결과 조회용 보조 명령에서만 발생했다.
+
+**재발 방지**
+- PowerShell 환경에서 여러 줄 Python 스니펫을 실행할 때는 `@' ... '@ | python -` 형식을 사용한다.
+- Bash 문법이 필요한 명령은 현재 셸을 먼저 확인한 뒤 사용한다.
+
+---
+
 ### T-007 · S7.7 단계 번호 보정 중 문서 문구 일시 불일치
 **발생 상황**
 - 실제 페이지형 합성 더미 검증 계획을 문서화하면서, 기존 `S7.6`이 이미 3단계 taxonomy 전환 작업에 사용되고 있음을 확인했다.

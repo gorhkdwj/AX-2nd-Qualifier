@@ -382,3 +382,9 @@ S7.7은 다음 조건을 만족해야 완료로 본다.
 - dedup accuracy 95% 이상, cross-category high-confidence false duplicate 0건.
 - 보고서만 보고 동일 검증을 재실행할 수 있다.
 - Worklog와 필요 시 Decisionlog/Troubleshootinglog에 기록한다.
+
+## 13. 현재 구현 상태
+
+- `tools/generate_full_page_dummy_fixtures.py`로 `full_page_dummy` 300건과 `full_page_codex_subset` 50건을 생성한다.
+- `tools/run_full_page_dummy_validation.py`로 schema, evaluator, dedup, density coverage, synthetic source policy를 검증하고 `docs/reports/s7-7-full-page-dummy-validation-report.md`와 결과 JSON을 저장한다.
+- 현재 `full_page_codex_subset/actual_products.json`은 실제 Codex CLI 출력이 아니라 deterministic reference actual이다. 즉 생성된 fixture와 평가 절차의 재현성 검증은 완료됐지만, 실제 Codex CLI 기반 blind extraction 검증은 후속 단계로 남아 있다.

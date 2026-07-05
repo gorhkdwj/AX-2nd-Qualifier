@@ -1,0 +1,3924 @@
+{
+  "cases": [
+    {
+      "product_id": "full_outer_000",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "stadium_jacket",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_001",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "trucker_jacket",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_002",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "fleece_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_003",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "anorak_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_004",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "suit_blazer_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_005",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "safari_hunting_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_006",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "leather_rider_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_007",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "training_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_008",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "nylon_coach_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_009",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "blouson_ma1",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_010",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "mustang_fur",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_011",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "short_padding_heavy_outer",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_012",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "long_padding_heavy_outer",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_013",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_other_coat",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_014",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_double_coat",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_015",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_double_coat",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [],
+      "duplicate_of": "full_outer_014"
+    },
+    {
+      "product_id": "full_outer_016",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "transitional_coat",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_017",
+      "category": "outer",
+      "subcategory": "cardigan",
+      "detail_type": "cardigan",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_018",
+      "category": "outer",
+      "subcategory": "vest",
+      "detail_type": "vest",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_019",
+      "category": "outer",
+      "subcategory": "vest",
+      "detail_type": "lightweight_padding_vest",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_020",
+      "category": "outer",
+      "subcategory": "hoodie_zipup",
+      "detail_type": "hoodie_zipup",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_021",
+      "category": "outer",
+      "subcategory": "other_outer",
+      "detail_type": "other_outer",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_022",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "stadium_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_023",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "trucker_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_024",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "fleece_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_025",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "anorak_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_026",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "suit_blazer_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_027",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "safari_hunting_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_028",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "leather_rider_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_029",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "training_jacket",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_030",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "nylon_coach_jacket",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_031",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "blouson_ma1",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_032",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "mustang_fur",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_033",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "short_padding_heavy_outer",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_034",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "long_padding_heavy_outer",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_035",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_other_coat",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_036",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_double_coat",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_037",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_single_coat",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_038",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "transitional_coat",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_039",
+      "category": "outer",
+      "subcategory": "cardigan",
+      "detail_type": "cardigan",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_040",
+      "category": "outer",
+      "subcategory": "vest",
+      "detail_type": "vest",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_041",
+      "category": "outer",
+      "subcategory": "vest",
+      "detail_type": "lightweight_padding_vest",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_042",
+      "category": "outer",
+      "subcategory": "hoodie_zipup",
+      "detail_type": "hoodie_zipup",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_043",
+      "category": "outer",
+      "subcategory": "other_outer",
+      "detail_type": "other_outer",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_044",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "stadium_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_045",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "stadium_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [],
+      "duplicate_of": "full_outer_044"
+    },
+    {
+      "product_id": "full_outer_046",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "fleece_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_047",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "anorak_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_048",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "suit_blazer_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_049",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "safari_hunting_jacket",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_050",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "leather_rider_jacket",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_051",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "training_jacket",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_052",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "nylon_coach_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_053",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "blouson_ma1",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_054",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "mustang_fur",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_055",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "short_padding_heavy_outer",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_056",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "long_padding_heavy_outer",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_057",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_other_coat",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_058",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_double_coat",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_059",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_single_coat",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_060",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "transitional_coat",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_061",
+      "category": "outer",
+      "subcategory": "cardigan",
+      "detail_type": "cardigan",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_062",
+      "category": "outer",
+      "subcategory": "vest",
+      "detail_type": "vest",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_063",
+      "category": "outer",
+      "subcategory": "vest",
+      "detail_type": "lightweight_padding_vest",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_064",
+      "category": "outer",
+      "subcategory": "hoodie_zipup",
+      "detail_type": "hoodie_zipup",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_065",
+      "category": "outer",
+      "subcategory": "other_outer",
+      "detail_type": "other_outer",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_066",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "stadium_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_067",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "trucker_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_068",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "fleece_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_069",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "anorak_jacket",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_070",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "suit_blazer_jacket",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_071",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "safari_hunting_jacket",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_072",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "leather_rider_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_073",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "training_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_074",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "nylon_coach_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_075",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "nylon_coach_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [],
+      "duplicate_of": "full_outer_074"
+    },
+    {
+      "product_id": "full_outer_076",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "mustang_fur",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_077",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "short_padding_heavy_outer",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_078",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "long_padding_heavy_outer",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_079",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_other_coat",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_080",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_double_coat",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_081",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_single_coat",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_082",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "transitional_coat",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_083",
+      "category": "outer",
+      "subcategory": "cardigan",
+      "detail_type": "cardigan",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_084",
+      "category": "outer",
+      "subcategory": "vest",
+      "detail_type": "vest",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_085",
+      "category": "outer",
+      "subcategory": "vest",
+      "detail_type": "lightweight_padding_vest",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_086",
+      "category": "outer",
+      "subcategory": "hoodie_zipup",
+      "detail_type": "hoodie_zipup",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_087",
+      "category": "outer",
+      "subcategory": "other_outer",
+      "detail_type": "other_outer",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_088",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "stadium_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_089",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "trucker_jacket",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_090",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "fleece_jacket",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_091",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "anorak_jacket",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_092",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "suit_blazer_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_093",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "safari_hunting_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_094",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "leather_rider_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_095",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "training_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_096",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "nylon_coach_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_097",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "blouson_ma1",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_098",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "mustang_fur",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_099",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "short_padding_heavy_outer",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_100",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "long_padding_heavy_outer",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_101",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_other_coat",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_102",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_double_coat",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_103",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_single_coat",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_104",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "transitional_coat",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_105",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "transitional_coat",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [],
+      "duplicate_of": "full_outer_104"
+    },
+    {
+      "product_id": "full_outer_106",
+      "category": "outer",
+      "subcategory": "vest",
+      "detail_type": "vest",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_107",
+      "category": "outer",
+      "subcategory": "vest",
+      "detail_type": "lightweight_padding_vest",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_108",
+      "category": "outer",
+      "subcategory": "hoodie_zipup",
+      "detail_type": "hoodie_zipup",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_109",
+      "category": "outer",
+      "subcategory": "other_outer",
+      "detail_type": "other_outer",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_110",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "stadium_jacket",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_111",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "trucker_jacket",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_112",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "fleece_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_113",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "anorak_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_114",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "suit_blazer_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_115",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "safari_hunting_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_116",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "leather_rider_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_117",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "training_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_118",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "nylon_coach_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_119",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "blouson_ma1",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_120",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "mustang_fur",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_121",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "short_padding_heavy_outer",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_122",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "long_padding_heavy_outer",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_123",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_other_coat",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_124",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_double_coat",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_125",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_single_coat",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_126",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "transitional_coat",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_127",
+      "category": "outer",
+      "subcategory": "cardigan",
+      "detail_type": "cardigan",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_128",
+      "category": "outer",
+      "subcategory": "vest",
+      "detail_type": "vest",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_129",
+      "category": "outer",
+      "subcategory": "vest",
+      "detail_type": "lightweight_padding_vest",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_130",
+      "category": "outer",
+      "subcategory": "hoodie_zipup",
+      "detail_type": "hoodie_zipup",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_131",
+      "category": "outer",
+      "subcategory": "other_outer",
+      "detail_type": "other_outer",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_132",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "stadium_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_133",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "trucker_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_134",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "fleece_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_135",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "fleece_jacket",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [],
+      "duplicate_of": "full_outer_134"
+    },
+    {
+      "product_id": "full_outer_136",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "suit_blazer_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_137",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "safari_hunting_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_138",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "leather_rider_jacket",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_139",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "training_jacket",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_140",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "nylon_coach_jacket",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_141",
+      "category": "outer",
+      "subcategory": "jacket",
+      "detail_type": "blouson_ma1",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_142",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "mustang_fur",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_143",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "short_padding_heavy_outer",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_outer_144",
+      "category": "outer",
+      "subcategory": "jumper",
+      "detail_type": "long_padding_heavy_outer",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_145",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_other_coat",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_146",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_double_coat",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_147",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "winter_single_coat",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_148",
+      "category": "outer",
+      "subcategory": "coat",
+      "detail_type": "transitional_coat",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_outer_149",
+      "category": "outer",
+      "subcategory": "cardigan",
+      "detail_type": "cardigan",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_150",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_151",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_152",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_153",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_154",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_155",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_156",
+      "category": "top",
+      "subcategory": "polo",
+      "detail_type": "polo_collar_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_157",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_158",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_159",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_160",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_161",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_162",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_163",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_164",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_165",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ],
+      "duplicate_of": "full_top_164"
+    },
+    {
+      "product_id": "full_top_166",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_167",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_168",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_169",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_170",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_171",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_172",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_173",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_174",
+      "category": "top",
+      "subcategory": "polo",
+      "detail_type": "polo_collar_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_175",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_176",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_177",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_178",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_179",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_180",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_181",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_182",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_183",
+      "category": "top",
+      "subcategory": "polo",
+      "detail_type": "polo_collar_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_184",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_185",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_186",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_187",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_188",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_189",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_190",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_191",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_192",
+      "category": "top",
+      "subcategory": "polo",
+      "detail_type": "polo_collar_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_193",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_194",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_195",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ],
+      "duplicate_of": "full_top_194"
+    },
+    {
+      "product_id": "full_top_196",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_197",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_198",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_199",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_200",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_201",
+      "category": "top",
+      "subcategory": "polo",
+      "detail_type": "polo_collar_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_202",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_203",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_204",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_205",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_206",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_207",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_208",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_209",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_210",
+      "category": "top",
+      "subcategory": "polo",
+      "detail_type": "polo_collar_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_211",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_212",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_213",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_214",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_215",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_216",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_217",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_218",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_219",
+      "category": "top",
+      "subcategory": "polo",
+      "detail_type": "polo_collar_tshirt",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_220",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_221",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_222",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_223",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_224",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_225",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ],
+      "duplicate_of": "full_top_224"
+    },
+    {
+      "product_id": "full_top_226",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_227",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_228",
+      "category": "top",
+      "subcategory": "polo",
+      "detail_type": "polo_collar_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_229",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_230",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_231",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_232",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_233",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_234",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_235",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_236",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_237",
+      "category": "top",
+      "subcategory": "polo",
+      "detail_type": "polo_collar_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_238",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_239",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_240",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_241",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_242",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_243",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_244",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_245",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_246",
+      "category": "top",
+      "subcategory": "polo",
+      "detail_type": "polo_collar_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_247",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_248",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_249",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_250",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_251",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_252",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_253",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_254",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_255",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ],
+      "duplicate_of": "full_top_254"
+    },
+    {
+      "product_id": "full_top_256",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_257",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_258",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_259",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_260",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_261",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_262",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_263",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_264",
+      "category": "top",
+      "subcategory": "polo",
+      "detail_type": "polo_collar_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_265",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_266",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_267",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_268",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_269",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_270",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_271",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_272",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_273",
+      "category": "top",
+      "subcategory": "polo",
+      "detail_type": "polo_collar_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_274",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_275",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_276",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_277",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_278",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_279",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_280",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_281",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_282",
+      "category": "top",
+      "subcategory": "polo",
+      "detail_type": "polo_collar_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_283",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_284",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_285",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ],
+      "duplicate_of": "full_top_284"
+    },
+    {
+      "product_id": "full_top_286",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_287",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_288",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_289",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_290",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_291",
+      "category": "top",
+      "subcategory": "polo",
+      "detail_type": "polo_collar_tshirt",
+      "information_density": "sparse",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "care",
+        "fit",
+        "materials",
+        "seasons",
+        "size_info",
+        "tpo_tags"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_292",
+      "category": "top",
+      "subcategory": "hoodie",
+      "detail_type": "hoodie_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_293",
+      "category": "top",
+      "subcategory": "other_top",
+      "detail_type": "other_top",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [
+        "material_ratio"
+      ],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_294",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "short_sleeve_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    },
+    {
+      "product_id": "full_top_295",
+      "category": "top",
+      "subcategory": "tshirt",
+      "detail_type": "long_sleeve_tshirt",
+      "information_density": "medium",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_296",
+      "category": "top",
+      "subcategory": "shirt_blouse",
+      "detail_type": "shirt_blouse",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_297",
+      "category": "top",
+      "subcategory": "knit",
+      "detail_type": "knit_sweater",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_298",
+      "category": "top",
+      "subcategory": "sweatshirt",
+      "detail_type": "sweatshirt",
+      "information_density": "full",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": true,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": []
+    },
+    {
+      "product_id": "full_top_299",
+      "category": "top",
+      "subcategory": "sleeveless",
+      "detail_type": "sleeveless_tshirt",
+      "information_density": "noisy_ambiguous",
+      "synthetic_source": true,
+      "has_explicit_material_ratio": false,
+      "expected_missing_fields": [],
+      "expected_ambiguous_fields": [
+        "material_ratio"
+      ]
+    }
+  ]
+}

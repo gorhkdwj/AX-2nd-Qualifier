@@ -1,0 +1,3574 @@
+{
+  "products": [
+    {
+      "product_id": "full_outer_000",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_000",
+          "source_title": "DUMMY STANDARD 블랙 스타디움 재킷 000",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "DUMMY STANDARD 블랙 스타디움 재킷 000",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "stadium_jacket",
+          "materials": [],
+          "fit": [],
+          "colors": [
+            "black"
+          ],
+          "seasons": [],
+          "tpo_tags": [],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "블랙 핏 정보 부족 스타디움 재킷",
+          "query_tags": [
+            "블랙",
+            "스타디움 재킷",
+            "핏 정보 부족"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/stadium_jacket로 정규화했습니다.",
+            "색상 단서는 블랙로 정규화했습니다.",
+            "입력에서 care, fit, materials, seasons, size_info, tpo_tags 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "care",
+            "fit",
+            "materials",
+            "seasons",
+            "size_info",
+            "tpo_tags"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "low"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_001",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_001",
+          "source_title": "AX TEST LABEL 그레이 트러커 재킷 001",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "AX TEST LABEL 그레이 트러커 재킷 001",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "trucker_jacket",
+          "materials": [],
+          "fit": [],
+          "colors": [
+            "gray"
+          ],
+          "seasons": [],
+          "tpo_tags": [],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "그레이 핏 정보 부족 트러커 재킷",
+          "query_tags": [
+            "그레이",
+            "트러커 재킷",
+            "핏 정보 부족"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/trucker_jacket로 정규화했습니다.",
+            "색상 단서는 그레이로 정규화했습니다.",
+            "입력에서 care, fit, materials, seasons, size_info, tpo_tags 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "care",
+            "fit",
+            "materials",
+            "seasons",
+            "size_info",
+            "tpo_tags"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "low"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_002",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_002",
+          "source_title": "SYNTHETIC WORKS 네이비 플리스/뽀글이 002",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "SYNTHETIC WORKS 네이비 플리스/뽀글이 002",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "fleece_jacket",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cotton",
+              "ratio": null,
+              "ratio_status": "missing",
+              "evidence": "코튼 소재"
+            }
+          ],
+          "fit": [
+            "oversized"
+          ],
+          "colors": [
+            "navy"
+          ],
+          "seasons": [
+            "spring",
+            "fall"
+          ],
+          "tpo_tags": [
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "care": [
+            "low_temp_iron"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "네이비 오버핏 플리스/뽀글이",
+          "query_tags": [
+            "네이비",
+            "플리스/뽀글이",
+            "오버핏",
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/fleece_jacket로 정규화했습니다.",
+            "색상 단서는 네이비로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "material_ratio"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_003",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_003",
+          "source_title": "REPRO SAMPLE 그린 아노락 재킷 003",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "REPRO SAMPLE 그린 아노락 재킷 003",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "anorak_jacket",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨 터치"
+            },
+            {
+              "part": "unknown",
+              "name": "rayon",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "레이온 블렌드"
+            }
+          ],
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "green"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "street",
+            "layering"
+          ],
+          "care": [
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "그린 레귤러핏 아노락 재킷",
+          "query_tags": [
+            "그린",
+            "아노락 재킷",
+            "레귤러핏",
+            "daily",
+            "street",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/anorak_jacket로 정규화했습니다.",
+            "색상 단서는 그린로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 모호해 ambiguous로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_004",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_004",
+          "source_title": "DUMMY STANDARD 핑크 슈트/블레이저 재킷 004",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "DUMMY STANDARD 핑크 슈트/블레이저 재킷 004",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "suit_blazer_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "wool",
+              "ratio": 70,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            },
+            {
+              "part": "shell",
+              "name": "cashmere",
+              "ratio": 30,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            }
+          ],
+          "fit": [
+            "longline"
+          ],
+          "colors": [
+            "pink"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "care": [
+            "hand_wash"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "핑크 롱라인 슈트/블레이저 재킷",
+          "query_tags": [
+            "핑크",
+            "슈트/블레이저 재킷",
+            "롱라인",
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/suit_blazer_jacket로 정규화했습니다.",
+            "색상 단서는 핑크로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_005",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_005",
+          "source_title": "AX TEST LABEL 화이트 사파리/헌팅 재킷 005",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "AX TEST LABEL 화이트 사파리/헌팅 재킷 005",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "safari_hunting_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 나일론 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "relaxed"
+          ],
+          "colors": [
+            "white"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual",
+            "layering"
+          ],
+          "care": [
+            "do_not_bleach"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "화이트 릴랙스 핏 사파리/헌팅 재킷",
+          "query_tags": [
+            "화이트",
+            "사파리/헌팅 재킷",
+            "릴랙스 핏",
+            "daily",
+            "casual",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/safari_hunting_jacket로 정규화했습니다.",
+            "색상 단서는 화이트로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_006",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_006",
+          "source_title": "SYNTHETIC WORKS 베이지 레더/라이더스 재킷 006",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "SYNTHETIC WORKS 베이지 레더/라이더스 재킷 006",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "leather_rider_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "leather",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 천연가죽 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "boxy"
+          ],
+          "colors": [
+            "beige"
+          ],
+          "seasons": [
+            "fall",
+            "winter"
+          ],
+          "tpo_tags": [
+            "layering",
+            "travel",
+            "commute"
+          ],
+          "care": [
+            "shade_dry",
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M 총장 70cm 어깨 52cm 가슴 60cm",
+            "L 총장 72cm 어깨 54cm 가슴 62cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "베이지 박시핏 레더/라이더스 재킷",
+          "query_tags": [
+            "베이지",
+            "레더/라이더스 재킷",
+            "박시핏",
+            "layering",
+            "travel",
+            "commute"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/leather_rider_jacket로 정규화했습니다.",
+            "색상 단서는 베이지로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_007",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_007",
+          "source_title": "REPRO SAMPLE 블루 트레이닝 재킷 007",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "REPRO SAMPLE 블루 트레이닝 재킷 007",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "training_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 나일론 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "cropped"
+          ],
+          "colors": [
+            "blue",
+            "green"
+          ],
+          "seasons": [
+            "spring",
+            "fall"
+          ],
+          "tpo_tags": [
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "care": [
+            "machine_wash",
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M 총장 71cm 어깨 53cm 가슴 61cm",
+            "L 총장 73cm 어깨 55cm 가슴 63cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블루, 그린 크롭 핏 트레이닝 재킷",
+          "query_tags": [
+            "블루, 그린",
+            "트레이닝 재킷",
+            "크롭 핏",
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/training_jacket로 정규화했습니다.",
+            "색상 단서는 블루, 그린로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_008",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_008",
+          "source_title": "DUMMY STANDARD 카키 나일론/코치 재킷 008",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "DUMMY STANDARD 카키 나일론/코치 재킷 008",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "nylon_coach_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 나일론 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "slim"
+          ],
+          "colors": [
+            "khaki",
+            "black"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "street",
+            "layering",
+            "commute"
+          ],
+          "care": [
+            "dry_clean",
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M 총장 72cm 어깨 46cm 가슴 54cm",
+            "L 총장 74cm 어깨 48cm 가슴 56cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "카키, 블랙 슬림핏 나일론/코치 재킷",
+          "query_tags": [
+            "카키, 블랙",
+            "나일론/코치 재킷",
+            "슬림핏",
+            "daily",
+            "street",
+            "layering",
+            "commute"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/nylon_coach_jacket로 정규화했습니다.",
+            "색상 단서는 카키, 블랙로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_009",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_009",
+          "source_title": "AX TEST LABEL 옐로우 블루종/MA-1 009",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "AX TEST LABEL 옐로우 블루종/MA-1 009",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "blouson_ma1",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cashmere",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "캐시미어를 블렌드한 듯한 부드러운 터치감"
+            },
+            {
+              "part": "unknown",
+              "name": "wool",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "고급 울 터치 원단"
+            }
+          ],
+          "fit": [
+            "straight"
+          ],
+          "colors": [
+            "yellow",
+            "brown"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "care": [
+            "low_temp_iron"
+          ],
+          "size_info": [
+            "M 총장 73cm 어깨 47cm 가슴 55cm",
+            "L 총장 75cm 어깨 49cm 가슴 57cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "옐로우, 브라운 스트레이트 핏 블루종/MA-1",
+          "query_tags": [
+            "옐로우, 브라운",
+            "블루종/MA-1",
+            "스트레이트 핏",
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/blouson_ma1로 정규화했습니다.",
+            "색상 단서는 옐로우, 브라운로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 모호해 ambiguous로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_010",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_010",
+          "source_title": "SYNTHETIC WORKS 아이보리 무스탕/퍼 010",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "SYNTHETIC WORKS 아이보리 무스탕/퍼 010",
+          "category": "outer",
+          "subcategory": "jumper",
+          "detail_type": "mustang_fur",
+          "materials": [],
+          "fit": [],
+          "colors": [
+            "ivory"
+          ],
+          "seasons": [],
+          "tpo_tags": [],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "아이보리 핏 정보 부족 무스탕/퍼",
+          "query_tags": [
+            "아이보리",
+            "무스탕/퍼",
+            "핏 정보 부족"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jumper/mustang_fur로 정규화했습니다.",
+            "색상 단서는 아이보리로 정규화했습니다.",
+            "입력에서 care, fit, materials, seasons, size_info, tpo_tags 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "care",
+            "fit",
+            "materials",
+            "seasons",
+            "size_info",
+            "tpo_tags"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "low"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_011",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_011",
+          "source_title": "REPRO SAMPLE 브라운 숏패딩/헤비 아우터 011",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "REPRO SAMPLE 브라운 숏패딩/헤비 아우터 011",
+          "category": "outer",
+          "subcategory": "jumper",
+          "detail_type": "short_padding_heavy_outer",
+          "materials": [],
+          "fit": [],
+          "colors": [
+            "brown"
+          ],
+          "seasons": [],
+          "tpo_tags": [],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "브라운 핏 정보 부족 숏패딩/헤비 아우터",
+          "query_tags": [
+            "브라운",
+            "숏패딩/헤비 아우터",
+            "핏 정보 부족"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jumper/short_padding_heavy_outer로 정규화했습니다.",
+            "색상 단서는 브라운로 정규화했습니다.",
+            "입력에서 care, fit, materials, seasons, size_info, tpo_tags 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "care",
+            "fit",
+            "materials",
+            "seasons",
+            "size_info",
+            "tpo_tags"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "low"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_012",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_012",
+          "source_title": "DUMMY STANDARD 데님 블루 롱패딩/헤비 아우터 012",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "DUMMY STANDARD 데님 블루 롱패딩/헤비 아우터 012",
+          "category": "outer",
+          "subcategory": "jumper",
+          "detail_type": "long_padding_heavy_outer",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cotton",
+              "ratio": null,
+              "ratio_status": "missing",
+              "evidence": "코튼 소재"
+            }
+          ],
+          "fit": [
+            "longline"
+          ],
+          "colors": [
+            "denim_blue"
+          ],
+          "seasons": [
+            "spring",
+            "fall"
+          ],
+          "tpo_tags": [
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "care": [
+            "do_not_bleach"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "데님 블루 롱라인 롱패딩/헤비 아우터",
+          "query_tags": [
+            "데님 블루",
+            "롱패딩/헤비 아우터",
+            "롱라인",
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jumper/long_padding_heavy_outer로 정규화했습니다.",
+            "색상 단서는 데님 블루로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "material_ratio"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_013",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_013",
+          "source_title": "AX TEST LABEL 레드 겨울 기타 코트 013",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "AX TEST LABEL 레드 겨울 기타 코트 013",
+          "category": "outer",
+          "subcategory": "coat",
+          "detail_type": "winter_other_coat",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨 터치"
+            },
+            {
+              "part": "unknown",
+              "name": "rayon",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "레이온 블렌드"
+            }
+          ],
+          "fit": [
+            "relaxed"
+          ],
+          "colors": [
+            "red"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "street",
+            "layering"
+          ],
+          "care": [
+            "shade_dry"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "레드 릴랙스 핏 겨울 기타 코트",
+          "query_tags": [
+            "레드",
+            "겨울 기타 코트",
+            "릴랙스 핏",
+            "daily",
+            "street",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/coat/winter_other_coat로 정규화했습니다.",
+            "색상 단서는 레드로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 모호해 ambiguous로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_014",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_014",
+          "source_title": "SYNTHETIC WORKS 블랙 겨울 더블 코트 014",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "SYNTHETIC WORKS 블랙 겨울 더블 코트 014",
+          "category": "outer",
+          "subcategory": "coat",
+          "detail_type": "winter_double_coat",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "wool",
+              "ratio": 70,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            },
+            {
+              "part": "shell",
+              "name": "cashmere",
+              "ratio": 30,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            }
+          ],
+          "fit": [
+            "boxy"
+          ],
+          "colors": [
+            "black"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "care": [
+            "machine_wash"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블랙 박시핏 겨울 더블 코트",
+          "query_tags": [
+            "블랙",
+            "겨울 더블 코트",
+            "박시핏",
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/coat/winter_double_coat로 정규화했습니다.",
+            "색상 단서는 블랙로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_015",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_015",
+          "source_title": "SYNTHETIC WORKS 블랙 겨울 더블 코트 014 리오더",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "SYNTHETIC WORKS 블랙 겨울 더블 코트 014 리오더",
+          "category": "outer",
+          "subcategory": "coat",
+          "detail_type": "winter_double_coat",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "wool",
+              "ratio": 70,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            },
+            {
+              "part": "shell",
+              "name": "cashmere",
+              "ratio": 30,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            }
+          ],
+          "fit": [
+            "boxy"
+          ],
+          "colors": [
+            "black"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "care": [
+            "machine_wash"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블랙 박시핏 겨울 더블 코트",
+          "query_tags": [
+            "블랙",
+            "겨울 더블 코트",
+            "박시핏",
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/coat/winter_double_coat로 정규화했습니다.",
+            "색상 단서는 블랙로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_016",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_016",
+          "source_title": "DUMMY STANDARD 네이비 환절기 코트 016",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "DUMMY STANDARD 네이비 환절기 코트 016",
+          "category": "outer",
+          "subcategory": "coat",
+          "detail_type": "transitional_coat",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 나일론 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "slim"
+          ],
+          "colors": [
+            "navy",
+            "pink"
+          ],
+          "seasons": [
+            "fall",
+            "winter"
+          ],
+          "tpo_tags": [
+            "layering",
+            "travel",
+            "commute"
+          ],
+          "care": [
+            "low_temp_iron",
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M 총장 70cm 어깨 46cm 가슴 54cm",
+            "L 총장 72cm 어깨 48cm 가슴 56cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "네이비, 핑크 슬림핏 환절기 코트",
+          "query_tags": [
+            "네이비, 핑크",
+            "환절기 코트",
+            "슬림핏",
+            "layering",
+            "travel",
+            "commute"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/coat/transitional_coat로 정규화했습니다.",
+            "색상 단서는 네이비, 핑크로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_017",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_017",
+          "source_title": "AX TEST LABEL 그린 카디건 017",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "AX TEST LABEL 그린 카디건 017",
+          "category": "outer",
+          "subcategory": "cardigan",
+          "detail_type": "cardigan",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "wool",
+              "ratio": 70,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            },
+            {
+              "part": "shell",
+              "name": "cashmere",
+              "ratio": 30,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            }
+          ],
+          "fit": [
+            "straight"
+          ],
+          "colors": [
+            "green",
+            "gray"
+          ],
+          "seasons": [
+            "spring",
+            "fall"
+          ],
+          "tpo_tags": [
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "care": [
+            "no_tumble_dry",
+            "shade_dry"
+          ],
+          "size_info": [
+            "M 총장 71cm 어깨 47cm 가슴 55cm",
+            "L 총장 73cm 어깨 49cm 가슴 57cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "그린, 그레이 스트레이트 핏 카디건",
+          "query_tags": [
+            "그린, 그레이",
+            "카디건",
+            "스트레이트 핏",
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/cardigan/cardigan로 정규화했습니다.",
+            "색상 단서는 그린, 그레이로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_018",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_018",
+          "source_title": "SYNTHETIC WORKS 핑크 베스트 018",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "SYNTHETIC WORKS 핑크 베스트 018",
+          "category": "outer",
+          "subcategory": "vest",
+          "detail_type": "vest",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 나일론 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "oversized"
+          ],
+          "colors": [
+            "pink",
+            "denim_blue"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "street",
+            "layering",
+            "commute"
+          ],
+          "care": [
+            "hand_wash",
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M 총장 72cm 어깨 48cm 가슴 56cm",
+            "L 총장 74cm 어깨 50cm 가슴 58cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "핑크, 데님 블루 오버핏 베스트",
+          "query_tags": [
+            "핑크, 데님 블루",
+            "베스트",
+            "오버핏",
+            "daily",
+            "street",
+            "layering",
+            "commute"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/vest/vest로 정규화했습니다.",
+            "색상 단서는 핑크, 데님 블루로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_019",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_019",
+          "source_title": "REPRO SAMPLE 화이트 경량 패딩/패딩 베스트 019",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "REPRO SAMPLE 화이트 경량 패딩/패딩 베스트 019",
+          "category": "outer",
+          "subcategory": "vest",
+          "detail_type": "lightweight_padding_vest",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cashmere",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "캐시미어를 블렌드한 듯한 부드러운 터치감"
+            },
+            {
+              "part": "unknown",
+              "name": "wool",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "고급 울 터치 원단"
+            }
+          ],
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "white",
+            "yellow"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "care": [
+            "do_not_bleach"
+          ],
+          "size_info": [
+            "M 총장 73cm 어깨 49cm 가슴 57cm",
+            "L 총장 75cm 어깨 51cm 가슴 59cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "화이트, 옐로우 레귤러핏 경량 패딩/패딩 베스트",
+          "query_tags": [
+            "화이트, 옐로우",
+            "경량 패딩/패딩 베스트",
+            "레귤러핏",
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/vest/lightweight_padding_vest로 정규화했습니다.",
+            "색상 단서는 화이트, 옐로우로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 모호해 ambiguous로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_020",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_020",
+          "source_title": "DUMMY STANDARD 베이지 후드 집업 020",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "DUMMY STANDARD 베이지 후드 집업 020",
+          "category": "outer",
+          "subcategory": "hoodie_zipup",
+          "detail_type": "hoodie_zipup",
+          "materials": [],
+          "fit": [],
+          "colors": [
+            "beige"
+          ],
+          "seasons": [],
+          "tpo_tags": [],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "베이지 핏 정보 부족 후드 집업",
+          "query_tags": [
+            "베이지",
+            "후드 집업",
+            "핏 정보 부족"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/hoodie_zipup/hoodie_zipup로 정규화했습니다.",
+            "색상 단서는 베이지로 정규화했습니다.",
+            "입력에서 care, fit, materials, seasons, size_info, tpo_tags 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "care",
+            "fit",
+            "materials",
+            "seasons",
+            "size_info",
+            "tpo_tags"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "low"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_021",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_021",
+          "source_title": "AX TEST LABEL 블루 기타 아우터 021",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "AX TEST LABEL 블루 기타 아우터 021",
+          "category": "outer",
+          "subcategory": "other_outer",
+          "detail_type": "other_outer",
+          "materials": [],
+          "fit": [],
+          "colors": [
+            "blue"
+          ],
+          "seasons": [],
+          "tpo_tags": [],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "블루 핏 정보 부족 기타 아우터",
+          "query_tags": [
+            "블루",
+            "기타 아우터",
+            "핏 정보 부족"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/other_outer/other_outer로 정규화했습니다.",
+            "색상 단서는 블루로 정규화했습니다.",
+            "입력에서 care, fit, materials, seasons, size_info, tpo_tags 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "care",
+            "fit",
+            "materials",
+            "seasons",
+            "size_info",
+            "tpo_tags"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "low"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_022",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_022",
+          "source_title": "SYNTHETIC WORKS 카키 스타디움 재킷 022",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "SYNTHETIC WORKS 카키 스타디움 재킷 022",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "stadium_jacket",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cotton",
+              "ratio": null,
+              "ratio_status": "missing",
+              "evidence": "코튼 소재"
+            }
+          ],
+          "fit": [
+            "boxy"
+          ],
+          "colors": [
+            "khaki"
+          ],
+          "seasons": [
+            "spring",
+            "fall"
+          ],
+          "tpo_tags": [
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "care": [
+            "dry_clean"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "카키 박시핏 스타디움 재킷",
+          "query_tags": [
+            "카키",
+            "스타디움 재킷",
+            "박시핏",
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/stadium_jacket로 정규화했습니다.",
+            "색상 단서는 카키로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "material_ratio"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_023",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_023",
+          "source_title": "REPRO SAMPLE 옐로우 트러커 재킷 023",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "REPRO SAMPLE 옐로우 트러커 재킷 023",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "trucker_jacket",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨 터치"
+            },
+            {
+              "part": "unknown",
+              "name": "rayon",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "레이온 블렌드"
+            }
+          ],
+          "fit": [
+            "cropped"
+          ],
+          "colors": [
+            "yellow"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "street",
+            "layering"
+          ],
+          "care": [
+            "low_temp_iron"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "옐로우 크롭 핏 트러커 재킷",
+          "query_tags": [
+            "옐로우",
+            "트러커 재킷",
+            "크롭 핏",
+            "daily",
+            "street",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/trucker_jacket로 정규화했습니다.",
+            "색상 단서는 옐로우로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 모호해 ambiguous로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_024",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_024",
+          "source_title": "DUMMY STANDARD 아이보리 플리스/뽀글이 024",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "DUMMY STANDARD 아이보리 플리스/뽀글이 024",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "fleece_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "wool",
+              "ratio": 70,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            },
+            {
+              "part": "shell",
+              "name": "cashmere",
+              "ratio": 30,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            }
+          ],
+          "fit": [
+            "slim"
+          ],
+          "colors": [
+            "ivory"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "care": [
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "아이보리 슬림핏 플리스/뽀글이",
+          "query_tags": [
+            "아이보리",
+            "플리스/뽀글이",
+            "슬림핏",
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/fleece_jacket로 정규화했습니다.",
+            "색상 단서는 아이보리로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_025",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_025",
+          "source_title": "AX TEST LABEL 브라운 아노락 재킷 025",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "AX TEST LABEL 브라운 아노락 재킷 025",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "anorak_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 나일론 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "straight"
+          ],
+          "colors": [
+            "brown"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual",
+            "layering"
+          ],
+          "care": [
+            "hand_wash"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "브라운 스트레이트 핏 아노락 재킷",
+          "query_tags": [
+            "브라운",
+            "아노락 재킷",
+            "스트레이트 핏",
+            "daily",
+            "casual",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/anorak_jacket로 정규화했습니다.",
+            "색상 단서는 브라운로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_026",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_026",
+          "source_title": "SYNTHETIC WORKS 데님 블루 슈트/블레이저 재킷 026",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "SYNTHETIC WORKS 데님 블루 슈트/블레이저 재킷 026",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "suit_blazer_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 나일론 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "oversized"
+          ],
+          "colors": [
+            "denim_blue",
+            "navy"
+          ],
+          "seasons": [
+            "fall",
+            "winter"
+          ],
+          "tpo_tags": [
+            "layering",
+            "travel",
+            "commute"
+          ],
+          "care": [
+            "do_not_bleach",
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M 총장 70cm 어깨 48cm 가슴 56cm",
+            "L 총장 72cm 어깨 50cm 가슴 58cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "데님 블루, 네이비 오버핏 슈트/블레이저 재킷",
+          "query_tags": [
+            "데님 블루, 네이비",
+            "슈트/블레이저 재킷",
+            "오버핏",
+            "layering",
+            "travel",
+            "commute"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/suit_blazer_jacket로 정규화했습니다.",
+            "색상 단서는 데님 블루, 네이비로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_027",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_027",
+          "source_title": "REPRO SAMPLE 레드 사파리/헌팅 재킷 027",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "REPRO SAMPLE 레드 사파리/헌팅 재킷 027",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "safari_hunting_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 나일론 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "red"
+          ],
+          "seasons": [
+            "spring",
+            "fall"
+          ],
+          "tpo_tags": [
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "care": [
+            "shade_dry",
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M 총장 71cm 어깨 49cm 가슴 57cm",
+            "L 총장 73cm 어깨 51cm 가슴 59cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "레드 레귤러핏 사파리/헌팅 재킷",
+          "query_tags": [
+            "레드",
+            "사파리/헌팅 재킷",
+            "레귤러핏",
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/safari_hunting_jacket로 정규화했습니다.",
+            "색상 단서는 레드로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_028",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_028",
+          "source_title": "DUMMY STANDARD 블랙 레더/라이더스 재킷 028",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "DUMMY STANDARD 블랙 레더/라이더스 재킷 028",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "leather_rider_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "leather",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 천연가죽 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "longline"
+          ],
+          "colors": [
+            "black",
+            "ivory"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "street",
+            "layering",
+            "commute"
+          ],
+          "care": [
+            "machine_wash",
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M 총장 72cm 어깨 50cm 가슴 58cm",
+            "L 총장 74cm 어깨 52cm 가슴 60cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블랙, 아이보리 롱라인 레더/라이더스 재킷",
+          "query_tags": [
+            "블랙, 아이보리",
+            "레더/라이더스 재킷",
+            "롱라인",
+            "daily",
+            "street",
+            "layering",
+            "commute"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/leather_rider_jacket로 정규화했습니다.",
+            "색상 단서는 블랙, 아이보리로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_029",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_029",
+          "source_title": "AX TEST LABEL 그레이 트레이닝 재킷 029",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "AX TEST LABEL 그레이 트레이닝 재킷 029",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "training_jacket",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cashmere",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "캐시미어를 블렌드한 듯한 부드러운 터치감"
+            },
+            {
+              "part": "unknown",
+              "name": "wool",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "고급 울 터치 원단"
+            }
+          ],
+          "fit": [
+            "relaxed"
+          ],
+          "colors": [
+            "gray",
+            "blue"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "care": [
+            "dry_clean"
+          ],
+          "size_info": [
+            "M 총장 73cm 어깨 51cm 가슴 59cm",
+            "L 총장 75cm 어깨 53cm 가슴 61cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "그레이, 블루 릴랙스 핏 트레이닝 재킷",
+          "query_tags": [
+            "그레이, 블루",
+            "트레이닝 재킷",
+            "릴랙스 핏",
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/training_jacket로 정규화했습니다.",
+            "색상 단서는 그레이, 블루로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 모호해 ambiguous로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_030",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_030",
+          "source_title": "SYNTHETIC WORKS 네이비 나일론/코치 재킷 030",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "SYNTHETIC WORKS 네이비 나일론/코치 재킷 030",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "nylon_coach_jacket",
+          "materials": [],
+          "fit": [],
+          "colors": [
+            "navy"
+          ],
+          "seasons": [],
+          "tpo_tags": [],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "네이비 핏 정보 부족 나일론/코치 재킷",
+          "query_tags": [
+            "네이비",
+            "나일론/코치 재킷",
+            "핏 정보 부족"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/nylon_coach_jacket로 정규화했습니다.",
+            "색상 단서는 네이비로 정규화했습니다.",
+            "입력에서 care, fit, materials, seasons, size_info, tpo_tags 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "care",
+            "fit",
+            "materials",
+            "seasons",
+            "size_info",
+            "tpo_tags"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "low"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_031",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_031",
+          "source_title": "REPRO SAMPLE 그린 블루종/MA-1 031",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "REPRO SAMPLE 그린 블루종/MA-1 031",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "blouson_ma1",
+          "materials": [],
+          "fit": [],
+          "colors": [
+            "green"
+          ],
+          "seasons": [],
+          "tpo_tags": [],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "그린 핏 정보 부족 블루종/MA-1",
+          "query_tags": [
+            "그린",
+            "블루종/MA-1",
+            "핏 정보 부족"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/blouson_ma1로 정규화했습니다.",
+            "색상 단서는 그린로 정규화했습니다.",
+            "입력에서 care, fit, materials, seasons, size_info, tpo_tags 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "care",
+            "fit",
+            "materials",
+            "seasons",
+            "size_info",
+            "tpo_tags"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "low"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_032",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_032",
+          "source_title": "DUMMY STANDARD 핑크 무스탕/퍼 032",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "DUMMY STANDARD 핑크 무스탕/퍼 032",
+          "category": "outer",
+          "subcategory": "jumper",
+          "detail_type": "mustang_fur",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cotton",
+              "ratio": null,
+              "ratio_status": "missing",
+              "evidence": "코튼 소재"
+            }
+          ],
+          "fit": [
+            "slim"
+          ],
+          "colors": [
+            "pink"
+          ],
+          "seasons": [
+            "spring",
+            "fall"
+          ],
+          "tpo_tags": [
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "care": [
+            "hand_wash"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "핑크 슬림핏 무스탕/퍼",
+          "query_tags": [
+            "핑크",
+            "무스탕/퍼",
+            "슬림핏",
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jumper/mustang_fur로 정규화했습니다.",
+            "색상 단서는 핑크로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "material_ratio"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_033",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_033",
+          "source_title": "AX TEST LABEL 화이트 숏패딩/헤비 아우터 033",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "AX TEST LABEL 화이트 숏패딩/헤비 아우터 033",
+          "category": "outer",
+          "subcategory": "jumper",
+          "detail_type": "short_padding_heavy_outer",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨 터치"
+            },
+            {
+              "part": "unknown",
+              "name": "rayon",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "레이온 블렌드"
+            }
+          ],
+          "fit": [
+            "straight"
+          ],
+          "colors": [
+            "white"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "street",
+            "layering"
+          ],
+          "care": [
+            "do_not_bleach"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "화이트 스트레이트 핏 숏패딩/헤비 아우터",
+          "query_tags": [
+            "화이트",
+            "숏패딩/헤비 아우터",
+            "스트레이트 핏",
+            "daily",
+            "street",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jumper/short_padding_heavy_outer로 정규화했습니다.",
+            "색상 단서는 화이트로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 모호해 ambiguous로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_034",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_034",
+          "source_title": "SYNTHETIC WORKS 베이지 롱패딩/헤비 아우터 034",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "SYNTHETIC WORKS 베이지 롱패딩/헤비 아우터 034",
+          "category": "outer",
+          "subcategory": "jumper",
+          "detail_type": "long_padding_heavy_outer",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "wool",
+              "ratio": 70,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            },
+            {
+              "part": "shell",
+              "name": "cashmere",
+              "ratio": 30,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            }
+          ],
+          "fit": [
+            "oversized"
+          ],
+          "colors": [
+            "beige"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "care": [
+            "shade_dry"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "베이지 오버핏 롱패딩/헤비 아우터",
+          "query_tags": [
+            "베이지",
+            "롱패딩/헤비 아우터",
+            "오버핏",
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jumper/long_padding_heavy_outer로 정규화했습니다.",
+            "색상 단서는 베이지로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_035",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_035",
+          "source_title": "REPRO SAMPLE 블루 겨울 기타 코트 035",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "REPRO SAMPLE 블루 겨울 기타 코트 035",
+          "category": "outer",
+          "subcategory": "coat",
+          "detail_type": "winter_other_coat",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 나일론 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "blue"
+          ],
+          "seasons": [
+            "spring",
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "casual",
+            "layering"
+          ],
+          "care": [
+            "machine_wash"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블루 레귤러핏 겨울 기타 코트",
+          "query_tags": [
+            "블루",
+            "겨울 기타 코트",
+            "레귤러핏",
+            "daily",
+            "casual",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/coat/winter_other_coat로 정규화했습니다.",
+            "색상 단서는 블루로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_036",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_036",
+          "source_title": "DUMMY STANDARD 카키 겨울 더블 코트 036",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "DUMMY STANDARD 카키 겨울 더블 코트 036",
+          "category": "outer",
+          "subcategory": "coat",
+          "detail_type": "winter_double_coat",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "wool",
+              "ratio": 70,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            },
+            {
+              "part": "shell",
+              "name": "cashmere",
+              "ratio": 30,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            }
+          ],
+          "fit": [
+            "longline"
+          ],
+          "colors": [
+            "khaki",
+            "black"
+          ],
+          "seasons": [
+            "fall",
+            "winter"
+          ],
+          "tpo_tags": [
+            "layering",
+            "travel",
+            "commute"
+          ],
+          "care": [
+            "dry_clean",
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M 총장 70cm 어깨 50cm 가슴 58cm",
+            "L 총장 72cm 어깨 52cm 가슴 60cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "카키, 블랙 롱라인 겨울 더블 코트",
+          "query_tags": [
+            "카키, 블랙",
+            "겨울 더블 코트",
+            "롱라인",
+            "layering",
+            "travel",
+            "commute"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/coat/winter_double_coat로 정규화했습니다.",
+            "색상 단서는 카키, 블랙로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_037",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_037",
+          "source_title": "AX TEST LABEL 옐로우 겨울 싱글 코트 037",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "AX TEST LABEL 옐로우 겨울 싱글 코트 037",
+          "category": "outer",
+          "subcategory": "coat",
+          "detail_type": "winter_single_coat",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "wool",
+              "ratio": 70,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            },
+            {
+              "part": "shell",
+              "name": "cashmere",
+              "ratio": 30,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            }
+          ],
+          "fit": [
+            "relaxed"
+          ],
+          "colors": [
+            "yellow",
+            "brown"
+          ],
+          "seasons": [
+            "spring",
+            "fall"
+          ],
+          "tpo_tags": [
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "care": [
+            "low_temp_iron",
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M 총장 71cm 어깨 51cm 가슴 59cm",
+            "L 총장 73cm 어깨 53cm 가슴 61cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "옐로우, 브라운 릴랙스 핏 겨울 싱글 코트",
+          "query_tags": [
+            "옐로우, 브라운",
+            "겨울 싱글 코트",
+            "릴랙스 핏",
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/coat/winter_single_coat로 정규화했습니다.",
+            "색상 단서는 옐로우, 브라운로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_038",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_038",
+          "source_title": "SYNTHETIC WORKS 아이보리 환절기 코트 038",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "SYNTHETIC WORKS 아이보리 환절기 코트 038",
+          "category": "outer",
+          "subcategory": "coat",
+          "detail_type": "transitional_coat",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 나일론 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "boxy"
+          ],
+          "colors": [
+            "ivory",
+            "khaki"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "street",
+            "layering",
+            "commute"
+          ],
+          "care": [
+            "no_tumble_dry",
+            "shade_dry"
+          ],
+          "size_info": [
+            "M 총장 72cm 어깨 52cm 가슴 60cm",
+            "L 총장 74cm 어깨 54cm 가슴 62cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "아이보리, 카키 박시핏 환절기 코트",
+          "query_tags": [
+            "아이보리, 카키",
+            "환절기 코트",
+            "박시핏",
+            "daily",
+            "street",
+            "layering",
+            "commute"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/coat/transitional_coat로 정규화했습니다.",
+            "색상 단서는 아이보리, 카키로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_039",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_039",
+          "source_title": "REPRO SAMPLE 브라운 카디건 039",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "REPRO SAMPLE 브라운 카디건 039",
+          "category": "outer",
+          "subcategory": "cardigan",
+          "detail_type": "cardigan",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cashmere",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "캐시미어를 블렌드한 듯한 부드러운 터치감"
+            },
+            {
+              "part": "unknown",
+              "name": "wool",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "고급 울 터치 원단"
+            }
+          ],
+          "fit": [
+            "cropped"
+          ],
+          "colors": [
+            "brown",
+            "white"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "care": [
+            "hand_wash"
+          ],
+          "size_info": [
+            "M 총장 73cm 어깨 53cm 가슴 61cm",
+            "L 총장 75cm 어깨 55cm 가슴 63cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "브라운, 화이트 크롭 핏 카디건",
+          "query_tags": [
+            "브라운, 화이트",
+            "카디건",
+            "크롭 핏",
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/cardigan/cardigan로 정규화했습니다.",
+            "색상 단서는 브라운, 화이트로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 모호해 ambiguous로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_040",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_040",
+          "source_title": "DUMMY STANDARD 데님 블루 베스트 040",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "DUMMY STANDARD 데님 블루 베스트 040",
+          "category": "outer",
+          "subcategory": "vest",
+          "detail_type": "vest",
+          "materials": [],
+          "fit": [],
+          "colors": [
+            "denim_blue"
+          ],
+          "seasons": [],
+          "tpo_tags": [],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "데님 블루 핏 정보 부족 베스트",
+          "query_tags": [
+            "데님 블루",
+            "베스트",
+            "핏 정보 부족"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/vest/vest로 정규화했습니다.",
+            "색상 단서는 데님 블루로 정규화했습니다.",
+            "입력에서 care, fit, materials, seasons, size_info, tpo_tags 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "care",
+            "fit",
+            "materials",
+            "seasons",
+            "size_info",
+            "tpo_tags"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "low"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_041",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_041",
+          "source_title": "AX TEST LABEL 레드 경량 패딩/패딩 베스트 041",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "AX TEST LABEL 레드 경량 패딩/패딩 베스트 041",
+          "category": "outer",
+          "subcategory": "vest",
+          "detail_type": "lightweight_padding_vest",
+          "materials": [],
+          "fit": [],
+          "colors": [
+            "red"
+          ],
+          "seasons": [],
+          "tpo_tags": [],
+          "care": [],
+          "size_info": []
+        },
+        "agent_descriptor": {
+          "search_summary": "레드 핏 정보 부족 경량 패딩/패딩 베스트",
+          "query_tags": [
+            "레드",
+            "경량 패딩/패딩 베스트",
+            "핏 정보 부족"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/vest/lightweight_padding_vest로 정규화했습니다.",
+            "색상 단서는 레드로 정규화했습니다.",
+            "입력에서 care, fit, materials, seasons, size_info, tpo_tags 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "care",
+            "fit",
+            "materials",
+            "seasons",
+            "size_info",
+            "tpo_tags"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "low"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_042",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_042",
+          "source_title": "SYNTHETIC WORKS 블랙 후드 집업 042",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "SYNTHETIC WORKS 블랙 후드 집업 042",
+          "category": "outer",
+          "subcategory": "hoodie_zipup",
+          "detail_type": "hoodie_zipup",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cotton",
+              "ratio": null,
+              "ratio_status": "missing",
+              "evidence": "코튼 소재"
+            }
+          ],
+          "fit": [
+            "oversized"
+          ],
+          "colors": [
+            "black"
+          ],
+          "seasons": [
+            "spring",
+            "fall"
+          ],
+          "tpo_tags": [
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "care": [
+            "machine_wash"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블랙 오버핏 후드 집업",
+          "query_tags": [
+            "블랙",
+            "후드 집업",
+            "오버핏",
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/hoodie_zipup/hoodie_zipup로 정규화했습니다.",
+            "색상 단서는 블랙로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 부족해 missing으로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [
+            "material_ratio"
+          ],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_043",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_043",
+          "source_title": "REPRO SAMPLE 그레이 기타 아우터 043",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "REPRO SAMPLE 그레이 기타 아우터 043",
+          "category": "outer",
+          "subcategory": "other_outer",
+          "detail_type": "other_outer",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "linen",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "린넨 터치"
+            },
+            {
+              "part": "unknown",
+              "name": "rayon",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "레이온 블렌드"
+            }
+          ],
+          "fit": [
+            "regular"
+          ],
+          "colors": [
+            "gray"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "street",
+            "layering"
+          ],
+          "care": [
+            "dry_clean"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "그레이 레귤러핏 기타 아우터",
+          "query_tags": [
+            "그레이",
+            "기타 아우터",
+            "레귤러핏",
+            "daily",
+            "street",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/other_outer/other_outer로 정규화했습니다.",
+            "색상 단서는 그레이로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 모호해 ambiguous로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_044",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_044",
+          "source_title": "DUMMY STANDARD 네이비 스타디움 재킷 044",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "DUMMY STANDARD 네이비 스타디움 재킷 044",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "stadium_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "wool",
+              "ratio": 70,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            },
+            {
+              "part": "shell",
+              "name": "cashmere",
+              "ratio": 30,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            }
+          ],
+          "fit": [
+            "longline"
+          ],
+          "colors": [
+            "navy"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "care": [
+            "low_temp_iron"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "네이비 롱라인 스타디움 재킷",
+          "query_tags": [
+            "네이비",
+            "스타디움 재킷",
+            "롱라인",
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/stadium_jacket로 정규화했습니다.",
+            "색상 단서는 네이비로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_045",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_045",
+          "source_title": "DUMMY STANDARD 네이비 스타디움 재킷 044 리오더",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "DUMMY STANDARD 네이비 스타디움 재킷 044 리오더",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "stadium_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "wool",
+              "ratio": 70,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            },
+            {
+              "part": "shell",
+              "name": "cashmere",
+              "ratio": 30,
+              "ratio_status": "explicit",
+              "evidence": "겉감 울 70%, 캐시미어 30%"
+            }
+          ],
+          "fit": [
+            "longline"
+          ],
+          "colors": [
+            "navy"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "care": [
+            "low_temp_iron"
+          ],
+          "size_info": [
+            "M, L, XL"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "네이비 롱라인 스타디움 재킷",
+          "query_tags": [
+            "네이비",
+            "스타디움 재킷",
+            "롱라인",
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/stadium_jacket로 정규화했습니다.",
+            "색상 단서는 네이비로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_046",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_046",
+          "source_title": "SYNTHETIC WORKS 핑크 플리스/뽀글이 046",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "SYNTHETIC WORKS 핑크 플리스/뽀글이 046",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "fleece_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 나일론 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "boxy"
+          ],
+          "colors": [
+            "pink",
+            "denim_blue"
+          ],
+          "seasons": [
+            "fall",
+            "winter"
+          ],
+          "tpo_tags": [
+            "layering",
+            "travel",
+            "commute"
+          ],
+          "care": [
+            "hand_wash",
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M 총장 70cm 어깨 52cm 가슴 60cm",
+            "L 총장 72cm 어깨 54cm 가슴 62cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "핑크, 데님 블루 박시핏 플리스/뽀글이",
+          "query_tags": [
+            "핑크, 데님 블루",
+            "플리스/뽀글이",
+            "박시핏",
+            "layering",
+            "travel",
+            "commute"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/fleece_jacket로 정규화했습니다.",
+            "색상 단서는 핑크, 데님 블루로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_047",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_047",
+          "source_title": "REPRO SAMPLE 화이트 아노락 재킷 047",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "REPRO SAMPLE 화이트 아노락 재킷 047",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "anorak_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 나일론 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "cropped"
+          ],
+          "colors": [
+            "white",
+            "yellow"
+          ],
+          "seasons": [
+            "spring",
+            "fall"
+          ],
+          "tpo_tags": [
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "care": [
+            "do_not_bleach",
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M 총장 71cm 어깨 53cm 가슴 61cm",
+            "L 총장 73cm 어깨 55cm 가슴 63cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "화이트, 옐로우 크롭 핏 아노락 재킷",
+          "query_tags": [
+            "화이트, 옐로우",
+            "아노락 재킷",
+            "크롭 핏",
+            "commute",
+            "formal",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/anorak_jacket로 정규화했습니다.",
+            "색상 단서는 화이트, 옐로우로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_048",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_048",
+          "source_title": "DUMMY STANDARD 베이지 슈트/블레이저 재킷 048",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "DUMMY STANDARD 베이지 슈트/블레이저 재킷 048",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "suit_blazer_jacket",
+          "materials": [
+            {
+              "part": "shell",
+              "name": "nylon",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "겉감 나일론 100%"
+            },
+            {
+              "part": "lining",
+              "name": "polyester",
+              "ratio": 100,
+              "ratio_status": "explicit",
+              "evidence": "안감 폴리에스터 100%"
+            }
+          ],
+          "fit": [
+            "slim"
+          ],
+          "colors": [
+            "beige"
+          ],
+          "seasons": [
+            "summer"
+          ],
+          "tpo_tags": [
+            "daily",
+            "street",
+            "layering",
+            "commute"
+          ],
+          "care": [
+            "shade_dry",
+            "no_tumble_dry"
+          ],
+          "size_info": [
+            "M 총장 72cm 어깨 46cm 가슴 54cm",
+            "L 총장 74cm 어깨 48cm 가슴 56cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "베이지 슬림핏 슈트/블레이저 재킷",
+          "query_tags": [
+            "베이지",
+            "슈트/블레이저 재킷",
+            "슬림핏",
+            "daily",
+            "street",
+            "layering",
+            "commute"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/suit_blazer_jacket로 정규화했습니다.",
+            "색상 단서는 베이지로 정규화했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [],
+          "out_of_scope": false,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "product_id": "full_outer_049",
+      "structured_product": {
+        "schema_version": "0.2.0",
+        "source": {
+          "source_url": "https://example.com/musinsa-full-page-dummy/full_outer_049",
+          "source_title": "AX TEST LABEL 블루 사파리/헌팅 재킷 049",
+          "input_mode": "pasted_text"
+        },
+        "product": {
+          "title": "AX TEST LABEL 블루 사파리/헌팅 재킷 049",
+          "category": "outer",
+          "subcategory": "jacket",
+          "detail_type": "safari_hunting_jacket",
+          "materials": [
+            {
+              "part": "unknown",
+              "name": "cashmere",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "캐시미어를 블렌드한 듯한 부드러운 터치감"
+            },
+            {
+              "part": "unknown",
+              "name": "wool",
+              "ratio": null,
+              "ratio_status": "ambiguous",
+              "evidence": "고급 울 터치 원단"
+            }
+          ],
+          "fit": [
+            "straight"
+          ],
+          "colors": [
+            "blue",
+            "green"
+          ],
+          "seasons": [
+            "winter"
+          ],
+          "tpo_tags": [
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "care": [
+            "machine_wash"
+          ],
+          "size_info": [
+            "M 총장 73cm 어깨 47cm 가슴 55cm",
+            "L 총장 75cm 어깨 49cm 가슴 57cm"
+          ]
+        },
+        "agent_descriptor": {
+          "search_summary": "블루, 그린 스트레이트 핏 사파리/헌팅 재킷",
+          "query_tags": [
+            "블루, 그린",
+            "사파리/헌팅 재킷",
+            "스트레이트 핏",
+            "outdoor",
+            "travel",
+            "layering"
+          ],
+          "explainable_reasons": [
+            "입력 텍스트의 카테고리 단서를 outer/jacket/safari_hunting_jacket로 정규화했습니다.",
+            "색상 단서는 블루, 그린로 정규화했습니다.",
+            "입력에서 material_ratio 정보가 모호해 ambiguous로 기록했습니다."
+          ]
+        },
+        "quality": {
+          "missing_fields": [],
+          "ambiguous_fields": [
+            "material_ratio"
+          ],
+          "out_of_scope": false,
+          "confidence": "medium"
+        }
+      }
+    }
+  ]
+}

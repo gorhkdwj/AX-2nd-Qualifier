@@ -1,0 +1,4767 @@
+{
+  "generated_at_utc": "2026-07-05T20:15:56.641034+00:00",
+  "generated_for_kst_date": "2026-07-06",
+  "environment": {
+    "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "codex_version": "codex-cli 0.142.5"
+  },
+  "commands": [
+    {
+      "id": "full_page_expected_schema",
+      "argv": [
+        "C:\\Users\\gorhk\\MiniConda3\\python.exe",
+        "src/skills/product-agentizer/scripts/validate.py",
+        "tests/fixtures/full_page_dummy/expected_products.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "passed": true,
+      "stdout_json": {
+        "valid": true,
+        "checked": 300,
+        "errors": []
+      },
+      "stdout_len": 46,
+      "stderr": ""
+    },
+    {
+      "id": "full_page_reference_actual_schema",
+      "argv": [
+        "C:\\Users\\gorhk\\MiniConda3\\python.exe",
+        "src/skills/product-agentizer/scripts/validate.py",
+        "tests/fixtures/full_page_dummy/reference_actual_products.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "passed": true,
+      "stdout_json": {
+        "valid": true,
+        "checked": 300,
+        "errors": []
+      },
+      "stdout_len": 46,
+      "stderr": ""
+    },
+    {
+      "id": "full_page_selfcheck_eval",
+      "argv": [
+        "C:\\Users\\gorhk\\MiniConda3\\python.exe",
+        "tests/evaluate_product_agentizer.py",
+        "--inputs",
+        "tests/fixtures/full_page_dummy/source_inputs.json",
+        "--expected",
+        "tests/fixtures/full_page_dummy/expected_products.json",
+        "--actual",
+        "tests/fixtures/full_page_dummy/reference_actual_products.json",
+        "--dedup-labels",
+        "tests/fixtures/full_page_dummy/duplicate_labels.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "passed": true,
+      "stdout_json": {
+        "summary": {
+          "input_cases": 300,
+          "expected_products": 300,
+          "actual_products": 300,
+          "evaluated_fields": [
+            "title",
+            "category",
+            "subcategory",
+            "detail_type",
+            "materials",
+            "fit",
+            "colors",
+            "seasons",
+            "tpo_tags",
+            "care",
+            "size_info",
+            "quality.missing_fields",
+            "quality.ambiguous_fields"
+          ]
+        },
+        "validations": [
+          {
+            "path": "tests\\fixtures\\full_page_dummy\\expected_products.json",
+            "exit_code": 0,
+            "valid": true,
+            "checked": 300,
+            "errors": [],
+            "stderr": ""
+          },
+          {
+            "path": "tests\\fixtures\\full_page_dummy\\reference_actual_products.json",
+            "exit_code": 0,
+            "valid": true,
+            "checked": 300,
+            "errors": [],
+            "stderr": ""
+          }
+        ],
+        "attribute_metrics": {
+          "micro": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "true_positive": 4489,
+            "false_positive": 0,
+            "false_negative": 0
+          },
+          "by_field": {
+            "title": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 300,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "category": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 300,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "subcategory": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 300,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "detail_type": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 300,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "materials": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 453,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "fit": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 240,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "colors": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 411,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "seasons": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 350,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "tpo_tags": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 690,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "care": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 330,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "size_info": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 360,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "quality.missing_fields": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 390,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "quality.ambiguous_fields": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 65,
+              "false_positive": 0,
+              "false_negative": 0
+            }
+          },
+          "cases": [
+            {
+              "product_id": "full_outer_000",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_001",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_002",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_003",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_004",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_005",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_006",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_007",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_008",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_009",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_010",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_011",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_012",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_013",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_014",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_015",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_016",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_017",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_018",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_019",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_020",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_021",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_022",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_023",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_024",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_025",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_026",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_027",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_028",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_029",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_030",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_031",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_032",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_033",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_034",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_035",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_036",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_037",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_038",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_039",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_040",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_041",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_042",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_043",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_044",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_045",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_046",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_047",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_048",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_049",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_050",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_051",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_052",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_053",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_054",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_055",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_056",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 20,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_057",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_058",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_059",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_060",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_061",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_062",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_063",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_064",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_065",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_066",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_067",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_068",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_069",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_070",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_071",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_072",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_073",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_074",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_075",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_076",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_077",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 20,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_078",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 20,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_079",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_080",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_081",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_082",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_083",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_084",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_085",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_086",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_087",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_088",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_089",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_090",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_091",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_092",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_093",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_094",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_095",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_096",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_097",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_098",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_099",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_100",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_101",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_102",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_103",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_104",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_105",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_106",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_107",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 20,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_108",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_109",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_110",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_111",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_112",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_113",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_114",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_115",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_116",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_117",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_118",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_119",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_120",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_121",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_122",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_123",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_124",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_125",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_126",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_127",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_128",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_129",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_130",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_131",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_132",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_133",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_134",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_135",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_136",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_137",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_138",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_139",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_140",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_141",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_142",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_143",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_144",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_145",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_146",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_147",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_148",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_149",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_150",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_151",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_152",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_153",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_154",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_155",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_156",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_157",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_158",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_159",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_160",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_161",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_162",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_163",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_164",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_165",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_166",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_167",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_168",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_169",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_170",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_171",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_172",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_173",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_174",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_175",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_176",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_177",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_178",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_179",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_180",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_181",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_182",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_183",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_184",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_185",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_186",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_187",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_188",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_189",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_190",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_191",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_192",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_193",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_194",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_195",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_196",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_197",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_198",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_199",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_200",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_201",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_202",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_203",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_204",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_205",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_206",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_207",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_208",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_209",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_210",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_211",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_212",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_213",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_214",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_215",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_216",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_217",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_218",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_219",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_220",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_221",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_222",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_223",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_224",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_225",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_226",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_227",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_228",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_229",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_230",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_231",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_232",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_233",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_234",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_235",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_236",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_237",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_238",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_239",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_240",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_241",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_242",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_243",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_244",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_245",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_246",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_247",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_248",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_249",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_250",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_251",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_252",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_253",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_254",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_255",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_256",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_257",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_258",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_259",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_260",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_261",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_262",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_263",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_264",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_265",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_266",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_267",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_268",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_269",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_270",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_271",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_272",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_273",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_274",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_275",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_276",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_277",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_278",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_279",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_280",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_281",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_282",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_283",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_284",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_285",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_286",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_287",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_288",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_289",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_290",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_291",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_292",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_293",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_294",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 13,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_295",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_296",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_297",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 19,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_298",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_top_299",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 16,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            }
+          ],
+          "missing_actual_product_ids": [],
+          "extra_actual_product_ids": []
+        },
+        "dedup_metrics": {
+          "accuracy": 1.0,
+          "correct": 20,
+          "total": 20,
+          "min_score": 0.45,
+          "candidate_count": 2739,
+          "pairs": [
+            {
+              "left_id": "full_outer_014",
+              "right_id": "full_outer_015",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 0.9925,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "detail_type",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "full_outer_044",
+              "right_id": "full_outer_045",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 0.9914,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "detail_type",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "full_outer_074",
+              "right_id": "full_outer_075",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 0.9925,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "detail_type",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "full_outer_104",
+              "right_id": "full_outer_105",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 0.9914,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "detail_type",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "full_outer_134",
+              "right_id": "full_outer_135",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 0.9914,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "detail_type",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "full_top_164",
+              "right_id": "full_top_165",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 0.9914,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "detail_type",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "full_top_194",
+              "right_id": "full_top_195",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 0.9914,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "detail_type",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "full_top_224",
+              "right_id": "full_top_225",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 0.9914,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "detail_type",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "full_top_254",
+              "right_id": "full_top_255",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 0.9914,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "detail_type",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "full_top_284",
+              "right_id": "full_top_285",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 0.9914,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "detail_type",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "full_outer_000",
+              "right_id": "full_top_150",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "full_outer_006",
+              "right_id": "full_top_159",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "full_outer_026",
+              "right_id": "full_top_177",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "full_outer_056",
+              "right_id": "full_top_204",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "full_outer_086",
+              "right_id": "full_top_231",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "full_outer_116",
+              "right_id": "full_top_258",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "full_outer_146",
+              "right_id": "full_top_285",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.0,
+              "matched_fields": [],
+              "correct": true
+            },
+            {
+              "left_id": "full_outer_004",
+              "right_id": "full_outer_034",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.48,
+              "matched_fields": [
+                "category",
+                "materials",
+                "seasons",
+                "tpo_tags"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "full_top_154",
+              "right_id": "full_top_184",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.48,
+              "matched_fields": [
+                "category",
+                "materials",
+                "seasons",
+                "tpo_tags"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "full_top_224",
+              "right_id": "full_top_274",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.48,
+              "matched_fields": [
+                "category",
+                "materials",
+                "seasons",
+                "tpo_tags"
+              ],
+              "correct": true
+            }
+          ]
+        }
+      },
+      "stdout_len": 55516,
+      "stderr": ""
+    },
+    {
+      "id": "full_page_codex_subset_actual_schema",
+      "argv": [
+        "C:\\Users\\gorhk\\MiniConda3\\python.exe",
+        "src/skills/product-agentizer/scripts/validate.py",
+        "tests/fixtures/full_page_codex_subset/actual_products.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "passed": true,
+      "stdout_json": {
+        "valid": true,
+        "checked": 50,
+        "errors": []
+      },
+      "stdout_len": 45,
+      "stderr": ""
+    },
+    {
+      "id": "full_page_codex_subset_eval",
+      "argv": [
+        "C:\\Users\\gorhk\\MiniConda3\\python.exe",
+        "tests/evaluate_product_agentizer.py",
+        "--inputs",
+        "tests/fixtures/full_page_codex_subset/source_inputs.json",
+        "--expected",
+        "tests/fixtures/full_page_codex_subset/expected_products.json",
+        "--actual",
+        "tests/fixtures/full_page_codex_subset/actual_products.json",
+        "--dedup-labels",
+        "tests/fixtures/full_page_codex_subset/duplicate_labels.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_codes": [
+        0
+      ],
+      "passed": true,
+      "stdout_json": {
+        "summary": {
+          "input_cases": 50,
+          "expected_products": 50,
+          "actual_products": 50,
+          "evaluated_fields": [
+            "title",
+            "category",
+            "subcategory",
+            "detail_type",
+            "materials",
+            "fit",
+            "colors",
+            "seasons",
+            "tpo_tags",
+            "care",
+            "size_info",
+            "quality.missing_fields",
+            "quality.ambiguous_fields"
+          ]
+        },
+        "validations": [
+          {
+            "path": "tests\\fixtures\\full_page_codex_subset\\expected_products.json",
+            "exit_code": 0,
+            "valid": true,
+            "checked": 50,
+            "errors": [],
+            "stderr": ""
+          },
+          {
+            "path": "tests\\fixtures\\full_page_codex_subset\\actual_products.json",
+            "exit_code": 0,
+            "valid": true,
+            "checked": 50,
+            "errors": [],
+            "stderr": ""
+          }
+        ],
+        "attribute_metrics": {
+          "micro": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "true_positive": 755,
+            "false_positive": 0,
+            "false_negative": 0
+          },
+          "by_field": {
+            "title": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 50,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "category": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 50,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "subcategory": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 50,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "detail_type": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 50,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "materials": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 75,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "fit": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 40,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "colors": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 67,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "seasons": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 58,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "tpo_tags": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 125,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "care": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 55,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "size_info": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 60,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "quality.missing_fields": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 65,
+              "false_positive": 0,
+              "false_negative": 0
+            },
+            "quality.ambiguous_fields": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 10,
+              "false_positive": 0,
+              "false_negative": 0
+            }
+          },
+          "cases": [
+            {
+              "product_id": "full_outer_000",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_001",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_002",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_003",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_004",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_005",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_006",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_007",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_008",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_009",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_010",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_011",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_012",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_013",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_014",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_015",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_016",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_017",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_018",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_019",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_020",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_021",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_022",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_023",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_024",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_025",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_026",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_027",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_028",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_029",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_030",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_031",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_032",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_033",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_034",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_035",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_036",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_037",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_038",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_039",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_040",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_041",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 11,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_042",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_043",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 15,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_044",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_045",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 14,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_046",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_047",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 18,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_048",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            },
+            {
+              "product_id": "full_outer_049",
+              "metrics": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
+              },
+              "differences": []
+            }
+          ],
+          "missing_actual_product_ids": [],
+          "extra_actual_product_ids": []
+        },
+        "dedup_metrics": {
+          "accuracy": 1.0,
+          "correct": 3,
+          "total": 3,
+          "min_score": 0.45,
+          "candidate_count": 139,
+          "pairs": [
+            {
+              "left_id": "full_outer_014",
+              "right_id": "full_outer_015",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 0.9925,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "detail_type",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "full_outer_044",
+              "right_id": "full_outer_045",
+              "expected_decision": "duplicate",
+              "actual_decision": "duplicate",
+              "score": 0.9914,
+              "matched_fields": [
+                "category",
+                "subcategory",
+                "detail_type",
+                "materials",
+                "colors",
+                "fit",
+                "seasons",
+                "tpo_tags",
+                "care",
+                "title"
+              ],
+              "correct": true
+            },
+            {
+              "left_id": "full_outer_004",
+              "right_id": "full_outer_034",
+              "expected_decision": "distinct",
+              "actual_decision": "distinct",
+              "score": 0.48,
+              "matched_fields": [
+                "category",
+                "materials",
+                "seasons",
+                "tpo_tags"
+              ],
+              "correct": true
+            }
+          ]
+        }
+      },
+      "stdout_len": 11302,
+      "stderr": ""
+    }
+  ],
+  "density_summary": {
+    "total_cases": 300,
+    "density_counts": {
+      "sparse": 60,
+      "medium": 120,
+      "full": 90,
+      "noisy_ambiguous": 30
+    },
+    "category_counts": {
+      "outer": 150,
+      "top": 150
+    },
+    "detail_type_counts": {
+      "outer": {
+        "stadium_jacket": 8,
+        "trucker_jacket": 6,
+        "fleece_jacket": 8,
+        "anorak_jacket": 6,
+        "suit_blazer_jacket": 7,
+        "safari_hunting_jacket": 7,
+        "leather_rider_jacket": 7,
+        "training_jacket": 7,
+        "nylon_coach_jacket": 8,
+        "blouson_ma1": 6,
+        "mustang_fur": 7,
+        "short_padding_heavy_outer": 7,
+        "long_padding_heavy_outer": 7,
+        "winter_other_coat": 7,
+        "winter_double_coat": 8,
+        "transitional_coat": 8,
+        "cardigan": 6,
+        "vest": 6,
+        "lightweight_padding_vest": 6,
+        "hoodie_zipup": 6,
+        "other_outer": 6,
+        "winter_single_coat": 6
+      },
+      "top": {
+        "short_sleeve_tshirt": 15,
+        "long_sleeve_tshirt": 17,
+        "shirt_blouse": 18,
+        "knit_sweater": 16,
+        "sweatshirt": 17,
+        "sleeveless_tshirt": 19,
+        "polo_collar_tshirt": 14,
+        "hoodie_tshirt": 16,
+        "other_top": 18
+      }
+    },
+    "min_detail_type_coverage": {
+      "outer": 6,
+      "top": 14
+    },
+    "missing_by_density": {
+      "sparse": {
+        "care": 60,
+        "fit": 60,
+        "materials": 60,
+        "seasons": 60,
+        "size_info": 60,
+        "tpo_tags": 60
+      },
+      "medium": {
+        "material_ratio": 30
+      }
+    },
+    "ambiguous_by_density": {
+      "medium": {
+        "material_ratio": 35
+      },
+      "noisy_ambiguous": {
+        "material_ratio": 30
+      }
+    }
+  },
+  "synthetic_source_check": {
+    "source_count": 350,
+    "auto_fetch_count": 0,
+    "real_page_copy_count": 0,
+    "legal_compliance_judgment_count": 0,
+    "non_synthetic_url_count": 0,
+    "non_synthetic_method_count": 0,
+    "non_synthetic_url_examples": [],
+    "non_synthetic_method_examples": []
+  },
+  "dedup_cross_category_check": {
+    "candidate_count": 2739,
+    "high_confidence_cross_category_count": 0,
+    "examples": []
+  },
+  "hashes_sha256": {
+    "src/skills/product-agentizer/SKILL.md": "d93359cc7e72c98a62fb7c02e208ee54e2925070089b5e1dedeaa452ed214776",
+    "src/skills/product-agentizer/references/schema.json": "685ee3307d64603079d8adce707768e17e96a1aeb48010da2d5bd26f254f4a0a",
+    "src/skills/product-agentizer/references/taxonomy.json": "5d60707c2c79b66ce19c71c3179d18b296e11d6fcaab34d612b25dbc0367e91b",
+    "src/skills/product-agentizer/scripts/validate.py": "ceef43b48102906b849ee271232f86f68f821dde70277299e60e8095b64b4318",
+    "src/skills/product-agentizer/scripts/dedup.py": "dd69c8ea40bd081b7fd53ec514415d147457c940321b929c3f4fdd748ab937c4",
+    "tests/evaluate_product_agentizer.py": "a86cb4941be692c0f0914dcfc7939af35fe377b06e9722582982c8471d658dd7",
+    "tools/generate_full_page_dummy_fixtures.py": "f915cf9551ea906e52de0174e244db42bfabe3c54653f9c6b007b884f2258439",
+    "tools/run_full_page_dummy_validation.py": "5ba932ab177f133d620f2527eec033851cb9d3f74987e92b125fca9c48d681eb",
+    "tests/fixtures/full_page_dummy/source_inputs.json": "cc0db74f8cc67da644e867d4a135670f3ae117b64cd3b48bcd7ec978cd44fc6c",
+    "tests/fixtures/full_page_dummy/expected_products.json": "85bc7314b3bdd53a173186c79692e69c7fdaddd4b7eedc0c1fe19a5a731a4041",
+    "tests/fixtures/full_page_dummy/reference_actual_products.json": "85bc7314b3bdd53a173186c79692e69c7fdaddd4b7eedc0c1fe19a5a731a4041",
+    "tests/fixtures/full_page_dummy/duplicate_labels.json": "8f03ff589477abc190f6792749e4f2a9ee93066162a0d54ac7890a3adb0e8676",
+    "tests/fixtures/full_page_dummy/case_metadata.json": "c0230c631631f763cd8d19b340bd5fe2c45d964bce8273e694a263318f4eb003",
+    "tests/fixtures/full_page_codex_subset/source_inputs.json": "4f641bbd477bc63552277927dea5288872afdc961544246e34dcdad3c90590a4",
+    "tests/fixtures/full_page_codex_subset/expected_products.json": "318dfa237426382880e28de231ba3a7154629b5a98ff817119737052cad5a112",
+    "tests/fixtures/full_page_codex_subset/actual_products.json": "318dfa237426382880e28de231ba3a7154629b5a98ff817119737052cad5a112",
+    "tests/fixtures/full_page_codex_subset/duplicate_labels.json": "58e373ad19e01342fd8946702647662c4d6e3d885eead2386cb71b003aa14281",
+    "tests/fixtures/full_page_codex_subset/prompt.md": "0fe72017ba1e5a4e0c3f89c415211b8dfa4557f0eca9570d90200c4c60db967a",
+    "tests/fixtures/full_page_codex_subset/prompt_template.md": "d1743f79e231db8f1d61afa030e0022c5b5c7f708e0bbf344096703dc15349c4"
+  },
+  "acceptance_summary": {
+    "full_page_expected_schema_valid": true,
+    "full_page_reference_actual_schema_valid": true,
+    "full_page_selfcheck_micro_precision": 1.0,
+    "full_page_selfcheck_micro_recall": 1.0,
+    "full_page_selfcheck_detail_type_precision": 1.0,
+    "full_page_selfcheck_detail_type_recall": 1.0,
+    "full_page_selfcheck_dedup_accuracy": 1.0,
+    "full_page_codex_subset_actual_schema_valid": true,
+    "full_page_codex_subset_micro_precision": 1.0,
+    "full_page_codex_subset_micro_recall": 1.0,
+    "full_page_codex_subset_actual_mode": "deterministic_reference_actual_pending_cli_run",
+    "min_detail_type_coverage": {
+      "outer": 6,
+      "top": 14
+    },
+    "auto_fetch_count": 0,
+    "real_page_copy_count": 0,
+    "legal_compliance_judgment_count": 0,
+    "high_confidence_cross_category_false_duplicate_count": 0,
+    "all_commands_passed": true
+  }
+}

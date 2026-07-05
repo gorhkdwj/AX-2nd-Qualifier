@@ -10,6 +10,36 @@
 
 ---
 
+### D-020 · S7.7 Codex subset actual 실행 분리
+**상황**
+- S7.7 실제 페이지형 합성 더미 검증을 구현하면서 `full_page_dummy` 300건과 `full_page_codex_subset` 50건을 생성할 수 있게 됐다.
+- 다만 50건의 상세페이지형 입력을 실제 Codex CLI로 변환하는 작업은 토큰·시간 소모가 크고, 모델 출력 변동에 따라 반복 실행 결과가 달라질 수 있다.
+- 먼저 생성기, schema, evaluator, dedup label, 정보 밀도 coverage가 재현 가능한지 확인해야 했다.
+
+**검토한 선택지**
+- 생성과 동시에 Codex CLI 50건 actual을 즉시 실행한다.
+- S7.7 구현을 생성기·기준 actual self-check와 실제 Codex CLI actual 실행으로 나눈다.
+- Codex subset actual 파일을 만들지 않고 full_page_dummy self-check만 수행한다.
+
+**결정**
+- 이번 단계에서는 `full_page_codex_subset/actual_products.json`을 deterministic reference actual로 저장한다.
+- 실제 Codex CLI로 `prompt.md`를 실행해 actual을 덮어쓰는 작업은 후속 단계로 분리한다.
+- 보고서와 검증 계획에 이 actual이 실제 Codex CLI 출력이 아니라는 점을 명시한다.
+
+**근거**
+- 생성기와 평가 절차가 먼저 안정되어야 실제 Codex 실행 결과의 실패 원인을 올바르게 해석할 수 있다.
+- 기준 actual self-check는 blind extraction 성능이 아니라 fixture·schema·evaluator·dedup label의 재현성 검증이다.
+- 실제 Codex 실행은 비용과 시간이 큰 작업이므로, 사용자가 규모(최소 20건, 축소 30건, 기본 50건)를 선택할 여지를 남기는 것이 안전하다.
+
+**영향**
+- S7.7의 현재 통과 수치는 기준 actual 기준이며, 운영 extraction 성능으로 과대 해석하면 안 된다.
+- 다음 단계에서 실제 Codex CLI actual을 생성하면 `tests/fixtures/full_page_codex_subset/actual_products.json`, `docs/reports/s7-7-full-page-dummy-validation-report.md`, 결과 JSON을 갱신해야 한다.
+
+**재검토 조건**
+- 사용자가 실제 Codex CLI subset 실행 규모를 확정하거나, 마감 전 시간상 reference baseline만으로 패키징하기로 결정하는 경우.
+
+---
+
 ### D-019 · 실제 페이지형 합성 더미 검증 채택
 **상황**
 - S7.5 실제 공개 snippet 10건의 탐색적 비교에서 micro precision/recall이 낮게 나왔고, 원인이 실제 공개 입력의 정보 부족인지 플러그인 고도화 과제인지 구분할 필요가 생겼다.
