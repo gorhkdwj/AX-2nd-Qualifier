@@ -15,8 +15,38 @@ CODEX_DIR = FIXTURE_ROOT / "codex_subset"
 REAL_DIR = FIXTURE_ROOT / "real_sanity"
 
 
-OUTER_SUBCATEGORIES = ["jacket", "jumper", "coat", "cardigan", "vest", "hoodie_zipup"]
-TOP_SUBCATEGORIES = ["tshirt", "shirt_blouse", "knit", "sweatshirt", "sleeveless", "polo"]
+OUTER_SUBCATEGORIES = ["jacket", "jumper", "coat", "cardigan", "vest", "hoodie_zipup", "other_outer"]
+TOP_SUBCATEGORIES = ["tshirt", "shirt_blouse", "knit", "sweatshirt", "sleeveless", "polo", "hoodie", "other_top"]
+OUTER_DETAIL_TYPES = {
+    "jacket": ["stadium_jacket", "trucker_jacket", "fleece_jacket", "anorak_jacket", "suit_blazer_jacket", "safari_hunting_jacket", "leather_rider_jacket", "training_jacket", "nylon_coach_jacket", "blouson_ma1"],
+    "jumper": ["mustang_fur", "short_padding_heavy_outer", "long_padding_heavy_outer"],
+    "coat": ["winter_other_coat", "winter_double_coat", "winter_single_coat", "transitional_coat"],
+    "cardigan": ["cardigan"],
+    "vest": ["vest", "lightweight_padding_vest"],
+    "hoodie_zipup": ["hoodie_zipup"],
+    "other_outer": ["other_outer"],
+}
+
+TOP_DETAIL_TYPES = {
+    "tshirt": ["short_sleeve_tshirt", "long_sleeve_tshirt"],
+    "shirt_blouse": ["shirt_blouse"],
+    "knit": ["knit_sweater"],
+    "sweatshirt": ["sweatshirt"],
+    "sleeveless": ["sleeveless_tshirt"],
+    "polo": ["polo_collar_tshirt"],
+    "hoodie": ["hoodie_tshirt"],
+    "other_top": ["other_top"],
+}
+OUTER_DETAIL_TYPE_SEQUENCE = [
+    (subcategory, detail_type)
+    for subcategory in OUTER_SUBCATEGORIES
+    for detail_type in OUTER_DETAIL_TYPES[subcategory]
+]
+TOP_DETAIL_TYPE_SEQUENCE = [
+    (subcategory, detail_type)
+    for subcategory in TOP_SUBCATEGORIES
+    for detail_type in TOP_DETAIL_TYPES[subcategory]
+]
 COLORS = ["black", "white", "ivory", "gray", "beige", "brown", "navy", "blue", "denim_blue", "green", "khaki", "red", "pink", "yellow"]
 FITS = ["regular", "slim", "relaxed", "oversized", "cropped", "longline", "straight", "boxy"]
 CARE = ["machine_wash", "hand_wash", "dry_clean", "do_not_bleach", "low_temp_iron", "shade_dry", "no_tumble_dry"]
@@ -57,12 +87,49 @@ KO_SUBCATEGORY = {
     "cardigan": "가디건",
     "vest": "베스트",
     "hoodie_zipup": "후드 집업",
+    "other_outer": "기타 아우터",
     "tshirt": "티셔츠",
     "shirt_blouse": "셔츠",
     "knit": "니트",
     "sweatshirt": "스웨트셔츠",
     "sleeveless": "슬리브리스",
     "polo": "폴로",
+    "hoodie": "후드 티셔츠",
+    "other_top": "기타 상의",
+}
+
+KO_DETAIL_TYPE = {
+    "short_sleeve_tshirt": "반소매 티셔츠",
+    "shirt_blouse": "셔츠/블라우스",
+    "sleeveless_tshirt": "민소매 티셔츠",
+    "polo_collar_tshirt": "피케/카라 티셔츠",
+    "long_sleeve_tshirt": "긴소매 티셔츠",
+    "knit_sweater": "니트/스웨터",
+    "other_top": "기타 상의",
+    "sweatshirt": "맨투맨/스웨트",
+    "hoodie_tshirt": "후드 티셔츠",
+    "stadium_jacket": "스타디움 재킷",
+    "trucker_jacket": "트러커 재킷",
+    "mustang_fur": "무스탕/퍼",
+    "other_outer": "기타 아우터",
+    "fleece_jacket": "플리스/뽀글이",
+    "vest": "베스트",
+    "anorak_jacket": "아노락 재킷",
+    "winter_other_coat": "겨울 기타 코트",
+    "suit_blazer_jacket": "슈트/블레이저 재킷",
+    "safari_hunting_jacket": "사파리/헌팅 재킷",
+    "leather_rider_jacket": "레더/라이더스 재킷",
+    "training_jacket": "트레이닝 재킷",
+    "short_padding_heavy_outer": "숏패딩/헤비 아우터",
+    "lightweight_padding_vest": "경량 패딩/패딩 베스트",
+    "nylon_coach_jacket": "나일론/코치 재킷",
+    "winter_double_coat": "겨울 더블 코트",
+    "winter_single_coat": "겨울 싱글 코트",
+    "long_padding_heavy_outer": "롱패딩/헤비 아우터",
+    "cardigan": "카디건",
+    "hoodie_zipup": "후드 집업",
+    "transitional_coat": "환절기 코트",
+    "blouson_ma1": "블루종/MA-1",
 }
 
 CARE_TEXT = {
@@ -196,6 +263,7 @@ def structured_product(
     title: str,
     category: str,
     subcategory: str,
+    detail_type: str | None,
     materials: list[dict[str, Any]],
     fit: str,
     color: str,
@@ -211,7 +279,7 @@ def structured_product(
     return {
         "product_id": product_id,
         "structured_product": {
-            "schema_version": "0.1.0",
+            "schema_version": "0.2.0",
             "source": {
                 "source_url": source_url,
                 "source_title": title,
@@ -221,6 +289,7 @@ def structured_product(
                 "title": title,
                 "category": category,
                 "subcategory": subcategory,
+                "detail_type": detail_type,
                 "materials": materials,
                 "fit": [fit],
                 "colors": [color],
@@ -230,8 +299,11 @@ def structured_product(
                 "size_info": size_info,
             },
             "agent_descriptor": {
-                "search_summary": f"{KO_COLOR[color]} {KO_FIT[fit]} {KO_SUBCATEGORY[subcategory]}",
-                "query_tags": [f"{KO_COLOR[color]} {KO_SUBCATEGORY[subcategory]}", f"{KO_FIT[fit]} 상품"],
+                "search_summary": f"{KO_COLOR[color]} {KO_FIT[fit]} {KO_DETAIL_TYPE[detail_type] if detail_type else KO_SUBCATEGORY[subcategory]}",
+                "query_tags": [
+                    f"{KO_COLOR[color]} {KO_DETAIL_TYPE[detail_type] if detail_type else KO_SUBCATEGORY[subcategory]}",
+                    f"{KO_FIT[fit]} 상품",
+                ],
                 "explainable_reasons": [
                     f"입력 텍스트의 색상, 핏, 카테고리 단서를 {color}, {fit}, {subcategory}로 정규화했습니다."
                 ],
@@ -282,19 +354,20 @@ def make_dummy_case(index: int, category: str, duplicate_of: dict[str, Any] | No
         )
         return src, product
 
-    subcategories = OUTER_SUBCATEGORIES if category == "outer" else TOP_SUBCATEGORIES
-    subcategory = subcategories[index % len(subcategories)]
+    detail_type_sequence = OUTER_DETAIL_TYPE_SEQUENCE if category == "outer" else TOP_DETAIL_TYPE_SEQUENCE
+    local_index = index if category == "outer" else index - 50
+    subcategory, detail_type = detail_type_sequence[local_index % len(detail_type_sequence)]
     color = COLORS[(index * 3 + (0 if category == "outer" else 1)) % len(COLORS)]
     fit = FITS[(index * 5 + (1 if category == "outer" else 2)) % len(FITS)]
     care = CARE[(index * 2 + (0 if category == "outer" else 1)) % len(CARE)]
     materials, material_text, missing, ambiguous = material_pattern(index + (0 if category == "outer" else 3))
     seasons, season_text, tpo_tags, tpo_text = season_tpo(index, category)
     product_id = f"{category}_dummy_{index:03d}"
-    title = f"{KO_COLOR[color]} {KO_FIT[fit]} {KO_SUBCATEGORY[subcategory]} {index:03d}"
+    title = f"{KO_COLOR[color]} {KO_FIT[fit]} {KO_DETAIL_TYPE[detail_type]} {index:03d}"
     source_url = f"https://example.com/musinsa-expanded/{product_id}"
     size_info = [f"{'L' if category == 'outer' else 'M'} 기준 총장 {62 + (index % 18)}cm", "어깨와 가슴둘레 여유"]
     text = (
-        f"상품명: {title}. 컬러: {KO_COLOR[color]}. {material_text}. "
+        f"상품명: {title}. 제품분류: {KO_SUBCATEGORY[subcategory]} > {KO_DETAIL_TYPE[detail_type]}. 컬러: {KO_COLOR[color]}. {material_text}. "
         f"{KO_FIT[fit]} 실루엣이며 {size_info[0]}, {size_info[1]}가 특징입니다. "
         f"{season_text} {tpo_text}에 활용하기 좋습니다. {CARE_TEXT[care]}."
     )
@@ -304,6 +377,7 @@ def make_dummy_case(index: int, category: str, duplicate_of: dict[str, Any] | No
         title,
         category,
         subcategory,
+        detail_type,
         materials,
         fit,
         color,
@@ -491,21 +565,21 @@ def real_sanity_payloads() -> tuple[dict[str, Any], dict[str, Any]]:
     ]
 
     specs = [
-        ("real_outer_beanpole_linen_jacket_4308999", "빈폴 레이디스 리넨 체크 더블 재킷", "outer", "jacket", "beige", "regular", [["shell", "cotton", 50, "explicit", "겉감 면 50%, 마 50%"], ["shell", "linen", 50, "explicit", "겉감 면 50%, 마 50%"], ["lining", "polyester", 100, "explicit", "안감 폴리에스터 100%"]], ["spring", "summer"], ["commute", "formal", "guest_look", "layering"], [], ["S, M, L"], [], []),
-        ("real_outer_limelike_cardigan_2101205", "라임라이크 브이넥 크로스 가디건_3color", "outer", "cardigan", "multi", "regular", [["shell", "wool", 50, "explicit", "울 50%, 폴리에스테르 10%, 나일론 30%"], ["shell", "polyester", 10, "explicit", "울 50%, 폴리에스테르 10%, 나일론 30%"], ["shell", "nylon", 30, "explicit", "울 50%, 폴리에스테르 10%, 나일론 30%"]], ["fall", "winter"], ["daily", "layering", "commute"], [], ["컬러 네이비, 그레이, 오트"], [], []),
-        ("real_outer_8seconds_jacket_4922894", "에잇세컨즈 쓰리버튼 세미 오버핏 자켓 블랙", "outer", "jacket", "black", "relaxed", [["shell", "polyester", 100, "explicit", "겉감 폴리에스터 100%"], ["lining", "polyester", 100, "explicit", "안감 폴리에스터 100%"]], ["spring", "fall"], ["commute", "formal", "layering"], ["dry_clean"], [], [], []),
-        ("real_outer_247_cashmere_blouson_3617977", "247시리즈 캐시미어 블렌디드 블루종 자켓 BLACK", "outer", "jacket", "black", "regular", [["unknown", "cashmere", None, "ambiguous", "캐시미어 블렌디드 소재"]], ["fall", "winter"], ["daily", "commute", "layering"], [], [], [], ["material_ratio"]),
-        ("real_outer_lenina_cardigan_4332165", "르니나 SALENA wool v neck cardigan_RED", "outer", "cardigan", "red", "regular", [["unknown", "wool", None, "missing", "wool v neck cardigan"]], ["fall", "winter"], ["daily", "layering", "commute"], [], [], ["material_ratio"], []),
-        ("real_top_armedes_tee_4783312", "아르메데스 면 20수 아트그래픽 티셔츠", "top", "tshirt", "multi", "regular", [["unknown", "cotton", 100, "explicit", "소재 면 100%"]], ["summer"], ["daily", "casual", "street"], [], ["S, M, L, XL, 2XL"], [], []),
-        ("real_top_ms_linen_like_shirt_black_3054408", "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 블랙", "top", "shirt_blouse", "black", "relaxed", [["unknown", "linen", None, "ambiguous", "린넨과 유사한 질감"]], ["summer"], ["daily", "casual"], [], [], [], ["material_ratio"]),
-        ("real_top_ms_basic_tee_3661999", "무신사 스탠다드 베이식 크루 넥 티셔츠", "top", "tshirt", "white", "regular", [["unknown", "cotton", 100, "explicit", "면 100% 코마사 20수 싱글 저지"]], ["summer"], ["daily", "casual"], [], [], [], []),
-        ("real_top_ms_linen_like_shirt_navy_3054409", "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 네이비", "top", "shirt_blouse", "navy", "relaxed", [["unknown", "linen", None, "ambiguous", "린넨과 유사한 질감"]], ["summer"], ["daily", "casual"], [], [], [], ["material_ratio"]),
-        ("real_top_ms_basic_short_tee_1196892", "무신사 스탠다드 베이식 크루 넥 반팔 티셔츠", "top", "tshirt", "white", "regular", [["unknown", "cotton", 100, "explicit", "면 100% 코마사 20수 싱글 저지"]], ["summer"], ["daily", "casual"], [], [], [], []),
+        ("real_outer_beanpole_linen_jacket_4308999", "빈폴 레이디스 리넨 체크 더블 재킷", "outer", "jacket", "suit_blazer_jacket", "beige", "regular", [["shell", "cotton", 50, "explicit", "겉감 면 50%, 마 50%"], ["shell", "linen", 50, "explicit", "겉감 면 50%, 마 50%"], ["lining", "polyester", 100, "explicit", "안감 폴리에스터 100%"]], ["spring", "summer"], ["commute", "formal", "guest_look", "layering"], [], ["S, M, L"], [], []),
+        ("real_outer_limelike_cardigan_2101205", "라임라이크 브이넥 크로스 가디건_3color", "outer", "cardigan", "cardigan", "multi", "regular", [["shell", "wool", 50, "explicit", "울 50%, 폴리에스테르 10%, 나일론 30%"], ["shell", "polyester", 10, "explicit", "울 50%, 폴리에스테르 10%, 나일론 30%"], ["shell", "nylon", 30, "explicit", "울 50%, 폴리에스테르 10%, 나일론 30%"]], ["fall", "winter"], ["daily", "layering", "commute"], [], ["컬러 네이비, 그레이, 오트"], [], []),
+        ("real_outer_8seconds_jacket_4922894", "에잇세컨즈 쓰리버튼 세미 오버핏 자켓 블랙", "outer", "jacket", "suit_blazer_jacket", "black", "relaxed", [["shell", "polyester", 100, "explicit", "겉감 폴리에스터 100%"], ["lining", "polyester", 100, "explicit", "안감 폴리에스터 100%"]], ["spring", "fall"], ["commute", "formal", "layering"], ["dry_clean"], [], [], []),
+        ("real_outer_247_cashmere_blouson_3617977", "247시리즈 캐시미어 블렌디드 블루종 자켓 BLACK", "outer", "jacket", "blouson_ma1", "black", "regular", [["unknown", "cashmere", None, "ambiguous", "캐시미어 블렌디드 소재"]], ["fall", "winter"], ["daily", "commute", "layering"], [], [], [], ["material_ratio"]),
+        ("real_outer_lenina_cardigan_4332165", "르니나 SALENA wool v neck cardigan_RED", "outer", "cardigan", "cardigan", "red", "regular", [["unknown", "wool", None, "missing", "wool v neck cardigan"]], ["fall", "winter"], ["daily", "layering", "commute"], [], [], ["material_ratio"], []),
+        ("real_top_armedes_tee_4783312", "아르메데스 면 20수 아트그래픽 티셔츠", "top", "tshirt", "short_sleeve_tshirt", "multi", "regular", [["unknown", "cotton", 100, "explicit", "소재 면 100%"]], ["summer"], ["daily", "casual", "street"], [], ["S, M, L, XL, 2XL"], [], []),
+        ("real_top_ms_linen_like_shirt_black_3054408", "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 블랙", "top", "shirt_blouse", "shirt_blouse", "black", "relaxed", [["unknown", "linen", None, "ambiguous", "린넨과 유사한 질감"]], ["summer"], ["daily", "casual"], [], [], [], ["material_ratio"]),
+        ("real_top_ms_basic_tee_3661999", "무신사 스탠다드 베이식 크루 넥 티셔츠", "top", "tshirt", "short_sleeve_tshirt", "white", "regular", [["unknown", "cotton", 100, "explicit", "면 100% 코마사 20수 싱글 저지"]], ["summer"], ["daily", "casual"], [], [], [], []),
+        ("real_top_ms_linen_like_shirt_navy_3054409", "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 네이비", "top", "shirt_blouse", "shirt_blouse", "navy", "relaxed", [["unknown", "linen", None, "ambiguous", "린넨과 유사한 질감"]], ["summer"], ["daily", "casual"], [], [], [], ["material_ratio"]),
+        ("real_top_ms_basic_short_tee_1196892", "무신사 스탠다드 베이식 크루 넥 반팔 티셔츠", "top", "tshirt", "short_sleeve_tshirt", "white", "regular", [["unknown", "cotton", 100, "explicit", "면 100% 코마사 20수 싱글 저지"]], ["summer"], ["daily", "casual"], [], [], [], []),
     ]
 
     source_by_id = {case["product_id"]: case for case in cases}
     products: list[dict[str, Any]] = []
-    for product_id, title, category, subcategory, color, fit, material_rows, seasons, tpo, care, size_info, missing, ambiguous in specs:
+    for product_id, title, category, subcategory, detail_type, color, fit, material_rows, seasons, tpo, care, size_info, missing, ambiguous in specs:
         materials = [
             {
                 "part": part,
@@ -522,6 +596,7 @@ def real_sanity_payloads() -> tuple[dict[str, Any], dict[str, Any]]:
                 title,
                 category,
                 subcategory,
+                detail_type,
                 materials,
                 fit,
                 color,
