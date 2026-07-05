@@ -8,7 +8,7 @@
   "required": ["schema_version", "source", "product", "agent_descriptor", "quality"],
   "properties": {
     "schema_version": {
-      "const": "0.1.0"
+      "const": "0.2.0"
     },
     "source": {
       "type": "object",
@@ -37,6 +37,7 @@
         "title",
         "category",
         "subcategory",
+        "detail_type",
         "materials",
         "fit",
         "colors",
@@ -64,12 +65,52 @@
             "cardigan",
             "vest",
             "hoodie_zipup",
+            "other_outer",
             "tshirt",
             "shirt_blouse",
             "knit",
             "sweatshirt",
             "sleeveless",
             "polo",
+            "hoodie",
+            "other_top",
+            null
+          ]
+        },
+        "detail_type": {
+          "type": ["string", "null"],
+          "enum": [
+            "short_sleeve_tshirt",
+            "shirt_blouse",
+            "sleeveless_tshirt",
+            "polo_collar_tshirt",
+            "long_sleeve_tshirt",
+            "knit_sweater",
+            "other_top",
+            "sweatshirt",
+            "hoodie_tshirt",
+            "stadium_jacket",
+            "trucker_jacket",
+            "mustang_fur",
+            "other_outer",
+            "fleece_jacket",
+            "vest",
+            "anorak_jacket",
+            "winter_other_coat",
+            "suit_blazer_jacket",
+            "safari_hunting_jacket",
+            "leather_rider_jacket",
+            "training_jacket",
+            "short_padding_heavy_outer",
+            "lightweight_padding_vest",
+            "nylon_coach_jacket",
+            "winter_double_coat",
+            "winter_single_coat",
+            "long_padding_heavy_outer",
+            "cardigan",
+            "hoodie_zipup",
+            "transitional_coat",
+            "blouson_ma1",
             null
           ]
         },
@@ -231,6 +272,7 @@
         "title",
         "category",
         "subcategory",
+        "detail_type",
         "materials",
         "material_ratio",
         "material_part",
