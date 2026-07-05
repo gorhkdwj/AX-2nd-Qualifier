@@ -1,6 +1,6 @@
 {
-  "taxonomy_version": "0.1.0",
-  "schema_version": "0.1.0",
+  "taxonomy_version": "0.2.0",
+  "schema_version": "0.2.0",
   "locale": "ko-KR",
   "scope": {
     "supported_categories": ["outer", "top"],
@@ -12,6 +12,7 @@
     "title",
     "category",
     "subcategory",
+    "detail_type",
     "materials",
     "material_part",
     "material_ratio",
@@ -28,92 +29,187 @@
     "material_ratio": "ratio_status가 explicit이면 ratio는 0~100 숫자여야 한다. ratio_status가 missing 또는 ambiguous이면 ratio는 null이어야 한다. 혼방, 터치, 느낌처럼 비율 없는 표현은 추정하지 않는다.",
     "colors": "상세 색상명은 가장 가까운 표준 색상 id로 매핑하되, 불확실하면 ambiguous_fields에 colors를 기록한다.",
     "seasons": "명시 계절, 소재 두께, 소매 길이, 착용 맥락을 함께 보되 과도한 추론은 피한다.",
-    "tpo_tags": "질의 매칭용 태그이며, 입력 텍스트 근거가 약하면 agent_descriptor.explainable_reasons에 한계를 적는다."
+    "tpo_tags": "질의 매칭용 태그이며, 입력 텍스트 근거가 약하면 agent_descriptor.explainable_reasons에 한계를 적는다.",
+    "detail_type": "detail_type은 실제 몰 카테고리와 상품 유형 신호다. 소재 질의에는 materials를 우선하고, 계절 질의에는 seasons를 우선한다. 세부 유형이 불명확하면 null로 두고 quality에 detail_type을 기록한다."
   },
   "categories": {
     "outer": {
       "ko_name": "아우터",
       "description": "상의 위에 걸쳐 입는 외투류",
-      "required_attribute_keys": ["category", "subcategory", "materials", "fit", "colors", "seasons"],
+      "required_attribute_keys": ["category", "subcategory", "detail_type", "materials", "fit", "colors", "seasons"],
       "subcategories": [
         {
           "id": "jacket",
           "ko_name": "재킷",
-          "aliases": ["재킷", "자켓", "블레이저", "블루종"],
-          "default_tpo_tags": ["commute", "formal", "guest_look", "layering"]
+          "description": "가볍거나 격식을 갖춘 형태의 아우터 재킷류",
+          "aliases": ["재킷", "자켓", "블레이저", "블루종", "스타디움 재킷", "트러커 재킷", "아노락 재킷", "슈트/블레이저 재킷", "사파리/헌팅 재킷", "레더/라이더스 재킷", "트레이닝 재킷", "나일론/코치 재킷", "블루종/MA-1", "플리스", "뽀글이"],
+          "default_tpo_tags": ["commute", "formal", "guest_look", "layering"],
+          "detail_types": [
+            {"id": "stadium_jacket", "ko_name": "스타디움 재킷", "aliases": ["스타디움 재킷", "바시티 재킷", "야구 점퍼"]},
+            {"id": "trucker_jacket", "ko_name": "트러커 재킷", "aliases": ["트러커 재킷", "데님 재킷"]},
+            {"id": "fleece_jacket", "ko_name": "플리스/뽀글이", "aliases": ["플리스", "뽀글이", "플리스 재킷"]},
+            {"id": "anorak_jacket", "ko_name": "아노락 재킷", "aliases": ["아노락", "아노락 재킷"]},
+            {"id": "suit_blazer_jacket", "ko_name": "슈트/블레이저 재킷", "aliases": ["슈트 재킷", "블레이저", "블레이저 재킷"]},
+            {"id": "safari_hunting_jacket", "ko_name": "사파리/헌팅 재킷", "aliases": ["사파리 재킷", "헌팅 재킷"]},
+            {"id": "leather_rider_jacket", "ko_name": "레더/라이더스 재킷", "aliases": ["레더 재킷", "라이더스 재킷", "가죽 재킷"]},
+            {"id": "training_jacket", "ko_name": "트레이닝 재킷", "aliases": ["트레이닝 재킷", "트랙 재킷"]},
+            {"id": "nylon_coach_jacket", "ko_name": "나일론/코치 재킷", "aliases": ["나일론 재킷", "코치 재킷"]},
+            {"id": "blouson_ma1", "ko_name": "블루종/MA-1", "aliases": ["블루종", "MA-1", "항공 점퍼"]}
+          ]
         },
         {
           "id": "jumper",
           "ko_name": "점퍼",
-          "aliases": ["점퍼", "집업 점퍼", "윈드브레이커", "바람막이"],
-          "default_tpo_tags": ["casual", "outdoor", "travel"]
+          "description": "보온성이나 캐주얼 착용을 중심으로 한 점퍼형 아우터",
+          "aliases": ["점퍼", "무스탕", "퍼 재킷", "숏패딩", "롱패딩", "헤비 아우터"],
+          "default_tpo_tags": ["casual", "outdoor", "travel"],
+          "detail_types": [
+            {"id": "mustang_fur", "ko_name": "무스탕/퍼", "aliases": ["무스탕", "퍼 재킷", "퍼 아우터"]},
+            {"id": "short_padding_heavy_outer", "ko_name": "숏패딩/헤비 아우터", "aliases": ["숏패딩", "헤비 아우터"]},
+            {"id": "long_padding_heavy_outer", "ko_name": "롱패딩/헤비 아우터", "aliases": ["롱패딩", "롱 헤비 아우터"]}
+          ]
         },
         {
           "id": "coat",
           "ko_name": "코트",
-          "aliases": ["코트", "트렌치코트", "맥코트", "더블 코트", "싱글 코트"],
-          "default_tpo_tags": ["commute", "formal", "guest_look"]
+          "description": "무릎 전후 길이와 포멀 맥락을 포함하는 코트류",
+          "aliases": ["코트", "겨울 기타 코트", "겨울 코트", "더블 코트", "싱글 코트", "환절기 코트", "트렌치코트", "맥코트"],
+          "default_tpo_tags": ["commute", "formal", "guest_look"],
+          "detail_types": [
+            {"id": "winter_other_coat", "ko_name": "겨울 기타 코트", "aliases": ["겨울 기타 코트", "겨울 코트"]},
+            {"id": "winter_double_coat", "ko_name": "겨울 더블 코트", "aliases": ["겨울 더블 코트", "더블 코트"]},
+            {"id": "winter_single_coat", "ko_name": "겨울 싱글 코트", "aliases": ["겨울 싱글 코트", "싱글 코트"]},
+            {"id": "transitional_coat", "ko_name": "환절기 코트", "aliases": ["환절기 코트", "트렌치코트", "맥코트"]}
+          ]
         },
         {
           "id": "cardigan",
-          "ko_name": "가디건",
-          "aliases": ["가디건", "니트 가디건", "집업 가디건"],
-          "default_tpo_tags": ["daily", "layering", "commute"]
+          "ko_name": "카디건",
+          "description": "단추 또는 지퍼 여밈이 있는 니트형 레이어링 아우터",
+          "aliases": ["카디건", "가디건", "니트 가디건", "집업 가디건"],
+          "default_tpo_tags": ["daily", "layering", "commute"],
+          "detail_types": [
+            {"id": "cardigan", "ko_name": "카디건", "aliases": ["카디건", "가디건", "니트 가디건", "집업 가디건"]}
+          ]
         },
         {
           "id": "vest",
           "ko_name": "베스트",
-          "aliases": ["베스트", "조끼", "패딩 베스트"],
-          "default_tpo_tags": ["layering", "casual", "outdoor"]
+          "description": "소매가 없는 조끼형 아우터와 패딩 베스트",
+          "aliases": ["베스트", "조끼", "경량 패딩", "패딩 베스트", "경량 패딩 베스트"],
+          "default_tpo_tags": ["layering", "casual", "outdoor"],
+          "detail_types": [
+            {"id": "vest", "ko_name": "베스트", "aliases": ["베스트", "조끼"]},
+            {"id": "lightweight_padding_vest", "ko_name": "경량 패딩/패딩 베스트", "aliases": ["경량 패딩", "패딩 베스트", "경량 패딩 베스트"]}
+          ]
         },
         {
           "id": "hoodie_zipup",
           "ko_name": "후드 집업",
+          "description": "후드와 지퍼 여밈이 있는 캐주얼 아우터",
           "aliases": ["후드 집업", "후디 집업", "집업 후드"],
-          "default_tpo_tags": ["casual", "daily", "street"]
+          "default_tpo_tags": ["casual", "daily", "street"],
+          "detail_types": [
+            {"id": "hoodie_zipup", "ko_name": "후드 집업", "aliases": ["후드 집업", "후디 집업", "집업 후드"]}
+          ]
+        },
+        {
+          "id": "other_outer",
+          "ko_name": "기타 아우터",
+          "description": "명확한 세부 아우터 유형으로 분류하기 어려운 기타 외투",
+          "aliases": ["기타 아우터", "기타 외투"],
+          "default_tpo_tags": ["daily", "casual"],
+          "detail_types": [
+            {"id": "other_outer", "ko_name": "기타 아우터", "aliases": ["기타 아우터", "기타 외투"]}
+          ]
         }
       ]
     },
     "top": {
       "ko_name": "상의",
       "description": "단독 또는 이너로 착용하는 상의류",
-      "required_attribute_keys": ["category", "subcategory", "materials", "fit", "colors", "seasons"],
+      "required_attribute_keys": ["category", "subcategory", "detail_type", "materials", "fit", "colors", "seasons"],
       "subcategories": [
         {
           "id": "tshirt",
           "ko_name": "티셔츠",
-          "aliases": ["티셔츠", "반팔 티", "긴팔 티", "롱슬리브", "그래픽 티"],
-          "default_tpo_tags": ["daily", "casual", "street"]
+          "description": "반소매와 긴소매를 포함하는 기본 티셔츠류",
+          "aliases": ["티셔츠", "반팔 티", "긴팔 티", "롱슬리브", "그래픽 티", "반소매 티셔츠", "긴소매 티셔츠"],
+          "default_tpo_tags": ["daily", "casual", "street"],
+          "detail_types": [
+            {"id": "short_sleeve_tshirt", "ko_name": "반소매 티셔츠", "aliases": ["반소매 티셔츠", "반팔 티", "반팔 티셔츠"]},
+            {"id": "long_sleeve_tshirt", "ko_name": "긴소매 티셔츠", "aliases": ["긴소매 티셔츠", "긴팔 티", "롱슬리브"]}
+          ]
         },
         {
           "id": "shirt_blouse",
           "ko_name": "셔츠/블라우스",
-          "aliases": ["셔츠", "블라우스", "옥스포드 셔츠", "린넨 셔츠"],
-          "default_tpo_tags": ["commute", "formal", "guest_look"]
-        },
-        {
-          "id": "knit",
-          "ko_name": "니트",
-          "aliases": ["니트", "스웨터", "풀오버", "니트탑"],
-          "default_tpo_tags": ["daily", "commute", "layering"]
-        },
-        {
-          "id": "sweatshirt",
-          "ko_name": "스웨트셔츠",
-          "aliases": ["스웨트셔츠", "맨투맨", "크루넥"],
-          "default_tpo_tags": ["daily", "casual", "street"]
+          "description": "셔츠와 블라우스 계열의 직조 상의",
+          "aliases": ["셔츠", "블라우스", "셔츠/블라우스"],
+          "default_tpo_tags": ["commute", "formal", "guest_look"],
+          "detail_types": [
+            {"id": "shirt_blouse", "ko_name": "셔츠/블라우스", "aliases": ["셔츠", "블라우스", "셔츠/블라우스"]}
+          ]
         },
         {
           "id": "sleeveless",
-          "ko_name": "슬리브리스",
-          "aliases": ["슬리브리스", "민소매", "나시", "탱크톱"],
-          "default_tpo_tags": ["daily", "casual", "layering"]
+          "ko_name": "민소매 티셔츠",
+          "description": "소매가 없는 티셔츠와 탱크톱류",
+          "aliases": ["민소매", "민소매 티셔츠", "나시", "탱크톱"],
+          "default_tpo_tags": ["daily", "casual", "layering"],
+          "detail_types": [
+            {"id": "sleeveless_tshirt", "ko_name": "민소매 티셔츠", "aliases": ["민소매", "민소매 티셔츠", "나시", "탱크톱"]}
+          ]
         },
         {
           "id": "polo",
-          "ko_name": "폴로",
-          "aliases": ["폴로", "카라 티", "피케 셔츠"],
-          "default_tpo_tags": ["daily", "commute", "casual"]
+          "ko_name": "피케/카라 티셔츠",
+          "description": "카라가 있는 피케와 폴로형 티셔츠",
+          "aliases": ["피케", "카라 티", "피케 셔츠", "피케/카라 티셔츠"],
+          "default_tpo_tags": ["daily", "commute", "casual"],
+          "detail_types": [
+            {"id": "polo_collar_tshirt", "ko_name": "피케/카라 티셔츠", "aliases": ["피케", "카라 티", "피케 셔츠", "피케/카라 티셔츠"]}
+          ]
+        },
+        {
+          "id": "knit",
+          "ko_name": "니트/스웨터",
+          "description": "편직 소재의 니트와 스웨터 상의",
+          "aliases": ["니트", "스웨터", "니트/스웨터"],
+          "default_tpo_tags": ["daily", "commute", "layering"],
+          "detail_types": [
+            {"id": "knit_sweater", "ko_name": "니트/스웨터", "aliases": ["니트", "스웨터", "니트/스웨터"]}
+          ]
+        },
+        {
+          "id": "sweatshirt",
+          "ko_name": "맨투맨/스웨트",
+          "description": "맨투맨과 스웨트셔츠 계열의 캐주얼 상의",
+          "aliases": ["맨투맨", "스웨트셔츠", "맨투맨/스웨트"],
+          "default_tpo_tags": ["daily", "casual", "street"],
+          "detail_types": [
+            {"id": "sweatshirt", "ko_name": "맨투맨/스웨트", "aliases": ["맨투맨", "스웨트셔츠", "맨투맨/스웨트"]}
+          ]
+        },
+        {
+          "id": "hoodie",
+          "ko_name": "후드 티셔츠",
+          "description": "후드가 달린 풀오버형 티셔츠와 후디",
+          "aliases": ["후드 티셔츠", "후디", "후드티"],
+          "default_tpo_tags": ["daily", "casual", "street"],
+          "detail_types": [
+            {"id": "hoodie_tshirt", "ko_name": "후드 티셔츠", "aliases": ["후드 티셔츠", "후디", "후드티"]}
+          ]
+        },
+        {
+          "id": "other_top",
+          "ko_name": "기타 상의",
+          "description": "명확한 세부 상의 유형으로 분류하기 어려운 기타 상의",
+          "aliases": ["기타 상의"],
+          "default_tpo_tags": ["daily", "casual"],
+          "detail_types": [
+            {"id": "other_top", "ko_name": "기타 상의", "aliases": ["기타 상의"]}
+          ]
         }
       ]
     }
