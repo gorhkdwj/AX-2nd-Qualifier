@@ -1,5 +1,6 @@
 # 실행 결과·임시 산출물 (제출물 아님)
 out/
+.worktrees/
 *.log
 
 # AI 대화 로그 — 로컬에서만 관리(Git 제외). 단, 최종 submission.zip 에는 반드시 포함할 것.
