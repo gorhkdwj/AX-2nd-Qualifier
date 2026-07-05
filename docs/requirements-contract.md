@@ -49,7 +49,7 @@
 
 ```json
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "source": {
     "source_url": "선택",
     "source_title": "선택",
@@ -59,6 +59,7 @@
     "title": "추출 또는 정규화된 상품명",
     "category": "outer | top",
     "subcategory": "선택",
+    "detail_type": "선택: 공식 몰 세부 유형 또는 null",
     "materials": [
       {
         "part": "shell | lining | fill | rib | pocket | trim | unknown",
