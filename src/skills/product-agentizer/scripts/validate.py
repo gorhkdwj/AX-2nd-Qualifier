@@ -85,17 +85,35 @@ def iter_structured_products(payload: Any) -> Iterable[tuple[str, dict[str, Any]
     yield "product", {}
 
 
-def taxonomy_sets(taxonomy: dict[str, Any]) -> dict[str, set[str]]:
+def taxonomy_sets(taxonomy: dict[str, Any]) -> dict[str, Any]:
     vocabularies = taxonomy.get("vocabularies", {})
     categories = taxonomy.get("categories", {})
+    subcategories: set[str] = set()
+    detail_types: set[str] = set()
+    category_by_subcategory: dict[str, str] = {}
+    parent_by_detail_type: dict[str, tuple[str, str]] = {}
+
+    for category_id, category in categories.items():
+        for subcategory in category.get("subcategories", []):
+            subcategory_id = subcategory.get("id")
+            if not subcategory_id:
+                continue
+            subcategories.add(subcategory_id)
+            category_by_subcategory[subcategory_id] = category_id
+            for detail_type in subcategory.get("detail_types", []):
+                detail_type_id = detail_type.get("id")
+                if not detail_type_id:
+                    continue
+                detail_types.add(detail_type_id)
+                parent_by_detail_type[detail_type_id] = (category_id, subcategory_id)
+
     return {
         "attribute_keys": set(taxonomy.get("attribute_keys", [])),
         "categories": set(taxonomy.get("scope", {}).get("supported_categories", [])),
-        "subcategories": {
-            subcategory.get("id")
-            for category in categories.values()
-            for subcategory in category.get("subcategories", [])
-        },
+        "subcategories": subcategories,
+        "detail_types": detail_types,
+        "category_by_subcategory": category_by_subcategory,
+        "parent_by_detail_type": parent_by_detail_type,
         "materials": {item.get("id") for item in vocabularies.get("materials", [])},
         "material_parts": {item.get("id") for item in vocabularies.get("material_parts", [])},
         "ratio_statuses": {item.get("id") for item in vocabularies.get("ratio_statuses", [])},
@@ -107,12 +125,19 @@ def taxonomy_sets(taxonomy: dict[str, Any]) -> dict[str, set[str]]:
     }
 
 
-def custom_checks(product: dict[str, Any], tax: dict[str, set[str]], product_id: str) -> list[dict[str, str]]:
+def custom_checks(product: dict[str, Any], tax: dict[str, Any], product_id: str) -> list[dict[str, str]]:
     errors: list[dict[str, str]] = []
     structured = product.get("product", {})
     quality = product.get("quality", {})
 
-    if quality.get("out_of_scope") is not True and structured.get("category") not in tax["categories"]:
+    raw_category = structured.get("category")
+    raw_subcategory = structured.get("subcategory")
+    raw_detail_type = structured.get("detail_type")
+    category = raw_category if isinstance(raw_category, str) else None
+    subcategory = raw_subcategory if isinstance(raw_subcategory, str) else None
+    detail_type = raw_detail_type if isinstance(raw_detail_type, str) else None
+
+    if quality.get("out_of_scope") is not True and category is not None and category not in tax["categories"]:
         errors.append(
             {
                 "product_id": product_id,
@@ -120,6 +145,45 @@ def custom_checks(product: dict[str, Any], tax: dict[str, set[str]], product_id:
                 "message": "category must be outer or top unless the product is out of scope",
             }
         )
+
+    if subcategory and subcategory not in tax["subcategories"]:
+        errors.append(
+            {
+                "product_id": product_id,
+                "path": "product.subcategory",
+                "message": "unknown subcategory",
+            }
+        )
+
+    expected_category = tax["category_by_subcategory"].get(subcategory)
+    if subcategory and expected_category and category != expected_category:
+        errors.append(
+            {
+                "product_id": product_id,
+                "path": "product.subcategory",
+                "message": "subcategory must belong to the selected category",
+            }
+        )
+
+    if raw_detail_type is not None and detail_type is not None:
+        if detail_type not in tax["detail_types"]:
+            errors.append(
+                {
+                    "product_id": product_id,
+                    "path": "product.detail_type",
+                    "message": "unknown detail_type",
+                }
+            )
+        else:
+            expected_parent = tax["parent_by_detail_type"].get(detail_type)
+            if expected_parent and expected_parent != (category, subcategory):
+                errors.append(
+                    {
+                        "product_id": product_id,
+                        "path": "product.detail_type",
+                        "message": "detail_type must belong to the selected category/subcategory",
+                    }
+                )
 
     missing_fields = set(quality.get("missing_fields") or [])
     ambiguous_fields = set(quality.get("ambiguous_fields") or [])
