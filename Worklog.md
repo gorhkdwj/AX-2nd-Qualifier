@@ -10,6 +10,38 @@
 
 ---
 
+### W-032 · 3단계 상품 분류 구조 설계 문서 작성
+**요청**
+- 현재 2단계 `category/subcategory` 구조를 실제 무신사 상의·아우터 카테고리를 더 정확히 반영하는 3단계 `category/subcategory/detail_type` 구조로 수정하기 위한 계획 수립
+
+**수행 작업**
+- `superpowers:brainstorming` 절차에 따라 구현 전 설계 단계로 진행
+- 현재 `schema.json`, `taxonomy.json`, `SKILL.md`, `validate.py`, `dedup.py`, `tests/evaluate_product_agentizer.py`, fixture 생성기 구조 확인
+- 공식 무신사 상의·아우터 카테고리 페이지를 재확인하고, 아우터는 `기타 아우터`를 포함해 22개 세부 카테고리로 보정
+- `docs/superpowers/specs/2026-07-06-three-level-category-design.md` 작성
+- 설계 문서에 수정 배경, 실사용 관점, 선택지 비교, 목표 출력 구조, taxonomy/schema/validator/dedup/evaluator/fixture/문서 영향, 검증 계획, 기대 효과, 리스크와 대응, 구현 순서, 승인 기준을 정리
+
+**변경 파일**
+- 생성: `docs/superpowers/specs/2026-07-06-three-level-category-design.md`
+- 수정: `Worklog.md`
+
+**검증**
+- 문서 자체 검토: placeholder 없음, 범위는 `outer/top` 3단계 구조 개편으로 제한, `detail_type` nullable 필수 필드 정책과 `schema_version=0.2.0` 정책 일관성 확인
+- 통과: `git diff --check`
+- 통과: placeholder/미완성 표식 검색
+- 통과: 비밀정보 고위험 패턴 검색 0건
+
+**판단 근거**
+- 실제 무신사 몰 카테고리를 전부 `subcategory`에 넣으면 형태·소재·계절·스타일 의미가 한 필드에 섞인다.
+- `detail_type`을 별도 단계로 두면 실제 몰 세부 유형을 보존하면서도 `materials`, `seasons`, `tpo_tags` 같은 속성 필드와 역할을 분리할 수 있다.
+- 이번 구현 범위는 `outer/top`으로 유지하되, 향후 `bottom`, `bag`, `shoes`가 같은 구조로 들어올 수 있게 설계하는 것이 완성도와 범위 통제의 균형이 좋다.
+
+**결과**
+- 완료: 3단계 상품 분류 구조 설계 문서 작성
+- 다음 단계: 사용자 spec 검토 및 승인 후 구현 계획 작성
+
+---
+
 ### W-031 · GCP ADC Quota Project 및 CLI 활성 프로젝트 설정
 **요청**
 - gcloud ADC quota project 부재 경고 및 설정 실패에 따른 조치 방안 제시 및 환경 설정 완료
