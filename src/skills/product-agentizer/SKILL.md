@@ -27,7 +27,7 @@ URL은 출처 메타데이터일 뿐입니다. Never fetch a URL automatically. 
 ## 참조 파일
 
 최종 구조화 출력을 만들기 전에 아래 파일을 기준으로 삼습니다.
-- `references/taxonomy.json`: 지원 카테고리, 별칭, vocabulary id, 소재 부위, 혼용률 상태 값
+- `references/taxonomy.json`: 지원 카테고리, 서브카테고리, detail_type, 별칭, vocabulary id, 소재 부위, 혼용률 상태 값
 - `references/schema.json`: 필수 출력 구조와 허용 값
 
 JSON 구조는 schema가 기준입니다. 정규화 id와 alias 매핑은 taxonomy가 기준입니다.
@@ -58,11 +58,16 @@ JSON 구조는 schema가 기준입니다. 정규화 id와 alias 매핑은 taxono
    - `category_hint`가 있고 텍스트와 모순되지 않으면 우선 사용합니다.
    - 힌트가 없으면 `outer`와 `top` 중에서만 추론합니다.
    - MVP 범위 밖 상품이면 `quality.out_of_scope`를 `true`로 설정하고, 안전하게 판단 가능한 값만 제한적으로 채웁니다. 범위 제한은 `agent_descriptor.explainable_reasons`에 설명합니다.
+   - `subcategory`는 안정적인 상품 형태를 나타냅니다.
+   - `detail_type`은 실제 몰 세부 카테고리나 상품명에 나타난 세부 유형을 나타냅니다.
+   - 세부 유형이 명확하면 taxonomy의 `detail_types` id를 사용합니다.
+   - 세부 유형이 불명확하면 `detail_type: null`로 두고 `quality.missing_fields` 또는 `quality.ambiguous_fields`에 `detail_type`을 기록합니다.
 
 3. 입력 텍스트의 근거에 기반해 상품 속성을 추출합니다.
    - `title`
    - `category`
    - `subcategory`
+   - `detail_type`
    - `materials`
    - `fit`
    - `colors`
@@ -94,6 +99,14 @@ JSON 구조는 schema가 기준입니다. 정규화 id와 alias 매핑은 taxono
    - TPO: `이너`, `레이어드`, `겹쳐입기`는 `layering`; `여행`, `여행용`, `휴가`는 `travel`; `포멀`, `격식`, `세미포멀`은 `formal`로 매핑합니다.
    - 사이즈/착용 정보: `총장`, `어깨`, `가슴둘레`, `소매`, `암홀`, `밑단`, `기장`, `여유`처럼 치수나 착용감을 설명하는 구절은 `size_info`에 보존합니다.
    - 한 상품 안에서 소재, 계절, TPO, 사이즈 단서가 쉼표로 나열되면 첫 항목만 기록하지 말고 목록 전체를 다시 훑습니다.
+
+### 필드 우선순위
+
+- 상품 유형 질의에는 `category`, `subcategory`, `detail_type`을 우선 사용합니다.
+- 소재 질의에는 `materials.name`, `materials.ratio_status`, `materials.evidence`를 우선 사용합니다.
+- 계절 질의에는 `seasons`를 우선 사용합니다.
+- `detail_type` 안에 소재나 계절 단어가 포함되어도, 해당 구조화 속성 필드와 충돌하면 `materials` 또는 `seasons`를 우선합니다.
+- `detail_type`만으로 천연소재 여부, 보온성, 법적 표기 적합성을 단정하지 않습니다.
 
 7. `agent_descriptor`를 작성합니다.
    - `search_summary`: 에이전트 검색에 유용한 짧은 한국어 요약 1문장
@@ -129,6 +142,7 @@ schema 밖의 필드를 추가하지 않습니다. "legal", "illegal", "valid la
 응답 전에 아래 항목을 확인합니다.
 - category가 `outer` 또는 `top`이거나, `quality.out_of_scope`가 true입니다.
 - 모든 정규화 id가 `taxonomy.json`과 `schema.json`에 존재합니다.
+- `detail_type`이 null이 아니면 선택한 category/subcategory 아래에 존재하는 taxonomy id입니다.
 - 소재의 `part`, `ratio`, `ratio_status`가 엄격한 혼용률 규칙을 지킵니다.
 - 복합 소재, 복합 계절, TPO 단서, 사이즈/착용감 구절을 한 번 더 훑어 누락이 없습니다.
 - 명확하지 않은 추출 속성에는 입력 텍스트 근거가 있습니다.
