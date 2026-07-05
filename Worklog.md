@@ -10,6 +10,36 @@
 
 ---
 
+### W-030 · Product Agentizer 전체 상세 설명서 작성
+**요청**
+- 현재 구현한 전체 기능, 세부 기능, 작동 방식, 각 지표의 의미와 검증 결과를 누가 보더라도 이해할 수 있도록 상세 설명서 md 파일로 작성
+
+**수행 작업**
+- `README.md`, `docs/README.md`, `docs/requirements-contract.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`, S5/S6/S7.5 보고서 확인
+- `SKILL.md`, `schema.json`, `taxonomy.json`, `validate.py`, `dedup.py`, `tests/evaluate_product_agentizer.py`, S7.5 fixture 생성·실행 도구 확인
+- `docs/product-agentizer-complete-guide.md` 작성: 문제 배경, 플러그인 구조, 입력 정책, 출력 JSON, 소재 혼용률 처리, taxonomy, 변환 흐름, 검증 스크립트, dedup 로직, precision/recall 등 지표 정의, S5/S6/S7.5 결과와 해석, 재현성 절차, 안전 경계, 한계, 예시 포함
+- `docs/README.md` 활성 문서 목록에 상세 설명서 추가
+
+**변경 파일**
+- 생성: `docs/product-agentizer-complete-guide.md`
+- 수정: `docs/README.md`
+- 수정: `Worklog.md`
+
+**검증**
+- 문서 내용이 현재 schema/taxonomy/script/report 수치와 충돌하지 않는지 대조
+- 통과: `git diff --check`
+- 통과: `docs/README.md`와 신규 상세 설명서 경로 연결 확인
+- 통과: 비밀정보 고위험 패턴 검색 0건
+
+**판단 근거**
+- 루트 README는 제출용 요약에 적합하지만, 구현 전체와 지표 의미를 깊게 설명하기에는 분량 제약이 있다.
+- 상세 설명서는 `docs/`의 활성 문서로 두어 구현 의도, 검증 방식, 결과 해석을 한 위치에서 추적하는 편이 유지보수와 심사 대응에 유리하다.
+
+**결과**
+- 완료: Product Agentizer 전체 상세 설명서 작성 및 문서 안내 갱신
+
+---
+
 ### W-029 · docs 보고서 폴더 분리
 **요청**
 - `docs/` 안에서 plan과 report가 섞여 보기 어려우므로, report 하위 폴더를 만들어 문서를 나누는 방안 검토 및 적용
