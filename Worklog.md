@@ -10,6 +10,32 @@
 
 ---
 
+### W-034 · 3단계 상품 분류 구조 구현 계획 작성
+**요청**
+- 3단계 상품 분류 구조 구현을 위한 후속 태스크를 단계별로 정리하고 실행 계획으로 등록
+
+**수행 작업**
+- `superpowers:writing-plans` 지침을 확인하고 구현 전 계획 문서 작성
+- `docs/superpowers/plans/2026-07-06-three-level-category-implementation.md` 생성
+- 계획에 결정 기록, schema/taxonomy 0.2.0 갱신, `detail_type` validator, dedup/evaluator 수정, fixture 마이그레이션, 확장 검증, 문서 갱신, 최종 검증/푸시까지 단계별 체크리스트를 작성
+
+**변경 파일**
+- 생성: `docs/superpowers/plans/2026-07-06-three-level-category-implementation.md`
+- 수정: `Worklog.md`
+
+**검증**
+- 통과: 계획 문서 placeholder/미완성 표식 검색
+- 통과: `git diff --check`
+- 통과: 비밀정보 고위험 패턴 검색 0건
+
+**판단 근거**
+- 3단계 구조는 schema, taxonomy, Skill, validator, dedup, evaluator, fixture, 문서 전체에 영향을 주므로 구현 전에 작업 순서와 검증 기준을 고정해야 한다.
+
+**결과**
+- 완료: 3단계 상품 분류 구조 구현 계획 작성
+
+---
+
 ### W-033 · dedup 가중치와 임계값의 휴리스틱 baseline 성격 문서화
 **요청**
 - `dedup.py`의 가중치와 임계값이 실제 운영 데이터로 검증된 수치가 아니라, 운영 데이터의 precision/recall 비교를 통해 조정해야 하는 값임을 문서에 명시
