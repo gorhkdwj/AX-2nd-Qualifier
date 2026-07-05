@@ -44,6 +44,14 @@ def values(product: dict[str, Any], field: str) -> set[str]:
     return {str(raw)}
 
 
+def scalar_value(product: dict[str, Any], field: str) -> str | None:
+    raw = product.get("product", {}).get(field)
+    if raw is None:
+        return None
+    text = str(raw).strip()
+    return text or None
+
+
 def material_values(product: dict[str, Any]) -> set[str]:
     materials = product.get("product", {}).get("materials") or []
     result: set[str] = set()
@@ -77,18 +85,23 @@ def score_pair(left: dict[str, Any], right: dict[str, Any]) -> tuple[float, list
     score = 0.0
 
     if left_product.get("category") and left_product.get("category") == right_product.get("category"):
-        score += 0.18
+        score += 0.16
         matched.append("category")
     if left_product.get("subcategory") and left_product.get("subcategory") == right_product.get("subcategory"):
-        score += 0.16
+        score += 0.14
         matched.append("subcategory")
+    left_detail_type = scalar_value(left["structured"], "detail_type")
+    right_detail_type = scalar_value(right["structured"], "detail_type")
+    if left_detail_type and left_detail_type == right_detail_type:
+        score += 0.08
+        matched.append("detail_type")
 
     weighted_sets = [
-        ("materials", material_values(left["structured"]), material_values(right["structured"]), 0.20),
-        ("colors", values(left["structured"], "colors"), values(right["structured"], "colors"), 0.12),
-        ("fit", values(left["structured"], "fit"), values(right["structured"], "fit"), 0.10),
-        ("seasons", values(left["structured"], "seasons"), values(right["structured"], "seasons"), 0.08),
-        ("tpo_tags", values(left["structured"], "tpo_tags"), values(right["structured"], "tpo_tags"), 0.08),
+        ("materials", material_values(left["structured"]), material_values(right["structured"]), 0.18),
+        ("colors", values(left["structured"], "colors"), values(right["structured"], "colors"), 0.11),
+        ("fit", values(left["structured"], "fit"), values(right["structured"], "fit"), 0.09),
+        ("seasons", values(left["structured"], "seasons"), values(right["structured"], "seasons"), 0.07),
+        ("tpo_tags", values(left["structured"], "tpo_tags"), values(right["structured"], "tpo_tags"), 0.07),
         ("care", values(left["structured"], "care"), values(right["structured"], "care"), 0.04),
     ]
 
@@ -103,7 +116,7 @@ def score_pair(left: dict[str, Any], right: dict[str, Any]) -> tuple[float, list
     title_right = text_tokens(str(right_product.get("title") or ""))
     title_similarity = jaccard(title_left, title_right)
     if title_similarity > 0:
-        score += 0.14 * title_similarity
+        score += 0.06 * title_similarity
     if title_similarity >= 0.35:
         matched.append("title")
 
