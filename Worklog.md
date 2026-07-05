@@ -10,6 +10,30 @@
 
 ---
 
+### W-031 · GCP ADC Quota Project 및 CLI 활성 프로젝트 설정
+**요청**
+- gcloud ADC quota project 부재 경고 및 설정 실패에 따른 조치 방안 제시 및 환경 설정 완료
+
+**수행 작업**
+- 사용자 계정에 연결된 GCP 프로젝트 목록(`gcloud projects list`) 조회
+- 사용자의 선택을 받아 `gcloud-cli-501511`을 Quota Project로 지정
+- `gcloud auth application-default set-quota-project gcloud-cli-501511` 실행하여 할당량/비용 청구 설정 완료
+- `gcloud config set project gcloud-cli-501511` 실행하여 CLI 활성 기본 프로젝트 지정 완료
+
+**변경 파일**
+- 수정: `Worklog.md`
+
+**검증**
+- 설정 완료 메시지 확인: `Quota project "gcloud-cli-501511" was added to ADC...`, `Updated property [core/project].`
+
+**판단 근거**
+- Google Cloud API를 로컬 환경(SDK 등)에서 호출하기 위해 쿼터 할당 및 비용을 지불할 GCP 프로젝트를 설정하는 것이 필수적임
+
+**결과**
+- 완료: Quota Project 및 기본 Project 설정 완료
+
+---
+
 ### W-030 · Product Agentizer 전체 상세 설명서 작성
 **요청**
 - 현재 구현한 전체 기능, 세부 기능, 작동 방식, 각 지표의 의미와 검증 결과를 누가 보더라도 이해할 수 있도록 상세 설명서 md 파일로 작성
