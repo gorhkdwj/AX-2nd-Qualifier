@@ -10,6 +10,49 @@
 
 ---
 
+### W-036 · S7.5 생성기 재현성 보완
+**요청**
+- 3단계 taxonomy 전환 과정 중 남은 fixture 생성기 재현성 문제를 바로 보완
+
+**수행 작업**
+- `tools/generate_expanded_validation_fixtures.py`에 남아 있던 old `real_sanity` product_id를 현재 fixture ID로 갱신
+- Lenina 실제 공개 snippet의 `wool v neck cardigan`/`cardigan_RED` 영문 raw 단서를 현재 한국어 snippet과 일치하도록 수정
+- `codex_subset`은 historical Codex 실행 보존 세트이므로 생성기가 최신 합성 fixture에서 다시 덮어쓰지 않도록 변경
+- S7.5 결과 JSON을 재생성하고 보고서 timestamp와 생성기 역할 설명을 갱신
+- 상세 가이드와 구현 계획서에 `codex_subset` 보존 정책을 명시
+- 이전 spec 리뷰 Fail 사유를 재검토시켜 Pass 확인
+
+**변경 파일**
+- 수정: `tools/generate_expanded_validation_fixtures.py`
+- 수정: `docs/reports/s7-expanded-validation-results.json`
+- 수정: `docs/reports/s7-expanded-validation-report.md`
+- 수정: `docs/product-agentizer-complete-guide.md`
+- 수정: `docs/implementation-plan.md`
+- 수정: `Decisionlog.md`
+- 수정: `Troubleshootinglog.md`
+- 수정: `Worklog.md`
+
+**검증**
+- `python tools\generate_expanded_validation_fixtures.py`: 통과, `codex_subset` diff 0
+- `python tools\run_expanded_validation.py`: `all_commands_passed=true`
+- 결과 JSON `hashes_sha256` 24개를 현재 파일과 재계산 대조: mismatch 0
+- stale ID/영문 raw 단서 검색: `real_outer_limelike_cardigan_2101205`, `real_outer_lenina_cardigan_4332165`, `wool v neck cardigan`, `cardigan_RED`, `outer_down_vest`, `outer-down-vest` 매칭 0
+- `python -m py_compile ...`: 주요 Python 스크립트 컴파일 통과
+- Codex subset 평가: schema-valid 20/20, micro precision 95.52%, micro recall 95.85%, `detail_type` not_applicable, dedup accuracy 100%
+- 실제 공개 snippet 평가: schema-valid 10/10, `detail_type` precision/recall 100%, dedup accuracy 100%
+- `git diff --check`: 통과
+- 비밀정보 패턴 검색: 매칭 0
+- 서브에이전트 spec 재리뷰: Pass, Task 11 진행 가능
+
+**판단 근거**
+- 현재 fixture 파일만 맞고 생성기가 stale 값을 다시 만들 수 있으면 S7.5의 핵심 목표인 재현성이 깨진다.
+- `codex_subset`은 모델 실행 결과 보존 세트라 최신 synthetic fixture에서 재생성하면 `detail_type: null` 예외 정책과 historical actual 보존 의도가 충돌한다.
+
+**결과**
+- 완료: S7.5 생성기 재실행 안정성 보완 및 Task 11 진행 가능 상태 확인
+
+---
+
 ### W-035 · 3단계 상품 분류 구조 구현 착수
 **요청**
 - 승인된 3단계 상품 분류 구조 설계를 구현 계획에 따라 진행

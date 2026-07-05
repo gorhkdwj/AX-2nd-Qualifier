@@ -11,7 +11,6 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_ROOT = ROOT / "tests" / "fixtures"
 EXPANDED_DIR = FIXTURE_ROOT / "expanded_dummy"
-CODEX_DIR = FIXTURE_ROOT / "codex_subset"
 REAL_DIR = FIXTURE_ROOT / "real_sanity"
 
 
@@ -451,15 +450,6 @@ def build_expanded_dummy() -> tuple[dict[str, Any], dict[str, Any], dict[str, An
     return {"cases": sources}, {"products": products}, labels
 
 
-def subset_payload(source_payload: dict[str, Any], product_payload: dict[str, Any], ids: list[str]) -> tuple[dict[str, Any], dict[str, Any]]:
-    source_by_id = {case["product_id"]: case for case in source_payload["cases"]}
-    product_by_id = {item["product_id"]: item for item in product_payload["products"]}
-    return (
-        {"cases": [source_by_id[item] for item in ids]},
-        {"products": [product_by_id[item] for item in ids]},
-    )
-
-
 def real_sanity_payloads() -> tuple[dict[str, Any], dict[str, Any]]:
     cases = [
         {
@@ -473,7 +463,7 @@ def real_sanity_payloads() -> tuple[dict[str, Any], dict[str, Any]]:
             "product_text": "상품명: 빈폴 레이디스 리넨 체크 더블 재킷. 제품분류 재킷. 색상 베이지. 사이즈 S, M, L. 소재 겉감 면 50%, 마 50%, 안감 폴리에스터 100%.",
         },
         {
-            "product_id": "real_outer_limelike_cardigan_2101205",
+            "product_id": "real_outer_limelike_coverpiece_2101205",
             "source_title": "라임라이크 브이넥 크로스 가디건_3color",
             "source_url": "https://www.musinsa.com/products/2101205",
             "category_hint": "outer",
@@ -503,14 +493,14 @@ def real_sanity_payloads() -> tuple[dict[str, Any], dict[str, Any]]:
             "product_text": "상품명: 247시리즈 캐시미어 블렌디드 블루종 자켓 BLACK. 제품분류 자켓. 컬러 블랙. 캐시미어 블렌디드 소재로 소개되며 정확한 숫자 혼용률은 snippet에 없습니다.",
         },
         {
-            "product_id": "real_outer_lenina_cardigan_4332165",
-            "source_title": "르니나 SALENA wool v neck cardigan_RED",
+            "product_id": "real_outer_lenina_woolcover_4332165",
+            "source_title": "르니나 SALENA 울 브이넥 가디건_RED",
             "source_url": "https://www.musinsa.com/products/4332165",
             "category_hint": "outer",
             "locale": "ko-KR",
             "checked_at": "2026-07-05",
             "source_method": "manual_short_public_snippet",
-            "product_text": "상품명: 르니나 SALENA wool v neck cardigan_RED. 제품분류 아우터 카디건. 컬러 레드. wool v neck cardigan 이름에서 울 소재 단서가 있으나 숫자 혼용률은 snippet에 없습니다.",
+            "product_text": "상품명: 르니나 SALENA 울 브이넥 가디건_RED. 제품분류 아우터 카디건. 컬러 레드. 울 브이넥 가디건 이름에서 울 소재 단서가 있으나 숫자 혼용률은 snippet에 없습니다.",
         },
         {
             "product_id": "real_top_armedes_tee_4783312",
@@ -566,10 +556,10 @@ def real_sanity_payloads() -> tuple[dict[str, Any], dict[str, Any]]:
 
     specs = [
         ("real_outer_beanpole_linen_jacket_4308999", "빈폴 레이디스 리넨 체크 더블 재킷", "outer", "jacket", "suit_blazer_jacket", "beige", "regular", [["shell", "cotton", 50, "explicit", "겉감 면 50%, 마 50%"], ["shell", "linen", 50, "explicit", "겉감 면 50%, 마 50%"], ["lining", "polyester", 100, "explicit", "안감 폴리에스터 100%"]], ["spring", "summer"], ["commute", "formal", "guest_look", "layering"], [], ["S, M, L"], [], []),
-        ("real_outer_limelike_cardigan_2101205", "라임라이크 브이넥 크로스 가디건_3color", "outer", "cardigan", "cardigan", "multi", "regular", [["shell", "wool", 50, "explicit", "울 50%, 폴리에스테르 10%, 나일론 30%"], ["shell", "polyester", 10, "explicit", "울 50%, 폴리에스테르 10%, 나일론 30%"], ["shell", "nylon", 30, "explicit", "울 50%, 폴리에스테르 10%, 나일론 30%"]], ["fall", "winter"], ["daily", "layering", "commute"], [], ["컬러 네이비, 그레이, 오트"], [], []),
+        ("real_outer_limelike_coverpiece_2101205", "라임라이크 브이넥 크로스 가디건_3color", "outer", "cardigan", "cardigan", "multi", "regular", [["shell", "wool", 50, "explicit", "울 50%, 폴리에스테르 10%, 나일론 30%"], ["shell", "polyester", 10, "explicit", "울 50%, 폴리에스테르 10%, 나일론 30%"], ["shell", "nylon", 30, "explicit", "울 50%, 폴리에스테르 10%, 나일론 30%"]], ["fall", "winter"], ["daily", "layering", "commute"], [], ["컬러 네이비, 그레이, 오트"], [], []),
         ("real_outer_8seconds_jacket_4922894", "에잇세컨즈 쓰리버튼 세미 오버핏 자켓 블랙", "outer", "jacket", "suit_blazer_jacket", "black", "relaxed", [["shell", "polyester", 100, "explicit", "겉감 폴리에스터 100%"], ["lining", "polyester", 100, "explicit", "안감 폴리에스터 100%"]], ["spring", "fall"], ["commute", "formal", "layering"], ["dry_clean"], [], [], []),
         ("real_outer_247_cashmere_blouson_3617977", "247시리즈 캐시미어 블렌디드 블루종 자켓 BLACK", "outer", "jacket", "blouson_ma1", "black", "regular", [["unknown", "cashmere", None, "ambiguous", "캐시미어 블렌디드 소재"]], ["fall", "winter"], ["daily", "commute", "layering"], [], [], [], ["material_ratio"]),
-        ("real_outer_lenina_cardigan_4332165", "르니나 SALENA wool v neck cardigan_RED", "outer", "cardigan", "cardigan", "red", "regular", [["unknown", "wool", None, "missing", "wool v neck cardigan"]], ["fall", "winter"], ["daily", "layering", "commute"], [], [], ["material_ratio"], []),
+        ("real_outer_lenina_woolcover_4332165", "르니나 SALENA 울 브이넥 가디건_RED", "outer", "cardigan", "cardigan", "red", "regular", [["unknown", "wool", None, "missing", "울 브이넥 가디건"]], ["fall", "winter"], ["daily", "layering", "commute"], [], [], ["material_ratio"], []),
         ("real_top_armedes_tee_4783312", "아르메데스 면 20수 아트그래픽 티셔츠", "top", "tshirt", "short_sleeve_tshirt", "multi", "regular", [["unknown", "cotton", 100, "explicit", "소재 면 100%"]], ["summer"], ["daily", "casual", "street"], [], ["S, M, L, XL, 2XL"], [], []),
         ("real_top_ms_linen_like_shirt_black_3054408", "무신사 스탠다드 릴렉스드 린넨 라이크 반소매 셔츠 블랙", "top", "shirt_blouse", "shirt_blouse", "black", "relaxed", [["unknown", "linen", None, "ambiguous", "린넨과 유사한 질감"]], ["summer"], ["daily", "casual"], [], [], [], ["material_ratio"]),
         ("real_top_ms_basic_tee_3661999", "무신사 스탠다드 베이식 크루 넥 티셔츠", "top", "tshirt", "short_sleeve_tshirt", "white", "regular", [["unknown", "cotton", 100, "explicit", "면 100% 코마사 20수 싱글 저지"]], ["summer"], ["daily", "casual"], [], [], [], []),
@@ -645,42 +635,9 @@ def main() -> None:
     write_json(EXPANDED_DIR / "reference_actual_products.json", expanded_expected)
     write_json(EXPANDED_DIR / "duplicate_labels.json", duplicate_labels)
 
-    subset_ids = [
-        "outer_dummy_000",
-        "outer_dummy_001",
-        "outer_dummy_004",
-        "outer_dummy_006",
-        "outer_dummy_008",
-        "outer_dummy_011",
-        "outer_dummy_020",
-        "outer_dummy_031",
-        "outer_dummy_040",
-        "outer_dummy_049",
-        "top_dummy_050",
-        "top_dummy_051",
-        "top_dummy_054",
-        "top_dummy_056",
-        "top_dummy_058",
-        "top_dummy_061",
-        "top_dummy_070",
-        "top_dummy_081",
-        "top_dummy_090",
-        "top_dummy_099",
-    ]
-    subset_sources, subset_expected = subset_payload(expanded_sources, expanded_expected, subset_ids)
-    subset_id_set = set(subset_ids)
-    subset_labels = {
-        "pairs": [
-            pair
-            for pair in duplicate_labels["pairs"]
-            if pair["left_id"] in subset_id_set and pair["right_id"] in subset_id_set
-        ]
-    }
-    write_json(CODEX_DIR / "source_inputs.json", subset_sources)
-    write_json(CODEX_DIR / "expected_products.json", subset_expected)
-    write_json(CODEX_DIR / "duplicate_labels.json", subset_labels)
-    write_prompt(CODEX_DIR / "prompt.md", "Codex subset conversion prompt", subset_sources)
-    write_prompt(CODEX_DIR / "prompt_template.md", "Codex subset conversion prompt template", {"cases": ["<replace with source_inputs.json cases>"]})
+    # Codex subset fixtures preserve a historical Codex run. Do not regenerate
+    # them from the current synthetic fixtures because detail_type is intentionally
+    # null for expected/actual compatibility checks.
 
     real_sources, real_expected = real_sanity_payloads()
     real_labels = {
@@ -691,7 +648,7 @@ def main() -> None:
                 "expected_decision": "distinct",
             },
             {
-                "left_id": "real_outer_limelike_cardigan_2101205",
+                "left_id": "real_outer_limelike_coverpiece_2101205",
                 "right_id": "real_top_ms_basic_tee_3661999",
                 "expected_decision": "distinct",
             },
@@ -706,7 +663,7 @@ def main() -> None:
                 "expected_decision": "distinct",
             },
             {
-                "left_id": "real_outer_lenina_cardigan_4332165",
+                "left_id": "real_outer_lenina_woolcover_4332165",
                 "right_id": "real_top_ms_basic_short_tee_1196892",
                 "expected_decision": "distinct",
             },

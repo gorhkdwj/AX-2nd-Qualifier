@@ -10,6 +10,36 @@
 
 ---
 
+### D-018 · Codex subset historical fixture 보존
+**상황**
+- 3단계 taxonomy 도입 후 `tools/generate_expanded_validation_fixtures.py`를 다시 실행하면 최신 합성 fixture에서 `codex_subset` expected/source를 재생성하려 했다.
+- 하지만 `codex_subset` actual은 3단계 도입 이전 Codex 실행 결과를 보존한 세트이며, 현재 schema `0.2.0` 호환을 위해 `schema_version`과 `detail_type: null`만 추가한 마이그레이션본이다.
+- 최신 합성 fixture에서 subset을 다시 만들면 expected의 `detail_type`이 non-null로 바뀌어 문서화한 `detail_type not_applicable` 정책과 충돌한다.
+
+**검토한 선택지**
+- 최신 합성 fixture 기준으로 `codex_subset` expected/source를 모두 재생성한다.
+- historical actual을 버리고 Codex subset actual을 새로 생성한다.
+- `codex_subset`은 committed fixture로 보존하고, 생성기는 합성 100건과 실제 공개 snippet 10건만 재생성한다.
+
+**결정**
+- `codex_subset`은 historical Codex 실행 보존 세트로 유지한다.
+- `tools/generate_expanded_validation_fixtures.py`는 `codex_subset`을 덮어쓰지 않는다.
+- `codex_subset`의 재현성은 committed source/expected/actual/prompt/duplicate labels와 `docs/reports/s7-expanded-validation-results.json`의 SHA-256 해시로 검증한다.
+
+**근거**
+- Codex actual은 모델 상태에 따라 재생성 결과가 달라질 수 있어 historical output 보존이 S7.5 재현성 목표에 더 맞다.
+- `detail_type` 자체의 coverage와 parent-child 검증은 합성 100건, 실제 공개 snippet 10건, schema negative fixture에서 별도로 확인한다.
+- 보존 세트를 최신 synthetic에서 재생성하면 수치가 좋아지거나 나빠지는 문제가 아니라 평가 대상의 의미가 바뀐다.
+
+**영향**
+- 문서에서는 `tools/generate_expanded_validation_fixtures.py`가 합성 fixture와 실제 공개 snippet fixture를 재생성한다고 설명한다.
+- `codex_subset`을 수정해야 하는 경우에는 생성기 재실행이 아니라 별도 결정과 Worklog/Decisionlog 기록이 필요하다.
+
+**재검토 조건**
+- 새 Codex 실행을 공식 기준 actual로 채택하거나, 3단계 `detail_type` 추출 성능을 Codex subset에서 직접 측정하기로 범위를 바꾸는 경우 재검토한다.
+
+---
+
 ### D-017 · 3단계 상품 분류 구조 도입
 **날짜**: 2026-07-06 KST
 

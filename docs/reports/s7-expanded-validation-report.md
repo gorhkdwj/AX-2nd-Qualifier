@@ -13,17 +13,17 @@
 | `tests/fixtures/codex_subset/` | Codex 실행 subset 20건, prompt, prompt template, expected JSON, actual JSON, duplicate labels |
 | `tests/fixtures/real_sanity/` | 공개 상품 snippet 10건, URL, 확인일, expected JSON, actual JSON, duplicate labels |
 | `docs/reports/s7-expanded-validation-results.json` | 실행 환경, 명령, 평가 결과, dedup 교차 카테고리 점검, 주요 파일 SHA-256 |
-| `tools/generate_expanded_validation_fixtures.py` | 확장 fixture 재생성 스크립트 |
+| `tools/generate_expanded_validation_fixtures.py` | 합성 fixture와 실제 공개 snippet fixture 재생성 스크립트 |
 | `tools/run_expanded_validation.py` | 재현성 검증 실행 및 결과 스냅샷 생성 스크립트 |
 
 ## 실행 환경
 - Python: `3.12.4 | packaged by Anaconda, Inc.`
 - Platform: `Windows-11-10.0.26200-SP0`
 - Codex CLI: `codex-cli 0.142.5`
-- 결과 생성 시각: `2026-07-05T18:44:53.190038+00:00` (KST 2026-07-06 03:44:53)
+- 결과 생성 시각: `2026-07-05T19:22:02.964634+00:00` (KST 2026-07-06 04:22:02)
 
 ## 재실행 명령
-확장 fixture는 아래 명령으로 재생성한다.
+합성 fixture와 실제 공개 snippet fixture는 아래 명령으로 재생성한다. `codex_subset`은 3단계 taxonomy 도입 이전 Codex 실행 결과를 보존하는 historical 세트이므로 이 명령이 덮어쓰지 않는다.
 
 ```powershell
 python tools\generate_expanded_validation_fixtures.py

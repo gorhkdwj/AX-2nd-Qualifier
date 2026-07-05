@@ -111,7 +111,7 @@ docs/references/
 - 산출물: `tests/fixtures/expanded_dummy/`, `tests/fixtures/codex_subset/`, `tests/fixtures/real_sanity/`, `docs/reports/s7-expanded-validation-report.md`, `docs/reports/s7-expanded-validation-results.json`.
 - 완료 조건: 합성 expected 100건 schema-valid 100%, Codex subset 20건 actual schema-valid 100%, Codex subset micro precision 95% 이상·recall 85% 이상, dedup accuracy 95% 이상, cross-category high-confidence false duplicate 0건. 3단계 taxonomy 반영 후 Codex subset의 `detail_type`은 historical actual 보존을 위해 `not_applicable`로 기록하고, `detail_type` coverage와 parent-child 검증은 합성 100건·실제 공개 snippet·schema negative fixture에서 확인한다.
 - 공개 sanity: 공개 무신사 상품페이지 10건은 URL·확인일·짧은 factual snippet만 저장한다. 전체 상세페이지 복사본이나 자동 fetch 결과는 저장하지 않는다.
-- 검증 방법: `python tools\generate_expanded_validation_fixtures.py`, `python tools\run_expanded_validation.py`를 실행하고, 실패 사례와 보완 내역을 Worklog/Troubleshootinglog에 기록한다.
+- 검증 방법: `python tools\generate_expanded_validation_fixtures.py`, `python tools\run_expanded_validation.py`를 실행하고, 실패 사례와 보완 내역을 Worklog/Troubleshootinglog에 기록한다. 단, `codex_subset`은 historical Codex 실행 보존 세트이므로 생성기가 덮어쓰지 않고 보존 fixture를 검증 대상으로 사용한다.
 
 ### S8 · 패키징·제출 준비
 - 왜 필요한가: 제출 구조 오류와 로그 누락은 치명적이다.

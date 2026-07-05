@@ -168,7 +168,7 @@ docs/
 | `scripts/validate.py` | JSON 출력이 schema와 taxonomy 규칙을 지키는지 검증 |
 | `scripts/dedup.py` | 여러 구조화 상품 사이의 중복 후보 점수 계산 |
 | `tests/evaluate_product_agentizer.py` | expected JSON과 actual JSON을 비교해 precision, recall, dedup accuracy 산출 |
-| `tools/generate_expanded_validation_fixtures.py` | S7.5 확장 검증용 fixture 재생성 |
+| `tools/generate_expanded_validation_fixtures.py` | S7.5 합성 fixture와 실제 공개 snippet fixture 재생성 |
 | `tools/run_expanded_validation.py` | S7.5 전체 검증 실행 및 결과 스냅샷 저장 |
 | `tools/save_log.py` | Stop hook에서 대화 로그를 `logs/`에 저장 |
 
@@ -1279,14 +1279,11 @@ python tools\generate_expanded_validation_fixtures.py
 - `tests/fixtures/expanded_dummy/expected_products.json`
 - `tests/fixtures/expanded_dummy/reference_actual_products.json`
 - `tests/fixtures/expanded_dummy/duplicate_labels.json`
-- `tests/fixtures/codex_subset/source_inputs.json`
-- `tests/fixtures/codex_subset/expected_products.json`
-- `tests/fixtures/codex_subset/prompt.md`
 - `tests/fixtures/real_sanity/source_inputs.json`
 - `tests/fixtures/real_sanity/expected_products.json`
 - `tests/fixtures/real_sanity/prompt.md`
 
-주의할 점은 Codex actual output은 모델 실행 결과이므로 재생성 시 달라질 수 있다는 것입니다. 제출 기준 actual은 `actual_products.json`에 보존되어 있습니다.
+주의할 점은 `tests/fixtures/codex_subset/`은 3단계 taxonomy 도입 이전 Codex 실행 결과를 보존하는 historical 세트라 이 생성기가 덮어쓰지 않는다는 것입니다. 제출 기준 Codex actual은 모델 실행 결과이므로 재생성 시 달라질 수 있고, 현재 기준 actual은 `actual_products.json`에 보존되어 있습니다.
 
 ### 18.2 전체 확장 검증 실행
 

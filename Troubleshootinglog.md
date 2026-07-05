@@ -10,6 +10,35 @@
 
 ---
 
+### T-006 · S7.5 생성기 stale real_sanity ID 잔존
+**발생 상황**
+- 3단계 taxonomy 전환 후 `real_sanity` fixture와 보고서를 현재 ID로 정리했지만, spec 재리뷰에서 fixture 생성기 내부에 과거 ID가 남아 있음이 발견됐다.
+
+**증상**
+- `tools/generate_expanded_validation_fixtures.py`에 `real_outer_limelike_cardigan_2101205`, `real_outer_lenina_cardigan_4332165`가 남아 있었다.
+- 같은 위치에 `wool v neck cardigan`, `cardigan_RED`처럼 현재 실제 공개 snippet 입력에서 제거한 영문 raw 단서도 남아 있었다.
+- 생성기를 다시 실행하면 현재 committed `real_sanity` fixture와 다른 산출물이 만들어질 수 있어 S7.5 재현성 원칙과 충돌했다.
+- 또한 생성기가 최신 synthetic fixture에서 `codex_subset` expected/source를 다시 쓰면서 historical `detail_type: null` 보존 정책과 충돌하는 diff를 만들었다.
+
+**확인된 원인**
+- `real_sanity` fixture 파일을 먼저 수동 정리한 뒤, 같은 값을 생성하는 `tools/generate_expanded_validation_fixtures.py`의 real_sanity spec과 duplicate label을 함께 갱신하지 않았다.
+- `codex_subset`은 historical Codex 실행 보존 세트인데, 생성기에는 여전히 최신 synthetic fixture에서 subset을 파생해 쓰는 로직이 남아 있었다.
+
+**조치**
+- 생성기의 old `real_sanity` product_id를 현재 fixture ID로 교체했다.
+- Lenina source title, product text, material evidence를 현재 한국어 snippet과 일치하도록 수정했다.
+- 생성기가 `codex_subset`을 덮어쓰지 않도록 변경하고, 해당 정책을 보고서·상세 가이드·구현 계획서에 문서화했다.
+- `python tools\generate_expanded_validation_fixtures.py` 재실행 후 `codex_subset` diff가 0임을 확인했다.
+- `python tools\run_expanded_validation.py`를 재실행해 `all_commands_passed=true`와 SHA-256 해시 일치를 확인했다.
+- spec 재리뷰에서 Pass와 Task 11 진행 가능 판정을 받았다.
+
+**재발 방지**
+- fixture 파일을 직접 보완하면 같은 fixture를 생성하는 스크립트와 결과 JSON 해시도 함께 갱신한다.
+- historical actual 보존 세트는 생성기 재생성 대상인지, committed fixture 보존 대상인지 명시한다.
+- 생성기 재실행 후 `git diff -- tests/fixtures/codex_subset`처럼 보존 세트가 흔들리지 않았는지 별도로 확인한다.
+
+---
+
 ### T-005 · docs/reports 경로 일괄 치환 중 중복 경로 발생
 **발생 상황**
 - S5/S6/S7.5 보고서를 `docs/reports/`로 이동한 뒤, README와 작업 문서의 경로 문자열을 일괄 갱신했다.
