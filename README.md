@@ -142,6 +142,7 @@ python src\skills\product-agentizer\scripts\validate.py <codex-output.json> --pr
 - S6 Codex 출력은 직전 보완 대상이던 `goose_down`, `khaki`, `travel`, `여유 있는 암홀` 정보를 유지
 - S7.5 확장 합성 expected 100건은 schema-valid 100%(100/100), self-check precision/recall 100.00%
 - S7.5 Codex subset 20건 actual은 schema-valid 100%(20/20), micro precision 95.52%, micro recall 95.85%
+- S7.5 Codex subset의 `detail_type`은 historical actual 보존을 위해 expected/actual 모두 `null`로 둬 precision/recall이 `not_applicable`이며, actual은 schema `0.2.0` 호환을 위해 `schema_version`과 `detail_type: null`만 추가한 마이그레이션본
 - S7.5 dedup 검증은 합성 20/20, Codex subset 4/4, 실제 공개 snippet 5/5 모두 통과했고 cross-category high-confidence false duplicate는 0건
 - S7.5 실제 공개 상품 snippet 10건은 actual schema-valid 100%(10/10), 자동 fetch 0건, 법적 적합/부적합 판정 0건으로 확인
 
