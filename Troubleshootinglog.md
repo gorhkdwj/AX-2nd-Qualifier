@@ -10,6 +10,24 @@
 
 ---
 
+### T-015 · worktree 파일 패치 시 기준 경로 혼동
+**발생 상황**
+- S7.7 dedup cross-category 독립 재계산 스크립트를 보강하기 위해 `apply_patch`를 실행했다.
+
+**증상**
+- 패치 도구가 기본 작업 기준을 메인 루트(`2nd`)로 잡아 `tools/run_s7_7_dedup_cross_category_recheck.py`를 찾지 못했다.
+
+**확인된 원인**
+- 실제 작업 파일은 `.worktrees/detail-type-category/tools/` 아래에 있었지만, 패치 입력에는 worktree 상대 경로가 포함되지 않았다.
+
+**조치**
+- 패치 대상 경로를 `.worktrees/detail-type-category/tools/run_s7_7_dedup_cross_category_recheck.py`로 명시해 동일 변경을 정상 적용했다.
+- 이후 모든 편집 패치는 worktree 상대 경로를 명시해 적용했다.
+
+**재발 방지**
+- worktree에서 작업 중이어도 `apply_patch`는 현재 세션 기준 루트가 다를 수 있으므로, 패치 전 대상 파일의 실제 상대 경로를 확인한다.
+- shell 명령은 `workdir`로 worktree를 지정하고, `apply_patch`는 패치 파일 경로에 worktree prefix를 명시한다.
+
 ### T-014 · invalid fixture 이중 함정으로 회귀 감지력 약화 발견
 **발생 상황**
 - 독립 교차검증에서 `invalid_material_ratio_status.json`, `invalid_detail_type_parent.json`, `invalid_out_of_scope_category.json` 3건이 표적 규칙 외에 `part: "unknown"` + `material_part` 미표시라는 두 번째 위반을 부수적으로 포함하고 있음을 확인.

@@ -10,6 +10,37 @@
 
 ---
 
+### W-052 · S7.7 dedup cross-category 독립 재계산 검증
+**요청** S9 교차검증 보고서의 미검증 범위였던 S7.7 dedup cross-category 재계산 독립 검증을 패키징 전 최종 작업으로 수행.
+
+**수행 작업**
+- `tools/run_s7_7_dedup_cross_category_recheck.py` 신규 작성: `full_page_dummy/reference_actual_products.json`의 모든 상품쌍을 `dedup.py`로 처음부터 재채점하고, 저장된 S7.7 결과 JSON의 `dedup_cross_category_check`와 대조.
+- 재계산 결과 JSON(`s7-7-dedup-cross-category-recheck-results.json`)과 해설 보고서(`s7-7-dedup-cross-category-recheck-report.md`) 생성.
+- `docs/validation-plan.md`의 S7.7 TODO를 완료된 후속 검증으로 전환.
+- `docs/reports/README.md`와 `docs/reports/s9-cross-validation-report.md`에 새 보고서 및 미검증 해소 내역 반영.
+- worktree 경로 기준 혼동으로 발생한 패치 실패를 T-015에 기록.
+
+**변경 파일**
+- `tools/run_s7_7_dedup_cross_category_recheck.py`(신규)
+- `docs/reports/s7-7-dedup-cross-category-recheck-results.json`(신규)
+- `docs/reports/s7-7-dedup-cross-category-recheck-report.md`(신규)
+- `docs/reports/README.md`
+- `docs/reports/s9-cross-validation-report.md`
+- `docs/validation-plan.md`
+- `Worklog.md`
+- `Troubleshootinglog.md`
+
+**검증**
+- `python -m py_compile tools\run_s7_7_dedup_cross_category_recheck.py` 통과.
+- `python tools\run_s7_7_dedup_cross_category_recheck.py` 통과: 상품 300건, 전체 상품쌍 44,850개, cross-category 상품쌍 22,500개, score >= 0.45 후보 2,788건, cross-category 후보 0건, score >= 0.78 high-confidence 후보 23건, high-confidence cross-category false duplicate 0건.
+- 저장된 S7.7 결과의 `candidate_count=2788`, `high_confidence_cross_category_count=0`과 재계산값이 모두 일치.
+
+**판단 근거**
+- 기존 S9 교차검증은 저장된 결과 JSON 값만 확인했으므로, 패키징 전에 같은 fixture와 현재 dedup 로직으로 후보쌍을 처음부터 재생성·재채점해 cross-category false duplicate 0건 주장의 독립성을 높일 필요가 있었다.
+
+**결과**
+- 완료. S7.7 dedup cross-category 재계산 미검증 항목 해소. T-015 기록.
+
 ### W-051 · 교차검증 보고서 작성
 **요청** 교차검증하여 수정한 내용을 자세한 교차검증 보고서 md로 작성.
 **수행 작업** `docs/reports/s9-cross-validation-report.md` 신규 작성 — 검증 범위·방법, 핵심 주장 검증(전부 통과), 수치 재현성(15/15), 확정 결함과 수정 내역(3.1~3.6), 기각 이슈, 무회귀 검증, 미검증·차후 태스크, 결론. W-049·W-050·T-014·D-025와 상호 참조.

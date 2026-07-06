@@ -11,9 +11,12 @@
 | `s7-expanded-validation-results.json` | S7.5 실행 환경, 명령, 정량 결과, 주요 파일 hash 원본 스냅샷 | S7.5 |
 | `s7-7-full-page-dummy-validation-report.md` | 실제 페이지형 합성 더미 300건과 subset 50건 기준 검증 해설 | S7.7 |
 | `s7-7-full-page-dummy-validation-results.json` | S7.7 실행 환경, 명령, 정량 결과, 주요 파일 hash 원본 스냅샷 | S7.7 |
+| `s7-7-dedup-cross-category-recheck-report.md` | S7.7 dedup cross-category 후보쌍 독립 재계산 검증 해설 | S7.7 후속 |
+| `s7-7-dedup-cross-category-recheck-results.json` | S7.7 dedup cross-category 독립 재계산 결과 스냅샷 | S7.7 후속 |
 | `s7-8-size-info-coverage-report.md` | size_info 표기 패턴 합성 fixture와 실제 Codex CLI 검증 해설 | S7.8 |
 | `s7-8-size-info-coverage-results.json` | S7.8 실행 환경, 명령, 정량 결과, 패턴 그룹별 결과 스냅샷 | S7.8 |
 | `s8-total-validation-evaluation-report.md` | S8 패키징 전 총검증, 지표 해석, 리스크 평가, 패키징 주의사항 | S8 |
+| `s9-cross-validation-report.md` | Claude Code 독립 교차검증 결과와 반영 내역 | S9 |
 
 ## 보관 원칙
 - 사람이 읽는 해설은 `*-report.md`에 둡니다.

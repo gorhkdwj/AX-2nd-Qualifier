@@ -3,7 +3,7 @@
 작성일: 2026-07-06 KST
 대상 branch: `feature/detail-type-category`
 검증 시작 commit: `443c9b4` (검증 대상) → 반영 완료 commit: `a7939a8`
-관련 Worklog: W-049, W-050 · Troubleshootinglog: T-014 · Decisionlog: D-025
+관련 Worklog: W-049, W-050, W-052 · Troubleshootinglog: T-014, T-015 · Decisionlog: D-025
 
 ## 0. 목적과 범위
 
@@ -118,11 +118,11 @@
 
 ## 6. 미검증 범위·차후 태스크
 
-- **S7.7 dedup cross-category 재계산 독립 검증:** `dedup_cross_category_check`(candidate 2788건, high-confidence cross-category FP 0건)를 저장 JSON 값으로만 확인했고, 후보쌍 2788건을 처음부터 재채점해 0건을 독립 재현하는 검증은 미수행. validation-plan 미검증 범위에 차후 태스크(TODO)로 등록.
+- **[후속 해소] S7.7 dedup cross-category 재계산 독립 검증:** `tools/run_s7_7_dedup_cross_category_recheck.py`로 `full_page_dummy/reference_actual_products.json`의 전체 상품쌍 44,850개를 처음부터 재채점했다. score >= 0.45 후보 수 2,788건과 high-confidence cross-category FP 0건이 저장 결과와 일치했다. 결과는 `s7-7-dedup-cross-category-recheck-results.json`, 해설은 `s7-7-dedup-cross-category-recheck-report.md`에 보존했다.
 - **logs/ 내용과 submission-questions 답변 대조:** 로그 원본 보존 원칙에 따라 내용을 열지 않고 존재·크기·타임스탬프만 확인.
 - **문제 근거 유튜브 영상 내용 대조:** URL 기재 형식만 확인, 영상 내용 미대조.
 - **Codex CLI 실제 신규 실행:** 감사 셸에 `codex`가 없어 actual 산출물의 신규 생성은 재현하지 못했고, 저장된 actual 기준 지표 재현으로 대체.
 
 ## 7. 결론
 
-교차검증 결과 제출물의 핵심 주장과 수치는 모두 사실로 확인됐고, 발견된 결함(문서-코드 불일치, 해석 투명성 보강 필요, negative fixture 이중 함정, material_part 단방향, 로그 분산 리스크)은 전부 수정·문서화했다. 남은 것은 6장의 미검증 범위와 차후 태스크뿐이며, 제출 차단 사유는 없다. 최종 제출 시에는 헌법 `10.1`에 따라 모든 worktree `logs/`를 원본 그대로 통합하고 패키징 위생 절차를 적용해야 한다.
+교차검증 결과 제출물의 핵심 주장과 수치는 모두 사실로 확인됐고, 발견된 결함(문서-코드 불일치, 해석 투명성 보강 필요, negative fixture 이중 함정, material_part 단방향, 로그 분산 리스크)은 전부 수정·문서화했다. 이후 S7.7 dedup cross-category 재계산 독립 검증까지 추가로 완료되어, 저장된 cross-category 오탐 0건 주장은 별도 재채점으로도 확인됐다. 남은 제한은 로그 원본 내용 미열람, 문제 근거 영상 내용 미대조, 감사 셸의 Codex CLI 신규 실행 미수행처럼 제출 직전 외부·운영 조건에 가까운 범위이며, 제출 차단 사유는 없다. 최종 제출 시에는 헌법 `10.1`에 따라 모든 worktree `logs/`를 원본 그대로 통합하고 패키징 위생 절차를 적용해야 한다.
