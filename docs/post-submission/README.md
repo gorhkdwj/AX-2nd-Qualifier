@@ -7,6 +7,7 @@
 | 문서 | 역할 | 주의 |
 |---|---|---|
 | `claude-cross-validation-prompt.md` | Claude Code로 최종 산출물과 검증 결과를 독립 감사하기 위해 사용한 프롬프트 | 제출 전 worktree 기준을 포함하는 역사 문서이므로 현재 실행 지침으로 사용하지 않습니다. |
+| `file-structure-board.html` | 전체 파일 구조와 의존 관계를 노드 보드로 보여주는 정적 HTML | 브라우저에서 직접 열어 탐색합니다. 외부 CDN이나 서버가 필요 없습니다. |
 
 ## 보관 원칙
 

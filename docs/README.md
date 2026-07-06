@@ -27,7 +27,7 @@
 |---|---|---|
 | `company-research_references/` | 기업 조사·팩트체크·최종 선정 근거 | 구현 기준은 아니지만 선정 사유와 공개 근거 추적에 필요 |
 | `reports/` | 단계별 검증·실행 결과 보고서 | S5/S6/S7.5 결과와 재현성 스냅샷 확인 |
-| `post-submission/` | 제출 후 감사·회고·정리 자료 | 현재 구현 기준이 아니라 제출 전후 맥락을 보존하는 용도로 확인 |
+| `post-submission/` | 제출 후 감사·회고·정리 자료 | 현재 구현 기준이 아니라 제출 전후 맥락을 보존하는 용도로 확인. 전체 구조 보드는 `post-submission/file-structure-board.html` |
 | `technical_references/` | Codex 플러그인·Skill·Hooks·AGENTS 공식 문서 사본 | 구현 중 규격 확인용. 필요한 문서만 열어본다 |
 | `archive/` | 폐기·비활성 자료 보관 | 현재 구현 기준으로 쓰지 않는다. 감사 추적용으로만 확인 |
 

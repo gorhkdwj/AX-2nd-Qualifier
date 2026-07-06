@@ -10,6 +10,40 @@
 
 ---
 
+### W-058 · 전체 파일 구조 HTML 보드 생성
+**요청** 전체 파일 구조를 정리하고, 각 요소를 노드로 연결해 의존성 등 다양한 정보를 한눈에 볼 수 있는 보드 형식의 HTML을 생성해 달라는 요청.
+
+**수행 작업**
+- `docs/post-submission/file-structure-board.html` 정적 HTML 보드를 생성했다.
+- 보드에 헌법·기록, 문서·근거, 제출물, 구현 코드, 검증 fixture, 실행·보고, 로컬 보존 영역을 노드로 배치했다.
+- 노드 29개와 연결선 50개를 정의해 contract, produces, verifies, package, records 관계를 시각화했다.
+- 검색창, 유형 필터, 노드 선택 시 상세 패널, 연결선 하이라이트 기능을 추가했다.
+- 외부 CDN이나 dev server 없이 브라우저에서 바로 열 수 있도록 CSS와 JavaScript를 단일 HTML에 포함했다.
+- `docs/README.md`와 `docs/post-submission/README.md`에 보드 위치와 역할을 추가했다.
+
+**변경 파일**
+- 생성: `docs/post-submission/file-structure-board.html`
+- 수정: `docs/README.md`
+- 수정: `docs/post-submission/README.md`
+- 수정: `Worklog.md`
+
+**검증**
+- HTML 파서 검증 통과.
+- 인라인 JavaScript `node --check` 통과.
+- HTML 보드 노드 수 29개, 연결선 50개 확인.
+- JS 노드 데이터의 링크 29개가 모두 실제 경로로 연결되는지 확인.
+- `git diff --check` 통과.
+
+**판단 근거**
+- 제출 후 구조 파악용 자료이므로 활성 구현 기준 문서와 섞지 않고 `docs/post-submission/`에 보관하는 것이 적합하다.
+- 전체 파일을 한 줄 목록으로 나열하기보다 역할 단위 노드와 연결선을 함께 제공해야 구현·검증·제출·로그 보존 흐름을 빠르게 이해할 수 있다.
+
+**결과**
+- 완료: 전체 파일 구조와 의존 관계를 한눈에 보는 정적 HTML 보드 생성 완료.
+- 남은 작업: 없음.
+
+---
+
 ### W-057 · 상세 설명서 사실관계 점검 및 최신화
 **요청** `docs/product-agentizer-complete-guide.md` 문서가 사실과 다르거나 변경된 사항을 누락하지 않았는지 점검해 달라는 요청.
 
