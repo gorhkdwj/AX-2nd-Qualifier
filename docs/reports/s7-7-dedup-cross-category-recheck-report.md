@@ -3,7 +3,7 @@
 ## 요약
 
 - 목적: S7.7 결과 JSON에 저장된 `dedup_cross_category_check` 값을 그대로 신뢰하지 않고, `full_page_dummy/reference_actual_products.json`의 모든 상품쌍을 처음부터 다시 점수화해 cross-category high-confidence false duplicate 0건을 독립 재현한다.
-- 생성 일시(UTC): `2026-07-06T13:55:08.763285+00:00`
+- 생성 일시(UTC): `2026-07-06T14:05:40.851722+00:00`
 - 기준 KST 날짜: `2026-07-06`
 - 전체 통과: `True`
 

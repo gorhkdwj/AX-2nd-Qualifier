@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-06T13:55:08.763285+00:00",
+  "generated_at_utc": "2026-07-06T14:05:40.851722+00:00",
   "generated_for_kst_date": "2026-07-06",
   "environment": {
     "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
@@ -16,7 +16,7 @@
   "hashes_sha256": {
     "tests/fixtures/full_page_dummy/reference_actual_products.json": "2f66e2aadfe1fcdb0a3b34d93438030286b6ee2e8b7abb259c8dc4f76a52bba8",
     "docs/reports/s7-7-full-page-dummy-validation-results.json": "3f6d3c94a54aa1932ea90e5479b1faadd18099b6bde6a2149d1d3e474d4f1dac",
-    "src/skills/product-agentizer/scripts/dedup.py": "dd69c8ea40bd081b7fd53ec514415d147457c940321b929c3f4fdd748ab937c4"
+    "src/skills/product-agentizer/scripts/dedup.py": "70a0d83b0ee459f4d284bc70c7a29de2b100d8e32b2c9b1d2e9d18bb6a61523c"
   },
   "recomputed": {
     "product_count": 300,

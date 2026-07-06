@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-06T04:17:44.503683+00:00",
+  "generated_at_utc": "2026-07-06T14:05:45.376650+00:00",
   "generated_for_kst_date": "2026-07-06",
   "environment": {
     "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
@@ -5245,14 +5245,14 @@
     "examples": []
   },
   "hashes_sha256": {
-    "src/skills/product-agentizer/SKILL.md": "069a9a4ff827a5b4f3897f1faf4514beed53ddd3866f2cf85efca0e7612bd4fa",
-    "src/skills/product-agentizer/references/schema.json": "685ee3307d64603079d8adce707768e17e96a1aeb48010da2d5bd26f254f4a0a",
-    "src/skills/product-agentizer/references/taxonomy.json": "5d60707c2c79b66ce19c71c3179d18b296e11d6fcaab34d612b25dbc0367e91b",
-    "src/skills/product-agentizer/scripts/validate.py": "93645130621a3936c35edc1718f4c9243e427a6eb0e3b5254da63dcd150b5fff",
-    "src/skills/product-agentizer/scripts/dedup.py": "dd69c8ea40bd081b7fd53ec514415d147457c940321b929c3f4fdd748ab937c4",
-    "tests/evaluate_product_agentizer.py": "a86cb4941be692c0f0914dcfc7939af35fe377b06e9722582982c8471d658dd7",
-    "tools/generate_full_page_dummy_fixtures.py": "7ed740b6e2314ec568ab77a3011f7fd1267c84affbb8596097fa3e0e2862daa1",
-    "tools/run_full_page_dummy_validation.py": "0d1bac0b4c80d0977cd7fcc04458814a3c30bf7dccfc63865c09442cfcebe5f6",
+    "src/skills/product-agentizer/SKILL.md": "f93d8400c71037f0e0e79dc45fef788137125f1074bbd3059449b49b41097037",
+    "src/skills/product-agentizer/references/schema.json": "337e96de2be85a330b1886114ef787f09ffc4b295a85ab19edf1be099d510cf6",
+    "src/skills/product-agentizer/references/taxonomy.json": "0cb4f518dbdd75b59dd5dc6a13b7c7829338ea50fefcd6f383e4054b6358d64e",
+    "src/skills/product-agentizer/scripts/validate.py": "ff6ce3d1fad3af473fac2343dcfd1e2938af3281510b440b68f7f4f52b501303",
+    "src/skills/product-agentizer/scripts/dedup.py": "70a0d83b0ee459f4d284bc70c7a29de2b100d8e32b2c9b1d2e9d18bb6a61523c",
+    "tests/evaluate_product_agentizer.py": "3709e77656820ed5334b002c0a0689600956202f4076bfd1bd5156124e90e7b6",
+    "tools/generate_full_page_dummy_fixtures.py": "cf63ea5982c3794454dae838b686302243d7a4e5e19b5604b06bdebf73c71040",
+    "tools/run_full_page_dummy_validation.py": "f957fb17a9ec6ef48f9258ac93cb305d3ed0f8a9074f9877b6eac01cb4b9f654",
     "tests/fixtures/full_page_dummy/source_inputs.json": "cc0db74f8cc67da644e867d4a135670f3ae117b64cd3b48bcd7ec978cd44fc6c",
     "tests/fixtures/full_page_dummy/expected_products.json": "2f66e2aadfe1fcdb0a3b34d93438030286b6ee2e8b7abb259c8dc4f76a52bba8",
     "tests/fixtures/full_page_dummy/reference_actual_products.json": "2f66e2aadfe1fcdb0a3b34d93438030286b6ee2e8b7abb259c8dc4f76a52bba8",

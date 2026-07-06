@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-06T04:17:39.482327+00:00",
+  "generated_at_utc": "2026-07-06T14:05:41.091606+00:00",
   "generated_for_kst_date": "2026-07-06",
   "environment": {
     "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
@@ -1150,13 +1150,13 @@
     "extra_actual_product_ids": []
   },
   "hashes_sha256": {
-    "src/skills/product-agentizer/SKILL.md": "069a9a4ff827a5b4f3897f1faf4514beed53ddd3866f2cf85efca0e7612bd4fa",
-    "src/skills/product-agentizer/references/schema.json": "685ee3307d64603079d8adce707768e17e96a1aeb48010da2d5bd26f254f4a0a",
-    "src/skills/product-agentizer/references/taxonomy.json": "5d60707c2c79b66ce19c71c3179d18b296e11d6fcaab34d612b25dbc0367e91b",
-    "src/skills/product-agentizer/scripts/validate.py": "93645130621a3936c35edc1718f4c9243e427a6eb0e3b5254da63dcd150b5fff",
-    "tools/generate_size_info_pattern_fixtures.py": "a9b1f9700247f5ab6cf257fd3d6a7885a2c7714c6a5e990ca813dd5d74e70f20",
-    "tools/run_size_info_pattern_validation.py": "67babdd2727b592020265933600d42f67d6000ab59d16c1b17e65987a57abc87",
-    "tools/run_full_page_codex_smoke20_cli.py": "c25a9160e1daea2c31dc76347b68c3f7dfb1677dc1d470cb6da8c24aa5ece8ca",
+    "src/skills/product-agentizer/SKILL.md": "f93d8400c71037f0e0e79dc45fef788137125f1074bbd3059449b49b41097037",
+    "src/skills/product-agentizer/references/schema.json": "337e96de2be85a330b1886114ef787f09ffc4b295a85ab19edf1be099d510cf6",
+    "src/skills/product-agentizer/references/taxonomy.json": "0cb4f518dbdd75b59dd5dc6a13b7c7829338ea50fefcd6f383e4054b6358d64e",
+    "src/skills/product-agentizer/scripts/validate.py": "ff6ce3d1fad3af473fac2343dcfd1e2938af3281510b440b68f7f4f52b501303",
+    "tools/generate_size_info_pattern_fixtures.py": "23b46cb139c32087e9144e98dab7eb6e35c4b85641cff0a7c52858fac1e94c97",
+    "tools/run_size_info_pattern_validation.py": "5ab94852cfe5abba5088703f8725300472f7a038d57010e245602fc8b34a40b2",
+    "tools/run_full_page_codex_smoke20_cli.py": "4486bcdd9e7225f328d319ccd7a9e5ab8f87f3db7e86955a6e79cbff74dcb4bc",
     "tests/fixtures/size_info_patterns/source_inputs.json": "6f93be933e1a3ca3bfaca27282308c92efffce7b5831358fc69707eef0510d6a",
     "tests/fixtures/size_info_patterns/expected_products.json": "2d6f5c310655ef44717fa07bf33c0ed192c3e838d9d60b3f1e28730ecc5e5599",
     "tests/fixtures/size_info_patterns/actual_products.json": "a043cb476468e7cd1d09b0b9848f910102da64fed2cfe6aa0954013710844d94",

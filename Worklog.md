@@ -10,6 +10,55 @@
 
 ---
 
+### W-053 · main 병합 후 최종 제출 zip 패키징
+**요청** `feature/detail-type-category` 최신 구현을 `main`에 fast-forward 병합하고, 메인 루트 기준으로 `submission.zip`을 생성하며, worktree 로그를 누락 없이 통합한 뒤 worktree를 정리해 달라는 요청.
+
+**수행 작업**
+- `main`과 `feature/detail-type-category`가 각각 원격과 같은 커밋을 가리키는지 확인하고, `feature/detail-type-category`의 `260aec5`를 `main`에 fast-forward 병합한 뒤 `origin/main`에 push했다.
+- 병합된 `main`에서 Python 컴파일, 기본 평가, S7.7 dedup cross-category 재계산, S7.8 size_info 패턴 검증, S7.7 full-page dummy 검증을 재실행했다.
+- 검증 재실행으로 갱신된 report 생성 시각과 최신 파일 hash를 보존했다.
+- 메인 루트 `logs/`와 worktree `logs/`를 source-separated 구조로 통합했다. worktree 로그는 `logs/worktrees/detail-type-category/` 아래에 원본 복사했으며 해시 일치를 확인했다.
+- `out/submission-staging/`에 `src/`, `README.md`, `logs/`만 복사하고, `out/submission.zip`을 생성했다.
+- zip 내부 구조, 필수 파일, 금지 폴더 부재, 로그 확장자, staging 비밀정보 패턴을 검증했다.
+- zip 검증 후 `.worktrees/detail-type-category` worktree를 제거했다.
+
+**변경 파일**
+- 수정: `docs/reports/s7-7-dedup-cross-category-recheck-report.md`
+- 수정: `docs/reports/s7-7-dedup-cross-category-recheck-results.json`
+- 수정: `docs/reports/s7-7-full-page-dummy-validation-report.md`
+- 수정: `docs/reports/s7-7-full-page-dummy-validation-results.json`
+- 수정: `docs/reports/s7-8-size-info-coverage-report.md`
+- 수정: `docs/reports/s7-8-size-info-coverage-results.json`
+- 수정: `Worklog.md`
+- 수정: `Troubleshootinglog.md`
+- 생성(Git 제외): `logs/worktrees/detail-type-category/...`
+- 생성(Git 제외): `out/submission-staging/`
+- 생성(Git 제외): `out/submission.zip`
+
+**검증**
+- `python -m py_compile ...` 통과.
+- `python tests\evaluate_product_agentizer.py --pretty` 통과: micro precision 98.68%, micro recall 89.29%, dedup accuracy 100%.
+- `python tools\run_s7_7_dedup_cross_category_recheck.py` 통과: candidate 2,788건, high-confidence cross-category false duplicate 0건.
+- `python tools\run_size_info_pattern_validation.py` 통과: size_info precision 100%, recall 100%.
+- `python tools\run_full_page_dummy_validation.py` 통과.
+- zip 구조 검증 통과: 파일 엔트리 12개, 로그 파일 5개, 최상위 `logs`, `README.md`, `src`만 존재.
+- staging 비밀정보 패턴 검색 0건.
+- worktree 원본 로그, 통합 로그, staging 로그의 SHA-256 일치 확인.
+- `git diff --check` 통과.
+
+**판단 근거**
+- 과제 원문과 기준 계약 문서에서 `submission.zip` 루트는 `src/`, `README.md`, `logs/`로 고정되어 있다.
+- worktree 사용 중 로그가 세션 cwd 기준으로 분산 저장되므로, 메인 루트 로그만 담으면 일부 로그 누락으로 해석될 수 있다.
+- 검증 재실행으로 생긴 report diff는 수치 변경이 아니라 최신 `main` 파일 hash와 생성 시각 갱신이므로 재현성 보존을 위해 커밋 대상으로 유지한다.
+
+**결과**
+- 완료: `out/submission.zip` 생성 및 구조 검증 완료.
+- 완료: 최신 구현은 `main`과 `origin/main`에 반영 완료.
+- 완료: `.worktrees/detail-type-category` 제거 완료.
+- 남은 작업: 제출 폼에 `docs/submission-questions.md` 또는 README의 질문 5문항 답변을 기준으로 입력하고, 제출 직전 현재 턴 종료 후 갱신될 수 있는 로그까지 포함하려면 zip을 한 번 더 재생성해야 한다.
+
+---
+
 ### W-052 · S7.7 dedup cross-category 독립 재계산 검증
 **요청** S9 교차검증 보고서의 미검증 범위였던 S7.7 dedup cross-category 재계산 독립 검증을 패키징 전 최종 작업으로 수행.
 
