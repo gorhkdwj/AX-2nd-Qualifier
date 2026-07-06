@@ -10,6 +10,28 @@
 
 ---
 
+### T-017 · PowerShell JSON 검사 중 UTF-8 한국어 taxonomy 오탐
+**발생 상황**
+- `submission.zip` 압축 해제본의 `taxonomy.json`을 PowerShell `Get-Content -Raw | ConvertFrom-Json`으로 파싱해 보려 했다.
+
+**증상**
+- PowerShell 출력에서 한국어가 mojibake로 보였고, `ConvertFrom-Json`이 `Invalid object passed in` 오류를 냈다.
+
+**확인된 원인**
+- Windows PowerShell의 기본 인코딩 처리와 콘솔 출력 경로가 UTF-8 한국어 JSON을 안정적으로 다루지 못해 발생한 검증 명령 오탐이었다.
+- 같은 파일을 Python `json` 모듈과 `python -m json.tool`로 검증했을 때 repo 원본과 zip 압축 해제본 모두 정상 JSON으로 확인됐다.
+
+**조치**
+- JSON 유효성 최종 판정은 Python `json` 파서 기준으로 교차확인했다.
+- README 한글 문구 확인은 `rg`와 UTF-8 `Get-Content` 출력으로 확인했다.
+- PowerShell heredoc 형태의 Python 실행 시도는 T-008의 기존 재발 유형과 같아, 이후 PowerShell에서는 here-string 파이프 또는 `python -c`를 사용했다.
+
+**재발 방지**
+- UTF-8 한국어 JSON의 유효성 검증은 PowerShell `ConvertFrom-Json` 대신 `python -m json.tool` 또는 Python `json.loads(..., encoding='utf-8')` 경로를 우선 사용한다.
+- PowerShell에서 Bash heredoc 문법을 사용하지 않는다.
+
+---
+
 ### T-016 · zip 검증 중 디렉터리 엔트리의 로그 확장자 오탐
 **발생 상황**
 - `out/submission.zip` 생성 후 zip 내부 로그 파일 확장자 검증을 수행했다.

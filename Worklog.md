@@ -10,6 +10,45 @@
 
 ---
 
+### W-054 · submission.zip 내용물 완결성 최종 점검
+**요청** `out/submission.zip` 내용물이 제출 형식과 구성 요건을 충족하는지 최종 점검.
+
+**수행 작업**
+- `out/submission.zip`을 실제로 열어 엔트리 목록을 확인하고, 최상위 구성이 `README.md`, `logs/`, `src/`만으로 구성되어 있는지 확인했다.
+- 압축을 `out/submission-audit/`에 해제해 manifest, schema, taxonomy JSON 파싱을 확인했다.
+- 압축 해제본의 `validate.py`, `dedup.py`를 Python compile로 확인했다.
+- README에 제출 개요, 플러그인 루트, 로그 보존 설명, 질문 5문항 답변이 포함되어 있는지 확인했다.
+- zip 내부 로그 파일 5개가 모두 제출 허용 확장자(`.jsonl`)인지 확인했다.
+- zip 내부 금지 항목(`docs/`, `tests/`, `tools/`, `out/`, `.git/`, `.worktrees/`, `__pycache__/`, `.pyc`, `.gitkeep`)이 없는지 확인했다.
+- 압축 해제본 기준 비밀정보 패턴 검색을 수행했다.
+- PowerShell의 `ConvertFrom-Json` UTF-8 처리 오탐은 Python JSON 파서로 교차확인해 실제 JSON 문제가 아님을 확인하고 T-017에 기록했다.
+
+**변경 파일**
+- 수정: `Worklog.md`
+- 수정: `Troubleshootinglog.md`
+- 생성(Git 제외): `out/submission-audit/`
+
+**검증**
+- zip 최상위: `README.md`, `logs`, `src`만 존재.
+- zip 파일 엔트리: 12개, 디렉터리 엔트리: 3개.
+- 필수 파일 누락 0건: `src/.codex-plugin/plugin.json`, `SKILL.md`, `schema.json`, `taxonomy.json`, `validate.py`, `dedup.py` 포함.
+- 금지 항목 0건.
+- 로그 파일 5개 포함, 확장자 위반 0건.
+- `plugin.json`, `schema.json`, `taxonomy.json` Python JSON 파싱 통과.
+- 압축 해제본 `validate.py`, `dedup.py` compile 통과.
+- README 핵심 문구 확인 통과.
+- 압축 해제본 비밀정보 패턴 검색 0건.
+
+**판단 근거**
+- 과제 원문과 기준 계약 문서의 제출 구조는 `src/`, `README.md`, `logs/`이며, `docs/`, `tests/`, `tools/`는 제출 필수 범위가 아니다.
+- 로그는 원본 내용 편집 없이 source-separated 경로로 보존되어야 하므로 worktree 로그를 별도 하위 경로에 둔 현재 구조가 안전하다.
+
+**결과**
+- 완료: 현재 `out/submission.zip`은 제출 구성 완결성 기준을 충족한다.
+- 주의: 이 점검 대화 이후 hook이 새 로그를 추가할 수 있으므로, 현재 턴까지 포함한 로그 제출이 필요하면 zip을 마지막으로 한 번 더 재생성해야 한다.
+
+---
+
 ### W-053 · main 병합 후 최종 제출 zip 패키징
 **요청** `feature/detail-type-category` 최신 구현을 `main`에 fast-forward 병합하고, 메인 루트 기준으로 `submission.zip`을 생성하며, worktree 로그를 누락 없이 통합한 뒤 worktree를 정리해 달라는 요청.
 
