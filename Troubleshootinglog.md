@@ -10,6 +10,29 @@
 
 ---
 
+### T-018 · 제출 zip 재검증 중 PowerShell heredoc·최상위 순서 비교 오탐
+**발생 상황**
+- README 답변 수정 후 문항별 글자 수와 재생성한 `submission.zip` 구조를 검증했다.
+
+**증상**
+- PowerShell에서 Bash heredoc(`python - <<'PY'`) 문법을 다시 사용해 글자 수 확인 명령이 실패했다.
+- zip 구조 검사에서 최상위 항목이 `logs,README.md,src` 순서로 반환됐는데, 검사 스크립트가 특정 순서 문자열(`README.md,logs,src`)과 비교해 실패로 판정했다.
+
+**확인된 원인**
+- 첫 증상은 T-008과 같은 PowerShell/Bash 문법 혼동이다.
+- 두 번째 증상은 zip 구조의 문제가 아니라 검증 명령이 집합 비교가 아닌 순서 의존 문자열 비교를 사용한 문제다.
+
+**조치**
+- Python 글자 수 확인은 PowerShell here-string 파이프로 재실행했다.
+- zip 최상위 구조 검사는 순서와 무관하게 허용된 top-level 집합(`src`, `README.md`, `logs`)인지 확인하도록 바꿔 재검증했다.
+- 재검증 결과 zip 구조, JSON 파싱, Python compile, 비밀정보 패턴 검색이 모두 통과했다.
+
+**재발 방지**
+- PowerShell에서는 Bash heredoc 문법을 사용하지 않는다.
+- zip 내부 구조 검증에서 엔트리 순서는 의미가 없으므로, top-level 검사는 항상 집합 기준으로 수행한다.
+
+---
+
 ### T-017 · PowerShell JSON 검사 중 UTF-8 한국어 taxonomy 오탐
 **발생 상황**
 - `submission.zip` 압축 해제본의 `taxonomy.json`을 PowerShell `Get-Content -Raw | ConvertFrom-Json`으로 파싱해 보려 했다.

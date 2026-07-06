@@ -10,6 +10,44 @@
 
 ---
 
+### W-055 · 제출 질문 5문항 답변 세부화 및 README 반영
+**요청** 제출 폼의 5개 문항 의도를 정확히 반영해 `README.md`의 각 답변을 세부적으로 작성하고, 로그 파일과 작업 기록을 참고해 내용 정합성을 맞춰 달라는 요청.
+
+**수행 작업**
+- `README.md`의 질문 5문항 답변을 제출 폼 문항 의도에 맞춰 재작성했다.
+- `docs/submission-questions.md`도 같은 취지의 최종 답변으로 갱신했다.
+- 로그와 작업 기록에서 실제 진행 내역을 대조해, AI 활용 범위와 직접 판단한 범위, 받아들이지 않은 제안, 검증 중 막혔던 지점(size_info, material_part, invalid fixture, 로그 분산, PowerShell UTF-8 오탐)을 답변에 반영했다.
+- 문항 2에는 공개 근거 URL을 별도 출처로 명시했다.
+- 변경된 README가 제출 zip에도 들어가도록 `out/submission.zip`을 재생성했다.
+
+**변경 파일**
+- 수정: `README.md`
+- 수정: `docs/submission-questions.md`
+- 수정: `Worklog.md`
+- 수정: `Troubleshootinglog.md`
+- 재생성(Git 제외): `out/submission-staging/`
+- 재생성(Git 제외): `out/submission.zip`
+
+**검증**
+- README 문항별 글자 수 확인: Q1 459자, Q2 430자, Q3 686자, Q4 636자, Q5 650자.
+- README와 `docs/submission-questions.md`에서 출처, 동작 방식, AI 활용, 검증 예시, 한계 문구 확인.
+- zip 재생성 후 구조 검증 통과: 파일 엔트리 12개, 디렉터리 엔트리 3개, 최상위 `logs`, `README.md`, `src`, 로그 파일 5개.
+- zip staging 기준 `plugin.json`, `schema.json`, `taxonomy.json` JSON 파싱 통과.
+- zip staging 기준 `validate.py`, `dedup.py` Python compile 통과.
+- zip staging 비밀정보 패턴 검색 0건.
+
+**판단 근거**
+- 제출 문항은 단순 기능 요약보다 사용자·상황·막히는 지점, AI 활용과 직접 판단의 구분, 정상/예외 검증 예시를 요구하므로 기존 답변보다 구체화가 필요했다.
+- `docs/submission-questions.md`는 제출 폼 복사용 문서이므로 README의 답변과 서로 어긋나지 않게 동기화했다.
+- README는 `submission.zip`에 포함되는 문서이므로 README 변경 후 zip도 다시 생성해야 한다.
+
+**결과**
+- 완료: README와 제출 질문 초안 모두 최종 문항 의도에 맞게 갱신.
+- 완료: 갱신된 README가 포함된 `out/submission.zip` 재생성 및 구조 검증 완료.
+- 주의: 이 작업 이후 현재 대화의 최종 응답은 hook으로 새 로그에 추가될 수 있으므로, 최종 턴까지 제출 로그에 포함하려면 제출 직전 zip을 다시 생성해야 한다.
+
+---
+
 ### W-054 · submission.zip 내용물 완결성 최종 점검
 **요청** `out/submission.zip` 내용물이 제출 형식과 구성 요건을 충족하는지 최종 점검.
 
