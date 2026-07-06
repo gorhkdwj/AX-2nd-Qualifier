@@ -388,4 +388,6 @@ S7.7은 다음 조건을 만족해야 완료로 본다.
 - `tools/generate_full_page_dummy_fixtures.py`로 `full_page_dummy` 300건과 `full_page_codex_subset` 50건을 생성한다.
 - `tools/run_full_page_dummy_validation.py`로 schema, evaluator, dedup, density coverage, synthetic source policy를 검증하고 `docs/reports/s7-7-full-page-dummy-validation-report.md`와 결과 JSON을 저장한다.
 - `full_page_codex_smoke20` 20건은 expected/actual fixture가 없는 격리 workspace에서 실제 Codex CLI로 실행해 actual JSON을 보존한다.
-- 현재 `full_page_codex_subset/actual_products.json` 50건은 실제 Codex CLI 출력이 아니라 deterministic reference actual이다. 즉 생성된 fixture와 평가 절차, 20건 smoke 실제 실행 검증은 완료됐지만, 50건 전체 subset의 실제 Codex CLI 기반 blind extraction 검증은 후속 단계로 남아 있다.
+- `full_page_codex_subset` 50건도 expected/actual fixture가 없는 격리 workspace에서 실제 Codex CLI로 실행해 actual JSON과 실행 metadata를 보존했다.
+- 현재 S7.7 수용 기준은 통과했다. 50건 subset 결과는 schema-valid 50/50, micro precision 96.15%, micro recall 88.47%, detail_type precision/recall 100.00%, dedup accuracy 100.00%다.
+- 잔여 개선 후보는 `size_info` 원자화와 `quality.missing_fields` 품질 플래그 해석이다. 이는 S7.7 통과를 막는 결함은 아니지만, 운영 품질을 더 높이려면 SKILL 지침 보강 후 같은 prompt로 재실행해 전후 수치를 비교한다.

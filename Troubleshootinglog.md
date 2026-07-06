@@ -10,6 +10,27 @@
 
 ---
 
+### T-010 · S7.7 50건 평가 결과 출력 과다
+**발생 상황**
+- `full_page_codex_subset` 50건 실제 Codex CLI actual을 생성한 뒤, 평가 결과를 `--pretty`로 확인했다.
+
+**증상**
+- 평가 결과 JSON 전체가 길어져 콘솔 출력이 과도하게 커졌고, 필요한 핵심 지표를 즉시 파악하기 어려웠다.
+
+**확인된 원인**
+- `tests/evaluate_product_agentizer.py --pretty`는 케이스별 차이와 상세 지표를 모두 출력하므로 50건 이상 검증에서는 대화형 확인용으로 너무 길다.
+- 보고서 저장용 전체 JSON과 사람에게 보여줄 요약 지표의 용도를 분리하지 않았다.
+
+**조치**
+- PowerShell here-string으로 Python 요약 스크립트를 실행해 `summary`, `validations`, micro metrics, field metrics, dedup metrics, worst cases만 추출했다.
+- 이후 `tools/run_full_page_dummy_validation.py`가 필요한 지표를 `docs/reports/s7-7-full-page-dummy-validation-results.json`과 report에 보존하도록 갱신했다.
+
+**재발 방지**
+- 30건 이상 평가 결과를 대화형으로 확인할 때는 `--pretty` 전체 출력 대신 요약 추출 스크립트나 report generator를 사용한다.
+- 전체 raw 결과는 파일에 보존하고, 대화 보고에는 수용 기준과 원인 분석에 필요한 지표만 선별한다.
+
+---
+
 ### T-009 · S7.7 Codex subset 대표성·blind 실행성 문제
 **발생 상황**
 - S7.7 실제 Codex CLI 검증을 20건 smoke부터 진행하려고 기존 `full_page_codex_subset` 구성을 확인했다.

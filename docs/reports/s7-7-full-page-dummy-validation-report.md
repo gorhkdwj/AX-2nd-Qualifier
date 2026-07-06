@@ -3,16 +3,17 @@
 ## 요약
 
 - 목적: 실제 상품 페이지 원문을 저장하지 않고, 정보 밀도별 합성 상세페이지 입력으로 플러그인의 운영형 입력 대응력을 검증한다.
-- 생성 일시(UTC): `2026-07-05T20:44:53.479185+00:00`
+- 생성 일시(UTC): `2026-07-06T00:31:24.821187+00:00`
 - 기준 KST 날짜: `2026-07-06`
 - 전체 명령 통과: `True`
-- Codex subset actual 모드: `deterministic_reference_actual_pending_cli_run`
+- Codex subset actual 모드: `codex_cli_actual`
 - Codex smoke20 actual 모드: `codex_cli_actual`
+- 50건 subset actual 생성 일시(UTC): `2026-07-06T00:27:32.201265+00:00`
 
 ## 데이터셋
 
 - `full_page_dummy`: 300건
-- `full_page_codex_subset`: 50건, representative reference actual 보존 세트
+- `full_page_codex_subset`: 50건, 실제 Codex CLI 대표 실행 보존 세트
 - `full_page_codex_smoke20`: 20건, 실제 Codex CLI smoke 실행 세트
 - 정보 밀도 분포: `{'sparse': 60, 'medium': 120, 'full': 90, 'noisy_ambiguous': 30}`
 - 카테고리 분포: `{'outer': 150, 'top': 150}`
@@ -30,8 +31,18 @@
 | self-check detail_type recall | 1.0 |
 | self-check dedup accuracy | 1.0 |
 | Codex subset actual schema-valid | True |
-| Codex subset micro precision | 1.0 |
-| Codex subset micro recall | 1.0 |
+| Codex subset micro precision | 0.9615 |
+| Codex subset micro recall | 0.8847 |
+| Codex subset true/false positive/false negative | 675 / 27 / 88 |
+| Codex subset detail_type precision | 1.0 |
+| Codex subset detail_type recall | 1.0 |
+| Codex subset materials precision | 0.9718 |
+| Codex subset materials recall | 0.9718 |
+| Codex subset size_info precision | 0.5965 |
+| Codex subset size_info recall | 0.3301 |
+| Codex subset missing_fields precision | 0.9701 |
+| Codex subset missing_fields recall | 0.7927 |
+| Codex subset dedup accuracy | 1.0 |
 | Codex smoke20 actual schema-valid | True |
 | Codex smoke20 micro precision | 1.0 |
 | Codex smoke20 micro recall | 1.0 |
@@ -46,7 +57,10 @@
 ## 해석
 
 - `full_page_dummy`의 `reference_actual_products.json`은 expected와 동일한 결정적 기준 출력이다. 따라서 이 self-check는 생성된 fixture, schema, evaluator, dedup label의 정합성을 확인하는 검증이며 blind extraction 성능으로 해석하지 않는다.
-- `full_page_codex_subset/actual_products.json`도 이번 단계에서는 실제 Codex CLI 실행 결과가 아니라 deterministic reference actual이다. 실제 Codex subset 실행은 다음 단계에서 같은 prompt를 사용해 덮어쓰고 본 보고서를 갱신해야 한다.
+- `full_page_codex_subset/actual_products.json`은 expected fixture가 없는 격리 workspace에서 `tests/fixtures/full_page_codex_subset/prompt.md`를 입력해 생성한 50건 실제 Codex CLI 결과다. actual mode가 `codex_cli_actual`이 아니면 이 문장은 성립하지 않으므로 `actual_metadata.json`을 먼저 확인해야 한다.
+- 50건 subset은 micro precision 0.9615, micro recall 0.8847로 수용 기준(precision 0.95 이상, recall 0.85 이상)을 통과했다. `category`, `subcategory`, `detail_type`은 50건 모두 일치했다.
+- 남은 차이는 주로 `size_info`와 `quality.missing_fields`에 집중된다. `size_info`는 Codex가 `사이즈 옵션: M, L, XL`처럼 한 줄 표현을 하나의 값으로 보존한 반면 expected는 `M`, `L`, `XL` 개별 값으로 라벨링한 차이가 반복됐다. `quality.missing_fields`는 부위 미상 소재의 `material_part` 누락 표시와 모호 소재의 `material_ratio` 해석 차이가 주된 원인이다.
+- 이 차이는 핵심 분류와 상품 속성 구조화의 실패라기보다, 사이즈 옵션 원자화와 품질 플래그 표시 기준을 더 엄밀하게 맞추면 개선될 수 있는 잔여 과제다.
 - `full_page_codex_smoke20/actual_products.json`은 20건 실제 Codex CLI smoke 실행 결과를 저장하는 경로다. actual mode가 `codex_cli_actual`이면 실제 실행 결과이고, `deterministic_reference_actual_pending_cli_run`이면 아직 기준 actual 상태다.
 - Sparse 입력은 세부 필드를 모두 맞히는 것이 목표가 아니라, 입력에 없는 소재 혼용률·관리법·사이즈 정보를 추정하지 않는지를 확인하기 위한 케이스다.
 
@@ -72,9 +86,12 @@
 ```powershell
 python tools\generate_full_page_dummy_fixtures.py
 python tools\run_full_page_codex_smoke20_cli.py
+python tools\run_full_page_codex_smoke20_cli.py --fixture full_page_codex_subset --timeout 3600
 python tools\run_full_page_dummy_validation.py
 ```
 
-## 미완료 항목
+## 후속 개선 항목
 
-- 20건 smoke 결과가 안정적이면 실제 Codex CLI로 `tests/fixtures/full_page_codex_subset/prompt.md` 50건 실행을 진행한다.
+- 50건 subset actual은 보존 완료했다. 패키징 전에는 actual을 임의 재생성하지 말고, 현재 prompt와 actual metadata를 기준으로 재현 가능성을 확인한다.
+- 운영 품질 추가 개선이 필요하면 다음 단계에서 SKILL 지침에 `사이즈 옵션: M, L, XL` 형태의 값을 개별 사이즈로 원자화하라는 규칙을 보강하고, 같은 50건 prompt로 재실행해 `size_info` precision/recall 개선 여부를 비교한다.
+- 부위 미상 소재는 `quality.missing_fields: material_part`, 모호 소재 비율은 `quality.ambiguous_fields` 또는 `material_ratio` 누락 표시 중 어떤 기준을 우선할지 계약 문서에서 더 좁힐 수 있다.

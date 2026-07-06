@@ -1,4 +1,46 @@
 {
-  "actual_mode": "deterministic_reference_actual_pending_cli_run",
-  "note": "Generator writes reference actual until a real Codex CLI actual is saved."
+  "actual_mode": "codex_cli_actual",
+  "execution_mode": "isolated_workspace_without_expected_fixtures",
+  "fixture": "full_page_codex_subset",
+  "generated_at_utc": "2026-07-06T00:27:32.201265+00:00",
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "-C",
+    ".",
+    "--sandbox",
+    "read-only",
+    "-o",
+    "codex_raw_response.txt",
+    "-"
+  ],
+  "exit_code": 0,
+  "prompt_path": "tests\\fixtures\\full_page_codex_subset\\prompt.md",
+  "workspace_path": "out\\full_page_codex_subset_workspace",
+  "raw_response_path": "out\\full_page_codex_subset_workspace\\codex_raw_response.txt",
+  "stdout_len": 54656,
+  "stderr_len": 144627,
+  "stderr_warning_preview": [
+    "2026-07-06T00:21:45.380654Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=C:\\Users\\gorhk\\.codex\\plugins\\cache\\openai-primary-runtime\\template-creator\\26.630.12135\\.codex-plugin/plugin.json",
+    "2026-07-06T00:21:45.384547Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=C:\\Users\\gorhk\\.codex\\plugins\\cache\\openai-primary-runtime\\template-creator\\26.630.12135\\.codex-plugin/plugin.json",
+    "2026-07-06T00:21:45.868254Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=C:\\Users\\gorhk\\.codex\\.tmp\\plugins\\plugins\\ngs-analysis\\.codex-plugin/plugin.json",
+    "2026-07-06T00:21:45.875344Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=C:\\Users\\gorhk\\.codex\\.tmp\\plugins\\plugins\\ngs-analysis\\.codex-plugin/plugin.json",
+    "2026-07-06T00:21:46.861754Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell",
+    "2026-07-06T00:21:47.728795Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=C:\\Users\\gorhk\\.codex\\plugins\\cache\\openai-primary-runtime\\template-creator\\26.630.12135\\.codex-plugin/plugin.json",
+    "2026-07-06T00:21:47.732439Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt: maximum of 3 prompts is supported path=C:\\Users\\gorhk\\.codex\\plugins\\cache\\openai-primary-runtime\\template-creator\\26.630.12135\\.codex-plugin/plugin.json",
+    "2026-07-06T00:21:47.847729Z  WARN codex_core_plugins::marketplace: skipping marketplace plugin with unsupported source path=C:\\Users\\gorhk\\.codex\\.tmp\\marketplaces\\.staging\\marketplace-upgrade-elUgiz\\.claude-plugin\\marketplace.json plugin=\"fullstory\"",
+    "2026-07-06T00:21:47.867319Z  WARN codex_core_plugins::marketplace: skipping marketplace plugin with unsupported source path=C:\\Users\\gorhk\\.codex\\.tmp\\marketplaces\\.staging\\marketplace-upgrade-elUgiz\\.claude-plugin\\marketplace.json plugin=\"jfrog\"",
+    "2026-07-06T00:21:47.955462Z  WARN codex_core_plugins::marketplace: skipping invalid marketplace plugin path=C:\\Users\\gorhk\\.codex\\.tmp\\marketplaces\\.staging\\marketplace-upgrade-elUgiz\\.claude-plugin\\marketplace.json marketplace=claude-plugins-official error=invalid plugin name: only ASCII letters, digits, `_`, and `-` are allowed",
+    "OpenAI Codex v0.142.5",
+    "--------",
+    "workdir: C:\\Users\\gorhk\\AX_Hackathon\\Jocoding_AX해커톤\\2nd\\.worktrees\\detail-type-category\\out\\full_page_codex_subset_workspace",
+    "model: gpt-5.5",
+    "provider: openai",
+    "approval: never",
+    "sandbox: read-only",
+    "reasoning effort: xhigh",
+    "reasoning summaries: none",
+    "session id: 019f34cd-697b-7ab2-8a72-d96ebf0e7cf7"
+  ]
 }

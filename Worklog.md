@@ -10,6 +10,51 @@
 
 ---
 
+### W-040 · S7.7 Codex subset 50건 실제 실행 검증
+**요청**
+- 추천한 다음 태스크대로 S7.7 representative `full_page_codex_subset` 50건의 실제 Codex CLI 검증을 진행
+
+**수행 작업**
+- `tools/run_full_page_codex_smoke20_cli.py`를 generic runner로 확장해 `--fixture full_page_codex_subset` 실행을 지원
+- expected/actual fixture가 없는 `out/full_page_codex_subset_workspace` 격리 workspace에서 50건 prompt를 Codex CLI로 실행
+- 실제 Codex 출력 JSON을 `tests/fixtures/full_page_codex_subset/actual_products.json`에 보존
+- 실행 metadata를 `tests/fixtures/full_page_codex_subset/actual_metadata.json`에 보존
+- S7.7 보고서 생성기가 50건 subset의 actual metadata와 실제 평가 지표를 읽도록 수정
+- `docs/validation-plan.md`, `docs/full-page-dummy-validation-plan.md`, S7.7 report를 실제 실행 완료 상태로 갱신
+- 잔여 오차가 `size_info`, `quality.missing_fields`, 일부 `materials`에 집중됨을 분석하고 후속 개선 항목으로 기록
+
+**변경 파일**
+- 수정: `tools/run_full_page_codex_smoke20_cli.py`
+- 수정: `tools/run_full_page_dummy_validation.py`
+- 수정: `tests/fixtures/full_page_codex_subset/actual_products.json`
+- 수정: `tests/fixtures/full_page_codex_subset/actual_metadata.json`
+- 수정: `docs/reports/s7-7-full-page-dummy-validation-report.md`
+- 수정: `docs/reports/s7-7-full-page-dummy-validation-results.json`
+- 수정: `docs/validation-plan.md`
+- 수정: `docs/full-page-dummy-validation-plan.md`
+- 수정: `Troubleshootinglog.md`
+- 수정: `Worklog.md`
+
+**검증**
+- `python -m py_compile tools\run_full_page_dummy_validation.py tools\run_full_page_codex_smoke20_cli.py` 통과
+- `python tools\run_full_page_codex_smoke20_cli.py --fixture full_page_codex_subset --timeout 3600` 통과
+- `python src\skills\product-agentizer\scripts\validate.py tests\fixtures\full_page_codex_subset\actual_products.json` 결과: valid true, checked 50, errors 0
+- `python tests\evaluate_product_agentizer.py --inputs tests\fixtures\full_page_codex_subset\source_inputs.json --expected tests\fixtures\full_page_codex_subset\expected_products.json --actual tests\fixtures\full_page_codex_subset\actual_products.json --dedup-labels tests\fixtures\full_page_codex_subset\duplicate_labels.json` 통과
+- 50건 결과: schema-valid 50/50, micro precision 96.15%, micro recall 88.47%, detail_type precision/recall 100.00%, dedup accuracy 100.00%
+- `python tools\run_full_page_dummy_validation.py` 결과: all_commands_passed true
+- 자동 fetch 0건, 실제 상품 원문 저장 0건, 법적 적합/부적합 판정 0건, cross-category high-confidence false duplicate 0건
+
+**판단 근거**
+- 20건 smoke가 안정화되었으므로 representative 50건까지 실제 Codex CLI actual을 보존해 S7.7의 재현성과 운영형 입력 검증 강도를 높였다.
+- 현재 50건 지표는 S7.7 수용 기준을 통과하므로, SKILL을 즉시 수정해 actual과 현재 지침의 기준을 어긋나게 만들지 않고 잔여 개선 항목으로 분리했다.
+
+**결과**
+- 완료: S7.7 50건 representative 실제 Codex CLI 검증 완료
+- 기록: Troubleshootinglog T-010
+- 남은 작업: 패키징 전 최종 구조 점검, README 갱신 여부 확인, `size_info` 원자화 개선 여부 결정
+
+---
+
 ### W-039 · S7.7 Codex smoke20 실제 실행과 라벨 기준 보정
 **요청**
 - 추천한 다음 태스크대로 S7.7 실제 Codex CLI 검증을 20건 smoke부터 진행

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-05T20:44:53.479185+00:00",
+  "generated_at_utc": "2026-07-06T00:31:24.821187+00:00",
   "generated_for_kst_date": "2026-07-06",
   "environment": {
     "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
@@ -3909,11 +3909,11 @@
         ],
         "attribute_metrics": {
           "micro": {
-            "precision": 1.0,
-            "recall": 1.0,
-            "true_positive": 763,
-            "false_positive": 0,
-            "false_negative": 0
+            "precision": 0.9615,
+            "recall": 0.8847,
+            "true_positive": 675,
+            "false_positive": 27,
+            "false_negative": 88
           },
           "by_field": {
             "title": {
@@ -3945,11 +3945,11 @@
               "false_negative": 0
             },
             "materials": {
-              "precision": 1.0,
-              "recall": 1.0,
-              "true_positive": 71,
-              "false_positive": 0,
-              "false_negative": 0
+              "precision": 0.9718,
+              "recall": 0.9718,
+              "true_positive": 69,
+              "false_positive": 2,
+              "false_negative": 2
             },
             "fit": {
               "precision": 1.0,
@@ -3987,18 +3987,18 @@
               "false_negative": 0
             },
             "size_info": {
-              "precision": 1.0,
-              "recall": 1.0,
-              "true_positive": 103,
-              "false_positive": 0,
-              "false_negative": 0
+              "precision": 0.5965,
+              "recall": 0.3301,
+              "true_positive": 34,
+              "false_positive": 23,
+              "false_negative": 69
             },
             "quality.missing_fields": {
-              "precision": 1.0,
-              "recall": 1.0,
-              "true_positive": 82,
-              "false_positive": 0,
-              "false_negative": 0
+              "precision": 0.9701,
+              "recall": 0.7927,
+              "true_positive": 65,
+              "false_positive": 2,
+              "false_negative": 17
             },
             "quality.ambiguous_fields": {
               "precision": 1.0,
@@ -4034,46 +4034,119 @@
             {
               "product_id": "full_outer_002",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 17,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9286,
+                "recall": 0.7647,
+                "true_positive": 13,
+                "false_positive": 1,
+                "false_negative": 4
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: M, L, XL"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "XL"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_outer_003",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 17,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.8,
+                "recall": 0.7059,
+                "true_positive": 12,
+                "false_positive": 3,
+                "false_negative": 5
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "materials",
+                  "false_positive": [
+                    "unknown:rayon:missing:null"
+                  ],
+                  "false_negative": [
+                    "unknown:rayon:ambiguous:null"
+                  ]
+                },
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: M, L, XL"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "XL"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "material_ratio"
+                  ],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_outer_004",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 15,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9231,
+                "recall": 0.8,
+                "true_positive": 12,
+                "false_positive": 1,
+                "false_negative": 3
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: M, L, XL"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "XL"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_outer_005",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 16,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9286,
+                "recall": 0.8125,
+                "true_positive": 13,
+                "false_positive": 1,
+                "false_negative": 3
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: M, L, XL"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "XL"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_outer_006",
@@ -4112,12 +4185,20 @@
               "product_id": "full_outer_009",
               "metrics": {
                 "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 17,
+                "recall": 0.9412,
+                "true_positive": 16,
                 "false_positive": 0,
-                "false_negative": 0
+                "false_negative": 1
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_outer_010",
@@ -4144,46 +4225,119 @@
             {
               "product_id": "full_outer_012",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 17,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9286,
+                "recall": 0.7647,
+                "true_positive": 13,
+                "false_positive": 1,
+                "false_negative": 4
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: M, L, XL"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "XL"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_outer_013",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 17,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.8,
+                "recall": 0.7059,
+                "true_positive": 12,
+                "false_positive": 3,
+                "false_negative": 5
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "materials",
+                  "false_positive": [
+                    "unknown:rayon:missing:null"
+                  ],
+                  "false_negative": [
+                    "unknown:rayon:ambiguous:null"
+                  ]
+                },
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: M, L, XL"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "XL"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [
+                    "material_ratio"
+                  ],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_outer_014",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 15,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9231,
+                "recall": 0.8,
+                "true_positive": 12,
+                "false_positive": 1,
+                "false_negative": 3
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: M, L, XL"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "XL"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_outer_015",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 15,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9231,
+                "recall": 0.8,
+                "true_positive": 12,
+                "false_positive": 1,
+                "false_negative": 3
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: M, L, XL"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "XL"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_outer_016",
@@ -4199,24 +4353,55 @@
             {
               "product_id": "full_outer_022",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 17,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9286,
+                "recall": 0.7647,
+                "true_positive": 13,
+                "false_positive": 1,
+                "false_negative": 4
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: M, L, XL"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "XL"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_outer_024",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 15,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9231,
+                "recall": 0.8,
+                "true_positive": 12,
+                "false_positive": 1,
+                "false_negative": 3
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: M, L, XL"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "XL"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_outer_028",
@@ -4265,24 +4450,48 @@
             {
               "product_id": "full_outer_044",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 15,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9231,
+                "recall": 0.8,
+                "true_positive": 12,
+                "false_positive": 1,
+                "false_negative": 3
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: M, L, XL"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "XL"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_outer_045",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 15,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9231,
+                "recall": 0.8,
+                "true_positive": 12,
+                "false_positive": 1,
+                "false_negative": 3
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: M, L, XL"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "XL"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_top_150",
@@ -4309,46 +4518,108 @@
             {
               "product_id": "full_top_152",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 16,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9286,
+                "recall": 0.8125,
+                "true_positive": 13,
+                "false_positive": 1,
+                "false_negative": 3
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: S, M, L"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "S"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_top_153",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 17,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9286,
+                "recall": 0.7647,
+                "true_positive": 13,
+                "false_positive": 1,
+                "false_negative": 4
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: S, M, L"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "S"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_top_154",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 16,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9231,
+                "recall": 0.75,
+                "true_positive": 12,
+                "false_positive": 1,
+                "false_negative": 4
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: S, M, L"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "S"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_top_155",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 16,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9286,
+                "recall": 0.8125,
+                "true_positive": 13,
+                "false_positive": 1,
+                "false_negative": 3
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: S, M, L"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "S"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_top_156",
@@ -4387,12 +4658,20 @@
               "product_id": "full_top_159",
               "metrics": {
                 "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 17,
+                "recall": 0.9412,
+                "true_positive": 16,
                 "false_positive": 0,
-                "false_negative": 0
+                "false_negative": 1
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_top_160",
@@ -4419,46 +4698,115 @@
             {
               "product_id": "full_top_162",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 16,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9286,
+                "recall": 0.8125,
+                "true_positive": 13,
+                "false_positive": 1,
+                "false_negative": 3
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: S, M, L"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "S"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_top_163",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 17,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9286,
+                "recall": 0.7647,
+                "true_positive": 13,
+                "false_positive": 1,
+                "false_negative": 4
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: S, M, L"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "S"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_top_164",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 16,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9231,
+                "recall": 0.75,
+                "true_positive": 12,
+                "false_positive": 1,
+                "false_negative": 4
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: S, M, L"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "S"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_top_165",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 16,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9231,
+                "recall": 0.75,
+                "true_positive": 12,
+                "false_positive": 1,
+                "false_negative": 4
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: S, M, L"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "S"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_top_166",
@@ -4497,12 +4845,20 @@
               "product_id": "full_top_169",
               "metrics": {
                 "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 17,
+                "recall": 0.9412,
+                "true_positive": 16,
                 "false_positive": 0,
-                "false_negative": 0
+                "false_negative": 1
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_top_170",
@@ -4518,46 +4874,111 @@
             {
               "product_id": "full_top_174",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 16,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9231,
+                "recall": 0.75,
+                "true_positive": 12,
+                "false_positive": 1,
+                "false_negative": 4
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: S, M, L"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "S"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_top_179",
               "metrics": {
                 "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 17,
+                "recall": 0.9412,
+                "true_positive": 16,
                 "false_positive": 0,
-                "false_negative": 0
+                "false_negative": 1
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_top_194",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 16,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9231,
+                "recall": 0.75,
+                "true_positive": 12,
+                "false_positive": 1,
+                "false_negative": 4
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: S, M, L"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "S"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             },
             {
               "product_id": "full_top_195",
               "metrics": {
-                "precision": 1.0,
-                "recall": 1.0,
-                "true_positive": 16,
-                "false_positive": 0,
-                "false_negative": 0
+                "precision": 0.9231,
+                "recall": 0.75,
+                "true_positive": 12,
+                "false_positive": 1,
+                "false_negative": 4
               },
-              "differences": []
+              "differences": [
+                {
+                  "field": "size_info",
+                  "false_positive": [
+                    "사이즈 옵션: S, M, L"
+                  ],
+                  "false_negative": [
+                    "L",
+                    "M",
+                    "S"
+                  ]
+                },
+                {
+                  "field": "quality.missing_fields",
+                  "false_positive": [],
+                  "false_negative": [
+                    "material_part"
+                  ]
+                }
+              ]
             }
           ],
           "missing_actual_product_ids": [],
@@ -4671,7 +5092,7 @@
           ]
         }
       },
-      "stdout_len": 11956,
+      "stdout_len": 16238,
       "stderr": ""
     },
     {
@@ -5252,7 +5673,7 @@
     "src/skills/product-agentizer/scripts/dedup.py": "dd69c8ea40bd081b7fd53ec514415d147457c940321b929c3f4fdd748ab937c4",
     "tests/evaluate_product_agentizer.py": "a86cb4941be692c0f0914dcfc7939af35fe377b06e9722582982c8471d658dd7",
     "tools/generate_full_page_dummy_fixtures.py": "7ed740b6e2314ec568ab77a3011f7fd1267c84affbb8596097fa3e0e2862daa1",
-    "tools/run_full_page_dummy_validation.py": "4ac76d1caae76f8a85acaff428071f7104ca07acd7ebbad65fe88204f596ed0f",
+    "tools/run_full_page_dummy_validation.py": "891eccdd8684dffac36ce0cb8dd19d1807bed84acf999155fe92853fb303fd4f",
     "tests/fixtures/full_page_dummy/source_inputs.json": "cc0db74f8cc67da644e867d4a135670f3ae117b64cd3b48bcd7ec978cd44fc6c",
     "tests/fixtures/full_page_dummy/expected_products.json": "274d8e2f5f07731de53c6f75dd81c6f6552b0c1eeb00617abb177ac6fde0d74f",
     "tests/fixtures/full_page_dummy/reference_actual_products.json": "274d8e2f5f07731de53c6f75dd81c6f6552b0c1eeb00617abb177ac6fde0d74f",
@@ -5260,8 +5681,8 @@
     "tests/fixtures/full_page_dummy/case_metadata.json": "5dc57a7ef5ceddae99327d73f1fb518229a9589aa14d76bd97a4a0308873fc37",
     "tests/fixtures/full_page_codex_subset/source_inputs.json": "df59f6e3d5cc6aad6f2a4f452c3cb88c32e9f96278eee43617b1b05c43e31b72",
     "tests/fixtures/full_page_codex_subset/expected_products.json": "559baa111631f5f9a0c88cbd5c07bc69bbc012539349667e085214ef8ec8be6a",
-    "tests/fixtures/full_page_codex_subset/actual_products.json": "559baa111631f5f9a0c88cbd5c07bc69bbc012539349667e085214ef8ec8be6a",
-    "tests/fixtures/full_page_codex_subset/actual_metadata.json": "5889ffdfaad91082b86c48728b73571b3c285e3cb882dba06666e333fe52dc49",
+    "tests/fixtures/full_page_codex_subset/actual_products.json": "17e12c0890bf95ae4aa1abe04e76b6f01e7bcf9307ece02c57fecd8f690b0ccc",
+    "tests/fixtures/full_page_codex_subset/actual_metadata.json": "475aa3ea4195059fea0d3cd43281c357d776c5ed848b2bc18758e49f4fcc6c80",
     "tests/fixtures/full_page_codex_subset/duplicate_labels.json": "9191e3632e2109ff616b359675f2ea3ef335449c12d5dd1aca9b900e10c56020",
     "tests/fixtures/full_page_codex_subset/prompt.md": "7e9b0605f25bfb256fa55a8d8d93cb4e2bce7911fd7a2a2f5821dded799c728d",
     "tests/fixtures/full_page_codex_subset/prompt_template.md": "d1743f79e231db8f1d61afa030e0022c5b5c7f708e0bbf344096703dc15349c4",
@@ -5282,9 +5703,22 @@
     "full_page_selfcheck_detail_type_recall": 1.0,
     "full_page_selfcheck_dedup_accuracy": 1.0,
     "full_page_codex_subset_actual_schema_valid": true,
-    "full_page_codex_subset_micro_precision": 1.0,
-    "full_page_codex_subset_micro_recall": 1.0,
-    "full_page_codex_subset_actual_mode": "deterministic_reference_actual_pending_cli_run",
+    "full_page_codex_subset_micro_precision": 0.9615,
+    "full_page_codex_subset_micro_recall": 0.8847,
+    "full_page_codex_subset_true_positive": 675,
+    "full_page_codex_subset_false_positive": 27,
+    "full_page_codex_subset_false_negative": 88,
+    "full_page_codex_subset_detail_type_precision": 1.0,
+    "full_page_codex_subset_detail_type_recall": 1.0,
+    "full_page_codex_subset_size_info_precision": 0.5965,
+    "full_page_codex_subset_size_info_recall": 0.3301,
+    "full_page_codex_subset_missing_fields_precision": 0.9701,
+    "full_page_codex_subset_missing_fields_recall": 0.7927,
+    "full_page_codex_subset_materials_precision": 0.9718,
+    "full_page_codex_subset_materials_recall": 0.9718,
+    "full_page_codex_subset_dedup_accuracy": 1.0,
+    "full_page_codex_subset_actual_mode": "codex_cli_actual",
+    "full_page_codex_subset_generated_at_utc": "2026-07-06T00:27:32.201265+00:00",
     "full_page_codex_smoke20_actual_schema_valid": true,
     "full_page_codex_smoke20_micro_precision": 1.0,
     "full_page_codex_smoke20_micro_recall": 1.0,
