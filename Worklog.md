@@ -10,6 +10,46 @@
 
 ---
 
+### W-047 · README 및 검증 수치 정합성 보정
+**요청**
+- 최종 보완 3단계로 README 수치와 제출/검증 표현 정합성을 보정하고, 단계별 중간 보고·문서화·commit/push 진행
+
+**수행 작업**
+- README의 구조 설명을 최종 제출물(`src/`, `README.md`, `logs/`)과 개발 저장소 검증 자료(`docs/`, `tests/fixtures/`, `tools/`)로 분리
+- README의 기본 5건 평가 수치를 최신 결과인 micro precision 98.68%, micro recall 89.29%로 갱신
+- S7.5 Codex subset 수치를 micro precision 97.93%, micro recall 95.95%로 갱신
+- 실제 공개 snippet 탐색 비교 수치를 micro precision 65.48%, micro recall 77.46%로 갱신하고 acceptance 기준이 아니라 정보 부족 리스크 확인용임을 명시
+- `tests/fixtures/evaluation/expected_products.json`과 `predicted_products.json`에 `material_part` 누락 표시를 추가해 기본 평가 명령이 새 validator 계약에서 schema-valid가 되도록 정렬
+- `docs/submission-questions.md`, `docs/validation-plan.md`, `docs/product-agentizer-complete-guide.md`, `docs/reports/s7-expanded-validation-report.md`, `docs/reports/s8-total-validation-evaluation-report.md`의 현재형 수치를 README와 맞춤
+
+**변경 파일**
+- 수정: `README.md`
+- 수정: `docs/submission-questions.md`
+- 수정: `docs/validation-plan.md`
+- 수정: `docs/product-agentizer-complete-guide.md`
+- 수정: `docs/reports/s7-expanded-validation-report.md`
+- 수정: `docs/reports/s8-total-validation-evaluation-report.md`
+- 수정: `tests/fixtures/evaluation/expected_products.json`
+- 수정: `tests/fixtures/evaluation/predicted_products.json`
+- 수정: `Worklog.md`
+
+**검증**
+- `python tests\evaluate_product_agentizer.py --pretty` 통과: expected/predicted schema-valid, micro precision 98.68%, micro recall 89.29%, dedup accuracy 100.00%
+- `python src\skills\product-agentizer\scripts\validate.py tests\fixtures\schema\valid_outer.json` 통과
+- `python src\skills\product-agentizer\scripts\validate.py tests\fixtures\schema\valid_top.json` 통과
+- 전체 `tests/fixtures/schema/invalid_*.json`가 모두 기대대로 실패 처리됨을 확인
+- README, 제출 질문, 현재형 검증 문서에서 오래된 수치 문자열이 남아 있지 않음을 검색으로 확인
+
+**판단 근거**
+- 최종 zip에는 개발 검증 자료 전체가 들어가지 않을 수 있으므로 README에서 제출물 구성과 개발 저장소 검증 자료를 분리해야 심사자가 구조를 오해하지 않는다.
+- 검증 수치는 최신 validator 계약과 fixture 보정 이후의 실행 결과를 기준으로 맞춰야 한다.
+
+**결과**
+- 완료: README와 주요 현재형 문서의 검증 수치·제출 구조 표현 정합성 보정
+- 남은 작업: 사용자가 지시한 최종 단계에서 `submission.zip` 생성 및 내부 구조 검사
+
+---
+
 ### W-046 · material_part 누락 invalid fixture 추가
 **요청**
 - 최종 보완 2단계로 `material_part` 누락 invalid fixture를 추가하고, 단계별 중간 보고·문서화·commit/push 진행

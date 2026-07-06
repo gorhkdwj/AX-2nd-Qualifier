@@ -4,7 +4,7 @@
 
 - 검증 기준 작업물: `.worktrees/detail-type-category`
 - Git branch: `feature/detail-type-category`
-- 기준 commit: `321b9ae` (`test: align material part labeling`)
+- 최근 검증 기준 commit: `0d0f1ae` (`test: add missing material part fixture`)
 - 검증일: 2026-07-06 KST
 - 결론: S8 패키징 직전 품질 기준으로 핵심 기능, 스키마, taxonomy 3-level 구조, 재현 검증, 비밀정보 스캔은 통과 상태다.
 - 주의: 최신 구현은 별도 worktree에 있고, 원본 `logs/`는 메인 작업 디렉터리에만 있다. 최종 `submission.zip` 생성 시 최신 worktree의 `src/`, `README.md`와 메인 작업 디렉터리의 원본 `logs/`를 함께 포함해야 한다.
@@ -77,8 +77,8 @@ git diff --check
 | 지표 | 결과 |
 |---|---:|
 | schema-valid | expected 5/5, actual 5/5 |
-| micro precision | 98.65% |
-| micro recall | 89.02% |
+| micro precision | 98.68% |
+| micro recall | 89.29% |
 | dedup accuracy | 100.00% |
 
 차이는 주로 `materials`, `colors`, `seasons`, `tpo_tags`, `size_info`의 오래된 수작업 대표 fixture에서 발생했다. 이 fixture는 S7.7 이후의 주 acceptance 기준이 아니라 초기 평가기 동작 확인용에 가깝다.
@@ -94,12 +94,12 @@ git diff --check
 | 합성 self-check micro recall | 100.00% |
 | 합성 self-check dedup accuracy | 100.00% |
 | Codex subset 20건 schema-valid | True |
-| Codex subset 20건 micro precision | 95.52% |
-| Codex subset 20건 micro recall | 95.85% |
+| Codex subset 20건 micro precision | 97.93% |
+| Codex subset 20건 micro recall | 95.95% |
 | Codex subset 20건 dedup accuracy | 100.00% |
 | 실제 공개 snippet 10건 schema-valid | True |
-| 실제 공개 snippet 10건 exploratory micro precision | 64.38% |
-| 실제 공개 snippet 10건 exploratory micro recall | 76.30% |
+| 실제 공개 snippet 10건 exploratory micro precision | 65.48% |
+| 실제 공개 snippet 10건 exploratory micro recall | 77.46% |
 | 실제 공개 snippet 10건 detail_type precision/recall | 100.00% / 100.00% |
 | cross-category high-confidence false duplicate | 0건 |
 
