@@ -21,6 +21,16 @@ SMOKE_DIR = ROOT / "tests" / "fixtures" / "full_page_codex_smoke20"
 RESULT_PATH = ROOT / "docs" / "reports" / "s7-7-full-page-dummy-validation-results.json"
 REPORT_PATH = ROOT / "docs" / "reports" / "s7-7-full-page-dummy-validation-report.md"
 KST = timezone(timedelta(hours=9))
+SIZE_INFO_SKILL_ONLY_BASELINE = {
+    "label": "before_skill_only_size_info_rule",
+    "actual_generated_at_utc": "2026-07-06T00:27:32.201265+00:00",
+    "micro_precision": 0.9615,
+    "micro_recall": 0.8847,
+    "size_info_precision": 0.5965,
+    "size_info_recall": 0.3301,
+    "size_info_false_positive": 23,
+    "size_info_false_negative": 69,
+}
 
 
 COMMANDS: list[dict[str, Any]] = [
@@ -336,6 +346,7 @@ def acceptance_summary(commands: list[dict[str, Any]], density: dict[str, Any], 
         "full_page_codex_subset_dedup_accuracy": dedup_accuracy(subset),
         "full_page_codex_subset_actual_mode": subset_metadata.get("actual_mode", "unknown"),
         "full_page_codex_subset_generated_at_utc": subset_metadata.get("generated_at_utc"),
+        "size_info_skill_only_baseline": SIZE_INFO_SKILL_ONLY_BASELINE,
         "full_page_codex_smoke20_actual_schema_valid": command_by_id(commands, "full_page_codex_smoke20_actual_schema")["passed"],
         "full_page_codex_smoke20_micro_precision": micro_value(smoke20, "precision"),
         "full_page_codex_smoke20_micro_recall": micro_value(smoke20, "recall"),
@@ -418,10 +429,24 @@ def write_report(result: dict[str, Any]) -> None:
         "- `full_page_dummy`의 `reference_actual_products.json`은 expected와 동일한 결정적 기준 출력이다. 따라서 이 self-check는 생성된 fixture, schema, evaluator, dedup label의 정합성을 확인하는 검증이며 blind extraction 성능으로 해석하지 않는다.",
         "- `full_page_codex_subset/actual_products.json`은 expected fixture가 없는 격리 workspace에서 `tests/fixtures/full_page_codex_subset/prompt.md`를 입력해 생성한 50건 실제 Codex CLI 결과다. actual mode가 `codex_cli_actual`이 아니면 이 문장은 성립하지 않으므로 `actual_metadata.json`을 먼저 확인해야 한다.",
         f"- 50건 subset은 micro precision {summary['full_page_codex_subset_micro_precision']}, micro recall {summary['full_page_codex_subset_micro_recall']}로 수용 기준(precision 0.95 이상, recall 0.85 이상)을 통과했다. `category`, `subcategory`, `detail_type`은 50건 모두 일치했다.",
-        f"- 남은 차이는 주로 `size_info`와 `quality.missing_fields`에 집중된다. `size_info`는 Codex가 `사이즈 옵션: M, L, XL`처럼 한 줄 표현을 하나의 값으로 보존한 반면 expected는 `M`, `L`, `XL` 개별 값으로 라벨링한 차이가 반복됐다. `quality.missing_fields`는 부위 미상 소재의 `material_part` 누락 표시와 모호 소재의 `material_ratio` 해석 차이가 주된 원인이다.",
-        "- 이 차이는 핵심 분류와 상품 속성 구조화의 실패라기보다, 사이즈 옵션 원자화와 품질 플래그 표시 기준을 더 엄밀하게 맞추면 개선될 수 있는 잔여 과제다.",
+        f"- SKILL-only size_info 원자화 지침 보강 후 `size_info` precision/recall은 {summary['full_page_codex_subset_size_info_precision']} / {summary['full_page_codex_subset_size_info_recall']}이다. `사이즈 옵션: M, L, XL` 같은 한 줄 옵션을 개별 `M`, `L`, `XL` 항목으로 분리하는 기준이 실제 Codex 출력에 반영됐다.",
+        "- 남은 차이는 `materials` 2건이다. `리사이클 섬유와 배색 폴리에스터` 표현에서 Codex가 `polyester`의 부위를 `unknown`으로 둔 반면 expected는 `trim`으로 라벨링한 차이다.",
         "- `full_page_codex_smoke20/actual_products.json`은 20건 실제 Codex CLI smoke 실행 결과를 저장하는 경로다. actual mode가 `codex_cli_actual`이면 실제 실행 결과이고, `deterministic_reference_actual_pending_cli_run`이면 아직 기준 actual 상태다.",
         "- Sparse 입력은 세부 필드를 모두 맞히는 것이 목표가 아니라, 입력에 없는 소재 혼용률·관리법·사이즈 정보를 추정하지 않는지를 확인하기 위한 케이스다.",
+        "",
+        "## Size_info SKILL-only 개선 전후",
+        "",
+        "| 지표 | 개선 전 | 개선 후 |",
+        "|---|---:|---:|",
+        f"| subset micro precision | {SIZE_INFO_SKILL_ONLY_BASELINE['micro_precision']} | {summary['full_page_codex_subset_micro_precision']} |",
+        f"| subset micro recall | {SIZE_INFO_SKILL_ONLY_BASELINE['micro_recall']} | {summary['full_page_codex_subset_micro_recall']} |",
+        f"| size_info precision | {SIZE_INFO_SKILL_ONLY_BASELINE['size_info_precision']} | {summary['full_page_codex_subset_size_info_precision']} |",
+        f"| size_info recall | {SIZE_INFO_SKILL_ONLY_BASELINE['size_info_recall']} | {summary['full_page_codex_subset_size_info_recall']} |",
+        f"| size_info false positive | {SIZE_INFO_SKILL_ONLY_BASELINE['size_info_false_positive']} | {metric_value(command_by_id(commands, 'full_page_codex_subset_eval'), 'size_info', 'false_positive')} |",
+        f"| size_info false negative | {SIZE_INFO_SKILL_ONLY_BASELINE['size_info_false_negative']} | {metric_value(command_by_id(commands, 'full_page_codex_subset_eval'), 'size_info', 'false_negative')} |",
+        "",
+        "- 개선 전 actual은 `2026-07-06T00:27:32.201265+00:00` 생성 결과다. 개선 후 actual은 현재 `actual_metadata.json`의 `generated_at_utc`에 기록되어 있다.",
+        "- schema는 `0.2.0`을 유지했다. 즉 구조 변경 없이 SKILL의 원자화 지침만으로 개선한 결과다.",
         "",
         "## Smoke20 보완 전후",
         "",
@@ -450,8 +475,8 @@ def write_report(result: dict[str, Any]) -> None:
             "## 후속 개선 항목",
             "",
             "- 50건 subset actual은 보존 완료했다. 패키징 전에는 actual을 임의 재생성하지 말고, 현재 prompt와 actual metadata를 기준으로 재현 가능성을 확인한다.",
-            "- 운영 품질 추가 개선이 필요하면 다음 단계에서 SKILL 지침에 `사이즈 옵션: M, L, XL` 형태의 값을 개별 사이즈로 원자화하라는 규칙을 보강하고, 같은 50건 prompt로 재실행해 `size_info` precision/recall 개선 여부를 비교한다.",
-            "- 부위 미상 소재는 `quality.missing_fields: material_part`, 모호 소재 비율은 `quality.ambiguous_fields` 또는 `material_ratio` 누락 표시 중 어떤 기준을 우선할지 계약 문서에서 더 좁힐 수 있다.",
+            "- schema v0.3 size_info 객체화 계획은 `docs/size-info-schema-change-plan.md`에 조건부 계획으로 보존한다. 현재 MVP에서는 SKILL-only 개선이 목표치를 충족했으므로 schema 변경을 보류한다.",
+            "- 남은 materials 2건의 `trim`/`unknown` 부위 차이를 줄이려면 `배색`, `트림`, `포인트` 표현의 소재 부위 처리 기준을 별도 후속 과제로 다룬다.",
         ]
     )
     REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")

@@ -10,6 +10,38 @@
 
 ---
 
+### D-022 · size_info schema 변경 보류와 SKILL-only 원자화 채택
+**상황**
+- S7.7 50건 실제 Codex subset 검증은 전체 수용 기준을 통과했지만, `size_info` precision 59.65%, recall 33.01%로 낮게 남았다.
+- 주요 원인은 `사이즈 옵션: M, L, XL` 같은 한 줄 옵션을 Codex가 하나의 문자열로 보존한 반면, expected는 `M`, `L`, `XL` 개별 항목으로 라벨링한 차이였다.
+- 사용자는 schema 변경 계획은 문서화하되, 당장은 SKILL 변경 계획을 진행하라고 요청했다.
+
+**검토한 선택지**
+- `schema_version`을 `0.3.0`으로 올리고 `size_info`를 객체 배열로 변경한다.
+- schema는 `0.2.0`으로 유지하고 `SKILL.md`와 기준 계약 문서에 size option 원자화 규칙을 명확히 추가한다.
+- `size_info` 평가 기준을 완화한다.
+
+**결정**
+- 현재 MVP에서는 schema 변경을 보류하고, `size_info` schema v0.3 변경안은 `docs/size-info-schema-change-plan.md`에 조건부 계획으로 보존한다.
+- `schema_version: "0.2.0"`의 `size_info: string[]` 구조는 유지한다.
+- 판매 가능한 사이즈 옵션은 개별 항목으로 원자화하고, 실측표는 사이즈별 행 단위로 보존하며, 후기·배송·쿠폰·이벤트 문구는 `size_info`에 섞지 않는 기준을 `docs/requirements-contract.md`와 `SKILL.md`에 반영한다.
+
+**근거**
+- 현재 문제는 schema가 표현하지 못하는 정보 구조 전체의 문제가 아니라, 반복적으로 나타난 한 줄 옵션 원자화 지침 부족에 가까웠다.
+- 패키징 직전 schema 변경은 fixture, evaluator, README, 보고서, actual 재실행 범위를 크게 흔들 수 있다.
+- SKILL-only 보강 후 같은 50건 prompt를 재실행한 결과 `size_info` precision/recall이 100.00%/100.00%로 개선되어 목표치를 충족했다.
+
+**영향**
+- S7.7 50건 subset 최종 결과는 schema-valid 50/50, micro precision 99.74%, micro recall 99.74%, `detail_type` precision/recall 100.00%, `size_info` precision/recall 100.00%, dedup accuracy 100.00%로 갱신됐다.
+- schema v0.3 변경 계획은 활성 구현 기준이 아니라 조건부 재검토 문서로 남는다.
+- 남은 주요 개선 후보는 `배색 폴리에스터` 같은 소재 부위 표현의 `trim`/`unknown` 해석 차이다.
+
+**재검토 조건**
+- SKILL-only 기준이 다른 실제 입력에서 다시 흔들리거나, typed size query가 MVP 이후 핵심 요구로 부상하는 경우.
+- bottom, shoes 등 size 체계가 더 복잡한 카테고리 확장이 확정되는 경우.
+
+---
+
 ### D-021 · S7.7 실제 Codex smoke20 격리 실행과 라벨 기준 보정
 **상황**
 - 20건 실제 Codex CLI smoke 검증을 시작하면서 기존 50건 subset이 앞쪽 50건 중심이라 아우터에 치우쳐 있음을 확인했다.

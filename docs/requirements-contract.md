@@ -74,7 +74,7 @@
     "seasons": ["spring", "summer", "fall", "winter"],
     "tpo_tags": ["예: 하객룩", "예: 출근룩"],
     "care": ["세탁/관리 정보"],
-    "size_info": ["사이즈 관련 정보"]
+    "size_info": ["M", "L", "XL", "M 총장 68cm 어깨 52cm 가슴 60cm"]
   },
   "agent_descriptor": {
     "search_summary": "에이전트 질의에 쓰기 쉬운 요약",
@@ -107,6 +107,28 @@
 ```
 
 중복 감지 점수의 가중치와 `duplicate`/`possible_duplicate` 임계값은 실제 운영 데이터로 학습된 최종 수치가 아니라, 더미 fixture에서 동작을 확인하기 위한 설명 가능한 휴리스틱 baseline이다. 실제 운영 적용 시에는 사람이 라벨링한 상품쌍을 기준으로 precision, recall, false positive, false negative를 비교하며 가중치와 임계값을 재튜닝해야 한다.
+
+### size_info 표준화 계약(schema v0.2)
+
+현재 `schema_version: "0.2.0"`에서 `product.size_info`는 문자열 배열을 유지한다. 다만 각 문자열은 에이전트 질의에 재사용하기 쉬운 최소 의미 단위로 보존한다.
+
+- 판매 옵션은 개별 값으로 원자화한다.
+  - `사이즈 옵션: M, L, XL` -> `["M", "L", "XL"]`
+  - `옵션: S/M/L` -> `["S", "M", "L"]`
+  - `SIZE: 90 95 100` -> `["90", "95", "100"]`
+- 단일 옵션은 그대로 한 항목으로 보존한다.
+  - `FREE`, `ONE SIZE`, `OS` 등
+- 실측표는 사이즈별 행 단위로 보존한다.
+  - `M 총장 68cm 어깨 52cm 가슴 60cm`
+  - `L 총장 70cm 어깨 54cm 가슴 62cm`
+- 모델 착용 정보는 입력에 명시된 경우 size 관련 설명으로 보존할 수 있다.
+  - `모델 178cm L 착용`
+- 후기, 배송, 쿠폰, 이벤트, 마케팅 문구는 size_info에 넣지 않는다.
+  - `후기 요약: 사이즈가 여유 있어요`는 구매자 반응 요약이므로 size_info가 아니다.
+- 입력에 사이즈 정보가 없으면 `size_info: []`로 두고 `quality.missing_fields`에 `size_info`를 추가한다.
+- 모호한 사이즈 표현은 단정하지 않고, 보존할 필요가 있으면 입력 구절 그대로 남기며 `quality.ambiguous_fields`에 `size_info`를 추가한다.
+
+이 계약은 schema 구조를 바꾸지 않는 SKILL-only 개선 기준이다. 판매 옵션, 실측표, 모델 착용 정보를 객체로 구분해야 할 필요가 생기면 `docs/size-info-schema-change-plan.md`의 schema v0.3 계획을 재검토한다.
 
 ## 주요 지표 정의
 - 속성 precision: 추출된 속성 중 정답 라벨과 일치한 속성의 비율.

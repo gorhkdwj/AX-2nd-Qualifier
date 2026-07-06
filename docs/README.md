@@ -16,6 +16,7 @@
 | `implementation-plan.md` | 무신사 문제 2 단일 구현 계획 | 플러그인 구조, 다음 작업 순서, 완료 조건 확인 |
 | `validation-plan.md` | 검증 계획 | 더미 픽스처, 안전성, 제출 구조 검증 기준 확인 |
 | `full-page-dummy-validation-plan.md` | 실제 페이지형 합성 더미 검증 계획 | 정보 밀도별 합성 상세페이지 데이터셋과 S7.7 검증 기준 확인 |
+| `size-info-schema-change-plan.md` | size_info schema 변경 조건부 계획 | SKILL-only 개선이 부족하거나 typed size query가 필요해질 때 재검토 |
 | `product-agentizer-complete-guide.md` | 구현 전체 상세 설명서 | 전체 구조, 세부 기능, 작동 방식, 지표 의미를 한 번에 이해할 때 확인 |
 | `submission-questions.md` | 제출 질문 5문항 답변 초안 | 제출 폼 답변을 복사·검토할 때 확인 |
 | `company-selection.md` | 기업 선정 기준·최종 확정 기록 | 왜 무신사 문제 2를 골랐는지 추적 |

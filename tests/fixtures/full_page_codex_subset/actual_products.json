@@ -25,17 +25,16 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 블랙 스타디움 재킷 000: black stadium_jacket 상품입니다.",
+          "search_summary": "DUMMY STANDARD 블랙 스타디움 재킷 000 | outer/jacket/stadium_jacket | black",
           "query_tags": [
             "outer",
             "jacket",
             "stadium_jacket",
-            "black",
-            "DUMMY STANDARD"
+            "black"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/stadium_jacket으로 매핑했습니다.",
-            "입력에 없는 소재, 핏, 계절, TPO, 관리, 사이즈 정보는 누락 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -78,17 +77,16 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "AX TEST LABEL 그레이 트러커 재킷 001: gray trucker_jacket 상품입니다.",
+          "search_summary": "AX TEST LABEL 그레이 트러커 재킷 001 | outer/jacket/trucker_jacket | gray",
           "query_tags": [
             "outer",
             "jacket",
             "trucker_jacket",
-            "gray",
-            "AX TEST LABEL"
+            "gray"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/trucker_jacket으로 매핑했습니다.",
-            "입력에 없는 소재, 핏, 계절, TPO, 관리, 사이즈 정보는 누락 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -147,26 +145,34 @@
             "low_temp_iron"
           ],
           "size_info": [
-            "사이즈 옵션: M, L, XL"
+            "M",
+            "L",
+            "XL"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 네이비 플리스/뽀글이 002: navy fleece_jacket 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 네이비 플리스/뽀글이 002 | outer/jacket/fleece_jacket | navy",
           "query_tags": [
             "outer",
             "jacket",
             "fleece_jacket",
             "navy",
             "cotton",
-            "oversized"
+            "oversized",
+            "spring",
+            "fall",
+            "commute",
+            "formal",
+            "low_temp_iron"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/fleece_jacket으로 매핑했습니다.",
-            "소재명은 있으나 숫자 혼용률이 없어 material_ratio를 missing 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -195,14 +201,14 @@
               "name": "linen",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "린넨 터치"
+              "evidence": "린넨 터치의 레이온 블렌드 소재."
             },
             {
               "part": "unknown",
               "name": "rayon",
               "ratio": null,
-              "ratio_status": "missing",
-              "evidence": "레이온 블렌드 소재"
+              "ratio_status": "ambiguous",
+              "evidence": "린넨 터치의 레이온 블렌드 소재."
             }
           ],
           "fit": [
@@ -222,11 +228,13 @@
             "no_tumble_dry"
           ],
           "size_info": [
-            "사이즈 옵션: M, L, XL"
+            "M",
+            "L",
+            "XL"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "REPRO SAMPLE 그린 아노락 재킷 003: green anorak_jacket 상품입니다.",
+          "search_summary": "REPRO SAMPLE 그린 아노락 재킷 003 | outer/jacket/anorak_jacket | green",
           "query_tags": [
             "outer",
             "jacket",
@@ -234,16 +242,20 @@
             "green",
             "linen",
             "rayon",
-            "regular"
+            "regular",
+            "summer",
+            "daily",
+            "street",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/anorak_jacket으로 매핑했습니다.",
-            "린넨 터치 표현은 소재감으로 보아 ambiguous, 레이온 블렌드는 비율 누락으로 missing 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
           "missing_fields": [
-            "material_ratio"
+            "material_part"
           ],
           "ambiguous_fields": [
             "material_ratio"
@@ -273,14 +285,14 @@
               "name": "wool",
               "ratio": 70,
               "ratio_status": "explicit",
-              "evidence": "겉감 울 70%"
+              "evidence": "겉감 울 70%, 캐시미어 30%."
             },
             {
               "part": "shell",
               "name": "cashmere",
               "ratio": 30,
               "ratio_status": "explicit",
-              "evidence": "겉감 캐시미어 30%"
+              "evidence": "겉감 울 70%, 캐시미어 30%."
             }
           ],
           "fit": [
@@ -300,11 +312,13 @@
             "hand_wash"
           ],
           "size_info": [
-            "사이즈 옵션: M, L, XL"
+            "M",
+            "L",
+            "XL"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 핑크 슈트/블레이저 재킷 004: pink suit_blazer_jacket 상품입니다.",
+          "search_summary": "DUMMY STANDARD 핑크 슈트/블레이저 재킷 004 | outer/jacket/suit_blazer_jacket | pink",
           "query_tags": [
             "outer",
             "jacket",
@@ -312,11 +326,15 @@
             "pink",
             "wool",
             "cashmere",
-            "longline"
+            "longline",
+            "winter",
+            "outdoor",
+            "travel",
+            "hand_wash"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/suit_blazer_jacket으로 매핑했습니다.",
-            "겉감 울 70%, 캐시미어 30%를 명시 혼용률로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -375,11 +393,13 @@
             "do_not_bleach"
           ],
           "size_info": [
-            "사이즈 옵션: M, L, XL"
+            "M",
+            "L",
+            "XL"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "AX TEST LABEL 화이트 사파리/헌팅 재킷 005: white safari_hunting_jacket 상품입니다.",
+          "search_summary": "AX TEST LABEL 화이트 사파리/헌팅 재킷 005 | outer/jacket/safari_hunting_jacket | white",
           "query_tags": [
             "outer",
             "jacket",
@@ -387,11 +407,16 @@
             "white",
             "nylon",
             "polyester",
-            "relaxed"
+            "relaxed",
+            "spring",
+            "summer",
+            "daily",
+            "casual",
+            "do_not_bleach"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/safari_hunting_jacket으로 매핑했습니다.",
-            "겉감과 안감의 명시 혼용률을 각각 shell, lining 소재로 분리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -456,18 +481,25 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 베이지 레더/라이더스 재킷 006: beige leather_rider_jacket 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 베이지 레더/라이더스 재킷 006 | outer/jacket/leather_rider_jacket | beige",
           "query_tags": [
             "outer",
             "jacket",
             "leather_rider_jacket",
             "beige",
             "leather",
-            "boxy"
+            "polyester",
+            "boxy",
+            "fall",
+            "winter",
+            "layering",
+            "travel",
+            "shade_dry",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/leather_rider_jacket으로 매핑했습니다.",
-            "소재 정보와 사이즈 실측을 입력 문구 그대로 분리해 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -533,7 +565,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "REPRO SAMPLE 블루 트레이닝 재킷 007: blue/green training_jacket 상품입니다.",
+          "search_summary": "REPRO SAMPLE 블루 트레이닝 재킷 007 | outer/jacket/training_jacket | blue,green",
           "query_tags": [
             "outer",
             "jacket",
@@ -541,11 +573,18 @@
             "blue",
             "green",
             "nylon",
-            "cropped"
+            "polyester",
+            "cropped",
+            "spring",
+            "fall",
+            "commute",
+            "formal",
+            "machine_wash",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/training_jacket으로 매핑했습니다.",
-            "복수 컬러, 복수 관리 방법, 사이즈 실측을 누락 없이 배열로 기록했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -610,7 +649,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 카키 나일론/코치 재킷 008: khaki/black nylon_coach_jacket 상품입니다.",
+          "search_summary": "DUMMY STANDARD 카키 나일론/코치 재킷 008 | outer/jacket/nylon_coach_jacket | khaki,black",
           "query_tags": [
             "outer",
             "jacket",
@@ -618,11 +657,17 @@
             "khaki",
             "black",
             "nylon",
-            "slim"
+            "polyester",
+            "slim",
+            "summer",
+            "daily",
+            "street",
+            "dry_clean",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/nylon_coach_jacket으로 매핑했습니다.",
-            "겉감/안감 소재와 실측 치수를 명시 근거로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -653,14 +698,14 @@
               "name": "cashmere",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "캐시미어를 블렌드한 듯한 부드러운 터치감"
+              "evidence": "캐시미어를 블렌드한 듯한 부드러운 터치감의 고급 울 터치 원단. 정확한 혼용률은 상세 이미지 참고."
             },
             {
               "part": "unknown",
               "name": "wool",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "고급 울 터치 원단"
+              "evidence": "캐시미어를 블렌드한 듯한 부드러운 터치감의 고급 울 터치 원단. 정확한 혼용률은 상세 이미지 참고."
             }
           ],
           "fit": [
@@ -686,7 +731,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "AX TEST LABEL 옐로우 블루종/MA-1 009: yellow/brown blouson_ma1 상품입니다.",
+          "search_summary": "AX TEST LABEL 옐로우 블루종/MA-1 009 | outer/jacket/blouson_ma1 | yellow,brown",
           "query_tags": [
             "outer",
             "jacket",
@@ -695,15 +740,21 @@
             "brown",
             "cashmere",
             "wool",
-            "straight"
+            "straight",
+            "winter",
+            "outdoor",
+            "travel",
+            "low_temp_iron"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/blouson_ma1으로 매핑했습니다.",
-            "배송, 쿠폰, 후기 요약은 속성 근거에서 제외하고 소재 터치 표현은 ambiguous 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [
             "material_ratio"
           ],
@@ -737,17 +788,16 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 아이보리 무스탕/퍼 010: ivory mustang_fur 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 아이보리 무스탕/퍼 010 | outer/jumper/mustang_fur | ivory",
           "query_tags": [
             "outer",
             "jumper",
             "mustang_fur",
-            "ivory",
-            "SYNTHETIC WORKS"
+            "ivory"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jumper/mustang_fur로 매핑했습니다.",
-            "입력에 없는 소재, 핏, 계절, TPO, 관리, 사이즈 정보는 누락 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -790,17 +840,16 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "REPRO SAMPLE 브라운 숏패딩/헤비 아우터 011: brown short_padding_heavy_outer 상품입니다.",
+          "search_summary": "REPRO SAMPLE 브라운 숏패딩/헤비 아우터 011 | outer/jumper/short_padding_heavy_outer | brown",
           "query_tags": [
             "outer",
             "jumper",
             "short_padding_heavy_outer",
-            "brown",
-            "REPRO SAMPLE"
+            "brown"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jumper/short_padding_heavy_outer로 매핑했습니다.",
-            "입력에 없는 소재, 핏, 계절, TPO, 관리, 사이즈 정보는 누락 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -859,26 +908,34 @@
             "do_not_bleach"
           ],
           "size_info": [
-            "사이즈 옵션: M, L, XL"
+            "M",
+            "L",
+            "XL"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 데님 블루 롱패딩/헤비 아우터 012: denim_blue long_padding_heavy_outer 상품입니다.",
+          "search_summary": "DUMMY STANDARD 데님 블루 롱패딩/헤비 아우터 012 | outer/jumper/long_padding_heavy_outer | denim_blue",
           "query_tags": [
             "outer",
             "jumper",
             "long_padding_heavy_outer",
             "denim_blue",
             "cotton",
-            "longline"
+            "longline",
+            "spring",
+            "fall",
+            "commute",
+            "formal",
+            "do_not_bleach"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jumper/long_padding_heavy_outer로 매핑했습니다.",
-            "코튼 소재명은 있으나 숫자 혼용률이 없어 material_ratio를 missing 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -907,14 +964,14 @@
               "name": "linen",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "린넨 터치"
+              "evidence": "린넨 터치의 레이온 블렌드 소재."
             },
             {
               "part": "unknown",
               "name": "rayon",
               "ratio": null,
-              "ratio_status": "missing",
-              "evidence": "레이온 블렌드 소재"
+              "ratio_status": "ambiguous",
+              "evidence": "린넨 터치의 레이온 블렌드 소재."
             }
           ],
           "fit": [
@@ -934,11 +991,13 @@
             "shade_dry"
           ],
           "size_info": [
-            "사이즈 옵션: M, L, XL"
+            "M",
+            "L",
+            "XL"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "AX TEST LABEL 레드 겨울 기타 코트 013: red winter_other_coat 상품입니다.",
+          "search_summary": "AX TEST LABEL 레드 겨울 기타 코트 013 | outer/coat/winter_other_coat | red",
           "query_tags": [
             "outer",
             "coat",
@@ -946,16 +1005,20 @@
             "red",
             "linen",
             "rayon",
-            "relaxed"
+            "relaxed",
+            "summer",
+            "daily",
+            "street",
+            "shade_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/coat/winter_other_coat로 매핑했습니다.",
-            "린넨 터치 표현은 ambiguous, 레이온 블렌드는 비율 누락으로 missing 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
           "missing_fields": [
-            "material_ratio"
+            "material_part"
           ],
           "ambiguous_fields": [
             "material_ratio"
@@ -985,14 +1048,14 @@
               "name": "wool",
               "ratio": 70,
               "ratio_status": "explicit",
-              "evidence": "겉감 울 70%"
+              "evidence": "겉감 울 70%, 캐시미어 30%."
             },
             {
               "part": "shell",
               "name": "cashmere",
               "ratio": 30,
               "ratio_status": "explicit",
-              "evidence": "겉감 캐시미어 30%"
+              "evidence": "겉감 울 70%, 캐시미어 30%."
             }
           ],
           "fit": [
@@ -1012,11 +1075,13 @@
             "machine_wash"
           ],
           "size_info": [
-            "사이즈 옵션: M, L, XL"
+            "M",
+            "L",
+            "XL"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 블랙 겨울 더블 코트 014: black winter_double_coat 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 블랙 겨울 더블 코트 014 | outer/coat/winter_double_coat | black",
           "query_tags": [
             "outer",
             "coat",
@@ -1024,11 +1089,15 @@
             "black",
             "wool",
             "cashmere",
-            "boxy"
+            "boxy",
+            "winter",
+            "outdoor",
+            "travel",
+            "machine_wash"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/coat/winter_double_coat로 매핑했습니다.",
-            "겉감 울 70%, 캐시미어 30%를 명시 혼용률로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -1059,14 +1128,14 @@
               "name": "wool",
               "ratio": 70,
               "ratio_status": "explicit",
-              "evidence": "겉감 울 70%"
+              "evidence": "겉감 울 70%, 캐시미어 30%."
             },
             {
               "part": "shell",
               "name": "cashmere",
               "ratio": 30,
               "ratio_status": "explicit",
-              "evidence": "겉감 캐시미어 30%"
+              "evidence": "겉감 울 70%, 캐시미어 30%."
             }
           ],
           "fit": [
@@ -1086,11 +1155,13 @@
             "machine_wash"
           ],
           "size_info": [
-            "사이즈 옵션: M, L, XL"
+            "M",
+            "L",
+            "XL"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 블랙 겨울 더블 코트 014 리오더: black winter_double_coat 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 블랙 겨울 더블 코트 014 리오더 | outer/coat/winter_double_coat | black",
           "query_tags": [
             "outer",
             "coat",
@@ -1099,11 +1170,14 @@
             "wool",
             "cashmere",
             "boxy",
-            "리오더"
+            "winter",
+            "outdoor",
+            "travel",
+            "machine_wash"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/coat/winter_double_coat로 매핑했습니다.",
-            "리오더 문구는 제목에는 보존하되 상품 속성 분류를 바꾸지 않았습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -1169,7 +1243,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 네이비 환절기 코트 016: navy/pink transitional_coat 상품입니다.",
+          "search_summary": "DUMMY STANDARD 네이비 환절기 코트 016 | outer/coat/transitional_coat | navy,pink",
           "query_tags": [
             "outer",
             "coat",
@@ -1177,11 +1251,18 @@
             "navy",
             "pink",
             "nylon",
-            "slim"
+            "polyester",
+            "slim",
+            "fall",
+            "winter",
+            "layering",
+            "travel",
+            "low_temp_iron",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/coat/transitional_coat로 매핑했습니다.",
-            "복수 컬러와 가을겨울 계절 표현을 각각 배열로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -1233,26 +1314,34 @@
             "dry_clean"
           ],
           "size_info": [
-            "사이즈 옵션: M, L, XL"
+            "M",
+            "L",
+            "XL"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 카키 스타디움 재킷 022: khaki stadium_jacket 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 카키 스타디움 재킷 022 | outer/jacket/stadium_jacket | khaki",
           "query_tags": [
             "outer",
             "jacket",
             "stadium_jacket",
             "khaki",
             "cotton",
-            "boxy"
+            "boxy",
+            "spring",
+            "fall",
+            "commute",
+            "formal",
+            "dry_clean"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/stadium_jacket으로 매핑했습니다.",
-            "코튼 소재명은 있으나 숫자 혼용률이 없어 material_ratio를 missing 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -1281,14 +1370,14 @@
               "name": "wool",
               "ratio": 70,
               "ratio_status": "explicit",
-              "evidence": "겉감 울 70%"
+              "evidence": "겉감 울 70%, 캐시미어 30%."
             },
             {
               "part": "shell",
               "name": "cashmere",
               "ratio": 30,
               "ratio_status": "explicit",
-              "evidence": "겉감 캐시미어 30%"
+              "evidence": "겉감 울 70%, 캐시미어 30%."
             }
           ],
           "fit": [
@@ -1308,11 +1397,13 @@
             "no_tumble_dry"
           ],
           "size_info": [
-            "사이즈 옵션: M, L, XL"
+            "M",
+            "L",
+            "XL"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 아이보리 플리스/뽀글이 024: ivory fleece_jacket 상품입니다.",
+          "search_summary": "DUMMY STANDARD 아이보리 플리스/뽀글이 024 | outer/jacket/fleece_jacket | ivory",
           "query_tags": [
             "outer",
             "jacket",
@@ -1320,11 +1411,15 @@
             "ivory",
             "wool",
             "cashmere",
-            "slim"
+            "slim",
+            "winter",
+            "outdoor",
+            "travel",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/fleece_jacket으로 매핑했습니다.",
-            "겉감 울 70%, 캐시미어 30%를 명시 혼용률로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -1389,7 +1484,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 블랙 레더/라이더스 재킷 028: black/ivory leather_rider_jacket 상품입니다.",
+          "search_summary": "DUMMY STANDARD 블랙 레더/라이더스 재킷 028 | outer/jacket/leather_rider_jacket | black,ivory",
           "query_tags": [
             "outer",
             "jacket",
@@ -1397,11 +1492,17 @@
             "black",
             "ivory",
             "leather",
-            "longline"
+            "polyester",
+            "longline",
+            "summer",
+            "daily",
+            "street",
+            "machine_wash",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/leather_rider_jacket으로 매핑했습니다.",
-            "겉감 천연가죽과 안감 폴리에스터를 각각 명시 비율로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -1437,17 +1538,16 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "REPRO SAMPLE 그린 블루종/MA-1 031: green blouson_ma1 상품입니다.",
+          "search_summary": "REPRO SAMPLE 그린 블루종/MA-1 031 | outer/jacket/blouson_ma1 | green",
           "query_tags": [
             "outer",
             "jacket",
             "blouson_ma1",
-            "green",
-            "REPRO SAMPLE"
+            "green"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/blouson_ma1으로 매핑했습니다.",
-            "입력에 없는 소재, 핏, 계절, TPO, 관리, 사이즈 정보는 누락 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -1485,14 +1585,14 @@
               "name": "wool",
               "ratio": 70,
               "ratio_status": "explicit",
-              "evidence": "겉감: 울 70%"
+              "evidence": "겉감: 울 70%, 캐시미어 30%"
             },
             {
               "part": "shell",
               "name": "cashmere",
               "ratio": 30,
               "ratio_status": "explicit",
-              "evidence": "겉감: 캐시미어 30%"
+              "evidence": "겉감: 울 70%, 캐시미어 30%"
             }
           ],
           "fit": [
@@ -1520,7 +1620,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 카키 겨울 더블 코트 036: khaki/black winter_double_coat 상품입니다.",
+          "search_summary": "DUMMY STANDARD 카키 겨울 더블 코트 036 | outer/coat/winter_double_coat | khaki,black",
           "query_tags": [
             "outer",
             "coat",
@@ -1529,11 +1629,17 @@
             "black",
             "wool",
             "cashmere",
-            "longline"
+            "longline",
+            "fall",
+            "winter",
+            "layering",
+            "travel",
+            "dry_clean",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/coat/winter_double_coat로 매핑했습니다.",
-            "겉감의 울과 캐시미어 비율을 명시 근거로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -1564,14 +1670,14 @@
               "name": "wool",
               "ratio": 70,
               "ratio_status": "explicit",
-              "evidence": "겉감: 울 70%"
+              "evidence": "겉감: 울 70%, 캐시미어 30%"
             },
             {
               "part": "shell",
               "name": "cashmere",
               "ratio": 30,
               "ratio_status": "explicit",
-              "evidence": "겉감: 캐시미어 30%"
+              "evidence": "겉감: 울 70%, 캐시미어 30%"
             }
           ],
           "fit": [
@@ -1599,7 +1705,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "AX TEST LABEL 옐로우 겨울 싱글 코트 037: yellow/brown winter_single_coat 상품입니다.",
+          "search_summary": "AX TEST LABEL 옐로우 겨울 싱글 코트 037 | outer/coat/winter_single_coat | yellow,brown",
           "query_tags": [
             "outer",
             "coat",
@@ -1608,11 +1714,17 @@
             "brown",
             "wool",
             "cashmere",
-            "relaxed"
+            "relaxed",
+            "spring",
+            "fall",
+            "commute",
+            "formal",
+            "low_temp_iron",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/coat/winter_single_coat로 매핑했습니다.",
-            "간절기 표현은 spring과 fall로 함께 정규화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -1643,14 +1755,14 @@
               "name": "wool",
               "ratio": 70,
               "ratio_status": "explicit",
-              "evidence": "겉감 울 70%"
+              "evidence": "겉감 울 70%, 캐시미어 30%."
             },
             {
               "part": "shell",
               "name": "cashmere",
               "ratio": 30,
               "ratio_status": "explicit",
-              "evidence": "겉감 캐시미어 30%"
+              "evidence": "겉감 울 70%, 캐시미어 30%."
             }
           ],
           "fit": [
@@ -1670,11 +1782,13 @@
             "low_temp_iron"
           ],
           "size_info": [
-            "사이즈 옵션: M, L, XL"
+            "M",
+            "L",
+            "XL"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 네이비 스타디움 재킷 044: navy stadium_jacket 상품입니다.",
+          "search_summary": "DUMMY STANDARD 네이비 스타디움 재킷 044 | outer/jacket/stadium_jacket | navy",
           "query_tags": [
             "outer",
             "jacket",
@@ -1682,11 +1796,15 @@
             "navy",
             "wool",
             "cashmere",
-            "longline"
+            "longline",
+            "winter",
+            "outdoor",
+            "travel",
+            "low_temp_iron"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/stadium_jacket으로 매핑했습니다.",
-            "겉감 울 70%, 캐시미어 30%를 명시 혼용률로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -1717,14 +1835,14 @@
               "name": "wool",
               "ratio": 70,
               "ratio_status": "explicit",
-              "evidence": "겉감 울 70%"
+              "evidence": "겉감 울 70%, 캐시미어 30%."
             },
             {
               "part": "shell",
               "name": "cashmere",
               "ratio": 30,
               "ratio_status": "explicit",
-              "evidence": "겉감 캐시미어 30%"
+              "evidence": "겉감 울 70%, 캐시미어 30%."
             }
           ],
           "fit": [
@@ -1744,11 +1862,13 @@
             "low_temp_iron"
           ],
           "size_info": [
-            "사이즈 옵션: M, L, XL"
+            "M",
+            "L",
+            "XL"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 네이비 스타디움 재킷 044 리오더: navy stadium_jacket 상품입니다.",
+          "search_summary": "DUMMY STANDARD 네이비 스타디움 재킷 044 리오더 | outer/jacket/stadium_jacket | navy",
           "query_tags": [
             "outer",
             "jacket",
@@ -1757,11 +1877,14 @@
             "wool",
             "cashmere",
             "longline",
-            "리오더"
+            "winter",
+            "outdoor",
+            "travel",
+            "low_temp_iron"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 outer/jacket/stadium_jacket으로 매핑했습니다.",
-            "리오더 문구는 제목에는 보존하되 상품 속성 분류를 바꾸지 않았습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -1797,17 +1920,16 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 그레이 반소매 티셔츠 150: gray short_sleeve_tshirt 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 그레이 반소매 티셔츠 150 | top/tshirt/short_sleeve_tshirt | gray",
           "query_tags": [
             "top",
             "tshirt",
             "short_sleeve_tshirt",
-            "gray",
-            "SYNTHETIC WORKS"
+            "gray"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/tshirt/short_sleeve_tshirt로 매핑했습니다.",
-            "입력에 없는 소재, 핏, 계절, TPO, 관리, 사이즈 정보는 누락 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -1850,17 +1972,16 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "REPRO SAMPLE 네이비 긴소매 티셔츠 151: navy long_sleeve_tshirt 상품입니다.",
+          "search_summary": "REPRO SAMPLE 네이비 긴소매 티셔츠 151 | top/tshirt/long_sleeve_tshirt | navy",
           "query_tags": [
             "top",
             "tshirt",
             "long_sleeve_tshirt",
-            "navy",
-            "REPRO SAMPLE"
+            "navy"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/tshirt/long_sleeve_tshirt로 매핑했습니다.",
-            "입력에 없는 소재, 핏, 계절, TPO, 관리, 사이즈 정보는 누락 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -1898,14 +2019,14 @@
               "name": "cotton",
               "ratio": 95,
               "ratio_status": "explicit",
-              "evidence": "겉감 면 95%"
+              "evidence": "겉감 면 95%, 폴리우레탄 5%."
             },
             {
               "part": "shell",
               "name": "polyurethane",
               "ratio": 5,
               "ratio_status": "explicit",
-              "evidence": "겉감 폴리우레탄 5%"
+              "evidence": "겉감 면 95%, 폴리우레탄 5%."
             }
           ],
           "fit": [
@@ -1926,22 +2047,29 @@
             "do_not_bleach"
           ],
           "size_info": [
-            "사이즈 옵션: S, M, L"
+            "S",
+            "M",
+            "L"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 그린 셔츠/블라우스 152: green shirt_blouse 상품입니다.",
+          "search_summary": "DUMMY STANDARD 그린 셔츠/블라우스 152 | top/shirt_blouse/shirt_blouse | green",
           "query_tags": [
             "top",
             "shirt_blouse",
             "green",
             "cotton",
             "polyurethane",
-            "relaxed"
+            "relaxed",
+            "spring",
+            "fall",
+            "commute",
+            "formal",
+            "do_not_bleach"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/shirt_blouse/shirt_blouse로 매핑했습니다.",
-            "겉감 면 95%, 폴리우레탄 5%를 명시 혼용률로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -1975,11 +2103,11 @@
               "evidence": "리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다."
             },
             {
-              "part": "trim",
+              "part": "unknown",
               "name": "polyester",
               "ratio": null,
               "ratio_status": "missing",
-              "evidence": "배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다."
+              "evidence": "리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다."
             }
           ],
           "fit": [
@@ -1999,11 +2127,13 @@
             "shade_dry"
           ],
           "size_info": [
-            "사이즈 옵션: S, M, L"
+            "S",
+            "M",
+            "L"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "AX TEST LABEL 핑크 니트/스웨터 153: pink knit_sweater 상품입니다.",
+          "search_summary": "AX TEST LABEL 핑크 니트/스웨터 153 | top/knit/knit_sweater | pink",
           "query_tags": [
             "top",
             "knit",
@@ -2011,15 +2141,20 @@
             "pink",
             "recycled_fiber",
             "polyester",
-            "boxy"
+            "boxy",
+            "summer",
+            "daily",
+            "street",
+            "shade_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/knit/knit_sweater로 매핑했습니다.",
-            "소재명은 있으나 숫자 혼용률이 없어 material_ratio를 missing 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -2048,7 +2183,7 @@
               "name": "faux_leather",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "페이크 레더 느낌의 소재"
+              "evidence": "페이크 레더 느낌의 소재."
             }
           ],
           "fit": [
@@ -2068,25 +2203,33 @@
             "machine_wash"
           ],
           "size_info": [
-            "사이즈 옵션: S, M, L"
+            "S",
+            "M",
+            "L"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 화이트 맨투맨/스웨트 154: white sweatshirt 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 화이트 맨투맨/스웨트 154 | top/sweatshirt/sweatshirt | white",
           "query_tags": [
             "top",
             "sweatshirt",
             "white",
             "faux_leather",
-            "cropped"
+            "cropped",
+            "winter",
+            "outdoor",
+            "travel",
+            "machine_wash"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/sweatshirt/sweatshirt로 매핑했습니다.",
-            "페이크 레더 느낌은 실제 혼용률이 아닌 소재감 표현으로 보아 ambiguous 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [
             "material_ratio"
           ],
@@ -2115,14 +2258,14 @@
               "name": "linen",
               "ratio": 60,
               "ratio_status": "explicit",
-              "evidence": "겉감 리넨 60%"
+              "evidence": "겉감 리넨 60%, 면 40%."
             },
             {
               "part": "shell",
               "name": "cotton",
               "ratio": 40,
               "ratio_status": "explicit",
-              "evidence": "겉감 면 40%"
+              "evidence": "겉감 리넨 60%, 면 40%."
             }
           ],
           "fit": [
@@ -2143,11 +2286,13 @@
             "dry_clean"
           ],
           "size_info": [
-            "사이즈 옵션: S, M, L"
+            "S",
+            "M",
+            "L"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "REPRO SAMPLE 베이지 민소매 티셔츠 155: beige sleeveless_tshirt 상품입니다.",
+          "search_summary": "REPRO SAMPLE 베이지 민소매 티셔츠 155 | top/sleeveless/sleeveless_tshirt | beige",
           "query_tags": [
             "top",
             "sleeveless",
@@ -2155,11 +2300,16 @@
             "beige",
             "linen",
             "cotton",
-            "slim"
+            "slim",
+            "spring",
+            "summer",
+            "daily",
+            "casual",
+            "dry_clean"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/sleeveless/sleeveless_tshirt로 매핑했습니다.",
-            "겉감 리넨 60%, 면 40%를 명시 혼용률로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -2190,14 +2340,14 @@
               "name": "cotton",
               "ratio": 95,
               "ratio_status": "explicit",
-              "evidence": "겉감: 면 95%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             },
             {
               "part": "shell",
               "name": "polyurethane",
               "ratio": 5,
               "ratio_status": "explicit",
-              "evidence": "겉감: 폴리우레탄 5%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             }
           ],
           "fit": [
@@ -2225,7 +2375,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 블루 피케/카라 티셔츠 156: blue/pink polo_collar_tshirt 상품입니다.",
+          "search_summary": "DUMMY STANDARD 블루 피케/카라 티셔츠 156 | top/polo/polo_collar_tshirt | blue,pink",
           "query_tags": [
             "top",
             "polo",
@@ -2234,11 +2384,17 @@
             "pink",
             "cotton",
             "polyurethane",
-            "straight"
+            "straight",
+            "fall",
+            "winter",
+            "layering",
+            "travel",
+            "low_temp_iron",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/polo/polo_collar_tshirt로 매핑했습니다.",
-            "소재, 컬러, 계절, 관리 방법, 사이즈 실측을 입력 근거로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -2269,14 +2425,14 @@
               "name": "cotton",
               "ratio": 95,
               "ratio_status": "explicit",
-              "evidence": "겉감: 면 95%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             },
             {
               "part": "shell",
               "name": "polyurethane",
               "ratio": 5,
               "ratio_status": "explicit",
-              "evidence": "겉감: 폴리우레탄 5%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             }
           ],
           "fit": [
@@ -2304,7 +2460,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "AX TEST LABEL 카키 후드 티셔츠 157: khaki/gray hoodie_tshirt 상품입니다.",
+          "search_summary": "AX TEST LABEL 카키 후드 티셔츠 157 | top/hoodie/hoodie_tshirt | khaki,gray",
           "query_tags": [
             "top",
             "hoodie",
@@ -2313,11 +2469,17 @@
             "gray",
             "cotton",
             "polyurethane",
-            "oversized"
+            "oversized",
+            "spring",
+            "fall",
+            "commute",
+            "formal",
+            "no_tumble_dry",
+            "shade_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/hoodie/hoodie_tshirt로 매핑했습니다.",
-            "간절기 표현은 spring과 fall로 함께 정규화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -2348,14 +2510,14 @@
               "name": "cotton",
               "ratio": 95,
               "ratio_status": "explicit",
-              "evidence": "겉감: 면 95%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             },
             {
               "part": "shell",
               "name": "polyurethane",
               "ratio": 5,
               "ratio_status": "explicit",
-              "evidence": "겉감: 폴리우레탄 5%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             }
           ],
           "fit": [
@@ -2382,7 +2544,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 옐로우 기타 상의 158: yellow/denim_blue other_top 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 옐로우 기타 상의 158 | top/other_top/other_top | yellow,denim_blue",
           "query_tags": [
             "top",
             "other_top",
@@ -2390,11 +2552,16 @@
             "denim_blue",
             "cotton",
             "polyurethane",
-            "regular"
+            "regular",
+            "summer",
+            "daily",
+            "street",
+            "hand_wash",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/other_top/other_top으로 매핑했습니다.",
-            "복수 컬러와 복수 관리 방법을 배열로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -2425,14 +2592,14 @@
               "name": "linen",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "린넨 라이크 터치"
+              "evidence": "린넨 라이크 터치와 레이온 블렌드 느낌을 살린 원단. 숫자 혼용률은 제공되지 않습니다."
             },
             {
               "part": "unknown",
               "name": "rayon",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "레이온 블렌드 느낌"
+              "evidence": "린넨 라이크 터치와 레이온 블렌드 느낌을 살린 원단. 숫자 혼용률은 제공되지 않습니다."
             }
           ],
           "fit": [
@@ -2458,7 +2625,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "REPRO SAMPLE 아이보리 반소매 티셔츠 159: ivory/yellow short_sleeve_tshirt 상품입니다.",
+          "search_summary": "REPRO SAMPLE 아이보리 반소매 티셔츠 159 | top/tshirt/short_sleeve_tshirt | ivory,yellow",
           "query_tags": [
             "top",
             "tshirt",
@@ -2467,15 +2634,21 @@
             "yellow",
             "linen",
             "rayon",
-            "longline"
+            "longline",
+            "winter",
+            "outdoor",
+            "travel",
+            "do_not_bleach"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/tshirt/short_sleeve_tshirt로 매핑했습니다.",
-            "배송, 쿠폰, 후기 요약은 제외하고 소재감 표현은 ambiguous 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [
             "material_ratio"
           ],
@@ -2509,17 +2682,16 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 브라운 긴소매 티셔츠 160: brown long_sleeve_tshirt 상품입니다.",
+          "search_summary": "DUMMY STANDARD 브라운 긴소매 티셔츠 160 | top/tshirt/long_sleeve_tshirt | brown",
           "query_tags": [
             "top",
             "tshirt",
             "long_sleeve_tshirt",
-            "brown",
-            "DUMMY STANDARD"
+            "brown"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/tshirt/long_sleeve_tshirt로 매핑했습니다.",
-            "입력에 없는 소재, 핏, 계절, TPO, 관리, 사이즈 정보는 누락 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -2562,16 +2734,15 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "AX TEST LABEL 데님 블루 셔츠/블라우스 161: denim_blue shirt_blouse 상품입니다.",
+          "search_summary": "AX TEST LABEL 데님 블루 셔츠/블라우스 161 | top/shirt_blouse/shirt_blouse | denim_blue",
           "query_tags": [
             "top",
             "shirt_blouse",
-            "denim_blue",
-            "AX TEST LABEL"
+            "denim_blue"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/shirt_blouse/shirt_blouse로 매핑했습니다.",
-            "입력에 없는 소재, 핏, 계절, TPO, 관리, 사이즈 정보는 누락 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -2609,14 +2780,14 @@
               "name": "cotton",
               "ratio": 95,
               "ratio_status": "explicit",
-              "evidence": "겉감 면 95%"
+              "evidence": "겉감 면 95%, 폴리우레탄 5%."
             },
             {
               "part": "shell",
               "name": "polyurethane",
               "ratio": 5,
               "ratio_status": "explicit",
-              "evidence": "겉감 폴리우레탄 5%"
+              "evidence": "겉감 면 95%, 폴리우레탄 5%."
             }
           ],
           "fit": [
@@ -2637,11 +2808,13 @@
             "dry_clean"
           ],
           "size_info": [
-            "사이즈 옵션: S, M, L"
+            "S",
+            "M",
+            "L"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 레드 니트/스웨터 162: red knit_sweater 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 레드 니트/스웨터 162 | top/knit/knit_sweater | red",
           "query_tags": [
             "top",
             "knit",
@@ -2649,11 +2822,16 @@
             "red",
             "cotton",
             "polyurethane",
-            "cropped"
+            "cropped",
+            "spring",
+            "fall",
+            "commute",
+            "formal",
+            "dry_clean"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/knit/knit_sweater로 매핑했습니다.",
-            "겉감 면 95%, 폴리우레탄 5%를 명시 혼용률로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -2687,11 +2865,11 @@
               "evidence": "리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다."
             },
             {
-              "part": "trim",
+              "part": "unknown",
               "name": "polyester",
               "ratio": null,
               "ratio_status": "missing",
-              "evidence": "배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다."
+              "evidence": "리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다."
             }
           ],
           "fit": [
@@ -2711,26 +2889,33 @@
             "low_temp_iron"
           ],
           "size_info": [
-            "사이즈 옵션: S, M, L"
+            "S",
+            "M",
+            "L"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "REPRO SAMPLE 블랙 맨투맨/스웨트 163: black sweatshirt 상품입니다.",
+          "search_summary": "REPRO SAMPLE 블랙 맨투맨/스웨트 163 | top/sweatshirt/sweatshirt | black",
           "query_tags": [
             "top",
             "sweatshirt",
             "black",
             "recycled_fiber",
             "polyester",
-            "slim"
+            "slim",
+            "summer",
+            "daily",
+            "street",
+            "low_temp_iron"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/sweatshirt/sweatshirt로 매핑했습니다.",
-            "소재명은 있으나 숫자 혼용률이 없어 material_ratio를 missing 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -2759,7 +2944,7 @@
               "name": "faux_leather",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "페이크 레더 느낌의 소재"
+              "evidence": "페이크 레더 느낌의 소재."
             }
           ],
           "fit": [
@@ -2779,26 +2964,34 @@
             "no_tumble_dry"
           ],
           "size_info": [
-            "사이즈 옵션: S, M, L"
+            "S",
+            "M",
+            "L"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 그레이 민소매 티셔츠 164: gray sleeveless_tshirt 상품입니다.",
+          "search_summary": "DUMMY STANDARD 그레이 민소매 티셔츠 164 | top/sleeveless/sleeveless_tshirt | gray",
           "query_tags": [
             "top",
             "sleeveless",
             "sleeveless_tshirt",
             "gray",
             "faux_leather",
-            "straight"
+            "straight",
+            "winter",
+            "outdoor",
+            "travel",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/sleeveless/sleeveless_tshirt로 매핑했습니다.",
-            "페이크 레더 느낌은 실제 혼용률이 아닌 소재감 표현으로 보아 ambiguous 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [
             "material_ratio"
           ],
@@ -2827,7 +3020,7 @@
               "name": "faux_leather",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "페이크 레더 느낌의 소재"
+              "evidence": "페이크 레더 느낌의 소재."
             }
           ],
           "fit": [
@@ -2847,11 +3040,13 @@
             "no_tumble_dry"
           ],
           "size_info": [
-            "사이즈 옵션: S, M, L"
+            "S",
+            "M",
+            "L"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 그레이 민소매 티셔츠 164 리오더: gray sleeveless_tshirt 상품입니다.",
+          "search_summary": "DUMMY STANDARD 그레이 민소매 티셔츠 164 리오더 | top/sleeveless/sleeveless_tshirt | gray",
           "query_tags": [
             "top",
             "sleeveless",
@@ -2859,15 +3054,20 @@
             "gray",
             "faux_leather",
             "straight",
-            "리오더"
+            "winter",
+            "outdoor",
+            "travel",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/sleeveless/sleeveless_tshirt로 매핑했습니다.",
-            "리오더 문구는 제목에는 보존하되 상품 속성 분류를 바꾸지 않았습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [
             "material_ratio"
           ],
@@ -2896,14 +3096,14 @@
               "name": "cotton",
               "ratio": 95,
               "ratio_status": "explicit",
-              "evidence": "겉감: 면 95%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             },
             {
               "part": "shell",
               "name": "polyurethane",
               "ratio": 5,
               "ratio_status": "explicit",
-              "evidence": "겉감: 폴리우레탄 5%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             }
           ],
           "fit": [
@@ -2931,7 +3131,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 그린 후드 티셔츠 166: green/navy hoodie_tshirt 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 그린 후드 티셔츠 166 | top/hoodie/hoodie_tshirt | green,navy",
           "query_tags": [
             "top",
             "hoodie",
@@ -2940,11 +3140,17 @@
             "navy",
             "cotton",
             "polyurethane",
-            "regular"
+            "regular",
+            "fall",
+            "winter",
+            "layering",
+            "travel",
+            "do_not_bleach",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/hoodie/hoodie_tshirt로 매핑했습니다.",
-            "가을겨울 표현은 fall과 winter로 함께 정규화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -2975,14 +3181,14 @@
               "name": "cotton",
               "ratio": 95,
               "ratio_status": "explicit",
-              "evidence": "겉감: 면 95%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             },
             {
               "part": "shell",
               "name": "polyurethane",
               "ratio": 5,
               "ratio_status": "explicit",
-              "evidence": "겉감: 폴리우레탄 5%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             }
           ],
           "fit": [
@@ -3010,7 +3216,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "REPRO SAMPLE 핑크 기타 상의 167: pink/red other_top 상품입니다.",
+          "search_summary": "REPRO SAMPLE 핑크 기타 상의 167 | top/other_top/other_top | pink,red",
           "query_tags": [
             "top",
             "other_top",
@@ -3018,11 +3224,17 @@
             "red",
             "cotton",
             "polyurethane",
-            "longline"
+            "longline",
+            "spring",
+            "fall",
+            "commute",
+            "formal",
+            "shade_dry",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/other_top/other_top으로 매핑했습니다.",
-            "복수 컬러와 복수 관리 방법을 배열로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -3053,14 +3265,14 @@
               "name": "cotton",
               "ratio": 95,
               "ratio_status": "explicit",
-              "evidence": "겉감: 면 95%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             },
             {
               "part": "shell",
               "name": "polyurethane",
               "ratio": 5,
               "ratio_status": "explicit",
-              "evidence": "겉감: 폴리우레탄 5%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             }
           ],
           "fit": [
@@ -3087,7 +3299,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "DUMMY STANDARD 화이트 반소매 티셔츠 168: white/ivory short_sleeve_tshirt 상품입니다.",
+          "search_summary": "DUMMY STANDARD 화이트 반소매 티셔츠 168 | top/tshirt/short_sleeve_tshirt | white,ivory",
           "query_tags": [
             "top",
             "tshirt",
@@ -3096,11 +3308,16 @@
             "ivory",
             "cotton",
             "polyurethane",
-            "relaxed"
+            "relaxed",
+            "summer",
+            "daily",
+            "street",
+            "machine_wash",
+            "no_tumble_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/tshirt/short_sleeve_tshirt로 매핑했습니다.",
-            "소재, 컬러, 계절, 관리 방법, 사이즈 실측을 입력 근거로 구조화했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -3131,14 +3348,14 @@
               "name": "linen",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "린넨 라이크 터치"
+              "evidence": "린넨 라이크 터치와 레이온 블렌드 느낌을 살린 원단. 숫자 혼용률은 제공되지 않습니다."
             },
             {
               "part": "unknown",
               "name": "rayon",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "레이온 블렌드 느낌"
+              "evidence": "린넨 라이크 터치와 레이온 블렌드 느낌을 살린 원단. 숫자 혼용률은 제공되지 않습니다."
             }
           ],
           "fit": [
@@ -3164,7 +3381,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "AX TEST LABEL 베이지 긴소매 티셔츠 169: beige/blue long_sleeve_tshirt 상품입니다.",
+          "search_summary": "AX TEST LABEL 베이지 긴소매 티셔츠 169 | top/tshirt/long_sleeve_tshirt | beige,blue",
           "query_tags": [
             "top",
             "tshirt",
@@ -3173,15 +3390,21 @@
             "blue",
             "linen",
             "rayon",
-            "boxy"
+            "boxy",
+            "winter",
+            "outdoor",
+            "travel",
+            "dry_clean"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/tshirt/long_sleeve_tshirt로 매핑했습니다.",
-            "배송, 쿠폰, 후기 요약은 제외하고 소재감 표현은 ambiguous 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [
             "material_ratio"
           ],
@@ -3215,16 +3438,15 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 블루 셔츠/블라우스 170: blue shirt_blouse 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 블루 셔츠/블라우스 170 | top/shirt_blouse/shirt_blouse | blue",
           "query_tags": [
             "top",
             "shirt_blouse",
-            "blue",
-            "SYNTHETIC WORKS"
+            "blue"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/shirt_blouse/shirt_blouse로 매핑했습니다.",
-            "입력에 없는 소재, 핏, 계절, TPO, 관리, 사이즈 정보는 누락 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
@@ -3262,7 +3484,7 @@
               "name": "faux_leather",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "페이크 레더 느낌의 소재"
+              "evidence": "페이크 레더 느낌의 소재."
             }
           ],
           "fit": [
@@ -3282,26 +3504,34 @@
             "shade_dry"
           ],
           "size_info": [
-            "사이즈 옵션: S, M, L"
+            "S",
+            "M",
+            "L"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 브라운 피케/카라 티셔츠 174: brown polo_collar_tshirt 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 브라운 피케/카라 티셔츠 174 | top/polo/polo_collar_tshirt | brown",
           "query_tags": [
             "top",
             "polo",
             "polo_collar_tshirt",
             "brown",
             "faux_leather",
-            "regular"
+            "regular",
+            "winter",
+            "outdoor",
+            "travel",
+            "shade_dry"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/polo/polo_collar_tshirt로 매핑했습니다.",
-            "페이크 레더 느낌은 실제 혼용률이 아닌 소재감 표현으로 보아 ambiguous 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [
             "material_ratio"
           ],
@@ -3330,14 +3560,14 @@
               "name": "linen",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "린넨 라이크 터치"
+              "evidence": "린넨 라이크 터치와 레이온 블렌드 느낌을 살린 원단. 숫자 혼용률은 제공되지 않습니다."
             },
             {
               "part": "unknown",
               "name": "rayon",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "레이온 블렌드 느낌"
+              "evidence": "린넨 라이크 터치와 레이온 블렌드 느낌을 살린 원단. 숫자 혼용률은 제공되지 않습니다."
             }
           ],
           "fit": [
@@ -3363,7 +3593,7 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "REPRO SAMPLE 네이비 셔츠/블라우스 179: navy/white shirt_blouse 상품입니다.",
+          "search_summary": "REPRO SAMPLE 네이비 셔츠/블라우스 179 | top/shirt_blouse/shirt_blouse | navy,white",
           "query_tags": [
             "top",
             "shirt_blouse",
@@ -3371,15 +3601,21 @@
             "white",
             "linen",
             "rayon",
-            "slim"
+            "slim",
+            "winter",
+            "outdoor",
+            "travel",
+            "hand_wash"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/shirt_blouse/shirt_blouse로 매핑했습니다.",
-            "배송, 쿠폰, 후기 요약은 제외하고 소재감 표현은 ambiguous 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [
             "material_ratio"
           ],
@@ -3408,7 +3644,7 @@
               "name": "faux_leather",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "페이크 레더 느낌의 소재"
+              "evidence": "페이크 레더 느낌의 소재."
             }
           ],
           "fit": [
@@ -3428,25 +3664,33 @@
             "do_not_bleach"
           ],
           "size_info": [
-            "사이즈 옵션: S, M, L"
+            "S",
+            "M",
+            "L"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 그린 기타 상의 194: green other_top 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 그린 기타 상의 194 | top/other_top/other_top | green",
           "query_tags": [
             "top",
             "other_top",
             "green",
             "faux_leather",
-            "cropped"
+            "cropped",
+            "winter",
+            "outdoor",
+            "travel",
+            "do_not_bleach"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/other_top/other_top으로 매핑했습니다.",
-            "페이크 레더 느낌은 실제 혼용률이 아닌 소재감 표현으로 보아 ambiguous 처리했습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [
             "material_ratio"
           ],
@@ -3475,7 +3719,7 @@
               "name": "faux_leather",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "페이크 레더 느낌의 소재"
+              "evidence": "페이크 레더 느낌의 소재."
             }
           ],
           "fit": [
@@ -3495,26 +3739,33 @@
             "do_not_bleach"
           ],
           "size_info": [
-            "사이즈 옵션: S, M, L"
+            "S",
+            "M",
+            "L"
           ]
         },
         "agent_descriptor": {
-          "search_summary": "SYNTHETIC WORKS 그린 기타 상의 194 리오더: green other_top 상품입니다.",
+          "search_summary": "SYNTHETIC WORKS 그린 기타 상의 194 리오더 | top/other_top/other_top | green",
           "query_tags": [
             "top",
             "other_top",
             "green",
             "faux_leather",
             "cropped",
-            "리오더"
+            "winter",
+            "outdoor",
+            "travel",
+            "do_not_bleach"
           ],
           "explainable_reasons": [
-            "카테고리 문구를 top/other_top/other_top으로 매핑했습니다.",
-            "리오더 문구는 제목에는 보존하되 상품 속성 분류를 바꾸지 않았습니다."
+            "category text mapped to taxonomy",
+            "attributes extracted only from pasted text"
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [
             "material_ratio"
           ],

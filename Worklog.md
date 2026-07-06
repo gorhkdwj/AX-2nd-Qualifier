@@ -10,6 +10,57 @@
 
 ---
 
+### W-041 · size_info SKILL-only 개선 및 schema 변경 계획 문서화
+**요청**
+- `size_info` 개선을 위해 schema 변경 계획은 문서화해 두고, 당장은 SKILL 변경 계획을 진행
+
+**수행 작업**
+- `docs/size-info-schema-change-plan.md`를 추가해 schema v0.3 조건부 변경안, 작업량, 영향 범위, 기대 효과, archive 기준을 문서화
+- `docs/requirements-contract.md`에 현재 schema v0.2 기준 `size_info` 표준화 계약 추가
+- `src/skills/product-agentizer/SKILL.md`에 size option 원자화, 실측표 행 단위 보존, 노이즈 제외 규칙 추가
+- 같은 `full_page_codex_subset` 50건 prompt를 격리 workspace에서 실제 Codex CLI로 재실행
+- S7.7 report/results, README, 제출 질문 초안, 검증 계획, 상세 설명서, implementation plan을 새 수치로 갱신
+- schema 변경은 보류하고 조건부 계획으로 유지한다는 결정을 Decisionlog에 기록
+
+**변경 파일**
+- 생성: `docs/size-info-schema-change-plan.md`
+- 수정: `src/skills/product-agentizer/SKILL.md`
+- 수정: `docs/requirements-contract.md`
+- 수정: `docs/reports/s7-7-full-page-dummy-validation-report.md`
+- 수정: `docs/reports/s7-7-full-page-dummy-validation-results.json`
+- 수정: `tests/fixtures/full_page_codex_subset/actual_products.json`
+- 수정: `tests/fixtures/full_page_codex_subset/actual_metadata.json`
+- 수정: `tools/run_full_page_dummy_validation.py`
+- 수정: `README.md`
+- 수정: `docs/README.md`
+- 수정: `docs/validation-plan.md`
+- 수정: `docs/full-page-dummy-validation-plan.md`
+- 수정: `docs/implementation-plan.md`
+- 수정: `docs/product-agentizer-complete-guide.md`
+- 수정: `docs/submission-questions.md`
+- 수정: `Decisionlog.md`
+- 수정: `Worklog.md`
+
+**검증**
+- `python tools\run_full_page_codex_smoke20_cli.py --fixture full_page_codex_subset --timeout 3600` 통과
+- `python src\skills\product-agentizer\scripts\validate.py tests\fixtures\full_page_codex_subset\actual_products.json` 결과: valid true, checked 50, errors 0
+- `python tests\evaluate_product_agentizer.py --inputs tests\fixtures\full_page_codex_subset\source_inputs.json --expected tests\fixtures\full_page_codex_subset\expected_products.json --actual tests\fixtures\full_page_codex_subset\actual_products.json --dedup-labels tests\fixtures\full_page_codex_subset\duplicate_labels.json` 통과
+- 50건 subset 결과: schema-valid 50/50, micro precision 99.74%, micro recall 99.74%, detail_type precision/recall 100.00%, size_info precision/recall 100.00%, dedup accuracy 100.00%
+- size_info 개선 전후: precision 59.65% -> 100.00%, recall 33.01% -> 100.00%, false positive 23 -> 0, false negative 69 -> 0
+- `python tools\run_full_page_dummy_validation.py` 결과: all_commands_passed true
+- 자동 fetch 0건, 실제 상품 원문 저장 0건, 법적 적합/부적합 판정 0건
+
+**판단 근거**
+- 낮은 `size_info` 지표는 schema 전체 구조의 한계라기보다 반복적인 사이즈 옵션 원자화 지침 부족에서 발생했다.
+- schema 변경은 영향 범위가 커 패키징 전 회귀 위험이 있으므로, 조건부 계획으로 보존하고 SKILL-only 개선을 먼저 적용했다.
+
+**결과**
+- 완료: SKILL-only size_info 개선 완료, schema v0.3 계획 문서화 완료
+- 기록: Decisionlog D-022
+- 남은 작업: 남은 materials 2건의 `trim`/`unknown` 차이를 개선할지 결정, 패키징 전 최종 점검
+
+---
+
 ### W-040 · S7.7 Codex subset 50건 실제 실행 검증
 **요청**
 - 추천한 다음 태스크대로 S7.7 representative `full_page_codex_subset` 50건의 실제 Codex CLI 검증을 진행

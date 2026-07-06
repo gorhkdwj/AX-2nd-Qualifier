@@ -62,7 +62,7 @@
   "colors": ["khaki"],
   "seasons": ["fall", "winter"],
   "tpo_tags": ["layering", "outdoor", "travel"],
-  "size_info": ["L 기준 총장 68cm", "여유 있는 암홀"]
+  "size_info": ["M", "L", "XL", "L 기준 총장 68cm"]
 }
 ```
 
@@ -319,7 +319,9 @@ URL은 출처 메타데이터입니다. 실행 입력이 아닙니다.
 | `seasons` | 계절 태그 | `spring`, `summer`, `fall`, `winter` |
 | `tpo_tags` | 착용 상황 또는 스타일 태그 | `travel`, `formal`, `layering` |
 | `care` | 세탁 및 관리 방법 | `dry_clean`, `hand_wash` |
-| `size_info` | 사이즈, 치수, 착용감 텍스트 | `총장 68cm`, `암홀 여유` |
+| `size_info` | 사이즈 옵션과 실측/착용 정보 | `M`, `L`, `XL`, `L 기준 총장 68cm` |
+
+`schema_version: "0.2.0"`에서 `size_info`는 문자열 배열입니다. 다만 판매 가능한 사이즈 옵션은 문장 전체가 아니라 개별 옵션 값으로 원자화합니다. 예를 들어 `사이즈 옵션: M, L, XL`은 `["M", "L", "XL"]`로 기록하고, 실측표는 `M 총장 68cm 어깨 52cm 가슴 60cm`처럼 사이즈별 행 단위로 보존합니다. 후기, 배송, 쿠폰, 이벤트 문구는 `size_info`에 섞지 않습니다.
 
 ### 8.3 `materials`
 
@@ -1263,6 +1265,38 @@ Acceptance 결과:
 - `quality.missing_fields`는 Codex가 더 보수적으로 누락을 많이 표시해 FP가 많았습니다.
 - 이 결과는 실제 상품 데이터의 전체 성능 벤치마크가 아니라, 안전 정책을 지키면서 현실적인 입력에서도 schema-valid 출력이 가능한지 확인하는 sanity check입니다.
 
+### 17.5 S7.7 실제 페이지형 합성 더미 50건
+
+S7.7은 실제 상품 페이지 원문을 저장하지 않고, 실제 페이지의 정보 밀도와 노이즈 구조를 모사한 합성 상세페이지형 더미데이터로 운영형 입력 대응력을 검증한 단계입니다.
+
+보존된 주요 세트는 다음입니다.
+
+| 폴더 | 내용 |
+|---|---|
+| `tests/fixtures/full_page_dummy/` | 합성 상세페이지형 입력 300건, expected, reference actual, duplicate labels |
+| `tests/fixtures/full_page_codex_smoke20/` | 실제 Codex CLI smoke 실행 20건 |
+| `tests/fixtures/full_page_codex_subset/` | 실제 Codex CLI 대표 실행 50건 |
+
+50건 subset은 expected/actual fixture가 없는 격리 workspace에서 `SKILL.md`, `schema.json`, `taxonomy.json`만 복사해 실행했습니다. 따라서 expected를 볼 수 있는 상태에서 맞춘 결과가 아니라, 붙여넣은 입력 텍스트와 skill 지침만으로 만든 실제 Codex 출력입니다.
+
+SKILL-only `size_info` 원자화 보강 후 결과는 다음입니다.
+
+| 지표 | 결과 |
+|---|---:|
+| actual schema-valid | 50/50 |
+| micro precision | 99.74% |
+| micro recall | 99.74% |
+| detail_type precision/recall | 100.00% / 100.00% |
+| size_info precision/recall | 100.00% / 100.00% |
+| dedup accuracy | 100.00% |
+| 자동 fetch | 0건 |
+| 실제 상품 원문 저장 | 0건 |
+| 법적 적합/부적합 판정 | 0건 |
+
+개선 전 50건 subset에서는 `size_info` precision 59.65%, recall 33.01%였다. 원인은 `사이즈 옵션: M, L, XL`을 Codex가 하나의 문자열로 보존하고 expected는 `M`, `L`, `XL` 개별 항목으로 라벨링한 차이였다. `SKILL.md`에 사이즈 옵션 원자화 규칙을 추가한 뒤 같은 50건 prompt를 재실행하자 `size_info` false positive와 false negative가 모두 0건으로 줄었다.
+
+schema는 `0.2.0`을 유지했다. 즉 이번 개선은 schema 변경이 아니라 skill 지침 개선만으로 달성한 결과다. size option, 실측표, 모델 착용 정보를 객체로 구분해야 하는 장기 계획은 `docs/size-info-schema-change-plan.md`에 조건부 계획으로 보존한다.
+
 ## 18. 재현성 설계
 
 S7.5 이후에는 아래 파일만 있으면 검증을 재실행할 수 있습니다.
@@ -1509,12 +1543,13 @@ submission.zip
 
 후속 개선을 한다면 아래가 우선순위가 높습니다.
 
-1. 실제 공개 snippet의 `size_info` 라벨링 기준과 Codex 출력 기준을 맞춥니다.
-2. `quality.missing_fields`가 지나치게 보수적으로 늘어나는 문제를 완화합니다.
-3. `materials`의 부위 추론을 더 안정화합니다.
+1. `materials`의 부위 추론을 더 안정화합니다. 특히 `배색 폴리에스터` 같은 표현을 `trim`으로 볼지 `unknown`으로 둘지 기준을 좁힙니다.
+2. 실제 공개 snippet의 라벨링 기준과 Codex 출력 기준을 계속 점검합니다. S7.7의 합성 상세페이지형 검증에서는 `size_info` 원자화가 해결됐지만, 실제 공개 snippet은 짧은 sanity check라 별도 해석이 필요합니다.
+3. `quality.missing_fields`가 지나치게 보수적으로 늘어나는 문제를 완화합니다.
 4. `tpo_tags` recall을 높이기 위해 TPO alias와 체크리스트를 보강합니다.
 5. category 확장이 필요하면 schema와 taxonomy를 함께 version up합니다.
-6. 실제 운영 적용 시에는 내부 데이터 접근 정책, 개인정보 정책, 약관, 상품정보 고시 규정을 별도 검토합니다.
+6. typed size query가 MVP 이후 핵심 요구가 되면 `docs/size-info-schema-change-plan.md`의 schema v0.3 계획을 재검토합니다.
+7. 실제 운영 적용 시에는 내부 데이터 접근 정책, 개인정보 정책, 약관, 상품정보 고시 규정을 별도 검토합니다.
 
 ## 27. 빠른 이해를 위한 예시
 
