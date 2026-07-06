@@ -1,0 +1,388 @@
+{
+  "generated_at_kst": "2026-07-06T20:47:34.173459+09:00",
+  "command": "python tests/evaluate_product_agentizer.py --pretty",
+  "exit_code": 0,
+  "note": "기본 더미 5건 평가의 기계 판독용 스냅샷. 수치의 단일 출처로 참조한다. 재생성하려면 위 command를 실행한다.",
+  "micro_precision": 0.9868,
+  "micro_recall": 0.8929,
+  "dedup_accuracy": 1.0,
+  "report": {
+    "summary": {
+      "input_cases": 5,
+      "expected_products": 5,
+      "actual_products": 5,
+      "evaluated_fields": [
+        "title",
+        "category",
+        "subcategory",
+        "detail_type",
+        "materials",
+        "fit",
+        "colors",
+        "seasons",
+        "tpo_tags",
+        "care",
+        "size_info",
+        "quality.missing_fields",
+        "quality.ambiguous_fields"
+      ]
+    },
+    "validations": [
+      {
+        "path": "tests\\fixtures\\evaluation\\expected_products.json",
+        "exit_code": 0,
+        "valid": true,
+        "checked": 5,
+        "errors": [],
+        "stderr": ""
+      },
+      {
+        "path": "tests\\fixtures\\evaluation\\predicted_products.json",
+        "exit_code": 0,
+        "valid": true,
+        "checked": 5,
+        "errors": [],
+        "stderr": ""
+      }
+    ],
+    "attribute_metrics": {
+      "micro": {
+        "precision": 0.9868,
+        "recall": 0.8929,
+        "true_positive": 75,
+        "false_positive": 1,
+        "false_negative": 9
+      },
+      "by_field": {
+        "title": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 5,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "category": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 5,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "subcategory": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 5,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "detail_type": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 5,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "materials": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "true_positive": 8,
+          "false_positive": 0,
+          "false_negative": 2
+        },
+        "fit": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 5,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "colors": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "true_positive": 4,
+          "false_positive": 1,
+          "false_negative": 1
+        },
+        "seasons": {
+          "precision": 1.0,
+          "recall": 0.8889,
+          "true_positive": 8,
+          "false_positive": 0,
+          "false_negative": 1
+        },
+        "tpo_tags": {
+          "precision": 1.0,
+          "recall": 0.7857,
+          "true_positive": 11,
+          "false_positive": 0,
+          "false_negative": 3
+        },
+        "care": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 5,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "size_info": {
+          "precision": 1.0,
+          "recall": 0.8333,
+          "true_positive": 10,
+          "false_positive": 0,
+          "false_negative": 2
+        },
+        "quality.missing_fields": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "quality.ambiguous_fields": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        }
+      },
+      "cases": [
+        {
+          "product_id": "outer_down_layerpiece",
+          "metrics": {
+            "precision": 0.9286,
+            "recall": 0.7647,
+            "true_positive": 13,
+            "false_positive": 1,
+            "false_negative": 4
+          },
+          "differences": [
+            {
+              "field": "materials",
+              "false_positive": [],
+              "false_negative": [
+                "fill:goose_down:explicit:20"
+              ]
+            },
+            {
+              "field": "colors",
+              "false_positive": [
+                "green"
+              ],
+              "false_negative": [
+                "khaki"
+              ]
+            },
+            {
+              "field": "tpo_tags",
+              "false_positive": [],
+              "false_negative": [
+                "travel"
+              ]
+            },
+            {
+              "field": "size_info",
+              "false_positive": [],
+              "false_negative": [
+                "암홀 여유"
+              ]
+            }
+          ]
+        },
+        {
+          "product_id": "outer_linen_blazer_a",
+          "metrics": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "true_positive": 16,
+            "false_positive": 0,
+            "false_negative": 0
+          },
+          "differences": []
+        },
+        {
+          "product_id": "outer_linen_blazer_b",
+          "metrics": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "true_positive": 16,
+            "false_positive": 0,
+            "false_negative": 0
+          },
+          "differences": []
+        },
+        {
+          "product_id": "top_linen_blouse",
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.7647,
+            "true_positive": 13,
+            "false_positive": 0,
+            "false_negative": 4
+          },
+          "differences": [
+            {
+              "field": "materials",
+              "false_positive": [],
+              "false_negative": [
+                "unknown:rayon:ambiguous:null"
+              ]
+            },
+            {
+              "field": "seasons",
+              "false_positive": [],
+              "false_negative": [
+                "spring"
+              ]
+            },
+            {
+              "field": "tpo_tags",
+              "false_positive": [],
+              "false_negative": [
+                "formal"
+              ]
+            },
+            {
+              "field": "size_info",
+              "false_positive": [],
+              "false_negative": [
+                "가슴둘레 여유"
+              ]
+            }
+          ]
+        },
+        {
+          "product_id": "top_washable_tee",
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.9444,
+            "true_positive": 17,
+            "false_positive": 0,
+            "false_negative": 1
+          },
+          "differences": [
+            {
+              "field": "tpo_tags",
+              "false_positive": [],
+              "false_negative": [
+                "layering"
+              ]
+            }
+          ]
+        }
+      ],
+      "missing_actual_product_ids": [],
+      "extra_actual_product_ids": []
+    },
+    "dedup_metrics": {
+      "accuracy": 1.0,
+      "correct": 10,
+      "total": 10,
+      "min_score": 0.45,
+      "candidate_count": 1,
+      "pairs": [
+        {
+          "left_id": "outer_linen_blazer_a",
+          "right_id": "outer_linen_blazer_b",
+          "expected_decision": "duplicate",
+          "actual_decision": "duplicate",
+          "score": 0.964,
+          "matched_fields": [
+            "category",
+            "subcategory",
+            "detail_type",
+            "materials",
+            "colors",
+            "fit",
+            "seasons",
+            "tpo_tags",
+            "care",
+            "title"
+          ],
+          "correct": true
+        },
+        {
+          "left_id": "outer_linen_blazer_a",
+          "right_id": "top_washable_tee",
+          "expected_decision": "distinct",
+          "actual_decision": "distinct",
+          "score": 0.0,
+          "matched_fields": [],
+          "correct": true
+        },
+        {
+          "left_id": "outer_linen_blazer_a",
+          "right_id": "outer_down_layerpiece",
+          "expected_decision": "distinct",
+          "actual_decision": "distinct",
+          "score": 0.0,
+          "matched_fields": [],
+          "correct": true
+        },
+        {
+          "left_id": "outer_linen_blazer_a",
+          "right_id": "top_linen_blouse",
+          "expected_decision": "distinct",
+          "actual_decision": "distinct",
+          "score": 0.0,
+          "matched_fields": [],
+          "correct": true
+        },
+        {
+          "left_id": "outer_linen_blazer_b",
+          "right_id": "top_washable_tee",
+          "expected_decision": "distinct",
+          "actual_decision": "distinct",
+          "score": 0.0,
+          "matched_fields": [],
+          "correct": true
+        },
+        {
+          "left_id": "outer_linen_blazer_b",
+          "right_id": "outer_down_layerpiece",
+          "expected_decision": "distinct",
+          "actual_decision": "distinct",
+          "score": 0.0,
+          "matched_fields": [],
+          "correct": true
+        },
+        {
+          "left_id": "outer_linen_blazer_b",
+          "right_id": "top_linen_blouse",
+          "expected_decision": "distinct",
+          "actual_decision": "distinct",
+          "score": 0.0,
+          "matched_fields": [],
+          "correct": true
+        },
+        {
+          "left_id": "top_washable_tee",
+          "right_id": "outer_down_layerpiece",
+          "expected_decision": "distinct",
+          "actual_decision": "distinct",
+          "score": 0.0,
+          "matched_fields": [],
+          "correct": true
+        },
+        {
+          "left_id": "top_washable_tee",
+          "right_id": "top_linen_blouse",
+          "expected_decision": "distinct",
+          "actual_decision": "distinct",
+          "score": 0.0,
+          "matched_fields": [],
+          "correct": true
+        },
+        {
+          "left_id": "outer_down_layerpiece",
+          "right_id": "top_linen_blouse",
+          "expected_decision": "distinct",
+          "actual_decision": "distinct",
+          "score": 0.0,
+          "matched_fields": [],
+          "correct": true
+        }
+      ]
+    }
+  }
+}

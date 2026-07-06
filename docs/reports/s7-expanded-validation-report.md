@@ -20,7 +20,7 @@
 - Python: `3.12.4 | packaged by Anaconda, Inc.`
 - Platform: `Windows-11-10.0.26200-SP0`
 - Codex CLI: `codex-cli 0.142.5`
-- 결과 생성 시각: `2026-07-05T19:22:02.964634+00:00` (KST 2026-07-06 04:22:02)
+- 결과 생성 시각: `2026-07-06T04:18:23.239710+00:00` (KST 2026-07-06 13:18:23)
 
 ## 재실행 명령
 합성 fixture와 실제 공개 snippet fixture는 아래 명령으로 재생성한다. `codex_subset`은 3단계 taxonomy 도입 이전 Codex 실행 결과를 보존하는 historical 세트이므로 이 명령이 덮어쓰지 않는다.

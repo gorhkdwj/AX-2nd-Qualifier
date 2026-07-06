@@ -59,7 +59,7 @@
     "title": "추출 또는 정규화된 상품명",
     "category": "outer | top",
     "subcategory": "선택",
-    "detail_type": "선택: 공식 몰 세부 유형 또는 null",
+    "detail_type": "필수 키(항상 포함). 값은 공식 몰 세부 유형 taxonomy id 또는 null. 세부 유형을 특정할 수 없으면 키를 생략하지 말고 값에 null을 넣는다.",
     "materials": [
       {
         "part": "shell | lining | fill | rib | pocket | trim | unknown",

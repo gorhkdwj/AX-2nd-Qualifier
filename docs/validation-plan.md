@@ -34,7 +34,7 @@
 - **금지선**: 제3자 사이트 대량 크롤링, 제3자 UGC(리뷰·커뮤니티) 대량 수집, robots.txt·이용약관 위반, 비밀정보 입력 금지. 이 정책을 위반해야만 성립하는 기능은 제출물에서 제외한다.
 
 ## 목표 수치
-- 속성 추출: 필수 속성 기준 precision/recall을 산출하고, 실패 사례를 표로 기록한다. 기본 더미 fixture 5건 기준 현재 결과는 micro precision 98.68%, micro recall 89.29%다.
+- 속성 추출: 필수 속성 기준 precision/recall을 산출하고, 실패 사례를 표로 기록한다. 기본 더미 fixture 5건 기준 현재 결과는 micro precision 98.68%, micro recall 89.29%다. 이 수치의 기계 판독용 스냅샷은 `docs/reports/s5-base-evaluation-results.json`에 보존하며, `python tests/evaluate_product_agentizer.py --pretty`로 재생성한다.
 - 중복 감지: 더미 중복쌍/비중복쌍에서 정확도와 오탐·미탐 사례를 기록한다. S5 더미 fixture 기준 현재 결과는 duplicate accuracy 100.00%(10/10)다.
 - 스키마 검증: 정상 샘플은 통과, 필수 필드 누락·타입 오류·지원 범위 밖 카테고리·혼용률 상태 불일치는 실패해야 한다.
 - S7.5 확장 검증: 합성 expected 100건 schema-valid 100%, Codex subset 20건 actual schema-valid 100%, Codex subset micro precision 95% 이상, micro recall 85% 이상, dedup accuracy 95% 이상, cross-category high-confidence false duplicate 0건을 목표로 한다.
@@ -50,3 +50,6 @@
 - 실제 페이지형 운영 입력에 더 가까운 검증은 S7.7의 합성 상세페이지형 더미데이터와 S7.8의 size_info 표기 패턴 확장 fixture로 수행했다. 이 검증은 실제 페이지 전체 복제나 로컬 전용 비공개 검증을 사용하지 않고, 모든 입력·expected·기준 actual·평가 결과를 커밋 가능한 합성 데이터로 보존하는 방식이다. 20건 smoke, 50건 representative subset, 48건 size_info pattern 모두 실제 Codex CLI actual까지 검증했다. 남은 범위는 실제 무신사 내부 카탈로그 전체 커버리지와 운영 적용 효과이며, 이는 비공개 데이터가 필요하므로 검증 대상이 아니다.
 - 실제 무신사 내부 카탈로그 전체 커버리지와 운영 적용 효과는 비공개 데이터가 필요하므로 검증 대상이 아니다.
 - 심사위원의 실제 채점 기준(AI+심사자 평가)은 외부 프로세스이므로 이 문서로 사전 검증 불가.
+
+### 차후 태스크
+- **[TODO] S7.7 dedup cross-category 재계산 독립 검증:** `s7-7-full-page-dummy-validation-results.json`의 `dedup_cross_category_check`(candidate 2788건, high-confidence cross-category false duplicate 0건)는 현재 저장된 결과 JSON 값으로만 확인했고, 후보쌍 2788건을 `dedup.py`로 처음부터 재계산해 0건을 독립 재현하는 검증은 아직 수행하지 않았다. 여유가 생기면 저장된 fixture로 후보쌍을 재생성·재채점해 high-confidence cross-category 0건을 재확인하는 스크립트를 추가한다.

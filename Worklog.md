@@ -10,6 +10,38 @@
 
 ---
 
+### W-049 · 교차검증 지적사항 반영 (문서-코드 정합성·해석 투명성·패키징 위생)
+**요청**
+- 독립 교차검증에서 나온 결함·리스크 14개 항목을 반영: 로그 병합 규칙 헌법화, S7.7 개선 이력 공개, invalid fixture/material_part 설명, 불필요 파일 정리 판단, 문서-코드 정합성, README/submission-questions 보완, 계약서 표현 명확화, valid_outer 의미 수정, 보고서 시각 갱신, 기본 평가 스냅샷, Decisionlog 재정렬 및 dedup 결정 추가, cross-category 재계산 차후 등록.
+
+**수행 작업**
+- 헌법: `CLAUDE.md`·`AGENTS.md`(worktree 쌍)에 `## 10.1 로그 분산·병합 원칙`을 추가. worktree 세션 로그가 worktree `logs/`에 쌓이는 원인(`save_log.py`가 cwd 기준)과, 최종 zip 생성 직전 모든 worktree `logs/`를 원본 복사로 통합하는 절차, 패키징 위생(`__pycache__`·`.gitkeep`·`docs/`·`tests/` 제외 후 zip 내부 재확인)을 명시. (메인 루트 복사본은 feature 병합 시 반영)
+- README: S7.7 50건 subset의 `size_info`가 첫 실행 59.65%/33.01%였고 SKILL 보강 후 같은 50건 재실행으로 100%가 됐다는 개선 이력과, dedup 가중치·임계값이 MVP 휴리스틱 baseline이라는 고지를 추가.
+- submission-questions: 동일한 S7.7 재실행 이력과 "S7.7·S7.8 100%는 합성 fixture 기준, 전체 카탈로그 보장 아님" 한정 문구 추가.
+- 패키징 위생: `src/skills/.../scripts/__pycache__/` 4개 삭제(자동 재생성 캐시), `src/.gitkeep`을 git에서 제거(실제 파일이 채워져 자리표시 용도 소멸).
+- 문서-코드 정합성: `product-agentizer-complete-guide.md`의 dedup 가중치 표를 실제 `dedup.py`(합 1.00, detail_type 0.08 포함)와 일치시키고 색상 예시(0.11)도 수정. taxonomy 표에 누락된 `other_outer`(아우터 7번째), `top`의 `hoodie`·`other_top`을 추가해 아우터 7/22·상의 8/9로 맞춤.
+- `requirements-contract.md`: `detail_type`을 "선택"에서 "필수 키(항상 포함), 값은 taxonomy id 또는 null"로 명확화(schema/validator 동작과 정합).
+- `valid_outer.json`: title "오버핏 리넨 블레이저"와 맞지 않던 `detail_type: trucker_jacket`을 `suit_blazer_jacket`으로 수정(둘 다 outer/jacket, validate 통과).
+- `s7-expanded-validation-report.md`:23 생성 시각을 결과 JSON `generated_at_utc`(2026-07-06T04:18:23Z, KST 13:18:23)와 일치시킴.
+- 기본 5건 평가 수치(98.68/89.29/100.00)의 기계 판독 스냅샷 `docs/reports/s5-base-evaluation-results.json` 생성, validation-plan·s8 보고서에 근거 경로 명시.
+- `Decisionlog.md`를 D-024→D-001 내림차순으로 재정렬(코드펜스 형식예시 오매칭 방지), dedup 휴리스틱 결정을 `D-025`로 추가.
+- `validation-plan.md` 미검증 범위에 S7.7 dedup cross-category 재계산을 차후 태스크(TODO)로 등록.
+
+**변경 파일**
+- `CLAUDE.md`, `AGENTS.md`, `README.md`, `docs/submission-questions.md`, `docs/requirements-contract.md`, `docs/validation-plan.md`, `docs/product-agentizer-complete-guide.md`, `docs/reports/s7-expanded-validation-report.md`, `docs/reports/s8-total-validation-evaluation-report.md`, `docs/reports/s5-base-evaluation-results.json`(신규), `tests/fixtures/schema/valid_outer.json`, `Decisionlog.md`, `Worklog.md` / 삭제: `src/.gitkeep`, `src/skills/product-agentizer/scripts/__pycache__/`
+
+**검증**
+- `validate.py valid_outer.json` → exit 0(valid). `invalid_missing_material_part.json` → exit 1(정상 차단).
+- `evaluate_product_agentizer.py --pretty` → micro precision 0.9868, recall 0.8929, dedup accuracy 1.0(스냅샷과 일치, exit 0).
+- Decisionlog 항목 수 25개(D-001~D-025) 확인, 내림차순, 결번·중복 없음. 재정렬 전 백업으로 내용 무손실 대조.
+- taxonomy 표 갱신 근거는 `taxonomy.json`의 `other_outer`/`hoodie`/`other_top` id·ko_name 직접 확인.
+
+**판단 근거**
+- 로그 병합은 규칙을 지금 헌법에 고정하되 실제 복사는 zip 생성 직전에 수행해야 낡은 사본을 피함. `__pycache__`는 자동 생성 캐시라 삭제, `.gitkeep`은 용도 소멸로 제거. 문서-코드 불일치는 코드를 단일 출처로 삼아 문서를 맞춤.
+
+**결과**
+- 완료. 남은 작업: 최종 제출 zip 생성 시 로그 통합·패키징 위생 절차 적용, 향후 dedup cross-category 재계산 스크립트 추가.
+
 ### W-048 · Claude Code 교차검증 프롬프트 작성
 **요청**
 - 프로젝트의 최종 결과를 근거와 결과, 해석까지 모두 검증할 수 있는 Claude Code 교차검증 프롬프트 작성

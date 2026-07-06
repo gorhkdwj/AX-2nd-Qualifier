@@ -81,7 +81,7 @@ git diff --check
 | micro recall | 89.29% |
 | dedup accuracy | 100.00% |
 
-차이는 주로 `materials`, `colors`, `seasons`, `tpo_tags`, `size_info`의 오래된 수작업 대표 fixture에서 발생했다. 이 fixture는 S7.7 이후의 주 acceptance 기준이 아니라 초기 평가기 동작 확인용에 가깝다.
+차이는 주로 `materials`, `colors`, `seasons`, `tpo_tags`, `size_info`의 오래된 수작업 대표 fixture에서 발생했다. 이 fixture는 S7.7 이후의 주 acceptance 기준이 아니라 초기 평가기 동작 확인용에 가깝다. 위 수치의 기계 판독용 스냅샷은 `docs/reports/s5-base-evaluation-results.json`에 보존한다(재생성: `python tests\evaluate_product_agentizer.py --pretty`).
 
 평가: 제출 패키지에는 `tests/`가 포함되지 않으므로 직접 제출 리스크는 낮다. 다만 내부 문서를 보는 사람이 혼동할 수 있으므로, 시간이 남으면 기본 fixture를 최신 계약 기준으로 갱신하거나 legacy fixture임을 주석화하는 것이 좋다.
 

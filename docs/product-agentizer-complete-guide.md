@@ -538,6 +538,9 @@ URL은 출처 메타데이터입니다. 실행 입력이 아닙니다.
 | `cardigan` | 가디건 | 가디건, 니트 가디건, 집업 가디건 |
 | `vest` | 베스트 | 베스트, 조끼, 패딩 베스트 |
 | `hoodie_zipup` | 후드 집업 | 후드 집업, 후디 집업, 집업 후드 |
+| `other_outer` | 기타 아우터 | 기타 아우터, 기타 외투 |
+
+아우터 subcategory는 위 7개이며, 그 아래 detail_type은 총 22개입니다.
 
 ### 9.3 상의 subcategory
 
@@ -545,10 +548,14 @@ URL은 출처 메타데이터입니다. 실행 입력이 아닙니다.
 |---|---|---|
 | `tshirt` | 티셔츠 | 티셔츠, 반팔 티, 긴팔 티, 롱슬리브 |
 | `shirt_blouse` | 셔츠/블라우스 | 셔츠, 블라우스, 옥스포드 셔츠, 린넨 셔츠 |
-| `knit` | 니트 | 니트, 스웨터, 풀오버, 니트탑 |
-| `sweatshirt` | 스웨트셔츠 | 스웨트셔츠, 맨투맨, 크루넥 |
-| `sleeveless` | 슬리브리스 | 슬리브리스, 민소매, 나시, 탱크톱 |
-| `polo` | 폴로 | 폴로, 카라 티, 피케 셔츠 |
+| `sleeveless` | 민소매 티셔츠 | 민소매, 민소매 티셔츠, 나시, 탱크톱 |
+| `polo` | 폴로/카라 티셔츠 | 폴로, 카라 티, 피케 셔츠 |
+| `knit` | 니트/스웨터 | 니트, 스웨터, 풀오버, 니트탑 |
+| `sweatshirt` | 스웨트/맨투맨 | 스웨트셔츠, 맨투맨, 크루넥 |
+| `hoodie` | 후드 티셔츠 | 후드 티셔츠, 후디, 후드티 |
+| `other_top` | 기타 상의 | 기타 상의 |
+
+상의 subcategory는 위 8개이며, 그 아래 detail_type은 총 9개입니다.
 
 ### 9.4 색상 vocabulary
 
@@ -796,17 +803,18 @@ python src\skills\product-agentizer\scripts\dedup.py tests\fixtures\dedup\sample
 
 | 속성 | 최대 가중치 |
 |---|---:|
-| category 일치 | 0.18 |
-| subcategory 일치 | 0.16 |
-| materials 유사도 | 0.20 |
-| colors 유사도 | 0.12 |
-| fit 유사도 | 0.10 |
-| seasons 유사도 | 0.08 |
-| tpo_tags 유사도 | 0.08 |
+| category 일치 | 0.16 |
+| subcategory 일치 | 0.14 |
+| detail_type 일치 | 0.08 |
+| materials 유사도 | 0.18 |
+| colors 유사도 | 0.11 |
+| fit 유사도 | 0.09 |
+| seasons 유사도 | 0.07 |
+| tpo_tags 유사도 | 0.07 |
 | care 유사도 | 0.04 |
-| title 토큰 유사도 | 0.14 |
+| title 토큰 유사도 | 0.06 |
 
-합산 점수는 최대 1.0입니다.
+가중치 합은 1.00이며, 합산 점수는 최대 1.0으로 잘라 반올림합니다. (구현 근거: `src/skills/product-agentizer/scripts/dedup.py`의 `score_pair`)
 
 목록형 속성은 Jaccard similarity를 사용합니다.
 
@@ -821,7 +829,7 @@ Jaccard similarity = 교집합 크기 / 합집합 크기
 상품 B colors = {black, navy}
 ```
 
-교집합은 `{black}` 1개이고, 합집합은 `{black, gray, navy}` 3개입니다. 따라서 색상 유사도는 `1/3`입니다. 색상 최대 가중치가 0.12이므로 점수 기여분은 `0.12 * 1/3 = 0.04`입니다.
+교집합은 `{black}` 1개이고, 합집합은 `{black, gray, navy}` 3개입니다. 따라서 색상 유사도는 `1/3`입니다. 색상 최대 가중치가 0.11이므로 점수 기여분은 `0.11 * 1/3 ≈ 0.037`입니다.
 
 ### 12.2 decision 기준
 
