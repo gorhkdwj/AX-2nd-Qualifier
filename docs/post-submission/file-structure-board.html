@@ -3,27 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AX 2차 제출물 파일 구조 보드</title>
+  <title>AX 2차 제출물 파일 구조 흐름 보드</title>
   <style>
     :root {
-      --bg: #f6f7f9;
-      --ink: #17202a;
+      --bg: #f7f8fb;
+      --ink: #171b26;
       --muted: #667085;
-      --line: #d9dee7;
+      --line: #d8dee8;
       --panel: #ffffff;
-      --panel-2: #f1f4f8;
-      --green: #177245;
-      --blue: #1e5aa8;
-      --violet: #6840a6;
-      --amber: #9a6200;
-      --red: #ad3d35;
-      --teal: #06756f;
-      --edge-contract: #1e5aa8;
-      --edge-produces: #177245;
-      --edge-verifies: #6840a6;
-      --edge-package: #9a6200;
-      --edge-records: #ad3d35;
-      --shadow: 0 10px 24px rgba(22, 34, 51, 0.08);
+      --panel-soft: #f2f5f9;
+      --contract: #235ea8;
+      --produce: #1e7a4d;
+      --verify: #7047a8;
+      --package: #9a650f;
+      --record: #b0443e;
+      --guide: #08756f;
+      --shadow: 0 8px 22px rgba(20, 31, 48, 0.08);
       --radius: 8px;
       font-family: "Segoe UI", "Noto Sans KR", Arial, sans-serif;
     }
@@ -34,8 +29,8 @@
 
     body {
       margin: 0;
-      background: var(--bg);
       color: var(--ink);
+      background: var(--bg);
       font-size: 14px;
       letter-spacing: 0;
     }
@@ -45,16 +40,16 @@
       top: 0;
       z-index: 30;
       border-bottom: 1px solid var(--line);
-      background: rgba(246, 247, 249, 0.96);
-      backdrop-filter: blur(10px);
+      background: rgba(247, 248, 251, 0.96);
+      backdrop-filter: blur(8px);
     }
 
     .topbar {
       display: grid;
-      grid-template-columns: minmax(280px, 1fr) auto;
-      gap: 20px;
+      grid-template-columns: minmax(300px, 1fr) auto;
+      gap: 18px;
       align-items: center;
-      padding: 18px 22px 14px;
+      padding: 18px 22px 12px;
     }
 
     h1 {
@@ -72,17 +67,17 @@
 
     .summary {
       display: flex;
-      gap: 8px;
       flex-wrap: wrap;
+      gap: 8px;
       justify-content: flex-end;
     }
 
     .metric {
-      min-width: 104px;
+      min-width: 98px;
+      padding: 8px 10px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--panel);
-      padding: 8px 10px;
       text-align: right;
     }
 
@@ -94,28 +89,29 @@
 
     .metric span {
       display: block;
+      margin-top: 3px;
       color: var(--muted);
       font-size: 12px;
-      margin-top: 3px;
     }
 
     .toolbar {
       display: grid;
-      grid-template-columns: minmax(240px, 420px) 1fr;
-      gap: 14px;
-      align-items: center;
+      grid-template-columns: minmax(260px, 400px) 1fr;
+      gap: 12px;
       padding: 0 22px 16px;
+      align-items: start;
     }
 
     .search {
       display: grid;
-      grid-template-columns: 20px 1fr;
+      grid-template-columns: 18px 1fr;
       align-items: center;
       gap: 8px;
+      height: 40px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--panel);
-      padding: 10px 12px;
+      padding: 0 12px;
     }
 
     .search input {
@@ -127,32 +123,43 @@
       font: inherit;
     }
 
-    .filters {
-      display: flex;
+    .controls {
+      display: grid;
       gap: 8px;
+      justify-items: end;
+    }
+
+    .control-row {
+      display: flex;
       flex-wrap: wrap;
+      gap: 7px;
       justify-content: flex-end;
     }
 
-    button.filter {
+    select,
+    button.toggle {
+      height: 36px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--panel);
       color: var(--ink);
-      padding: 9px 11px;
+      padding: 0 10px;
       font: inherit;
+    }
+
+    button.toggle {
       cursor: pointer;
     }
 
-    button.filter[aria-pressed="true"] {
-      border-color: #1f2a37;
-      background: #1f2a37;
+    button.toggle[aria-pressed="true"] {
+      border-color: #1f2937;
+      background: #1f2937;
       color: #fff;
     }
 
     .layout {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 330px;
+      grid-template-columns: minmax(0, 1fr) 340px;
       gap: 16px;
       padding: 16px 18px 22px;
     }
@@ -168,12 +175,34 @@
 
     .board {
       position: relative;
-      width: 1560px;
-      height: 1060px;
+      width: 1580px;
+      height: 1040px;
       background-image:
-        linear-gradient(#eef1f5 1px, transparent 1px),
-        linear-gradient(90deg, #eef1f5 1px, transparent 1px);
+        linear-gradient(#eef2f7 1px, transparent 1px),
+        linear-gradient(90deg, #eef2f7 1px, transparent 1px);
       background-size: 24px 24px;
+    }
+
+    .lane {
+      position: absolute;
+      top: 14px;
+      width: 230px;
+      height: 1006px;
+      border-left: 1px solid #e2e7ef;
+      border-right: 1px solid #e2e7ef;
+      background: rgba(250, 251, 253, 0.7);
+      z-index: 0;
+    }
+
+    .lane-title {
+      position: absolute;
+      top: 28px;
+      width: 230px;
+      text-align: center;
+      color: #475467;
+      font-size: 12px;
+      font-weight: 760;
+      z-index: 2;
     }
 
     svg.edges {
@@ -181,62 +210,75 @@
       inset: 0;
       width: 100%;
       height: 100%;
-      pointer-events: none;
       z-index: 1;
+      pointer-events: none;
     }
 
-    .swimlane {
-      position: absolute;
-      top: 16px;
-      width: 232px;
-      height: 1018px;
-      border-left: 1px solid #e4e8ef;
-      border-right: 1px solid #e4e8ef;
-      background: rgba(250, 251, 253, 0.72);
-      z-index: 0;
+    .edge {
+      fill: none;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      opacity: 0.8;
     }
 
-    .lane-label {
-      position: absolute;
-      top: 28px;
-      width: 232px;
-      text-align: center;
-      color: #475467;
-      font-size: 12px;
+    .edge.dim {
+      opacity: 0.08;
+    }
+
+    .edge.active {
+      stroke-width: 3.2;
+      opacity: 1;
+    }
+
+    .edge-label {
+      font-size: 11px;
       font-weight: 720;
-      text-transform: uppercase;
-      z-index: 2;
+      fill: #344054;
+      paint-order: stroke;
+      stroke: #fff;
+      stroke-width: 4px;
+      stroke-linejoin: round;
+      opacity: 0.84;
+    }
+
+    .edge-label.dim {
+      opacity: 0.08;
+    }
+
+    .edge-label.hidden-label {
+      display: none;
     }
 
     .node {
       position: absolute;
       z-index: 3;
-      width: 190px;
-      min-height: 92px;
+      width: 194px;
+      min-height: 86px;
+      padding: 10px 11px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--panel);
-      box-shadow: 0 5px 14px rgba(22, 34, 51, 0.08);
-      padding: 10px 11px;
+      box-shadow: 0 5px 14px rgba(20, 31, 48, 0.08);
+      text-align: left;
       cursor: pointer;
-      transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, opacity 140ms ease;
+      transition: opacity 140ms ease, transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
     }
 
     .node:hover,
     .node:focus {
       transform: translateY(-2px);
-      border-color: #1f2a37;
-      box-shadow: 0 12px 24px rgba(22, 34, 51, 0.14);
+      border-color: #1f2937;
+      box-shadow: 0 12px 24px rgba(20, 31, 48, 0.14);
       outline: 0;
+    }
+
+    .node.active {
+      border-color: #1f2937;
+      box-shadow: 0 0 0 3px rgba(31, 41, 55, 0.16), 0 12px 24px rgba(20, 31, 48, 0.14);
     }
 
     .node.dim {
       opacity: 0.22;
-    }
-
-    .node.active {
-      border-color: #1f2a37;
-      box-shadow: 0 0 0 3px rgba(31, 42, 55, 0.16), 0 12px 24px rgba(22, 34, 51, 0.14);
     }
 
     .node h2 {
@@ -257,7 +299,7 @@
       display: block;
       margin-top: 8px;
       padding-top: 7px;
-      border-top: 1px solid #eef1f5;
+      border-top: 1px solid #edf1f5;
       color: #344054;
       font-family: Consolas, "SFMono-Regular", monospace;
       font-size: 11px;
@@ -265,14 +307,14 @@
       overflow-wrap: anywhere;
     }
 
-    .node .tag {
+    .tag {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
       margin-bottom: 7px;
       color: #344054;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 740;
     }
 
     .dot {
@@ -284,40 +326,40 @@
       flex: 0 0 auto;
     }
 
-    .type-governance .dot { background: var(--blue); }
-    .type-submit .dot { background: var(--amber); }
-    .type-impl .dot { background: var(--green); }
-    .type-validation .dot { background: var(--violet); }
-    .type-docs .dot { background: var(--teal); }
-    .type-local .dot { background: var(--red); }
+    .type-guide .dot { background: var(--guide); }
+    .type-contract .dot { background: var(--contract); }
+    .type-impl .dot { background: var(--produce); }
+    .type-validation .dot { background: var(--verify); }
+    .type-submit .dot { background: var(--package); }
+    .type-record .dot { background: var(--record); }
 
     .details {
       position: sticky;
-      top: 142px;
+      top: 146px;
       align-self: start;
+      max-height: calc(100vh - 168px);
+      overflow: auto;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--panel);
       box-shadow: var(--shadow);
       padding: 16px;
-      max-height: calc(100vh - 164px);
-      overflow: auto;
     }
 
     .details h2 {
-      margin: 0 0 10px;
+      margin: 0 0 8px;
       font-size: 18px;
       line-height: 1.25;
     }
 
     .details p {
+      margin: 0 0 12px;
       color: var(--muted);
       line-height: 1.55;
-      margin: 0 0 12px;
     }
 
     .details a {
-      color: #1e5aa8;
+      color: var(--contract);
       text-decoration: none;
       overflow-wrap: anywhere;
     }
@@ -326,70 +368,69 @@
       text-decoration: underline;
     }
 
+    .detail-section {
+      margin-top: 14px;
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+
+    .detail-section h3 {
+      margin: 0 0 8px;
+      font-size: 13px;
+      color: #344054;
+    }
+
     .detail-list {
       display: grid;
       gap: 8px;
-      margin: 12px 0 16px;
+      margin: 0;
       padding: 0;
       list-style: none;
     }
 
     .detail-list li {
-      border: 1px solid #edf0f5;
+      border: 1px solid #edf1f5;
       border-radius: var(--radius);
       padding: 8px 9px;
-      background: var(--panel-2);
+      background: var(--panel-soft);
       font-size: 12px;
       line-height: 1.45;
     }
 
     .legend {
       display: grid;
-      gap: 8px;
-      margin-top: 16px;
-      border-top: 1px solid var(--line);
-      padding-top: 14px;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px 10px;
     }
 
     .legend-row {
       display: grid;
-      grid-template-columns: 20px 1fr;
+      grid-template-columns: 18px 1fr;
+      gap: 7px;
       align-items: center;
-      gap: 8px;
       color: #344054;
       font-size: 12px;
     }
 
-    .edge-swatch {
+    .line-swatch {
       width: 18px;
       height: 3px;
       border-radius: 4px;
       background: #98a2b3;
     }
 
-    .edge-contract { background: var(--edge-contract); }
-    .edge-produces { background: var(--edge-produces); }
-    .edge-verifies { background: var(--edge-verifies); }
-    .edge-package { background: var(--edge-package); }
-    .edge-records { background: var(--edge-records); }
-
-    .edge-path {
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      opacity: 0.78;
+    .notice {
+      margin-top: 12px;
+      border: 1px solid #d6e3f5;
+      border-radius: var(--radius);
+      background: #f5f9ff;
+      padding: 10px 11px;
+      color: #344054;
+      font-size: 12px;
+      line-height: 1.5;
     }
 
-    .edge-path.dim {
-      opacity: 0.08;
-    }
-
-    .edge-path.active {
-      opacity: 1;
-      stroke-width: 3;
-    }
-
-    @media (max-width: 1080px) {
+    @media (max-width: 1100px) {
       .topbar,
       .toolbar,
       .layout {
@@ -397,8 +438,10 @@
       }
 
       .summary,
-      .filters {
+      .controls,
+      .control-row {
         justify-content: flex-start;
+        justify-items: start;
       }
 
       .details {
@@ -412,522 +455,421 @@
   <header>
     <div class="topbar">
       <div>
-        <h1>AX 2차 제출물 파일 구조 보드</h1>
-        <p class="subtitle">무신사 Product Agentizer 저장소의 제출물, 구현 코드, 검증 fixture, 보고서, 로그 보존 흐름을 노드와 연결선으로 정리했습니다.</p>
+        <h1>AX 2차 제출물 파일 구조 흐름 보드</h1>
+        <p class="subtitle">기본 화면은 핵심 작업 흐름만 보여줍니다. A -> B 방향은 “A가 B의 기준·입력·산출 근거가 된다”는 뜻입니다.</p>
       </div>
       <div class="summary" aria-label="구조 요약">
-        <div class="metric"><strong>6</strong><span>제출 핵심 파일군</span></div>
-        <div class="metric"><strong>10</strong><span>fixture 그룹</span></div>
-        <div class="metric"><strong>14</strong><span>검증 보고서/스냅샷</span></div>
-        <div class="metric"><strong>5</strong><span>원본 로그 파일</span></div>
+        <div class="metric"><strong>27</strong><span>묶음 노드</span></div>
+        <div class="metric"><strong>6</strong><span>진행 단계</span></div>
+        <div class="metric"><strong>28</strong><span>핵심 흐름</span></div>
+        <div class="metric"><strong>48</strong><span>전체 의존성</span></div>
       </div>
     </div>
     <div class="toolbar">
       <label class="search" aria-label="노드 검색">
         <span aria-hidden="true">⌕</span>
-        <input id="search" type="search" placeholder="파일, 폴더, 역할 검색">
+        <input id="search" type="search" placeholder="파일명, 폴더, 역할 검색">
       </label>
-      <div class="filters" aria-label="노드 유형 필터">
-        <button class="filter" data-filter="all" aria-pressed="true">전체</button>
-        <button class="filter" data-filter="governance" aria-pressed="false">헌법·기록</button>
-        <button class="filter" data-filter="submit" aria-pressed="false">제출물</button>
-        <button class="filter" data-filter="impl" aria-pressed="false">구현</button>
-        <button class="filter" data-filter="validation" aria-pressed="false">검증</button>
-        <button class="filter" data-filter="docs" aria-pressed="false">문서</button>
-        <button class="filter" data-filter="local" aria-pressed="false">로컬</button>
+      <div class="controls">
+        <div class="control-row">
+          <select id="stage-filter" aria-label="진행 단계 필터">
+            <option value="all">모든 단계</option>
+            <option value="1">1. 규칙·문제</option>
+            <option value="2">2. 계획·계약</option>
+            <option value="3">3. 구현</option>
+            <option value="4">4. 검증</option>
+            <option value="5">5. 보고·답변</option>
+            <option value="6">6. 제출·보존</option>
+          </select>
+          <select id="type-filter" aria-label="노드 유형 필터">
+            <option value="all">모든 노드</option>
+            <option value="guide">근거·가이드</option>
+            <option value="contract">계약·계획</option>
+            <option value="impl">구현 코드</option>
+            <option value="validation">검증</option>
+            <option value="submit">제출물</option>
+            <option value="record">기록·로그</option>
+          </select>
+          <select id="relation-filter" aria-label="연결선 유형 필터">
+            <option value="all">모든 관계</option>
+            <option value="contract">기준 규정</option>
+            <option value="produce">생성</option>
+            <option value="verify">검증</option>
+            <option value="package">제출 포함</option>
+            <option value="record">기록</option>
+          </select>
+        </div>
+        <div class="control-row">
+          <button class="toggle" id="scope-core" aria-pressed="true">핵심 흐름</button>
+          <button class="toggle" id="scope-all" aria-pressed="false">전체 의존성</button>
+          <button class="toggle" id="focus-toggle" aria-pressed="true">선택 노드 중심</button>
+        </div>
       </div>
     </div>
   </header>
 
   <main class="layout">
-    <section class="board-wrap" aria-label="파일 구조 의존성 보드">
+    <section class="board-wrap" aria-label="파일 구조 흐름 보드">
       <div id="board" class="board">
         <svg id="edges" class="edges" aria-hidden="true"></svg>
       </div>
     </section>
 
     <aside class="details" aria-live="polite">
-      <h2 id="detail-title">보드 사용법</h2>
-      <p id="detail-desc">노드를 선택하면 해당 파일군의 역할, 주요 경로, 의존 관계가 표시됩니다. 검색창과 필터로 특정 영역만 좁혀 볼 수 있습니다.</p>
-      <ul id="detail-list" class="detail-list">
-        <li>파란 선: 기준 계약과 지침이 다른 파일을 규정합니다.</li>
-        <li>초록 선: 스크립트나 입력이 결과물을 생성합니다.</li>
-        <li>보라 선: 검증기가 fixture와 결과를 확인합니다.</li>
-        <li>주황 선: 최종 제출 zip에 포함되는 흐름입니다.</li>
-        <li>붉은 선: 로그와 작업 기록이 남는 흐름입니다.</li>
-      </ul>
-      <div class="legend" aria-label="범례">
-        <div class="legend-row"><span class="dot" style="background: var(--blue)"></span><span>헌법·기록</span></div>
-        <div class="legend-row"><span class="dot" style="background: var(--amber)"></span><span>제출물</span></div>
-        <div class="legend-row"><span class="dot" style="background: var(--green)"></span><span>구현 코드</span></div>
-        <div class="legend-row"><span class="dot" style="background: var(--violet)"></span><span>검증·fixture</span></div>
-        <div class="legend-row"><span class="dot" style="background: var(--teal)"></span><span>기획·보고 문서</span></div>
-        <div class="legend-row"><span class="dot" style="background: var(--red)"></span><span>Git 제외 로컬 보존</span></div>
-        <div class="legend-row"><span class="edge-swatch edge-contract"></span><span>contract: 기준을 규정</span></div>
-        <div class="legend-row"><span class="edge-swatch edge-produces"></span><span>produces: 산출물을 생성</span></div>
-        <div class="legend-row"><span class="edge-swatch edge-verifies"></span><span>verifies: 검증에 사용</span></div>
-        <div class="legend-row"><span class="edge-swatch edge-package"></span><span>package: 제출 zip 포함</span></div>
-        <div class="legend-row"><span class="edge-swatch edge-records"></span><span>records: 로그·기록 보존</span></div>
+      <h2 id="detail-title">읽는 순서</h2>
+      <p id="detail-desc">왼쪽에서 오른쪽으로 보십시오. 문제와 규칙이 계획을 만들고, 계획이 구현을 규정하며, 구현과 fixture가 검증 보고서를 만들고, README·logs·src가 최종 zip에 들어갑니다.</p>
+      <div class="detail-section">
+        <h3>기본 조작</h3>
+        <ul class="detail-list" id="detail-list">
+          <li>노드를 클릭하면 들어오는 의존성과 나가는 의존성을 분리해서 보여줍니다.</li>
+          <li>기본은 핵심 흐름만 표시합니다. 복잡한 관계가 필요할 때만 전체 의존성을 켜십시오.</li>
+          <li>단계 필터와 노드 유형 필터로 노드를 직접 좁힐 수 있습니다.</li>
+        </ul>
       </div>
+      <div class="detail-section">
+        <h3>관계 색상</h3>
+        <div class="legend">
+          <div class="legend-row"><span class="line-swatch" style="background: var(--contract)"></span><span>기준 규정</span></div>
+          <div class="legend-row"><span class="line-swatch" style="background: var(--produce)"></span><span>생성</span></div>
+          <div class="legend-row"><span class="line-swatch" style="background: var(--verify)"></span><span>검증</span></div>
+          <div class="legend-row"><span class="line-swatch" style="background: var(--package)"></span><span>제출 포함</span></div>
+          <div class="legend-row"><span class="line-swatch" style="background: var(--record)"></span><span>기록</span></div>
+        </div>
+      </div>
+      <div class="notice">화살표 방향은 “왼쪽 산출물 또는 기준이 오른쪽 노드에 영향을 준다”는 의미입니다. 선택한 노드의 세부 패널에는 실제 의존 방향을 문장으로 다시 표시합니다.</div>
     </aside>
   </main>
 
   <script>
+    const lanes = [
+      { x: 24, label: "1. 규칙·문제" },
+      { x: 284, label: "2. 계획·계약" },
+      { x: 544, label: "3. 구현" },
+      { x: 804, label: "4. 검증" },
+      { x: 1064, label: "5. 보고·답변" },
+      { x: 1324, label: "6. 제출·보존" }
+    ];
+
     const nodes = [
       {
-        id: "constitution",
-        type: "governance",
-        x: 28,
-        y: 86,
-        title: "작업 헌법",
-        label: "헌법·지침",
-        desc: "Claude와 Codex가 공유하는 프로젝트 작업 기준입니다. 파일 동기화, 로그 보존, Git 원칙, 완료 보고 형식을 규정합니다.",
-        path: "AGENTS.md · CLAUDE.md",
-        href: "../../AGENTS.md",
-        facts: ["두 파일 본문은 동일하게 유지합니다.", "주요 작업 후 Worklog 기록과 commit/push가 원칙입니다.", "logs/는 Git 제외지만 제출 zip에는 포함합니다."]
+        id: "constitution", stage: "1", type: "guide", x: 42, y: 86,
+        title: "작업 헌법", label: "AGENTS · CLAUDE",
+        desc: "작업 방식, 로그 원칙, Git 원칙, 완료 보고 형식을 규정합니다.",
+        path: "AGENTS.md · CLAUDE.md", href: "../../AGENTS.md",
+        files: ["AGENTS.md", "CLAUDE.md"],
+        facts: ["두 지침 파일은 같은 본문을 유지합니다.", "주요 요청은 검증 후 commit/push합니다.", "logs/는 Git 제외지만 제출 zip에는 포함됩니다."]
       },
       {
-        id: "logs-records",
-        type: "governance",
-        x: 28,
-        y: 236,
-        title: "작업 기록",
-        label: "Worklog·Decisionlog·Troubleshooting",
-        desc: "프로젝트의 작업 이력, 방향 결정, 실제 오류와 조치 내역을 보존합니다.",
-        path: "Worklog.md · Decisionlog.md · Troubleshootinglog.md",
-        href: "../../Worklog.md",
-        facts: ["Worklog는 주요 요청 완료마다 기록합니다.", "Decisionlog는 방향을 바꾸는 결정만 기록합니다.", "Troubleshootinglog는 실제 오류와 우회 조치를 기록합니다."]
+        id: "records", stage: "1", type: "record", x: 42, y: 244,
+        title: "작업 기록", label: "이력·결정·오류",
+        desc: "수행 이력, 방향 결정, 실제 오류와 조치 내역을 누적합니다.",
+        path: "Worklog.md · Decisionlog.md · Troubleshootinglog.md", href: "../../Worklog.md",
+        files: ["Worklog.md", "Decisionlog.md", "Troubleshootinglog.md"],
+        facts: ["Worklog는 주요 요청마다 추가합니다.", "Decisionlog는 방향 변경만 기록합니다.", "Troubleshootinglog는 실제 문제와 재발 방지를 남깁니다."]
       },
       {
-        id: "plugin-config",
-        type: "governance",
-        x: 28,
-        y: 386,
-        title: "로컬 에이전트 설정",
-        label: "Hooks·settings",
-        desc: "Codex/Claude 로컬 설정과 Stop hook 기반 로그 저장 구성을 담습니다.",
-        path: ".codex/hooks.json · .claude/settings.json · .agents/plugins/marketplace.json",
-        href: "../../.codex/hooks.json",
-        facts: ["Stop hook이 tools/save_log.py를 통해 로그를 남깁니다.", ".claude/settings.local.json은 로컬 무시 항목입니다.", "플러그인 marketplace 설정은 로컬 개발 흐름을 보조합니다."]
+        id: "problem", stage: "1", type: "guide", x: 42, y: 402,
+        title: "과제·기업 선정", label: "문제 정의",
+        desc: "과제 요구와 무신사 문제 2 확정 근거를 보존합니다.",
+        path: "docs/과제.md · docs/company-selection.md", href: "../과제.md",
+        files: ["docs/과제.md", "docs/company-selection.md", "docs/company-research_references/"],
+        facts: ["기업은 무신사입니다.", "문제는 상품 데이터 에이전트화 변환기입니다.", "공개 근거는 company-research_references에 보존합니다."]
       },
       {
-        id: "task-source",
-        type: "docs",
-        x: 278,
-        y: 64,
-        title: "과제 원문과 기업 선정",
-        label: "기획 근거",
-        desc: "과제 요구사항, 기업 선정 기준, 무신사 문제 2 확정 근거를 보관합니다.",
-        path: "docs/과제.md · docs/company-selection.md · docs/company-research_references/",
-        href: "../과제.md",
-        facts: ["기업은 무신사로 확정했습니다.", "문제는 상품 데이터 에이전트화 변환기입니다.", "근거 자료는 company-research_references에 보존합니다."]
+        id: "official-docs", stage: "1", type: "guide", x: 42, y: 560,
+        title: "공식 기술 참고", label: "OpenAI 문서",
+        desc: "플러그인, Skill, Hooks, AGENTS 공식 문서 사본입니다.",
+        path: "docs/technical_references/", href: "../technical_references/Build_plugins.md",
+        files: ["Agent_Skills.md", "Build_plugins.md", "Hooks.md", "Plugins.md", "Custom_instructions_with_AGENTS.md.md"],
+        facts: ["플러그인 구조와 Skill 작성 원칙의 근거입니다.", "Hooks 기반 로그 저장 방식을 이해하는 데 사용했습니다."]
       },
       {
-        id: "planning-docs",
-        type: "docs",
-        x: 278,
-        y: 216,
-        title: "기준 계약·구현·검증 계획",
-        label: "활성 계획",
-        desc: "입력·출력 계약, 구현 단계, 검증 기준의 단일 기준선입니다.",
-        path: "requirements-contract.md · implementation-plan.md · validation-plan.md",
-        href: "../requirements-contract.md",
-        facts: ["schema 0.2.0을 기준으로 설명합니다.", "입력은 사용자가 붙여넣은 텍스트만 허용합니다.", "검증 기준과 acceptance 수치를 관리합니다."]
+        id: "project-plan", stage: "2", type: "contract", x: 302, y: 86,
+        title: "프로젝트 계획", label: "전체 방향",
+        desc: "범위, 산출물, 리스크, 진행 단계를 묶은 상위 계획입니다.",
+        path: "docs/project-plan.md · docs/implementation-plan.md", href: "../project-plan.md",
+        files: ["docs/project-plan.md", "docs/implementation-plan.md"],
+        facts: ["무신사 문제 2 단일 구현 계획입니다.", "MVP 범위는 outer/top입니다."]
       },
       {
-        id: "complete-guide",
-        type: "docs",
-        x: 278,
-        y: 388,
-        title: "상세 설명서",
-        label: "전체 해설",
-        desc: "프로젝트 전체 구조, 세부 기능, 작동 방식, 지표 의미, 검증 결과를 한 번에 설명합니다.",
-        path: "docs/product-agentizer-complete-guide.md",
-        href: "../product-agentizer-complete-guide.md",
-        facts: ["2026-07-07 기준으로 최신 구조와 수치를 반영했습니다.", "S7.7 300건/50건 구분과 S7.8 size_info 검증을 설명합니다.", "후속 검토자가 가장 먼저 읽을 수 있는 기술 해설서입니다."]
+        id: "requirements", stage: "2", type: "contract", x: 302, y: 244,
+        title: "요구사항 계약", label: "입력·출력 기준",
+        desc: "입력 정책, 출력 JSON, 누락·모호성, 지표, 오류 기준을 고정합니다.",
+        path: "docs/requirements-contract.md", href: "../requirements-contract.md",
+        files: ["docs/requirements-contract.md"],
+        facts: ["입력은 붙여넣은 상품 상세 텍스트만 허용합니다.", "schema_version은 0.2.0입니다.", "법적 적합/부적합 판정을 하지 않습니다."]
       },
       {
-        id: "submission-answers",
-        type: "docs",
-        x: 278,
-        y: 560,
-        title: "제출 질문 답변",
-        label: "제출 폼",
-        desc: "제출 폼의 5문항 답변 원본입니다. README의 답변 섹션과 정합성을 맞췄습니다.",
-        path: "docs/submission-questions.md",
-        href: "../submission-questions.md",
-        facts: ["무엇을·누가·왜·어떻게·검증했는지를 답합니다.", "실제 제출 zip에는 포함하지 않습니다.", "README의 제출 답변과 같은 취지입니다."]
+        id: "validation-plan", stage: "2", type: "contract", x: 302, y: 402,
+        title: "검증 계획", label: "통과 기준",
+        desc: "S5, S7.5, S7.7, S7.8 검증 범위와 acceptance 기준을 설명합니다.",
+        path: "docs/validation-plan.md", href: "../validation-plan.md",
+        files: ["docs/validation-plan.md", "docs/full-page-dummy-validation-plan.md", "docs/size-info-coverage-plan.md"],
+        facts: ["실제 상품 전체 복사는 하지 않습니다.", "합성 fixture와 짧은 공개 snippet을 구분합니다.", "S7.7 dedup cross-category 재계산을 포함합니다."]
       },
       {
-        id: "technical-refs",
-        type: "docs",
-        x: 278,
-        y: 732,
-        title: "공식 기술 참고",
-        label: "OpenAI 문서",
-        desc: "Codex 플러그인, Skill, Hooks, AGENTS 관련 공식 문서 사본입니다.",
-        path: "docs/technical_references/",
-        href: "../technical_references/Build_plugins.md",
-        facts: ["플러그인 구조와 Skill 작성 원칙의 근거입니다.", "Hooks 기반 로그 저장 이해에 사용했습니다.", "구현 시 필요한 문서만 열어보는 참조 영역입니다."]
+        id: "complete-guide", stage: "2", type: "guide", x: 302, y: 560,
+        title: "상세 설명서", label: "전체 해설",
+        desc: "구현 구조, 작동 방식, 지표 의미, 검증 결과를 한 번에 설명합니다.",
+        path: "docs/product-agentizer-complete-guide.md", href: "../product-agentizer-complete-guide.md",
+        files: ["docs/product-agentizer-complete-guide.md"],
+        facts: ["2026-07-07에 최신 구조와 수치로 점검했습니다.", "후속 검토자가 가장 먼저 읽기 좋은 기술 해설서입니다."]
       },
       {
-        id: "post-submission",
-        type: "docs",
-        x: 278,
-        y: 884,
-        title: "제출 후 보존 자료",
-        label: "post-submission",
-        desc: "제출 후 감사, 회고, 구조 보드 같은 현재 구현 기준이 아닌 보존 자료를 둡니다.",
-        path: "docs/post-submission/",
-        href: "./README.md",
-        facts: ["Claude 교차검증 프롬프트를 보관합니다.", "이 HTML 보드도 이 폴더에 둡니다.", "현재 실행 지침이 아니라 제출 전후 맥락을 보존합니다."]
+        id: "manifest", stage: "3", type: "impl", x: 562, y: 70,
+        title: "Plugin Manifest", label: "진입점",
+        desc: "Codex가 플러그인을 인식하는 manifest입니다.",
+        path: "src/.codex-plugin/plugin.json", href: "../../src/.codex-plugin/plugin.json",
+        files: ["src/.codex-plugin/plugin.json"],
+        facts: ["name은 musinsa-product-agentizer입니다.", "skills 경로는 ./skills/입니다."]
       },
       {
-        id: "plugin-manifest",
-        type: "submit",
-        x: 538,
-        y: 64,
-        title: "플러그인 Manifest",
-        label: "제출 진입점",
-        desc: "Codex가 플러그인을 인식하는 필수 manifest입니다.",
-        path: "src/.codex-plugin/plugin.json",
-        href: "../../src/.codex-plugin/plugin.json",
-        facts: ["plugin name은 musinsa-product-agentizer입니다.", "version은 0.1.0입니다.", "skills 경로는 ./skills/를 가리킵니다."]
+        id: "skill", stage: "3", type: "impl", x: 562, y: 214,
+        title: "SKILL.md", label: "변환 절차",
+        desc: "Codex가 언제, 어떻게 상품 텍스트를 구조화할지 알려줍니다.",
+        path: "src/skills/product-agentizer/SKILL.md", href: "../../src/skills/product-agentizer/SKILL.md",
+        files: ["src/skills/product-agentizer/SKILL.md"],
+        facts: ["URL 자동 fetch를 금지합니다.", "소재 비율 추정을 금지합니다.", "size_info 원자화 규칙을 포함합니다."]
       },
       {
-        id: "readme-submit",
-        type: "submit",
-        x: 538,
-        y: 214,
-        title: "최종 README",
-        label: "제출 설명",
-        desc: "최종 제출 zip에 포함되는 설명 문서입니다.",
-        path: "README.md",
-        href: "../../README.md",
-        facts: ["제출 질문 5문항 답변을 포함합니다.", "구현 기능과 검증 결과를 요약합니다.", "docs/보다 제출자와 심사자에게 가까운 문서입니다."]
+        id: "schema", stage: "3", type: "impl", x: 562, y: 358,
+        title: "Schema", label: "JSON 계약",
+        desc: "출력 JSON의 필수 키, 타입, enum, 허용 값을 정의합니다.",
+        path: "src/skills/product-agentizer/references/schema.json", href: "../../src/skills/product-agentizer/references/schema.json",
+        files: ["schema.json"],
+        facts: ["category는 outer/top만 schema-valid합니다.", "detail_type은 필수 키이며 null을 허용합니다.", "size_info는 문자열 배열입니다."]
       },
       {
-        id: "submission-zip",
-        type: "submit",
-        x: 538,
-        y: 386,
-        title: "제출 Zip",
-        label: "최종 산출물",
-        desc: "제출 완료된 zip 보존 파일입니다. Git 제외 영역 out/에 남겨두었습니다.",
-        path: "out/submission.zip",
-        href: "../../out/submission.zip",
-        facts: ["zip 루트는 src/, README.md, logs/만 포함해야 합니다.", "docs/, tests/, tools/는 제출 zip에서 제외했습니다.", "제출 후에는 재생성하지 않고 보존합니다."]
+        id: "taxonomy", stage: "3", type: "impl", x: 562, y: 502,
+        title: "Taxonomy", label: "표준 vocabulary",
+        desc: "category, subcategory, detail_type, 소재, 색상, 계절, TPO alias를 관리합니다.",
+        path: "src/skills/product-agentizer/references/taxonomy.json", href: "../../src/skills/product-agentizer/references/taxonomy.json",
+        files: ["taxonomy.json"],
+        facts: ["아우터 7개 subcategory와 22개 detail_type입니다.", "상의 8개 subcategory와 9개 detail_type입니다."]
       },
       {
-        id: "logs",
-        type: "local",
-        x: 538,
-        y: 558,
-        title: "원본 대화 로그",
-        label: "Git 제외·제출 포함",
-        desc: "Claude Code와 Codex 대화 로그 원본입니다. 내용 편집 없이 제출 zip에 포함했습니다.",
-        path: "logs/claude-code · logs/codex · logs/worktrees/",
-        href: "../../logs/",
-        facts: ["Git에는 올리지 않습니다.", "제출 zip에는 원본 그대로 포함합니다.", "worktree 로그는 source-separated 구조로 통합했습니다."]
+        id: "validator", stage: "3", type: "impl", x: 562, y: 646,
+        title: "Validator", label: "schema + custom",
+        desc: "schema와 taxonomy parent 관계, 소재 비율·부위 누락 규칙을 검증합니다.",
+        path: "src/skills/product-agentizer/scripts/validate.py", href: "../../src/skills/product-agentizer/scripts/validate.py",
+        files: ["validate.py"],
+        facts: ["jsonschema 검증을 사용합니다.", "detail_type parent 관계를 확인합니다.", "material_part 누락 표시를 양방향 검증합니다."]
       },
       {
-        id: "archive",
-        type: "docs",
-        x: 538,
-        y: 730,
-        title: "비활성·폐기 자료",
-        label: "archive",
-        desc: "선정 전 후보, 병합된 계획, 폐기한 조사 결과를 보존합니다.",
-        path: "docs/archive/",
-        href: "../archive/README.md",
-        facts: ["현재 구현 기준으로 쓰지 않습니다.", "삭제하지 않고 감사 추적용으로 보존합니다.", "활성화하려면 Decisionlog에 이유를 남깁니다."]
+        id: "dedup", stage: "3", type: "impl", x: 562, y: 790,
+        title: "Dedup", label: "중복 후보 점수",
+        desc: "구조화 상품쌍의 유사도를 계산합니다.",
+        path: "src/skills/product-agentizer/scripts/dedup.py", href: "../../src/skills/product-agentizer/scripts/dedup.py",
+        files: ["dedup.py"],
+        facts: ["가중치는 heuristic baseline입니다.", "duplicate threshold는 0.78입니다.", "min_score 기본값은 0.45입니다."]
       },
       {
-        id: "skill",
-        type: "impl",
-        x: 798,
-        y: 64,
-        title: "Product Agentizer Skill",
-        label: "변환 절차",
-        desc: "Codex가 상품 상세 텍스트를 구조화 JSON으로 바꾸는 절차와 판단 기준입니다.",
-        path: "src/skills/product-agentizer/SKILL.md",
-        href: "../../src/skills/product-agentizer/SKILL.md",
-        facts: ["자동 URL fetch를 금지합니다.", "소재 비율 추정과 법적 판정을 금지합니다.", "size_info 원자화와 material_part 규칙을 포함합니다."]
+        id: "schema-fixtures", stage: "4", type: "validation", x: 822, y: 70,
+        title: "Schema Fixture", label: "정상·오류",
+        desc: "validator가 통과/실패해야 하는 최소 예시입니다.",
+        path: "tests/fixtures/schema/", href: "../../tests/fixtures/schema/valid_outer.json",
+        files: ["valid_outer.json", "valid_top.json", "invalid_*.json"],
+        facts: ["invalid fixture는 실패해야 정상입니다.", "detail_type parent와 material_part 역연동을 포함합니다."]
       },
       {
-        id: "schema",
-        type: "impl",
-        x: 798,
-        y: 236,
-        title: "출력 Schema",
-        label: "JSON 계약",
-        desc: "구조화 상품 JSON의 필수 키, 타입, enum, 허용 값을 정의합니다.",
-        path: "src/skills/product-agentizer/references/schema.json",
-        href: "../../src/skills/product-agentizer/references/schema.json",
-        facts: ["schema_version은 0.2.0입니다.", "category는 outer/top만 schema-valid합니다.", "detail_type은 필수 키이며 값은 taxonomy id 또는 null입니다."]
+        id: "s5-fixtures", stage: "4", type: "validation", x: 822, y: 214,
+        title: "S5 기본 Fixture", label: "초기 기준선",
+        desc: "기본 평가기 동작과 dedup sample을 확인합니다.",
+        path: "tests/fixtures/evaluation/ · tests/fixtures/dedup/", href: "../../tests/fixtures/evaluation/expected_products.json",
+        files: ["evaluation/*.json", "dedup/sample_products.json"],
+        facts: ["P 98.68%, R 89.29%입니다.", "dedup accuracy 100%입니다."]
       },
       {
-        id: "taxonomy",
-        type: "impl",
-        x: 798,
-        y: 408,
-        title: "Taxonomy",
-        label: "표준 vocabulary",
-        desc: "카테고리, detail_type, 소재, 색상, 계절, TPO, 관리법 alias를 관리합니다.",
-        path: "src/skills/product-agentizer/references/taxonomy.json",
-        href: "../../src/skills/product-agentizer/references/taxonomy.json",
-        facts: ["지원 category는 outer/top입니다.", "아우터 7 subcategory와 detail_type 22개를 포함합니다.", "상의 8 subcategory와 detail_type 9개를 포함합니다."]
+        id: "s75-fixtures", stage: "4", type: "validation", x: 822, y: 358,
+        title: "S7.5 확장 Fixture", label: "100 + 20 + 10",
+        desc: "합성 100건, Codex subset 20건, 실제 공개 snippet 10건입니다.",
+        path: "tests/fixtures/expanded_dummy · codex_subset · real_sanity", href: "../../tests/fixtures/expanded_dummy/source_inputs.json",
+        files: ["expanded_dummy/", "codex_subset/", "real_sanity/"],
+        facts: ["Codex subset P 97.93%, R 95.95%입니다.", "real_sanity는 acceptance가 아닌 탐색 지표입니다."]
       },
       {
-        id: "validate",
-        type: "impl",
-        x: 798,
-        y: 580,
-        title: "Validator",
-        label: "schema + custom check",
-        desc: "출력 JSON이 schema와 taxonomy의 부모-자식 관계, 소재 부위·비율 연동 규칙을 지키는지 검증합니다.",
-        path: "src/skills/product-agentizer/scripts/validate.py",
-        href: "../../src/skills/product-agentizer/scripts/validate.py",
-        facts: ["jsonschema 기반 검증을 수행합니다.", "subcategory와 detail_type parent 관계를 확인합니다.", "material_part와 material_ratio 누락 표시를 양방향으로 검증합니다."]
+        id: "s77-fixtures", stage: "4", type: "validation", x: 822, y: 502,
+        title: "S7.7 페이지형 Fixture", label: "300 + 50 + 20",
+        desc: "실제 상품 페이지의 정보 밀도와 노이즈를 모사한 합성 검증 세트입니다.",
+        path: "tests/fixtures/full_page_dummy · full_page_codex_subset · full_page_codex_smoke20", href: "../../tests/fixtures/full_page_dummy/source_inputs.json",
+        files: ["full_page_dummy/", "full_page_codex_subset/", "full_page_codex_smoke20/"],
+        facts: ["full_page_dummy는 300건입니다.", "대표 subset 50건은 실제 Codex CLI actual입니다.", "P/R 100%를 확인했습니다."]
       },
       {
-        id: "dedup",
-        type: "impl",
-        x: 798,
-        y: 752,
-        title: "Dedup Scorer",
-        label: "중복 후보 점수",
-        desc: "구조화 상품쌍의 유사도를 계산해 duplicate, possible_duplicate, distinct로 판정합니다.",
-        path: "src/skills/product-agentizer/scripts/dedup.py",
-        href: "../../src/skills/product-agentizer/scripts/dedup.py",
-        facts: ["가중치는 운영 학습값이 아닌 heuristic baseline입니다.", "duplicate threshold는 0.78입니다.", "기본 candidate min_score는 0.45입니다."]
+        id: "s78-fixtures", stage: "4", type: "validation", x: 822, y: 646,
+        title: "S7.8 size_info Fixture", label: "48 패턴",
+        desc: "사이즈 표기 패턴 대응력과 노이즈 제외를 검증합니다.",
+        path: "tests/fixtures/size_info_patterns/", href: "../../tests/fixtures/size_info_patterns/source_inputs.json",
+        files: ["size_info_patterns/*.json", "prompt.md"],
+        facts: ["12개 패턴 그룹, 48건입니다.", "size_info P/R 100%, FP 0건입니다."]
       },
       {
-        id: "fixtures-schema",
-        type: "validation",
-        x: 1058,
-        y: 36,
-        title: "Schema Fixture",
-        label: "정상·오류 케이스",
-        desc: "validator가 통과해야 하는 정상 예시와 실패해야 하는 negative fixture입니다.",
-        path: "tests/fixtures/schema/",
-        href: "../../tests/fixtures/schema/valid_outer.json",
-        facts: ["valid_outer.json과 valid_top.json은 통과해야 합니다.", "invalid_* fixture는 실패해야 정상입니다.", "detail_type parent, material_part 역연동까지 포함합니다."]
+        id: "eval-tools", stage: "4", type: "validation", x: 822, y: 790,
+        title: "평가·실행 도구", label: "evaluate · run_*",
+        desc: "fixture 생성, schema 검증, precision/recall 평가, Codex CLI actual 생성을 실행합니다.",
+        path: "tests/evaluate_product_agentizer.py · tools/run_*.py", href: "../../tests/evaluate_product_agentizer.py",
+        files: ["tests/evaluate_product_agentizer.py", "tools/generate_*.py", "tools/run_*.py"],
+        facts: ["S7.7 전체 44,850쌍 dedup 재계산 도구를 포함합니다.", "결과 JSON과 보고서 MD를 생성합니다."]
       },
       {
-        id: "fixtures-evaluation",
-        type: "validation",
-        x: 1058,
-        y: 188,
-        title: "기본 평가 Fixture",
-        label: "S5 기준선",
-        desc: "초기 5건 더미 평가와 dedup sample을 위한 expected/actual/label 세트입니다.",
-        path: "tests/fixtures/evaluation/ · tests/fixtures/dedup/",
-        href: "../../tests/fixtures/evaluation/expected_products.json",
-        facts: ["기본 평가는 P 98.68%, R 89.29%입니다.", "dedup accuracy는 100%입니다.", "초기 평가기 동작 확인용 성격이 큽니다."]
-      },
-      {
-        id: "fixtures-expanded",
-        type: "validation",
-        x: 1058,
-        y: 340,
-        title: "S7.5 확장 Fixture",
-        label: "100 + 20 + 10",
-        desc: "합성 100건, Codex subset 20건, 실제 공개 snippet 10건 검증 세트입니다.",
-        path: "tests/fixtures/expanded_dummy · codex_subset · real_sanity",
-        href: "../../tests/fixtures/expanded_dummy/source_inputs.json",
-        facts: ["합성 expected 100/100 schema-valid입니다.", "Codex subset P 97.93%, R 95.95%입니다.", "real_sanity는 acceptance가 아닌 탐색 지표입니다."]
-      },
-      {
-        id: "fixtures-full-page",
-        type: "validation",
-        x: 1058,
-        y: 512,
-        title: "S7.7 페이지형 Fixture",
-        label: "300 + 50 + 20",
-        desc: "실제 상품 페이지의 정보 밀도와 노이즈를 모사한 합성 상세페이지형 검증 세트입니다.",
-        path: "tests/fixtures/full_page_dummy · full_page_codex_subset · full_page_codex_smoke20",
-        href: "../../tests/fixtures/full_page_dummy/source_inputs.json",
-        facts: ["full_page_dummy는 300건입니다.", "대표 subset 50건은 실제 Codex CLI actual입니다.", "micro precision/recall 100%를 확인했습니다."]
-      },
-      {
-        id: "fixtures-size",
-        type: "validation",
-        x: 1058,
-        y: 684,
-        title: "S7.8 size_info Fixture",
-        label: "48 패턴",
-        desc: "사이즈 표기 패턴만 별도로 확장해 size_info 원자화와 노이즈 제외를 검증합니다.",
-        path: "tests/fixtures/size_info_patterns/",
-        href: "../../tests/fixtures/size_info_patterns/source_inputs.json",
-        facts: ["12개 패턴 그룹, 48건입니다.", "actual schema-valid 48/48입니다.", "size_info P/R 100%, FP 0건입니다."]
-      },
-      {
-        id: "eval-script",
-        type: "validation",
-        x: 1058,
-        y: 856,
-        title: "평가기",
-        label: "precision·recall·dedup",
-        desc: "expected와 actual을 비교해 필드별 precision, recall, dedup accuracy를 산출합니다.",
-        path: "tests/evaluate_product_agentizer.py",
-        href: "../../tests/evaluate_product_agentizer.py",
-        facts: ["title부터 quality.ambiguous_fields까지 평가합니다.", "materials는 part/name/status/ratio 조합으로 비교합니다.", "candidate 목록에 없으면 distinct로 취급합니다."]
-      },
-      {
-        id: "tools-generators",
-        type: "validation",
-        x: 1308,
-        y: 126,
-        title: "Fixture 생성 도구",
-        label: "generate_*",
-        desc: "확장 검증, 페이지형 검증, size_info 패턴 검증 입력과 expected를 생성합니다.",
-        path: "tools/generate_*_fixtures.py",
-        href: "../../tools/generate_full_page_dummy_fixtures.py",
-        facts: ["합성 데이터는 커밋 가능한 fixture로 보존합니다.", "실제 페이지 전체 복사나 자동 fetch는 하지 않습니다.", "schema와 taxonomy 변화에 맞춰 재생성할 수 있습니다."]
-      },
-      {
-        id: "tools-runners",
-        type: "validation",
-        x: 1308,
-        y: 318,
-        title: "검증 실행 도구",
-        label: "run_*",
-        desc: "schema 검증, 평가, Codex CLI actual 생성, dedup 재계산을 실행하고 보고서 JSON/MD를 갱신합니다.",
-        path: "tools/run_expanded_validation.py · run_full_page_dummy_validation.py · run_size_info_pattern_validation.py",
-        href: "../../tools/run_full_page_dummy_validation.py",
-        facts: ["S7.5/S7.7/S7.8 검증을 재실행합니다.", "Codex CLI actual은 모델 상태에 따라 달라질 수 있습니다.", "S7.7 dedup cross-category 44,850쌍 재계산 도구를 포함합니다."]
-      },
-      {
-        id: "reports",
-        type: "docs",
-        x: 1308,
-        y: 512,
-        title: "검증 보고서",
-        label: "reports",
+        id: "reports", stage: "5", type: "validation", x: 1082, y: 156,
+        title: "검증 보고서", label: "reports",
         desc: "S5부터 S9까지의 평가 결과, JSON 스냅샷, 교차검증 결과를 보존합니다.",
-        path: "docs/reports/",
-        href: "../reports/README.md",
-        facts: ["S7.7, S7.8, S8, S9 보고서를 포함합니다.", "결과 JSON은 재현성과 수치 근거입니다.", "상세 설명서와 README의 수치 출처입니다."]
+        path: "docs/reports/", href: "../reports/README.md",
+        files: ["s5-*.md/json", "s7-*.md/json", "s8-total-validation-evaluation-report.md", "s9-cross-validation-report.md"],
+        facts: ["상세 설명서와 README 수치의 근거입니다.", "S7.7/S7.8 결과와 교차검증 결과를 포함합니다."]
       },
       {
-        id: "local-out",
-        type: "local",
-        x: 1308,
-        y: 704,
-        title: "로컬 산출물",
-        label: "out/",
-        desc: "Git 제외 임시 산출물입니다. 제출 완료 후 submission.zip만 보존했습니다.",
-        path: "out/submission.zip",
-        href: "../../out/submission.zip",
-        facts: ["out/은 Git 제외입니다.", "staging/audit/cache는 정리했습니다.", "현재는 submission.zip 보존 파일만 남아 있습니다."]
+        id: "submission-answers", stage: "5", type: "guide", x: 1082, y: 358,
+        title: "제출 질문 답변", label: "5문항",
+        desc: "제출 폼 문항별 답변 원본입니다.",
+        path: "docs/submission-questions.md", href: "../submission-questions.md",
+        files: ["docs/submission-questions.md"],
+        facts: ["README 답변과 같은 취지입니다.", "zip 내부가 아니라 제출 폼 복사용입니다."]
+      },
+      {
+        id: "readme", stage: "5", type: "submit", x: 1082, y: 560,
+        title: "최종 README", label: "제출 설명",
+        desc: "제출 zip 루트에 들어가는 설명 문서입니다.",
+        path: "README.md", href: "../../README.md",
+        files: ["README.md"],
+        facts: ["제출 질문 5문항 답변을 포함합니다.", "구현 기능과 검증 결과를 요약합니다."]
+      },
+      {
+        id: "manifest-submit", stage: "6", type: "submit", x: 1342, y: 76,
+        title: "src 제출 패키지", label: "plugin files",
+        desc: "최종 zip에 포함되는 실제 플러그인 코드 묶음입니다.",
+        path: "src/.codex-plugin/ · src/skills/product-agentizer/", href: "../../src/.codex-plugin/plugin.json",
+        files: ["plugin.json", "SKILL.md", "schema.json", "taxonomy.json", "validate.py", "dedup.py"],
+        facts: ["docs/tests/tools는 제출 zip에서 제외했습니다.", "src는 제출 zip의 핵심 코드 영역입니다."]
+      },
+      {
+        id: "logs", stage: "6", type: "record", x: 1342, y: 260,
+        title: "원본 대화 로그", label: "logs/",
+        desc: "Claude Code와 Codex 원본 대화 로그입니다.",
+        path: "logs/claude-code · logs/codex · logs/worktrees/", href: "../../logs/",
+        files: ["logs/claude-code/", "logs/codex/", "logs/worktrees/"],
+        facts: ["Git에는 올리지 않습니다.", "제출 zip에는 원본 그대로 포함했습니다.", "내용 편집·발췌·삭제 금지 대상입니다."]
+      },
+      {
+        id: "zip", stage: "6", type: "submit", x: 1342, y: 444,
+        title: "submission.zip", label: "최종 제출물",
+        desc: "제출 완료된 최종 zip 보존 파일입니다.",
+        path: "out/submission.zip", href: "../../out/submission.zip",
+        files: ["src/", "README.md", "logs/"],
+        facts: ["zip 루트는 src/, README.md, logs/만 포함해야 합니다.", "out/은 Git 제외이며 현재 submission.zip만 보존합니다."]
+      },
+      {
+        id: "post", stage: "6", type: "record", x: 1342, y: 628,
+        title: "제출 후 보존", label: "post-submission",
+        desc: "교차검증 프롬프트, 구조 보드, 회고 자료를 보관합니다.",
+        path: "docs/post-submission/ · docs/archive/", href: "./README.md",
+        files: ["docs/post-submission/", "docs/archive/"],
+        facts: ["현재 구현 기준이 아니라 제출 전후 맥락을 보존합니다.", "이 HTML 보드도 여기에 속합니다."]
       }
     ];
 
     const edges = [
-      ["constitution", "planning-docs", "contract"],
-      ["constitution", "logs-records", "records"],
-      ["constitution", "plugin-config", "contract"],
-      ["task-source", "planning-docs", "contract"],
-      ["task-source", "submission-answers", "contract"],
-      ["technical-refs", "plugin-manifest", "contract"],
-      ["technical-refs", "skill", "contract"],
-      ["planning-docs", "schema", "contract"],
-      ["planning-docs", "taxonomy", "contract"],
-      ["planning-docs", "skill", "contract"],
-      ["planning-docs", "eval-script", "contract"],
-      ["plugin-manifest", "skill", "contract"],
-      ["schema", "validate", "contract"],
-      ["taxonomy", "validate", "contract"],
-      ["schema", "fixtures-schema", "contract"],
-      ["taxonomy", "fixtures-full-page", "contract"],
-      ["skill", "fixtures-expanded", "contract"],
-      ["skill", "fixtures-full-page", "contract"],
-      ["skill", "fixtures-size", "contract"],
-      ["fixtures-schema", "validate", "verifies"],
-      ["fixtures-evaluation", "eval-script", "verifies"],
-      ["fixtures-expanded", "eval-script", "verifies"],
-      ["fixtures-full-page", "eval-script", "verifies"],
-      ["fixtures-size", "validate", "verifies"],
-      ["dedup", "eval-script", "verifies"],
-      ["tools-generators", "fixtures-expanded", "produces"],
-      ["tools-generators", "fixtures-full-page", "produces"],
-      ["tools-generators", "fixtures-size", "produces"],
-      ["tools-runners", "reports", "produces"],
-      ["validate", "tools-runners", "verifies"],
-      ["eval-script", "tools-runners", "verifies"],
-      ["dedup", "tools-runners", "verifies"],
-      ["reports", "complete-guide", "contract"],
-      ["reports", "readme-submit", "contract"],
-      ["complete-guide", "submission-answers", "contract"],
-      ["plugin-config", "logs", "records"],
-      ["logs", "logs-records", "records"],
-      ["skill", "plugin-manifest", "package"],
-      ["plugin-manifest", "submission-zip", "package"],
-      ["skill", "submission-zip", "package"],
-      ["schema", "submission-zip", "package"],
-      ["taxonomy", "submission-zip", "package"],
-      ["validate", "submission-zip", "package"],
-      ["dedup", "submission-zip", "package"],
-      ["readme-submit", "submission-zip", "package"],
-      ["logs", "submission-zip", "package"],
-      ["submission-zip", "local-out", "produces"],
-      ["post-submission", "complete-guide", "records"],
-      ["archive", "planning-docs", "records"],
-      ["logs-records", "complete-guide", "records"]
+      ["constitution", "project-plan", "contract", true, "규정"],
+      ["constitution", "records", "record", true, "기록"],
+      ["problem", "project-plan", "contract", true, "선정"],
+      ["official-docs", "manifest", "contract", true, "규격"],
+      ["official-docs", "skill", "contract", true, "규격"],
+      ["project-plan", "requirements", "contract", true, "범위"],
+      ["project-plan", "validation-plan", "contract", true, "단계"],
+      ["requirements", "skill", "contract", true, "절차"],
+      ["requirements", "schema", "contract", true, "출력"],
+      ["requirements", "taxonomy", "contract", true, "표준"],
+      ["validation-plan", "schema-fixtures", "contract", false, "기준"],
+      ["validation-plan", "s75-fixtures", "contract", true, "기준"],
+      ["validation-plan", "s77-fixtures", "contract", true, "기준"],
+      ["validation-plan", "s78-fixtures", "contract", true, "기준"],
+      ["manifest", "manifest-submit", "package", false, "포함"],
+      ["skill", "manifest-submit", "package", true, "포함"],
+      ["schema", "validator", "contract", true, "검사"],
+      ["taxonomy", "validator", "contract", true, "검사"],
+      ["schema-fixtures", "validator", "verify", false, "검증"],
+      ["s5-fixtures", "eval-tools", "verify", false, "평가"],
+      ["s75-fixtures", "eval-tools", "verify", true, "평가"],
+      ["s77-fixtures", "eval-tools", "verify", true, "평가"],
+      ["s78-fixtures", "eval-tools", "verify", true, "평가"],
+      ["dedup", "eval-tools", "verify", true, "평가"],
+      ["eval-tools", "reports", "produce", true, "생성"],
+      ["reports", "complete-guide", "contract", false, "근거"],
+      ["reports", "readme", "contract", true, "근거"],
+      ["submission-answers", "readme", "contract", true, "동기화"],
+      ["readme", "zip", "package", true, "포함"],
+      ["manifest-submit", "zip", "package", true, "포함"],
+      ["logs", "zip", "package", true, "포함"],
+      ["records", "post", "record", true, "보존"],
+      ["zip", "post", "record", true, "회고"],
+
+      ["records", "complete-guide", "record", false, "이력"],
+      ["complete-guide", "submission-answers", "contract", false, "설명"],
+      ["complete-guide", "readme", "contract", false, "설명"],
+      ["schema", "schema-fixtures", "contract", false, "형식"],
+      ["schema", "s75-fixtures", "contract", false, "형식"],
+      ["taxonomy", "s77-fixtures", "contract", false, "분류"],
+      ["skill", "s77-fixtures", "contract", false, "프롬프트"],
+      ["validator", "eval-tools", "verify", false, "검증"],
+      ["schema", "manifest-submit", "package", false, "포함"],
+      ["taxonomy", "manifest-submit", "package", false, "포함"],
+      ["validator", "manifest-submit", "package", false, "포함"],
+      ["dedup", "manifest-submit", "package", false, "포함"],
+      ["records", "logs", "record", false, "로그원칙"],
+      ["official-docs", "post", "record", false, "참고"],
+      ["problem", "submission-answers", "contract", false, "문항"]
     ];
 
-    const laneData = [
-      { left: 18, label: "헌법·기록" },
-      { left: 268, label: "문서·근거" },
-      { left: 528, label: "제출물" },
-      { left: 788, label: "구현 코드" },
-      { left: 1048, label: "검증 입력" },
-      { left: 1298, label: "실행·보고" }
-    ];
-
-    const edgeColor = {
-      contract: "var(--edge-contract)",
-      produces: "var(--edge-produces)",
-      verifies: "var(--edge-verifies)",
-      package: "var(--edge-package)",
-      records: "var(--edge-records)"
+    const relationMeta = {
+      contract: { color: "var(--contract)", label: "기준" },
+      produce: { color: "var(--produce)", label: "생성" },
+      verify: { color: "var(--verify)", label: "검증" },
+      package: { color: "var(--package)", label: "제출" },
+      record: { color: "var(--record)", label: "기록" }
     };
 
     const board = document.getElementById("board");
     const svg = document.getElementById("edges");
+    const search = document.getElementById("search");
+    const stageFilter = document.getElementById("stage-filter");
+    const typeFilter = document.getElementById("type-filter");
+    const relationFilter = document.getElementById("relation-filter");
+    const scopeCore = document.getElementById("scope-core");
+    const scopeAll = document.getElementById("scope-all");
+    const focusToggle = document.getElementById("focus-toggle");
     const detailTitle = document.getElementById("detail-title");
     const detailDesc = document.getElementById("detail-desc");
     const detailList = document.getElementById("detail-list");
-    const search = document.getElementById("search");
-    const filters = Array.from(document.querySelectorAll("button.filter"));
-    let currentFilter = "all";
+    let edgeScope = "core";
+    let focusMode = true;
     let activeNodeId = null;
 
     function init() {
-      laneData.forEach((lane) => {
+      lanes.forEach((lane) => {
         const strip = document.createElement("div");
-        strip.className = "swimlane";
-        strip.style.left = lane.left + "px";
+        strip.className = "lane";
+        strip.style.left = `${lane.x}px`;
         board.appendChild(strip);
 
-        const label = document.createElement("div");
-        label.className = "lane-label";
-        label.style.left = lane.left + "px";
-        label.textContent = lane.label;
-        board.appendChild(label);
+        const title = document.createElement("div");
+        title.className = "lane-title";
+        title.style.left = `${lane.x}px`;
+        title.textContent = lane.label;
+        board.appendChild(title);
       });
 
       nodes.forEach((node) => {
         const el = document.createElement("button");
         el.type = "button";
-        el.className = `node type-${node.type}`;
         el.id = `node-${node.id}`;
+        el.className = `node type-${node.type}`;
         el.dataset.id = node.id;
+        el.dataset.stage = node.stage;
         el.dataset.type = node.type;
-        el.dataset.search = `${node.title} ${node.label} ${node.desc} ${node.path} ${node.facts.join(" ")}`.toLowerCase();
-        el.style.left = node.x + "px";
-        el.style.top = node.y + "px";
+        el.dataset.search = `${node.title} ${node.label} ${node.desc} ${node.path} ${node.files.join(" ")} ${node.facts.join(" ")}`.toLowerCase();
+        el.style.left = `${node.x}px`;
+        el.style.top = `${node.y}px`;
         el.innerHTML = `
           <span class="tag"><span class="dot"></span>${escapeHtml(node.label)}</span>
           <h2>${escapeHtml(node.title)}</h2>
@@ -940,123 +882,184 @@
 
       drawEdges();
       bindEvents();
-      applyVisibility();
+      applyFilters();
     }
 
     function bindEvents() {
       window.addEventListener("resize", drawEdges);
-      search.addEventListener("input", applyVisibility);
-      filters.forEach((button) => {
-        button.addEventListener("click", () => {
-          currentFilter = button.dataset.filter;
-          filters.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
-          activeNodeId = null;
-          clearDetails();
-          applyVisibility();
-        });
+      [search, stageFilter, typeFilter, relationFilter].forEach((control) => {
+        control.addEventListener("input", applyFilters);
+        control.addEventListener("change", applyFilters);
+      });
+      scopeCore.addEventListener("click", () => setScope("core"));
+      scopeAll.addEventListener("click", () => setScope("all"));
+      focusToggle.addEventListener("click", () => {
+        focusMode = !focusMode;
+        focusToggle.setAttribute("aria-pressed", String(focusMode));
+        updateStyles();
       });
     }
 
+    function setScope(scope) {
+      edgeScope = scope;
+      scopeCore.setAttribute("aria-pressed", String(scope === "core"));
+      scopeAll.setAttribute("aria-pressed", String(scope === "all"));
+      applyFilters();
+    }
+
     function drawEdges() {
-      svg.innerHTML = "";
-      edges.forEach(([from, to, type], index) => {
+      svg.innerHTML = `
+        <defs>
+          ${Object.entries(relationMeta).map(([type, meta]) => `
+            <marker id="arrow-${type}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="${meta.color}"></path>
+            </marker>
+          `).join("")}
+        </defs>
+      `;
+
+      edges.forEach(([from, to, relation, core, label], index) => {
         const fromEl = document.getElementById(`node-${from}`);
         const toEl = document.getElementById(`node-${to}`);
         if (!fromEl || !toEl) return;
 
-        const x1 = fromEl.offsetLeft + fromEl.offsetWidth;
+        const fromNode = nodes.find((item) => item.id === from);
+        const toNode = nodes.find((item) => item.id === to);
+        const forward = fromNode.x <= toNode.x;
+        const x1 = fromEl.offsetLeft + (forward ? fromEl.offsetWidth : 0);
         const y1 = fromEl.offsetTop + fromEl.offsetHeight / 2;
-        const x2 = toEl.offsetLeft;
+        const x2 = toEl.offsetLeft + (forward ? 0 : toEl.offsetWidth);
         const y2 = toEl.offsetTop + toEl.offsetHeight / 2;
-        const distance = Math.max(80, Math.abs(x2 - x1) * 0.42);
-        const d = `M ${x1} ${y1} C ${x1 + distance} ${y1}, ${x2 - distance} ${y2}, ${x2} ${y2}`;
+        const span = Math.max(80, Math.abs(x2 - x1) * 0.42);
+        const c1 = forward ? x1 + span : x1 - span;
+        const c2 = forward ? x2 - span : x2 + span;
+        const d = `M ${x1} ${y1} C ${c1} ${y1}, ${c2} ${y2}, ${x2} ${y2}`;
+        const midX = (x1 + x2) / 2;
+        const midY = (y1 + y2) / 2 - 8;
 
         const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
         path.setAttribute("d", d);
-        path.setAttribute("class", `edge-path edge-${type}`);
+        path.setAttribute("class", "edge");
+        path.style.stroke = relationMeta[relation].color;
+        path.setAttribute("marker-end", `url(#arrow-${relation})`);
         path.dataset.from = from;
         path.dataset.to = to;
-        path.dataset.type = type;
+        path.dataset.relation = relation;
+        path.dataset.core = String(core);
         path.dataset.index = index;
-        path.style.stroke = edgeColor[type] || "#98a2b3";
         svg.appendChild(path);
+
+        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        text.setAttribute("x", midX);
+        text.setAttribute("y", midY);
+        text.setAttribute("text-anchor", "middle");
+        text.setAttribute("class", "edge-label");
+        text.textContent = label || relationMeta[relation].label;
+        text.dataset.from = from;
+        text.dataset.to = to;
+        text.dataset.relation = relation;
+        text.dataset.core = String(core);
+        text.dataset.index = index;
+        svg.appendChild(text);
       });
-      updateActiveStyles();
+
+      updateStyles();
     }
 
     function selectNode(id) {
       activeNodeId = activeNodeId === id ? null : id;
-      const node = nodes.find((item) => item.id === id);
-      if (!activeNodeId || !node) {
-        clearDetails();
+      if (activeNodeId) {
+        const node = nodes.find((item) => item.id === id);
+        renderDetails(node);
       } else {
-        showDetails(node);
+        renderDefaultDetails();
       }
-      updateActiveStyles();
+      updateStyles();
     }
 
-    function showDetails(node) {
-      const related = edges
-        .filter(([from, to]) => from === node.id || to === node.id)
-        .map(([from, to, type]) => {
-          const other = nodes.find((item) => item.id === (from === node.id ? to : from));
-          const direction = from === node.id ? "→" : "←";
-          return `${direction} ${other ? other.title : ""} (${type})`;
+    function applyFilters() {
+      const term = search.value.trim().toLowerCase();
+      const stage = stageFilter.value;
+      const type = typeFilter.value;
+      document.querySelectorAll(".node").forEach((el) => {
+        const matchStage = stage === "all" || el.dataset.stage === stage;
+        const matchType = type === "all" || el.dataset.type === type;
+        const matchSearch = !term || el.dataset.search.includes(term);
+        el.hidden = !(matchStage && matchType && matchSearch);
+      });
+      updateStyles();
+    }
+
+    function updateStyles() {
+      const visibleNodeIds = new Set(Array.from(document.querySelectorAll(".node:not([hidden])")).map((el) => el.dataset.id));
+      const connectedIds = new Set(activeNodeId ? [activeNodeId] : []);
+      if (activeNodeId) {
+        edges.forEach(([from, to]) => {
+          if (from === activeNodeId) connectedIds.add(to);
+          if (to === activeNodeId) connectedIds.add(from);
+        });
+      }
+
+      document.querySelectorAll(".node").forEach((el) => {
+        const active = el.dataset.id === activeNodeId;
+        const related = !activeNodeId || !focusMode || connectedIds.has(el.dataset.id);
+        el.classList.toggle("active", active);
+        el.classList.toggle("dim", !related);
+      });
+
+      const relation = relationFilter.value;
+      document.querySelectorAll(".edge, .edge-label").forEach((el) => {
+        const fromVisible = visibleNodeIds.has(el.dataset.from);
+        const toVisible = visibleNodeIds.has(el.dataset.to);
+        const matchScope = edgeScope === "all" || el.dataset.core === "true";
+        const matchRelation = relation === "all" || el.dataset.relation === relation;
+        const visible = fromVisible && toVisible && matchScope && matchRelation;
+        const active = activeNodeId && (el.dataset.from === activeNodeId || el.dataset.to === activeNodeId);
+        el.style.display = visible ? "" : "none";
+        el.classList.toggle("active", Boolean(active));
+        el.classList.toggle("dim", Boolean(activeNodeId && focusMode && !active));
+        if (el.classList.contains("edge-label")) {
+          el.classList.toggle("hidden-label", edgeScope !== "core" && !active);
+        }
+      });
+    }
+
+    function renderDetails(node) {
+      const incoming = edges
+        .filter(([from, to]) => to === node.id)
+        .map(([from, , relation, core, label]) => {
+          const other = nodes.find((item) => item.id === from);
+          return `${other.title} -> ${node.title}: ${label} (${relationMeta[relation].label}${core ? ", 핵심" : ", 상세"})`;
+        });
+      const outgoing = edges
+        .filter(([from]) => from === node.id)
+        .map(([, to, relation, core, label]) => {
+          const other = nodes.find((item) => item.id === to);
+          return `${node.title} -> ${other.title}: ${label} (${relationMeta[relation].label}${core ? ", 핵심" : ", 상세"})`;
         });
 
       detailTitle.textContent = node.title;
       detailDesc.innerHTML = `${escapeHtml(node.desc)}<br><a href="${node.href}">${escapeHtml(node.path)}</a>`;
-      const items = [...node.facts, ...related.map((item) => `연결: ${item}`)];
-      detailList.innerHTML = items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+      detailList.innerHTML = [
+        section("포함 파일", node.files),
+        section("핵심 정보", node.facts),
+        section("들어오는 의존성", incoming.length ? incoming : ["없음"]),
+        section("나가는 의존성", outgoing.length ? outgoing : ["없음"])
+      ].join("");
     }
 
-    function clearDetails() {
-      detailTitle.textContent = "보드 사용법";
-      detailDesc.textContent = "노드를 선택하면 해당 파일군의 역할, 주요 경로, 의존 관계가 표시됩니다. 검색창과 필터로 특정 영역만 좁혀 볼 수 있습니다.";
+    function renderDefaultDetails() {
+      detailTitle.textContent = "읽는 순서";
+      detailDesc.textContent = "왼쪽에서 오른쪽으로 보십시오. 문제와 규칙이 계획을 만들고, 계획이 구현을 규정하며, 구현과 fixture가 검증 보고서를 만들고, README·logs·src가 최종 zip에 들어갑니다.";
       detailList.innerHTML = `
-        <li>파란 선: 기준 계약과 지침이 다른 파일을 규정합니다.</li>
-        <li>초록 선: 스크립트나 입력이 결과물을 생성합니다.</li>
-        <li>보라 선: 검증기가 fixture와 결과를 확인합니다.</li>
-        <li>주황 선: 최종 제출 zip에 포함되는 흐름입니다.</li>
-        <li>붉은 선: 로그와 작업 기록이 남는 흐름입니다.</li>
+        <li>노드를 클릭하면 들어오는 의존성과 나가는 의존성을 분리해서 보여줍니다.</li>
+        <li>기본은 핵심 흐름만 표시합니다. 복잡한 관계가 필요할 때만 전체 의존성을 켜십시오.</li>
+        <li>단계 필터와 노드 유형 필터로 노드를 직접 좁힐 수 있습니다.</li>
       `;
     }
 
-    function applyVisibility() {
-      const term = search.value.trim().toLowerCase();
-      document.querySelectorAll(".node").forEach((el) => {
-        const typeMatch = currentFilter === "all" || el.dataset.type === currentFilter;
-        const textMatch = !term || el.dataset.search.includes(term);
-        el.hidden = !(typeMatch && textMatch);
-      });
-      updateActiveStyles();
-    }
-
-    function updateActiveStyles() {
-      const visibleIds = new Set(Array.from(document.querySelectorAll(".node:not([hidden])")).map((el) => el.dataset.id));
-      const relatedIds = new Set();
-      if (activeNodeId) {
-        relatedIds.add(activeNodeId);
-        edges.forEach(([from, to]) => {
-          if (from === activeNodeId) relatedIds.add(to);
-          if (to === activeNodeId) relatedIds.add(from);
-        });
-      }
-
-      document.querySelectorAll(".node").forEach((el) => {
-        el.classList.toggle("active", el.dataset.id === activeNodeId);
-        el.classList.toggle("dim", Boolean(activeNodeId) && !relatedIds.has(el.dataset.id));
-      });
-
-      document.querySelectorAll(".edge-path").forEach((path) => {
-        const fromVisible = visibleIds.has(path.dataset.from);
-        const toVisible = visibleIds.has(path.dataset.to);
-        const visible = fromVisible && toVisible;
-        const active = activeNodeId && (path.dataset.from === activeNodeId || path.dataset.to === activeNodeId);
-        path.style.display = visible ? "" : "none";
-        path.classList.toggle("active", Boolean(active));
-        path.classList.toggle("dim", Boolean(activeNodeId) && !active);
-      });
+    function section(title, items) {
+      return `<li><strong>${escapeHtml(title)}</strong><br>${items.map(escapeHtml).join("<br>")}</li>`;
     }
 
     function escapeHtml(value) {
