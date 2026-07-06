@@ -175,7 +175,7 @@
   - 숫자 혼용률이 없으면 `ratio: null`, `ratio_status: "missing"`으로 기록하고 `quality.missing_fields`에 `material_ratio`를 넣는다.
   - "혼방", "터치", "느낌", "라이크"처럼 소재감만 암시하는 표현은 `ratio: null`, `ratio_status: "ambiguous"`로 기록하고 `quality.ambiguous_fields`에 `material_ratio`를 넣는다.
   - 겉감, 안감, 충전재, 립 등 부위가 다르면 `part`를 분리해 기록한다. 부위를 확인할 수 없으면 `part: "unknown"`으로 둔다.
-  - 소재 항목 중 하나라도 `part: "unknown"`이면 입력에서 소재 부위를 확인할 수 없다는 뜻이므로 `quality.missing_fields`에 `material_part`를 넣는다.
+  - 소재 항목 중 하나라도 `part: "unknown"`이면 입력에서 소재 부위를 확인할 수 없다는 뜻이므로 `quality.missing_fields`에 `material_part`를 넣는다. 반대로 모든 소재의 `part`가 확실히 알려져 있으면 `material_part`를 `missing_fields`에 넣지 않는다. 즉 `part=unknown` 존재와 `material_part` 표시는 양방향으로 일치해야 하며, `validate.py`가 양쪽 위반을 모두 차단한다.
   - `배색 폴리에스터`처럼 배색 표현이 있지만 카라, 소매, 포켓, 배색부 등 구체 부위가 명시되지 않은 소재는 `trim`으로 단정하지 않고 `part: "unknown"`으로 둔다.
   - `배색부 폴리에스터`, `카라 배색 폴리에스터`, `소매 배색 폴리에스터`처럼 실제 적용 부위가 명시된 경우에만 `trim` 또는 더 구체적인 부위(`pocket`, `rib` 등)를 사용한다.
   - 이 플러그인은 상품정보 표기 규정 적합/부적합을 판정하지 않는다. 입력 텍스트에 근거가 있는 소재 정보를 구조화하고, 부족·모호한 혼용률을 표시하는 데 한정한다.

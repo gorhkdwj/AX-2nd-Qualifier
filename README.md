@@ -136,7 +136,7 @@ python src\skills\product-agentizer\scripts\validate.py <codex-output.json> --pr
 ## 검증 결과 요약
 
 - schema 정상 fixture 2건 통과
-- 필수 필드 누락, 지원 범위 밖 카테고리, 세부 유형 부모 불일치, 소재 혼용률 상태 불일치, `material_part` 누락 fixture는 기대대로 실패
+- 필수 필드 누락, 지원 범위 밖 카테고리, 세부 유형 부모 불일치, 소재 혼용률 상태 불일치, `material_part` 누락, `material_part` 허위 표시 fixture는 기대대로 실패(각 fixture는 표적 규칙 하나만 위반하도록 격리)
 - 더미 fixture 5건 기준 속성 micro precision: 98.68%
 - 더미 fixture 5건 기준 속성 micro recall: 89.29%
 - 더미 중복/비중복 쌍 기준 dedup accuracy: 100.00% (10/10)

@@ -775,6 +775,7 @@ JSON Schema만으로 충분하지 않은 규칙은 Python 코드에서 추가로
 | 부위별 합계 검사 | 같은 part의 explicit ratio 합이 100을 초과하면 오류 |
 | missing 연동 | `ratio_status=missing`이 있으면 `quality.missing_fields`에 `material_ratio` 필요 |
 | 부위 미상 연동 | `part=unknown` 소재가 있으면 `quality.missing_fields`에 `material_part` 필요 |
+| 부위 미상 역연동 | 모든 `part`가 알려져 있으면 `quality.missing_fields`에 `material_part`가 없어야 함(허위 표시 차단) |
 | ambiguous 연동 | `ratio_status=ambiguous`가 있으면 `quality.ambiguous_fields`에 `material_ratio` 필요 |
 
 ### 11.4 종료 코드

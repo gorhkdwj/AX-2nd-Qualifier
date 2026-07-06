@@ -10,6 +10,30 @@
 
 ---
 
+### W-050 · invalid fixture 격리 및 material_part 규칙 양방향화
+**요청**
+- (1) invalid fixture의 이중 함정을 수정하고, (2) material_part 규칙(단방향 → 양방향)을 반영. 추가 검토 필요 부분도 탐색.
+
+**수행 작업**
+- invalid fixture 격리: `invalid_material_ratio_status.json`, `invalid_detail_type_parent.json`, `invalid_out_of_scope_category.json`의 `part: "unknown"`을 `"shell"`로 바꿔 표적 규칙 하나만 위반하도록 정리(부수적 `material_part` 위반 제거).
+- material_part 양방향 강화: `validate.py`에 "모든 part가 알려졌는데 `material_part`가 `missing_fields`에 있으면 차단" 검사를 추가. SKILL.md·requirements-contract·complete-guide에 역방향 규칙을 명시.
+- 역방향 회귀 fixture `invalid_spurious_material_part.json` 신규 추가.
+- 문서 동기화: README 실패 fixture 목록에 역방향 fixture 추가 및 "표적 규칙 하나만 위반하도록 격리" 명시, s8 보고서 fixture 표에 2개 행 추가 및 격리 설명 보강.
+- 추가 검토: 전체 검증 스위트로 무회귀 확인. superpowers·claude-cross-validation-prompt 문서는 과거 상태 기록이라 보존.
+
+**변경 파일**
+- `src/skills/product-agentizer/scripts/validate.py`, `src/skills/product-agentizer/SKILL.md`, `docs/requirements-contract.md`, `docs/product-agentizer-complete-guide.md`, `docs/reports/s8-total-validation-evaluation-report.md`, `README.md`, `tests/fixtures/schema/invalid_material_ratio_status.json`, `tests/fixtures/schema/invalid_detail_type_parent.json`, `tests/fixtures/schema/invalid_out_of_scope_category.json`, `tests/fixtures/schema/invalid_spurious_material_part.json`(신규), `Worklog.md`, `Troubleshootinglog.md`
+
+**검증**
+- schema fixture 10건 전수: invalid 8건 모두 exit 1(표적 3건은 오류 1건으로 격리, 역방향 fixture 오류 1건, unknown_detail_type은 같은 개념 2건), valid 2건 exit 0.
+- 저장된 15개 검증 명령 재실행 15/15 일치(무회귀), 기본 평가 fixture expected/actual schema-valid True/True, micro P/R 0.9868/0.8929, dedup 1.0 유지.
+
+**판단 근거**
+- 부수 위반은 표적 규칙 회귀를 은폐하므로 negative fixture는 표적 하나만 위반해야 한다(T-014). material_part 양방향화는 허위 누락 표시(과잉 보고)를 차단해 계약 정합성을 높인다. 무신사 운영 데이터가 없으므로 규칙은 입력 근거 기반 구조화 원칙과 충돌하지 않는다.
+
+**결과**
+- 완료. T-014 기록. 남은 작업 없음(제출 패키징 시 기존 절차 적용).
+
 ### W-049 · 교차검증 지적사항 반영 (문서-코드 정합성·해석 투명성·패키징 위생)
 **요청**
 - 독립 교차검증에서 나온 결함·리스크 14개 항목을 반영: 로그 병합 규칙 헌법화, S7.7 개선 이력 공개, invalid fixture/material_part 설명, 불필요 파일 정리 판단, 문서-코드 정합성, README/submission-questions 보완, 계약서 표현 명확화, valid_outer 의미 수정, 보고서 시각 갱신, 기본 평가 스냅샷, Decisionlog 재정렬 및 dedup 결정 추가, cross-category 재계산 차후 등록.

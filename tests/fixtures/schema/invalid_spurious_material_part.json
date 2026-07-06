@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.2.0",
+  "source": {
+    "source_url": null,
+    "source_title": "허위 material_part 표시 샘플",
+    "input_mode": "pasted_text"
+  },
+  "product": {
+    "title": "코튼 셔츠",
+    "category": "top",
+    "subcategory": "shirt_blouse",
+    "detail_type": null,
+    "materials": [
+      {
+        "part": "shell",
+        "name": "cotton",
+        "ratio": 100,
+        "ratio_status": "explicit",
+        "evidence": "면 100%"
+      }
+    ],
+    "fit": ["regular"],
+    "colors": ["white"],
+    "seasons": ["spring", "summer"],
+    "tpo_tags": ["daily"],
+    "care": ["machine_wash"],
+    "size_info": ["S, M, L"]
+  },
+  "agent_descriptor": {
+    "search_summary": "모든 소재 부위가 알려져 있는데 material_part를 누락으로 잘못 표시해 실패해야 하는 샘플",
+    "query_tags": ["invalid"],
+    "explainable_reasons": ["모든 part가 shell로 확실하면 material_part를 missing_fields에 넣으면 안 된다."]
+  },
+  "quality": {
+    "missing_fields": ["material_part"],
+    "ambiguous_fields": [],
+    "out_of_scope": false,
+    "confidence": "high"
+  }
+}

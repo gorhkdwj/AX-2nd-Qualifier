@@ -67,6 +67,10 @@ git diff --check
 | `invalid_missing_quality.json` | 실패 처리 | 품질 메타데이터 누락 차단 |
 | `invalid_out_of_scope_category.json` | 실패 처리 | MVP 범위 밖 category 차단 |
 | `invalid_unknown_detail_type.json` | 실패 처리 | taxonomy에 없는 detail_type 차단 |
+| `invalid_missing_material_part.json` | 실패 처리 | `part=unknown`인데 `material_part` 미표시 차단 |
+| `invalid_spurious_material_part.json` | 실패 처리 | 모든 part가 알려졌는데 `material_part` 허위 표시 차단(역방향) |
+
+각 invalid fixture는 표적 규칙 하나만 위반하도록 격리했다(이전에는 여러 fixture가 `part=unknown`을 부수적으로 포함해 `material_part` 오류가 함께 발생, 표적 규칙이 회귀해도 실패가 유지되어 회귀 감지력이 약했음). 격리 후에는 표적 규칙이 사라지면 해당 fixture만 통과로 바뀌어 회귀가 드러난다.
 
 평가: schema와 validator는 현재 계약 문서의 핵심 제약을 잘 강제하고 있다. 특히 3-level taxonomy 전환 이후 parent-child 관계 차단 fixture가 포함되어 있어, `재킷` 계열과 `코트` 계열 detail_type이 잘못된 부모에 붙는 문제를 방지할 수 있다.
 

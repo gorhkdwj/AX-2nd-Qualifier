@@ -250,6 +250,14 @@ def custom_checks(product: dict[str, Any], tax: dict[str, Any], product_id: str)
                 "message": "material_part must be listed when a material part is unknown",
             }
         )
+    if "material_part" in missing_fields and not saw_unknown_part:
+        errors.append(
+            {
+                "product_id": product_id,
+                "path": "quality.missing_fields",
+                "message": "material_part must not be listed when every material part is known",
+            }
+        )
 
     return errors
 

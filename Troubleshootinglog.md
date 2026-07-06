@@ -10,7 +10,23 @@
 
 ---
 
-### T-013 · material_part validator 보강 후 기존 fixture 계약 누락 발견
+### T-014 · invalid fixture 이중 함정으로 회귀 감지력 약화 발견
+**발생 상황**
+- 독립 교차검증에서 `invalid_material_ratio_status.json`, `invalid_detail_type_parent.json`, `invalid_out_of_scope_category.json` 3건이 표적 규칙 외에 `part: "unknown"` + `material_part` 미표시라는 두 번째 위반을 부수적으로 포함하고 있음을 확인.
+
+**증상**
+- 검증은 exit code 기반("실패하면 통과")인데, 함정이 둘이면 표적 규칙(예: detail_type 부모 검사)이 회귀로 사라져도 `material_part` 오류 때문에 exit 1이 유지되어 회귀가 은폐됨. `validate.py`로 3건을 실행하면 각각 오류가 2건씩 나옴.
+
+**확인된 원인**
+- 초기 fixture 작성 시 소재부를 `unknown`으로 둔 채 `missing_fields`에 `material_part`를 넣지 않아, T-013에서 도입한 material_part 규칙과 우연히 겹쳤다. 표적 규칙과 무관한 부수 위반이었다.
+
+**조치**
+- 3건 모두 `part: "unknown"` → `part: "shell"`로 바꿔 표적 규칙 하나만 위반하도록 격리(각 fixture 오류 1건으로 확인, `invalid_unknown_detail_type.json`은 같은 개념의 schema+custom 2건이라 유지).
+- material_part 규칙을 양방향으로 강화(`validate.py`: 모든 part가 알려졌는데 `material_part`가 `missing_fields`에 있으면 차단)하고, 역방향 회귀 fixture `invalid_spurious_material_part.json` 추가.
+- 전체 검증 스위트(15개 저장 명령 + 기본 평가) 재실행으로 무회귀 확인.
+
+**재발 방지**
+- 새 negative fixture는 "표적 규칙 하나만 위반"을 원칙으로 하고, 추가 시 `validate.py` 실행 결과 오류가 표적 1건(또는 같은 개념의 묶음)인지 확인한다.
 **발생 상황**
 - `validate.py`에 `part: "unknown"` 소재가 있으면 `quality.missing_fields`에 `material_part`가 있어야 한다는 custom check를 추가한 뒤 기존 검증을 재실행했다.
 
