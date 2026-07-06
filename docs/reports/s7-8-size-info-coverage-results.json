@@ -1,0 +1,1184 @@
+{
+  "generated_at_utc": "2026-07-06T01:51:51.297559+00:00",
+  "generated_for_kst_date": "2026-07-06",
+  "environment": {
+    "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "codex_version": "codex-cli 0.142.5"
+  },
+  "commands": [
+    {
+      "path": "tests\\fixtures\\size_info_patterns\\expected_products.json",
+      "exit_code": 0,
+      "valid": true,
+      "checked": 48,
+      "errors": [],
+      "stderr": "",
+      "id": "expected_schema",
+      "argv": [
+        "C:\\Users\\gorhk\\MiniConda3\\python.exe",
+        "src/skills/product-agentizer/scripts/validate.py",
+        "tests/fixtures/size_info_patterns/expected_products.json"
+      ]
+    },
+    {
+      "path": "tests\\fixtures\\size_info_patterns\\actual_products.json",
+      "exit_code": 0,
+      "valid": true,
+      "checked": 48,
+      "errors": [],
+      "stderr": "",
+      "id": "actual_schema",
+      "argv": [
+        "C:\\Users\\gorhk\\MiniConda3\\python.exe",
+        "src/skills/product-agentizer/scripts/validate.py",
+        "tests/fixtures/size_info_patterns/actual_products.json"
+      ]
+    }
+  ],
+  "source_check": {
+    "source_count": 48,
+    "auto_fetch_count": 0,
+    "real_page_copy_count": 0,
+    "legal_compliance_judgment_count": 0,
+    "non_synthetic_url_count": 0,
+    "non_synthetic_method_count": 0,
+    "non_synthetic_url_examples": [],
+    "non_synthetic_method_examples": []
+  },
+  "size_info_metrics": {
+    "micro": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "true_positive": 97,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "by_group": {
+      "brand_numeric": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 11,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "comparison_guide": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 4,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "free_one_size": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 5,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "letter_comma": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 12,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "letter_slash": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 14,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "measurement_rows": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 8,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "measurement_table": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 7,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "mixed_parentheses": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 10,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "model_wear": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 4,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "numeric_space": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 12,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "recommendation_noise": {
+        "precision": "not_applicable",
+        "recall": "not_applicable",
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0
+      },
+      "women_numeric": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 10,
+        "false_positive": 0,
+        "false_negative": 0
+      }
+    },
+    "cases": [
+      {
+        "product_id": "sizepat_000",
+        "pattern_group": "letter_comma",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "L",
+          "M",
+          "S"
+        ],
+        "actual": [
+          "L",
+          "M",
+          "S"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_001",
+        "pattern_group": "letter_comma",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "L",
+          "M",
+          "XL"
+        ],
+        "actual": [
+          "L",
+          "M",
+          "XL"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_002",
+        "pattern_group": "letter_comma",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "M",
+          "S",
+          "XS"
+        ],
+        "actual": [
+          "M",
+          "S",
+          "XS"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_003",
+        "pattern_group": "letter_comma",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "actual": [
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_004",
+        "pattern_group": "letter_slash",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 5,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "L",
+          "M",
+          "S",
+          "XL",
+          "XS"
+        ],
+        "actual": [
+          "L",
+          "M",
+          "S",
+          "XL",
+          "XS"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_005",
+        "pattern_group": "letter_slash",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "L",
+          "M",
+          "S"
+        ],
+        "actual": [
+          "L",
+          "M",
+          "S"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_006",
+        "pattern_group": "letter_slash",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "L",
+          "M",
+          "XL"
+        ],
+        "actual": [
+          "L",
+          "M",
+          "XL"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_007",
+        "pattern_group": "letter_slash",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "FREE",
+          "L",
+          "M"
+        ],
+        "actual": [
+          "FREE",
+          "L",
+          "M"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_008",
+        "pattern_group": "numeric_space",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 4,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "100",
+          "105",
+          "90",
+          "95"
+        ],
+        "actual": [
+          "100",
+          "105",
+          "90",
+          "95"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_009",
+        "pattern_group": "numeric_space",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "85",
+          "90",
+          "95"
+        ],
+        "actual": [
+          "85",
+          "90",
+          "95"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_010",
+        "pattern_group": "numeric_space",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "100",
+          "105",
+          "110"
+        ],
+        "actual": [
+          "100",
+          "105",
+          "110"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_011",
+        "pattern_group": "numeric_space",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "100",
+          "95"
+        ],
+        "actual": [
+          "100",
+          "95"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_012",
+        "pattern_group": "women_numeric",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "44",
+          "55",
+          "66"
+        ],
+        "actual": [
+          "44",
+          "55",
+          "66"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_013",
+        "pattern_group": "women_numeric",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "55",
+          "66",
+          "77"
+        ],
+        "actual": [
+          "55",
+          "66",
+          "77"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_014",
+        "pattern_group": "women_numeric",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "44",
+          "55"
+        ],
+        "actual": [
+          "44",
+          "55"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_015",
+        "pattern_group": "women_numeric",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "66",
+          "77"
+        ],
+        "actual": [
+          "66",
+          "77"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_016",
+        "pattern_group": "brand_numeric",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "1",
+          "2",
+          "3"
+        ],
+        "actual": [
+          "1",
+          "2",
+          "3"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_017",
+        "pattern_group": "brand_numeric",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "0",
+          "1",
+          "2"
+        ],
+        "actual": [
+          "0",
+          "1",
+          "2"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_018",
+        "pattern_group": "brand_numeric",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "2",
+          "3",
+          "4"
+        ],
+        "actual": [
+          "2",
+          "3",
+          "4"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_019",
+        "pattern_group": "brand_numeric",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "1",
+          "2"
+        ],
+        "actual": [
+          "1",
+          "2"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_020",
+        "pattern_group": "mixed_parentheses",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "L(100)",
+          "M(95)",
+          "XL(105)"
+        ],
+        "actual": [
+          "L(100)",
+          "M(95)",
+          "XL(105)"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_021",
+        "pattern_group": "mixed_parentheses",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "L(100)",
+          "M(95)",
+          "S(90)"
+        ],
+        "actual": [
+          "L(100)",
+          "M(95)",
+          "S(90)"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_022",
+        "pattern_group": "mixed_parentheses",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "1(44-55)",
+          "2(66)",
+          "3(77)"
+        ],
+        "actual": [
+          "1(44-55)",
+          "2(66)",
+          "3(77)"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_023",
+        "pattern_group": "mixed_parentheses",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "FREE(44-66)"
+        ],
+        "actual": [
+          "FREE(44-66)"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_024",
+        "pattern_group": "free_one_size",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "FREE"
+        ],
+        "actual": [
+          "FREE"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_025",
+        "pattern_group": "free_one_size",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "ONE SIZE"
+        ],
+        "actual": [
+          "ONE SIZE"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_026",
+        "pattern_group": "free_one_size",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "OS"
+        ],
+        "actual": [
+          "OS"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_027",
+        "pattern_group": "free_one_size",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "FREE",
+          "ONE SIZE"
+        ],
+        "actual": [
+          "FREE",
+          "ONE SIZE"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_028",
+        "pattern_group": "measurement_rows",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "L 총장 70cm 어깨 52cm 가슴 60cm 소매 61cm",
+          "M 총장 68cm 어깨 50cm 가슴 58cm 소매 60cm"
+        ],
+        "actual": [
+          "L 총장 70cm 어깨 52cm 가슴 60cm 소매 61cm",
+          "M 총장 68cm 어깨 50cm 가슴 58cm 소매 60cm"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_029",
+        "pattern_group": "measurement_rows",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "L 총장 68cm 어깨 50cm 가슴 57cm",
+          "M 총장 66cm 어깨 48cm 가슴 55cm",
+          "S 총장 64cm 어깨 46cm 가슴 53cm"
+        ],
+        "actual": [
+          "L 총장 68cm 어깨 50cm 가슴 57cm",
+          "M 총장 66cm 어깨 48cm 가슴 55cm",
+          "S 총장 64cm 어깨 46cm 가슴 53cm"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_030",
+        "pattern_group": "measurement_rows",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "FREE 총장 72cm 가슴 64cm 밑단 62cm"
+        ],
+        "actual": [
+          "FREE 총장 72cm 가슴 64cm 밑단 62cm"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_031",
+        "pattern_group": "measurement_rows",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "1 총장 65cm 어깨 48cm 가슴 56cm",
+          "2 총장 67cm 어깨 50cm 가슴 58cm"
+        ],
+        "actual": [
+          "1 총장 65cm 어깨 48cm 가슴 56cm",
+          "2 총장 67cm 어깨 50cm 가슴 58cm"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_032",
+        "pattern_group": "measurement_table",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "L 총장 70cm 어깨 52cm 가슴 60cm 소매 61cm",
+          "M 총장 68cm 어깨 50cm 가슴 58cm 소매 60cm"
+        ],
+        "actual": [
+          "L 총장 70cm 어깨 52cm 가슴 60cm 소매 61cm",
+          "M 총장 68cm 어깨 50cm 가슴 58cm 소매 60cm"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_033",
+        "pattern_group": "measurement_table",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "M LENGTH 66cm SHOULDER 48cm CHEST 55cm SLEEVE 59cm",
+          "S LENGTH 64cm SHOULDER 46cm CHEST 53cm SLEEVE 58cm"
+        ],
+        "actual": [
+          "M LENGTH 66cm SHOULDER 48cm CHEST 55cm SLEEVE 59cm",
+          "S LENGTH 64cm SHOULDER 46cm CHEST 53cm SLEEVE 58cm"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_034",
+        "pattern_group": "measurement_table",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "FREE 총장 71 가슴단면 62 암홀 28"
+        ],
+        "actual": [
+          "FREE 총장 71 가슴단면 62 암홀 28"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_035",
+        "pattern_group": "measurement_table",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "1 총장 65cm 어깨 48cm 가슴 56cm",
+          "2 총장 67cm 어깨 50cm 가슴 58cm"
+        ],
+        "actual": [
+          "1 총장 65cm 어깨 48cm 가슴 56cm",
+          "2 총장 67cm 어깨 50cm 가슴 58cm"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_036",
+        "pattern_group": "model_wear",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "모델 181cm/70kg L 착용"
+        ],
+        "actual": [
+          "모델 181cm/70kg L 착용"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_037",
+        "pattern_group": "model_wear",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "여성 모델 170cm S 착용"
+        ],
+        "actual": [
+          "여성 모델 170cm S 착용"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_038",
+        "pattern_group": "model_wear",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "남성 모델 178cm 68kg M 사이즈 착용"
+        ],
+        "actual": [
+          "남성 모델 178cm 68kg M 사이즈 착용"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_039",
+        "pattern_group": "model_wear",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "LOOKBOOK MODEL 186cm XL 착용"
+        ],
+        "actual": [
+          "LOOKBOOK MODEL 186cm XL 착용"
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_040",
+        "pattern_group": "comparison_guide",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "사이즈 비교 가이드: 무신사 스탠다드 M 사이즈 티셔츠와 비슷한 사이즈입니다."
+        ],
+        "actual": [
+          "사이즈 비교 가이드: 무신사 스탠다드 M 사이즈 티셔츠와 비슷한 사이즈입니다."
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_041",
+        "pattern_group": "comparison_guide",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "이 상품은 가슴단면 기준으로 무신사 스탠다드 XS 민소매와 비슷합니다."
+        ],
+        "actual": [
+          "이 상품은 가슴단면 기준으로 무신사 스탠다드 XS 민소매와 비슷합니다."
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_042",
+        "pattern_group": "comparison_guide",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "어깨너비 기준으로 무신사 스탠다드 L 점퍼와 유사한 사이즈입니다."
+        ],
+        "actual": [
+          "어깨너비 기준으로 무신사 스탠다드 L 점퍼와 유사한 사이즈입니다."
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_043",
+        "pattern_group": "comparison_guide",
+        "metrics": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [
+          "기존 착용 상품과 비교하면 100 사이즈 셔츠에 가까운 핏입니다."
+        ],
+        "actual": [
+          "기존 착용 상품과 비교하면 100 사이즈 셔츠에 가까운 핏입니다."
+        ],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_044",
+        "pattern_group": "recommendation_noise",
+        "metrics": {
+          "precision": "not_applicable",
+          "recall": "not_applicable",
+          "true_positive": 0,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [],
+        "actual": [],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_045",
+        "pattern_group": "recommendation_noise",
+        "metrics": {
+          "precision": "not_applicable",
+          "recall": "not_applicable",
+          "true_positive": 0,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [],
+        "actual": [],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_046",
+        "pattern_group": "recommendation_noise",
+        "metrics": {
+          "precision": "not_applicable",
+          "recall": "not_applicable",
+          "true_positive": 0,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [],
+        "actual": [],
+        "false_positive": [],
+        "false_negative": []
+      },
+      {
+        "product_id": "sizepat_047",
+        "pattern_group": "recommendation_noise",
+        "metrics": {
+          "precision": "not_applicable",
+          "recall": "not_applicable",
+          "true_positive": 0,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "expected": [],
+        "actual": [],
+        "false_positive": [],
+        "false_negative": []
+      }
+    ],
+    "noise_false_positive_count": 0,
+    "noise_false_positive_cases": [],
+    "missing_actual_product_ids": [],
+    "extra_actual_product_ids": []
+  },
+  "hashes_sha256": {
+    "src/skills/product-agentizer/SKILL.md": "a749f9429834292752a3cbe4f8999c1ee1cfb54c52c0584fc2d8b84aae6eda2d",
+    "src/skills/product-agentizer/references/schema.json": "685ee3307d64603079d8adce707768e17e96a1aeb48010da2d5bd26f254f4a0a",
+    "src/skills/product-agentizer/references/taxonomy.json": "5d60707c2c79b66ce19c71c3179d18b296e11d6fcaab34d612b25dbc0367e91b",
+    "src/skills/product-agentizer/scripts/validate.py": "ceef43b48102906b849ee271232f86f68f821dde70277299e60e8095b64b4318",
+    "tools/generate_size_info_pattern_fixtures.py": "a9b1f9700247f5ab6cf257fd3d6a7885a2c7714c6a5e990ca813dd5d74e70f20",
+    "tools/run_size_info_pattern_validation.py": "67babdd2727b592020265933600d42f67d6000ab59d16c1b17e65987a57abc87",
+    "tools/run_full_page_codex_smoke20_cli.py": "c25a9160e1daea2c31dc76347b68c3f7dfb1677dc1d470cb6da8c24aa5ece8ca",
+    "tests/fixtures/size_info_patterns/source_inputs.json": "6f93be933e1a3ca3bfaca27282308c92efffce7b5831358fc69707eef0510d6a",
+    "tests/fixtures/size_info_patterns/expected_products.json": "2d6f5c310655ef44717fa07bf33c0ed192c3e838d9d60b3f1e28730ecc5e5599",
+    "tests/fixtures/size_info_patterns/actual_products.json": "a043cb476468e7cd1d09b0b9848f910102da64fed2cfe6aa0954013710844d94",
+    "tests/fixtures/size_info_patterns/actual_metadata.json": "7fe491b925f56021204203c83bd718aeb38a07bc7681a4791946f6eb10b0eb44",
+    "tests/fixtures/size_info_patterns/case_metadata.json": "71ecdf6944ab3afda75b5ae7391b620b2ca812de3f48d2247e67e700aeb8a2c9",
+    "tests/fixtures/size_info_patterns/prompt.md": "8dc6ecaebd68ba46d99e98408279da24324141a76a3a1d4e7f9f5472a00fa47b"
+  },
+  "acceptance_summary": {
+    "passed": true,
+    "actual_mode": "codex_cli_actual",
+    "actual_generated_at_utc": "2026-07-06T01:45:03.275073+00:00",
+    "expected_schema_valid": true,
+    "actual_schema_valid": true,
+    "actual_checked": 48,
+    "size_info_precision": 1.0,
+    "size_info_recall": 1.0,
+    "size_info_true_positive": 97,
+    "size_info_false_positive": 0,
+    "size_info_false_negative": 0,
+    "noise_false_positive_count": 0,
+    "auto_fetch_count": 0,
+    "real_page_copy_count": 0,
+    "legal_compliance_judgment_count": 0
+  }
+}

@@ -10,6 +10,34 @@
 
 ---
 
+### T-011 · S7.8 size_info 패턴 검증 스크립트 상수 누락과 라벨 과정규화
+**발생 상황**
+- S7.8 `size_info_patterns` fixture와 검증 스크립트를 만든 뒤, `python tools\run_size_info_pattern_validation.py`를 실행했다.
+
+**증상**
+- 첫 실행에서 `NameError: SYNTHETIC_URL_PREFIX`가 발생했다.
+- 상수 누락을 고친 뒤 실제 Codex CLI actual 기준 검증을 실행하자 schema는 통과했지만 `size_info` precision/recall이 94.85%로 목표치 95%에 미달했다.
+- 실패 사례는 `measurement_table` 1건과 `comparison_guide` 4건에 집중됐다.
+
+**확인된 원인**
+- `synthetic_source_check()`에서 합성 URL prefix를 확인하도록 작성했지만, 파일 상단에 `SYNTHETIC_URL_PREFIX` 상수를 정의하지 않았다.
+- `measurement_table` expected가 입력에는 없는 `cm` 단위를 결과 행에 덧붙이고 있었다.
+- `comparison_guide` expected가 입력 문장의 비교 가이드 문구를 짧게 정규화했지만, actual은 입력 문구 전체를 보존했다. 계약상 비교 가이드 문구는 정적 size_info 근거로 보존할 수 있으므로 actual이 틀린 것이 아니라 expected 라벨이 과도하게 정규화된 상태였다.
+
+**조치**
+- `tools/run_size_info_pattern_validation.py`에 `SYNTHETIC_URL_PREFIX` 상수를 추가했다.
+- `tools/generate_size_info_pattern_fixtures.py`의 `measurement_table` expected를 입력 근거와 동일하게 수정했다.
+- `comparison_guide` expected를 입력 문구 전체 보존 기준으로 보정했다.
+- 기존 실제 Codex actual은 유지한 채 fixture를 재생성하고 `python tools\run_size_info_pattern_validation.py`를 재실행했다.
+- 최종 결과는 schema-valid 48/48, `size_info` precision/recall 100.00%, TP/FP/FN 97/0/0, recommendation_noise false positive 0건으로 통과했다.
+
+**재발 방지**
+- 새 source policy check를 추가할 때는 상수 정의와 생성기 prefix가 같은 파일에서 함께 검증되는지 확인한다.
+- 실제 Codex actual이 입력 근거를 더 충실히 보존한 경우, 수치를 맞추기 위해 actual을 깎기보다 expected 라벨이 기준 계약과 입력 근거에 맞는지 먼저 확인한다.
+- 합성 fixture라도 expected는 입력에 없는 단위나 축약 표현을 임의로 만들지 않는다.
+
+---
+
 ### T-010 · S7.7 50건 평가 결과 출력 과다
 **발생 상황**
 - `full_page_codex_subset` 50건 실제 Codex CLI actual을 생성한 뒤, 평가 결과를 `--pretty`로 확인했다.

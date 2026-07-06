@@ -11,6 +11,8 @@
 | `s7-expanded-validation-results.json` | S7.5 실행 환경, 명령, 정량 결과, 주요 파일 hash 원본 스냅샷 | S7.5 |
 | `s7-7-full-page-dummy-validation-report.md` | 실제 페이지형 합성 더미 300건과 subset 50건 기준 검증 해설 | S7.7 |
 | `s7-7-full-page-dummy-validation-results.json` | S7.7 실행 환경, 명령, 정량 결과, 주요 파일 hash 원본 스냅샷 | S7.7 |
+| `s7-8-size-info-coverage-report.md` | size_info 표기 패턴 합성 fixture와 실제 Codex CLI 검증 해설 | S7.8 |
+| `s7-8-size-info-coverage-results.json` | S7.8 실행 환경, 명령, 정량 결과, 패턴 그룹별 결과 스냅샷 | S7.8 |
 
 ## 보관 원칙
 - 사람이 읽는 해설은 `*-report.md`에 둡니다.

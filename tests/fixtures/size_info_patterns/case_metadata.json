@@ -1,0 +1,577 @@
+{
+  "cases": [
+    {
+      "product_id": "sizepat_000",
+      "pattern_group": "letter_comma",
+      "variant_index": 0,
+      "category": "outer",
+      "expected_size_info": [
+        "S",
+        "M",
+        "L"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_001",
+      "pattern_group": "letter_comma",
+      "variant_index": 1,
+      "category": "top",
+      "expected_size_info": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_002",
+      "pattern_group": "letter_comma",
+      "variant_index": 2,
+      "category": "outer",
+      "expected_size_info": [
+        "XS",
+        "S",
+        "M"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_003",
+      "pattern_group": "letter_comma",
+      "variant_index": 3,
+      "category": "top",
+      "expected_size_info": [
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_004",
+      "pattern_group": "letter_slash",
+      "variant_index": 0,
+      "category": "outer",
+      "expected_size_info": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_005",
+      "pattern_group": "letter_slash",
+      "variant_index": 1,
+      "category": "top",
+      "expected_size_info": [
+        "S",
+        "M",
+        "L"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_006",
+      "pattern_group": "letter_slash",
+      "variant_index": 2,
+      "category": "outer",
+      "expected_size_info": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_007",
+      "pattern_group": "letter_slash",
+      "variant_index": 3,
+      "category": "top",
+      "expected_size_info": [
+        "FREE",
+        "M",
+        "L"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_008",
+      "pattern_group": "numeric_space",
+      "variant_index": 0,
+      "category": "outer",
+      "expected_size_info": [
+        "90",
+        "95",
+        "100",
+        "105"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_009",
+      "pattern_group": "numeric_space",
+      "variant_index": 1,
+      "category": "top",
+      "expected_size_info": [
+        "85",
+        "90",
+        "95"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_010",
+      "pattern_group": "numeric_space",
+      "variant_index": 2,
+      "category": "outer",
+      "expected_size_info": [
+        "100",
+        "105",
+        "110"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_011",
+      "pattern_group": "numeric_space",
+      "variant_index": 3,
+      "category": "top",
+      "expected_size_info": [
+        "95",
+        "100"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_012",
+      "pattern_group": "women_numeric",
+      "variant_index": 0,
+      "category": "outer",
+      "expected_size_info": [
+        "44",
+        "55",
+        "66"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_013",
+      "pattern_group": "women_numeric",
+      "variant_index": 1,
+      "category": "top",
+      "expected_size_info": [
+        "55",
+        "66",
+        "77"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_014",
+      "pattern_group": "women_numeric",
+      "variant_index": 2,
+      "category": "outer",
+      "expected_size_info": [
+        "44",
+        "55"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_015",
+      "pattern_group": "women_numeric",
+      "variant_index": 3,
+      "category": "top",
+      "expected_size_info": [
+        "66",
+        "77"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_016",
+      "pattern_group": "brand_numeric",
+      "variant_index": 0,
+      "category": "outer",
+      "expected_size_info": [
+        "1",
+        "2",
+        "3"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_017",
+      "pattern_group": "brand_numeric",
+      "variant_index": 1,
+      "category": "top",
+      "expected_size_info": [
+        "0",
+        "1",
+        "2"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_018",
+      "pattern_group": "brand_numeric",
+      "variant_index": 2,
+      "category": "outer",
+      "expected_size_info": [
+        "2",
+        "3",
+        "4"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_019",
+      "pattern_group": "brand_numeric",
+      "variant_index": 3,
+      "category": "top",
+      "expected_size_info": [
+        "1",
+        "2"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_020",
+      "pattern_group": "mixed_parentheses",
+      "variant_index": 0,
+      "category": "outer",
+      "expected_size_info": [
+        "M(95)",
+        "L(100)",
+        "XL(105)"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_021",
+      "pattern_group": "mixed_parentheses",
+      "variant_index": 1,
+      "category": "top",
+      "expected_size_info": [
+        "S(90)",
+        "M(95)",
+        "L(100)"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_022",
+      "pattern_group": "mixed_parentheses",
+      "variant_index": 2,
+      "category": "outer",
+      "expected_size_info": [
+        "1(44-55)",
+        "2(66)",
+        "3(77)"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_023",
+      "pattern_group": "mixed_parentheses",
+      "variant_index": 3,
+      "category": "top",
+      "expected_size_info": [
+        "FREE(44-66)"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_024",
+      "pattern_group": "free_one_size",
+      "variant_index": 0,
+      "category": "outer",
+      "expected_size_info": [
+        "FREE"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_025",
+      "pattern_group": "free_one_size",
+      "variant_index": 1,
+      "category": "top",
+      "expected_size_info": [
+        "ONE SIZE"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_026",
+      "pattern_group": "free_one_size",
+      "variant_index": 2,
+      "category": "outer",
+      "expected_size_info": [
+        "OS"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_027",
+      "pattern_group": "free_one_size",
+      "variant_index": 3,
+      "category": "top",
+      "expected_size_info": [
+        "FREE",
+        "ONE SIZE"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_028",
+      "pattern_group": "measurement_rows",
+      "variant_index": 0,
+      "category": "outer",
+      "expected_size_info": [
+        "M 총장 68cm 어깨 50cm 가슴 58cm 소매 60cm",
+        "L 총장 70cm 어깨 52cm 가슴 60cm 소매 61cm"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_029",
+      "pattern_group": "measurement_rows",
+      "variant_index": 1,
+      "category": "top",
+      "expected_size_info": [
+        "S 총장 64cm 어깨 46cm 가슴 53cm",
+        "M 총장 66cm 어깨 48cm 가슴 55cm",
+        "L 총장 68cm 어깨 50cm 가슴 57cm"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_030",
+      "pattern_group": "measurement_rows",
+      "variant_index": 2,
+      "category": "outer",
+      "expected_size_info": [
+        "FREE 총장 72cm 가슴 64cm 밑단 62cm"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_031",
+      "pattern_group": "measurement_rows",
+      "variant_index": 3,
+      "category": "top",
+      "expected_size_info": [
+        "1 총장 65cm 어깨 48cm 가슴 56cm",
+        "2 총장 67cm 어깨 50cm 가슴 58cm"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_032",
+      "pattern_group": "measurement_table",
+      "variant_index": 0,
+      "category": "outer",
+      "expected_size_info": [
+        "M 총장 68cm 어깨 50cm 가슴 58cm 소매 60cm",
+        "L 총장 70cm 어깨 52cm 가슴 60cm 소매 61cm"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_033",
+      "pattern_group": "measurement_table",
+      "variant_index": 1,
+      "category": "top",
+      "expected_size_info": [
+        "S LENGTH 64cm SHOULDER 46cm CHEST 53cm SLEEVE 58cm",
+        "M LENGTH 66cm SHOULDER 48cm CHEST 55cm SLEEVE 59cm"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_034",
+      "pattern_group": "measurement_table",
+      "variant_index": 2,
+      "category": "outer",
+      "expected_size_info": [
+        "FREE 총장 71 가슴단면 62 암홀 28"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_035",
+      "pattern_group": "measurement_table",
+      "variant_index": 3,
+      "category": "top",
+      "expected_size_info": [
+        "1 총장 65cm 어깨 48cm 가슴 56cm",
+        "2 총장 67cm 어깨 50cm 가슴 58cm"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_036",
+      "pattern_group": "model_wear",
+      "variant_index": 0,
+      "category": "outer",
+      "expected_size_info": [
+        "모델 181cm/70kg L 착용"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_037",
+      "pattern_group": "model_wear",
+      "variant_index": 1,
+      "category": "top",
+      "expected_size_info": [
+        "여성 모델 170cm S 착용"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_038",
+      "pattern_group": "model_wear",
+      "variant_index": 2,
+      "category": "outer",
+      "expected_size_info": [
+        "남성 모델 178cm 68kg M 사이즈 착용"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_039",
+      "pattern_group": "model_wear",
+      "variant_index": 3,
+      "category": "top",
+      "expected_size_info": [
+        "LOOKBOOK MODEL 186cm XL 착용"
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_040",
+      "pattern_group": "comparison_guide",
+      "variant_index": 0,
+      "category": "outer",
+      "expected_size_info": [
+        "사이즈 비교 가이드: 무신사 스탠다드 M 사이즈 티셔츠와 비슷한 사이즈입니다."
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_041",
+      "pattern_group": "comparison_guide",
+      "variant_index": 1,
+      "category": "top",
+      "expected_size_info": [
+        "이 상품은 가슴단면 기준으로 무신사 스탠다드 XS 민소매와 비슷합니다."
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_042",
+      "pattern_group": "comparison_guide",
+      "variant_index": 2,
+      "category": "outer",
+      "expected_size_info": [
+        "어깨너비 기준으로 무신사 스탠다드 L 점퍼와 유사한 사이즈입니다."
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_043",
+      "pattern_group": "comparison_guide",
+      "variant_index": 3,
+      "category": "top",
+      "expected_size_info": [
+        "기존 착용 상품과 비교하면 100 사이즈 셔츠에 가까운 핏입니다."
+      ],
+      "negative_size_info_case": false,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_044",
+      "pattern_group": "recommendation_noise",
+      "variant_index": 0,
+      "category": "outer",
+      "expected_size_info": [],
+      "negative_size_info_case": true,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_045",
+      "pattern_group": "recommendation_noise",
+      "variant_index": 1,
+      "category": "top",
+      "expected_size_info": [],
+      "negative_size_info_case": true,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_046",
+      "pattern_group": "recommendation_noise",
+      "variant_index": 2,
+      "category": "outer",
+      "expected_size_info": [],
+      "negative_size_info_case": true,
+      "synthetic_source": true
+    },
+    {
+      "product_id": "sizepat_047",
+      "pattern_group": "recommendation_noise",
+      "variant_index": 3,
+      "category": "top",
+      "expected_size_info": [],
+      "negative_size_info_case": true,
+      "synthetic_source": true
+    }
+  ]
+}

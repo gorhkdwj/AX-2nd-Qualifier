@@ -10,6 +10,39 @@
 
 ---
 
+### D-023 · S7.8 size_info 표기 패턴 보강 검증 채택
+**상황**
+- S7.7 실제 페이지형 합성 subset 50건에서 `size_info` precision/recall 100.00%를 달성했지만, 이 결과는 합성 상세페이지형 50건 기준이었다.
+- 사용자는 실제 상품페이지에서 등장할 수 있는 사이즈 표기 방식이 합성데이터에 충분히 반영되지 않았을 가능성을 지적했다.
+- 실제 상품 원문 전체를 저장하거나 로컬 전용 비공개 검증 데이터를 만드는 방식은 윤리·재현성 기준과 맞지 않으므로 제외해야 했다.
+
+**검토한 선택지**
+- 현재 S7.7 결과만 유지하고 한계로 기록한다.
+- 실제 공개 상품 페이지 전체를 수집해 검증한다.
+- 실제 페이지에서 나올 법한 size 표기 패턴을 합성 fixture로 확장하고, 실제 Codex CLI actual을 격리 workspace에서 생성한다.
+
+**결정**
+- S8 패키징 전에 S7.8 `size_info` 표기 패턴 보강 검증을 추가한다.
+- 실제 상품 원문은 저장하지 않고, 문자형 옵션, 숫자형 옵션, `FREE`/`ONE SIZE`, 괄호 혼합 표기, 실측 행, 표 형태 실측, 모델 착용, 비교 가이드, 추천·후기 noise를 48건 합성 fixture로 구성한다.
+- actual은 expected fixture가 없는 격리 workspace에서 실제 Codex CLI로 생성하고, 입력·expected·actual·metadata·prompt·평가 결과를 모두 보존한다.
+
+**근거**
+- `size_info`는 실제 상품 페이지에서 표기 방식이 다양하므로, S7.7의 50건 결과만으로는 coverage 설명이 부족하다.
+- 합성 fixture는 정답 라벨과 재현성을 보장하면서도 실제 상품 페이지 전체 복사나 자동 크롤링을 피할 수 있다.
+- 추천·후기 기반 문구를 negative case로 넣어 정적 상품 size_info와 동적/개인화 정보를 구분하는 안전 기준도 확인할 수 있다.
+
+**영향**
+- `docs/size-info-coverage-plan.md`, `tests/fixtures/size_info_patterns/`, `tools/generate_size_info_pattern_fixtures.py`, `tools/run_size_info_pattern_validation.py`, S7.8 report/results가 추가됐다.
+- `SKILL.md`와 `requirements-contract.md`의 size_info 처리 규칙이 문자/숫자/실측/모델착용/비교가이드/추천노이즈 유형까지 확장됐다.
+- 최종 검증 설명은 S7.5, S7.7, S7.8을 함께 언급한다.
+- 현재 결과는 schema-valid 48/48, `size_info` precision/recall 100.00%, TP/FP/FN 97/0/0, recommendation_noise false positive 0건이다.
+
+**재검토 조건**
+- 실제 허가된 상품 데이터셋을 사용할 수 있게 되거나, shoes/bottom 등 size 체계가 크게 다른 카테고리를 추가하는 경우.
+- `size_info`를 필터·추천·비교 질의에서 typed field로 직접 사용해야 하는 요구가 생기는 경우.
+
+---
+
 ### D-022 · size_info schema 변경 보류와 SKILL-only 원자화 채택
 **상황**
 - S7.7 50건 실제 Codex subset 검증은 전체 수용 기준을 통과했지만, `size_info` precision 59.65%, recall 33.01%로 낮게 남았다.

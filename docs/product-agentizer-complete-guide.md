@@ -1297,6 +1297,53 @@ SKILL-only `size_info` 원자화 보강 후 결과는 다음입니다.
 
 schema는 `0.2.0`을 유지했다. 즉 이번 개선은 schema 변경이 아니라 skill 지침 개선만으로 달성한 결과다. size option, 실측표, 모델 착용 정보를 객체로 구분해야 하는 장기 계획은 `docs/size-info-schema-change-plan.md`에 조건부 계획으로 보존한다.
 
+### 17.6 S7.8 size_info 표기 패턴 48건
+
+S7.8은 S7.7 결과를 더 보강하기 위한 `size_info` 전용 coverage 검증입니다. S7.7에서 `size_info` precision/recall 100.00%가 나왔지만, 그 수치는 합성 상세페이지형 50건 기준이므로 실제 판매 데이터 전체 성능이라고 말할 수 없습니다. 실제 상품 페이지에는 문자형 사이즈, 숫자형 사이즈, 브랜드 자체 사이즈, 실측표, 모델 착용, 비교 가이드, 추천·후기 노이즈가 더 다양하게 나타날 수 있습니다.
+
+그래서 S7.8에서는 실제 상품 원문을 저장하지 않고, 실제 페이지에서 나올 법한 size 표기 방식만 합성 fixture로 확장했습니다.
+
+보존된 주요 세트는 다음입니다.
+
+| 파일/폴더 | 내용 |
+|---|---|
+| `docs/size-info-coverage-plan.md` | S7.8 보강 계획, 해석 기준, 완료 기준 |
+| `tests/fixtures/size_info_patterns/` | 합성 입력 48건, expected, Codex actual, prompt, metadata |
+| `docs/reports/s7-8-size-info-coverage-report.md` | 사람이 읽는 검증 보고서 |
+| `docs/reports/s7-8-size-info-coverage-results.json` | 실행 환경, 명령, 지표 원본 스냅샷 |
+
+패턴 그룹은 아래 12개입니다.
+
+| 그룹 | 검증하려는 상황 |
+|---|---|
+| `letter_comma` | `S, M, L`처럼 쉼표로 나뉜 문자형 사이즈 |
+| `letter_slash` | `XS / S / M / L`처럼 slash로 나뉜 문자형 사이즈 |
+| `numeric_space` | `90 95 100 105`처럼 공백으로 나뉜 숫자형 사이즈 |
+| `women_numeric` | `44, 55, 66` 같은 여성 숫자형 사이즈 |
+| `brand_numeric` | `1 / 2 / 3` 같은 브랜드 자체 숫자 사이즈 |
+| `mixed_parentheses` | `M(95), L(100)`처럼 문자와 숫자가 결합된 표기 |
+| `free_one_size` | `FREE`, `ONE SIZE`, `OS` 단일 옵션 |
+| `measurement_rows` | `M 총장 68cm 어깨 50cm` 같은 행 단위 실측 |
+| `measurement_table` | 표 header와 값이 분리된 실측표 |
+| `model_wear` | `모델 181cm/70kg L 착용` 같은 착용 정보 |
+| `comparison_guide` | `무신사 스탠다드 M과 비슷` 같은 비교 가이드 |
+| `recommendation_noise` | 사이즈 만족도, 추천, 후기 기반 노이즈 |
+
+실제 Codex CLI actual 결과는 다음입니다.
+
+| 지표 | 결과 |
+|---|---:|
+| actual schema-valid | 48/48 |
+| size_info precision | 100.00% |
+| size_info recall | 100.00% |
+| size_info TP/FP/FN | 97 / 0 / 0 |
+| recommendation_noise false positive | 0건 |
+| 자동 fetch | 0건 |
+| 실제 상품 원문 저장 | 0건 |
+| 법적 적합/부적합 판정 | 0건 |
+
+중요한 해석 기준은 다음입니다. S7.8 결과는 “실제 판매 데이터 기준 `size_info` 100%”가 아닙니다. 올바른 표현은 “실제 페이지에서 나올 법한 `size_info` 표기 방식을 모사한 합성 fixture 48건에서, 실제 Codex CLI actual 기준 precision/recall 100.00%를 확인했다”입니다.
+
 ## 18. 재현성 설계
 
 S7.5 이후에는 아래 파일만 있으면 검증을 재실행할 수 있습니다.
@@ -1342,7 +1389,34 @@ python tools\run_expanded_validation.py
 docs/reports/s7-expanded-validation-results.json
 ```
 
-### 18.3 결과 스냅샷에 포함되는 정보
+### 18.3 size_info 패턴 검증 실행
+
+S7.8 fixture는 아래 명령으로 재생성할 수 있습니다.
+
+```powershell
+python tools\generate_size_info_pattern_fixtures.py
+```
+
+실제 Codex CLI actual을 다시 만들려면 아래 명령을 사용합니다.
+
+```powershell
+python tools\run_full_page_codex_smoke20_cli.py --fixture size_info_patterns --timeout 3600
+```
+
+S7.8 평가 결과는 아래 명령으로 재생성합니다.
+
+```powershell
+python tools\run_size_info_pattern_validation.py
+```
+
+결과는 아래에 저장됩니다.
+
+```text
+docs/reports/s7-8-size-info-coverage-results.json
+docs/reports/s7-8-size-info-coverage-report.md
+```
+
+### 18.4 결과 스냅샷에 포함되는 정보
 
 `s7-expanded-validation-results.json`에는 다음이 들어 있습니다.
 
@@ -1459,6 +1533,12 @@ logs/
 | 실제 공개 snippet 자동 fetch | 통과, 0건 |
 | 실제 공개 snippet 법적 판정 | 통과, 0건 |
 | cross-category high-confidence false duplicate | 통과, 0건 |
+| S7.7 실제 페이지형 합성 subset schema-valid | 통과, 50/50 |
+| S7.7 실제 페이지형 합성 subset micro precision/recall | 통과, 99.74% / 99.74% |
+| S7.7 size_info precision/recall | 통과, 100.00% / 100.00% |
+| S7.8 size_info 패턴 actual schema-valid | 통과, 48/48 |
+| S7.8 size_info precision/recall | 통과, 100.00% / 100.00% |
+| S7.8 recommendation noise false positive | 통과, 0건 |
 
 ## 23. 실행 명령 모음
 
@@ -1503,6 +1583,20 @@ python tests\evaluate_product_agentizer.py --pretty
 python tools\run_expanded_validation.py
 ```
 
+### 23.7 실제 페이지형 합성 검증
+
+```powershell
+python tools\run_full_page_dummy_validation.py
+```
+
+### 23.8 size_info 패턴 검증
+
+```powershell
+python tools\generate_size_info_pattern_fixtures.py
+python tools\run_full_page_codex_smoke20_cli.py --fixture size_info_patterns --timeout 3600
+python tools\run_size_info_pattern_validation.py
+```
+
 ## 24. 패키징 관점
 
 최종 제출 zip의 핵심 구조는 아래입니다.
@@ -1544,7 +1638,7 @@ submission.zip
 후속 개선을 한다면 아래가 우선순위가 높습니다.
 
 1. `materials`의 부위 추론을 더 안정화합니다. 특히 `배색 폴리에스터` 같은 표현을 `trim`으로 볼지 `unknown`으로 둘지 기준을 좁힙니다.
-2. 실제 공개 snippet의 라벨링 기준과 Codex 출력 기준을 계속 점검합니다. S7.7의 합성 상세페이지형 검증에서는 `size_info` 원자화가 해결됐지만, 실제 공개 snippet은 짧은 sanity check라 별도 해석이 필요합니다.
+2. 실제 공개 snippet의 라벨링 기준과 Codex 출력 기준을 계속 점검합니다. S7.7의 합성 상세페이지형 검증과 S7.8의 `size_info` 패턴 검증에서는 `size_info` 원자화와 주요 표기 패턴 대응력이 확인됐지만, 실제 공개 snippet은 짧은 sanity check라 별도 해석이 필요합니다.
 3. `quality.missing_fields`가 지나치게 보수적으로 늘어나는 문제를 완화합니다.
 4. `tpo_tags` recall을 높이기 위해 TPO alias와 체크리스트를 보강합니다.
 5. category 확장이 필요하면 schema와 taxonomy를 함께 version up합니다.

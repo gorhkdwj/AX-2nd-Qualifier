@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-06T01:10:23.477871+00:00",
+  "generated_at_utc": "2026-07-06T01:51:26.518506+00:00",
   "generated_for_kst_date": "2026-07-06",
   "environment": {
     "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
@@ -5265,7 +5265,7 @@
     "examples": []
   },
   "hashes_sha256": {
-    "src/skills/product-agentizer/SKILL.md": "aea48edea0f75a7fdda082a10eef32727005039474b9e6ffd3488286931e3c1a",
+    "src/skills/product-agentizer/SKILL.md": "a749f9429834292752a3cbe4f8999c1ee1cfb54c52c0584fc2d8b84aae6eda2d",
     "src/skills/product-agentizer/references/schema.json": "685ee3307d64603079d8adce707768e17e96a1aeb48010da2d5bd26f254f4a0a",
     "src/skills/product-agentizer/references/taxonomy.json": "5d60707c2c79b66ce19c71c3179d18b296e11d6fcaab34d612b25dbc0367e91b",
     "src/skills/product-agentizer/scripts/validate.py": "ceef43b48102906b849ee271232f86f68f821dde70277299e60e8095b64b4318",

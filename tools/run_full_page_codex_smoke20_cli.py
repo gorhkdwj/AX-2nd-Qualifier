@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run Codex CLI for an S7.7 full-page Codex fixture and save actual JSON."""
+"""Run Codex CLI for a product-agentizer validation fixture and save actual JSON."""
 
 from __future__ import annotations
 
@@ -54,11 +54,11 @@ def prepare_workspace(run_root: Path) -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run Codex CLI for an S7.7 fixture in an isolated workspace.")
+    parser = argparse.ArgumentParser(description="Run Codex CLI for a validation fixture in an isolated workspace.")
     parser.add_argument(
         "--fixture",
         default="full_page_codex_smoke20",
-        choices=["full_page_codex_smoke20", "full_page_codex_subset"],
+        choices=["full_page_codex_smoke20", "full_page_codex_subset", "size_info_patterns"],
         help="Fixture directory under tests/fixtures.",
     )
     parser.add_argument("--timeout", type=int, default=1800, help="Codex CLI timeout in seconds.")

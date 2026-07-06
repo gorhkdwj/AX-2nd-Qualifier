@@ -10,6 +10,68 @@
 
 ---
 
+### W-042 · S7.8 size_info 표기 패턴 보강 검증 구현
+**요청**
+- 합성데이터 기준 `size_info` 100%가 실제 상품페이지 표기 방식을 충분히 반영하지 못했을 수 있으므로, 보강 계획을 잡고 진행
+
+**수행 작업**
+- S7.8 `size_info` 표기 패턴 보강 검증 계획을 `docs/size-info-coverage-plan.md`로 작성
+- 실제 상품 원문을 저장하지 않는 48건 합성 fixture(`tests/fixtures/size_info_patterns/`) 생성
+- 문자형 옵션, 숫자형 옵션, 여성 숫자형, 브랜드 숫자형, `FREE`/`ONE SIZE`, 괄호 혼합 표기, 실측 행, 표 형태 실측, 모델 착용, 비교 가이드, 추천·후기 noise를 패턴 그룹으로 구성
+- `tools/generate_size_info_pattern_fixtures.py`와 `tools/run_size_info_pattern_validation.py` 추가
+- `tools/run_full_page_codex_smoke20_cli.py`가 `--fixture size_info_patterns`를 받아 격리 workspace에서 실제 Codex CLI actual을 생성하도록 확장
+- `src/skills/product-agentizer/SKILL.md`와 `docs/requirements-contract.md`에 size_info 패턴별 처리 기준 보강
+- `README.md`, `docs/submission-questions.md`, `docs/product-agentizer-complete-guide.md`, `docs/implementation-plan.md`, `docs/validation-plan.md`, `docs/README.md`, `docs/reports/README.md`를 S7.8 기준으로 갱신
+- S7.8 보고서와 결과 JSON을 생성하고, 기존 S7.7/S7.5 보고서 결과 스냅샷도 최신 hash 기준으로 재생성
+- S7.8 검증 중 발생한 스크립트 상수 누락과 expected 라벨 과정규화 문제를 `Troubleshootinglog.md`에 기록
+- S7.8 검증 단계 추가 결정을 `Decisionlog.md`에 기록
+
+**변경 파일**
+- 생성: `docs/size-info-coverage-plan.md`
+- 생성: `docs/reports/s7-8-size-info-coverage-report.md`
+- 생성: `docs/reports/s7-8-size-info-coverage-results.json`
+- 생성: `tests/fixtures/size_info_patterns/`
+- 생성: `tools/generate_size_info_pattern_fixtures.py`
+- 생성: `tools/run_size_info_pattern_validation.py`
+- 수정: `src/skills/product-agentizer/SKILL.md`
+- 수정: `docs/requirements-contract.md`
+- 수정: `tools/run_full_page_codex_smoke20_cli.py`
+- 수정: `README.md`
+- 수정: `docs/submission-questions.md`
+- 수정: `docs/product-agentizer-complete-guide.md`
+- 수정: `docs/implementation-plan.md`
+- 수정: `docs/validation-plan.md`
+- 수정: `docs/README.md`
+- 수정: `docs/reports/README.md`
+- 수정: `docs/reports/s7-7-full-page-dummy-validation-report.md`
+- 수정: `docs/reports/s7-7-full-page-dummy-validation-results.json`
+- 수정: `docs/reports/s7-expanded-validation-results.json`
+- 수정: `Decisionlog.md`
+- 수정: `Troubleshootinglog.md`
+- 수정: `Worklog.md`
+
+**검증**
+- `python -m py_compile tools\generate_size_info_pattern_fixtures.py tools\run_size_info_pattern_validation.py tools\run_full_page_codex_smoke20_cli.py` 통과
+- `python tools\generate_size_info_pattern_fixtures.py` 결과: `size_info_patterns` 48건 생성
+- `python tools\run_full_page_codex_smoke20_cli.py --fixture size_info_patterns --timeout 3600` 통과, actual mode `codex_cli_actual`
+- `python src\skills\product-agentizer\scripts\validate.py tests\fixtures\size_info_patterns\expected_products.json` 결과: valid true, checked 48
+- `python src\skills\product-agentizer\scripts\validate.py tests\fixtures\size_info_patterns\actual_products.json` 결과: valid true, checked 48
+- `python tools\run_size_info_pattern_validation.py` 결과: passed true, `size_info` precision/recall 100.00%, TP/FP/FN 97/0/0, recommendation_noise false positive 0건
+- `python tools\run_full_page_dummy_validation.py` 결과: all_commands_passed true
+- `python tools\run_expanded_validation.py` 결과: all_commands_passed true
+- 자동 fetch 0건, 실제 상품 원문 저장 0건, 법적 적합/부적합 판정 0건
+
+**판단 근거**
+- S7.7의 `size_info` 100%는 합성 상세페이지형 50건 기준이므로, 실제 페이지의 다양한 사이즈 표기 패턴에 대한 별도 coverage가 필요했다.
+- 실제 상품 페이지 전체 저장이나 로컬 전용 비공개 검증 데이터는 윤리·재현성 기준과 맞지 않으므로 제외하고, 모든 입력·expected·actual·평가 결과를 커밋 가능한 합성 fixture로 보존했다.
+
+**결과**
+- 완료: S7.8 size_info 표기 패턴 보강 계획, fixture, actual, 평가 도구, 보고서, 제출 설명 갱신 완료
+- 기록: Decisionlog D-023, Troubleshootinglog T-011
+- 남은 작업: 패키징 전 최종 구조·비밀정보·로그 포함 여부 점검
+
+---
+
 ### W-041 · size_info SKILL-only 개선 및 schema 변경 계획 문서화
 **요청**
 - `size_info` 개선을 위해 schema 변경 계획은 문서화해 두고, 당장은 SKILL 변경 계획을 진행
