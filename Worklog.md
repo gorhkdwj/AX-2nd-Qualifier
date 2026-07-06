@@ -10,6 +10,48 @@
 
 ---
 
+### W-056 · 제출 후 작업물 구조 정리
+**요청** 제출 완료 후 저장소 작업물의 파일 경로, 보관 구조, 정리 후보를 검토하고 최종 정리 구조에 맞춰 정리해 달라는 요청.
+
+**수행 작업**
+- 제출 전 교차검증 프롬프트를 활성 문서 목록에서 분리해 `docs/post-submission/` 아래로 이동했다.
+- `docs/post-submission/README.md`를 추가해 제출 후 감사·회고 자료의 보관 기준을 정리했다.
+- `docs/README.md`의 문서 안내를 새 구조에 맞게 갱신했다.
+- 실제 파일이 채워진 뒤 역할이 사라진 `docs/references/.gitkeep`, `tests/.gitkeep`을 제거했다.
+- Git worktree 등록이 없는 빈 `.worktrees/` 디렉터리를 제거했다.
+- Git 제외 임시 영역인 `out/`에서 `submission.zip`만 남기고 staging, audit, S6 임시 실행물, 캐시성 산출물을 제거했다.
+- 정리 변경분 staging 중 발생한 이동 전 경로 `pathspec` 오류를 `Troubleshootinglog.md` T-019로 기록했다.
+- commit/push 명령 연결 중 발생한 PowerShell `&&` 구문 오류를 `Troubleshootinglog.md` T-020으로 기록했다.
+
+**변경 파일**
+- 이동: `docs/claude-cross-validation-prompt.md` → `docs/post-submission/claude-cross-validation-prompt.md`
+- 생성: `docs/post-submission/README.md`
+- 수정: `docs/README.md`
+- 수정: `Worklog.md`
+- 수정: `Troubleshootinglog.md`
+- 삭제: `docs/references/.gitkeep`
+- 삭제: `tests/.gitkeep`
+- 삭제(Git 제외): 빈 `.worktrees/`, `out/` 임시 산출물
+
+**검증**
+- `git worktree list`에서 등록된 worktree가 메인 루트 1개뿐임을 확인했다.
+- `.worktrees/`가 빈 디렉터리임을 확인한 뒤 제거했다.
+- `out/`에는 `submission.zip`만 남아 있음을 확인했다.
+- `logs/`는 내용 편집·삭제 없이 그대로 유지했다.
+- 이동 전 경로를 포함한 `git add`가 실패했으나 파일 손상은 없었고, T-019에 기록했다.
+- `git commit ... && git push ...`는 PowerShell 구문 오류로 실패했으며, T-020 기록 후 commit과 push를 별도 명령으로 분리한다.
+
+**판단 근거**
+- 제출 후에는 제출물 생성 기준보다 보존·회고·재개 용이성이 중요하므로, 현재 구현 기준 문서와 제출 전 감사용 문서를 분리하는 편이 혼동을 줄인다.
+- Worklog/Decisionlog에는 과거 경로가 기록되어 있으므로 핵심 보고서와 검증 fixture의 대량 이동은 감사 추적성을 해칠 수 있어 피했다.
+- `out/`과 `.worktrees/`는 제출·개발 과정의 임시 산출물이므로 최종 zip과 원본 로그가 보존된 상태에서는 정리해도 재현성에 영향이 없다.
+
+**결과**
+- 완료: 제출 후 보존용 문서 구조 정리 완료.
+- 남은 작업: 없음.
+
+---
+
 ### W-055 · 제출 질문 5문항 답변 세부화 및 README 반영
 **요청** 제출 폼의 5개 문항 의도를 정확히 반영해 `README.md`의 각 답변을 세부적으로 작성하고, 로그 파일과 작업 기록을 참고해 내용 정합성을 맞춰 달라는 요청.
 

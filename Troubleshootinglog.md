@@ -10,6 +10,44 @@
 
 ---
 
+### T-020 · PowerShell에서 `&&` 연결 커밋 명령 실패
+**발생 상황**
+- 제출 후 작업물 정리 변경분을 commit하고 push하기 위해 PowerShell에서 `git commit ... && git push ...` 형태의 명령을 실행했다.
+
+**증상**
+- 현재 PowerShell 환경에서 `&&`가 유효한 statement separator로 인식되지 않아 `The token '&&' is not a valid statement separator` 오류가 발생했다.
+
+**확인된 원인**
+- Bash 계열 셸에서 쓰는 명령 연결 습관을 Windows PowerShell 환경에 그대로 적용했다.
+
+**조치**
+- 커밋과 push를 한 명령으로 연결하지 않고 별도 명령으로 분리해 실행하기로 했다.
+
+**재발 방지**
+- 이 프로젝트의 기본 셸은 PowerShell이므로 명령 연결이 필요하면 `;`를 쓰거나, 실패 전파가 중요한 Git 작업은 아예 별도 tool call로 분리한다.
+
+---
+
+### T-019 · 정리 변경분 스테이징 중 이동 전 경로 pathspec 오류
+**발생 상황**
+- 제출 후 작업물 구조 정리 변경분을 commit하기 위해 이동·삭제된 파일 경로를 명시해 `git add`를 실행했다.
+
+**증상**
+- 이미 `docs/post-submission/claude-cross-validation-prompt.md`로 이동한 뒤 사라진 기존 경로 `docs/claude-cross-validation-prompt.md`를 `git add` 인자로 함께 전달해 `fatal: pathspec ... did not match any files` 오류가 발생했다.
+
+**확인된 원인**
+- `git mv`로 rename이 이미 staging 후보 상태가 된 상황에서, 존재하지 않는 이동 전 경로를 다시 직접 add 대상으로 지정했다.
+
+**조치**
+- 파일 내용 손상이나 삭제는 없음을 `git status`로 확인했다.
+- 이후 staging은 개별 이동 전 경로를 직접 나열하지 않고 `git add -A`로 rename, delete, new file을 한 번에 반영하도록 전환했다.
+
+**재발 방지**
+- rename/delete가 섞인 정리 작업에서는 존재하지 않는 이전 경로를 직접 `git add`에 넣지 않는다.
+- staging 전에는 `git status --short` 기준의 현재 경로만 add하거나, 무시 규칙을 확인한 뒤 `git add -A`를 사용한다.
+
+---
+
 ### T-018 · 제출 zip 재검증 중 PowerShell heredoc·최상위 순서 비교 오탐
 **발생 상황**
 - README 답변 수정 후 문항별 글자 수와 재생성한 `submission.zip` 구조를 검증했다.
