@@ -430,7 +430,8 @@ def write_report(result: dict[str, Any]) -> None:
         "- `full_page_codex_subset/actual_products.json`은 expected fixture가 없는 격리 workspace에서 `tests/fixtures/full_page_codex_subset/prompt.md`를 입력해 생성한 50건 실제 Codex CLI 결과다. actual mode가 `codex_cli_actual`이 아니면 이 문장은 성립하지 않으므로 `actual_metadata.json`을 먼저 확인해야 한다.",
         f"- 50건 subset은 micro precision {summary['full_page_codex_subset_micro_precision']}, micro recall {summary['full_page_codex_subset_micro_recall']}로 수용 기준(precision 0.95 이상, recall 0.85 이상)을 통과했다. `category`, `subcategory`, `detail_type`은 50건 모두 일치했다.",
         f"- SKILL-only size_info 원자화 지침 보강 후 `size_info` precision/recall은 {summary['full_page_codex_subset_size_info_precision']} / {summary['full_page_codex_subset_size_info_recall']}이다. `사이즈 옵션: M, L, XL` 같은 한 줄 옵션을 개별 `M`, `L`, `XL` 항목으로 분리하는 기준이 실제 Codex 출력에 반영됐다.",
-        "- 남은 차이는 `materials` 2건이다. `리사이클 섬유와 배색 폴리에스터` 표현에서 Codex가 `polyester`의 부위를 `unknown`으로 둔 반면 expected는 `trim`으로 라벨링한 차이다.",
+        "- 이전에 남아 있던 `materials` 2건 차이는 `배색 폴리에스터`처럼 실제 적용 부위가 명시되지 않은 소재를 `trim`으로 단정하지 않고 `unknown`으로 두도록 기준을 정렬해 해소했다.",
+        "- 소재 항목의 `part`가 `unknown`이면 `quality.missing_fields`에 `material_part`를 남기는 기준도 함께 확인했다.",
         "- `full_page_codex_smoke20/actual_products.json`은 20건 실제 Codex CLI smoke 실행 결과를 저장하는 경로다. actual mode가 `codex_cli_actual`이면 실제 실행 결과이고, `deterministic_reference_actual_pending_cli_run`이면 아직 기준 actual 상태다.",
         "- Sparse 입력은 세부 필드를 모두 맞히는 것이 목표가 아니라, 입력에 없는 소재 혼용률·관리법·사이즈 정보를 추정하지 않는지를 확인하기 위한 케이스다.",
         "",
@@ -476,7 +477,7 @@ def write_report(result: dict[str, Any]) -> None:
             "",
             "- 50건 subset actual은 보존 완료했다. 패키징 전에는 actual을 임의 재생성하지 말고, 현재 prompt와 actual metadata를 기준으로 재현 가능성을 확인한다.",
             "- schema v0.3 size_info 객체화 계획은 `docs/size-info-schema-change-plan.md`에 조건부 계획으로 보존한다. 현재 MVP에서는 SKILL-only 개선이 목표치를 충족했으므로 schema 변경을 보류한다.",
-            "- 남은 materials 2건의 `trim`/`unknown` 부위 차이를 줄이려면 `배색`, `트림`, `포인트` 표현의 소재 부위 처리 기준을 별도 후속 과제로 다룬다.",
+            "- 소재 부위 추론은 현재 보수 기준을 따른다. `배색 폴리에스터`처럼 실제 적용 부위가 없으면 `unknown`, `카라 배색 폴리에스터`처럼 부위가 있으면 `trim` 또는 더 구체적인 부위로 처리한다.",
         ]
     )
     REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")

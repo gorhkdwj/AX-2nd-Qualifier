@@ -119,7 +119,7 @@ docs/references/
 - 왜 필요한가: 실제 무신사 상품페이지는 상품별 정보 밀도가 균일하지 않다. 모든 상품이 소재 부위, 혼용률, 실측표, 관리법을 완전하게 제공한다고 가정하면 실제 운영 입력을 과도하게 단순화한다.
 - 산출물: `docs/full-page-dummy-validation-plan.md`, `tests/fixtures/full_page_dummy/`, `tests/fixtures/full_page_codex_subset/`, `docs/reports/s7-7-full-page-dummy-validation-report.md`, `docs/reports/s7-7-full-page-dummy-validation-results.json`.
 - 완료 조건: 실제 페이지 원문이나 로컬 전용 비공개 데이터를 쓰지 않고, `sparse`, `medium`, `full`, `noisy_ambiguous` 밀도별 합성 상세페이지형 입력을 보존한다. expected/reference actual schema-valid 100%, Codex subset actual schema-valid 100%, `detail_type` precision/recall 95% 이상, dedup accuracy 95% 이상, cross-category high-confidence false duplicate 0건을 목표로 한다.
-- 현재 결과: SKILL-only `size_info` 원자화 보강 후 50건 Codex subset은 schema-valid 50/50, micro precision 99.74%, micro recall 99.74%, `detail_type` precision/recall 100.00%, `size_info` precision/recall 100.00%, dedup accuracy 100.00%를 기록했다.
+- 현재 결과: SKILL-only `size_info` 원자화와 소재 부위 보수 라벨 기준 정렬 후 50건 Codex subset은 schema-valid 50/50, micro precision 100.00%, micro recall 100.00%, `detail_type` precision/recall 100.00%, `materials` precision/recall 100.00%, `size_info` precision/recall 100.00%, dedup accuracy 100.00%를 기록했다.
 - 검증 방법: 새 생성기와 실행 스크립트로 입력·expected·actual·평가 결과를 모두 재현 가능하게 보존하고, 밀도별로 missing/ambiguous 판단이 의도대로 작동하는지 확인한다.
 
 ### S7.8 · size_info 표기 패턴 보강 검증

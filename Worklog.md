@@ -10,6 +10,72 @@
 
 ---
 
+### W-043 · 배색 소재 부위 기준 보수 정렬 및 S7.7 100% 회복
+**요청**
+- `배색 폴리에스터`를 `unknown`으로 두는 2번 방향으로 진행
+- 지금까지 작업이 플러그인을 과적합시키는 것은 아닌지 검토
+
+**수행 작업**
+- `배색 폴리에스터`처럼 실제 적용 부위가 명시되지 않은 소재를 `trim`으로 단정하지 않고 `part: "unknown"`으로 두는 기준을 계약 문서와 SKILL에 명시
+- `part: "unknown"` 소재가 하나라도 있으면 `quality.missing_fields`에 `material_part`를 추가하는 연결 규칙 명시
+- `tools/generate_expanded_validation_fixtures.py`의 `리사이클 섬유와 배색 폴리에스터` expected 라벨을 보수 기준으로 수정
+- `tools/run_full_page_dummy_validation.py`의 S7.7 보고서 해석 문구를 최신 기준으로 수정
+- `tests/fixtures/expanded_dummy`, `tests/fixtures/full_page_dummy`, `tests/fixtures/full_page_codex_subset`, `tests/fixtures/full_page_codex_smoke20` expected/reference fixture 재생성
+- `full_page_codex_smoke20` actual을 새 SKILL 기준으로 격리 workspace에서 재실행
+- README, 제출 질문, 구현 계획, 검증 계획, 상세 설명서, size_info schema 조건부 계획, S7.7 보고서/결과를 새 수치로 갱신
+- 기준 변경 결정을 Decisionlog에 기록하고, smoke20 재실행 중 timeout 및 `material_part` 누락 문제를 Troubleshootinglog에 기록
+
+**변경 파일**
+- 수정: `src/skills/product-agentizer/SKILL.md`
+- 수정: `docs/requirements-contract.md`
+- 수정: `tools/generate_expanded_validation_fixtures.py`
+- 수정: `tools/run_full_page_dummy_validation.py`
+- 수정: `tests/fixtures/expanded_dummy/expected_products.json`
+- 수정: `tests/fixtures/expanded_dummy/reference_actual_products.json`
+- 수정: `tests/fixtures/full_page_dummy/expected_products.json`
+- 수정: `tests/fixtures/full_page_dummy/reference_actual_products.json`
+- 수정: `tests/fixtures/full_page_codex_subset/expected_products.json`
+- 수정: `tests/fixtures/full_page_codex_smoke20/expected_products.json`
+- 수정: `tests/fixtures/full_page_codex_smoke20/actual_products.json`
+- 수정: `tests/fixtures/full_page_codex_smoke20/actual_metadata.json`
+- 수정: `docs/reports/s7-7-full-page-dummy-validation-report.md`
+- 수정: `docs/reports/s7-7-full-page-dummy-validation-results.json`
+- 수정: `docs/reports/s7-expanded-validation-results.json`
+- 수정: `docs/reports/s7-8-size-info-coverage-report.md`
+- 수정: `docs/reports/s7-8-size-info-coverage-results.json`
+- 수정: `README.md`
+- 수정: `docs/submission-questions.md`
+- 수정: `docs/implementation-plan.md`
+- 수정: `docs/validation-plan.md`
+- 수정: `docs/full-page-dummy-validation-plan.md`
+- 수정: `docs/product-agentizer-complete-guide.md`
+- 수정: `docs/size-info-schema-change-plan.md`
+- 수정: `Decisionlog.md`
+- 수정: `Troubleshootinglog.md`
+- 수정: `Worklog.md`
+
+**검증**
+- `python -m py_compile tools\generate_expanded_validation_fixtures.py tools\generate_full_page_dummy_fixtures.py tools\run_full_page_codex_smoke20_cli.py` 통과
+- `python tools\generate_expanded_validation_fixtures.py` 통과
+- `python tools\generate_full_page_dummy_fixtures.py` 통과
+- `python tools\run_full_page_codex_smoke20_cli.py --fixture full_page_codex_smoke20 --timeout 3600` 통과
+- `python tools\run_full_page_dummy_validation.py` 결과: all_commands_passed true
+- S7.7 50건 subset 결과: schema-valid 50/50, micro precision 100.00%, micro recall 100.00%, materials precision/recall 100.00%, size_info precision/recall 100.00%, dedup accuracy 100.00%
+- S7.7 smoke20 결과: schema-valid 20/20, micro precision/recall 100.00%, dedup accuracy 100.00%
+- `python tools\run_expanded_validation.py` 결과: all_commands_passed true
+- `python tools\run_size_info_pattern_validation.py` 결과: passed true, size_info precision/recall 100.00%
+
+**판단 근거**
+- 이번 변경은 특정 상품 ID나 결과 수치에 맞춘 예외가 아니라, 입력에 없는 소재 부위를 단정하지 않는 일반 안전 규칙이다.
+- 따라서 과적합이라기보다 expected 라벨을 기준 계약의 보수 원칙에 맞춘 정합성 보정으로 판단했다.
+
+**결과**
+- 완료: `materials` 2건의 `trim`/`unknown` 차이 해소, S7.7 subset/smoke20 precision/recall 100.00% 확인
+- 기록: Decisionlog D-024, Troubleshootinglog T-012
+- 남은 작업: 패키징 전 최종 구조·비밀정보·로그 포함 여부 점검
+
+---
+
 ### W-042 · S7.8 size_info 표기 패턴 보강 검증 구현
 **요청**
 - 합성데이터 기준 `size_info` 100%가 실제 상품페이지 표기 방식을 충분히 반영하지 못했을 수 있으므로, 보강 계획을 잡고 진행

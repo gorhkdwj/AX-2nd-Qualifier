@@ -578,14 +578,14 @@
           "detail_type": "nylon_coach_jacket",
           "materials": [
             {
-              "part": "shell",
+              "part": "unknown",
               "name": "recycled_fiber",
               "ratio": null,
               "ratio_status": "missing",
               "evidence": "리사이클 섬유"
             },
             {
-              "part": "trim",
+              "part": "unknown",
               "name": "polyester",
               "ratio": null,
               "ratio_status": "missing",
@@ -626,6 +626,7 @@
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -1277,14 +1278,14 @@
           "detail_type": "vest",
           "materials": [
             {
-              "part": "shell",
+              "part": "unknown",
               "name": "recycled_fiber",
               "ratio": null,
               "ratio_status": "missing",
               "evidence": "리사이클 섬유"
             },
             {
-              "part": "trim",
+              "part": "unknown",
               "name": "polyester",
               "ratio": null,
               "ratio_status": "missing",
@@ -1325,6 +1326,7 @@
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -1976,14 +1978,14 @@
           "detail_type": "leather_rider_jacket",
           "materials": [
             {
-              "part": "shell",
+              "part": "unknown",
               "name": "recycled_fiber",
               "ratio": null,
               "ratio_status": "missing",
               "evidence": "리사이클 섬유"
             },
             {
-              "part": "trim",
+              "part": "unknown",
               "name": "polyester",
               "ratio": null,
               "ratio_status": "missing",
@@ -2024,6 +2026,7 @@
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -2675,14 +2678,14 @@
           "detail_type": "transitional_coat",
           "materials": [
             {
-              "part": "shell",
+              "part": "unknown",
               "name": "recycled_fiber",
               "ratio": null,
               "ratio_status": "missing",
               "evidence": "리사이클 섬유"
             },
             {
-              "part": "trim",
+              "part": "unknown",
               "name": "polyester",
               "ratio": null,
               "ratio_status": "missing",
@@ -2723,6 +2726,7 @@
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -3374,14 +3378,14 @@
           "detail_type": "suit_blazer_jacket",
           "materials": [
             {
-              "part": "shell",
+              "part": "unknown",
               "name": "recycled_fiber",
               "ratio": null,
               "ratio_status": "missing",
               "evidence": "리사이클 섬유"
             },
             {
-              "part": "trim",
+              "part": "unknown",
               "name": "polyester",
               "ratio": null,
               "ratio_status": "missing",
@@ -3422,6 +3426,7 @@
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -3863,14 +3868,14 @@
           "detail_type": "sleeveless_tshirt",
           "materials": [
             {
-              "part": "shell",
+              "part": "unknown",
               "name": "recycled_fiber",
               "ratio": null,
               "ratio_status": "missing",
               "evidence": "리사이클 섬유"
             },
             {
-              "part": "trim",
+              "part": "unknown",
               "name": "polyester",
               "ratio": null,
               "ratio_status": "missing",
@@ -3911,6 +3916,7 @@
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -4548,14 +4554,14 @@
           "detail_type": "polo_collar_tshirt",
           "materials": [
             {
-              "part": "shell",
+              "part": "unknown",
               "name": "recycled_fiber",
               "ratio": null,
               "ratio_status": "missing",
               "evidence": "리사이클 섬유"
             },
             {
-              "part": "trim",
+              "part": "unknown",
               "name": "polyester",
               "ratio": null,
               "ratio_status": "missing",
@@ -4596,6 +4602,7 @@
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -5233,14 +5240,14 @@
           "detail_type": "hoodie_tshirt",
           "materials": [
             {
-              "part": "shell",
+              "part": "unknown",
               "name": "recycled_fiber",
               "ratio": null,
               "ratio_status": "missing",
               "evidence": "리사이클 섬유"
             },
             {
-              "part": "trim",
+              "part": "unknown",
               "name": "polyester",
               "ratio": null,
               "ratio_status": "missing",
@@ -5281,6 +5288,7 @@
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -5918,14 +5926,14 @@
           "detail_type": "other_top",
           "materials": [
             {
-              "part": "shell",
+              "part": "unknown",
               "name": "recycled_fiber",
               "ratio": null,
               "ratio_status": "missing",
               "evidence": "리사이클 섬유"
             },
             {
-              "part": "trim",
+              "part": "unknown",
               "name": "polyester",
               "ratio": null,
               "ratio_status": "missing",
@@ -5966,6 +5974,7 @@
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -6603,14 +6612,14 @@
           "detail_type": "short_sleeve_tshirt",
           "materials": [
             {
-              "part": "shell",
+              "part": "unknown",
               "name": "recycled_fiber",
               "ratio": null,
               "ratio_status": "missing",
               "evidence": "리사이클 섬유"
             },
             {
-              "part": "trim",
+              "part": "unknown",
               "name": "polyester",
               "ratio": null,
               "ratio_status": "missing",
@@ -6651,6 +6660,7 @@
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],

@@ -10,6 +10,32 @@
 
 ---
 
+### T-012 · smoke20 Codex 재실행 중 도구 타임아웃과 material_part 누락
+**발생 상황**
+- `배색 폴리에스터` 보수 라벨 기준을 반영한 뒤, S7.7 `full_page_codex_smoke20` actual을 새 SKILL 기준으로 재실행했다.
+
+**증상**
+- 첫 `python tools\run_full_page_codex_smoke20_cli.py --fixture full_page_codex_smoke20 --timeout 2400` 실행이 외부 도구 호출 제한 300초에 걸려 중단됐다.
+- 중단 직후 하위 `codex.exe`와 `python.exe` 프로세스가 계속 실행 중이었다.
+- 해당 실행이 종료된 뒤 actual은 저장됐지만, `part: "unknown"` 소재가 있는 일부 케이스에서 `quality.missing_fields`의 `material_part`가 누락되어 smoke20 micro recall이 97.32%로 떨어졌다.
+
+**확인된 원인**
+- Codex CLI 20건 변환은 300초보다 오래 걸릴 수 있는데, 래퍼 내부 timeout과 도구 호출 timeout을 다르게 설정했다.
+- 기존 SKILL은 `part: "unknown"` 사용을 지시했지만, `unknown` 소재가 있을 때 반드시 `quality.missing_fields`에 `material_part`를 추가하라는 연결 규칙이 충분히 명시되어 있지 않았다.
+
+**조치**
+- 실행 중이던 `codex.exe` 프로세스가 종료될 때까지 `Wait-Process`로 대기하고, 부분 산출물 상태를 확인했다.
+- `docs/requirements-contract.md`와 `src/skills/product-agentizer/SKILL.md`에 `part: "unknown"`이면 `quality.missing_fields`에 `material_part`를 추가한다는 규칙을 명시했다.
+- 도구 호출 timeout을 900초로 늘려 `python tools\run_full_page_codex_smoke20_cli.py --fixture full_page_codex_smoke20 --timeout 3600`을 재실행했다.
+- 재실행 후 smoke20 actual schema-valid 20/20, micro precision/recall 100.00%, dedup accuracy 100.00%를 확인했다.
+
+**재발 방지**
+- Codex CLI 다건 변환은 외부 도구 호출 timeout을 내부 `--timeout`보다 충분히 길게 잡는다.
+- `unknown`처럼 품질 필드와 연결되는 값은 추출 지침과 품질 기록 지침을 한 문단 안에서 함께 명시한다.
+- timeout 발생 시 같은 fixture를 곧바로 중복 실행하지 않고, 남은 하위 프로세스와 부분 산출물을 먼저 확인한다.
+
+---
+
 ### T-011 · S7.8 size_info 패턴 검증 스크립트 상수 누락과 라벨 과정규화
 **발생 상황**
 - S7.8 `size_info_patterns` fixture와 검증 스크립트를 만든 뒤, `python tools\run_size_info_pattern_validation.py`를 실행했다.

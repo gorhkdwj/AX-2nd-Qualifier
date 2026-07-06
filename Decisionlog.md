@@ -10,6 +10,39 @@
 
 ---
 
+### D-024 · 배색 소재 부위 보수 기준 정렬
+**상황**
+- S7.7 50건 Codex subset에서 micro precision/recall이 99.74%로 남은 원인은 `materials` 2건의 `trim`/`unknown` 차이였다.
+- 입력 문구는 `리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다`였고, expected는 `배색 폴리에스터`를 `trim`으로 라벨링했지만 Codex actual은 구체 부위가 없다고 보고 `unknown`으로 기록했다.
+- 사용자는 `unknown` 기준으로 정렬하는 것과 현상 유지의 차이를 확인한 뒤, 보수 기준 정렬을 진행하라고 요청했다.
+
+**검토한 선택지**
+- 기존 expected의 `trim` 라벨을 유지하고 99.74% 결과를 설명한다.
+- `배색`이라는 단어가 보이면 항상 `trim`으로 추출하도록 SKILL을 강화한다.
+- 실제 적용 부위가 명시되지 않은 `배색 폴리에스터`는 `unknown`으로 두고, `배색부`, `카라 배색`, `소매 배색`처럼 구체 부위가 있을 때만 `trim` 또는 더 구체적인 부위로 기록한다.
+
+**결정**
+- 세 번째 선택지를 채택한다.
+- `배색 폴리에스터`처럼 구체 적용 부위가 없는 소재는 `trim`으로 단정하지 않고 `part: "unknown"`으로 둔다.
+- 소재 항목 중 하나라도 `part: "unknown"`이면 `quality.missing_fields`에 `material_part`를 추가한다.
+- 이 기준을 `docs/requirements-contract.md`, `src/skills/product-agentizer/SKILL.md`, fixture 생성기와 S7.7/S7.5 검증 fixture에 반영한다.
+
+**근거**
+- 소재 부위는 상품정보 고지와 연결될 수 있으므로, 입력 근거가 없는 부위를 과감하게 추정하는 것보다 보수적으로 `unknown`을 남기는 편이 프로젝트의 엄격 처리 원칙과 맞다.
+- 특정 상품 ID를 맞추는 예외가 아니라, "구체 부위가 없으면 단정하지 않는다"는 일반 규칙이므로 과적합 위험을 줄인다.
+- 변경 후 S7.7 50건 subset과 20건 smoke actual 모두 schema-valid 및 micro precision/recall 100.00%를 기록했다.
+
+**영향**
+- S7.7 50건 subset 결과는 schema-valid 50/50, micro precision 100.00%, micro recall 100.00%, `materials` precision/recall 100.00%, `size_info` precision/recall 100.00%로 갱신됐다.
+- `tests/fixtures/full_page_dummy`, `full_page_codex_subset`, `full_page_codex_smoke20`, `expanded_dummy`의 expected/reference 기준이 보수 라벨로 정렬됐다.
+- S7.7 smoke20 actual은 새 SKILL 기준으로 재실행해 보존했다.
+
+**재검토 조건**
+- 실제 운영 데이터에서 `배색 폴리에스터`가 일관되게 특정 부위를 뜻한다는 근거가 확보되는 경우.
+- taxonomy에 `contrast_panel`, `color_blocking`처럼 더 세밀한 소재 부위/디자인 역할 구분이 추가되는 경우.
+
+---
+
 ### D-023 · S7.8 size_info 표기 패턴 보강 검증 채택
 **상황**
 - S7.7 실제 페이지형 합성 subset 50건에서 `size_info` precision/recall 100.00%를 달성했지만, 이 결과는 합성 상세페이지형 50건 기준이었다.

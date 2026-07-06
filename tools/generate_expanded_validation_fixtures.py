@@ -226,11 +226,11 @@ def material_pattern(index: int) -> tuple[list[dict[str, Any]], str, list[str], 
     if pattern == 8:
         return (
             [
-                {"part": "shell", "name": "recycled_fiber", "ratio": None, "ratio_status": "missing", "evidence": "리사이클 섬유"},
-                {"part": "trim", "name": "polyester", "ratio": None, "ratio_status": "missing", "evidence": "배색 폴리에스터"},
+                {"part": "unknown", "name": "recycled_fiber", "ratio": None, "ratio_status": "missing", "evidence": "리사이클 섬유"},
+                {"part": "unknown", "name": "polyester", "ratio": None, "ratio_status": "missing", "evidence": "배색 폴리에스터"},
             ],
             "리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다",
-            ["material_ratio"],
+            ["material_part", "material_ratio"],
             [],
         )
     return (

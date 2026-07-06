@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-06T01:51:26.518506+00:00",
+  "generated_at_utc": "2026-07-06T02:35:02.896365+00:00",
   "generated_for_kst_date": "2026-07-06",
   "environment": {
     "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
@@ -3909,11 +3909,11 @@
         ],
         "attribute_metrics": {
           "micro": {
-            "precision": 0.9974,
-            "recall": 0.9974,
-            "true_positive": 761,
-            "false_positive": 2,
-            "false_negative": 2
+            "precision": 1.0,
+            "recall": 1.0,
+            "true_positive": 763,
+            "false_positive": 0,
+            "false_negative": 0
           },
           "by_field": {
             "title": {
@@ -3945,11 +3945,11 @@
               "false_negative": 0
             },
             "materials": {
-              "precision": 0.9718,
-              "recall": 0.9718,
-              "true_positive": 69,
-              "false_positive": 2,
-              "false_negative": 2
+              "precision": 1.0,
+              "recall": 1.0,
+              "true_positive": 71,
+              "false_positive": 0,
+              "false_negative": 0
             },
             "fit": {
               "precision": 1.0,
@@ -4320,23 +4320,13 @@
             {
               "product_id": "full_top_153",
               "metrics": {
-                "precision": 0.9412,
-                "recall": 0.9412,
-                "true_positive": 16,
-                "false_positive": 1,
-                "false_negative": 1
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
               },
-              "differences": [
-                {
-                  "field": "materials",
-                  "false_positive": [
-                    "unknown:polyester:missing:null"
-                  ],
-                  "false_negative": [
-                    "trim:polyester:missing:null"
-                  ]
-                }
-              ]
+              "differences": []
             },
             {
               "product_id": "full_top_154",
@@ -4440,23 +4430,13 @@
             {
               "product_id": "full_top_163",
               "metrics": {
-                "precision": 0.9412,
-                "recall": 0.9412,
-                "true_positive": 16,
-                "false_positive": 1,
-                "false_negative": 1
+                "precision": 1.0,
+                "recall": 1.0,
+                "true_positive": 17,
+                "false_positive": 0,
+                "false_negative": 0
               },
-              "differences": [
-                {
-                  "field": "materials",
-                  "false_positive": [
-                    "unknown:polyester:missing:null"
-                  ],
-                  "false_negative": [
-                    "trim:polyester:missing:null"
-                  ]
-                }
-              ]
+              "differences": []
             },
             {
               "product_id": "full_top_164",
@@ -4691,7 +4671,7 @@
           ]
         }
       },
-      "stdout_len": 12234,
+      "stdout_len": 11956,
       "stderr": ""
     },
     {
@@ -5265,30 +5245,30 @@
     "examples": []
   },
   "hashes_sha256": {
-    "src/skills/product-agentizer/SKILL.md": "a749f9429834292752a3cbe4f8999c1ee1cfb54c52c0584fc2d8b84aae6eda2d",
+    "src/skills/product-agentizer/SKILL.md": "069a9a4ff827a5b4f3897f1faf4514beed53ddd3866f2cf85efca0e7612bd4fa",
     "src/skills/product-agentizer/references/schema.json": "685ee3307d64603079d8adce707768e17e96a1aeb48010da2d5bd26f254f4a0a",
     "src/skills/product-agentizer/references/taxonomy.json": "5d60707c2c79b66ce19c71c3179d18b296e11d6fcaab34d612b25dbc0367e91b",
     "src/skills/product-agentizer/scripts/validate.py": "ceef43b48102906b849ee271232f86f68f821dde70277299e60e8095b64b4318",
     "src/skills/product-agentizer/scripts/dedup.py": "dd69c8ea40bd081b7fd53ec514415d147457c940321b929c3f4fdd748ab937c4",
     "tests/evaluate_product_agentizer.py": "a86cb4941be692c0f0914dcfc7939af35fe377b06e9722582982c8471d658dd7",
     "tools/generate_full_page_dummy_fixtures.py": "7ed740b6e2314ec568ab77a3011f7fd1267c84affbb8596097fa3e0e2862daa1",
-    "tools/run_full_page_dummy_validation.py": "281074a9830cdf8b5a5c273fb568a354b4d7d0eeb5ea6def81a2dad09cf2851a",
+    "tools/run_full_page_dummy_validation.py": "0d1bac0b4c80d0977cd7fcc04458814a3c30bf7dccfc63865c09442cfcebe5f6",
     "tests/fixtures/full_page_dummy/source_inputs.json": "cc0db74f8cc67da644e867d4a135670f3ae117b64cd3b48bcd7ec978cd44fc6c",
-    "tests/fixtures/full_page_dummy/expected_products.json": "274d8e2f5f07731de53c6f75dd81c6f6552b0c1eeb00617abb177ac6fde0d74f",
-    "tests/fixtures/full_page_dummy/reference_actual_products.json": "274d8e2f5f07731de53c6f75dd81c6f6552b0c1eeb00617abb177ac6fde0d74f",
+    "tests/fixtures/full_page_dummy/expected_products.json": "2f66e2aadfe1fcdb0a3b34d93438030286b6ee2e8b7abb259c8dc4f76a52bba8",
+    "tests/fixtures/full_page_dummy/reference_actual_products.json": "2f66e2aadfe1fcdb0a3b34d93438030286b6ee2e8b7abb259c8dc4f76a52bba8",
     "tests/fixtures/full_page_dummy/duplicate_labels.json": "8f03ff589477abc190f6792749e4f2a9ee93066162a0d54ac7890a3adb0e8676",
     "tests/fixtures/full_page_dummy/case_metadata.json": "5dc57a7ef5ceddae99327d73f1fb518229a9589aa14d76bd97a4a0308873fc37",
     "tests/fixtures/full_page_codex_subset/source_inputs.json": "df59f6e3d5cc6aad6f2a4f452c3cb88c32e9f96278eee43617b1b05c43e31b72",
-    "tests/fixtures/full_page_codex_subset/expected_products.json": "559baa111631f5f9a0c88cbd5c07bc69bbc012539349667e085214ef8ec8be6a",
+    "tests/fixtures/full_page_codex_subset/expected_products.json": "675cff3a328dca9c6d0db4df76eca122a0f726277b71c6f0043e85ddfcd7f8ce",
     "tests/fixtures/full_page_codex_subset/actual_products.json": "5781c6278f797e8d5388dab71b09d6fc05e02728081285f9b90dc98133fc84f9",
     "tests/fixtures/full_page_codex_subset/actual_metadata.json": "ffa2f288b175316ab1e4413b416a143b5a3d0fc7260539e6a080d37c9d631254",
     "tests/fixtures/full_page_codex_subset/duplicate_labels.json": "9191e3632e2109ff616b359675f2ea3ef335449c12d5dd1aca9b900e10c56020",
     "tests/fixtures/full_page_codex_subset/prompt.md": "7e9b0605f25bfb256fa55a8d8d93cb4e2bce7911fd7a2a2f5821dded799c728d",
     "tests/fixtures/full_page_codex_subset/prompt_template.md": "d1743f79e231db8f1d61afa030e0022c5b5c7f708e0bbf344096703dc15349c4",
     "tests/fixtures/full_page_codex_smoke20/source_inputs.json": "53b77634bb05028327bb4900ea7d40c03794e66982fd0867e3eefa18fc02dccb",
-    "tests/fixtures/full_page_codex_smoke20/expected_products.json": "28b5cb93a73c59aa9dd796b36e8b074d295318d167c9dc9222c938a7578dc8e0",
-    "tests/fixtures/full_page_codex_smoke20/actual_products.json": "266444236d624dccdbd8ca6b7bf8345fab0b02edbaa636ece2c2d576343da20f",
-    "tests/fixtures/full_page_codex_smoke20/actual_metadata.json": "92e9d6365106849a55f5faf55ff4d0c52038eff20997c956ad8cd82b4654dc22",
+    "tests/fixtures/full_page_codex_smoke20/expected_products.json": "50b1301886dccf576cbf9a97f6a207cef3e07a549463e102466fe52be28c2556",
+    "tests/fixtures/full_page_codex_smoke20/actual_products.json": "b1bb18835dca4839978a5fc21ede5ce0af0f2ab69f6fa708c9c789f18e39ae33",
+    "tests/fixtures/full_page_codex_smoke20/actual_metadata.json": "cfcb6da844a973b49406a042334d17899e1eafe832f95e4e8e7bf97be4329357",
     "tests/fixtures/full_page_codex_smoke20/duplicate_labels.json": "b2c0de76714764ba31a57aaa82533a30767bbae06e7aad5bedb9c3be7dc258f6",
     "tests/fixtures/full_page_codex_smoke20/prompt.md": "096429626da7a7f0aeb53c6b8f83a5fcd4468a40c0df5597304061bbd6d33e5f",
     "tests/fixtures/full_page_codex_smoke20/prompt_template.md": "2490d68fffbf96cb5d43eeeaf34976dd81ef80264a8c6c1c1f508b4b7b5b30af"
@@ -5302,19 +5282,19 @@
     "full_page_selfcheck_detail_type_recall": 1.0,
     "full_page_selfcheck_dedup_accuracy": 1.0,
     "full_page_codex_subset_actual_schema_valid": true,
-    "full_page_codex_subset_micro_precision": 0.9974,
-    "full_page_codex_subset_micro_recall": 0.9974,
-    "full_page_codex_subset_true_positive": 761,
-    "full_page_codex_subset_false_positive": 2,
-    "full_page_codex_subset_false_negative": 2,
+    "full_page_codex_subset_micro_precision": 1.0,
+    "full_page_codex_subset_micro_recall": 1.0,
+    "full_page_codex_subset_true_positive": 763,
+    "full_page_codex_subset_false_positive": 0,
+    "full_page_codex_subset_false_negative": 0,
     "full_page_codex_subset_detail_type_precision": 1.0,
     "full_page_codex_subset_detail_type_recall": 1.0,
     "full_page_codex_subset_size_info_precision": 1.0,
     "full_page_codex_subset_size_info_recall": 1.0,
     "full_page_codex_subset_missing_fields_precision": 1.0,
     "full_page_codex_subset_missing_fields_recall": 1.0,
-    "full_page_codex_subset_materials_precision": 0.9718,
-    "full_page_codex_subset_materials_recall": 0.9718,
+    "full_page_codex_subset_materials_precision": 1.0,
+    "full_page_codex_subset_materials_recall": 1.0,
     "full_page_codex_subset_dedup_accuracy": 1.0,
     "full_page_codex_subset_actual_mode": "codex_cli_actual",
     "full_page_codex_subset_generated_at_utc": "2026-07-06T01:05:31.461229+00:00",

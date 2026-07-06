@@ -25,17 +25,16 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "블랙 컬러의 outer/jacket/stadium_jacket 상품입니다.",
+          "search_summary": "블랙 색상의 스타디움 재킷 상품으로, 소재와 사이즈 등 상세 속성은 제공되지 않았습니다.",
           "query_tags": [
-            "outer",
-            "jacket",
-            "stadium_jacket",
-            "black"
+            "블랙 스타디움 재킷",
+            "스타디움 재킷",
+            "블랙 아우터"
           ],
           "explainable_reasons": [
-            "카테고리 '아우터 > 재킷 > 스타디움 재킷'을 outer/jacket/stadium_jacket으로 매핑했습니다.",
-            "컬러 '블랙'을 black으로 매핑했습니다.",
-            "소재, 핏, 계절, TPO, 관리, 사이즈 정보는 입력에 없어 누락으로 기록했습니다."
+            "카테고리 문구의 '아우터 > 재킷 > 스타디움 재킷'을 outer/jacket/stadium_jacket으로 매핑했습니다.",
+            "컬러 문구의 '블랙'을 black으로 매핑했습니다.",
+            "소재, 핏, 계절, TPO, 관리 방법, 사이즈 정보는 입력에 없습니다."
           ]
         },
         "quality": {
@@ -78,17 +77,16 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "그레이 컬러의 outer/jacket/trucker_jacket 상품입니다.",
+          "search_summary": "그레이 색상의 트러커 재킷 상품으로, 기본 유형과 색상만 확인됩니다.",
           "query_tags": [
-            "outer",
-            "jacket",
-            "trucker_jacket",
-            "gray"
+            "그레이 트러커 재킷",
+            "트러커 재킷",
+            "그레이 아우터"
           ],
           "explainable_reasons": [
-            "카테고리 '아우터 > 재킷 > 트러커 재킷'을 outer/jacket/trucker_jacket으로 매핑했습니다.",
-            "컬러 '그레이'를 gray로 매핑했습니다.",
-            "소재, 핏, 계절, TPO, 관리, 사이즈 정보는 입력에 없어 누락으로 기록했습니다."
+            "카테고리 문구의 '아우터 > 재킷 > 트러커 재킷'을 outer/jacket/trucker_jacket으로 매핑했습니다.",
+            "컬러 문구의 '그레이'를 gray로 매핑했습니다.",
+            "소재, 핏, 계절, TPO, 관리 방법, 사이즈 정보는 입력에 없습니다."
           ]
         },
         "quality": {
@@ -126,7 +124,7 @@
               "name": "cotton",
               "ratio": null,
               "ratio_status": "missing",
-              "evidence": "코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다."
+              "evidence": "소재: 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다."
             }
           ],
           "fit": [
@@ -153,29 +151,22 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "네이비 컬러의 오버핏 플리스 재킷이며 코튼 소재의 혼용률은 누락된 상품입니다.",
+          "search_summary": "네이비 오버핏 플리스/뽀글이 재킷으로 간절기 출근룩과 포멀 착장에 맞는 상품입니다.",
           "query_tags": [
-            "outer",
-            "jacket",
-            "fleece_jacket",
-            "navy",
-            "cotton",
-            "oversized",
-            "spring",
-            "fall",
-            "commute",
-            "formal"
+            "네이비 플리스 재킷",
+            "오버핏 뽀글이",
+            "간절기 출근룩 아우터"
           ],
           "explainable_reasons": [
-            "카테고리 '아우터 > 재킷 > 플리스/뽀글이'를 outer/jacket/fleece_jacket으로 매핑했습니다.",
-            "'코튼 소재'는 cotton으로 기록하고 숫자 혼용률이 없어 material_ratio를 missing으로 처리했습니다.",
+            "카테고리의 '플리스/뽀글이'를 fleece_jacket으로 매핑했습니다.",
+            "'코튼 소재'는 cotton으로 추출했지만 숫자 혼용률과 소재 부위가 없어 누락 처리했습니다.",
             "'간절기'는 spring과 fall, '출근룩과 포멀'은 commute와 formal로 매핑했습니다."
           ]
         },
         "quality": {
           "missing_fields": [
-            "material_part",
-            "material_ratio"
+            "material_ratio",
+            "material_part"
           ],
           "ambiguous_fields": [],
           "out_of_scope": false,
@@ -203,14 +194,14 @@
               "name": "linen",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "린넨 터치"
+              "evidence": "소재: 린넨 터치의 레이온 블렌드 소재."
             },
             {
               "part": "unknown",
               "name": "rayon",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "레이온 블렌드 소재"
+              "evidence": "소재: 린넨 터치의 레이온 블렌드 소재."
             }
           ],
           "fit": [
@@ -236,23 +227,16 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그린 컬러의 레귤러핏 아노락 재킷이며 린넨 터치와 레이온 블렌드 소재 표현이 모호한 상품입니다.",
+          "search_summary": "그린 레귤러핏 아노락 재킷으로 여름 데일리와 스트리트 착장에 맞는 상품입니다.",
           "query_tags": [
-            "outer",
-            "jacket",
-            "anorak_jacket",
-            "green",
-            "linen",
-            "rayon",
-            "regular",
-            "summer",
-            "daily",
-            "street"
+            "그린 아노락 재킷",
+            "여름 스트리트 아우터",
+            "레귤러핏 재킷"
           ],
           "explainable_reasons": [
-            "카테고리 '아우터 > 재킷 > 아노락 재킷'을 outer/jacket/anorak_jacket으로 매핑했습니다.",
-            "'린넨 터치'와 '레이온 블렌드'는 숫자 혼용률 없는 소재감 표현이므로 ratio_status를 ambiguous로 기록했습니다.",
-            "'여름'은 summer, '데일리와 스트리트'는 daily와 street로 매핑했습니다."
+            "카테고리의 '아노락 재킷'을 anorak_jacket으로 매핑했습니다.",
+            "'린넨 터치'와 '레이온 블렌드'는 소재감 표현이므로 linen과 rayon을 ambiguous 혼용률로 기록했습니다.",
+            "'여름'과 '데일리와 스트리트'를 각각 summer, daily, street로 매핑했습니다."
           ]
         },
         "quality": {
@@ -321,24 +305,16 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "베이지 컬러의 박시핏 레더/라이더스 재킷이며 겉감 천연가죽 100%와 안감 폴리에스터 100%가 명시된 상품입니다.",
+          "search_summary": "베이지 박시핏 레더/라이더스 재킷으로 가을겨울 레이어드와 여행용 착장에 맞는 상품입니다.",
           "query_tags": [
-            "outer",
-            "jacket",
-            "leather_rider_jacket",
-            "beige",
-            "leather",
-            "polyester",
-            "boxy",
-            "fall",
-            "winter",
-            "layering",
-            "travel"
+            "베이지 라이더스 재킷",
+            "천연가죽 재킷",
+            "가을겨울 레더 아우터"
           ],
           "explainable_reasons": [
-            "카테고리 '아우터 > 재킷 > 레더/라이더스 재킷'을 outer/jacket/leather_rider_jacket으로 매핑했습니다.",
-            "겉감 천연가죽 100%와 안감 폴리에스터 100%가 숫자 혼용률로 직접 제시되었습니다.",
-            "사이즈 실측의 총장, 어깨, 가슴 치수를 size_info에 보존했습니다."
+            "카테고리의 '레더/라이더스 재킷'을 leather_rider_jacket으로 매핑했습니다.",
+            "겉감 천연가죽 100%와 안감 폴리에스터 100%가 부위와 숫자 혼용률로 명시되어 있습니다.",
+            "사이즈 실측은 M과 L 행 단위로 보존했습니다."
           ]
         },
         "quality": {
@@ -369,14 +345,14 @@
               "name": "cashmere",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "캐시미어를 블렌드한 듯한 부드러운 터치감"
+              "evidence": "소재: 캐시미어를 블렌드한 듯한 부드러운 터치감의 고급 울 터치 원단. 정확한 혼용률은 상세 이미지 참고."
             },
             {
               "part": "unknown",
               "name": "wool",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "고급 울 터치 원단"
+              "evidence": "소재: 캐시미어를 블렌드한 듯한 부드러운 터치감의 고급 울 터치 원단. 정확한 혼용률은 상세 이미지 참고."
             }
           ],
           "fit": [
@@ -402,24 +378,16 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "옐로우와 브라운 컬러 옵션의 스트레이트 핏 블루종/MA-1이며 소재 표현은 터치감 중심으로 모호한 상품입니다.",
+          "search_summary": "옐로우와 브라운 옵션의 스트레이트핏 블루종/MA-1로 겨울 아웃도어와 여행 착장에 맞는 상품입니다.",
           "query_tags": [
-            "outer",
-            "jacket",
-            "blouson_ma1",
-            "yellow",
-            "brown",
-            "cashmere",
-            "wool",
-            "straight",
-            "winter",
-            "outdoor",
-            "travel"
+            "옐로우 MA-1",
+            "브라운 블루종",
+            "겨울 여행 아우터"
           ],
           "explainable_reasons": [
-            "카테고리 '아우터 > 재킷 > 블루종/MA-1'을 outer/jacket/blouson_ma1으로 매핑했습니다.",
-            "'캐시미어를 블렌드한 듯한'과 '울 터치'는 숫자 혼용률 없는 소재감 표현이므로 material_ratio를 ambiguous로 기록했습니다.",
-            "배송, 쿠폰, 후기 요약 문구는 상품 속성이 아니므로 구조화에서 제외했습니다."
+            "카테고리의 '블루종/MA-1'을 blouson_ma1로 매핑했습니다.",
+            "캐시미어 블렌드와 울 터치 표현은 숫자 혼용률이 없어 ambiguous로 기록했습니다.",
+            "배송, 쿠폰, 후기 요약 문구는 상품 속성에서 제외했습니다."
           ]
         },
         "quality": {
@@ -454,14 +422,14 @@
               "name": "wool",
               "ratio": 70,
               "ratio_status": "explicit",
-              "evidence": "겉감 울 70%"
+              "evidence": "소재: 겉감 울 70%, 캐시미어 30%."
             },
             {
               "part": "shell",
               "name": "cashmere",
               "ratio": 30,
               "ratio_status": "explicit",
-              "evidence": "캐시미어 30%"
+              "evidence": "소재: 겉감 울 70%, 캐시미어 30%."
             }
           ],
           "fit": [
@@ -487,23 +455,16 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블랙 컬러의 박시핏 겨울 더블 코트이며 겉감 울 70%와 캐시미어 30%가 명시된 상품입니다.",
+          "search_summary": "블랙 박시핏 겨울 더블 코트로 울과 캐시미어 겉감이 명시된 겨울 아우터입니다.",
           "query_tags": [
-            "outer",
-            "coat",
-            "winter_double_coat",
-            "black",
-            "wool",
-            "cashmere",
-            "boxy",
-            "winter",
-            "outdoor",
-            "travel"
+            "블랙 더블 코트",
+            "겨울 코트",
+            "울 캐시미어 코트"
           ],
           "explainable_reasons": [
-            "카테고리 '아우터 > 코트 > 겨울 더블 코트'를 outer/coat/winter_double_coat로 매핑했습니다.",
-            "'겉감 울 70%, 캐시미어 30%'를 shell 소재의 explicit ratio로 기록했습니다.",
-            "'겨울'은 winter, '아웃도어와 여행'은 outdoor와 travel로 매핑했습니다."
+            "카테고리의 '겨울 더블 코트'를 winter_double_coat로 매핑했습니다.",
+            "겉감 울 70%와 캐시미어 30%가 숫자 혼용률로 명시되어 있습니다.",
+            "'사이즈 옵션: M, L, XL'은 개별 사이즈 값으로 분리했습니다."
           ]
         },
         "quality": {
@@ -534,14 +495,14 @@
               "name": "wool",
               "ratio": 70,
               "ratio_status": "explicit",
-              "evidence": "겉감 울 70%"
+              "evidence": "소재: 겉감 울 70%, 캐시미어 30%."
             },
             {
               "part": "shell",
               "name": "cashmere",
               "ratio": 30,
               "ratio_status": "explicit",
-              "evidence": "캐시미어 30%"
+              "evidence": "소재: 겉감 울 70%, 캐시미어 30%."
             }
           ],
           "fit": [
@@ -567,23 +528,16 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블랙 컬러의 박시핏 겨울 더블 코트 리오더 상품이며 겉감 울 70%와 캐시미어 30%가 명시되어 있습니다.",
+          "search_summary": "블랙 박시핏 겨울 더블 코트 리오더 상품으로 울과 캐시미어 겉감이 명시되어 있습니다.",
           "query_tags": [
-            "outer",
-            "coat",
-            "winter_double_coat",
-            "black",
-            "wool",
-            "cashmere",
-            "boxy",
-            "winter",
-            "outdoor",
-            "travel"
+            "블랙 더블 코트 리오더",
+            "겨울 코트",
+            "울 캐시미어 코트"
           ],
           "explainable_reasons": [
-            "카테고리 '아우터 > 코트 > 겨울 더블 코트'를 outer/coat/winter_double_coat로 매핑했습니다.",
-            "'겉감 울 70%, 캐시미어 30%'를 shell 소재의 explicit ratio로 기록했습니다.",
-            "상품명에 포함된 리오더 문구는 제목에는 보존하되 별도 속성으로 확장하지 않았습니다."
+            "카테고리의 '겨울 더블 코트'를 winter_double_coat로 매핑했습니다.",
+            "겉감 울 70%와 캐시미어 30%가 숫자 혼용률로 명시되어 있습니다.",
+            "상품명은 리오더 표현을 포함해 원문 그대로 보존했습니다."
           ]
         },
         "quality": {
@@ -614,7 +568,7 @@
               "name": "cotton",
               "ratio": null,
               "ratio_status": "missing",
-              "evidence": "코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다."
+              "evidence": "소재: 코튼 소재이며 숫자 혼용률은 표기되어 있지 않습니다."
             }
           ],
           "fit": [
@@ -641,29 +595,22 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "카키 컬러의 박시핏 스타디움 재킷이며 코튼 소재의 숫자 혼용률은 누락된 상품입니다.",
+          "search_summary": "카키 박시핏 스타디움 재킷으로 간절기 출근룩과 포멀 착장에 맞는 상품입니다.",
           "query_tags": [
-            "outer",
-            "jacket",
-            "stadium_jacket",
-            "khaki",
-            "cotton",
-            "boxy",
-            "spring",
-            "fall",
-            "commute",
-            "formal"
+            "카키 스타디움 재킷",
+            "박시핏 아우터",
+            "간절기 재킷"
           ],
           "explainable_reasons": [
-            "카테고리 '아우터 > 재킷 > 스타디움 재킷'을 outer/jacket/stadium_jacket으로 매핑했습니다.",
-            "'코튼 소재'는 cotton으로 기록하고 숫자 혼용률이 없어 material_ratio를 missing으로 처리했습니다.",
-            "'간절기'는 spring과 fall, '드라이클리닝 권장'은 dry_clean으로 매핑했습니다."
+            "카테고리의 '스타디움 재킷'을 stadium_jacket으로 매핑했습니다.",
+            "'카키'는 taxonomy 기준 khaki로 매핑했습니다.",
+            "코튼 소재는 확인되지만 숫자 혼용률과 부위가 없어 누락 처리했습니다."
           ]
         },
         "quality": {
           "missing_fields": [
-            "material_part",
-            "material_ratio"
+            "material_ratio",
+            "material_part"
           ],
           "ambiguous_fields": [],
           "out_of_scope": false,
@@ -691,14 +638,14 @@
               "name": "wool",
               "ratio": 70,
               "ratio_status": "explicit",
-              "evidence": "겉감 울 70%"
+              "evidence": "소재: 겉감 울 70%, 캐시미어 30%."
             },
             {
               "part": "shell",
               "name": "cashmere",
               "ratio": 30,
               "ratio_status": "explicit",
-              "evidence": "캐시미어 30%"
+              "evidence": "소재: 겉감 울 70%, 캐시미어 30%."
             }
           ],
           "fit": [
@@ -724,23 +671,16 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "아이보리 컬러의 슬림핏 플리스 재킷이며 겉감 울 70%와 캐시미어 30%가 명시된 상품입니다.",
+          "search_summary": "아이보리 슬림핏 플리스/뽀글이로 울과 캐시미어 겉감이 명시된 겨울 아우터입니다.",
           "query_tags": [
-            "outer",
-            "jacket",
-            "fleece_jacket",
-            "ivory",
-            "wool",
-            "cashmere",
-            "slim",
-            "winter",
-            "outdoor",
-            "travel"
+            "아이보리 플리스",
+            "슬림핏 뽀글이",
+            "겨울 아웃도어 재킷"
           ],
           "explainable_reasons": [
-            "카테고리 '아우터 > 재킷 > 플리스/뽀글이'를 outer/jacket/fleece_jacket으로 매핑했습니다.",
-            "'겉감 울 70%, 캐시미어 30%'를 shell 소재의 explicit ratio로 기록했습니다.",
-            "'겨울'은 winter, '건조기 사용 금지'는 no_tumble_dry로 매핑했습니다."
+            "카테고리의 '플리스/뽀글이'를 fleece_jacket으로 매핑했습니다.",
+            "겉감 울 70%와 캐시미어 30%가 숫자 혼용률로 명시되어 있습니다.",
+            "'건조기 사용 금지'를 no_tumble_dry로 매핑했습니다."
           ]
         },
         "quality": {
@@ -776,17 +716,16 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "그레이 컬러의 top/tshirt/short_sleeve_tshirt 상품입니다.",
+          "search_summary": "그레이 반소매 티셔츠 상품으로, 유형과 색상만 확인됩니다.",
           "query_tags": [
-            "top",
-            "tshirt",
-            "short_sleeve_tshirt",
-            "gray"
+            "그레이 반소매 티셔츠",
+            "반팔 티셔츠",
+            "그레이 상의"
           ],
           "explainable_reasons": [
-            "카테고리 '상의 > 티셔츠 > 반소매 티셔츠'를 top/tshirt/short_sleeve_tshirt로 매핑했습니다.",
-            "컬러 '그레이'를 gray로 매핑했습니다.",
-            "소재, 핏, 계절, TPO, 관리, 사이즈 정보는 입력에 없어 누락으로 기록했습니다."
+            "카테고리 문구의 '상의 > 티셔츠 > 반소매 티셔츠'를 top/tshirt/short_sleeve_tshirt로 매핑했습니다.",
+            "컬러 문구의 '그레이'를 gray로 매핑했습니다.",
+            "소재, 핏, 계절, TPO, 관리 방법, 사이즈 정보는 입력에 없습니다."
           ]
         },
         "quality": {
@@ -829,17 +768,16 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "네이비 컬러의 top/tshirt/long_sleeve_tshirt 상품입니다.",
+          "search_summary": "네이비 긴소매 티셔츠 상품으로, 유형과 색상만 확인됩니다.",
           "query_tags": [
-            "top",
-            "tshirt",
-            "long_sleeve_tshirt",
-            "navy"
+            "네이비 긴소매 티셔츠",
+            "긴팔 티셔츠",
+            "네이비 상의"
           ],
           "explainable_reasons": [
-            "카테고리 '상의 > 티셔츠 > 긴소매 티셔츠'를 top/tshirt/long_sleeve_tshirt로 매핑했습니다.",
-            "컬러 '네이비'를 navy로 매핑했습니다.",
-            "소재, 핏, 계절, TPO, 관리, 사이즈 정보는 입력에 없어 누락으로 기록했습니다."
+            "카테고리 문구의 '상의 > 티셔츠 > 긴소매 티셔츠'를 top/tshirt/long_sleeve_tshirt로 매핑했습니다.",
+            "컬러 문구의 '네이비'를 navy로 매핑했습니다.",
+            "소재, 핏, 계절, TPO, 관리 방법, 사이즈 정보는 입력에 없습니다."
           ]
         },
         "quality": {
@@ -877,14 +815,14 @@
               "name": "cotton",
               "ratio": 95,
               "ratio_status": "explicit",
-              "evidence": "겉감 면 95%"
+              "evidence": "소재: 겉감 면 95%, 폴리우레탄 5%."
             },
             {
               "part": "shell",
               "name": "polyurethane",
               "ratio": 5,
               "ratio_status": "explicit",
-              "evidence": "폴리우레탄 5%"
+              "evidence": "소재: 겉감 면 95%, 폴리우레탄 5%."
             }
           ],
           "fit": [
@@ -911,23 +849,16 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그린 컬러의 릴랙스 핏 셔츠/블라우스이며 겉감 면 95%와 폴리우레탄 5%가 명시된 상품입니다.",
+          "search_summary": "그린 릴랙스 핏 셔츠/블라우스로 면과 폴리우레탄 겉감이 명시된 간절기 상의입니다.",
           "query_tags": [
-            "top",
-            "shirt_blouse",
-            "green",
-            "cotton",
-            "polyurethane",
-            "relaxed",
-            "spring",
-            "fall",
-            "commute",
-            "formal"
+            "그린 셔츠 블라우스",
+            "릴랙스 핏 셔츠",
+            "간절기 포멀 상의"
           ],
           "explainable_reasons": [
-            "카테고리 '상의 > 셔츠 > 셔츠/블라우스'를 top/shirt_blouse로 매핑했습니다.",
-            "'겉감 면 95%, 폴리우레탄 5%'를 shell 소재의 explicit ratio로 기록했습니다.",
-            "'간절기'는 spring과 fall, '표백 금지'는 do_not_bleach로 매핑했습니다."
+            "카테고리의 '셔츠/블라우스'를 shirt_blouse로 매핑했습니다.",
+            "겉감 면 95%와 폴리우레탄 5%가 숫자 혼용률로 명시되어 있습니다.",
+            "'출근룩과 포멀'은 commute와 formal로 매핑했습니다."
           ]
         },
         "quality": {
@@ -958,14 +889,14 @@
               "name": "recycled_fiber",
               "ratio": null,
               "ratio_status": "missing",
-              "evidence": "리사이클 섬유"
+              "evidence": "소재: 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다."
             },
             {
-              "part": "trim",
+              "part": "unknown",
               "name": "polyester",
               "ratio": null,
               "ratio_status": "missing",
-              "evidence": "배색 폴리에스터"
+              "evidence": "소재: 리사이클 섬유와 배색 폴리에스터를 사용했으나 숫자 혼용률은 표기되어 있지 않습니다."
             }
           ],
           "fit": [
@@ -991,29 +922,22 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "핑크 컬러의 박시핏 니트/스웨터이며 리사이클 섬유와 배색 폴리에스터의 혼용률은 누락된 상품입니다.",
+          "search_summary": "핑크 박시핏 니트/스웨터로 리사이클 섬유와 폴리에스터 소재명이 확인되는 여름 상의입니다.",
           "query_tags": [
-            "top",
-            "knit",
-            "knit_sweater",
-            "pink",
-            "recycled_fiber",
-            "polyester",
-            "boxy",
-            "summer",
-            "daily",
-            "street"
+            "핑크 니트",
+            "박시핏 스웨터",
+            "여름 스트리트 상의"
           ],
           "explainable_reasons": [
-            "카테고리 '상의 > 니트 > 니트/스웨터'를 top/knit/knit_sweater로 매핑했습니다.",
-            "'리사이클 섬유'와 '배색 폴리에스터'는 소재명은 있으나 숫자 혼용률이 없어 material_ratio를 missing으로 처리했습니다.",
-            "'배색 폴리에스터'는 배색 부위 단서에 따라 trim part로 기록했습니다."
+            "카테고리의 '니트/스웨터'를 knit_sweater로 매핑했습니다.",
+            "리사이클 섬유와 배색 폴리에스터는 소재명만 있고 숫자 혼용률이 없어 missing으로 기록했습니다.",
+            "배색 폴리에스터는 구체 부위가 없어 trim으로 단정하지 않고 unknown part로 두었습니다."
           ]
         },
         "quality": {
           "missing_fields": [
-            "material_part",
-            "material_ratio"
+            "material_ratio",
+            "material_part"
           ],
           "ambiguous_fields": [],
           "out_of_scope": false,
@@ -1041,14 +965,14 @@
               "name": "cotton",
               "ratio": 95,
               "ratio_status": "explicit",
-              "evidence": "겉감: 면 95%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             },
             {
               "part": "shell",
               "name": "polyurethane",
               "ratio": 5,
               "ratio_status": "explicit",
-              "evidence": "폴리우레탄 5%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             }
           ],
           "fit": [
@@ -1076,23 +1000,16 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "블루와 핑크 컬러 옵션의 스트레이트 핏 피케/카라 티셔츠이며 겉감 면 95%와 폴리우레탄 5%가 명시된 상품입니다.",
+          "search_summary": "블루와 핑크 옵션의 스트레이트 핏 피케/카라 티셔츠로 가을겨울 레이어드에 맞는 상의입니다.",
           "query_tags": [
-            "top",
-            "polo",
-            "polo_collar_tshirt",
-            "blue",
-            "pink",
-            "cotton",
-            "polyurethane",
-            "straight",
-            "fall",
-            "winter"
+            "블루 카라 티셔츠",
+            "피케 티셔츠",
+            "가을겨울 레이어드 상의"
           ],
           "explainable_reasons": [
-            "카테고리 '상의 > 폴로 > 피케/카라 티셔츠'를 top/polo/polo_collar_tshirt로 매핑했습니다.",
-            "'겉감: 면 95%, 폴리우레탄 5%'를 shell 소재의 explicit ratio로 기록했습니다.",
-            "관리 방법의 저온 다림질 가능과 건조기 사용 금지를 care에 각각 반영했습니다."
+            "카테고리의 '피케/카라 티셔츠'를 polo_collar_tshirt로 매핑했습니다.",
+            "겉감 면 95%와 폴리우레탄 5%가 숫자 혼용률로 명시되어 있습니다.",
+            "사이즈 실측은 M과 L 행 단위로 보존했습니다."
           ]
         },
         "quality": {
@@ -1123,14 +1040,14 @@
               "name": "linen",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "린넨 라이크 터치"
+              "evidence": "소재: 린넨 라이크 터치와 레이온 블렌드 느낌을 살린 원단. 숫자 혼용률은 제공되지 않습니다."
             },
             {
               "part": "unknown",
               "name": "rayon",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "레이온 블렌드 느낌"
+              "evidence": "소재: 린넨 라이크 터치와 레이온 블렌드 느낌을 살린 원단. 숫자 혼용률은 제공되지 않습니다."
             }
           ],
           "fit": [
@@ -1156,24 +1073,16 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "아이보리와 옐로우 컬러 옵션의 롱라인 반소매 티셔츠이며 소재 표현은 라이크 터치와 블렌드 느낌으로 모호한 상품입니다.",
+          "search_summary": "아이보리와 옐로우 옵션의 롱라인 반소매 티셔츠로 겨울 아웃도어와 여행 착장에 맞는 상품입니다.",
           "query_tags": [
-            "top",
-            "tshirt",
-            "short_sleeve_tshirt",
-            "ivory",
-            "yellow",
-            "linen",
-            "rayon",
-            "longline",
-            "winter",
-            "outdoor",
-            "travel"
+            "아이보리 반소매 티셔츠",
+            "롱라인 티셔츠",
+            "겨울 여행 상의"
           ],
           "explainable_reasons": [
-            "카테고리 '상의 > 티셔츠 > 반소매 티셔츠'를 top/tshirt/short_sleeve_tshirt로 매핑했습니다.",
-            "'린넨 라이크 터치'와 '레이온 블렌드 느낌'은 숫자 혼용률 없는 소재감 표현이므로 ratio_status를 ambiguous로 기록했습니다.",
-            "배송, 쿠폰, 후기 요약 문구는 상품 속성이 아니므로 구조화에서 제외했습니다."
+            "카테고리의 '반소매 티셔츠'를 short_sleeve_tshirt로 매핑했습니다.",
+            "린넨 라이크 터치와 레이온 블렌드 느낌은 소재감 표현이므로 ambiguous 혼용률로 기록했습니다.",
+            "배송, 쿠폰, 후기 요약 문구는 상품 속성에서 제외했습니다."
           ]
         },
         "quality": {
@@ -1213,16 +1122,16 @@
           "size_info": []
         },
         "agent_descriptor": {
-          "search_summary": "데님 블루 컬러의 top/shirt_blouse 상품입니다.",
+          "search_summary": "데님 블루 셔츠/블라우스 상품으로, 유형과 색상만 확인됩니다.",
           "query_tags": [
-            "top",
-            "shirt_blouse",
-            "denim_blue"
+            "데님 블루 셔츠",
+            "셔츠 블라우스",
+            "데님 색상 상의"
           ],
           "explainable_reasons": [
-            "카테고리 '상의 > 셔츠 > 셔츠/블라우스'를 top/shirt_blouse로 매핑했습니다.",
-            "컬러 '데님 블루'를 denim_blue로 매핑했습니다.",
-            "소재, 핏, 계절, TPO, 관리, 사이즈 정보는 입력에 없어 누락으로 기록했습니다."
+            "카테고리 문구의 '상의 > 셔츠 > 셔츠/블라우스'를 top/shirt_blouse/shirt_blouse로 매핑했습니다.",
+            "컬러 문구의 '데님 블루'를 denim_blue로 매핑했습니다.",
+            "소재, 핏, 계절, TPO, 관리 방법, 사이즈 정보는 입력에 없습니다."
           ]
         },
         "quality": {
@@ -1260,7 +1169,7 @@
               "name": "faux_leather",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "페이크 레더 느낌의 소재"
+              "evidence": "소재: 페이크 레더 느낌의 소재."
             }
           ],
           "fit": [
@@ -1286,22 +1195,16 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그레이 컬러의 스트레이트 핏 민소매 티셔츠이며 페이크 레더 느낌 소재 표현이 모호한 상품입니다.",
+          "search_summary": "그레이 스트레이트 핏 민소매 티셔츠로 페이크 레더 느낌이 언급된 겨울 상의입니다.",
           "query_tags": [
-            "top",
-            "sleeveless",
-            "sleeveless_tshirt",
-            "gray",
-            "faux_leather",
-            "straight",
-            "winter",
-            "outdoor",
-            "travel"
+            "그레이 민소매 티셔츠",
+            "페이크 레더 느낌 상의",
+            "겨울 민소매"
           ],
           "explainable_reasons": [
-            "카테고리 '상의 > 슬리브리스 > 민소매 티셔츠'를 top/sleeveless/sleeveless_tshirt로 매핑했습니다.",
-            "'페이크 레더 느낌의 소재'는 숫자 혼용률 없는 소재감 표현이므로 faux_leather의 ratio_status를 ambiguous로 기록했습니다.",
-            "'겨울'은 winter, '건조기 사용 금지'는 no_tumble_dry로 매핑했습니다."
+            "카테고리의 '민소매 티셔츠'를 sleeveless_tshirt로 매핑했습니다.",
+            "페이크 레더 느낌은 소재감 표현이므로 faux_leather를 ambiguous 혼용률로 기록했습니다.",
+            "'사이즈 옵션: S, M, L'은 개별 사이즈 값으로 분리했습니다."
           ]
         },
         "quality": {
@@ -1336,7 +1239,7 @@
               "name": "faux_leather",
               "ratio": null,
               "ratio_status": "ambiguous",
-              "evidence": "페이크 레더 느낌의 소재"
+              "evidence": "소재: 페이크 레더 느낌의 소재."
             }
           ],
           "fit": [
@@ -1362,22 +1265,16 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "그레이 컬러의 스트레이트 핏 민소매 티셔츠 리오더 상품이며 페이크 레더 느낌 소재 표현이 모호합니다.",
+          "search_summary": "그레이 스트레이트 핏 민소매 티셔츠 리오더 상품으로 페이크 레더 느낌이 언급되어 있습니다.",
           "query_tags": [
-            "top",
-            "sleeveless",
-            "sleeveless_tshirt",
-            "gray",
-            "faux_leather",
-            "straight",
-            "winter",
-            "outdoor",
-            "travel"
+            "그레이 민소매 리오더",
+            "페이크 레더 느낌 상의",
+            "겨울 민소매"
           ],
           "explainable_reasons": [
-            "카테고리 '상의 > 슬리브리스 > 민소매 티셔츠'를 top/sleeveless/sleeveless_tshirt로 매핑했습니다.",
-            "'페이크 레더 느낌의 소재'는 숫자 혼용률 없는 소재감 표현이므로 faux_leather의 ratio_status를 ambiguous로 기록했습니다.",
-            "상품명에 포함된 리오더 문구는 제목에는 보존하되 별도 속성으로 확장하지 않았습니다."
+            "카테고리의 '민소매 티셔츠'를 sleeveless_tshirt로 매핑했습니다.",
+            "페이크 레더 느낌은 소재감 표현이므로 faux_leather를 ambiguous 혼용률로 기록했습니다.",
+            "상품명은 리오더 표현을 포함해 원문 그대로 보존했습니다."
           ]
         },
         "quality": {
@@ -1412,14 +1309,14 @@
               "name": "cotton",
               "ratio": 95,
               "ratio_status": "explicit",
-              "evidence": "겉감: 면 95%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             },
             {
               "part": "shell",
               "name": "polyurethane",
               "ratio": 5,
               "ratio_status": "explicit",
-              "evidence": "폴리우레탄 5%"
+              "evidence": "겉감: 면 95%, 폴리우레탄 5%"
             }
           ],
           "fit": [
@@ -1446,24 +1343,16 @@
           ]
         },
         "agent_descriptor": {
-          "search_summary": "화이트와 아이보리 컬러 옵션의 릴랙스 핏 반소매 티셔츠이며 겉감 면 95%와 폴리우레탄 5%가 명시된 상품입니다.",
+          "search_summary": "화이트와 아이보리 옵션의 릴랙스 핏 반소매 티셔츠로 여름 데일리와 스트리트 착장에 맞는 상의입니다.",
           "query_tags": [
-            "top",
-            "tshirt",
-            "short_sleeve_tshirt",
-            "white",
-            "ivory",
-            "cotton",
-            "polyurethane",
-            "relaxed",
-            "summer",
-            "daily",
-            "street"
+            "화이트 반소매 티셔츠",
+            "릴랙스 핏 티셔츠",
+            "여름 데일리 상의"
           ],
           "explainable_reasons": [
-            "카테고리 '상의 > 티셔츠 > 반소매 티셔츠'를 top/tshirt/short_sleeve_tshirt로 매핑했습니다.",
-            "'겉감: 면 95%, 폴리우레탄 5%'를 shell 소재의 explicit ratio로 기록했습니다.",
-            "사이즈 실측의 총장, 어깨, 가슴 치수를 size_info에 보존했습니다."
+            "카테고리의 '반소매 티셔츠'를 short_sleeve_tshirt로 매핑했습니다.",
+            "겉감 면 95%와 폴리우레탄 5%가 숫자 혼용률로 명시되어 있습니다.",
+            "사이즈 실측은 M과 L 행 단위로 보존했습니다."
           ]
         },
         "quality": {

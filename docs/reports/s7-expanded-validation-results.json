@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-06T01:51:24.826711+00:00",
+  "generated_at_utc": "2026-07-06T02:34:06.683797+00:00",
   "generated_for_kst_date": "2026-07-06",
   "environment": {
     "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
@@ -7,17 +7,17 @@
     "codex_version": "codex-cli 0.142.5"
   },
   "hashes_sha256": {
-    "src/skills/product-agentizer/SKILL.md": "a749f9429834292752a3cbe4f8999c1ee1cfb54c52c0584fc2d8b84aae6eda2d",
+    "src/skills/product-agentizer/SKILL.md": "069a9a4ff827a5b4f3897f1faf4514beed53ddd3866f2cf85efca0e7612bd4fa",
     "src/skills/product-agentizer/references/schema.json": "685ee3307d64603079d8adce707768e17e96a1aeb48010da2d5bd26f254f4a0a",
     "src/skills/product-agentizer/references/taxonomy.json": "5d60707c2c79b66ce19c71c3179d18b296e11d6fcaab34d612b25dbc0367e91b",
     "src/skills/product-agentizer/scripts/validate.py": "ceef43b48102906b849ee271232f86f68f821dde70277299e60e8095b64b4318",
     "src/skills/product-agentizer/scripts/dedup.py": "dd69c8ea40bd081b7fd53ec514415d147457c940321b929c3f4fdd748ab937c4",
     "tests/evaluate_product_agentizer.py": "a86cb4941be692c0f0914dcfc7939af35fe377b06e9722582982c8471d658dd7",
-    "tools/generate_expanded_validation_fixtures.py": "006f749cc4ab8f16bf26201053f4f077a78a25e8025259605c0099480ac684bc",
+    "tools/generate_expanded_validation_fixtures.py": "bd48d3b742c39ed8c7a5a53a121a8f1dbbf3db59e9f98eec72af3474e247fb23",
     "tools/run_expanded_validation.py": "445105ab8af0c1535aab424494cbb938f1149cffe00144d59b77f381e3f5c377",
     "tests/fixtures/expanded_dummy/source_inputs.json": "f8d65b71d22892742611692a5793c991754b045bd9aa60a217b05d58b2ec51d3",
-    "tests/fixtures/expanded_dummy/expected_products.json": "6b038746ed726da8043b610c55e269b85a6fd6f3a191d3223ad5354b7e5bb956",
-    "tests/fixtures/expanded_dummy/reference_actual_products.json": "6b038746ed726da8043b610c55e269b85a6fd6f3a191d3223ad5354b7e5bb956",
+    "tests/fixtures/expanded_dummy/expected_products.json": "515491b8a2324a26dcd2dcfed9cddd56190170a31bbbdd31589abfe3aebfa5e5",
+    "tests/fixtures/expanded_dummy/reference_actual_products.json": "515491b8a2324a26dcd2dcfed9cddd56190170a31bbbdd31589abfe3aebfa5e5",
     "tests/fixtures/expanded_dummy/duplicate_labels.json": "d48bf8775187090a19c97b7ec0ed21869798540fe7159f7c03ad227e959e05d4",
     "tests/fixtures/codex_subset/source_inputs.json": "6a957296e536d59c881989d12cd13e0236a3f4cd7cad89826db3c9ce02496977",
     "tests/fixtures/codex_subset/expected_products.json": "7e523d3fbe2e8e7f1b869670cb678559f157073adf8049753df01328a6f7b518",
@@ -115,7 +115,7 @@
           "micro": {
             "precision": 1.0,
             "recall": 1.0,
-            "true_positive": 1525,
+            "true_positive": 1535,
             "false_positive": 0,
             "false_negative": 0
           },
@@ -200,7 +200,7 @@
             "quality.missing_fields": {
               "precision": 1.0,
               "recall": 1.0,
-              "true_positive": 20,
+              "true_positive": 30,
               "false_positive": 0,
               "false_negative": 0
             },
@@ -306,7 +306,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -416,7 +416,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -526,7 +526,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -636,7 +636,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -746,7 +746,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -823,7 +823,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -933,7 +933,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1043,7 +1043,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1153,7 +1153,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1263,7 +1263,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },

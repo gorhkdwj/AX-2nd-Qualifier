@@ -358,7 +358,7 @@ URL은 출처 메타데이터입니다. 실행 입력이 아닙니다.
 | `fill` | 충전재 |
 | `rib` | 립, 시보리 |
 | `pocket` | 포켓, 주머니 |
-| `trim` | 배색, 부자재, 카라, 후드, 소매 등 |
+| `trim` | 배색부, 부자재, 카라, 후드, 소매 등 구체 부위가 명시된 배색/부자재 |
 | `unknown` | 부위를 알 수 없음 |
 
 `name` 허용 값은 다음과 같습니다.
@@ -767,6 +767,7 @@ JSON Schema만으로 충분하지 않은 규칙은 Python 코드에서 추가로
 | ratio status 검사 | `explicit`, `missing`, `ambiguous` 중 하나여야 함 |
 | 부위별 합계 검사 | 같은 part의 explicit ratio 합이 100을 초과하면 오류 |
 | missing 연동 | `ratio_status=missing`이 있으면 `quality.missing_fields`에 `material_ratio` 필요 |
+| 부위 미상 연동 | `part=unknown` 소재가 있으면 `quality.missing_fields`에 `material_part` 필요 |
 | ambiguous 연동 | `ratio_status=ambiguous`가 있으면 `quality.ambiguous_fields`에 `material_ratio` 필요 |
 
 ### 11.4 종료 코드
@@ -1284,16 +1285,17 @@ SKILL-only `size_info` 원자화 보강 후 결과는 다음입니다.
 | 지표 | 결과 |
 |---|---:|
 | actual schema-valid | 50/50 |
-| micro precision | 99.74% |
-| micro recall | 99.74% |
+| micro precision | 100.00% |
+| micro recall | 100.00% |
 | detail_type precision/recall | 100.00% / 100.00% |
+| materials precision/recall | 100.00% / 100.00% |
 | size_info precision/recall | 100.00% / 100.00% |
 | dedup accuracy | 100.00% |
 | 자동 fetch | 0건 |
 | 실제 상품 원문 저장 | 0건 |
 | 법적 적합/부적합 판정 | 0건 |
 
-개선 전 50건 subset에서는 `size_info` precision 59.65%, recall 33.01%였다. 원인은 `사이즈 옵션: M, L, XL`을 Codex가 하나의 문자열로 보존하고 expected는 `M`, `L`, `XL` 개별 항목으로 라벨링한 차이였다. `SKILL.md`에 사이즈 옵션 원자화 규칙을 추가한 뒤 같은 50건 prompt를 재실행하자 `size_info` false positive와 false negative가 모두 0건으로 줄었다.
+개선 전 50건 subset에서는 `size_info` precision 59.65%, recall 33.01%였다. 원인은 `사이즈 옵션: M, L, XL`을 Codex가 하나의 문자열로 보존하고 expected는 `M`, `L`, `XL` 개별 항목으로 라벨링한 차이였다. `SKILL.md`에 사이즈 옵션 원자화 규칙을 추가한 뒤 같은 50건 prompt를 재실행하자 `size_info` false positive와 false negative가 모두 0건으로 줄었다. 이후 `배색 폴리에스터`처럼 실제 적용 부위가 명시되지 않은 소재는 `trim`으로 단정하지 않고 `unknown`으로 두는 보수 기준을 정렬해 materials 차이도 해소했다.
 
 schema는 `0.2.0`을 유지했다. 즉 이번 개선은 schema 변경이 아니라 skill 지침 개선만으로 달성한 결과다. size option, 실측표, 모델 착용 정보를 객체로 구분해야 하는 장기 계획은 `docs/size-info-schema-change-plan.md`에 조건부 계획으로 보존한다.
 
@@ -1534,7 +1536,8 @@ logs/
 | 실제 공개 snippet 법적 판정 | 통과, 0건 |
 | cross-category high-confidence false duplicate | 통과, 0건 |
 | S7.7 실제 페이지형 합성 subset schema-valid | 통과, 50/50 |
-| S7.7 실제 페이지형 합성 subset micro precision/recall | 통과, 99.74% / 99.74% |
+| S7.7 실제 페이지형 합성 subset micro precision/recall | 통과, 100.00% / 100.00% |
+| S7.7 materials precision/recall | 통과, 100.00% / 100.00% |
 | S7.7 size_info precision/recall | 통과, 100.00% / 100.00% |
 | S7.8 size_info 패턴 actual schema-valid | 통과, 48/48 |
 | S7.8 size_info precision/recall | 통과, 100.00% / 100.00% |
@@ -1637,7 +1640,7 @@ submission.zip
 
 후속 개선을 한다면 아래가 우선순위가 높습니다.
 
-1. `materials`의 부위 추론을 더 안정화합니다. 특히 `배색 폴리에스터` 같은 표현을 `trim`으로 볼지 `unknown`으로 둘지 기준을 좁힙니다.
+1. `materials`의 부위 추론을 더 안정화합니다. 현재 `배색 폴리에스터`처럼 실제 적용 부위가 명시되지 않은 표현은 `unknown`으로 두는 보수 기준을 적용하며, 이후 실제 운영 데이터에서 `배색부`, `카라 배색`, `소매 배색`처럼 구체 부위가 드러나는 표현을 더 보강할 수 있습니다.
 2. 실제 공개 snippet의 라벨링 기준과 Codex 출력 기준을 계속 점검합니다. S7.7의 합성 상세페이지형 검증과 S7.8의 `size_info` 패턴 검증에서는 `size_info` 원자화와 주요 표기 패턴 대응력이 확인됐지만, 실제 공개 snippet은 짧은 sanity check라 별도 해석이 필요합니다.
 3. `quality.missing_fields`가 지나치게 보수적으로 늘어나는 문제를 완화합니다.
 4. `tpo_tags` recall을 높이기 위해 TPO alias와 체크리스트를 보강합니다.

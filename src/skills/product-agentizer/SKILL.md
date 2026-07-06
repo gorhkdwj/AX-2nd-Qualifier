@@ -89,8 +89,11 @@ JSON 구조는 schema가 기준입니다. 정규화 id와 alias 매핑은 taxono
    - 소재명은 있지만 숫자 혼용률이 없으면 `ratio: null`, `ratio_status: "missing"`으로 두고 `quality.missing_fields`에 `material_ratio`를 추가합니다.
    - "혼방", "터치", "느낌", "라이크"처럼 소재감만 암시하는 표현이면 `ratio: null`, `ratio_status: "ambiguous"`로 두고 `quality.ambiguous_fields`에 `material_ratio`를 추가합니다.
    - 부위가 다르면 `shell`, `lining`, `fill`, `rib`, `pocket`, `trim`, `unknown` 중 하나로 나누어 기록합니다.
+   - 소재 항목 중 하나라도 `part: "unknown"`이면 `quality.missing_fields`에 `material_part`를 반드시 추가합니다.
    - 한 문장에 여러 소재나 혼용률이 함께 나오면 모두 별도 `materials[]` 항목으로 분리합니다. 예: `충전재 덕다운 80%, 구스다운 20%`는 `fill:duck_down:80`과 `fill:goose_down:20`으로 나눕니다.
-   - `겉감`, `안감`, `충전재`, `립`, `포켓`, `배색` 같은 부위 단어가 먼저 나오면, 다음 부위 단어가 나오기 전까지 같은 구간의 모든 소재에 그 `part`를 적용합니다.
+   - `겉감`, `안감`, `충전재`, `립`, `포켓` 같은 부위 단어가 먼저 나오면, 다음 부위 단어가 나오기 전까지 같은 구간의 모든 소재에 그 `part`를 적용합니다.
+   - `배색 폴리에스터`처럼 배색 표현은 있지만 실제 적용 부위가 명시되지 않은 소재는 `trim`으로 단정하지 말고 `part: "unknown"`으로 둡니다.
+   - `배색부 폴리에스터`, `카라 배색 폴리에스터`, `소매 배색 폴리에스터`처럼 구체 부위가 함께 적힌 경우에만 `trim` 또는 더 구체적인 부위를 사용합니다.
    - `린넨 터치`, `레이온 블렌드`처럼 정확한 숫자 혼용률이 없는 소재 표현은 소재 후보를 누락하지 말고 각각 `ratio: null`, `ratio_status: "ambiguous"`로 기록합니다.
    - Never estimate fabric ratios. Never judge legal compliance.
 

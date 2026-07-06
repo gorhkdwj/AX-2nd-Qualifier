@@ -14,12 +14,12 @@
 
 | 지표 | 개선 전 | 개선 후 |
 |---|---:|---:|
-| subset micro precision | 96.15% | 99.74% |
-| subset micro recall | 88.47% | 99.74% |
+| subset micro precision | 96.15% | 100.00% |
+| subset micro recall | 88.47% | 100.00% |
 | size_info precision | 59.65% | 100.00% |
 | size_info recall | 33.01% | 100.00% |
 
-따라서 현재 MVP 제출 범위에서는 schema v0.3 변경을 보류한다. 단, 이 문서는 typed size query나 category 확장 시 재검토할 조건부 설계안으로 유지한다.
+따라서 현재 MVP 제출 범위에서는 schema v0.3 변경을 보류한다. 이후 소재 부위 보수 라벨 기준까지 정렬하면서 S7.7 50건 subset의 전체 micro precision/recall도 100.00%가 되었지만, 이 문서는 typed size query나 category 확장 시 재검토할 조건부 설계안으로 유지한다.
 
 ## 2. 변경을 검토하게 된 문제
 
