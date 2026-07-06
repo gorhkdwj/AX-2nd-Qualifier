@@ -10,6 +10,35 @@
 
 ---
 
+### W-048 · Claude Code 교차검증 프롬프트 작성
+**요청**
+- 프로젝트의 최종 결과를 근거와 결과, 해석까지 모두 검증할 수 있는 Claude Code 교차검증 프롬프트 작성
+
+**수행 작업**
+- 최신 구현 worktree와 메인 루트 `logs/` 위치를 명시한 독립 감사용 프롬프트 작성
+- 검증 대상 파일, 핵심 주장, 실행 명령, 기대 지표, 리스크 점검 항목, 최종 보고 형식을 포함
+- `submission.zip`은 아직 생성하지 말고 패키징 준비 상태와 리스크만 평가하도록 지시
+- `docs/README.md` 활성 문서 목록에 교차검증 프롬프트 문서 추가
+
+**변경 파일**
+- 생성: `docs/claude-cross-validation-prompt.md`
+- 수정: `docs/README.md`
+- 수정: `Worklog.md`
+
+**검증**
+- `docs/claude-cross-validation-prompt.md`가 UTF-8로 정상 출력되는지 확인
+- `docs/README.md`에 `claude-cross-validation-prompt.md` 항목이 추가되었는지 확인
+
+**판단 근거**
+- 최종 산출물은 최신 worktree와 메인 루트 `logs/`를 결합해야 하므로, 교차검증자가 경로 전제를 잘못 잡으면 검증 결과가 왜곡될 수 있다.
+- 검증 프롬프트에 실행 명령, 기대 수치, 해석 기준, 패키징 리스크를 모두 포함해야 Claude Code와의 교차검증이 단순 문서 리뷰가 아니라 재현 가능한 감사가 된다.
+
+**결과**
+- 완료: Claude Code 교차검증용 프롬프트 문서 작성
+- 남은 작업: Claude Code 교차검증 결과를 받아 findings 반영 여부 판단
+
+---
+
 ### W-047 · README 및 검증 수치 정합성 보정
 **요청**
 - 최종 보완 3단계로 README 수치와 제출/검증 표현 정합성을 보정하고, 단계별 중간 보고·문서화·commit/push 진행
