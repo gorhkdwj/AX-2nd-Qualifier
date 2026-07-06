@@ -10,6 +10,35 @@
 
 ---
 
+### W-046 · material_part 누락 invalid fixture 추가
+**요청**
+- 최종 보완 2단계로 `material_part` 누락 invalid fixture를 추가하고, 단계별 중간 보고·문서화·commit/push 진행
+
+**수행 작업**
+- `tests/fixtures/schema/invalid_missing_material_part.json`을 추가
+- 해당 fixture는 소재 `part`가 `unknown`이고 `ratio_status`는 정상적인 `missing`이지만, `quality.missing_fields`에 `material_part`가 없어 실패해야 하는 단일 목적 fixture로 구성
+- 정상 schema fixture 2건과 전체 invalid fixture 세트를 재검증
+
+**변경 파일**
+- 생성: `tests/fixtures/schema/invalid_missing_material_part.json`
+- 수정: `Worklog.md`
+
+**검증**
+- `python src\skills\product-agentizer\scripts\validate.py tests\fixtures\schema\invalid_missing_material_part.json --pretty` 결과: `material_part must be listed when a material part is unknown` 오류로 실패 처리됨
+- `python src\skills\product-agentizer\scripts\validate.py tests\fixtures\schema\valid_outer.json` 통과
+- `python src\skills\product-agentizer\scripts\validate.py tests\fixtures\schema\valid_top.json` 통과
+- 전체 `tests/fixtures/schema/invalid_*.json`가 모두 기대대로 실패 처리됨을 확인
+
+**판단 근거**
+- 1단계에서 validator가 `material_part` 계약을 강제하게 되었으므로, 이 규칙의 회귀를 막는 전용 negative fixture가 필요하다.
+- 새 fixture는 다른 schema 오류와 섞이지 않도록 `material_part` 누락만 겨냥했다.
+
+**결과**
+- 완료: `material_part` 누락 차단 규칙을 전용 invalid fixture로 고정
+- 남은 작업: 3단계 README 수치와 제출/검증 표현 정합성 보정
+
+---
+
 ### W-045 · material_part validator 계약 보강
 **요청**
 - 최종 보완 1단계로 `validate.py`에 `material_part` 계약 검사를 추가하고, 단계별 중간 보고·문서화·commit/push 진행
