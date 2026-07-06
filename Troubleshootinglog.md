@@ -10,6 +10,28 @@
 
 ---
 
+### T-021 · 상세 설명서의 real_sanity 필드별 수치 및 최신 구조 누락
+**발생 상황**
+- `docs/product-agentizer-complete-guide.md`가 현재 코드·fixture·검증 보고서와 맞는지 점검했다.
+
+**증상**
+- 상세 설명서의 실제 공개 snippet 필드별 탐색 표에서 `quality.missing_fields`가 `3.45% / TP 1 / FP 28`로 남아 있었다.
+- 현재 `tests/evaluate_product_agentizer.py` 재실행 및 `docs/reports/s7-expanded-validation-results.json` 기준 실제 값은 `21.62% / TP 8 / FP 29`였다.
+- 설명서의 파일 구조와 재현 명령도 S7.7, S7.8, 제출 후 `docs/post-submission/` 정리를 일부 반영하지 못했다.
+
+**확인된 원인**
+- 3단계 taxonomy와 material_part 보강, S7.7/S7.8 검증, 제출 후 문서 정리 이후에 `product-agentizer-complete-guide.md`의 일부 요약 표와 구조 안내가 함께 갱신되지 않았다.
+
+**조치**
+- 상세 설명서의 `quality.missing_fields` 필드별 수치를 현재 JSON 결과와 맞췄다.
+- 전체 파일 구조, tools 목록, reports 목록, `docs/post-submission/` 위치, S7.7 300건/50건 구분, dedup cross-category 재계산 결과, worktree 로그 통합 구조, 재현 명령을 최신 상태로 갱신했다.
+
+**재발 방지**
+- 검증 결과 JSON을 기준으로 수치를 적고, 설명서·README·validation-plan을 함께 대조한다.
+- 새 검증 단계나 제출 후 구조 정리가 생기면 `docs/README.md`뿐 아니라 상세 설명서의 파일 구조·재현 명령 섹션도 같이 확인한다.
+
+---
+
 ### T-020 · PowerShell에서 `&&` 연결 커밋 명령 실패
 **발생 상황**
 - 제출 후 작업물 정리 변경분을 commit하고 push하기 위해 PowerShell에서 `git commit ... && git push ...` 형태의 명령을 실행했다.

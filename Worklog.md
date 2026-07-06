@@ -10,6 +10,41 @@
 
 ---
 
+### W-057 · 상세 설명서 사실관계 점검 및 최신화
+**요청** `docs/product-agentizer-complete-guide.md` 문서가 사실과 다르거나 변경된 사항을 누락하지 않았는지 점검해 달라는 요청.
+
+**수행 작업**
+- 상세 설명서의 구조, schema/taxonomy 설명, dedup 가중치, 검증 수치, 재현 명령, 로그 보존 설명을 현재 코드·fixture·보고서와 대조했다.
+- `tests/evaluate_product_agentizer.py`로 기본 평가, `full_page_codex_subset` 50건 평가, `real_sanity` 10건 탐색 평가를 재실행해 수치를 확인했다.
+- `real_sanity` 필드별 탐색 표의 `quality.missing_fields` 수치를 현재 결과(`21.62% / 100.00% / TP 8 / FP 29 / FN 0`)로 수정했다.
+- 파일 구조와 도구 목록에 S7.7/S7.8 fixture, 검증 스크립트, `docs/post-submission/`을 반영했다.
+- S7.7 설명을 300건 전체 self-check와 실제 Codex CLI subset 50건으로 구분해 명확히 했다.
+- dedup cross-category 재계산 결과(44,850쌍, 후보 2,788건, 고확신 교차 카테고리 오탐 0건)와 재현 명령을 설명서에 추가했다.
+- worktree 로그 통합 구조(`logs/worktrees/<worktree-name>/...`)를 로그 저장 방식 섹션에 반영했다.
+- 발견한 문서 불일치와 조치 내용을 `Troubleshootinglog.md` T-021로 기록했다.
+
+**변경 파일**
+- 수정: `docs/product-agentizer-complete-guide.md`
+- 수정: `Worklog.md`
+- 수정: `Troubleshootinglog.md`
+
+**검증**
+- 기본 평가 재실행: micro precision 98.68%, micro recall 89.29%, dedup accuracy 100.00%.
+- `full_page_codex_subset` 50건 재실행: schema-valid 50/50, micro precision 100.00%, micro recall 100.00%, dedup accuracy 100.00%.
+- `real_sanity` 10건 재실행: micro precision 65.48%, micro recall 77.46%, `quality.missing_fields` 21.62% / 100.00% / TP 8 / FP 29 / FN 0 확인.
+- `size_info_patterns` actual schema 검증: 48/48 통과.
+- 문서 내 최신 경로와 새 섹션명이 `rg`로 확인됨.
+
+**판단 근거**
+- 상세 설명서는 프로젝트 전체 이해를 위한 기준 문서이므로, 수치와 파일 구조가 최신 fixture·보고서와 어긋나면 후속 검토자가 잘못 해석할 수 있다.
+- 코드 변경 없이 문서 사실관계만 맞추는 작업이므로 Decisionlog 대상은 아니다.
+
+**결과**
+- 완료: 상세 설명서의 주요 사실관계와 최신 구조 반영 완료.
+- 남은 작업: 없음.
+
+---
+
 ### W-056 · 제출 후 작업물 구조 정리
 **요청** 제출 완료 후 저장소 작업물의 파일 경로, 보관 구조, 정리 후보를 검토하고 최종 정리 구조에 맞춰 정리해 달라는 요청.
 
