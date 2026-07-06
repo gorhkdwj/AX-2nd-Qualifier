@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-06T03:56:29.779494+00:00",
+  "generated_at_utc": "2026-07-06T04:18:23.239710+00:00",
   "generated_for_kst_date": "2026-07-06",
   "environment": {
     "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
@@ -10,24 +10,24 @@
     "src/skills/product-agentizer/SKILL.md": "069a9a4ff827a5b4f3897f1faf4514beed53ddd3866f2cf85efca0e7612bd4fa",
     "src/skills/product-agentizer/references/schema.json": "685ee3307d64603079d8adce707768e17e96a1aeb48010da2d5bd26f254f4a0a",
     "src/skills/product-agentizer/references/taxonomy.json": "5d60707c2c79b66ce19c71c3179d18b296e11d6fcaab34d612b25dbc0367e91b",
-    "src/skills/product-agentizer/scripts/validate.py": "ceef43b48102906b849ee271232f86f68f821dde70277299e60e8095b64b4318",
+    "src/skills/product-agentizer/scripts/validate.py": "93645130621a3936c35edc1718f4c9243e427a6eb0e3b5254da63dcd150b5fff",
     "src/skills/product-agentizer/scripts/dedup.py": "dd69c8ea40bd081b7fd53ec514415d147457c940321b929c3f4fdd748ab937c4",
     "tests/evaluate_product_agentizer.py": "a86cb4941be692c0f0914dcfc7939af35fe377b06e9722582982c8471d658dd7",
-    "tools/generate_expanded_validation_fixtures.py": "bd48d3b742c39ed8c7a5a53a121a8f1dbbf3db59e9f98eec72af3474e247fb23",
+    "tools/generate_expanded_validation_fixtures.py": "c3057889ec6cefddfa07a8c3c8249ece14f0c18c157f2a3921cdf5ba9e96de72",
     "tools/run_expanded_validation.py": "445105ab8af0c1535aab424494cbb938f1149cffe00144d59b77f381e3f5c377",
     "tests/fixtures/expanded_dummy/source_inputs.json": "f8d65b71d22892742611692a5793c991754b045bd9aa60a217b05d58b2ec51d3",
-    "tests/fixtures/expanded_dummy/expected_products.json": "515491b8a2324a26dcd2dcfed9cddd56190170a31bbbdd31589abfe3aebfa5e5",
-    "tests/fixtures/expanded_dummy/reference_actual_products.json": "515491b8a2324a26dcd2dcfed9cddd56190170a31bbbdd31589abfe3aebfa5e5",
+    "tests/fixtures/expanded_dummy/expected_products.json": "d7fbae4572655390918f4e26563be9e729b67a032ef714926776f3c7a5ed0a98",
+    "tests/fixtures/expanded_dummy/reference_actual_products.json": "d7fbae4572655390918f4e26563be9e729b67a032ef714926776f3c7a5ed0a98",
     "tests/fixtures/expanded_dummy/duplicate_labels.json": "d48bf8775187090a19c97b7ec0ed21869798540fe7159f7c03ad227e959e05d4",
     "tests/fixtures/codex_subset/source_inputs.json": "6a957296e536d59c881989d12cd13e0236a3f4cd7cad89826db3c9ce02496977",
-    "tests/fixtures/codex_subset/expected_products.json": "7e523d3fbe2e8e7f1b869670cb678559f157073adf8049753df01328a6f7b518",
+    "tests/fixtures/codex_subset/expected_products.json": "e87b0d77065b20b171ddedbae1c4adae52d312ba8745535ec9304971a4dcaf57",
     "tests/fixtures/codex_subset/actual_products.json": "b4c3df2250a486bf00aded4dc738ee0ffa193ce45f144158ba1b4f68c1ebdcac",
     "tests/fixtures/codex_subset/duplicate_labels.json": "4676ae01b1d1ea59846721c4cc3051cf4fe25da16872f1b87c16f5229d6bce77",
     "tests/fixtures/codex_subset/prompt.md": "b80ebc7a722b14d5639902754bf7298b4e5c1605de6fa738f7c9cbe97d74518e",
     "tests/fixtures/codex_subset/prompt_template.md": "1df7068cea11f4665b2cd0c00f716772d4b83f0748e94316d790ea566e599ed8",
     "tests/fixtures/real_sanity/source_inputs.json": "f8029a743660ec8929273ea916bf8679e3f1f362cae979b763f5beb878dda006",
-    "tests/fixtures/real_sanity/expected_products.json": "65b65639597e674927bb9be0a5a7c3fca38f2ed86dc94bdd43b1f45426692a50",
-    "tests/fixtures/real_sanity/actual_products.json": "6b2c8914d7dee171dfbb32986941ae217bbc8438eccc9140ec61fa0f993972f2",
+    "tests/fixtures/real_sanity/expected_products.json": "c9b6c3ea649c8c6d4ff08aa90a512fe64597de852f0aded0f911c6045f6637b5",
+    "tests/fixtures/real_sanity/actual_products.json": "f03243a251699ec1daa96f6349ccc2f16174e6b44c8ab1e89daf674bad09fea3",
     "tests/fixtures/real_sanity/duplicate_labels.json": "7d48221ffb3048bb7058d55a6cdd99ad5d953ef9c2e60129311b16da432ecd45",
     "tests/fixtures/real_sanity/prompt.md": "5760038a0687d5db5ed7a3527aae9ab21a75e74a3c2acfabe569bb497494fbab",
     "tests/fixtures/real_sanity/prompt_template.md": "74870f318d4c22c21a258b9b6cd357fff269c6c281fbd5531d145e4f8e3caa2c"
@@ -115,7 +115,7 @@
           "micro": {
             "precision": 1.0,
             "recall": 1.0,
-            "true_positive": 1535,
+            "true_positive": 1560,
             "false_positive": 0,
             "false_negative": 0
           },
@@ -200,7 +200,7 @@
             "quality.missing_fields": {
               "precision": 1.0,
               "recall": 1.0,
-              "true_positive": 30,
+              "true_positive": 55,
               "false_positive": 0,
               "false_negative": 0
             },
@@ -240,7 +240,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -251,7 +251,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -350,7 +350,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -361,7 +361,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -460,7 +460,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -471,7 +471,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -570,7 +570,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -581,7 +581,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -680,7 +680,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -691,7 +691,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -768,7 +768,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -779,7 +779,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -867,7 +867,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -878,7 +878,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -889,7 +889,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -977,7 +977,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -988,7 +988,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -999,7 +999,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1087,7 +1087,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1098,7 +1098,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1109,7 +1109,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1197,7 +1197,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1208,7 +1208,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1219,7 +1219,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 16,
+                "true_positive": 17,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1307,7 +1307,7 @@
               "metrics": {
                 "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 14,
+                "true_positive": 15,
                 "false_positive": 0,
                 "false_negative": 0
               },
@@ -1705,10 +1705,10 @@
         ],
         "attribute_metrics": {
           "micro": {
-            "precision": 0.9552,
-            "recall": 0.9585,
-            "true_positive": 277,
-            "false_positive": 13,
+            "precision": 0.9793,
+            "recall": 0.9595,
+            "true_positive": 284,
+            "false_positive": 6,
             "false_negative": 12
           },
           "by_field": {
@@ -1790,10 +1790,10 @@
               "false_negative": 0
             },
             "quality.missing_fields": {
-              "precision": 0.1667,
+              "precision": 0.75,
               "recall": 1.0,
-              "true_positive": 2,
-              "false_positive": 10,
+              "true_positive": 9,
+              "false_positive": 3,
               "false_negative": 0
             },
             "quality.ambiguous_fields": {
@@ -2022,40 +2022,24 @@
             {
               "product_id": "top_dummy_050",
               "metrics": {
-                "precision": 0.9375,
+                "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
-                "false_positive": 1,
+                "true_positive": 16,
+                "false_positive": 0,
                 "false_negative": 0
               },
-              "differences": [
-                {
-                  "field": "quality.missing_fields",
-                  "false_positive": [
-                    "material_part"
-                  ],
-                  "false_negative": []
-                }
-              ]
+              "differences": []
             },
             {
               "product_id": "top_dummy_051",
               "metrics": {
-                "precision": 0.9375,
+                "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
-                "false_positive": 1,
+                "true_positive": 16,
+                "false_positive": 0,
                 "false_negative": 0
               },
-              "differences": [
-                {
-                  "field": "quality.missing_fields",
-                  "false_positive": [
-                    "material_part"
-                  ],
-                  "false_negative": []
-                }
-              ]
+              "differences": []
             },
             {
               "product_id": "top_dummy_054",
@@ -2110,97 +2094,57 @@
             {
               "product_id": "top_dummy_061",
               "metrics": {
-                "precision": 0.9375,
+                "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
-                "false_positive": 1,
+                "true_positive": 16,
+                "false_positive": 0,
                 "false_negative": 0
               },
-              "differences": [
-                {
-                  "field": "quality.missing_fields",
-                  "false_positive": [
-                    "material_part"
-                  ],
-                  "false_negative": []
-                }
-              ]
+              "differences": []
             },
             {
               "product_id": "top_dummy_070",
               "metrics": {
-                "precision": 0.9375,
+                "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
-                "false_positive": 1,
+                "true_positive": 16,
+                "false_positive": 0,
                 "false_negative": 0
               },
-              "differences": [
-                {
-                  "field": "quality.missing_fields",
-                  "false_positive": [
-                    "material_part"
-                  ],
-                  "false_negative": []
-                }
-              ]
+              "differences": []
             },
             {
               "product_id": "top_dummy_081",
               "metrics": {
-                "precision": 0.9375,
+                "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
-                "false_positive": 1,
+                "true_positive": 16,
+                "false_positive": 0,
                 "false_negative": 0
               },
-              "differences": [
-                {
-                  "field": "quality.missing_fields",
-                  "false_positive": [
-                    "material_part"
-                  ],
-                  "false_negative": []
-                }
-              ]
+              "differences": []
             },
             {
               "product_id": "top_dummy_090",
               "metrics": {
-                "precision": 0.9375,
+                "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 15,
-                "false_positive": 1,
+                "true_positive": 16,
+                "false_positive": 0,
                 "false_negative": 0
               },
-              "differences": [
-                {
-                  "field": "quality.missing_fields",
-                  "false_positive": [
-                    "material_part"
-                  ],
-                  "false_negative": []
-                }
-              ]
+              "differences": []
             },
             {
               "product_id": "top_dummy_099",
               "metrics": {
-                "precision": 0.9286,
+                "precision": 1.0,
                 "recall": 1.0,
-                "true_positive": 13,
-                "false_positive": 1,
+                "true_positive": 14,
+                "false_positive": 0,
                 "false_negative": 0
               },
-              "differences": [
-                {
-                  "field": "quality.missing_fields",
-                  "false_positive": [
-                    "material_part"
-                  ],
-                  "false_negative": []
-                }
-              ]
+              "differences": []
             }
           ],
           "missing_actual_product_ids": [],
@@ -2272,7 +2216,7 @@
           ]
         }
       },
-      "stdout_len": 8664,
+      "stdout_len": 7981,
       "stderr": ""
     },
     {
@@ -2355,10 +2299,10 @@
         ],
         "attribute_metrics": {
           "micro": {
-            "precision": 0.6438,
-            "recall": 0.763,
-            "true_positive": 103,
-            "false_positive": 57,
+            "precision": 0.6548,
+            "recall": 0.7746,
+            "true_positive": 110,
+            "false_positive": 58,
             "false_negative": 32
           },
           "by_field": {
@@ -2440,10 +2384,10 @@
               "false_negative": 13
             },
             "quality.missing_fields": {
-              "precision": 0.0345,
+              "precision": 0.2162,
               "recall": 1.0,
-              "true_positive": 1,
-              "false_positive": 28,
+              "true_positive": 8,
+              "false_positive": 29,
               "false_negative": 0
             },
             "quality.ambiguous_fields": {
@@ -2458,9 +2402,9 @@
             {
               "product_id": "real_outer_247_cashmere_blouson_3617977",
               "metrics": {
-                "precision": 0.625,
-                "recall": 0.7143,
-                "true_positive": 10,
+                "precision": 0.6471,
+                "recall": 0.7333,
+                "true_positive": 11,
                 "false_positive": 6,
                 "false_negative": 4
               },
@@ -2602,9 +2546,9 @@
             {
               "product_id": "real_outer_lenina_woolcover_4332165",
               "metrics": {
-                "precision": 0.8,
-                "recall": 0.8571,
-                "true_positive": 12,
+                "precision": 0.8125,
+                "recall": 0.8667,
+                "true_positive": 13,
                 "false_positive": 3,
                 "false_negative": 2
               },
@@ -2637,10 +2581,10 @@
             {
               "product_id": "real_outer_limelike_coverpiece_2101205",
               "metrics": {
-                "precision": 0.5,
+                "precision": 0.4737,
                 "recall": 0.5625,
                 "true_positive": 9,
-                "false_positive": 9,
+                "false_positive": 10,
                 "false_negative": 7
               },
               "differences": [
@@ -2688,6 +2632,7 @@
                   "false_positive": [
                     "care",
                     "fit",
+                    "material_part",
                     "size_info"
                   ],
                   "false_negative": []
@@ -2697,9 +2642,9 @@
             {
               "product_id": "real_top_armedes_tee_4783312",
               "metrics": {
-                "precision": 0.4737,
-                "recall": 0.6923,
-                "true_positive": 9,
+                "precision": 0.5,
+                "recall": 0.7143,
+                "true_positive": 10,
                 "false_positive": 10,
                 "false_negative": 4
               },
@@ -2755,9 +2700,9 @@
             {
               "product_id": "real_top_ms_basic_short_tee_1196892",
               "metrics": {
-                "precision": 0.5714,
-                "recall": 0.7273,
-                "true_positive": 8,
+                "precision": 0.6,
+                "recall": 0.75,
+                "true_positive": 9,
                 "false_positive": 6,
                 "false_negative": 3
               },
@@ -2812,9 +2757,9 @@
             {
               "product_id": "real_top_ms_basic_tee_3661999",
               "metrics": {
-                "precision": 0.5714,
-                "recall": 0.7273,
-                "true_positive": 8,
+                "precision": 0.6,
+                "recall": 0.75,
+                "true_positive": 9,
                 "false_positive": 6,
                 "false_negative": 3
               },
@@ -2869,9 +2814,9 @@
             {
               "product_id": "real_top_ms_linen_like_shirt_black_3054408",
               "metrics": {
-                "precision": 0.7333,
-                "recall": 0.9167,
-                "true_positive": 11,
+                "precision": 0.75,
+                "recall": 0.9231,
+                "true_positive": 12,
                 "false_positive": 4,
                 "false_negative": 1
               },
@@ -2910,9 +2855,9 @@
             {
               "product_id": "real_top_ms_linen_like_shirt_navy_3054409",
               "metrics": {
-                "precision": 0.7333,
-                "recall": 0.9167,
-                "true_positive": 11,
+                "precision": 0.75,
+                "recall": 0.9231,
+                "true_positive": 12,
                 "false_positive": 4,
                 "false_negative": 1
               },
@@ -3007,7 +2952,7 @@
           ]
         }
       },
-      "stdout_len": 9650,
+      "stdout_len": 9660,
       "stderr": ""
     }
   ],

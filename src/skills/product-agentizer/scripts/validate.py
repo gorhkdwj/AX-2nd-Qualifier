@@ -190,6 +190,7 @@ def custom_checks(product: dict[str, Any], tax: dict[str, Any], product_id: str)
     explicit_ratio_by_part: dict[str, float] = {}
     saw_missing_ratio = False
     saw_ambiguous_ratio = False
+    saw_unknown_part = False
 
     for index, material in enumerate(structured.get("materials") or []):
         if not isinstance(material, dict):
@@ -201,6 +202,8 @@ def custom_checks(product: dict[str, Any], tax: dict[str, Any], product_id: str)
 
         if part not in tax["material_parts"]:
             errors.append({"product_id": product_id, "path": f"{path}.part", "message": "unknown material part"})
+        elif part == "unknown":
+            saw_unknown_part = True
         if material.get("name") not in tax["materials"]:
             errors.append({"product_id": product_id, "path": f"{path}.name", "message": "unknown material name"})
         if status not in tax["ratio_statuses"]:
@@ -237,6 +240,14 @@ def custom_checks(product: dict[str, Any], tax: dict[str, Any], product_id: str)
                 "product_id": product_id,
                 "path": "quality.ambiguous_fields",
                 "message": "material_ratio must be listed when a material ratio is ambiguous",
+            }
+        )
+    if saw_unknown_part and "material_part" not in missing_fields:
+        errors.append(
+            {
+                "product_id": product_id,
+                "path": "quality.missing_fields",
+                "message": "material_part must be listed when a material part is unknown",
             }
         )
 

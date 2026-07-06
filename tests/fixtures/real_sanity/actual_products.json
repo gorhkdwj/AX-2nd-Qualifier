@@ -159,8 +159,9 @@
         },
         "quality": {
           "missing_fields": [
-            "fit",
             "care",
+            "fit",
+            "material_part",
             "size_info"
           ],
           "ambiguous_fields": [],
@@ -298,9 +299,10 @@
         },
         "quality": {
           "missing_fields": [
-            "material_ratio",
-            "fit",
             "care",
+            "fit",
+            "material_part",
+            "material_ratio",
             "size_info"
           ],
           "ambiguous_fields": [
@@ -366,9 +368,10 @@
         },
         "quality": {
           "missing_fields": [
-            "material_ratio",
-            "fit",
             "care",
+            "fit",
+            "material_part",
+            "material_ratio",
             "size_info"
           ],
           "ambiguous_fields": [],
@@ -440,8 +443,9 @@
         },
         "quality": {
           "missing_fields": [
+            "care",
             "fit",
-            "care"
+            "material_part"
           ],
           "ambiguous_fields": [],
           "out_of_scope": false,
@@ -506,6 +510,7 @@
         "quality": {
           "missing_fields": [
             "care",
+            "material_part",
             "size_info"
           ],
           "ambiguous_fields": [
@@ -571,9 +576,10 @@
         },
         "quality": {
           "missing_fields": [
-            "fit",
-            "colors",
             "care",
+            "colors",
+            "fit",
+            "material_part",
             "size_info"
           ],
           "ambiguous_fields": [],
@@ -639,6 +645,7 @@
         "quality": {
           "missing_fields": [
             "care",
+            "material_part",
             "size_info"
           ],
           "ambiguous_fields": [
@@ -704,9 +711,10 @@
         },
         "quality": {
           "missing_fields": [
-            "fit",
-            "colors",
             "care",
+            "colors",
+            "fit",
+            "material_part",
             "size_info"
           ],
           "ambiguous_fields": [],

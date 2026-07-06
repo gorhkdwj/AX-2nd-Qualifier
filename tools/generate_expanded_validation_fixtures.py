@@ -275,6 +275,10 @@ def structured_product(
     ambiguous_fields: list[str],
 ) -> dict[str, Any]:
     care_values = care if isinstance(care, list) else [care]
+    normalized_missing_fields = sorted(
+        set([*missing_fields, "material_part"] if any(item.get("part") == "unknown" for item in materials) else missing_fields)
+    )
+    normalized_ambiguous_fields = sorted(set(ambiguous_fields))
     return {
         "product_id": product_id,
         "structured_product": {
@@ -308,10 +312,10 @@ def structured_product(
                 ],
             },
             "quality": {
-                "missing_fields": sorted(set(missing_fields)),
-                "ambiguous_fields": sorted(set(ambiguous_fields)),
+                "missing_fields": normalized_missing_fields,
+                "ambiguous_fields": normalized_ambiguous_fields,
                 "out_of_scope": False,
-                "confidence": "medium" if missing_fields or ambiguous_fields else "high",
+                "confidence": "medium" if normalized_missing_fields or normalized_ambiguous_fields else "high",
             },
         },
     }

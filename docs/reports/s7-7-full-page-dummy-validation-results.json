@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-06T03:56:41.501365+00:00",
+  "generated_at_utc": "2026-07-06T04:17:44.503683+00:00",
   "generated_for_kst_date": "2026-07-06",
   "environment": {
     "python_version": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
@@ -5248,7 +5248,7 @@
     "src/skills/product-agentizer/SKILL.md": "069a9a4ff827a5b4f3897f1faf4514beed53ddd3866f2cf85efca0e7612bd4fa",
     "src/skills/product-agentizer/references/schema.json": "685ee3307d64603079d8adce707768e17e96a1aeb48010da2d5bd26f254f4a0a",
     "src/skills/product-agentizer/references/taxonomy.json": "5d60707c2c79b66ce19c71c3179d18b296e11d6fcaab34d612b25dbc0367e91b",
-    "src/skills/product-agentizer/scripts/validate.py": "ceef43b48102906b849ee271232f86f68f821dde70277299e60e8095b64b4318",
+    "src/skills/product-agentizer/scripts/validate.py": "93645130621a3936c35edc1718f4c9243e427a6eb0e3b5254da63dcd150b5fff",
     "src/skills/product-agentizer/scripts/dedup.py": "dd69c8ea40bd081b7fd53ec514415d147457c940321b929c3f4fdd748ab937c4",
     "tests/evaluate_product_agentizer.py": "a86cb4941be692c0f0914dcfc7939af35fe377b06e9722582982c8471d658dd7",
     "tools/generate_full_page_dummy_fixtures.py": "7ed740b6e2314ec568ab77a3011f7fd1267c84affbb8596097fa3e0e2862daa1",

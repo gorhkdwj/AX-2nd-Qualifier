@@ -35,7 +35,7 @@
     ]
   },
   "quality": {
-    "missing_fields": ["material_ratio"],
+    "missing_fields": ["material_part", "material_ratio"],
     "ambiguous_fields": [],
     "out_of_scope": false,
     "confidence": "medium"

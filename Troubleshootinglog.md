@@ -10,6 +10,34 @@
 
 ---
 
+### T-013 · material_part validator 보강 후 기존 fixture 계약 누락 발견
+**발생 상황**
+- `validate.py`에 `part: "unknown"` 소재가 있으면 `quality.missing_fields`에 `material_part`가 있어야 한다는 custom check를 추가한 뒤 기존 검증을 재실행했다.
+
+**증상**
+- `tests/fixtures/schema/valid_top.json`이 더 이상 valid fixture로 통과하지 않았다.
+- `python tools\run_expanded_validation.py`가 `all_commands_passed false`로 실패했다.
+- 실패 항목은 S7.5 `expanded_dummy`, `codex_subset`, `real_sanity` fixture의 `quality.missing_fields`에 `material_part`가 없는 케이스였다.
+
+**확인된 원인**
+- SKILL과 요구사항 계약에는 `part: "unknown"`이면 `material_part`를 missing으로 기록해야 한다는 기준이 있었지만, validator가 이를 강제하지 않아 과거 fixture 일부가 느슨한 상태로 남아 있었다.
+- `tools/generate_expanded_validation_fixtures.py`는 일부 패턴에만 `material_part`를 수동으로 넣고, 모든 `unknown` 소재에 일반 적용하지 않았다.
+- `codex_subset/expected_products.json`과 `real_sanity/actual_products.json`은 보존 fixture라 S7.5 생성기 재실행만으로 자동 보정되지 않았다.
+
+**조치**
+- `validate.py`에 `saw_unknown_part` 검사를 추가하고, `quality.missing_fields`에 `material_part`가 없으면 validation error를 반환하도록 했다.
+- `valid_top.json`에 `material_part`를 추가했다.
+- `generate_expanded_validation_fixtures.py`의 `structured_product()`에서 `materials`에 `part: "unknown"`이 있으면 `material_part`를 자동으로 missing field에 포함하도록 수정했다.
+- 생성기를 재실행해 S7.5 expanded/real expected fixture를 갱신했다.
+- 생성기가 덮어쓰지 않는 보존 fixture인 `codex_subset/expected_products.json`, `real_sanity/actual_products.json`은 같은 계약 기준으로 기계적으로 보정했다.
+- 재실행 결과 `python tools\run_expanded_validation.py`, `python tools\run_full_page_dummy_validation.py`, `python tools\run_size_info_pattern_validation.py`가 모두 통과했다.
+
+**재발 방지**
+- SKILL 또는 요구사항 계약의 품질 필드 연결 규칙이 바뀌면 validator와 fixture 생성기를 동시에 확인한다.
+- 보존 actual/expected fixture는 생성기 재실행으로 덮어써지지 않을 수 있으므로, 새 validator 규칙 추가 후 전체 fixture validation을 반드시 실행한다.
+
+---
+
 ### T-012 · smoke20 Codex 재실행 중 도구 타임아웃과 material_part 누락
 **발생 상황**
 - `배색 폴리에스터` 보수 라벨 기준을 반영한 뒤, S7.7 `full_page_codex_smoke20` actual을 새 SKILL 기준으로 재실행했다.

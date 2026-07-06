@@ -10,6 +10,56 @@
 
 ---
 
+### W-045 · material_part validator 계약 보강
+**요청**
+- 최종 보완 1단계로 `validate.py`에 `material_part` 계약 검사를 추가하고, 단계별 중간 보고·문서화·commit/push 진행
+
+**수행 작업**
+- `src/skills/product-agentizer/scripts/validate.py`에 소재 `part`가 `unknown`인 경우 `quality.missing_fields`에 `material_part`가 반드시 있어야 한다는 custom check를 추가
+- 기존 정상 schema fixture `valid_top.json`에 누락되어 있던 `material_part`를 추가
+- S7.5 생성기 `tools/generate_expanded_validation_fixtures.py`가 `part: unknown` 소재를 만들 때 자동으로 `material_part`를 missing field에 포함하도록 보강
+- S7.5 보존 fixture 중 생성기가 덮어쓰지 않는 `codex_subset/expected_products.json`과 `real_sanity/actual_products.json`의 `material_part` 누락을 계약 기준에 맞춰 정렬
+- S7.5, S7.7, S7.8 검증 결과 JSON을 새 validator 기준으로 재생성
+- 새 validator가 기존 fixture 누락을 드러낸 검증 실패를 Troubleshootinglog에 기록
+
+**변경 파일**
+- 수정: `src/skills/product-agentizer/scripts/validate.py`
+- 수정: `tools/generate_expanded_validation_fixtures.py`
+- 수정: `tests/fixtures/schema/valid_top.json`
+- 수정: `tests/fixtures/expanded_dummy/expected_products.json`
+- 수정: `tests/fixtures/expanded_dummy/reference_actual_products.json`
+- 수정: `tests/fixtures/codex_subset/expected_products.json`
+- 수정: `tests/fixtures/real_sanity/expected_products.json`
+- 수정: `tests/fixtures/real_sanity/actual_products.json`
+- 수정: `docs/reports/s7-expanded-validation-results.json`
+- 수정: `docs/reports/s7-7-full-page-dummy-validation-report.md`
+- 수정: `docs/reports/s7-7-full-page-dummy-validation-results.json`
+- 수정: `docs/reports/s7-8-size-info-coverage-report.md`
+- 수정: `docs/reports/s7-8-size-info-coverage-results.json`
+- 수정: `Troubleshootinglog.md`
+- 수정: `Worklog.md`
+
+**검증**
+- `python -m py_compile src\skills\product-agentizer\scripts\validate.py` 통과
+- `python src\skills\product-agentizer\scripts\validate.py tests\fixtures\schema\valid_outer.json --pretty` 통과
+- `python src\skills\product-agentizer\scripts\validate.py tests\fixtures\schema\valid_top.json --pretty` 통과
+- 기존 `tests/fixtures/schema/invalid_*.json` 모두 기대대로 실패 처리됨을 확인
+- `python tools\generate_expanded_validation_fixtures.py` 통과
+- `python tools\run_expanded_validation.py` 결과: `all_commands_passed true`
+- `python tools\run_full_page_dummy_validation.py` 결과: `all_commands_passed true`
+- `python tools\run_size_info_pattern_validation.py` 결과: `passed true`, `size_info` precision/recall 100.00%
+
+**판단 근거**
+- `part: "unknown"`이면 `quality.missing_fields`에 `material_part`를 남긴다는 기준은 이미 SKILL과 요구사항 계약 문서에 존재했다.
+- 이번 변경은 새 정책 도입이 아니라 validator가 기존 계약을 실제로 강제하도록 정합성을 높인 작업이다.
+
+**결과**
+- 완료: `material_part` 계약이 validator와 fixture에 반영됨
+- 기록: Troubleshootinglog T-013
+- 남은 작업: 2단계 invalid fixture 추가, 3단계 README 정합성 보정
+
+---
+
 ### W-044 · S8 패키징 전 총검증 및 평가
 **요청**
 - 지금까지의 결과를 총검증하고 평가

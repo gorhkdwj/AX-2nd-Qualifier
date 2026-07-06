@@ -277,7 +277,9 @@
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [
             "material_ratio"
           ],
@@ -341,6 +343,7 @@
         },
         "quality": {
           "missing_fields": [
+            "material_part",
             "material_ratio"
           ],
           "ambiguous_fields": [],
@@ -403,10 +406,12 @@
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [],
           "out_of_scope": false,
-          "confidence": "high"
+          "confidence": "medium"
         }
       }
     },
@@ -462,7 +467,9 @@
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [
             "material_ratio"
           ],
@@ -523,10 +530,12 @@
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [],
           "out_of_scope": false,
-          "confidence": "high"
+          "confidence": "medium"
         }
       }
     },
@@ -582,7 +591,9 @@
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [
             "material_ratio"
           ],
@@ -643,10 +654,12 @@
           ]
         },
         "quality": {
-          "missing_fields": [],
+          "missing_fields": [
+            "material_part"
+          ],
           "ambiguous_fields": [],
           "out_of_scope": false,
-          "confidence": "high"
+          "confidence": "medium"
         }
       }
     }
